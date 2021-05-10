@@ -14,6 +14,7 @@ const Values = [
   'lastBaseline',
   'safeCenter',
   'unsafeCenter',
+  'unset',
 ]
 const VALUES = tuple(...Values)
 type Type = typeof VALUES[number]
@@ -31,6 +32,7 @@ const map: Record<Type, any> = {
   lastBaseline: 'last baseline',
   safeCenter: 'safe center',
   unsafeCenter: 'unsafe center',
+  unset: 'unset',
 }
 
 const Styles = mapToStyles(map, (value: any) => ({
@@ -41,7 +43,7 @@ export const AlignItems: typeof Styles & {
   default: string
 } = {
   ...Styles,
-  default: Styles['flexStart' as Type],
+  default: Styles['stretch' as Type],
 }
 
 export type AlignItemsType = Type
