@@ -14,6 +14,12 @@ export const FORM = {
   logo: {
     key: 'logo',
     label: 'Лого',
-    rules: [],
+    rules: [{ required: true, message: 'Выберите логотип' }],
+  },
+
+  album: {
+    key: 'album',
+    label: 'Фотографии',
+    rules: [{ required: true, message: 'Выберите фотографии' }],
   },
 }

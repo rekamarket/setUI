@@ -1,3 +1,4 @@
+import { useCallback } from 'react'
 import {
   Box,
   Button,
@@ -9,11 +10,16 @@ import {
   Modal,
   Text,
 } from '../../units'
-import { useBoolean } from '../../hooks'
+import { useBoolean, useForm } from '../../hooks'
 import { FORM } from './form'
 
 export default () => {
+  const [form] = useForm()
   const [isVisible, { setFalse: close, setTrue: open }] = useBoolean(false)
+
+  const handleFinish = useCallback((values: unknown) => {
+    console.log('>', values)
+  }, [])
 
   return (
     <main>
@@ -26,12 +32,18 @@ export default () => {
         onClose={close}
         accent="primary"
         title={
-          <Heading level={2} color="grey190">
+          <Heading level={2} color="grey190" size="large">
             Создать новый альбом
           </Heading>
         }
       >
-        <Form direction="column" paddingX="xxlarge" paddingY="xlarge">
+        <Form
+          form={form}
+          onFinish={handleFinish}
+          direction="column"
+          paddingX="xxlarge"
+          paddingY="xlarge"
+        >
           <Form.Field
             name={FORM.name.key}
             label={FORM.name.label}
@@ -53,7 +65,20 @@ export default () => {
             label={FORM.logo.label}
             rules={FORM.logo.rules}
           >
-            <Input theme="primary" />
+            <Input type="file" theme="primary" style={{ padding: '8px 1em' }} />
+          </Form.Field>
+
+          <Form.Field
+            name={FORM.album.key}
+            label={FORM.album.label}
+            rules={FORM.album.rules}
+          >
+            <Input
+              type="file"
+              multiple
+              theme="primary"
+              style={{ padding: '8px 1em' }}
+            />
           </Form.Field>
 
           <Flex
