@@ -5,7 +5,7 @@ import type {
 } from '../../theme'
 
 export type Props = {
-  onClick: () => void
+  onClick?: () => void
   theme?: ButtonThemeType
   size?: ButtonSizeType
   variant?: ButtonVariantType
