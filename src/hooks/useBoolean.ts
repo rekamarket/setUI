@@ -15,6 +15,14 @@ const useBoolean = (initialValue?: boolean) => {
       setFalse,
       toggle,
     },
+  ] as [
+    boolean,
+    {
+      set: (b: boolean) => void
+      setTrue: () => void
+      setFalse: () => void
+      toggle: () => void
+    }
   ]
 }
 
