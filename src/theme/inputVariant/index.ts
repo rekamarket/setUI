@@ -42,7 +42,7 @@ const map: Record<InputVariantType, Value> = {
   ghost: {
     color: '#201F1E',
     backgroundColor: '#FFF',
-    borderColor: 'hsl(var(--h) 0% 42% / var(--a))',
+    borderColor: 'hsl(var(--h) 0% 60% / var(--a))',
     hover: {
       borderColor: 'hsl(var(--h) calc(var(--s)/2) var(--l) / var(--a))',
     },
