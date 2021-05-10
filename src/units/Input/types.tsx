@@ -9,4 +9,6 @@ export type Props = {
   size?: InputSizeType
   variant?: InputVariantType
   disabled?: boolean
+  prefix?: React.ReactNode
+  suffix?: React.ReactNode
 }

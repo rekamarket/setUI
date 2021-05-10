@@ -1,29 +1,33 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
 import { Props } from './types'
-import { ClassName } from './styles'
+import { Root, Prefix, Suffix, Input } from './styles'
 import { InputTheme, InputSize, InputVariant } from '../../theme'
 
-const Input: FC<Props> = ({
+const InputComponent: FC<Props> = ({
   size,
   theme,
   variant,
   disabled,
+  prefix,
+  suffix,
   children,
   ...rest
 }) => {
   return (
-    <input
+    <div
       className={cn([
-        ClassName,
+        Root,
         InputTheme[theme] || InputTheme.default,
         InputSize[size] || InputSize.default,
         InputVariant[variant] || InputVariant.default,
       ])}
-      disabled={disabled}
-      {...rest}
-    />
+    >
+      {prefix && <div className={Prefix}>{prefix}</div>}
+      <input className={cn([Input])} disabled={disabled} {...rest} />
+      {suffix && <div className={Suffix}>{suffix}</div>}
+    </div>
   )
 }
 
-export default Input
+export default InputComponent

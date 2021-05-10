@@ -31,6 +31,7 @@ const map: Record<InputVariantType, Value> = {
     },
     focus: {
       borderColor: 'var(--color)',
+      outline: 'none',
     },
     disabled: {
       color: '#A19F9D',
@@ -47,6 +48,7 @@ const map: Record<InputVariantType, Value> = {
     },
     focus: {
       borderColor: 'var(--color)',
+      outline: 'none',
     },
     disabled: {
       color: '#A19F9D',
@@ -67,6 +69,7 @@ const map: Record<InputVariantType, Value> = {
     },
     focus: {
       borderColor: 'var(--color)',
+      outline: 'none',
     },
     disabled: {
       color: '#A19F9D',
