@@ -57,3 +57,7 @@ export type { PaddingSizeType } from './padding'
 // TextAlign
 export { TextAlign } from './textAlign'
 export type { TextAlignType } from './textAlign'
+
+// ZIndex
+export { ZIndex, map as ZIndexMap } from './zIndex'
+export type { ZIndexType } from './zIndex'
