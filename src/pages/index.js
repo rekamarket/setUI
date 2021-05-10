@@ -54,11 +54,20 @@ export default () => {
             justifyContent="flexEnd"
             alignItems="center"
           >
-            <Button theme="primary" variant="transparent" size="small">
+            <Button
+              theme="primary"
+              variant="transparent"
+              size="small"
+              onClick={close}
+            >
               Отмена
             </Button>
 
-            <Button theme="primary" variant="solid">
+            <Button
+              theme="primary"
+              variant="solid"
+              type="submit"
+            >
               Загрузить
             </Button>
           </Flex>
