@@ -1,4 +1,4 @@
-import { useCallback } from 'react'
+import { useCallback, useEffect } from 'react'
 import {
   Box,
   Button,
@@ -16,6 +16,12 @@ import { FORM } from './form'
 export default () => {
   const [form] = useForm()
   const [isVisible, { setFalse: close, setTrue: open }] = useBoolean(false)
+
+  useEffect(() => {
+    if (isVisible) {
+      return () => form.resetFields()
+    }
+  }, [isVisible, form])
 
   const handleFinish = useCallback((values: unknown) => {
     console.log('>', values)
