@@ -30,6 +30,10 @@ export type { ColorType } from './color'
 export { FlexDirection } from './flexDirection'
 export type { FlexDirectionType } from './flexDirection'
 
+// FlexWrap
+export { FlexWrap } from './flexWrap'
+export type { FlexWrapType } from './flexWrap'
+
 // FontFamily
 export { FontFamily } from './fontFamily'
 export type { FontFamilyType } from './fontFamily'
