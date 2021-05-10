@@ -7,11 +7,7 @@ type Props = {
 }
 
 const App: FC<Props> = ({ Component, pageProps }) => {
-  return (
-    <div>
-      <Component {...pageProps} />
-    </div>
-  )
+  return <Component {...pageProps} />
 }
 
 export default App
