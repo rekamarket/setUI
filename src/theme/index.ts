@@ -62,6 +62,10 @@ export type { InputThemeType } from './inputTheme'
 export { InputVariant } from './inputVariant'
 export type { InputVariantType } from './inputVariant'
 
+// JustifyContent
+export { JustifyContent } from './justifyContent'
+export type { JustifyContentType } from './justifyContent'
+
 // Margin
 export { MarginTop, MarginRight, MarginBottom, MarginLeft } from './margin'
 export type { MarginSizeType } from './margin'
