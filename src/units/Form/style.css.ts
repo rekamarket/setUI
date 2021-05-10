@@ -4,6 +4,7 @@ export const Label = style({
   display: 'block',
   position: 'relative',
   paddingBottom: '1em',
+  marginBottom: '.5em',
 })
 
 export const Title = style({
@@ -20,4 +21,6 @@ export const Error = style({
   height: '1em',
   color: '#A4262C',
   fontSize: '.8em',
+  display: 'flex',
+  alignItems: 'flex-end',
 })
