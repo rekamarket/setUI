@@ -46,6 +46,10 @@ export type { FontSizeType } from './fontSize'
 export { FontWeight } from './fontWeight'
 export type { FontWeightType } from './fontWeight'
 
+// Gap
+export { Gap } from './gap'
+export type { GapType } from './gap'
+
 // InputSize
 export { InputSize, InputFontSize } from './inputSize'
 export type { InputSizeType } from './inputSize'
