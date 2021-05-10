@@ -1,3 +1,7 @@
+// AlignContent
+export { AlignContent } from './alignContent'
+export type { AlignContentType } from './alignContent'
+
 // BoxShadow
 export { BoxShadow } from './boxShadow'
 export type { BoxShadowType } from './boxShadow'
