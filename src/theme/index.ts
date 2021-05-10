@@ -31,7 +31,7 @@ export { FontWeight } from './fontWeight'
 export type { FontWeightType } from './fontWeight'
 
 // InputSize
-export { InputSize } from './inputSize'
+export { InputSize, InputFontSize } from './inputSize'
 export type { InputSizeType } from './inputSize'
 
 // InputTheme

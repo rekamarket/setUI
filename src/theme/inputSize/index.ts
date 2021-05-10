@@ -40,6 +40,17 @@ const map: Record<InputSizeType, Record<Keys, number | string>> = {
   },
 }
 
+const FontSizeStyles = mapToStyles(map, (value) => ({
+  fontSize: value.fontSize,
+}))
+
+export const InputFontSize: typeof FontSizeStyles & {
+  default: string
+} = {
+  ...FontSizeStyles,
+  default: FontSizeStyles['medium' as InputSizeType],
+}
+
 const Styles = mapToStyles(map, (value) => ({
   height: value.height,
   fontSize: value.fontSize,
