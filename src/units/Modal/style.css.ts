@@ -4,6 +4,7 @@ import {
   mapToStyles,
   style,
 } from '@vanilla-extract/css'
+import { ZIndexMap } from '../../theme'
 
 export const modal = style({})
 
@@ -18,7 +19,7 @@ globalStyle('.rc-dialog-mask', {
   backgroundColor: 'rgba(55, 55, 55, 0.6)',
   height: '100%',
   filter: 'alpha(opacity=50)',
-  zIndex: 1050,
+  zIndex: ZIndexMap.modal,
 })
 globalStyle('.rc-dialog-mask-hidden', {
   display: 'none',
@@ -31,7 +32,7 @@ globalStyle('.rc-dialog-wrap', {
   right: 0,
   bottom: 0,
   left: 0,
-  zIndex: 1050,
+  zIndex: ZIndexMap.modal,
   outline: 0,
   cursor: 'pointer',
 })
@@ -89,6 +90,6 @@ globalStyle('.rc-dialog-close-x:after', {
 })
 
 globalStyle('.rc-dialog-body', {
-  padding: 16,
+  padding: 0,
   color: 'initial',
 })
