@@ -1,5 +1,9 @@
 import { style } from '@vanilla-extract/css'
 
+export const ClassName = style({
+  display: 'flex',
+})
+
 export const Label = style({
   display: 'block',
   position: 'relative',
