@@ -45,7 +45,7 @@ export default () => {
             label={FORM.contacts.label}
             rules={FORM.contacts.rules}
           >
-            <Input theme="error" />
+            <Input theme="primary" />
           </Form.Field>
 
           <Form.Field
@@ -53,7 +53,7 @@ export default () => {
             label={FORM.logo.label}
             rules={FORM.logo.rules}
           >
-            <Input theme="error" />
+            <Input theme="primary" />
           </Form.Field>
 
           <Flex
