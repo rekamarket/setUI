@@ -1,5 +1,16 @@
-import { Box, Button, ButtonLink, Flex, Form, Heading, Input, Modal, Text } from '../units'
-import { useBoolean } from '../hooks'
+import {
+  Box,
+  Button,
+  ButtonLink,
+  Flex,
+  Form,
+  Heading,
+  Input,
+  Modal,
+  Text,
+} from '../../units'
+import { useBoolean } from '../../hooks'
+import { FORM } from './form'
 
 export default () => {
   const [isVisible, { setFalse: close, setTrue: open }] = useBoolean(false)
@@ -22,29 +33,27 @@ export default () => {
       >
         <Form direction="column" paddingX="xxlarge" paddingY="xlarge">
           <Form.Field
-            name="name"
-            label="Имя"
-            rules={[{ required: true, message: 'Введите имя' }]}
+            name={FORM.name.key}
+            label={FORM.name.label}
+            rules={FORM.name.rules}
           >
-            <Input
-              theme="primary"
-            />
+            <Input theme="primary" />
           </Form.Field>
 
           <Form.Field
-            name="contacts"
-            label="Контакты"
-            rules={[{ required: true, message: 'Введите контакты' }]}
+            name={FORM.contacts.key}
+            label={FORM.contacts.label}
+            rules={FORM.contacts.rules}
           >
-            <Input
-              theme="error"
-            />
+            <Input theme="error" />
           </Form.Field>
 
-          <Form.Field name="logo" label="Лого">
-            <Input
-              theme="error"
-            />
+          <Form.Field
+            name={FORM.logo.key}
+            label={FORM.logo.label}
+            rules={FORM.logo.rules}
+          >
+            <Input theme="error" />
           </Form.Field>
 
           <Flex
@@ -63,11 +72,7 @@ export default () => {
               Отмена
             </Button>
 
-            <Button
-              theme="primary"
-              variant="solid"
-              type="submit"
-            >
+            <Button theme="primary" variant="solid" type="submit">
               Загрузить
             </Button>
           </Flex>
