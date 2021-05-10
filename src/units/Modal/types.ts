@@ -1,7 +1,7 @@
 import { DialogProps } from 'rc-dialog'
-import type { ColorType, WidthModalType } from '../../theme'
+import type { ColorType, ModalWidthType } from '../../theme'
 
 export type Props = DialogProps & {
-  size?: WidthModalType
+  size?: ModalWidthType
   accent?: ColorType
 }

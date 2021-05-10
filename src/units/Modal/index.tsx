@@ -3,7 +3,7 @@ import cn from 'classnames'
 import Modal from 'rc-dialog'
 import { Props } from './types'
 import { modal } from './style.css'
-import { BoxShadow, Color, FontFamily, WidthModal } from '../../theme'
+import { BoxShadow, Color, FontFamily, ModalWidth } from '../../theme'
 
 export const ModalComponent: FC<Props> = ({
   // rc-dialog
@@ -48,7 +48,7 @@ export const ModalComponent: FC<Props> = ({
         BoxShadow[64],
         FontFamily.primary,
         Color[accent] || Color.white,
-        WidthModal[size] || WidthModal.default,
+        ModalWidth[size] || ModalWidth.default,
       ])}
       style={style}
       zIndex={zIndex}
