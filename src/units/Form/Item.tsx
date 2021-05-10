@@ -23,7 +23,6 @@ const Item: FC<PropsField> = ({
               ? children(control, meta, form)
               : cloneElement(children as React.ReactElement, {
                   ...control,
-                  ...form,
                   name,
                   size,
                 })
@@ -44,7 +43,6 @@ const Item: FC<PropsField> = ({
             ? children(control, meta, form)
             : cloneElement(children as React.ReactElement, {
                 ...control,
-                ...form,
                 name,
                 size,
               })
