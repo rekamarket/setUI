@@ -6,10 +6,12 @@ import { style } from '@vanilla-extract/css'
 export const Root = style({
   display: 'grid',
   gridTemplateColumns: 'auto 1fr auto',
+  gridTemplateAreas: '"prefix input suffix"',
   alignItems: 'center',
 })
 
 export const Prefix = style({
+  gridArea: 'prefix',
   background: '#F3F2F1',
   color: '#605E5C',
   height: '100%',
@@ -20,6 +22,7 @@ export const Prefix = style({
 })
 
 export const Suffix = style({
+  gridArea: 'suffix',
   background: '#F3F2F1',
   color: '#605E5C',
   height: '100%',
@@ -30,6 +33,7 @@ export const Suffix = style({
 })
 
 export const Input = style({
+  gridArea: 'input',
   cursor: 'pointer',
   border: 'none',
   height: '100%',
