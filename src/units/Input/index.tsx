@@ -5,12 +5,16 @@ import { Root, Prefix, Suffix, Input } from './styles'
 import { InputTheme, InputSize, InputVariant } from '../../theme'
 
 const InputComponent: FC<Props> = ({
+  style,
+  type = 'text',
+  multiple = false,
   size,
   theme,
   variant,
   disabled,
   prefix,
   suffix,
+  value,
   ...rest
 }) => {
   return (
@@ -23,7 +27,15 @@ const InputComponent: FC<Props> = ({
       ])}
     >
       {prefix && <div className={Prefix}>{prefix}</div>}
-      <input className={cn([Input])} disabled={disabled} {...rest} />
+      <input
+        className={cn([Input])}
+        multiple={multiple}
+        disabled={disabled}
+        type={type}
+        style={style}
+        value={value || ''}
+        {...rest}
+      />
       {suffix && <div className={Suffix}>{suffix}</div>}
     </div>
   )
