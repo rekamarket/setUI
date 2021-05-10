@@ -17,6 +17,8 @@ const Values = [
   'stretch',
   'safeCenter',
   'unsafeCenter',
+  'unset',
+  'normal',
 ]
 const VALUES = tuple(...Values)
 type Type = typeof VALUES[number]
@@ -37,6 +39,8 @@ const map: Record<Type, any> = {
   stretch: 'stretch',
   safeCenter: 'safe center',
   unsafeCenter: 'unsafe center',
+  unset: 'unset',
+  normal: 'normal',
 }
 
 const Styles = mapToStyles(map, (value: any) => ({
@@ -47,7 +51,7 @@ export const AlignContent: typeof Styles & {
   default: string
 } = {
   ...Styles,
-  default: Styles['flexStart' as Type],
+  default: Styles['normal' as Type],
 }
 
 export type AlignContentType = Type
