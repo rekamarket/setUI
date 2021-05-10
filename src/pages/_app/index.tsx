@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import './index.css'
 
 type Props = {
   Component: FC
