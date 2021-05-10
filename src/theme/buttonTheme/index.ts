@@ -33,7 +33,7 @@ const Values = [
   'black',
 ]
 const VALUES = tuple(...Values)
-export type InteractableThemeType = typeof VALUES[number]
+export type ButtonThemeType = typeof VALUES[number]
 
 type Keys = 'hue' | 'saturation' | 'lightness' | 'alpha'
 type Values = string | number
@@ -41,7 +41,7 @@ type Value = {
   [key in Keys]: Values
 }
 
-const map: Record<InteractableThemeType, Record<Keys, Values>> = {
+const map: Record<ButtonThemeType, Record<Keys, Values>> = {
   primary: {
     hue: 206,
     saturation: '100%',
@@ -227,9 +227,9 @@ const Styles = mapToStyles(map, (value: any) => ({
   opacity: 1, // so this object will count as `StyleRule`
 }))
 
-export const InteractableTheme: typeof Styles & {
+export const ButtonTheme: typeof Styles & {
   default: string
 } = {
   ...Styles,
-  default: Styles['primary' as InteractableThemeType],
+  default: Styles['primary' as ButtonThemeType],
 }

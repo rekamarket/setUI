@@ -3,7 +3,7 @@ import { tuple } from '../_utils'
 
 const Sizes = ['solid', 'ghost', 'soft', 'transparent']
 const SIZES = tuple(...Sizes)
-export type InteractableVariantType = typeof SIZES[number]
+export type ButtonVariantType = typeof SIZES[number]
 
 type Value = {
   color: string
@@ -15,7 +15,7 @@ type Value = {
   disabled: Record<string, string>
 }
 
-const map: Record<InteractableVariantType, Value> = {
+const map: Record<ButtonVariantType, Value> = {
   solid: {
     color: '#fff',
     backgroundColor: 'var(--color)',
@@ -121,9 +121,9 @@ const Styles = mapToStyles(map, (value) => ({
   ':disabled': value.disabled,
 }))
 
-export const InteractableVariant: typeof Styles & {
+export const ButtonVariant: typeof Styles & {
   default: string
 } = {
   ...Styles,
-  default: Styles['solid' as InteractableVariantType],
+  default: Styles['solid' as ButtonVariantType],
 }

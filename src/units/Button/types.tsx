@@ -1,13 +1,13 @@
 import type {
-  InteractableThemeType,
-  InteractableSizeType,
-  InteractableVariantType,
+  ButtonThemeType,
+  ButtonSizeType,
+  ButtonVariantType,
 } from '../../theme'
 
 export type Props = {
   onClick: () => void
-  theme?: InteractableThemeType
-  size?: InteractableSizeType
-  variant?: InteractableVariantType
+  theme?: ButtonThemeType
+  size?: ButtonSizeType
+  variant?: ButtonVariantType
   disabled?: boolean
 }

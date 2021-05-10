@@ -3,7 +3,7 @@ import { tuple } from '../_utils'
 
 const Sizes = ['xsmall', 'small', 'medium', 'large', 'xlarge']
 const SIZES = tuple(...Sizes)
-export type InteractableSizeType = typeof SIZES[number]
+export type ButtonSizeType = typeof SIZES[number]
 
 type Keys =
   | 'height'
@@ -14,7 +14,7 @@ type Keys =
   | 'outlineWidth'
   | 'outlineOffset'
 
-const map: Record<InteractableSizeType, Record<Keys, number | string>> = {
+const map: Record<ButtonSizeType, Record<Keys, number | string>> = {
   xsmall: {
     height: 24,
     fontSize: 14,
@@ -73,9 +73,9 @@ const Styles = mapToStyles(map, (value) => ({
   lineHeight: 1,
 }))
 
-export const InteractableSize: typeof Styles & {
+export const ButtonSize: typeof Styles & {
   default: string
 } = {
   ...Styles,
-  default: Styles['medium' as InteractableSizeType],
+  default: Styles['medium' as ButtonSizeType],
 }

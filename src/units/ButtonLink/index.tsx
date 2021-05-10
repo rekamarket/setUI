@@ -2,11 +2,7 @@ import { FC, createElement } from 'react'
 import cn from 'classnames'
 import { Props } from './types'
 import { ClassName } from './styles'
-import {
-  InteractableTheme,
-  InteractableSize,
-  InteractableVariant,
-} from '../../theme'
+import { ButtonTheme, ButtonSize, ButtonVariant } from '../../theme'
 
 const ButtonLink: FC<Props> = ({
   href,
@@ -21,9 +17,9 @@ const ButtonLink: FC<Props> = ({
       href={href}
       className={cn([
         ClassName,
-        InteractableTheme[theme] || InteractableTheme.default,
-        InteractableSize[size] || InteractableSize.default,
-        InteractableVariant[variant] || InteractableVariant.default,
+        ButtonTheme[theme] || ButtonTheme.default,
+        ButtonSize[size] || ButtonSize.default,
+        ButtonVariant[variant] || ButtonVariant.default,
       ])}
       {...rest}
     >
