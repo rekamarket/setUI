@@ -10,4 +10,5 @@ export type Props = {
   size?: ButtonSizeType
   variant?: ButtonVariantType
   disabled?: boolean
+  type?: 'reset' | 'button' | 'submit'
 }

@@ -10,6 +10,7 @@ const Button: FC<Props> = ({
   theme,
   variant,
   disabled,
+  type = 'button',
   children,
   ...rest
 }) => {
@@ -23,6 +24,7 @@ const Button: FC<Props> = ({
         ButtonVariant[variant] || ButtonVariant.default,
       ])}
       disabled={disabled}
+      type={type}
       {...rest}
     >
       {children}
