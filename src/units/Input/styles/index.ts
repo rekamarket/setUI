@@ -18,7 +18,7 @@ export const Prefix = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  padding: '0 1rem',
+  padding: '0 .5em',
 })
 
 export const Suffix = style({
@@ -29,7 +29,7 @@ export const Suffix = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  padding: '0 1rem',
+  padding: '0 .5em',
 })
 
 export const Input = style({
