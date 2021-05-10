@@ -12,31 +12,31 @@ const map: Record<InputSizeType, Record<Keys, number | string>> = {
     height: 24,
     fontSize: 14,
     borderRadius: 24 / 16,
-    borderWidth: 24 / 16,
+    borderWidth: 1,
   },
   small: {
     height: 36,
     fontSize: 36 / 2,
     borderRadius: 36 / 16,
-    borderWidth: 36 / 16,
+    borderWidth: 1,
   },
   medium: {
     height: 48,
     fontSize: 20,
     borderRadius: 48 / 16,
-    borderWidth: 48 / 16,
+    borderWidth: 2,
   },
   large: {
     height: 60,
     fontSize: 60 / 2,
     borderRadius: 60 / 16,
-    borderWidth: 60 / 16,
+    borderWidth: 3,
   },
   xlarge: {
     height: 72,
     fontSize: 72 / 2,
     borderRadius: 72 / 16,
-    borderWidth: 72 / 16,
+    borderWidth: 3,
   },
 }
 
