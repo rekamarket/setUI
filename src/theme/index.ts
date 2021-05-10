@@ -26,6 +26,10 @@ export type { ButtonVariantType } from './buttonVariant'
 export { Color } from './color'
 export type { ColorType } from './color'
 
+// FlexDirection
+export { FlexDirection } from './flexDirection'
+export type { FlexDirectionType } from './flexDirection'
+
 // FontFamily
 export { FontFamily } from './fontFamily'
 export type { FontFamilyType } from './fontFamily'
