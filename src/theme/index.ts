@@ -2,6 +2,10 @@
 export { AlignContent } from './alignContent'
 export type { AlignContentType } from './alignContent'
 
+// AlignItems
+export { AlignItems } from './alignItems'
+export type { AlignItemsType } from './alignItems'
+
 // BoxShadow
 export { BoxShadow } from './boxShadow'
 export type { BoxShadowType } from './boxShadow'
