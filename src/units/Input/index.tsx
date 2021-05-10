@@ -11,7 +11,6 @@ const InputComponent: FC<Props> = ({
   disabled,
   prefix,
   suffix,
-  children,
   ...rest
 }) => {
   return (
