@@ -1,10 +1,9 @@
 import { useCallback, useEffect } from 'react'
 import { useBoolean, useForm } from 'hooks'
+import { Box, Flex } from 'layout'
 import {
-  Box,
   Button,
   ButtonLink,
-  Flex,
   Form,
   Heading,
   Input,
