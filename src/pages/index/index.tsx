@@ -7,7 +7,7 @@ import { Form, Input } from 'form'
 import { Modal } from 'dialog'
 import { FORM } from './form'
 
-export default () => {
+const Index = () => {
   const [form] = useForm()
   const [isVisible, { setFalse: close, setTrue: open }] = useBoolean(false)
 
@@ -106,3 +106,5 @@ export default () => {
     </main>
   )
 }
+
+export default Index;
