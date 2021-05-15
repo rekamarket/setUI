@@ -36,3 +36,5 @@ export type Props = {
   paddingBottom?: PaddingSizeType
   paddingLeft?: PaddingSizeType
 }
+
+export type PropsWithoutDirection = Omit<Props, 'direction'>;

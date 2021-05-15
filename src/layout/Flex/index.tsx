@@ -16,7 +16,7 @@ import {
   PaddingRight,
   PaddingTop,
 } from 'CSS'
-import { Props } from './types'
+import { Props, PropsWithoutDirection } from './types'
 import { ClassName } from './styles.css'
 
 const Flex: FC<Props> = ({
@@ -117,5 +117,15 @@ const Flex: FC<Props> = ({
     </div>
   )
 }
+
+export const FlexRow: FC<PropsWithoutDirection> = (props) => Flex({
+  direction: 'row',
+  ...props,
+});
+
+export const FlexColumn: FC<PropsWithoutDirection> = (props) => Flex({
+  direction: 'column',
+  ...props,
+});
 
 export default Flex
