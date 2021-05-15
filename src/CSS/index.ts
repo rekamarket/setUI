@@ -70,10 +70,6 @@ export type { JustifyContentType } from './justifyContent'
 export { MarginTop, MarginRight, MarginBottom, MarginLeft } from './margin'
 export type { MarginSizeType } from './margin'
 
-// ModalWidth
-export { ModalWidth } from './modalWidth'
-export type { ModalWidthType } from './modalWidth'
-
 // Padding
 export { PaddingTop, PaddingRight, PaddingBottom, PaddingLeft } from './padding'
 export type { PaddingSizeType } from './padding'

@@ -1,5 +1,6 @@
 import { DialogProps } from 'rc-dialog'
-import type { ColorType, ModalWidthType } from 'CSS'
+import type { ColorType } from 'CSS'
+import type { ModalWidthType } from '../css'
 
 export type Props = DialogProps & {
   size?: ModalWidthType
