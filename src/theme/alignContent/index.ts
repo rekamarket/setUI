@@ -40,7 +40,6 @@ const map: Record<Type, any> = {
   safeCenter: 'safe center',
   unsafeCenter: 'unsafe center',
   unset: 'unset',
-  normal: 'normal',
 }
 
 const Styles = mapToStyles(map, (value: any) => ({
