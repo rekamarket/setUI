@@ -1,8 +1,8 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
+import { ButtonTheme, ButtonSize, ButtonVariant } from 'theme'
 import { Props } from './types'
 import { ClassName } from './styles.css'
-import { ButtonTheme, ButtonSize, ButtonVariant } from '../../theme'
 
 const ButtonLink: FC<Props> = ({
   href,

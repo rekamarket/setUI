@@ -1,9 +1,9 @@
 import { FC, cloneElement } from 'react'
 import { Field } from 'rc-field-form'
 import cn from 'classnames'
+import { InputFontSize } from 'theme'
 import { PropsField } from './types'
 import { Label, Title, Error } from './styles.css'
-import { InputFontSize } from '../../theme'
 
 const Item: FC<PropsField> = ({
   name,

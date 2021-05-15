@@ -1,8 +1,5 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
-import { Props } from './types'
-import { component } from './data'
-import { ClassName } from './styles.css'
 import {
   Color,
   PaddingBottom,
@@ -13,7 +10,10 @@ import {
   FontFamily,
   FontSize,
   BoxShadow,
-} from '../../theme'
+} from 'theme'
+import { Props } from './types'
+import { component } from './data'
+import { ClassName } from './styles.css'
 
 const Text: FC<Props> = ({
   as,

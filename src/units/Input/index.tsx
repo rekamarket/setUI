@@ -1,8 +1,8 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
+import { InputTheme, InputSize, InputVariant } from 'theme'
 import { Props } from './types'
 import { Root, Prefix, Suffix, Input } from './styles.css'
-import { InputTheme, InputSize, InputVariant } from '../../theme'
 
 const InputComponent: FC<Props> = ({
   style,

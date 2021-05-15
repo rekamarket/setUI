@@ -1,7 +1,5 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
-import { Props } from './types'
-import { ClassName } from './styles.css'
 import {
   MarginBottom,
   MarginLeft,
@@ -15,7 +13,9 @@ import {
   FontFamily,
   FontSize,
   BoxShadow,
-} from '../../theme'
+} from 'theme'
+import { Props } from './types'
+import { ClassName } from './styles.css'
 
 const Box: FC<Props> = ({
   align,

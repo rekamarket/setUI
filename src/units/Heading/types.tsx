@@ -4,7 +4,7 @@ import type {
   FontFamilyType,
   FontSizeType,
   ColorType,
-} from '../../theme'
+} from 'theme'
 
 export type LevelType = 1 | 2 | 3 | 4
 

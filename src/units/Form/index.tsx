@@ -2,8 +2,6 @@ import { FC } from 'react'
 import cn from 'classnames'
 import FormRC from 'rc-field-form'
 import Item from './Item'
-import { Props } from './types'
-import { ClassName } from './styles.css'
 import {
   AlignContent,
   AlignItems,
@@ -19,7 +17,9 @@ import {
   PaddingLeft,
   PaddingRight,
   PaddingTop,
-} from '../../theme'
+} from 'theme'
+import { Props } from './types'
+import { ClassName } from './styles.css'
 
 interface I<T = unknown> extends FC<T> {
   Field: typeof Item
