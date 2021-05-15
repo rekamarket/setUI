@@ -8,7 +8,6 @@
       "dialog": ["dialog"],
       "form": ["interactive/form"],
       "hooks": ["hooks"],
-      "link": ["interactive/link"],
       "layout": ["layout"],
       "typography": ["typography"],
       "utils": ["utils"]

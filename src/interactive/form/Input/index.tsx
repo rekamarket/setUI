@@ -1,6 +1,6 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
-import { InputTheme, InputSize, InputVariant } from 'CSS'
+import { InputTheme, InputSize, InputVariant } from '../css'
 import { Props } from './types'
 import { Root, Prefix, Suffix, Input } from './styles.css'
 

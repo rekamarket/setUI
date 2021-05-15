@@ -10,18 +10,6 @@ export type { AlignItemsType } from './alignItems'
 export { BoxShadow } from './boxShadow'
 export type { BoxShadowType } from './boxShadow'
 
-// ButtonSize
-export { ButtonSize } from './buttonSize'
-export type { ButtonSizeType } from './buttonSize'
-
-// ButtonTheme
-export { ButtonTheme } from './buttonTheme'
-export type { ButtonThemeType } from './buttonTheme'
-
-// ButtonVariant
-export { ButtonVariant } from './buttonVariant'
-export type { ButtonVariantType } from './buttonVariant'
-
 // Color
 export { Color } from './color'
 export type { ColorType } from './color'
@@ -49,18 +37,6 @@ export type { FontWeightType } from './fontWeight'
 // Gap
 export { Gap } from './gap'
 export type { GapType } from './gap'
-
-// InputSize
-export { InputSize, InputFontSize } from './inputSize'
-export type { InputSizeType } from './inputSize'
-
-// InputTheme
-export { InputTheme } from './inputTheme'
-export type { InputThemeType } from './inputTheme'
-
-// InputVariant
-export { InputVariant } from './inputVariant'
-export type { InputVariantType } from './inputVariant'
 
 // JustifyContent
 export { JustifyContent } from './justifyContent'

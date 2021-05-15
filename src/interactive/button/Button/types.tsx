@@ -2,7 +2,7 @@ import type {
   ButtonThemeType,
   ButtonSizeType,
   ButtonVariantType,
-} from 'CSS'
+} from '../css'
 
 export type Props = {
   onClick?: () => void

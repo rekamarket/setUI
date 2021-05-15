@@ -1,7 +1,6 @@
 import { FormProps } from 'rc-field-form'
 import { FieldProps } from 'rc-field-form/lib/Field'
 import type {
-  InputSizeType,
   AlignContentType,
   AlignItemsType,
   FlexDirectionType,
@@ -11,6 +10,7 @@ import type {
   MarginSizeType,
   PaddingSizeType,
 } from 'CSS'
+import type { InputSizeType } from '../css'
 
 export type Props = FormProps & {
   alignContent?: AlignContentType

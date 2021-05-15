@@ -1,7 +1,7 @@
 import { FC, cloneElement } from 'react'
 import { Field } from 'rc-field-form'
 import cn from 'classnames'
-import { InputFontSize } from 'CSS'
+import { InputFontSize } from '../css'
 import { PropsField } from './types'
 import { Label, Title, Error } from './styles.css'
 
