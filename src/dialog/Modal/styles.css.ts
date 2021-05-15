@@ -18,7 +18,7 @@ globalStyle('.rc-dialog-mask', {
   backgroundColor: 'rgba(55, 55, 55, 0.6)',
   height: '100%',
   filter: 'alpha(opacity=50)',
-  // zIndex: ZIndexMap.modal,
+  zIndex: ZIndexMap.modal,
 })
 globalStyle('.rc-dialog-mask-hidden', {
   display: 'none',
@@ -31,7 +31,7 @@ globalStyle('.rc-dialog-wrap', {
   right: 0,
   bottom: 0,
   left: 0,
-  // zIndex: ZIndexMap.modal,
+  zIndex: ZIndexMap.modal,
   outline: 0,
   cursor: 'pointer',
 })
