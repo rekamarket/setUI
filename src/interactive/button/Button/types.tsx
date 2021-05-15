@@ -12,3 +12,6 @@ export type Props = {
   disabled?: boolean
   type?: 'reset' | 'button' | 'submit'
 }
+
+export type PropsWithoutTheme = Omit<Props, 'theme'>;
+export type PropsWithoutThemeAndSize = Omit<Props, 'theme' | 'size'>;

@@ -1,6 +1,6 @@
 import { useCallback, useEffect } from 'react'
 import { useBoolean, useForm } from 'hooks'
-import { Button, ButtonLink } from 'button'
+import { ButtonPrimary, ButtonLink } from 'button'
 import { Box, FlexRow } from 'layout'
 import { Heading, Text } from 'typography'
 import { Form, Input } from 'form'
@@ -23,8 +23,8 @@ const Index = () => {
 
   return (
     <main>
-        <Button onClick={open}>Создать альбом</Button>
       <FlexRow margin="large" justifyContent="center">
+        <ButtonPrimary onClick={open}>Создать альбом</ButtonPrimary>
       </FlexRow>
 
       <Modal
@@ -88,18 +88,17 @@ const Index = () => {
             justifyContent="flexEnd"
             alignItems="center"
           >
-            <Button
-              theme="primary"
+            <ButtonPrimary
               variant="transparent"
               size="small"
               onClick={close}
             >
               Отмена
-            </Button>
+            </ButtonPrimary>
 
-            <Button theme="primary" variant="solid" type="submit">
+            <ButtonPrimary variant="solid" type="submit">
               Загрузить
-            </Button>
+            </ButtonPrimary>
           </FlexRow>
         </Form>
       </Modal>
