@@ -2,7 +2,7 @@ import type {
   InputThemeType,
   InputSizeType,
   InputVariantType,
-} from 'theme'
+} from 'CSS'
 
 export type Props = {
   style?: React.CSSProperties

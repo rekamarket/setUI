@@ -10,7 +10,7 @@ import {
   FontFamily,
   FontSize,
   BoxShadow,
-} from 'theme'
+} from 'CSS'
 import { Props } from './types'
 import { headers } from './data'
 import { ClassName } from './styles.css'

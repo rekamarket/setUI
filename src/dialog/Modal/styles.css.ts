@@ -3,7 +3,7 @@ import {
   globalStyle,
   style,
 } from '@vanilla-extract/css'
-import { ZIndexMap } from 'theme'
+import { ZIndexMap } from 'CSS'
 
 export const ClassName = style({})
 

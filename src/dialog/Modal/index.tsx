@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import cn from 'classnames'
 import Modal from 'rc-dialog'
-import { BoxShadow, Color, FontFamily, ModalWidth } from 'theme'
+import { BoxShadow, Color, FontFamily, ModalWidth } from 'CSS'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 

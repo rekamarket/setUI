@@ -2,7 +2,7 @@ import type {
   ButtonThemeType,
   ButtonSizeType,
   ButtonVariantType,
-} from 'theme'
+} from 'CSS'
 
 export type Props = {
   href: string

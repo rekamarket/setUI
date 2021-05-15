@@ -4,7 +4,7 @@ import type {
   FontFamilyType,
   FontSizeType,
   ColorType,
-} from 'theme'
+} from 'CSS'
 
 export type AsType = 'span' | 'div' | 'p'
 

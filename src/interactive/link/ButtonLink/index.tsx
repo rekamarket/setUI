@@ -1,6 +1,6 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
-import { ButtonTheme, ButtonSize, ButtonVariant } from 'theme'
+import { ButtonTheme, ButtonSize, ButtonVariant } from 'CSS'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 

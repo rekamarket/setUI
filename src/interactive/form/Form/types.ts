@@ -10,7 +10,7 @@ import type {
   GapType,
   MarginSizeType,
   PaddingSizeType,
-} from 'theme'
+} from 'CSS'
 
 export type Props = FormProps & {
   alignContent?: AlignContentType

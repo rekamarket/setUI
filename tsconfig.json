@@ -3,13 +3,13 @@
     "target": "es5",
     "baseUrl": "./src",
     "paths": {
-      "dialog": ["dialog"],
-      "hooks": ["hooks"],
+      "CSS": ["CSS"],
       "button": ["interactive/button"],
+      "dialog": ["dialog"],
       "form": ["interactive/form"],
+      "hooks": ["hooks"],
       "link": ["interactive/link"],
       "layout": ["layout"],
-      "theme": ["theme"],
       "typography": ["typography"],
       "units": ["units"]
     },

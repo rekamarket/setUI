@@ -17,7 +17,7 @@ import {
   PaddingLeft,
   PaddingRight,
   PaddingTop,
-} from 'theme'
+} from 'CSS'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 

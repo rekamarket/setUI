@@ -4,7 +4,7 @@ import type {
   TextAlignType,
   FontFamilyType,
   FontSizeType,
-} from 'theme'
+} from 'CSS'
 
 export type Props = {
   align?: TextAlignType
