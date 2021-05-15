@@ -3,7 +3,7 @@ import cn from 'classnames'
 import FormRC from 'rc-field-form'
 import Item from './Item'
 import { Props } from './types'
-import { ClassName } from './style.css'
+import { ClassName } from './styles.css'
 import {
   AlignContent,
   AlignItems,

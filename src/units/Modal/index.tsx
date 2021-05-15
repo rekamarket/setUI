@@ -2,7 +2,7 @@ import { FC } from 'react'
 import cn from 'classnames'
 import Modal from 'rc-dialog'
 import { Props } from './types'
-import { modal } from './style.css'
+import { ClassName } from './styles.css'
 import { BoxShadow, Color, FontFamily, ModalWidth } from '../../theme'
 
 export const ModalComponent: FC<Props> = ({
@@ -44,7 +44,7 @@ export const ModalComponent: FC<Props> = ({
       prefixCls={prefixCls}
       className={cn([
         className,
-        modal,
+        ClassName,
         BoxShadow[64],
         FontFamily.primary,
         Color[accent] || Color.white,

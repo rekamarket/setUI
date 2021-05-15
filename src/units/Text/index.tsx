@@ -2,7 +2,7 @@ import { FC, createElement } from 'react'
 import cn from 'classnames'
 import { Props } from './types'
 import { component } from './data'
-import { ClassName } from './styles'
+import { ClassName } from './styles.css'
 import {
   Color,
   PaddingBottom,
