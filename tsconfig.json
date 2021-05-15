@@ -6,6 +6,7 @@
       "hooks": ["hooks"],
       "layout": ["layout"],
       "theme": ["theme"],
+      "typography": ["typography"],
       "units": ["units"]
     },
     "lib": [

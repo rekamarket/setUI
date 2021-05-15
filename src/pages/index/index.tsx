@@ -1,14 +1,13 @@
 import { useCallback, useEffect } from 'react'
 import { useBoolean, useForm } from 'hooks'
 import { Box, Flex } from 'layout'
+import { Heading, Text } from 'typography'
 import {
   Button,
   ButtonLink,
   Form,
-  Heading,
   Input,
   Modal,
-  Text,
 } from 'units'
 import { FORM } from './form'
 
