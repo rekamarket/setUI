@@ -5,7 +5,7 @@ import { Box, Flex } from 'layout'
 import { ButtonLink } from 'link'
 import { Heading, Text } from 'typography'
 import { Form, Input } from 'form'
-import { Modal } from 'units'
+import { Modal } from 'dialog'
 import { FORM } from './form'
 
 export default () => {
