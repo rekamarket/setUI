@@ -50,6 +50,10 @@ export type { MarginSizeType } from './margin'
 export { PaddingTop, PaddingRight, PaddingBottom, PaddingLeft } from './padding'
 export type { PaddingSizeType } from './padding'
 
+// Position
+export { Position } from './position'
+export type { PositionType } from './position'
+
 // TextAlign
 export { TextAlign } from './textAlign'
 export type { TextAlignType } from './textAlign'
