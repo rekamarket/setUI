@@ -38,3 +38,6 @@ export type Props = {
 }
 
 export type PropsWithoutDirection = Omit<Props, 'direction'>;
+
+export type PropsInline = Omit<Props, 'direction' | 'alignContent' | 'alignItems' | 'wrap'>;
+export type PropsInlineWithoutJustifyContent = Omit<PropsInline, 'justifyContent'>;
