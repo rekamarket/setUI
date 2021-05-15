@@ -4,6 +4,9 @@
     "baseUrl": "./src",
     "paths": {
       "hooks": ["hooks"],
+      "button": ["interactive/button"],
+      "form": ["interactive/form"],
+      "link": ["interactive/link"],
       "layout": ["layout"],
       "theme": ["theme"],
       "typography": ["typography"],
