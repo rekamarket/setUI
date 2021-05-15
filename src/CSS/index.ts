@@ -1,9 +1,9 @@
 // AlignContent
-export { AlignContent } from './alignContent'
+export { AlignContent, map as AlignContentMap } from './alignContent'
 export type { AlignContentType } from './alignContent'
 
 // AlignItems
-export { AlignItems } from './alignItems'
+export { AlignItems, map as AlignItemsMap } from './alignItems'
 export type { AlignItemsType } from './alignItems'
 
 // BoxShadow
@@ -15,11 +15,11 @@ export { Color } from './color'
 export type { ColorType } from './color'
 
 // FlexDirection
-export { FlexDirection } from './flexDirection'
+export { FlexDirection, map as FlexDirectionMap } from './flexDirection'
 export type { FlexDirectionType } from './flexDirection'
 
 // FlexWrap
-export { FlexWrap } from './flexWrap'
+export { FlexWrap, map as FlexWrapMap } from './flexWrap'
 export type { FlexWrapType } from './flexWrap'
 
 // FontFamily
@@ -39,7 +39,7 @@ export { Gap } from './gap'
 export type { GapType } from './gap'
 
 // JustifyContent
-export { JustifyContent } from './justifyContent'
+export { JustifyContent, map as JustifyContentMap } from './justifyContent'
 export type { JustifyContentType } from './justifyContent'
 
 // Margin

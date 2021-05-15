@@ -23,7 +23,7 @@ const Values = [
 const VALUES = tuple(...Values)
 type Type = typeof VALUES[number]
 
-const map: Record<Type, any> = {
+export const map: Record<Type, any> = {
   center: 'center',
   start: 'start',
   end: 'end',

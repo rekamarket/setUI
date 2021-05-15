@@ -5,7 +5,7 @@ const Values = ['row', 'rowReverse', 'column', 'columnReverse']
 const VALUES = tuple(...Values)
 type Type = typeof VALUES[number]
 
-const map: Record<Type, any> = {
+export const map: Record<Type, any> = {
   row: 'row',
   rowReverse: 'row-reverse',
   column: 'column',
