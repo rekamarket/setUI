@@ -11,7 +11,7 @@
       "link": ["interactive/link"],
       "layout": ["layout"],
       "typography": ["typography"],
-      "units": ["units"]
+      "utils": ["utils"]
     },
     "lib": [
       "dom",

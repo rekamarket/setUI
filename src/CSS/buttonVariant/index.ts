@@ -1,5 +1,5 @@
 import { mapToStyles, style } from '@vanilla-extract/css'
-import { tuple } from '../_utils'
+import { tuple } from 'utils'
 
 const Sizes = ['solid', 'ghost', 'soft', 'transparent']
 const SIZES = tuple(...Sizes)

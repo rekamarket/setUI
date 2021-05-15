@@ -1,5 +1,5 @@
 import { mapToStyles, style } from '@vanilla-extract/css'
-import { tuple } from '../_utils'
+import { tuple } from 'utils'
 
 const Values = ['primary', 'secondary', 'tertiary']
 const VALUES = tuple(...Values)
