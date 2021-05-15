@@ -1,7 +1,6 @@
 import {
   createTheme,
   globalStyle,
-  styleVariants,
   style,
 } from '@vanilla-extract/css'
 import { ZIndexMap } from '../../theme'
