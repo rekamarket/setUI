@@ -1,7 +1,7 @@
 import { useCallback, useEffect } from 'react'
 import { useBoolean, useForm } from 'hooks'
 import { ButtonPrimary, ButtonLink } from 'button'
-import { Box, FlexRow } from 'layout'
+import { Box, Inline, InlineCentered, Stack } from 'layout'
 import { Heading, Text } from 'typography'
 import { Form, Input } from 'form'
 import { Modal } from 'dialog'
@@ -23,9 +23,14 @@ const Index = () => {
 
   return (
     <main>
-      <FlexRow margin="large" justifyContent="center">
+      <Stack gap="large" padding="xlarge">
+        <ButtonPrimary>Text</ButtonPrimary>
+        <ButtonPrimary>Text</ButtonPrimary>
+      </Stack>
+
+      <InlineCentered margin="large">
         <ButtonPrimary onClick={open}>Создать альбом</ButtonPrimary>
-      </FlexRow>
+      </InlineCentered>
 
       <Modal
         visible={isVisible}
@@ -81,12 +86,11 @@ const Index = () => {
             />
           </Form.Field>
 
-          <FlexRow
+          <Inline
             marginTop="xlarge"
             marginBottom="small"
             gap="medium"
             justifyContent="flexEnd"
-            alignItems="center"
           >
             <ButtonPrimary
               variant="transparent"
@@ -99,7 +103,7 @@ const Index = () => {
             <ButtonPrimary variant="solid" type="submit">
               Загрузить
             </ButtonPrimary>
-          </FlexRow>
+          </Inline>
         </Form>
       </Modal>
     </main>
