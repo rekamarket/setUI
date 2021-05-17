@@ -19,10 +19,13 @@ import {
 
   JustifyContentMap,
 } from 'CSS'
+import { tags } from './data'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
 const Stack: FC<Props> = ({
+  as,
+
   align,
   type,
   size,
@@ -94,9 +97,12 @@ const Stack: FC<Props> = ({
     PaddingRight[padding] ||
     PaddingRight.none
 
-  return (
-    <div
-      className={cn([
+
+  return createElement(
+    tags[as] || tags.div,
+
+    {
+      className: cn([
         ClassName,
         FontFamily[type] || FontFamily.default,
         FontSize[size] || FontSize.medium,
@@ -112,10 +118,10 @@ const Stack: FC<Props> = ({
         resolvedPaddingBottom,
         resolvedPaddingLeft,
         resolvedPaddingRight,
-      ])}
-    >
-      {children}
-    </div>
+      ]),
+    },
+
+    children
   )
 }
 

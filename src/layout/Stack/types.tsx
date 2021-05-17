@@ -1,3 +1,4 @@
+import { tuple } from 'utils'
 import type {
   GapType,
   JustifyContentType,
@@ -8,7 +9,12 @@ import type {
   FontSizeType,
 } from 'CSS'
 
+const Tags = ['div', 'ul', 'li', 'dd']
+const TAGS = tuple(...Tags)
+export type AsType = typeof TAGS[number]
+
 export type Props = {
+  as?: AsType;
   align?: TextAlignType
   type?: FontFamilyType
   size?: FontSizeType
