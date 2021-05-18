@@ -4,6 +4,8 @@ export {
   Column as SegmentColumn,
 } from './Segment/subsets'
 
+export { default as Container } from './Container/subsets'
+
 export { default as Box } from './Box'
 
 export {

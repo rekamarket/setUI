@@ -1,25 +1,16 @@
 import { tuple } from 'utils'
-import type {
-  GapType,
-  JustifyContentType,
-  MarginSizeType,
-  PaddingSizeType,
-  TextAlignType,
-  FontFamilyType,
-  FontSizeType,
-} from 'CSS'
+import type { GapType, MarginSizeType, PaddingSizeType } from 'CSS'
+import { DirectionType, MaxWidthType } from '../css'
 
-const Tags = ['div', 'ul', 'li', 'dd']
+const Tags = ['div', 'section']
 const TAGS = tuple(...Tags)
 export type AsType = typeof TAGS[number]
 
 export type Props = {
   as?: AsType
-  align?: TextAlignType
-  type?: FontFamilyType
-  size?: FontSizeType
 
-  justifyContent?: JustifyContentType
+  size?: MaxWidthType
+  direction?: DirectionType
 
   gap?: GapType
   gapX?: GapType

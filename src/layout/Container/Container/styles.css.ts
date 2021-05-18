@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
 
 export const ClassName = style({
-  display: 'grid',
+  boxSizing: 'content-box',
 })
