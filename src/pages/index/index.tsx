@@ -1,7 +1,14 @@
 import { useCallback, useEffect } from 'react'
 import { useBoolean, useForm } from 'hooks'
 import { ButtonPrimary, ButtonLink } from 'button'
-import { Box, Inline, InlineCentered, Stack } from 'layout'
+import {
+  Box,
+  Inline,
+  InlineCentered,
+  Segment,
+  SegmentColumn,
+  Stack,
+} from 'layout'
 import { Heading, Text } from 'typography'
 import { Form, Input } from 'form'
 import { Modal } from 'dialog'
@@ -23,6 +30,20 @@ const Index = () => {
 
   return (
     <main>
+      <Segment padding="large" gap="large">
+        <Segment.Start padding="large">Segment start</Segment.Start>
+        <Segment.Interval>Segment Interval</Segment.Interval>
+        <Segment.End>Segment End</Segment.End>
+      </Segment>
+
+      <SegmentColumn padding="large" gap="large">
+        <SegmentColumn.Start padding="large">
+          SegmentColumn start
+        </SegmentColumn.Start>
+        <SegmentColumn.Interval>SegmentColumn Interval</SegmentColumn.Interval>
+        <SegmentColumn.End>SegmentColumn End</SegmentColumn.End>
+      </SegmentColumn>
+
       <Stack gap="large" padding="xlarge">
         <ButtonPrimary>Text</ButtonPrimary>
         <ButtonPrimary>Text</ButtonPrimary>
@@ -92,11 +113,7 @@ const Index = () => {
             gap="medium"
             justifyContent="flexEnd"
           >
-            <ButtonPrimary
-              variant="transparent"
-              size="small"
-              onClick={close}
-            >
+            <ButtonPrimary variant="transparent" size="small" onClick={close}>
               Отмена
             </ButtonPrimary>
 
@@ -110,4 +127,4 @@ const Index = () => {
   )
 }
 
-export default Index;
+export default Index
