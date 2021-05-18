@@ -1,6 +1,5 @@
 export {
   default as Button,
-
   // Primary
   ButtonPrimary,
   ButtonPrimaryXS,
@@ -8,7 +7,6 @@ export {
   ButtonPrimaryM,
   ButtonPrimaryL,
   ButtonPrimaryXL,
-
   // Secondary
   ButtonSecondary,
   ButtonSecondaryXS,
@@ -18,6 +16,4 @@ export {
   ButtonSecondaryXL,
 } from './Button'
 
-export {
-  default as ButtonLink,
-} from './ButtonLink'
+export { default as ButtonLink } from './ButtonLink'

@@ -3,7 +3,6 @@ import cn from 'classnames'
 import {
   Gap,
   JustifyContent,
-
   MarginBottom,
   MarginLeft,
   MarginRight,
@@ -16,7 +15,6 @@ import {
   FontFamily,
   FontSize,
   BoxShadow,
-
   JustifyContentMap,
 } from 'CSS'
 import { tags } from './data'
@@ -96,7 +94,6 @@ const Stack: FC<Props> = ({
     PaddingRight[paddingX] ||
     PaddingRight[padding] ||
     PaddingRight.none
-
 
   return createElement(
     tags[as] || tags.div,

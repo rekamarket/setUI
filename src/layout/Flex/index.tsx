@@ -15,14 +15,18 @@ import {
   PaddingLeft,
   PaddingRight,
   PaddingTop,
-
   AlignContentMap,
   AlignItemsMap,
   FlexDirectionMap,
   FlexWrapMap,
   JustifyContentMap,
 } from 'CSS'
-import { Props, PropsWithoutDirection, PropsInline, PropsInlineWithoutJustifyContent } from './types'
+import {
+  Props,
+  PropsWithoutDirection,
+  PropsInline,
+  PropsInlineWithoutJustifyContent,
+} from './types'
 import { ClassName } from './styles.css'
 
 const Flex: FC<Props> = ({
@@ -124,27 +128,31 @@ const Flex: FC<Props> = ({
   )
 }
 
-export const Inline: FC<PropsInline> = (props) => Flex({
-  direction: FlexDirectionMap.row,
-  alignContent: AlignContentMap.default,
-  alignItems: AlignItemsMap.default,
-  wrap: FlexWrapMap.nowrap,
-  ...props,
-});
+export const Inline: FC<PropsInline> = (props) =>
+  Flex({
+    direction: FlexDirectionMap.row,
+    alignContent: AlignContentMap.default,
+    alignItems: AlignItemsMap.default,
+    wrap: FlexWrapMap.nowrap,
+    ...props,
+  })
 
-export const InlineCentered: FC<PropsInlineWithoutJustifyContent> = (props) => Inline({
-  justifyContent: JustifyContentMap.center,
-  ...props,
-});
+export const InlineCentered: FC<PropsInlineWithoutJustifyContent> = (props) =>
+  Inline({
+    justifyContent: JustifyContentMap.center,
+    ...props,
+  })
 
-export const FlexRow: FC<PropsWithoutDirection> = (props) => Flex({
-  direction: FlexDirectionMap.row,
-  ...props,
-});
+export const FlexRow: FC<PropsWithoutDirection> = (props) =>
+  Flex({
+    direction: FlexDirectionMap.row,
+    ...props,
+  })
 
-export const FlexColumn: FC<PropsWithoutDirection> = (props) => Flex({
-  direction: FlexDirectionMap.column,
-  ...props,
-});
+export const FlexColumn: FC<PropsWithoutDirection> = (props) =>
+  Flex({
+    direction: FlexDirectionMap.column,
+    ...props,
+  })
 
 export default Flex

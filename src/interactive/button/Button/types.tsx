@@ -1,8 +1,4 @@
-import type {
-  ButtonThemeType,
-  ButtonSizeType,
-  ButtonVariantType,
-} from '../css'
+import type { ButtonThemeType, ButtonSizeType, ButtonVariantType } from '../css'
 
 export type Props = {
   onClick?: () => void
@@ -13,5 +9,5 @@ export type Props = {
   type?: 'reset' | 'button' | 'submit'
 }
 
-export type PropsWithoutTheme = Omit<Props, 'theme'>;
-export type PropsWithoutThemeAndSize = Omit<Props, 'theme' | 'size'>;
+export type PropsWithoutTheme = Omit<Props, 'theme'>
+export type PropsWithoutThemeAndSize = Omit<Props, 'theme' | 'size'>

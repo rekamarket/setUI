@@ -1,13 +1,7 @@
 import { mapToStyles, style } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-const Values = [
-  'static',
-  'relative',
-  'absolute',
-  'sticky',
-  'fixed',
-]
+const Values = ['static', 'relative', 'absolute', 'sticky', 'fixed']
 const VALUES = tuple(...Values)
 type Type = typeof VALUES[number]
 

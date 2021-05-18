@@ -9,12 +9,12 @@ import type {
   FontSizeType,
 } from 'CSS'
 
-const Tags = ['div', 'ul', 'li', 'dd']
+const Tags = ['div', 'ul', 'li', 'dl']
 const TAGS = tuple(...Tags)
 export type AsType = typeof TAGS[number]
 
 export type Props = {
-  as?: AsType;
+  as?: AsType
   align?: TextAlignType
   type?: FontFamilyType
   size?: FontSizeType

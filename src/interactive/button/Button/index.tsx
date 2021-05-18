@@ -35,79 +35,91 @@ const Button: FC<Props> = ({
 /*
   Primary
 */
-export const ButtonPrimary: FC<PropsWithoutTheme> = (props) => Button({
-  theme: 'primary',
-  ...props
-});
+export const ButtonPrimary: FC<PropsWithoutTheme> = (props) =>
+  Button({
+    theme: 'primary',
+    ...props,
+  })
 
 // Primary sizes:
-export const ButtonPrimaryXS: FC<PropsWithoutThemeAndSize> = (props) => Button({
-  theme: 'primary',
-  size: 'xsmall',
-  ...props
-});
+export const ButtonPrimaryXS: FC<PropsWithoutThemeAndSize> = (props) =>
+  Button({
+    theme: 'primary',
+    size: 'xsmall',
+    ...props,
+  })
 
-export const ButtonPrimaryS: FC<PropsWithoutThemeAndSize> = (props) => Button({
-  theme: 'primary',
-  size: 'small',
-  ...props
-});
+export const ButtonPrimaryS: FC<PropsWithoutThemeAndSize> = (props) =>
+  Button({
+    theme: 'primary',
+    size: 'small',
+    ...props,
+  })
 
-export const ButtonPrimaryM: FC<PropsWithoutThemeAndSize> = (props) => Button({
-  theme: 'primary',
-  size: 'medium',
-  ...props
-});
+export const ButtonPrimaryM: FC<PropsWithoutThemeAndSize> = (props) =>
+  Button({
+    theme: 'primary',
+    size: 'medium',
+    ...props,
+  })
 
-export const ButtonPrimaryL: FC<PropsWithoutThemeAndSize> = (props) => Button({
-  theme: 'primary',
-  size: 'large',
-  ...props
-});
+export const ButtonPrimaryL: FC<PropsWithoutThemeAndSize> = (props) =>
+  Button({
+    theme: 'primary',
+    size: 'large',
+    ...props,
+  })
 
-export const ButtonPrimaryXL: FC<PropsWithoutThemeAndSize> = (props) => Button({
-  theme: 'primary',
-  size: 'xlarge',
-  ...props
-});
+export const ButtonPrimaryXL: FC<PropsWithoutThemeAndSize> = (props) =>
+  Button({
+    theme: 'primary',
+    size: 'xlarge',
+    ...props,
+  })
 
 /*
   Secondary
 */
-export const ButtonSecondary: FC<PropsWithoutTheme> = (props) => Button({
-  theme: 'secondary',
-  ...props
-});
+export const ButtonSecondary: FC<PropsWithoutTheme> = (props) =>
+  Button({
+    theme: 'secondary',
+    ...props,
+  })
 
 // Secondary sizes
-export const ButtonSecondaryXS: FC<PropsWithoutThemeAndSize> = (props) => Button({
-  theme: 'secondary',
-  size: 'xsmall',
-  ...props
-});
+export const ButtonSecondaryXS: FC<PropsWithoutThemeAndSize> = (props) =>
+  Button({
+    theme: 'secondary',
+    size: 'xsmall',
+    ...props,
+  })
 
-export const ButtonSecondaryS: FC<PropsWithoutThemeAndSize> = (props) => Button({
-  theme: 'secondary',
-  size: 'small',
-  ...props
-});
+export const ButtonSecondaryS: FC<PropsWithoutThemeAndSize> = (props) =>
+  Button({
+    theme: 'secondary',
+    size: 'small',
+    ...props,
+  })
 
-export const ButtonSecondaryM: FC<PropsWithoutThemeAndSize> = (props) => Button({
-  theme: 'secondary',
-  size: 'medium',
-  ...props
-});
+export const ButtonSecondaryM: FC<PropsWithoutThemeAndSize> = (props) =>
+  Button({
+    theme: 'secondary',
+    size: 'medium',
+    ...props,
+  })
 
-export const ButtonSecondaryL: FC<PropsWithoutThemeAndSize> = (props) => Button({
-  theme: 'secondary',
-  size: 'large',
-  ...props
-});
+export const ButtonSecondaryL: FC<PropsWithoutThemeAndSize> = (props) =>
+  Button({
+    theme: 'secondary',
+    size: 'large',
+    ...props,
+  })
 
-export const ButtonSecondaryXL: FC<PropsWithoutThemeAndSize> = (props) => Button({
-  theme: 'secondary',
-  size: 'xlarge',
-  ...props
-});
+export const ButtonSecondaryXL: FC<PropsWithoutThemeAndSize> = (props) =>
+  Button({
+    theme: 'secondary',
+    size: 'xlarge',
+    ...props,
+  })
 
 export default Button

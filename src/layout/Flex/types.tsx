@@ -37,7 +37,13 @@ export type Props = {
   paddingLeft?: PaddingSizeType
 }
 
-export type PropsWithoutDirection = Omit<Props, 'direction'>;
+export type PropsWithoutDirection = Omit<Props, 'direction'>
 
-export type PropsInline = Omit<Props, 'direction' | 'alignContent' | 'alignItems' | 'wrap'>;
-export type PropsInlineWithoutJustifyContent = Omit<PropsInline, 'justifyContent'>;
+export type PropsInline = Omit<
+  Props,
+  'direction' | 'alignContent' | 'alignItems' | 'wrap'
+>
+export type PropsInlineWithoutJustifyContent = Omit<
+  PropsInline,
+  'justifyContent'
+>

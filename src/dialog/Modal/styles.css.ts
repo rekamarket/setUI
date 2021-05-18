@@ -1,8 +1,4 @@
-import {
-  createTheme,
-  globalStyle,
-  style,
-} from '@vanilla-extract/css'
+import { createTheme, globalStyle, style } from '@vanilla-extract/css'
 import { ZIndexMap } from 'CSS'
 
 export const ClassName = style({})
