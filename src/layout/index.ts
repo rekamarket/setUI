@@ -1,3 +1,9 @@
+export {
+  default as Segment,
+  Row as SegmentRow,
+  Column as SegmentColumn,
+} from './Segment/subsets'
+
 export { default as Box } from './Box'
 
 export {
