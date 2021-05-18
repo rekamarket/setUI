@@ -17,3 +17,4 @@ export {
 } from './Flex'
 
 export { default as Stack } from './Stack'
+export { default as Viewport } from './Viewport'

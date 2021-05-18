@@ -8,6 +8,7 @@ import {
   Segment,
   SegmentColumn,
   Stack,
+  Container,
 } from 'layout'
 import { Heading, Text } from 'typography'
 import { Form, Input } from 'form'
@@ -30,6 +31,10 @@ const Index = () => {
 
   return (
     <main>
+      <Container size="large" padding="large" margin="large" direction="right">
+        Container
+      </Container>
+
       <Segment padding="large" gap="large">
         <Segment.Start padding="large">Segment start</Segment.Start>
         <Segment.Interval>Segment Interval</Segment.Interval>
