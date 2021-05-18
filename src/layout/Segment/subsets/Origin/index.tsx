@@ -5,6 +5,9 @@ import Start from '../../Start'
 import Interval from '../../Interval'
 import End from '../../End'
 
+// #todo: Allow children to be only <Start /> or <Interval /> or <End />
+// #todo: hide every other element inside of the `<Segment />` via css
+
 interface I<T = unknown> extends FC<T> {
   Start: typeof Start
   Interval: typeof Interval
