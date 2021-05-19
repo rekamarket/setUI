@@ -6,6 +6,10 @@ export type { AlignContentType } from './alignContent'
 export { AlignItems, map as AlignItemsMap } from './alignItems'
 export type { AlignItemsType } from './alignItems'
 
+// AspectRatio
+export { AspectRatio, map as AspectRatioMap } from './aspectRatio'
+export type { Type as AspectRatioType } from './aspectRatio'
+
 // BoxShadow
 export { BoxShadow } from './boxShadow'
 export type { BoxShadowType } from './boxShadow'
