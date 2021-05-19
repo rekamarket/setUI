@@ -1,4 +1,5 @@
 import type {
+  AspectRatioType,
   MarginSizeType,
   PaddingSizeType,
   TextAlignType,
@@ -10,6 +11,8 @@ export type Props = {
   align?: TextAlignType
   type?: FontFamilyType
   size?: FontSizeType
+
+  aspectRatio?: AspectRatioType
 
   margin?: MarginSizeType
   marginX?: MarginSizeType

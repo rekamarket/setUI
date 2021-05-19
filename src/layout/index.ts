@@ -6,7 +6,7 @@ export {
 
 export { default as Container } from './Container/subsets'
 
-export { default as Box } from './Box'
+export { default as Box, Box16x9, Box4x3, Box1x1 } from './Box/subsets'
 
 export {
   default as Flex,

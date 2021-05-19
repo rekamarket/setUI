@@ -1,6 +1,7 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
 import {
+  AspectRatio,
   MarginBottom,
   MarginLeft,
   MarginRight,
@@ -21,6 +22,9 @@ const Box: FC<Props> = ({
   align,
   type,
   size,
+
+  aspectRatio,
+
   margin,
   marginX,
   marginY,
@@ -86,6 +90,8 @@ const Box: FC<Props> = ({
         FontFamily[type] || FontFamily.default,
         FontSize[size] || FontSize.medium,
         TextAlign[align] || TextAlign.left,
+
+        AspectRatio[aspectRatio] || AspectRatio.default,
         resolvedMarginTop,
         resolvedMarginBottom,
         resolvedMarginLeft,
@@ -101,6 +107,6 @@ const Box: FC<Props> = ({
   )
 }
 
-export default Box
+export type { Props } from './types'
 
-// #todo: add AspectRatio
+export default Box
