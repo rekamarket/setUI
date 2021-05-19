@@ -32,7 +32,7 @@ const Index = () => {
   return (
     <main>
       <Container size="large" padding="large" margin="large" direction="right">
-        Container
+        <Heading.Placeholder level={1} />
       </Container>
 
       <Segment padding="large" gap="large">

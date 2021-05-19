@@ -1,10 +1,13 @@
 import { ButtonLink } from 'button'
+import { Heading } from 'typography'
 import { Container } from 'layout'
 
 const Layouts = () => {
   return (
     <main>
-      <Container size="small">size="small"</Container>
+      <Container size="small">
+        <Heading.Placeholder level={1} />
+      </Container>
 
       <Container>Container</Container>
 
