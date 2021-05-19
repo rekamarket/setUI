@@ -74,4 +74,6 @@ const Text: FC<Props> = ({
   )
 }
 
+export type { Props } from './types'
+
 export default Text
