@@ -26,11 +26,7 @@ const Index = () => {
       <Container.Small padding="large" margin="large" direction="right">
         <Heading.Placeholder level={1} />
 
-        <Box.x4x3>
-          <Text.Placeholder length={23} />
-          <Heading.Placeholder level={2} size="xxxlarge" length={33} />
-          <Heading level={1}>h</Heading>
-        </Box.x4x3>
+        <Box.Placeholder padding="xxlarge" />
       </Container.Small>
 
       <Segment padding="large" gap="large">
