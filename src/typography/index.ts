@@ -1,5 +1,3 @@
-export { default as Heading } from './Heading/subsets'
-
+export { default as Heading } from './Heading'
 export { default as Placeholder } from './Placeholder'
-
-export { default as Text } from './Text/subsets'
+export { default as Text } from './Text'

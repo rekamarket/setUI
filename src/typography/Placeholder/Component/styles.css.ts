@@ -11,16 +11,5 @@ export const Sentence = style({
 export const Letter = style({
   border: 'none !important',
   position: 'relative',
-})
-
-export const LetterUp = style({
-  border: 'none !important',
-  position: 'relative',
-  bottom: 3,
-})
-
-export const LetterInvisible = style({
-  border: 'none !important',
-  position: 'relative',
-  opacity: 0,
+  bottom: 5,
 })
