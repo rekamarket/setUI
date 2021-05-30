@@ -5,13 +5,13 @@ import { Container } from 'layout'
 const Layouts = () => {
   return (
     <main>
-      <Container size="small">
+      <Container.Small>
         <Heading.Placeholder level={1} />
-      </Container>
+      </Container.Small>
 
-      <Container>Container</Container>
+      <Container.Medium>Container</Container.Medium>
 
-      <Container size="large">size="large"</Container>
+      <Container.Large>size="large"</Container.Large>
     </main>
   )
 }

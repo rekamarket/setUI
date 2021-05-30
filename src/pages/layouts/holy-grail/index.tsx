@@ -1,5 +1,5 @@
 import { ButtonLink } from 'button'
-import { Segment, SegmentColumn as Column, Viewport } from 'layout'
+import { Segment, Viewport } from 'layout'
 import { Heading } from 'typography'
 
 // https://csslayout.io/patterns/holy-grail/
@@ -7,12 +7,12 @@ import { Heading } from 'typography'
 const HolyGrail = () => {
   return (
     <Viewport>
-      <Column padding="large" gap="small">
-        <Column.Start padding="large">
+      <Segment.Column padding="xxlarge" gap="small">
+        <Segment.Start padding="large">
           <Heading.Placeholder level={1} />
-        </Column.Start>
+        </Segment.Start>
 
-        <Column.Interval>
+        <Segment.Interval>
           <Segment gap="xlarge">
             <Segment.Start padding="large">header</Segment.Start>
 
@@ -20,10 +20,10 @@ const HolyGrail = () => {
 
             <Segment.End padding="large">Footer</Segment.End>
           </Segment>
-        </Column.Interval>
+        </Segment.Interval>
 
-        <Column.End padding="large">Footer</Column.End>
-      </Column>
+        <Segment.End padding="large">Footer</Segment.End>
+      </Segment.Column>
     </Viewport>
   )
 }

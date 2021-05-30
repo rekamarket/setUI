@@ -1,15 +1,7 @@
 import { useCallback, useEffect } from 'react'
 import { useBoolean, useForm } from 'hooks'
 import { ButtonPrimary, ButtonLink } from 'button'
-import {
-  Box,
-  Inline,
-  InlineCentered,
-  Segment,
-  SegmentColumn,
-  Stack,
-  Container,
-} from 'layout'
+import { Box, Flex, Segment, Stack, Container } from 'layout'
 import { Heading, Text } from 'typography'
 import { Form, Input } from 'form'
 import { Modal } from 'dialog'
@@ -31,9 +23,15 @@ const Index = () => {
 
   return (
     <main>
-      <Container size="large" padding="large" margin="large" direction="right">
+      <Container.Small padding="large" margin="large" direction="right">
         <Heading.Placeholder level={1} />
-      </Container>
+
+        <Box.x4x3>
+          <Text.Placeholder length={23} />
+          <Heading.Placeholder level={2} size="xxxlarge" length={33} />
+          <Heading level={1}>h</Heading>
+        </Box.x4x3>
+      </Container.Small>
 
       <Segment padding="large" gap="large">
         <Segment.Start padding="large">Segment start</Segment.Start>
@@ -41,22 +39,20 @@ const Index = () => {
         <Segment.End>Segment End</Segment.End>
       </Segment>
 
-      <SegmentColumn padding="large" gap="large">
-        <SegmentColumn.Start padding="large">
-          SegmentColumn start
-        </SegmentColumn.Start>
-        <SegmentColumn.Interval>SegmentColumn Interval</SegmentColumn.Interval>
-        <SegmentColumn.End>SegmentColumn End</SegmentColumn.End>
-      </SegmentColumn>
+      <Segment.Column padding="large" gap="large">
+        <Segment.Start padding="large">SegmentColumn start</Segment.Start>
+        <Segment.Interval>SegmentColumn Interval</Segment.Interval>
+        <Segment.End>SegmentColumn End</Segment.End>
+      </Segment.Column>
 
       <Stack gap="large" padding="xlarge">
         <ButtonPrimary>Text</ButtonPrimary>
         <ButtonPrimary>Text</ButtonPrimary>
       </Stack>
 
-      <InlineCentered margin="large">
+      <Flex.Center margin="large">
         <ButtonPrimary onClick={open}>Создать альбом</ButtonPrimary>
-      </InlineCentered>
+      </Flex.Center>
 
       <Modal
         visible={isVisible}
@@ -112,7 +108,7 @@ const Index = () => {
             />
           </Form.Field>
 
-          <Inline
+          <Flex.Inline
             marginTop="xlarge"
             marginBottom="small"
             gap="medium"
@@ -125,7 +121,7 @@ const Index = () => {
             <ButtonPrimary variant="solid" type="submit">
               Загрузить
             </ButtonPrimary>
-          </Inline>
+          </Flex.Inline>
         </Form>
       </Modal>
     </main>

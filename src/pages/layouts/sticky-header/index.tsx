@@ -1,16 +1,16 @@
 import { ButtonLink } from 'button'
-import { SegmentColumn as Column, Viewport } from 'layout'
+import { Segment, Viewport } from 'layout'
 
 // https://csslayout.io/patterns/sticky-header/
 
 const StickyHeader = () => {
   return (
     <Viewport>
-      <Column padding="large" gap="small">
-        <Column.Start padding="large">Header</Column.Start>
+      <Segment.Column padding="large" gap="small">
+        <Segment.Start padding="large">Header</Segment.Start>
 
-        <Column.Interval>Content</Column.Interval>
-      </Column>
+        <Segment.Interval>Content</Segment.Interval>
+      </Segment.Column>
     </Viewport>
   )
 }

@@ -1,16 +1,16 @@
 import { ButtonLink } from 'button'
-import { SegmentColumn as Column, Viewport } from 'layout'
+import { Segment, Viewport } from 'layout'
 
 // https://csslayout.io/patterns/sticky-footer/
 
 const StickyFooter = () => {
   return (
     <Viewport>
-      <Column padding="large" gap="small">
-        <Column.Interval>Content</Column.Interval>
+      <Segment.Column padding="large" gap="small">
+        <Segment.Interval>Content</Segment.Interval>
 
-        <Column.End padding="large">Footer</Column.End>
-      </Column>
+        <Segment.End padding="large">Footer</Segment.End>
+      </Segment.Column>
     </Viewport>
   )
 }
