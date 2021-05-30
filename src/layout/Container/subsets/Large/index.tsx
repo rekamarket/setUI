@@ -1,10 +1,10 @@
 import { FC } from 'react'
 import Component, { Props } from '../../Component'
 
-const x1x1: FC<Omit<Props, 'aspectRatio'>> = (props) =>
+const Large: FC<Omit<Props, 'size'>> = (props) =>
   Component({
-    aspectRatio: '1x1',
+    size: 'large',
     ...props,
   })
 
-export default x1x1
+export default Large

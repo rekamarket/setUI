@@ -1,9 +1,10 @@
 import { FC } from 'react'
-import Component, { Props } from '../../Component/Segment'
+import { FlexDirectionMap } from 'CSS'
+import Component, { Props } from '../../Component'
 
 const Column: FC<Omit<Props, 'direction'>> = (props) =>
   Component({
-    direction: 'column',
+    direction: FlexDirectionMap.column,
     ...props,
   })
 

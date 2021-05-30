@@ -1,10 +1,10 @@
 import { FC } from 'react'
-import Set, { Props } from '../../set'
+import Component, { Props } from '../../Component'
 
-const Box4x3: FC<Omit<Props, 'aspectRatio'>> = (props) =>
-  Set({
+const x4x3: FC<Omit<Props, 'aspectRatio'>> = (props) =>
+  Component({
     aspectRatio: '4x3',
     ...props,
   })
 
-export default Box4x3
+export default x4x3

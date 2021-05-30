@@ -122,4 +122,6 @@ const Stack: FC<Props> = ({
   )
 }
 
+export type { Props } from './types'
+
 export default Stack

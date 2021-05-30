@@ -1,6 +1,11 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
 import {
+  AlignContent,
+  AlignItems,
+  FlexDirection,
+  FlexWrap,
+  JustifyContent,
   Gap,
   MarginBottom,
   MarginLeft,
@@ -10,17 +15,21 @@ import {
   PaddingLeft,
   PaddingRight,
   PaddingTop,
+  AlignContentMap,
+  AlignItemsMap,
+  FlexDirectionMap,
+  FlexWrapMap,
+  JustifyContentMap,
 } from 'CSS'
-import { Direction, MaxWidth } from '../css'
-import { tags } from './data'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
-const Container: FC<Props> = ({
-  as,
-
-  size,
+const Flex: FC<Props> = ({
+  alignContent,
+  alignItems,
   direction,
+  wrap,
+  justifyContent,
 
   gap,
   gapX,
@@ -33,7 +42,6 @@ const Container: FC<Props> = ({
   marginRight,
   marginBottom,
   marginLeft,
-
   padding,
   paddingX,
   paddingY,
@@ -89,31 +97,32 @@ const Container: FC<Props> = ({
     PaddingRight[padding] ||
     PaddingRight.none
 
-  return createElement(
-    tags[as] || tags.div,
-
-    {
-      className: cn([
+  return (
+    <div
+      className={cn([
         ClassName,
-        MaxWidth[size] || MaxWidth.default,
+        AlignContent[alignContent] || AlignContent.default,
+        AlignItems[alignItems] || AlignItems.default,
+        FlexDirection[direction] || FlexDirection.default,
+        FlexWrap[wrap] || FlexWrap.default,
+        JustifyContent[justifyContent] || JustifyContent.default,
         resolvedGapX,
         resolvedGapY,
-
         resolvedMarginTop,
         resolvedMarginBottom,
         resolvedMarginLeft,
         resolvedMarginRight,
-        Direction[direction] || Direction.default,
-
         resolvedPaddingTop,
         resolvedPaddingBottom,
         resolvedPaddingLeft,
         resolvedPaddingRight,
-      ]),
-    },
-
-    children
+      ])}
+    >
+      {children}
+    </div>
   )
 }
 
-export default Container
+export type { Props } from './types'
+
+export default Flex
