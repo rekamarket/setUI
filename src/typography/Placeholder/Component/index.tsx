@@ -5,18 +5,12 @@ import { Sentence, Letter } from './styles.css'
 // '▁▂▃▄▅▆▇█'
 
 const Component: FC<Props> = ({ length = 10 }) => {
-  const sentence = useMemo(
-    () => Array.from({ length }, (_) => '▅'),
-    [length],
-  );
+  const sentence = useMemo(() => Array.from({ length }, (_) => '▅'), [length])
 
   return (
     <span className={Sentence}>
       {sentence.map((letter, index) => (
-        <span
-          key={index}
-          className={Letter}
-        >
+        <span key={index} className={Letter}>
           {letter}
         </span>
       ))}
