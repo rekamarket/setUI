@@ -5,12 +5,13 @@ import type {
   FontSizeType,
   ColorType,
 } from 'CSS'
+import { WeightType } from '../css'
 
 export type LevelType = 1 | 2 | 3 | 4
 
 export type Props = {
   level: LevelType
-  weight?: 'regular' | 'weak'
+  weight?: WeightType
   truncate?: boolean
 
   color?: ColorType

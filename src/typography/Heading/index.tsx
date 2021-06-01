@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import Component, { Props as ComponentProps } from './Component'
+import Component, { Props as ComponentProps } from './Component/Heading'
 import { Placeholder } from './supersets'
 
 interface I<T = unknown> extends FC<T> {

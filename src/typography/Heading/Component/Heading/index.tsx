@@ -11,6 +11,7 @@ import {
   FontSize,
   BoxShadow,
 } from 'CSS'
+import { Weight } from '../css'
 import { Props } from './types'
 import { headers } from './data'
 import { ClassName } from './styles.css'
@@ -59,6 +60,7 @@ const Heading: FC<Props> = ({
     {
       className: cn([
         ClassName,
+        Weight[weight] || Weight.default,
         Color[color] || Color.default,
         FontFamily[type] || FontFamily.default,
         FontSize[size] || FontSize.medium,
