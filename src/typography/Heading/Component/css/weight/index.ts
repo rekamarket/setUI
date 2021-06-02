@@ -1,10 +1,7 @@
 import { mapToStyles, style } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-const Sizes = [
-  'normal',
-  'bold',
-]
+const Sizes = ['normal', 'bold']
 const SIZES = tuple(...Sizes)
 export type Type = typeof SIZES[number]
 
