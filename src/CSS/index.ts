@@ -10,7 +10,7 @@ export type { AlignItemsType } from './alignItems'
 export { AspectRatio, map as AspectRatioMap } from './aspectRatio'
 export type { Type as AspectRatioType } from './aspectRatio'
 
-// backgroundColor
+// BackgroundColor
 export { Style as BackgroundColor } from './backgroundColor'
 export type { Type as BackgroundColorType } from './backgroundColor'
 
