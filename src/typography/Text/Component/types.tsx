@@ -4,6 +4,9 @@ import type {
   FontSizeType,
   FontWeightType,
   ColorType,
+  TextAlignType,
+  TextDecorationType,
+  TextTransformType,
 } from 'CSS'
 
 export type AsType = 'span' | 'div' | 'p' | 'strong'
@@ -13,7 +16,11 @@ export type Props = {
   truncate?: boolean
 
   color?: ColorType
+
   align?: TextAlignType
+  decoration?: TextDecorationType
+  transform?: TextTransformType
+
   weight?: FontWeightType
   type?: FontFamilyType
   size?: FontSizeType

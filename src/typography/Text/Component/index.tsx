@@ -2,15 +2,16 @@ import { FC, createElement } from 'react'
 import cn from 'classnames'
 import {
   Color,
+  TextAlign,
+  TextDecoration,
+  TextTransform,
+  FontFamily,
   FontWeight,
+  FontSize,
   PaddingBottom,
   PaddingLeft,
   PaddingRight,
   PaddingTop,
-  TextAlign,
-  FontFamily,
-  FontSize,
-  BoxShadow,
 } from 'CSS'
 import { Props } from './types'
 import { component } from './data'
@@ -18,10 +19,14 @@ import { ClassName } from './styles.css'
 
 const Text: FC<Props> = ({
   as,
-  weight,
+
   truncate,
   color,
+
   align,
+  decoration,
+  transform,
+
   type,
   size,
   weight,
@@ -33,6 +38,7 @@ const Text: FC<Props> = ({
   paddingRight,
   paddingBottom,
   paddingLeft,
+
   children,
 }) => {
   const resolvedPaddingTop =
@@ -63,9 +69,13 @@ const Text: FC<Props> = ({
       className: cn([
         ClassName,
         Color[color] || Color.grey130,
+
+        TextAlign[align] || TextAlign.left,
+        TextDecoration[decoration] || TextDecoration.default,
+        TextTransform[transform] || TextTransform.default,
+
         FontFamily[type] || FontFamily.default,
         FontSize[size] || FontSize.medium,
-        TextAlign[align] || TextAlign.left,
         FontWeight[weight] || FontWeight.default,
 
         resolvedPaddingTop,
