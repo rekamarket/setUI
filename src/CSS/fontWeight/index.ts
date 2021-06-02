@@ -2,20 +2,20 @@ import { mapToStyles, style } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
 const Sizes = [
-  'xxxsmall',
-  'xxsmall',
-  'xsmall',
-  'small',
+  'thin',
+  'extraLight',
+  'light',
+  'normal',
   'medium',
-  'large',
-  'xlarge',
-  'xxlarge',
-  'xxxlarge',
+  'semiBold',
+  'bold',
+  'extraBold',
+  'black',
 ]
 const SIZES = tuple(...Sizes)
 export type FontWeightType = typeof SIZES[number]
 
-const map: Record<FontWeightType, number> = {
+export const map: Record<FontWeightType, number> = {
   thin: 100,
   extraLight: 200,
   light: 300,

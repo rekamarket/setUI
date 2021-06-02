@@ -39,7 +39,7 @@ export { FontSize } from './fontSize'
 export type { FontSizeType } from './fontSize'
 
 // FontWeight
-export { FontWeight } from './fontWeight'
+export { FontWeight, map as FontWeightMap } from './fontWeight'
 export type { FontWeightType } from './fontWeight'
 
 // Gap
