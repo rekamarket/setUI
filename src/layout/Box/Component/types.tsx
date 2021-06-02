@@ -1,7 +1,21 @@
-import type { AspectRatioType, MarginSizeType, PaddingSizeType } from 'CSS'
+import type {
+  AspectRatioType,
+  BackgroundColorType,
+  BorderColorType,
+  BorderRadiusType,
+  BorderWidthType,
+  MarginSizeType,
+  PaddingSizeType,
+} from 'CSS'
 
 export type Props = {
   aspectRatio?: AspectRatioType
+
+  background?: BackgroundColorType
+
+  borderColor?: BorderColorType
+  borderRadius?: BorderRadiusType
+  borderWidth?: BorderWidthType
 
   margin?: MarginSizeType
   marginX?: MarginSizeType

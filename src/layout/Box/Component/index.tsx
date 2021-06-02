@@ -2,6 +2,10 @@ import { FC, createElement } from 'react'
 import cn from 'classnames'
 import {
   AspectRatio,
+  BackgroundColor,
+  BorderColor,
+  BorderRadius,
+  BorderWidth,
   MarginBottom,
   MarginLeft,
   MarginRight,
@@ -16,6 +20,12 @@ import { ClassName } from './styles.css'
 
 const Box: FC<Props> = ({
   aspectRatio,
+
+  background,
+
+  borderColor,
+  borderRadius,
+  borderWidth,
 
   margin,
   marginX,
@@ -83,6 +93,12 @@ const Box: FC<Props> = ({
         ClassName,
 
         AspectRatio[aspectRatio] || AspectRatio.default,
+
+        BackgroundColor[background] || BackgroundColor.default,
+
+        BorderColor[borderColor] || BorderColor.default,
+        BorderRadius[borderRadius] || BorderRadius.default,
+        BorderWidth[borderWidth] || BorderWidth.default,
 
         resolvedMarginTop,
         resolvedMarginBottom,
