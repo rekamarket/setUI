@@ -1,7 +1,7 @@
 import { useCallback, useEffect } from 'react'
 import { useBoolean, useForm } from 'hooks'
 import { ButtonPrimary, ButtonLink } from 'button'
-import { Box, Flex, Segment, Stack, Container } from 'layout'
+import { Box, Flex, Segment, Stack, Container, Tabs } from 'layout'
 import { Heading, Text } from 'typography'
 import { Form, Input } from 'form'
 import { Modal } from 'dialog'
@@ -24,10 +24,49 @@ const Index = () => {
   return (
     <main>
       <Container.Small padding="large" margin="large" direction="right">
-        <Heading.Placeholder level={1} />
-
-        <Box.Placeholder padding="xxlarge" />
+        <Box
+          padding="xxlarge"
+          borderColor="grey160"
+          borderWidth="thin"
+          borderRadius="medium"
+          background="errorPale"
+        >
+          This text wont render
+          <Text.Placeholder />
+          <Text.Strong color="error">Strong</Text.Strong>
+          <Text.Underline color="error">Underline</Text.Underline>
+          <Text.LineThrough color="error">LineThrough</Text.LineThrough>
+          <Text.Capitalize color="error">text</Text.Capitalize>
+          <Text.Uppercase color="error">text</Text.Uppercase>
+          <Text.Lowercase color="error">GFD</Text.Lowercase>
+        </Box>
       </Container.Small>
+
+      <Tabs>
+        <Tabs.Panel
+          key="1"
+          tab={
+            <Heading.Thin level={2} color="grey160" padding="large">
+              title
+            </Heading.Thin>
+          }
+        >
+          <Box padding="xxlarge" borderColor="grey160">
+            <Heading.Placeholder level={1} />
+          </Box>
+        </Tabs.Panel>
+
+        <Tabs.Panel
+          key="2"
+          tab={
+            <Heading.Thin level={2} color="grey160" padding="large">
+              title
+            </Heading.Thin>
+          }
+        >
+          <Box.Placeholder padding="xxlarge" />
+        </Tabs.Panel>
+      </Tabs>
 
       <Segment padding="large" gap="large">
         <Segment.Start padding="large">Segment start</Segment.Start>
