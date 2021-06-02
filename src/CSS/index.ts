@@ -78,6 +78,10 @@ export type { PositionType } from './position'
 export { TextAlign } from './textAlign'
 export type { TextAlignType } from './textAlign'
 
+// TextDecoration
+export { Style as TextDecoration } from './textDecoration'
+export type { Type as TextDecorationType } from './textDecoration'
+
 // ZIndex
 export { ZIndex, map as ZIndexMap } from './zIndex'
 export type { ZIndexType } from './zIndex'
