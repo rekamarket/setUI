@@ -3,6 +3,7 @@ import type {
   TextAlignType,
   FontFamilyType,
   FontSizeType,
+  FontWeightType,
   ColorType,
 } from 'CSS'
 
@@ -10,11 +11,11 @@ export type AsType = 'span' | 'div' | 'p'
 
 export type Props = {
   as?: AsType
-  weight?: 'regular' | 'weak'
   truncate?: boolean
 
   color?: ColorType
   align?: TextAlignType
+  weight?: FontWeightType
   type?: FontFamilyType
   size?: FontSizeType
 

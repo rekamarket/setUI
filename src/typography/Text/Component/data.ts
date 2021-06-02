@@ -33,4 +33,5 @@ export const component = {
   span: 'span',
   div: 'div',
   p: 'p',
+  strong: 'strong',
 }

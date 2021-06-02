@@ -2,6 +2,7 @@ import { FC, createElement } from 'react'
 import cn from 'classnames'
 import {
   Color,
+  FontWeight,
   PaddingBottom,
   PaddingLeft,
   PaddingRight,
@@ -23,6 +24,8 @@ const Text: FC<Props> = ({
   align,
   type,
   size,
+  weight,
+
   padding,
   paddingX,
   paddingY,
@@ -63,6 +66,8 @@ const Text: FC<Props> = ({
         FontFamily[type] || FontFamily.default,
         FontSize[size] || FontSize.medium,
         TextAlign[align] || TextAlign.left,
+        FontWeight[weight] || FontWeight.default,
+
         resolvedPaddingTop,
         resolvedPaddingBottom,
         resolvedPaddingLeft,
