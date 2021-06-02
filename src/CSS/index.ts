@@ -18,6 +18,10 @@ export type { Type as BackgroundColorType } from './backgroundColor'
 export { Style as BorderColor } from './borderColor'
 export type { Type as BorderColorType } from './borderColor'
 
+// BorderRadius
+export { Style as BorderRadius } from './borderRadius'
+export type { Type as BorderRadiusType } from './borderRadius'
+
 // BoxShadow
 export { BoxShadow } from './boxShadow'
 export type { BoxShadowType } from './boxShadow'
