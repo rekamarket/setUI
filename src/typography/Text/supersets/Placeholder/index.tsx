@@ -8,9 +8,9 @@ const Placeholder: FC<
   Omit<Props, 'children' | 'color'> & Pick<PlaceholderProps, 'length'>
 > = ({ length, ...props }) =>
   Component({
+    ...props,
     children: <PlaceholderComponent length={length} />,
     color: 'grey130',
-    ...props,
   })
 
 export default Placeholder
