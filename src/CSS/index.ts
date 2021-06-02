@@ -22,6 +22,10 @@ export type { Type as BorderColorType } from './borderColor'
 export { Style as BorderRadius } from './borderRadius'
 export type { Type as BorderRadiusType } from './borderRadius'
 
+// BorderWidth
+export { Style as BorderWidth } from './borderWidth'
+export type { Type as BorderWidthType } from './borderWidth'
+
 // BoxShadow
 export { BoxShadow } from './boxShadow'
 export type { BoxShadowType } from './boxShadow'
