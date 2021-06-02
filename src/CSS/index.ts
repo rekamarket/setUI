@@ -14,6 +14,10 @@ export type { Type as AspectRatioType } from './aspectRatio'
 export { Style as BackgroundColor } from './backgroundColor'
 export type { Type as BackgroundColorType } from './backgroundColor'
 
+// BorderColor
+export { Style as BorderColor } from './borderColor'
+export type { Type as BorderColorType } from './borderColor'
+
 // BoxShadow
 export { BoxShadow } from './boxShadow'
 export type { BoxShadowType } from './boxShadow'
