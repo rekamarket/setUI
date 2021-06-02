@@ -1,17 +1,6 @@
-import type {
-  AspectRatioType,
-  MarginSizeType,
-  PaddingSizeType,
-  TextAlignType,
-  FontFamilyType,
-  FontSizeType,
-} from 'CSS'
+import type { AspectRatioType, MarginSizeType, PaddingSizeType } from 'CSS'
 
 export type Props = {
-  align?: TextAlignType
-  type?: FontFamilyType
-  size?: FontSizeType
-
   aspectRatio?: AspectRatioType
 
   margin?: MarginSizeType

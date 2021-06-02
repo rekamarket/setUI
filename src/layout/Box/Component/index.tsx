@@ -10,19 +10,11 @@ import {
   PaddingLeft,
   PaddingRight,
   PaddingTop,
-  TextAlign,
-  FontFamily,
-  FontSize,
-  BoxShadow,
 } from 'CSS'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
 const Box: FC<Props> = ({
-  align,
-  type,
-  size,
-
   aspectRatio,
 
   margin,
@@ -32,6 +24,7 @@ const Box: FC<Props> = ({
   marginRight,
   marginBottom,
   marginLeft,
+
   padding,
   paddingX,
   paddingY,
@@ -39,6 +32,7 @@ const Box: FC<Props> = ({
   paddingRight,
   paddingBottom,
   paddingLeft,
+
   children,
 }) => {
   const resolvedMarginTop =
@@ -87,15 +81,14 @@ const Box: FC<Props> = ({
     <div
       className={cn([
         ClassName,
-        FontFamily[type] || FontFamily.default,
-        FontSize[size] || FontSize.medium,
-        TextAlign[align] || TextAlign.left,
 
         AspectRatio[aspectRatio] || AspectRatio.default,
+
         resolvedMarginTop,
         resolvedMarginBottom,
         resolvedMarginLeft,
         resolvedMarginRight,
+
         resolvedPaddingTop,
         resolvedPaddingBottom,
         resolvedPaddingLeft,
