@@ -82,6 +82,10 @@ export type { TextAlignType } from './textAlign'
 export { Style as TextDecoration } from './textDecoration'
 export type { Type as TextDecorationType } from './textDecoration'
 
+// TextTransform
+export { Style as TextTransform } from './textTransform'
+export type { Type as TextTransformType } from './textTransform'
+
 // ZIndex
 export { ZIndex, map as ZIndexMap } from './zIndex'
 export type { ZIndexType } from './zIndex'
