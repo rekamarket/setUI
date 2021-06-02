@@ -1,13 +1,12 @@
 import type {
   PaddingSizeType,
-  TextAlignType,
   FontFamilyType,
   FontSizeType,
   FontWeightType,
   ColorType,
 } from 'CSS'
 
-export type AsType = 'span' | 'div' | 'p'
+export type AsType = 'span' | 'div' | 'p' | 'strong'
 
 export type Props = {
   as?: AsType
