@@ -16,8 +16,3 @@ img, fieldset {
 *, *:after, *:before {
   box-sizing: border-box;
 }
-
-/* temp */
-#__next  * {
-  border: 1px solid black;
-}
