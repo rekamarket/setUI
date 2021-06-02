@@ -14,6 +14,7 @@ import {
   PaddingLeft,
   PaddingRight,
   PaddingTop,
+  ZIndex,
 } from 'CSS'
 import { Props } from './types'
 import { ClassName } from './styles.css'
@@ -42,6 +43,8 @@ const Box: FC<Props> = ({
   paddingRight,
   paddingBottom,
   paddingLeft,
+
+  zIndex,
 
   children,
 }) => {
@@ -109,6 +112,8 @@ const Box: FC<Props> = ({
         resolvedPaddingBottom,
         resolvedPaddingLeft,
         resolvedPaddingRight,
+
+        ZIndex[zIndex] || ZIndex.default,
       ])}
     >
       {children}

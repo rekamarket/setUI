@@ -6,6 +6,7 @@ import type {
   BorderWidthType,
   MarginSizeType,
   PaddingSizeType,
+  ZIndexType,
 } from 'CSS'
 
 export type Props = {
@@ -32,4 +33,6 @@ export type Props = {
   paddingRight?: PaddingSizeType
   paddingBottom?: PaddingSizeType
   paddingLeft?: PaddingSizeType
+
+  zIndex?: ZIndexType
 }
