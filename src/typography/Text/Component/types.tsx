@@ -9,7 +9,7 @@ import type {
   TextTransformType,
 } from 'CSS'
 
-export type AsType = 'span' | 'div' | 'p' | 'strong'
+export type AsType = 'span' | 'div' | 'p' | 'strong' | 'em'
 
 export type Props = {
   as?: AsType
