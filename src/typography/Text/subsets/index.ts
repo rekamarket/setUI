@@ -1,3 +1,4 @@
+export { default as Attention } from './Attention'
 export { default as Capitalize } from './Capitalize'
 export { default as Emphasis } from './Emphasis'
 export { default as Idiomatic } from './Idiomatic'

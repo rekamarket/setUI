@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import Component, { Props as ComponentProps } from './Component'
 import {
+  Attention,
   Capitalize,
   Emphasis,
   Idiomatic,
@@ -16,6 +17,7 @@ import { Placeholder } from './supersets'
 
 interface I<T = unknown> extends FC<T> {
   // subsets
+  Attention: typeof Attention
   Capitalize: typeof Capitalize
   Emphasis: typeof Emphasis
   Idiomatic: typeof Idiomatic
@@ -36,6 +38,7 @@ interface I<T = unknown> extends FC<T> {
 const Text: I<ComponentProps> = (props) => Component(props)
 
 // subsets
+Text.Attention = Attention
 Text.Capitalize = Capitalize
 Text.Emphasis = Emphasis
 Text.Idiomatic = Idiomatic

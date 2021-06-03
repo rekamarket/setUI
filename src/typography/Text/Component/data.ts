@@ -30,6 +30,7 @@
 		<ins>
 
 		// <i>
+		// <b>
 */
 export const component = {
   span: 'span',
@@ -38,4 +39,5 @@ export const component = {
   strong: 'strong',
   em: 'em',
   i: 'i',
+  b: 'b',
 }
