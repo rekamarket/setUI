@@ -47,8 +47,8 @@ export { FontFamily } from './fontFamily'
 export type { FontFamilyType } from './fontFamily'
 
 // FontSize
-export { FontSize } from './fontSize'
-export type { FontSizeType } from './fontSize'
+export { Style as FontSize, map as FontSizeMap } from './fontSize'
+export type { Type as FontSizeType } from './fontSize'
 
 // FontWeight
 export { FontWeight, map as FontWeightMap } from './fontWeight'

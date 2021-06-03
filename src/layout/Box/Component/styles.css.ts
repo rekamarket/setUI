@@ -1,5 +1,6 @@
 import { style } from '@vanilla-extract/css'
+import { FontSizeMap } from 'CSS'
 
 export const ClassName = style({
-  fontSize: 0,
+  fontSize: FontSizeMap.LAYOUT,
 })

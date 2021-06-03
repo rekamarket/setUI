@@ -16,23 +16,18 @@ import {
 
   // generic
   BackgroundColor,
-
   BorderColor,
   BorderRadius,
   BorderWidth,
-
   Gap,
-
   MarginBottom,
   MarginLeft,
   MarginRight,
   MarginTop,
-
   PaddingBottom,
   PaddingLeft,
   PaddingRight,
   PaddingTop,
-
   ZIndex,
 } from 'CSS'
 import { Props } from './types'

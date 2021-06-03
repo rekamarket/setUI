@@ -2,6 +2,7 @@ import { mapToStyles, style } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
 const Sizes = [
+  'LAYOUT',
   'xxxsmall',
   'xxsmall',
   'xsmall',
@@ -13,9 +14,12 @@ const Sizes = [
   'xxxlarge',
 ]
 const SIZES = tuple(...Sizes)
-export type FontSizeType = typeof SIZES[number]
+export type Type = typeof SIZES[number]
 
-const map: Record<FontSizeType, number> = {
+export const map: Record<Type, number> = {
+  // we use this value in `layout` components - to force developer to wrap strings in `typography` components
+  LAYOUT: 0,
+
   xxxsmall: 10,
   xxsmall: 12,
   xsmall: 14,
@@ -31,9 +35,9 @@ const Styles = mapToStyles(map, (value) => ({
   fontSize: value,
 }))
 
-export const FontSize: typeof Styles & {
+export const Style: typeof Styles & {
   default: string
 } = {
   ...Styles,
-  default: Styles['medium' as FontSizeType],
+  default: Styles['medium' as Type],
 }

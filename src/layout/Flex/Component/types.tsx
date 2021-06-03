@@ -8,17 +8,12 @@ import type {
 
   // generic
   BackgroundColorType,
-
   BorderColorType,
   BorderRadiusType,
   BorderWidthType,
-
   GapType,
-
   MarginSizeType,
-
   PaddingSizeType,
-
   ZIndexType,
 } from 'CSS'
 

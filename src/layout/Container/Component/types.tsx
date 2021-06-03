@@ -1,19 +1,13 @@
 import { tuple } from 'utils'
 import type {
   AspectRatioType,
-
   BackgroundColorType,
-
   BorderColorType,
   BorderRadiusType,
   BorderWidthType,
-
   GapType,
-
   MarginSizeType,
-
   PaddingSizeType,
-
   ZIndexType,
 } from 'CSS'
 import { DirectionType, MaxWidthType } from '../css'

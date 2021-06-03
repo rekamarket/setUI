@@ -2,25 +2,19 @@ import { FC, createElement } from 'react'
 import cn from 'classnames'
 import {
   AspectRatio,
-
   BackgroundColor,
-
   BorderColor,
   BorderRadius,
   BorderWidth,
-
   Gap,
-
   MarginBottom,
   MarginLeft,
   MarginRight,
   MarginTop,
-
   PaddingBottom,
   PaddingLeft,
   PaddingRight,
   PaddingTop,
-
   ZIndex,
 } from 'CSS'
 import { tags } from './data'
