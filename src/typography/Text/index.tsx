@@ -3,6 +3,7 @@ import Component, { Props as ComponentProps } from './Component'
 import {
   Capitalize,
   Emphasis,
+  Idiomatic,
   LineThrough,
   Lowercase,
   StressEmphasis,
@@ -17,6 +18,7 @@ interface I<T = unknown> extends FC<T> {
   // subsets
   Capitalize: typeof Capitalize
   Emphasis: typeof Emphasis
+  Idiomatic: typeof Idiomatic
   Lowercase: typeof Lowercase
   StressEmphasis: typeof StressEmphasis
   Uppercase: typeof Uppercase
@@ -36,6 +38,7 @@ const Text: I<ComponentProps> = (props) => Component(props)
 // subsets
 Text.Capitalize = Capitalize
 Text.Emphasis = Emphasis
+Text.Idiomatic = Idiomatic
 Text.Lowercase = Lowercase
 Text.StressEmphasis = StressEmphasis
 Text.Uppercase = Uppercase

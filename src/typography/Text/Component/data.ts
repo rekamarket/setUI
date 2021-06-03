@@ -28,6 +28,8 @@
 
 		<del>
 		<ins>
+
+		// <i>
 */
 export const component = {
   span: 'span',
@@ -35,4 +37,5 @@ export const component = {
   p: 'p',
   strong: 'strong',
   em: 'em',
+  i: 'i',
 }
