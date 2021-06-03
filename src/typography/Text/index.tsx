@@ -4,6 +4,7 @@ import {
   Capitalize,
   LineThrough,
   Lowercase,
+  StressEmphasis,
   Strong,
   Thin,
   Underline,
@@ -15,6 +16,7 @@ interface I<T = unknown> extends FC<T> {
   // subsets
   Capitalize: typeof Capitalize
   Lowercase: typeof Lowercase
+  StressEmphasis: typeof StressEmphasis
   Uppercase: typeof Uppercase
 
   LineThrough: typeof LineThrough
@@ -32,6 +34,7 @@ const Text: I<ComponentProps> = (props) => Component(props)
 // subsets
 Text.Capitalize = Capitalize
 Text.Lowercase = Lowercase
+Text.StressEmphasis = StressEmphasis
 Text.Uppercase = Uppercase
 
 Text.LineThrough = LineThrough
