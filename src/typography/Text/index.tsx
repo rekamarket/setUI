@@ -2,6 +2,7 @@ import { FC } from 'react'
 import Component, { Props as ComponentProps } from './Component'
 import {
   Capitalize,
+  Emphasis,
   LineThrough,
   Lowercase,
   StressEmphasis,
@@ -15,6 +16,7 @@ import { Placeholder } from './supersets'
 interface I<T = unknown> extends FC<T> {
   // subsets
   Capitalize: typeof Capitalize
+  Emphasis: typeof Emphasis
   Lowercase: typeof Lowercase
   StressEmphasis: typeof StressEmphasis
   Uppercase: typeof Uppercase
@@ -33,6 +35,7 @@ const Text: I<ComponentProps> = (props) => Component(props)
 
 // subsets
 Text.Capitalize = Capitalize
+Text.Emphasis = Emphasis
 Text.Lowercase = Lowercase
 Text.StressEmphasis = StressEmphasis
 Text.Uppercase = Uppercase
