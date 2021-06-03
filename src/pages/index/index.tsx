@@ -31,14 +31,22 @@ const Index = () => {
           borderRadius="medium"
           background="errorPale"
         >
-          This text wont render
           <Text.Placeholder />
           <Text.Strong color="error">Strong</Text.Strong>
           <Text.Underline color="error">Underline</Text.Underline>
           <Text.LineThrough color="error">LineThrough</Text.LineThrough>
           <Text.Capitalize color="error">text</Text.Capitalize>
-          <Text.Uppercase color="error">text</Text.Uppercase>
-          <Text.Lowercase color="error">GFD</Text.Lowercase>
+          <Flex
+            borderColor="primary"
+            borderWidth="thin"
+            borderRadius="small"
+            padding="large"
+            background="success"
+            gap="xxlarge"
+          >
+            <Text.Uppercase color="error">text</Text.Uppercase>
+            <Text.Lowercase color="error">GFD</Text.Lowercase>
+          </Flex>
         </Box>
       </Container.Small>
 
