@@ -1,11 +1,16 @@
 import type {
   AspectRatioType,
+
   BackgroundColorType,
+
   BorderColorType,
   BorderRadiusType,
   BorderWidthType,
+
   MarginSizeType,
+
   PaddingSizeType,
+
   ZIndexType,
 } from 'CSS'
 

@@ -1,5 +1,21 @@
 import { tuple } from 'utils'
-import type { GapType, MarginSizeType, PaddingSizeType } from 'CSS'
+import type {
+  AspectRatioType,
+
+  BackgroundColorType,
+
+  BorderColorType,
+  BorderRadiusType,
+  BorderWidthType,
+
+  GapType,
+
+  MarginSizeType,
+
+  PaddingSizeType,
+
+  ZIndexType,
+} from 'CSS'
 import { DirectionType, MaxWidthType } from '../css'
 
 const Tags = ['div', 'section']
@@ -9,8 +25,18 @@ export type AsType = typeof TAGS[number]
 export type Props = {
   as?: AsType
 
+  // custom
   size?: MaxWidthType
   direction?: DirectionType
+
+  // generic
+  aspectRatio?: AspectRatioType
+
+  background?: BackgroundColorType
+
+  borderColor?: BorderColorType
+  borderRadius?: BorderRadiusType
+  borderWidth?: BorderWidthType
 
   gap?: GapType
   gapX?: GapType
@@ -31,4 +57,6 @@ export type Props = {
   paddingRight?: PaddingSizeType
   paddingBottom?: PaddingSizeType
   paddingLeft?: PaddingSizeType
+
+  zIndex?: ZIndexType
 }

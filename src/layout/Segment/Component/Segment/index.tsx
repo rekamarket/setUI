@@ -1,21 +1,27 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
 import {
+  AspectRatio,
+
+  BackgroundColor,
+
+  BorderColor,
+  BorderRadius,
+  BorderWidth,
+
   Gap,
-  JustifyContent,
+
   MarginBottom,
   MarginLeft,
   MarginRight,
   MarginTop,
+
   PaddingBottom,
   PaddingLeft,
   PaddingRight,
   PaddingTop,
-  TextAlign,
-  FontFamily,
-  FontSize,
-  BoxShadow,
-  JustifyContentMap,
+
+  ZIndex,
 } from 'CSS'
 import { Direction } from '../css'
 import { tags } from './data'
@@ -24,12 +30,18 @@ import { ClassName } from './styles.css'
 
 const Segment: FC<Props> = ({
   as,
+
+  // custom
   direction,
 
-  align,
-  type,
-  size,
-  justifyContent,
+  // generic
+  aspectRatio,
+
+  background,
+
+  borderColor,
+  borderRadius,
+  borderWidth,
 
   gap,
   gapX,
@@ -50,6 +62,9 @@ const Segment: FC<Props> = ({
   paddingRight,
   paddingBottom,
   paddingLeft,
+
+  zIndex,
+
   children,
 }) => {
   const resolvedGapX = Gap[gapX] || Gap[gap] || Gap.none
@@ -102,22 +117,35 @@ const Segment: FC<Props> = ({
 
     {
       className: cn([
+        // root
         ClassName,
+
+        // custom
         Direction[direction] || Direction.default,
-        FontFamily[type] || FontFamily.default,
-        FontSize[size] || FontSize.medium,
-        TextAlign[align] || TextAlign.left,
-        JustifyContent[justifyContent] || JustifyContent.normal,
+
+        // generic
+        AspectRatio[aspectRatio] || AspectRatio.default,
+
+        BackgroundColor[background] || BackgroundColor.default,
+
+        BorderColor[borderColor] || BorderColor.default,
+        BorderRadius[borderRadius] || BorderRadius.default,
+        BorderWidth[borderWidth] || BorderWidth.default,
+
         resolvedGapX,
         resolvedGapY,
+
         resolvedMarginTop,
         resolvedMarginBottom,
         resolvedMarginLeft,
         resolvedMarginRight,
+
         resolvedPaddingTop,
         resolvedPaddingBottom,
         resolvedPaddingLeft,
         resolvedPaddingRight,
+
+        ZIndex[zIndex] || ZIndex.default,
       ]),
     },
 

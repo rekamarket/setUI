@@ -1,15 +1,27 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
 import {
+  AspectRatio,
+
+  BackgroundColor,
+
+  BorderColor,
+  BorderRadius,
+  BorderWidth,
+
   Gap,
+
   MarginBottom,
   MarginLeft,
   MarginRight,
   MarginTop,
+
   PaddingBottom,
   PaddingLeft,
   PaddingRight,
   PaddingTop,
+
+  ZIndex,
 } from 'CSS'
 import { Direction, MaxWidth } from '../css'
 import { tags } from './data'
@@ -19,8 +31,17 @@ import { ClassName } from './styles.css'
 const Container: FC<Props> = ({
   as,
 
+  // custom
   size,
   direction,
+
+  aspectRatio,
+
+  background,
+
+  borderColor,
+  borderRadius,
+  borderWidth,
 
   gap,
   gapX,
@@ -41,6 +62,8 @@ const Container: FC<Props> = ({
   paddingRight,
   paddingBottom,
   paddingLeft,
+
+  zIndex,
 
   children,
 }) => {
@@ -94,8 +117,22 @@ const Container: FC<Props> = ({
 
     {
       className: cn([
+        // root
         ClassName,
+
+        // custom
         MaxWidth[size] || MaxWidth.default,
+        Direction[direction] || Direction.default,
+
+        // generic
+        AspectRatio[aspectRatio] || AspectRatio.default,
+
+        BackgroundColor[background] || BackgroundColor.default,
+
+        BorderColor[borderColor] || BorderColor.default,
+        BorderRadius[borderRadius] || BorderRadius.default,
+        BorderWidth[borderWidth] || BorderWidth.default,
+
         resolvedGapX,
         resolvedGapY,
 
@@ -103,12 +140,13 @@ const Container: FC<Props> = ({
         resolvedMarginBottom,
         resolvedMarginLeft,
         resolvedMarginRight,
-        Direction[direction] || Direction.default,
 
         resolvedPaddingTop,
         resolvedPaddingBottom,
         resolvedPaddingLeft,
         resolvedPaddingRight,
+
+        ZIndex[zIndex] || ZIndex.default,
       ]),
     },
 

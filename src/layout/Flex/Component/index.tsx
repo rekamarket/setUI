@@ -1,35 +1,57 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
 import {
+  // flex
   AlignContent,
   AlignItems,
   FlexDirection,
   FlexWrap,
   JustifyContent,
-  Gap,
-  MarginBottom,
-  MarginLeft,
-  MarginRight,
-  MarginTop,
-  PaddingBottom,
-  PaddingLeft,
-  PaddingRight,
-  PaddingTop,
+  // flex values
   AlignContentMap,
   AlignItemsMap,
   FlexDirectionMap,
   FlexWrapMap,
   JustifyContentMap,
+
+  // generic
+  BackgroundColor,
+
+  BorderColor,
+  BorderRadius,
+  BorderWidth,
+
+  Gap,
+
+  MarginBottom,
+  MarginLeft,
+  MarginRight,
+  MarginTop,
+
+  PaddingBottom,
+  PaddingLeft,
+  PaddingRight,
+  PaddingTop,
+
+  ZIndex,
 } from 'CSS'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
 const Flex: FC<Props> = ({
+  // flex
   alignContent,
   alignItems,
   direction,
   wrap,
   justifyContent,
+
+  // generic
+  background,
+
+  borderColor,
+  borderRadius,
+  borderWidth,
 
   gap,
   gapX,
@@ -42,6 +64,7 @@ const Flex: FC<Props> = ({
   marginRight,
   marginBottom,
   marginLeft,
+
   padding,
   paddingX,
   paddingY,
@@ -49,6 +72,8 @@ const Flex: FC<Props> = ({
   paddingRight,
   paddingBottom,
   paddingLeft,
+
+  zIndex,
 
   children,
 }) => {
@@ -100,22 +125,37 @@ const Flex: FC<Props> = ({
   return (
     <div
       className={cn([
+        // root
         ClassName,
+
+        // flex
         AlignContent[alignContent] || AlignContent.default,
         AlignItems[alignItems] || AlignItems.default,
         FlexDirection[direction] || FlexDirection.default,
         FlexWrap[wrap] || FlexWrap.default,
         JustifyContent[justifyContent] || JustifyContent.default,
+
+        // generic
+        BackgroundColor[background] || BackgroundColor.default,
+
+        BorderColor[borderColor] || BorderColor.default,
+        BorderRadius[borderRadius] || BorderRadius.default,
+        BorderWidth[borderWidth] || BorderWidth.default,
+
         resolvedGapX,
         resolvedGapY,
+
         resolvedMarginTop,
         resolvedMarginBottom,
         resolvedMarginLeft,
         resolvedMarginRight,
+
         resolvedPaddingTop,
         resolvedPaddingBottom,
         resolvedPaddingLeft,
         resolvedPaddingRight,
+
+        ZIndex[zIndex] || ZIndex.default,
       ])}
     >
       {children}

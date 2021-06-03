@@ -1,20 +1,41 @@
 import type {
+  // flex
   AlignContentType,
   AlignItemsType,
   FlexDirectionType,
   FlexWrapType,
   JustifyContentType,
+
+  // generic
+  BackgroundColorType,
+
+  BorderColorType,
+  BorderRadiusType,
+  BorderWidthType,
+
   GapType,
+
   MarginSizeType,
+
   PaddingSizeType,
+
+  ZIndexType,
 } from 'CSS'
 
 export type Props = {
+  // flex
   alignContent?: AlignContentType
   alignItems?: AlignItemsType
   direction?: FlexDirectionType
   wrap?: FlexWrapType
   justifyContent?: JustifyContentType
+
+  // generic
+  background?: BackgroundColorType
+
+  borderColor?: BorderColorType
+  borderRadius?: BorderRadiusType
+  borderWidth?: BorderWidthType
 
   gap?: GapType
   gapX?: GapType
@@ -35,4 +56,6 @@ export type Props = {
   paddingRight?: PaddingSizeType
   paddingBottom?: PaddingSizeType
   paddingLeft?: PaddingSizeType
+
+  zIndex?: ZIndexType
 }

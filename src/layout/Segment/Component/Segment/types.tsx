@@ -1,12 +1,22 @@
 import { tuple } from 'utils'
 import type {
+  AspectRatioType,
+
+  BackgroundColorType,
+
+  BorderColorType,
+  BorderRadiusType,
+  BorderWidthType,
+
   GapType,
+
   JustifyContentType,
+
   MarginSizeType,
+
   PaddingSizeType,
-  TextAlignType,
-  FontFamilyType,
-  FontSizeType,
+
+  ZIndexType,
 } from 'CSS'
 import type { DirectionType } from './css'
 
@@ -16,13 +26,18 @@ export type AsType = typeof TAGS[number]
 
 export type Props = {
   as?: AsType
+
+  // custom
   direction?: DirectionType
 
-  align?: TextAlignType
-  type?: FontFamilyType
-  size?: FontSizeType
+  // generic
+  aspectRatio?: AspectRatioType
 
-  justifyContent?: JustifyContentType
+  background?: BackgroundColorType
+
+  borderColor?: BorderColorType
+  borderRadius?: BorderRadiusType
+  borderWidth?: BorderWidthType
 
   gap?: GapType
   gapX?: GapType
@@ -43,4 +58,6 @@ export type Props = {
   paddingRight?: PaddingSizeType
   paddingBottom?: PaddingSizeType
   paddingLeft?: PaddingSizeType
+
+  zIndex?: ZIndexType
 }
