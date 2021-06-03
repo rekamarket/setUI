@@ -1,8 +1,8 @@
-import { FC } from 'react'
+import { VFC } from 'react'
 import Component, { Props as ComponentProps } from './Component'
 import { Large, Medium, Small } from './subsets'
 
-interface I<T = unknown> extends FC<T> {
+interface I<T = unknown> extends VFC<T> {
   Large: typeof Large
   Medium: typeof Medium
   Small: typeof Small

@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { VFC } from 'react'
 import {
   AlignContentMap,
   AlignItemsMap,
@@ -8,7 +8,7 @@ import {
 } from 'CSS'
 import Component, { Props } from '../../Component'
 
-const Center: FC<
+const Center: VFC<
   Omit<
     Props,
     'direction' | 'alignContent' | 'alignItems' | 'wrap' | 'justifyContent'

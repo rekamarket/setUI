@@ -1,4 +1,4 @@
-import { FC, createElement } from 'react'
+import { VFC, createElement } from 'react'
 import cn from 'classnames'
 import {
   AspectRatio,
@@ -21,7 +21,7 @@ import { tags } from './data'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
-const Start: FC<Props> = ({
+const Start: VFC<Props> = ({
   as,
 
   aspectRatio,

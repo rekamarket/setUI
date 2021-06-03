@@ -1,4 +1,4 @@
-import { FC, createElement } from 'react'
+import { VFC, createElement } from 'react'
 import cn from 'classnames'
 import {
   // flex
@@ -33,7 +33,7 @@ import {
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
-const Flex: FC<Props> = ({
+const Flex: VFC<Props> = ({
   // flex
   alignContent,
   alignItems,

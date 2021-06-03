@@ -10,6 +10,8 @@ import type {
 } from 'CSS'
 
 export type Props = {
+  children?: JSX.Element | Array<JSX.Element>
+
   aspectRatio?: AspectRatioType
 
   background?: BackgroundColorType

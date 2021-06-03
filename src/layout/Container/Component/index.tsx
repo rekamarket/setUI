@@ -1,4 +1,4 @@
-import { FC, createElement } from 'react'
+import { VFC, createElement } from 'react'
 import cn from 'classnames'
 import {
   AspectRatio,
@@ -22,7 +22,7 @@ import { tags } from './data'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
-const Container: FC<Props> = ({
+const Container: VFC<Props> = ({
   as,
 
   // custom

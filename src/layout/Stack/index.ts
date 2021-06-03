@@ -1,8 +1,8 @@
-import { FC } from 'react'
+import { VFC } from 'react'
 import Component, { Props as ComponentProps } from './Component'
 import { Placeholder } from './supersets'
 
-interface I<T = unknown> extends FC<T> {
+interface I<T = unknown> extends VFC<T> {
   Placeholder: typeof Placeholder
 }
 

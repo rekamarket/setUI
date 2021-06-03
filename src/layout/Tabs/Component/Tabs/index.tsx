@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { VFC } from 'react'
 import cn from 'classnames'
 import Tabs from 'rc-tabs'
 import {
@@ -15,7 +15,7 @@ import { Theme } from '../css'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
-const Component: FC<Props> = ({
+const Component: VFC<Props> = ({
   theme,
 
   margin,
@@ -97,5 +97,7 @@ const Component: FC<Props> = ({
     />
   )
 }
+
+export type { Props } from './types'
 
 export default Component

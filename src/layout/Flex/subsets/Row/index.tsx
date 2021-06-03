@@ -1,8 +1,8 @@
-import { FC } from 'react'
+import { VFC } from 'react'
 import { FlexDirectionMap } from 'CSS'
 import Component, { Props } from '../../Component'
 
-const Row: FC<Omit<Props, 'direction'>> = (props) =>
+const Row: VFC<Omit<Props, 'direction'>> = (props) =>
   Component({
     direction: FlexDirectionMap.row,
     ...props,

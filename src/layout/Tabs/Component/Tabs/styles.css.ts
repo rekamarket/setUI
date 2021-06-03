@@ -57,7 +57,7 @@ globalStyle('.rc-tabs-tabpane', {
 globalStyle(
   `
 .rc-tabs-top,
-.rc-tabs-bottom,
+.rc-tabs-bottom
 `,
   {
     flexDirection: 'column',
@@ -90,7 +90,7 @@ globalStyle('.rc-tabs-bottom .rc-tabs-ink-bar', {
 globalStyle(
   `
 .rc-tabs-left.rc-tabs-editable .rc-tabs-tab,
-.rc-tabs-right.rc-tabs-editable .rc-tabs-tab,
+.rc-tabs-right.rc-tabs-editable .rc-tabs-tab
 `,
   {
     paddingRight: 32,
@@ -100,7 +100,7 @@ globalStyle(
 globalStyle(
   `
 .rc-tabs-left .rc-tabs-nav-wrap,
-.rc-tabs-right .rc-tabs-nav-wrap,
+.rc-tabs-right .rc-tabs-nav-wrap
 `,
   {
     flexDirection: 'column',
@@ -110,7 +110,7 @@ globalStyle(
 globalStyle(
   `
 .rc-tabs-left .rc-tabs-ink-bar,
-.rc-tabs-right .rc-tabs-ink-bar,
+.rc-tabs-right .rc-tabs-ink-bar
 `,
   {
     width: 3,
@@ -120,7 +120,7 @@ globalStyle(
 globalStyle(
   `
 .rc-tabs-left .rc-tabs-nav,
-.rc-tabs-right .rc-tabs-nav,
+.rc-tabs-right .rc-tabs-nav
 `,
   {
     flexDirection: 'column',
@@ -133,7 +133,7 @@ globalStyle(
 .rc-tabs-left .rc-tabs-nav-list,
 .rc-tabs-right .rc-tabs-nav-list,
 .rc-tabs-left .rc-tabs-nav-operations,
-.rc-tabs-right .rc-tabs-nav-operations,
+.rc-tabs-right .rc-tabs-nav-operations
 `,
   {
     flex: '1 0 auto',
@@ -180,7 +180,7 @@ globalStyle('.rc-tabs-nav', {
 globalStyle(
   `
 .rc-tabs-nav-measure,
-.rc-tabs-nav-wrap,
+.rc-tabs-nav-wrap
 `,
   {
     transform: 'translate(0)',
@@ -198,7 +198,7 @@ globalStyle(
 .rc-tabs-nav-measure-ping-left::before,
 .rc-tabs-nav-wrap-ping-left::before,
 .rc-tabs-nav-measure-ping-right::after,
-.rc-tabs-nav-wrap-ping-right::after,
+.rc-tabs-nav-wrap-ping-right::after
 `,
   {
     content: '""',
@@ -211,7 +211,7 @@ globalStyle(
 globalStyle(
   `
 .rc-tabs-nav-measure-ping-left::before,
-.rc-tabs-nav-wrap-ping-left::before,
+.rc-tabs-nav-wrap-ping-left::before
 `,
   {
     left: 0,
@@ -222,7 +222,7 @@ globalStyle(
 globalStyle(
   `
 .rc-tabs-nav-measure-ping-right::after,
-.rc-tabs-nav-wrap-ping-right::after,
+.rc-tabs-nav-wrap-ping-right::after
 `,
   {
     right: 0,
@@ -235,7 +235,7 @@ globalStyle(
 .rc-tabs-nav-measure-ping-top::before,
 .rc-tabs-nav-wrap-ping-top::before,
 .rc-tabs-nav-measure-ping-bottom::after,
-.rc-tabs-nav-wrap-ping-bottom::after,
+.rc-tabs-nav-wrap-ping-bottom::after
 `,
   {
     content: '""',
@@ -248,7 +248,7 @@ globalStyle(
 globalStyle(
   `
 .rc-tabs-nav-measure-ping-top::before,
-.rc-tabs-nav-wrap-ping-top::before,
+.rc-tabs-nav-wrap-ping-top::before
 `,
   {
     top: 0,
@@ -259,7 +259,7 @@ globalStyle(
 globalStyle(
   `
 .rc-tabs-nav-measure-ping-bottom::after,
-.rc-tabs-nav-wrap-ping-bottom::after,
+.rc-tabs-nav-wrap-ping-bottom::after
 `,
   {
     bottom: 0,
@@ -306,7 +306,7 @@ globalStyle('.rc-tabs-tab', {
 globalStyle(
   `
 .rc-tabs-tab-btn,
-.rc-tabs-tab-remove,
+.rc-tabs-tab-remove
 `,
   {
     border: 0,

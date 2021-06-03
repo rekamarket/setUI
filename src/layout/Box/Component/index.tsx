@@ -1,4 +1,4 @@
-import { FC, createElement } from 'react'
+import { VFC, createElement } from 'react'
 import cn from 'classnames'
 import {
   AspectRatio,
@@ -19,7 +19,7 @@ import {
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
-const Box: FC<Props> = ({
+const Box: VFC<Props> = ({
   aspectRatio,
 
   background,

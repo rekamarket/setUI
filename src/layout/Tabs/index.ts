@@ -1,8 +1,10 @@
-import { FC } from 'react'
-import Component, { Props as ComponentProps } from './Component/Tabs'
-import Panel, { Props as PanelProps } from './Component/Panel'
+import { VFC } from 'react'
+import Component from './Component/Tabs'
+import type { Props as ComponentProps } from './Component/Tabs'
+import Panel from './Component/Panel'
+import type { Props as PanelProps } from './Component/Panel'
 
-interface I<T = unknown> extends FC<T> {
+interface I<T = unknown> extends VFC<T> {
   // subcomponents
   Panel: typeof Panel
 }

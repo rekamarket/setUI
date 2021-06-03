@@ -17,6 +17,7 @@ const TAGS = tuple(...Tags)
 export type AsType = typeof TAGS[number]
 
 export type Props = {
+  children?: JSX.Element | Array<JSX.Element>
   as?: AsType
 
   // custom

@@ -1,11 +1,11 @@
-import { FC, useMemo } from 'react'
+import { VFC, useMemo } from 'react'
 import cn from 'classnames'
 import { BackgroundColor } from 'CSS'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 import { Size } from '../css'
 
-const Component: FC<Props> = ({ color, size, length = 3 }) => {
+const Component: VFC<Props> = ({ color, size, length = 3 }) => {
   const blocks = useMemo(() => Array.from({ length }), [length])
 
   return (

@@ -18,6 +18,8 @@ import type {
 } from 'CSS'
 
 export type Props = {
+  children?: JSX.Element | Array<JSX.Element>
+
   // flex
   alignContent?: AlignContentType
   alignItems?: AlignItemsType

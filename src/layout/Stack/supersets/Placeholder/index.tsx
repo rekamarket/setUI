@@ -1,10 +1,10 @@
-import { FC } from 'react'
+import { VFC } from 'react'
 import PlaceholderComponent, {
   Props as PlaceholderProps,
 } from '../../../Placeholder/Component'
 import Component, { Props } from '../../../Stack/Component'
 
-const Placeholder: FC<
+const Placeholder: VFC<
   Omit<Props, 'children'> & Pick<PlaceholderProps, 'size' | 'length'>
 > = ({ size, length, ...props }) =>
   Component({

@@ -1,11 +1,11 @@
-import { FC } from 'react'
+import { VFC } from 'react'
 import Component, { Props as ComponentProps } from './Component/Segment'
 import Interval, { Props as IntervalProps } from './Component/Interval'
 import Start, { Props as StartProps } from './Component/Start'
 import End, { Props as EndProps } from './Component/End'
 import { Column, Row } from './subsets'
 
-interface I<T = unknown> extends FC<T> {
+interface I<T = unknown> extends VFC<T> {
   // subcomponents
   Interval: typeof Interval
   Start: typeof Start

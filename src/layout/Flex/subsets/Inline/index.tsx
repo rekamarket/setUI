@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { VFC } from 'react'
 import {
   FlexDirectionMap,
   AlignContentMap,
@@ -7,7 +7,7 @@ import {
 } from 'CSS'
 import Component, { Props } from '../../Component'
 
-const Inline: FC<
+const Inline: VFC<
   Omit<Props, 'direction' | 'alignContent' | 'alignItems' | 'wrap'>
 > = (props) =>
   Component({

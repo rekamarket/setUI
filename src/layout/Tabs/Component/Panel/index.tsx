@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { VFC } from 'react'
 import cn from 'classnames'
 import { TabPane } from 'rc-tabs'
 import {
@@ -14,7 +14,7 @@ import {
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
-const Component: FC<Props> = ({
+const Component: VFC<Props> = ({
   margin,
   marginX,
   marginY,
@@ -92,5 +92,7 @@ const Component: FC<Props> = ({
     />
   )
 }
+
+export type { Props } from './types'
 
 export default Component

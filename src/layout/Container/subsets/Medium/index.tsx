@@ -1,7 +1,7 @@
-import { FC } from 'react'
+import { VFC } from 'react'
 import Component, { Props } from '../../Component'
 
-const Medium: FC<Omit<Props, 'size'>> = (props) =>
+const Medium: VFC<Omit<Props, 'size'>> = (props) =>
   Component({
     size: 'medium',
     ...props,
