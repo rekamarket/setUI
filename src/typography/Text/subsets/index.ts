@@ -1,4 +1,5 @@
 export { default as Attention } from './Attention'
+export { default as DefinedTerm } from './DefinedTerm'
 export { default as Emphasis } from './Emphasis'
 export { default as Idiomatic } from './Idiomatic'
 export { default as StressEmphasis } from './StressEmphasis'
