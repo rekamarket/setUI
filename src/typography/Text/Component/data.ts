@@ -1,7 +1,7 @@
 /*
 	in theory we should support all of those elements:
 	(but we are not gonna do that right now)
-		<blockquote>
+		// <blockquote>
 		<dd>
 		// <div>
 		<dt>
@@ -53,4 +53,5 @@ export const component = {
   mark: 'mark',
   kbd: 'kbd',
   q: 'q',
+  blockquote: 'blockquote',
 }
