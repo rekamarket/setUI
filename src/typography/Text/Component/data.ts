@@ -27,7 +27,7 @@
 		// <var>
 
 		// <del>
-		<ins>
+		// <ins>
 
 		// <i>
 		// <b>
@@ -56,4 +56,5 @@ export const component = {
   blockquote: 'blockquote',
   cite: 'cite',
   del: 'del',
+  ins: 'ins',
 }
