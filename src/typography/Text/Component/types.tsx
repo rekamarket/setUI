@@ -25,6 +25,7 @@ export type AsType =
   | 'code'
   | 'time'
   | 'var'
+  | 'mark'
 
 export type Props = {
   as?: AsType

@@ -15,7 +15,7 @@
 		<cite>
 		// <dfn>
 		// <em>
-		<mark>
+		// <mark>
 		<q>
 		// <samp>
 		<small>
@@ -49,4 +49,5 @@ export const component = {
   code: 'code',
   time: 'time',
   var: 'var',
+  mark: 'mark',
 }

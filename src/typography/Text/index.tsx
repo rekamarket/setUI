@@ -6,6 +6,7 @@ import {
   Code,
   DefinedTerm,
   Emphasis,
+  Highlight,
   Idiomatic,
   SampleOutput,
   StressEmphasis,
@@ -24,6 +25,7 @@ interface I<T = unknown> extends FC<T> {
   Code: typeof Code
   DefinedTerm: typeof DefinedTerm
   Emphasis: typeof Emphasis
+  Highlight: typeof Highlight
   Idiomatic: typeof Idiomatic
   SampleOutput: typeof SampleOutput
   StressEmphasis: typeof StressEmphasis
@@ -46,6 +48,7 @@ Text.Code = Code
 Text.DefinedTerm = DefinedTerm
 Text.Emphasis = Emphasis
 Text.Idiomatic = Idiomatic
+Text.Highlight = Highlight
 Text.SampleOutput = SampleOutput
 Text.StressEmphasis = StressEmphasis
 Text.Strong = Strong
