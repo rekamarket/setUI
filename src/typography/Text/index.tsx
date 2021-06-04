@@ -8,6 +8,7 @@ import {
   Idiomatic,
   StressEmphasis,
   Strong,
+  Superscript,
 } from './subsets'
 import { Placeholder } from './supersets'
 
@@ -20,6 +21,7 @@ interface I<T = unknown> extends FC<T> {
   Idiomatic: typeof Idiomatic
   StressEmphasis: typeof StressEmphasis
   Strong: typeof Strong
+  Superscript: typeof Superscript
 
   // supersets
   Placeholder: typeof Placeholder
@@ -35,6 +37,7 @@ Text.Emphasis = Emphasis
 Text.Idiomatic = Idiomatic
 Text.StressEmphasis = StressEmphasis
 Text.Strong = Strong
+Text.Superscript = Superscript
 
 // supersets
 Text.Placeholder = Placeholder

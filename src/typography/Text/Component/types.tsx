@@ -19,6 +19,7 @@ export type AsType =
   | 'b'
   | 'dfn'
   | 'abbr'
+  | 'sup'
 
 export type Props = {
   as?: AsType
