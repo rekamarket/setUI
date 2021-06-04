@@ -24,7 +24,7 @@
 		// <sub>
 		// <sup>
 		// <time>
-		<var>
+		// <var>
 
 		<del>
 		<ins>
@@ -48,4 +48,5 @@ export const component = {
   samp: 'samp',
   code: 'code',
   time: 'time',
+  var: 'var',
 }

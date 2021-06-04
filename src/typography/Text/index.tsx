@@ -13,6 +13,7 @@ import {
   Subscript,
   Superscript,
   Time,
+  Variable,
 } from './subsets'
 import { Placeholder } from './supersets'
 
@@ -30,6 +31,7 @@ interface I<T = unknown> extends FC<T> {
   Subscript: typeof Subscript
   Superscript: typeof Superscript
   Time: typeof Time
+  Variable: typeof Variable
 
   // supersets
   Placeholder: typeof Placeholder
@@ -50,6 +52,7 @@ Text.Strong = Strong
 Text.Subscript = Subscript
 Text.Superscript = Superscript
 Text.Time = Time
+Text.Variable = Variable
 
 // supersets
 Text.Placeholder = Placeholder

@@ -24,6 +24,7 @@ export type AsType =
   | 'samp'
   | 'code'
   | 'time'
+  | 'var'
 
 export type Props = {
   as?: AsType
