@@ -16,7 +16,7 @@
 		// <dfn>
 		// <em>
 		// <mark>
-		<q>
+		// <q>
 		// <samp>
 		<small>
 		// <span>
@@ -52,4 +52,5 @@ export const component = {
   var: 'var',
   mark: 'mark',
   kbd: 'kbd',
+  q: 'q',
 }
