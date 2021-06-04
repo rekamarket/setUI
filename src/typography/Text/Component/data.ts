@@ -21,7 +21,7 @@
 		<small>
 		// <span>
 		// <strong>
-		<sub>
+		// <sub>
 		// <sup>
 		<time>
 		<var>
@@ -43,4 +43,5 @@ export const component = {
   dfn: 'dfn',
   abbr: 'abbr',
   sup: 'sup',
+  sub: 'sub',
 }
