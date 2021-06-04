@@ -24,7 +24,14 @@ const Text: FC<Props> = ({
   color,
 
   align,
+
+  underline,
+  lineThrough,
   decoration,
+
+  uppercase,
+  lowercase,
+  capitalize,
   transform,
 
   type,
@@ -71,8 +78,20 @@ const Text: FC<Props> = ({
         Color[color] || Color.grey130,
 
         TextAlign[align] || TextAlign.left,
-        TextDecoration[decoration] || TextDecoration.default,
-        TextTransform[transform] || TextTransform.default,
+
+        underline
+          ? TextDecoration.underline
+          : lineThrough
+          ? TextDecoration.lineThrough
+          : TextDecoration[decoration] || TextDecoration.default,
+
+        capitalize
+          ? TextTransform.capitalize
+          : uppercase
+          ? TextTransform.uppercase
+          : lowercase
+          ? TextTransform.lowercase
+          : TextTransform[transform] || TextTransform.default,
 
         FontFamily[type] || FontFamily.default,
         FontSize[size] || FontSize.medium,

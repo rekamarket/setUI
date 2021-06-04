@@ -18,7 +18,14 @@ export type Props = {
   color?: ColorType
 
   align?: TextAlignType
+
+  underline?: boolean
+  lineThrough?: boolean
   decoration?: TextDecorationType
+
+  uppercase?: boolean
+  lowercase?: boolean
+  capitalize?: boolean
   transform?: TextTransformType
 
   weight?: FontWeightType
