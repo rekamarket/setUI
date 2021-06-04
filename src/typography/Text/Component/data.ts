@@ -10,12 +10,8 @@ export const component = {
   abbr: 'abbr',
   sup: 'sup',
   sub: 'sub',
-  samp: 'samp',
-  code: 'code',
   time: 'time',
-  var: 'var',
   mark: 'mark',
-  kbd: 'kbd',
   q: 'q',
   blockquote: 'blockquote', // should be a subset (since it should use margin)
   cite: 'cite',

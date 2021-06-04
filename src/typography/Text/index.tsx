@@ -4,7 +4,6 @@ import {
   Abbreviation,
   Attention,
   Citation,
-  Code,
   DeletedText,
   DefinedTerm,
   Disclaimer,
@@ -12,20 +11,17 @@ import {
   Highlight,
   Idiomatic,
   InsertedText,
-  KeyboardInput,
   Label,
   Legend,
   Outdated,
   QuoteBlock,
   QuoteInline,
-  SampleOutput,
   StressEmphasis,
   Strong,
   Subscript,
   Superscript,
   Time,
   UnarticulatedAnnotation,
-  Variable,
 } from './subsets'
 import { Placeholder } from './supersets'
 
@@ -34,7 +30,6 @@ interface I<T = unknown> extends FC<T> {
   Abbreviation: typeof Abbreviation
   Attention: typeof Attention
   Citation: typeof Citation
-  Code: typeof Code
   DeletedText: typeof DeletedText
   DefinedTerm: typeof DefinedTerm
   Disclaimer: typeof Disclaimer
@@ -42,21 +37,18 @@ interface I<T = unknown> extends FC<T> {
   Highlight: typeof Highlight
   Idiomatic: typeof Idiomatic
   InsertedText: typeof InsertedText
-  KeyboardInput: typeof KeyboardInput
   Label: typeof Label
   Legend: typeof Legend
   Outdated: typeof Outdated
   QuoteBlock: typeof QuoteBlock
   QuoteInline: typeof QuoteInline
   Reference: typeof Citation
-  SampleOutput: typeof SampleOutput
   StressEmphasis: typeof StressEmphasis
   Strong: typeof Strong
   Subscript: typeof Subscript
   Superscript: typeof Superscript
   Time: typeof Time
   UnarticulatedAnnotation: typeof UnarticulatedAnnotation
-  Variable: typeof Variable
 
   // supersets
   Placeholder: typeof Placeholder
@@ -68,7 +60,6 @@ const Text: I<ComponentProps> = (props) => Component(props)
 Text.Abbreviation = Abbreviation
 Text.Attention = Attention
 Text.Citation = Citation
-Text.Code = Code
 Text.DeletedText = DeletedText
 Text.DefinedTerm = DefinedTerm
 Text.Disclaimer = Disclaimer
@@ -76,21 +67,18 @@ Text.Emphasis = Emphasis
 Text.Highlight = Highlight
 Text.Idiomatic = Idiomatic
 Text.InsertedText = InsertedText
-Text.KeyboardInput = KeyboardInput
 Text.Label = Label
 Text.Legend = Legend
 Text.Outdated = Outdated
 Text.QuoteBlock = QuoteBlock
 Text.QuoteInline = QuoteInline
 Text.Reference = Citation
-Text.SampleOutput = SampleOutput
 Text.StressEmphasis = StressEmphasis
 Text.Strong = Strong
 Text.Subscript = Subscript
 Text.Superscript = Superscript
 Text.Time = Time
 Text.UnarticulatedAnnotation = UnarticulatedAnnotation
-Text.Variable = Variable
 
 // supersets
 Text.Placeholder = Placeholder

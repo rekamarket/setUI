@@ -5,34 +5,9 @@ import type {
   FontWeightType,
   ColorType,
   TextAlignType,
-  TextDecorationType,
-  TextTransformType,
 } from 'CSS'
 
-export type AsType =
-  | 'span'
-  | 'div'
-  | 'p'
-  | 'strong'
-  | 'em'
-  | 'i'
-  | 'b'
-  | 'dfn'
-  | 'abbr'
-  | 'sup'
-  | 'sub'
-  | 'time'
-  | 'mark'
-  | 'q'
-  | 'blockquote'
-  | 'cite'
-  | 'del'
-  | 'ins'
-  | 'label'
-  | 'legend'
-  | 'u'
-  | 's'
-  | 'small'
+export type AsType = 'code' | 'var' | 'kbd' | 'samp'
 
 export type Props = {
   as?: AsType
@@ -42,15 +17,6 @@ export type Props = {
   color?: ColorType
 
   align?: TextAlignType
-
-  underline?: boolean
-  lineThrough?: boolean
-  decoration?: TextDecorationType
-
-  uppercase?: boolean
-  lowercase?: boolean
-  capitalize?: boolean
-  transform?: TextTransformType
 
   weight?: FontWeightType
   type?: FontFamilyType
