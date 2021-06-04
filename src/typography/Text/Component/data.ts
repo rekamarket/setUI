@@ -1,43 +1,7 @@
-/*
-	in theory we should support all of those elements:
-	(but we are not gonna do that right now)
-		// <blockquote>
-		<dd>
-		// <div>
-		<dt>
-		<figcaption>
-		<figure>
-		<li>
-		<ol>
-		// <p>
-
-		// <abbr>
-		// <cite>
-		// <dfn>
-		// <em>
-		// <mark>
-		// <q>
-		// <samp>
-		<small>
-		// <span>
-		// <strong>
-		// <sub>
-		// <sup>
-		// <time>
-		// <var>
-
-		// <del>
-		// <ins>
-
-		// <i>
-		// <b>
-		// <code>
-		// kbd
-*/
 export const component = {
+  p: 'p', // should be a subset (since it should use margin)
+  div: 'div', // should be a subset (since it should use margin)
   span: 'span',
-  div: 'div',
-  p: 'p',
   strong: 'strong',
   em: 'em',
   i: 'i',
@@ -53,8 +17,15 @@ export const component = {
   mark: 'mark',
   kbd: 'kbd',
   q: 'q',
-  blockquote: 'blockquote',
+  blockquote: 'blockquote', // should be a subset (since it should use margin)
   cite: 'cite',
   del: 'del',
   ins: 'ins',
+  // small: 'small',
+  // s: 's',
+  // u: 'u',
 }
+
+// todo
+// maybe group some subsets, like Code Variable KeyboardInput SampleOutput
+// Or even move them from `<Text />` to `<Code />`
