@@ -23,6 +23,7 @@ export type AsType =
   | 'sub'
   | 'samp'
   | 'code'
+  | 'time'
 
 export type Props = {
   as?: AsType

@@ -23,7 +23,7 @@
 		// <strong>
 		// <sub>
 		// <sup>
-		<time>
+		// <time>
 		<var>
 
 		<del>
@@ -47,4 +47,5 @@ export const component = {
   sub: 'sub',
   samp: 'samp',
   code: 'code',
+  time: 'time',
 }
