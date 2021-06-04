@@ -1,35 +1,25 @@
 import { FC } from 'react'
 import Component, { Props as ComponentProps } from './Component'
 import {
+  Abbreviation,
   Attention,
-  Capitalize,
+  DefinedTerm,
   Emphasis,
   Idiomatic,
-  LineThrough,
-  Lowercase,
   StressEmphasis,
   Strong,
-  Thin,
-  Underline,
-  Uppercase,
 } from './subsets'
 import { Placeholder } from './supersets'
 
 interface I<T = unknown> extends FC<T> {
   // subsets
+  Abbreviation: typeof Abbreviation
   Attention: typeof Attention
-  Capitalize: typeof Capitalize
+  DefinedTerm: typeof DefinedTerm
   Emphasis: typeof Emphasis
   Idiomatic: typeof Idiomatic
-  Lowercase: typeof Lowercase
   StressEmphasis: typeof StressEmphasis
-  Uppercase: typeof Uppercase
-
-  LineThrough: typeof LineThrough
-  Underline: typeof Underline
-
   Strong: typeof Strong
-  Thin: typeof Thin
 
   // supersets
   Placeholder: typeof Placeholder
@@ -38,19 +28,13 @@ interface I<T = unknown> extends FC<T> {
 const Text: I<ComponentProps> = (props) => Component(props)
 
 // subsets
+Text.Abbreviation = Abbreviation
 Text.Attention = Attention
-Text.Capitalize = Capitalize
+Text.DefinedTerm = DefinedTerm
 Text.Emphasis = Emphasis
 Text.Idiomatic = Idiomatic
-Text.Lowercase = Lowercase
 Text.StressEmphasis = StressEmphasis
-Text.Uppercase = Uppercase
-
-Text.LineThrough = LineThrough
-Text.Underline = Underline
-
 Text.Strong = Strong
-Text.Thin = Thin
 
 // supersets
 Text.Placeholder = Placeholder

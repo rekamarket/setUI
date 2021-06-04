@@ -1,3 +1,4 @@
+export { default as Abbreviation } from './Abbreviation'
 export { default as Attention } from './Attention'
 export { default as DefinedTerm } from './DefinedTerm'
 export { default as Emphasis } from './Emphasis'

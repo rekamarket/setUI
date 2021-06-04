@@ -11,7 +11,7 @@
 		<ol>
 		// <p>
 
-		<abbr>
+		// <abbr>
 		<cite>
 		// <dfn>
 		// <em>
@@ -41,4 +41,5 @@ export const component = {
   i: 'i',
   b: 'b',
   dfn: 'dfn',
+  abbr: 'abbr',
 }
