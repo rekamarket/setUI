@@ -3,6 +3,7 @@ import Component, { Props as ComponentProps } from './Component'
 import {
   Abbreviation,
   Attention,
+  Citation,
   Code,
   DefinedTerm,
   Emphasis,
@@ -25,6 +26,7 @@ interface I<T = unknown> extends FC<T> {
   // subsets
   Abbreviation: typeof Abbreviation
   Attention: typeof Attention
+  Citation: typeof Citation
   Code: typeof Code
   DefinedTerm: typeof DefinedTerm
   Emphasis: typeof Emphasis
@@ -33,6 +35,7 @@ interface I<T = unknown> extends FC<T> {
   KeyboardInput: typeof KeyboardInput
   QuoteBlock: typeof QuoteBlock
   QuoteInline: typeof QuoteInline
+  Reference: typeof Citation
   SampleOutput: typeof SampleOutput
   StressEmphasis: typeof StressEmphasis
   Strong: typeof Strong
@@ -50,14 +53,16 @@ const Text: I<ComponentProps> = (props) => Component(props)
 // subsets
 Text.Abbreviation = Abbreviation
 Text.Attention = Attention
+Text.Citation = Citation
 Text.Code = Code
 Text.DefinedTerm = DefinedTerm
 Text.Emphasis = Emphasis
+Text.Highlight = Highlight
 Text.Idiomatic = Idiomatic
 Text.KeyboardInput = KeyboardInput
 Text.QuoteBlock = QuoteBlock
 Text.QuoteInline = QuoteInline
-Text.Highlight = Highlight
+Text.Reference = Citation
 Text.SampleOutput = SampleOutput
 Text.StressEmphasis = StressEmphasis
 Text.Strong = Strong

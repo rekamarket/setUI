@@ -12,7 +12,7 @@
 		// <p>
 
 		// <abbr>
-		<cite>
+		// <cite>
 		// <dfn>
 		// <em>
 		// <mark>
@@ -54,4 +54,5 @@ export const component = {
   kbd: 'kbd',
   q: 'q',
   blockquote: 'blockquote',
+  cite: 'cite',
 }
