@@ -32,10 +32,12 @@ const Index = () => {
           background="errorPale"
         >
           <Text.Placeholder />
-          <Text.Strong color="error">Strong</Text.Strong>
-          <Text.Underline color="error">Underline</Text.Underline>
-          <Text.LineThrough color="error">LineThrough</Text.LineThrough>
-          <Text.Capitalize color="error">text</Text.Capitalize>
+          <Text.Strong underline color="error">
+            Strong
+          </Text.Strong>
+          <Text.Emphasis lowercase color="error">
+            Emphasis
+          </Text.Emphasis>
           <Flex
             borderColor="primary"
             borderWidth="thin"
@@ -44,8 +46,12 @@ const Index = () => {
             background="success"
             gap="xxlarge"
           >
-            <Text.Uppercase color="error">text</Text.Uppercase>
-            <Text.Lowercase color="error">GFD</Text.Lowercase>
+            <Text.StressEmphasis uppercase color="error">
+              Emphasis
+            </Text.StressEmphasis>
+            <Text.Idiomatic lineThrough color="error">
+              Emphasis
+            </Text.Idiomatic>
           </Flex>
         </Box>
       </Container.Small>
