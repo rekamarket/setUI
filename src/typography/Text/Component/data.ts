@@ -26,7 +26,7 @@
 		// <time>
 		// <var>
 
-		<del>
+		// <del>
 		<ins>
 
 		// <i>
@@ -55,4 +55,5 @@ export const component = {
   q: 'q',
   blockquote: 'blockquote',
   cite: 'cite',
+  del: 'del',
 }

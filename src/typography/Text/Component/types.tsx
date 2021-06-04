@@ -30,6 +30,7 @@ export type AsType =
   | 'q'
   | 'blockquote'
   | 'cite'
+  | 'del'
 
 export type Props = {
   as?: AsType

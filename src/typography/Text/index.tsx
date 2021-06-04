@@ -5,6 +5,7 @@ import {
   Attention,
   Citation,
   Code,
+  DeletedText,
   DefinedTerm,
   Emphasis,
   Highlight,
@@ -28,6 +29,7 @@ interface I<T = unknown> extends FC<T> {
   Attention: typeof Attention
   Citation: typeof Citation
   Code: typeof Code
+  DeletedText: typeof DeletedText
   DefinedTerm: typeof DefinedTerm
   Emphasis: typeof Emphasis
   Highlight: typeof Highlight
@@ -55,6 +57,7 @@ Text.Abbreviation = Abbreviation
 Text.Attention = Attention
 Text.Citation = Citation
 Text.Code = Code
+Text.DeletedText = DeletedText
 Text.DefinedTerm = DefinedTerm
 Text.Emphasis = Emphasis
 Text.Highlight = Highlight
