@@ -24,8 +24,8 @@ export const component = {
   label: 'label',
   legend: 'legend',
   u: 'u',
+  s: 's',
   // small: 'small',
-  // s: 's',
 }
 
 // todo

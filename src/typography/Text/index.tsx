@@ -14,6 +14,7 @@ import {
   KeyboardInput,
   Label,
   Legend,
+  Outdated,
   QuoteBlock,
   QuoteInline,
   SampleOutput,
@@ -42,6 +43,7 @@ interface I<T = unknown> extends FC<T> {
   KeyboardInput: typeof KeyboardInput
   Label: typeof Label
   Legend: typeof Legend
+  Outdated: typeof Outdated
   QuoteBlock: typeof QuoteBlock
   QuoteInline: typeof QuoteInline
   Reference: typeof Citation
@@ -74,6 +76,7 @@ Text.InsertedText = InsertedText
 Text.KeyboardInput = KeyboardInput
 Text.Label = Label
 Text.Legend = Legend
+Text.Outdated = Outdated
 Text.QuoteBlock = QuoteBlock
 Text.QuoteInline = QuoteInline
 Text.Reference = Citation
