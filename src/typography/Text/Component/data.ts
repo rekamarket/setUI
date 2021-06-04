@@ -25,7 +25,7 @@ export const component = {
   legend: 'legend',
   u: 'u',
   s: 's',
-  // small: 'small',
+  small: 'small',
 }
 
 // todo

@@ -7,6 +7,7 @@ import {
   Code,
   DeletedText,
   DefinedTerm,
+  Disclaimer,
   Emphasis,
   Highlight,
   Idiomatic,
@@ -36,6 +37,7 @@ interface I<T = unknown> extends FC<T> {
   Code: typeof Code
   DeletedText: typeof DeletedText
   DefinedTerm: typeof DefinedTerm
+  Disclaimer: typeof Disclaimer
   Emphasis: typeof Emphasis
   Highlight: typeof Highlight
   Idiomatic: typeof Idiomatic
@@ -69,6 +71,7 @@ Text.Citation = Citation
 Text.Code = Code
 Text.DeletedText = DeletedText
 Text.DefinedTerm = DefinedTerm
+Text.Disclaimer = Disclaimer
 Text.Emphasis = Emphasis
 Text.Highlight = Highlight
 Text.Idiomatic = Idiomatic

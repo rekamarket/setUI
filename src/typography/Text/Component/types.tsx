@@ -36,6 +36,7 @@ export type AsType =
   | 'legend'
   | 'u'
   | 's'
+  | 'small'
 
 export type Props = {
   as?: AsType
