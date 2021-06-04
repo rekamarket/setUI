@@ -32,6 +32,7 @@ export type AsType =
   | 'cite'
   | 'del'
   | 'ins'
+  | 'label'
 
 export type Props = {
   as?: AsType

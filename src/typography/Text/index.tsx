@@ -12,6 +12,7 @@ import {
   Idiomatic,
   InsertedText,
   KeyboardInput,
+  Label,
   QuoteBlock,
   QuoteInline,
   SampleOutput,
@@ -37,6 +38,7 @@ interface I<T = unknown> extends FC<T> {
   Idiomatic: typeof Idiomatic
   InsertedText: typeof InsertedText
   KeyboardInput: typeof KeyboardInput
+  Label: typeof Label
   QuoteBlock: typeof QuoteBlock
   QuoteInline: typeof QuoteInline
   Reference: typeof Citation
@@ -66,6 +68,7 @@ Text.Highlight = Highlight
 Text.Idiomatic = Idiomatic
 Text.InsertedText = InsertedText
 Text.KeyboardInput = KeyboardInput
+Text.Label = Label
 Text.QuoteBlock = QuoteBlock
 Text.QuoteInline = QuoteInline
 Text.Reference = Citation

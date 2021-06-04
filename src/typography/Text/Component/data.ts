@@ -21,6 +21,7 @@ export const component = {
   cite: 'cite',
   del: 'del',
   ins: 'ins',
+  label: 'label',
   // small: 'small',
   // s: 's',
   // u: 'u',
