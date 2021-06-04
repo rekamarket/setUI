@@ -19,6 +19,7 @@ import { ClassName } from './styles.css'
 
 const Text: FC<Props> = ({
   as,
+  title,
 
   truncate,
   color,
@@ -102,6 +103,7 @@ const Text: FC<Props> = ({
         resolvedPaddingLeft,
         resolvedPaddingRight,
       ]),
+      title,
     },
 
     children

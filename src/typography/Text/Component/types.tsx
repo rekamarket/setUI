@@ -22,6 +22,7 @@ export type AsType =
 
 export type Props = {
   as?: AsType
+  title?: string
   truncate?: boolean
 
   color?: ColorType
