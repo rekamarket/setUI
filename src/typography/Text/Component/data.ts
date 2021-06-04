@@ -12,8 +12,6 @@ export const component = {
   sub: 'sub',
   time: 'time',
   mark: 'mark',
-  q: 'q',
-  blockquote: 'blockquote', // should be a subset (since it should use margin)
   cite: 'cite',
   del: 'del',
   ins: 'ins',

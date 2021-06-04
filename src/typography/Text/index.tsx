@@ -14,8 +14,6 @@ import {
   Label,
   Legend,
   Outdated,
-  QuoteBlock,
-  QuoteInline,
   StressEmphasis,
   Strong,
   Subscript,
@@ -40,8 +38,6 @@ interface I<T = unknown> extends FC<T> {
   Label: typeof Label
   Legend: typeof Legend
   Outdated: typeof Outdated
-  QuoteBlock: typeof QuoteBlock
-  QuoteInline: typeof QuoteInline
   Reference: typeof Citation
   StressEmphasis: typeof StressEmphasis
   Strong: typeof Strong
@@ -70,8 +66,6 @@ Text.InsertedText = InsertedText
 Text.Label = Label
 Text.Legend = Legend
 Text.Outdated = Outdated
-Text.QuoteBlock = QuoteBlock
-Text.QuoteInline = QuoteInline
 Text.Reference = Citation
 Text.StressEmphasis = StressEmphasis
 Text.Strong = Strong

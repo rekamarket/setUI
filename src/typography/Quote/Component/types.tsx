@@ -9,28 +9,7 @@ import type {
   TextTransformType,
 } from 'CSS'
 
-export type AsType =
-  | 'span'
-  | 'div'
-  | 'p'
-  | 'strong'
-  | 'em'
-  | 'i'
-  | 'b'
-  | 'dfn'
-  | 'abbr'
-  | 'sup'
-  | 'sub'
-  | 'time'
-  | 'mark'
-  | 'cite'
-  | 'del'
-  | 'ins'
-  | 'label'
-  | 'legend'
-  | 'u'
-  | 's'
-  | 'small'
+export type AsType = 'q' | 'blockquote'
 
 export type Props = {
   as?: AsType
