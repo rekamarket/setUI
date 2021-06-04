@@ -8,6 +8,7 @@ import {
   Emphasis,
   Highlight,
   Idiomatic,
+  KeyboardInput,
   SampleOutput,
   StressEmphasis,
   Strong,
@@ -27,6 +28,7 @@ interface I<T = unknown> extends FC<T> {
   Emphasis: typeof Emphasis
   Highlight: typeof Highlight
   Idiomatic: typeof Idiomatic
+  KeyboardInput: typeof KeyboardInput
   SampleOutput: typeof SampleOutput
   StressEmphasis: typeof StressEmphasis
   Strong: typeof Strong
@@ -48,6 +50,7 @@ Text.Code = Code
 Text.DefinedTerm = DefinedTerm
 Text.Emphasis = Emphasis
 Text.Idiomatic = Idiomatic
+Text.KeyboardInput = KeyboardInput
 Text.Highlight = Highlight
 Text.SampleOutput = SampleOutput
 Text.StressEmphasis = StressEmphasis

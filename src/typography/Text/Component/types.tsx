@@ -26,6 +26,7 @@ export type AsType =
   | 'time'
   | 'var'
   | 'mark'
+  | 'kbd'
 
 export type Props = {
   as?: AsType

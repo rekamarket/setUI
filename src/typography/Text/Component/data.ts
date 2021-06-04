@@ -32,6 +32,7 @@
 		// <i>
 		// <b>
 		// <code>
+		// kbd
 */
 export const component = {
   span: 'span',
@@ -50,4 +51,5 @@ export const component = {
   time: 'time',
   var: 'var',
   mark: 'mark',
+  kbd: 'kbd',
 }
