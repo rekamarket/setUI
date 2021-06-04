@@ -3,6 +3,7 @@ import Component, { Props as ComponentProps } from './Component'
 import {
   Abbreviation,
   Attention,
+  Code,
   DefinedTerm,
   Emphasis,
   Idiomatic,
@@ -18,6 +19,7 @@ interface I<T = unknown> extends FC<T> {
   // subsets
   Abbreviation: typeof Abbreviation
   Attention: typeof Attention
+  Code: typeof Code
   DefinedTerm: typeof DefinedTerm
   Emphasis: typeof Emphasis
   Idiomatic: typeof Idiomatic
@@ -36,6 +38,7 @@ const Text: I<ComponentProps> = (props) => Component(props)
 // subsets
 Text.Abbreviation = Abbreviation
 Text.Attention = Attention
+Text.Code = Code
 Text.DefinedTerm = DefinedTerm
 Text.Emphasis = Emphasis
 Text.Idiomatic = Idiomatic

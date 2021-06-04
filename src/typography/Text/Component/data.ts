@@ -31,6 +31,7 @@
 
 		// <i>
 		// <b>
+		// <code>
 */
 export const component = {
   span: 'span',
@@ -45,4 +46,5 @@ export const component = {
   sup: 'sup',
   sub: 'sub',
   samp: 'samp',
+  code: 'code',
 }
