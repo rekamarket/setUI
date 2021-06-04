@@ -17,7 +17,7 @@
 		// <em>
 		<mark>
 		<q>
-		<samp>
+		// <samp>
 		<small>
 		// <span>
 		// <strong>
@@ -44,4 +44,5 @@ export const component = {
   abbr: 'abbr',
   sup: 'sup',
   sub: 'sub',
+  samp: 'samp',
 }

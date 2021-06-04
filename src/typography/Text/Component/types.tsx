@@ -21,6 +21,7 @@ export type AsType =
   | 'abbr'
   | 'sup'
   | 'sub'
+  | 'samp'
 
 export type Props = {
   as?: AsType

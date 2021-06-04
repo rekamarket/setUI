@@ -6,6 +6,7 @@ import {
   DefinedTerm,
   Emphasis,
   Idiomatic,
+  SampleOutput,
   StressEmphasis,
   Strong,
   Subscript,
@@ -20,6 +21,7 @@ interface I<T = unknown> extends FC<T> {
   DefinedTerm: typeof DefinedTerm
   Emphasis: typeof Emphasis
   Idiomatic: typeof Idiomatic
+  SampleOutput: typeof SampleOutput
   StressEmphasis: typeof StressEmphasis
   Strong: typeof Strong
   Subscript: typeof Subscript
@@ -37,6 +39,7 @@ Text.Attention = Attention
 Text.DefinedTerm = DefinedTerm
 Text.Emphasis = Emphasis
 Text.Idiomatic = Idiomatic
+Text.SampleOutput = SampleOutput
 Text.StressEmphasis = StressEmphasis
 Text.Strong = Strong
 Text.Subscript = Subscript
