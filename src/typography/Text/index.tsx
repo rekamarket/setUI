@@ -4,13 +4,11 @@ import {
   Abbreviation,
   Attention,
   Citation,
-  DeletedText,
   DefinedTerm,
   Disclaimer,
   Emphasis,
   Highlight,
   Idiomatic,
-  InsertedText,
   Label,
   Legend,
   Outdated,
@@ -28,13 +26,11 @@ interface I<T = unknown> extends FC<T> {
   Abbreviation: typeof Abbreviation
   Attention: typeof Attention
   Citation: typeof Citation
-  DeletedText: typeof DeletedText
   DefinedTerm: typeof DefinedTerm
   Disclaimer: typeof Disclaimer
   Emphasis: typeof Emphasis
   Highlight: typeof Highlight
   Idiomatic: typeof Idiomatic
-  InsertedText: typeof InsertedText
   Label: typeof Label
   Legend: typeof Legend
   Outdated: typeof Outdated
@@ -56,13 +52,11 @@ const Text: I<ComponentProps> = (props) => Component(props)
 Text.Abbreviation = Abbreviation
 Text.Attention = Attention
 Text.Citation = Citation
-Text.DeletedText = DeletedText
 Text.DefinedTerm = DefinedTerm
 Text.Disclaimer = Disclaimer
 Text.Emphasis = Emphasis
 Text.Highlight = Highlight
 Text.Idiomatic = Idiomatic
-Text.InsertedText = InsertedText
 Text.Label = Label
 Text.Legend = Legend
 Text.Outdated = Outdated
