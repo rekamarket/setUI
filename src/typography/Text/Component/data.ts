@@ -13,7 +13,7 @@
 
 		<abbr>
 		<cite>
-		<dfn>
+		// <dfn>
 		// <em>
 		<mark>
 		<q>
@@ -40,4 +40,5 @@ export const component = {
   em: 'em',
   i: 'i',
   b: 'b',
+  dfn: 'dfn',
 }
