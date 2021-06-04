@@ -13,6 +13,7 @@ import {
   InsertedText,
   KeyboardInput,
   Label,
+  Legend,
   QuoteBlock,
   QuoteInline,
   SampleOutput,
@@ -21,6 +22,7 @@ import {
   Subscript,
   Superscript,
   Time,
+  UnarticulatedAnnotation,
   Variable,
 } from './subsets'
 import { Placeholder } from './supersets'
@@ -39,6 +41,7 @@ interface I<T = unknown> extends FC<T> {
   InsertedText: typeof InsertedText
   KeyboardInput: typeof KeyboardInput
   Label: typeof Label
+  Legend: typeof Legend
   QuoteBlock: typeof QuoteBlock
   QuoteInline: typeof QuoteInline
   Reference: typeof Citation
@@ -48,6 +51,7 @@ interface I<T = unknown> extends FC<T> {
   Subscript: typeof Subscript
   Superscript: typeof Superscript
   Time: typeof Time
+  UnarticulatedAnnotation: typeof UnarticulatedAnnotation
   Variable: typeof Variable
 
   // supersets
@@ -69,6 +73,7 @@ Text.Idiomatic = Idiomatic
 Text.InsertedText = InsertedText
 Text.KeyboardInput = KeyboardInput
 Text.Label = Label
+Text.Legend = Legend
 Text.QuoteBlock = QuoteBlock
 Text.QuoteInline = QuoteInline
 Text.Reference = Citation
@@ -78,6 +83,7 @@ Text.Strong = Strong
 Text.Subscript = Subscript
 Text.Superscript = Superscript
 Text.Time = Time
+Text.UnarticulatedAnnotation = UnarticulatedAnnotation
 Text.Variable = Variable
 
 // supersets

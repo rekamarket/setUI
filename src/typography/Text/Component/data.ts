@@ -22,9 +22,10 @@ export const component = {
   del: 'del',
   ins: 'ins',
   label: 'label',
+  legend: 'legend',
+  u: 'u',
   // small: 'small',
   // s: 's',
-  // u: 'u',
 }
 
 // todo

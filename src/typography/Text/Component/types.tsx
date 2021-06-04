@@ -33,6 +33,8 @@ export type AsType =
   | 'del'
   | 'ins'
   | 'label'
+  | 'legend'
+  | 'u'
 
 export type Props = {
   as?: AsType
