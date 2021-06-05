@@ -34,6 +34,10 @@ export type { BoxShadowType } from './boxShadow'
 export { Color } from './color'
 export type { ColorType } from './color'
 
+// Display
+export { Style as Display, map as DisplayMap } from './display'
+export type { Type as DisplayType } from './display'
+
 // FlexDirection
 export { FlexDirection, map as FlexDirectionMap } from './flexDirection'
 export type { FlexDirectionType } from './flexDirection'
