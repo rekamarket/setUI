@@ -108,6 +108,12 @@ export {
 } from './textDecorationStyle'
 export type { Type as TextDecorationStyleType } from './textDecorationStyle'
 
+// TextDecorationThickness
+export {
+  Style as TextDecorationThickness,
+  map as TextDecorationThicknessMap,
+} from './textDecorationThickness'
+export type { Type as TextDecorationThicknessType } from './textDecorationThickness'
 
 // TextTransform
 export { Style as TextTransform } from './textTransform'
