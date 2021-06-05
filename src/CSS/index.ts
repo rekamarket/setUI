@@ -93,6 +93,14 @@ export {
 } from './textDecorationColor'
 export type { Type as TextDecorationColorType } from './textDecorationColor'
 
+// TextDecorationLine
+export {
+  Style as TextDecorationLine,
+  map as TextDecorationLineMap,
+  get as getTextDecorationLine,
+} from './textDecorationLine'
+export type { Type as TextDecorationLineType } from './textDecorationLine'
+
 
 // TextTransform
 export { Style as TextTransform } from './textTransform'
