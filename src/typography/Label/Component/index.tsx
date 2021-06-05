@@ -3,7 +3,6 @@ import cn from 'classnames'
 import {
   Color,
   TextAlign,
-  TextDecoration,
   TextTransform,
   FontFamily,
   FontWeight,
@@ -26,10 +25,6 @@ const Label: FC<Props> = ({
   color,
 
   align,
-
-  underline,
-  lineThrough,
-  decoration,
 
   uppercase,
   lowercase,
@@ -80,12 +75,6 @@ const Label: FC<Props> = ({
         Color[color] || Color.grey130,
 
         TextAlign[align] || TextAlign.left,
-
-        underline
-          ? TextDecoration.underline
-          : lineThrough
-          ? TextDecoration.lineThrough
-          : TextDecoration[decoration] || TextDecoration.default,
 
         capitalize
           ? TextTransform.capitalize
