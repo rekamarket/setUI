@@ -13,7 +13,18 @@ interface I<T = unknown> extends FC<T> {
   Placeholder: typeof Placeholder
 }
 
-const Code: I<ComponentProps> = (props) => Component(props)
+const Code: I<ComponentProps> = (props) =>
+  Component({
+    // props default values
+    background: 'grey10',
+    type: 'monospace',
+
+    // props passed
+    ...props,
+
+    // props override
+    as: 'code',
+  })
 
 // subsets
 Code.Input = Input

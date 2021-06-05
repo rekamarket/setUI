@@ -2,14 +2,20 @@ import { FC, createElement } from 'react'
 import cn from 'classnames'
 import {
   Color,
+  Display,
   TextAlign,
   FontFamily,
-  FontWeight,
   FontSize,
+  FontStyle,
+  FontWeight,
   PaddingBottom,
   PaddingLeft,
   PaddingRight,
   PaddingTop,
+  BackgroundColor,
+  BorderColor,
+  BorderRadius,
+  BorderWidth,
 } from 'CSS'
 import { Props } from './types'
 import { component } from './data'
@@ -21,12 +27,20 @@ const Code: FC<Props> = ({
 
   truncate,
   color,
+  display,
 
   align,
 
   type,
   size,
+  style,
   weight,
+
+  background,
+
+  borderColor,
+  borderRadius,
+  borderWidth,
 
   padding,
   paddingX,
@@ -65,13 +79,21 @@ const Code: FC<Props> = ({
     {
       className: cn([
         ClassName,
+        Display[display] || Display.inline,
         Color[color] || Color.grey130,
 
         TextAlign[align] || TextAlign.left,
 
         FontFamily[type] || FontFamily.default,
         FontSize[size] || FontSize.medium,
+        FontStyle[style] || FontStyle.default,
         FontWeight[weight] || FontWeight.default,
+
+        BackgroundColor[background] || BackgroundColor.default,
+
+        BorderColor[borderColor] || BorderColor.default,
+        BorderRadius[borderRadius] || BorderRadius.default,
+        BorderWidth[borderWidth] || BorderWidth.default,
 
         resolvedPaddingTop,
         resolvedPaddingBottom,
