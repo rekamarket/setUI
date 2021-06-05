@@ -6,9 +6,9 @@ import {
   Citation,
   DefinedTerm,
   Disclaimer,
-  Emphasis,
   Highlight,
   Idiomatic,
+  Important,
   Outdated,
   StressEmphasis,
   Subscript,
@@ -24,9 +24,9 @@ interface I<T = unknown> extends FC<T> {
   Citation: typeof Citation
   DefinedTerm: typeof DefinedTerm
   Disclaimer: typeof Disclaimer
-  Emphasis: typeof Emphasis
   Highlight: typeof Highlight
   Idiomatic: typeof Idiomatic
+  Important: typeof Important
   Outdated: typeof Outdated
   Reference: typeof Citation
   StressEmphasis: typeof StressEmphasis
@@ -46,9 +46,9 @@ Text.Attention = Attention
 Text.Citation = Citation
 Text.DefinedTerm = DefinedTerm
 Text.Disclaimer = Disclaimer
-Text.Emphasis = Emphasis
 Text.Highlight = Highlight
 Text.Idiomatic = Idiomatic
+Text.Important = Important
 Text.Outdated = Outdated
 Text.Reference = Citation
 Text.StressEmphasis = StressEmphasis

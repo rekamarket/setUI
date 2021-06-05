@@ -114,7 +114,7 @@ const Page = () => {
         <p style={{ fontSize: '1rem' }}>
           ... the most important rule, the rule you can never forget, no matter
           how much he cries, no matter how much he begs:{' '}
-          <Text.Emphasis>never feed him after midnight</Text.Emphasis>.
+          <Text.Important>never feed him after midnight</Text.Important>.
         </p>
       </Box>
 

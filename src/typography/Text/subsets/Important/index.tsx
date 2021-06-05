@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import Component, { Props } from '../../Component'
 
-const Emphasis: FC<Omit<Props, 'as'>> = (props) =>
+const Important: FC<Omit<Props, 'as'>> = (props) =>
   Component({
     // props default values
     weight: 'bold',
@@ -13,4 +13,4 @@ const Emphasis: FC<Omit<Props, 'as'>> = (props) =>
     as: 'strong',
   })
 
-export default Emphasis
+export default Important
