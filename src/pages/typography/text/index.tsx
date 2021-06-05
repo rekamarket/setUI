@@ -1,5 +1,5 @@
 import { ButtonLink } from 'button'
-import { Code, Text, Heading, ThematicBreak } from 'typography'
+import { Code, Text, Heading, Paragraph, ThematicBreak } from 'typography'
 import { Box, Container } from 'layout'
 
 const Page = () => {
@@ -13,7 +13,7 @@ const Page = () => {
       >
         <Heading level={1}>&lt;abbr&gt;</Heading>
 
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           You can use{' '}
           <Text.Abbreviation title="Cascading Style Sheets">
             CSS
@@ -23,7 +23,7 @@ const Page = () => {
             HTML
           </Text.Abbreviation>
           .
-        </p>
+        </Paragraph>
       </Box>
 
       <Box
@@ -34,13 +34,13 @@ const Page = () => {
       >
         <Heading level={1}>&lt;b&gt;</Heading>
 
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           The two most popular science courses offered by the school are{' '}
           <Text.Attention>chemistry</Text.Attention> (the study of chemicals and
           the composition of substances) and{' '}
           <Text.Attention>physics</Text.Attention> (the study of the nature and
           properties of matter and energy).
-        </p>
+        </Paragraph>
       </Box>
 
       <Box
@@ -52,10 +52,10 @@ const Page = () => {
         <Heading level={1}>&lt;cite&gt;</Heading>
 
         <blockquote style={{ fontSize: '1rem' }}>
-          <p>
+          <Paragraph>
             It was a bright cold day in April, and the clocks were striking
             thirteen.
-          </p>
+          </Paragraph>
           <footer>
             First sentence in{' '}
             <Text.Citation>
@@ -76,10 +76,10 @@ const Page = () => {
       >
         <Heading level={1}>&lt;dfn&gt;</Heading>
 
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           A <Text.DefinedTerm>validator</Text.DefinedTerm> is a program that
           checks for syntax errors in code or documents.
-        </p>
+        </Paragraph>
       </Box>
 
       <Box
@@ -90,17 +90,17 @@ const Page = () => {
       >
         <Heading level={1}>&lt;small&gt;</Heading>
 
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           MDN Web Docs is a learning platform for Web technologies and the
           software that powers the Web.
-        </p>
+        </Paragraph>
         <ThematicBreak />
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           <Text.Disclaimer>
             The content is licensed under a Creative Commons
             Attribution-ShareAlike 2.5 Generic License.
           </Text.Disclaimer>
-        </p>
+        </Paragraph>
       </Box>
 
       <Box
@@ -111,11 +111,11 @@ const Page = () => {
       >
         <Heading level={1}>&lt;strong&gt;</Heading>
 
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           ... the most important rule, the rule you can never forget, no matter
           how much he cries, no matter how much he begs:{' '}
           <Text.Important>never feed him after midnight</Text.Important>.
-        </p>
+        </Paragraph>
       </Box>
 
       <Box
@@ -126,16 +126,16 @@ const Page = () => {
       >
         <Heading level={1}>&lt;mark&gt;</Heading>
 
-        <p style={{ fontSize: '1rem' }}>Search results for "salamander":</p>
+        <Paragraph>Search results for "salamander":</Paragraph>
         <ThematicBreak />
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           Several species of <Text.Highlight>salamander</Text.Highlight> inhabit
           the temperate rainforest of the Pacific Northwest.
-        </p>
-        <p style={{ fontSize: '1rem' }}>
+        </Paragraph>
+        <Paragraph>
           Most <Text.Highlight>salamander</Text.Highlight>s are nocturnal, and
           hunt for insects, worms, and other small creatures.
-        </p>
+        </Paragraph>
       </Box>
 
       <Box
@@ -146,10 +146,10 @@ const Page = () => {
       >
         <Heading level={1}>&lt;i&gt;</Heading>
 
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           I looked at it and thought{' '}
           <Text.Idiomatic>This can't be real!</Text.Idiomatic>
-        </p>
+        </Paragraph>
       </Box>
 
       <Box
@@ -160,12 +160,12 @@ const Page = () => {
       >
         <Heading level={1}>&lt;s&gt;</Heading>
 
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           <Text.Outdated>
             There will be a few tickets available at the box office tonight.
           </Text.Outdated>
-        </p>
-        <p style={{ fontSize: '1rem' }}>SOLD OUT!</p>
+        </Paragraph>
+        <Paragraph>SOLD OUT!</Paragraph>
       </Box>
 
       <Box
@@ -176,9 +176,9 @@ const Page = () => {
       >
         <Heading level={1}>&lt;em&gt;</Heading>
 
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           This is <Text.StressEmphasis>not</Text.StressEmphasis> a drill!
-        </p>
+        </Paragraph>
       </Box>
 
       <Box
@@ -189,12 +189,12 @@ const Page = () => {
       >
         <Heading level={1}>&lt;sub&gt;</Heading>
 
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           Almost every developer's favorite molecule is C
           <Text.Subscript>8</Text.Subscript>H<Text.Subscript>10</Text.Subscript>
           N<Text.Subscript>4</Text.Subscript>O<Text.Subscript>2</Text.Subscript>
           , also known as "caffeine."
-        </p>
+        </Paragraph>
       </Box>
 
       <Box
@@ -205,12 +205,12 @@ const Page = () => {
       >
         <Heading level={1}>&lt;sup&gt;</Heading>
 
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           The <Text.Important>Pythagorean theorem</Text.Important> is often
           expressed as the following equation:
-        </p>
+        </Paragraph>
 
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           <Code.Variable>
             a<Text.Superscript>2</Text.Superscript>
           </Code.Variable>{' '}
@@ -222,7 +222,7 @@ const Page = () => {
           <Code.Variable>
             c<Text.Superscript>2</Text.Superscript>
           </Code.Variable>
-        </p>
+        </Paragraph>
       </Box>
 
       <Box
@@ -233,13 +233,13 @@ const Page = () => {
       >
         <Heading level={1}>&lt;u&gt;</Heading>
 
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           You could use this element to highlight{' '}
           <Text.UnarticulatedAnnotation>speling</Text.UnarticulatedAnnotation>{' '}
           mistakes, so the writer can{' '}
           <Text.UnarticulatedAnnotation>corect</Text.UnarticulatedAnnotation>{' '}
           them.
-        </p>
+        </Paragraph>
       </Box>
     </main>
   )
