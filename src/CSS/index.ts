@@ -86,7 +86,13 @@ export type { PositionType } from './position'
 export { TextAlign } from './textAlign'
 export type { TextAlignType } from './textAlign'
 
+// textDecorationColor
 export {
+  Style as TextDecorationColor,
+  map as TextDecorationColorMap,
+} from './textDecorationColor'
+export type { Type as TextDecorationColorType } from './textDecorationColor'
+
 
 // TextTransform
 export { Style as TextTransform } from './textTransform'
