@@ -14,7 +14,6 @@ import {
   Strong,
   Subscript,
   Superscript,
-  Time,
   UnarticulatedAnnotation,
 } from './subsets'
 import { Placeholder } from './supersets'
@@ -35,7 +34,6 @@ interface I<T = unknown> extends FC<T> {
   Strong: typeof Strong
   Subscript: typeof Subscript
   Superscript: typeof Superscript
-  Time: typeof Time
   UnarticulatedAnnotation: typeof UnarticulatedAnnotation
 
   // supersets
@@ -59,7 +57,6 @@ Text.StressEmphasis = StressEmphasis
 Text.Strong = Strong
 Text.Subscript = Subscript
 Text.Superscript = Superscript
-Text.Time = Time
 Text.UnarticulatedAnnotation = UnarticulatedAnnotation
 
 // supersets

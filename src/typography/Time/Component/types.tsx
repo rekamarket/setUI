@@ -9,28 +9,8 @@ import type {
   TextTransformType,
 } from 'CSS'
 
-export type AsType =
-  | 'span'
-  | 'div'
-  | 'p'
-  | 'strong'
-  | 'em'
-  | 'i'
-  | 'b'
-  | 'dfn'
-  | 'abbr'
-  | 'sup'
-  | 'sub'
-  | 'mark'
-  | 'cite'
-  | 'del'
-  | 'ins'
-  | 'u'
-  | 's'
-  | 'small'
-
 export type Props = {
-  as?: AsType
+  datetime: string
   title?: string
   truncate?: boolean
 
