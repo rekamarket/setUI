@@ -12,11 +12,20 @@ const Sizes = [
   'xlarge',
   'xxlarge',
   'xxxlarge',
+
+  /* <relative-size> values */
+  'smaller',
+  'larger',
+
+  /* Global values */
+  'inherit',
+  'initial',
+  'unset',
 ]
-const SIZES = tuple(...Sizes)
+const SIZES = tuple.mixed(...Sizes)
 export type Type = typeof SIZES[number]
 
-export const map: Record<Type, number> = {
+export const map: Record<Type, number | string> = {
   // we use this value in `layout` components - to force developer to wrap strings in `typography` components
   LAYOUT: 0,
 
@@ -29,6 +38,15 @@ export const map: Record<Type, number> = {
   xlarge: 28,
   xxlarge: 32,
   xxxlarge: 42,
+
+  /* <relative-size> values */
+  smaller: 'smaller',
+  larger: 'larger',
+
+  /* Global values */
+  inherit: 'inherit',
+  initial: 'initial',
+  unset: 'unset',
 }
 
 const Styles = mapToStyles(map, (value) => ({
@@ -37,7 +55,9 @@ const Styles = mapToStyles(map, (value) => ({
 
 export const Style: typeof Styles & {
   default: string
+  initial: string
 } = {
   ...Styles,
   default: Styles['medium' as Type],
+  initial: Styles['medium' as Type],
 }
