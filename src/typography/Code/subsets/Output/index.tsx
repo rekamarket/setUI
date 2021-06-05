@@ -3,9 +3,6 @@ import Component, { Props } from '../../Component'
 
 const SampleOutput: FC<Omit<Props, 'as'>> = (props) =>
   Component({
-    // props default values
-    type: 'monospace',
-
     // props passed
     ...props,
 

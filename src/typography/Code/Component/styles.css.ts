@@ -1,5 +1,6 @@
 import { style } from '@vanilla-extract/css'
+import { FontFamilyMap } from 'CSS'
 
 export const ClassName = style({
-  margin: 0,
+  fontFamily: FontFamilyMap.monospace,
 })

@@ -13,11 +13,10 @@ interface I<T = unknown> extends FC<T> {
   Placeholder: typeof Placeholder
 }
 
-const Code: I<ComponentProps> = (props) =>
+const Code: I<Omit<ComponentProps, 'as'>> = (props) =>
   Component({
     // props default values
     background: 'grey10',
-    type: 'monospace',
     paddingX: 'xxsmall',
 
     // props passed
