@@ -9,8 +9,6 @@ import {
   Emphasis,
   Highlight,
   Idiomatic,
-  Label,
-  Legend,
   Outdated,
   StressEmphasis,
   Strong,
@@ -31,8 +29,6 @@ interface I<T = unknown> extends FC<T> {
   Emphasis: typeof Emphasis
   Highlight: typeof Highlight
   Idiomatic: typeof Idiomatic
-  Label: typeof Label
-  Legend: typeof Legend
   Outdated: typeof Outdated
   Reference: typeof Citation
   StressEmphasis: typeof StressEmphasis
@@ -57,8 +53,6 @@ Text.Disclaimer = Disclaimer
 Text.Emphasis = Emphasis
 Text.Highlight = Highlight
 Text.Idiomatic = Idiomatic
-Text.Label = Label
-Text.Legend = Legend
 Text.Outdated = Outdated
 Text.Reference = Citation
 Text.StressEmphasis = StressEmphasis
