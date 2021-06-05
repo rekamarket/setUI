@@ -2,12 +2,10 @@ import { FC, createElement } from 'react'
 import cn from 'classnames'
 import {
   Color,
-  TextAlign,
-  TextDecoration,
-  TextTransform,
   FontFamily,
-  FontWeight,
   FontSize,
+  FontStyle,
+  FontWeight,
   PaddingBottom,
   PaddingLeft,
   PaddingRight,
@@ -23,19 +21,9 @@ const Time: FC<Props> = ({
   truncate,
   color,
 
-  align,
-
-  underline,
-  lineThrough,
-  decoration,
-
-  uppercase,
-  lowercase,
-  capitalize,
-  transform,
-
   type,
   size,
+  style,
   weight,
 
   padding,
@@ -75,24 +63,9 @@ const Time: FC<Props> = ({
         ClassName,
         Color[color] || Color.grey130,
 
-        TextAlign[align] || TextAlign.left,
-
-        underline
-          ? TextDecoration.underline
-          : lineThrough
-          ? TextDecoration.lineThrough
-          : TextDecoration[decoration] || TextDecoration.default,
-
-        capitalize
-          ? TextTransform.capitalize
-          : uppercase
-          ? TextTransform.uppercase
-          : lowercase
-          ? TextTransform.lowercase
-          : TextTransform[transform] || TextTransform.default,
-
         FontFamily[type] || FontFamily.default,
         FontSize[size] || FontSize.medium,
+        FontStyle[style] || FontStyle.default,
         FontWeight[weight] || FontWeight.default,
 
         resolvedPaddingTop,

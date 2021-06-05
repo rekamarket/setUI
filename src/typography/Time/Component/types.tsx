@@ -1,12 +1,10 @@
 import type {
-  PaddingSizeType,
+  ColorType,
   FontFamilyType,
   FontSizeType,
+  FontStyleType,
   FontWeightType,
-  ColorType,
-  TextAlignType,
-  TextDecorationType,
-  TextTransformType,
+  PaddingSizeType,
 } from 'CSS'
 
 export type Props = {
@@ -16,20 +14,10 @@ export type Props = {
 
   color?: ColorType
 
-  align?: TextAlignType
-
-  underline?: boolean
-  lineThrough?: boolean
-  decoration?: TextDecorationType
-
-  uppercase?: boolean
-  lowercase?: boolean
-  capitalize?: boolean
-  transform?: TextTransformType
-
-  weight?: FontWeightType
   type?: FontFamilyType
   size?: FontSizeType
+  style?: FontStyleType
+  weight?: FontWeightType
 
   padding?: PaddingSizeType
   paddingX?: PaddingSizeType
