@@ -1,13 +1,16 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
 import {
+  BackgroundColor,
   Color,
-  TextAlign,
-  TextDecoration,
-  TextTransform,
+  Display,
+  BorderColor,
+  BorderRadius,
+  BorderWidth,
   FontFamily,
-  FontWeight,
   FontSize,
+  FontStyle,
+  FontWeight,
   PaddingBottom,
   PaddingLeft,
   PaddingRight,
@@ -17,26 +20,23 @@ import { Props } from './types'
 import { component } from './data'
 import { ClassName } from './styles.css'
 
-const Text: FC<Props> = ({
+const Quote: FC<Props> = ({
   as,
+  cite,
   title,
+  className,
 
-  truncate,
+  background,
   color,
+  display,
 
-  align,
-
-  underline,
-  lineThrough,
-  decoration,
-
-  uppercase,
-  lowercase,
-  capitalize,
-  transform,
+  borderColor,
+  borderRadius,
+  borderWidth,
 
   type,
   size,
+  style,
   weight,
 
   padding,
@@ -75,27 +75,20 @@ const Text: FC<Props> = ({
 
     {
       className: cn([
+        className,
         ClassName,
+
+        Display[display] || Display.inline,
         Color[color] || Color.grey130,
+        BackgroundColor[background] || BackgroundColor.default,
 
-        TextAlign[align] || TextAlign.left,
-
-        underline
-          ? TextDecoration.underline
-          : lineThrough
-          ? TextDecoration.lineThrough
-          : TextDecoration[decoration] || TextDecoration.default,
-
-        capitalize
-          ? TextTransform.capitalize
-          : uppercase
-          ? TextTransform.uppercase
-          : lowercase
-          ? TextTransform.lowercase
-          : TextTransform[transform] || TextTransform.default,
+        BorderColor[borderColor] || BorderColor.default,
+        BorderRadius[borderRadius] || BorderRadius.default,
+        BorderWidth[borderWidth] || BorderWidth.default,
 
         FontFamily[type] || FontFamily.default,
         FontSize[size] || FontSize.medium,
+        FontStyle[style] || FontStyle.default,
         FontWeight[weight] || FontWeight.default,
 
         resolvedPaddingTop,
@@ -103,6 +96,7 @@ const Text: FC<Props> = ({
         resolvedPaddingLeft,
         resolvedPaddingRight,
       ]),
+      cite,
       title,
     },
 
@@ -112,4 +106,4 @@ const Text: FC<Props> = ({
 
 export type { Props } from './types'
 
-export default Text
+export default Quote

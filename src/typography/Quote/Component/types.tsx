@@ -1,37 +1,38 @@
 import type {
-  PaddingSizeType,
+  BackgroundColorType,
+  ColorType,
+  DisplayType,
+  BorderColorType,
+  BorderRadiusType,
+  BorderWidthType,
   FontFamilyType,
   FontSizeType,
+  FontStyleType,
   FontWeightType,
-  ColorType,
-  TextAlignType,
-  TextDecorationType,
-  TextTransformType,
+  PaddingSizeType,
 } from 'CSS'
 
 export type AsType = 'q' | 'blockquote'
 
 export type Props = {
   as?: AsType
+  cite?: string
   title?: string
+  className?: string
   truncate?: boolean
 
+  background?: BackgroundColorType
   color?: ColorType
+  display?: DisplayType
 
-  align?: TextAlignType
+  borderColor?: BorderColorType
+  borderRadius?: BorderRadiusType
+  borderWidth?: BorderWidthType
 
-  underline?: boolean
-  lineThrough?: boolean
-  decoration?: TextDecorationType
-
-  uppercase?: boolean
-  lowercase?: boolean
-  capitalize?: boolean
-  transform?: TextTransformType
-
-  weight?: FontWeightType
   type?: FontFamilyType
   size?: FontSizeType
+  style?: FontStyleType
+  weight?: FontWeightType
 
   padding?: PaddingSizeType
   paddingX?: PaddingSizeType
