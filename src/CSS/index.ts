@@ -47,8 +47,8 @@ export { FlexWrap, map as FlexWrapMap } from './flexWrap'
 export type { FlexWrapType } from './flexWrap'
 
 // FontFamily
-export { FontFamily } from './fontFamily'
-export type { FontFamilyType } from './fontFamily'
+export { Style as FontFamily, map as FontFamilyMap } from './fontFamily'
+export type { Type as FontFamilyType } from './fontFamily'
 
 // FontSize
 export { Style as FontSize, map as FontSizeMap } from './fontSize'

@@ -3,9 +3,9 @@ import { tuple } from 'utils'
 
 const Values = ['primary', 'secondary', 'tertiary', 'monospace']
 const VALUES = tuple(...Values)
-type Type = typeof VALUES[number]
+export type Type = typeof VALUES[number]
 
-const map: Record<Type, any> = {
+export const map: Record<Type, any> = {
   primary: "'PT Sans', sans-serif",
   secondary: 'TBD, sans-serif',
   tertiary: 'None, sans-serif',
@@ -16,11 +16,9 @@ const Styles = mapToStyles(map, (value: any) => ({
   fontFamily: value,
 }))
 
-export const FontFamily: typeof Styles & {
+export const Style: typeof Styles & {
   default: string
 } = {
   ...Styles,
   default: Styles['primary' as Type],
 }
-
-export type FontFamilyType = Type
