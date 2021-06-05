@@ -18,6 +18,7 @@ const Code: I<ComponentProps> = (props) =>
     // props default values
     background: 'grey10',
     type: 'monospace',
+    paddingX: 'xxsmall',
 
     // props passed
     ...props,
