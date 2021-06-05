@@ -87,7 +87,10 @@ export { TextAlign } from './textAlign'
 export type { TextAlignType } from './textAlign'
 
 // TextDecoration
-export { Style as TextDecoration } from './textDecoration'
+export {
+  Style as TextDecoration,
+  map as TextDecorationMap,
+} from './textDecoration'
 export type { Type as TextDecorationType } from './textDecoration'
 
 // TextTransform
