@@ -59,8 +59,8 @@ export { Style as FontStyle, map as FontStyleMap } from './fontStyle'
 export type { Type as FontStyleType } from './fontStyle'
 
 // FontWeight
-export { FontWeight, map as FontWeightMap } from './fontWeight'
-export type { FontWeightType } from './fontWeight'
+export { Style as FontWeight, map as FontWeightMap } from './fontWeight'
+export type { Type as FontWeightType } from './fontWeight'
 
 // Gap
 export { Gap } from './gap'

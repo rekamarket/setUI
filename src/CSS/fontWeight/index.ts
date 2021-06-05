@@ -11,11 +11,16 @@ const Sizes = [
   'bold',
   'extraBold',
   'black',
+
+  /* Global values */
+  'inherit',
+  'initial',
+  'unset',
 ]
 const SIZES = tuple(...Sizes)
-export type FontWeightType = typeof SIZES[number]
+export type Type = typeof SIZES[number]
 
-export const map: Record<FontWeightType, number> = {
+export const map: Record<Type, number> = {
   thin: 100,
   extraLight: 200,
   light: 300,
@@ -25,15 +30,20 @@ export const map: Record<FontWeightType, number> = {
   bold: 700,
   extraBold: 800,
   black: 900,
+
+  inherit: 'inherit',
+  initial: 'initial',
+  unset: 'unset',
 }
 
 const Styles = mapToStyles(map, (value) => ({
   fontWeight: value,
 }))
 
-export const FontWeight: typeof Styles & {
+export const Style: typeof Styles & {
   default: string
 } = {
   ...Styles,
-  default: Styles['medium' as FontWeightType],
+  default: Styles['medium' as Type],
+  initial: Styles['normal' as Type],
 }
