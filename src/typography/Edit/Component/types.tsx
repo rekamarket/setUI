@@ -1,33 +1,24 @@
 import type {
-  PaddingSizeType,
+  BackgroundColorType,
+  ColorType,
   FontFamilyType,
   FontSizeType,
   FontWeightType,
-  ColorType,
-  TextAlignType,
-  TextDecorationType,
-  TextTransformType,
+  PaddingSizeType,
 } from 'CSS'
 
 export type AsType = 'del' | 'ins'
 
 export type Props = {
   as?: AsType
-  title?: string
+  cite?: string
+  datetime?: string
+  className?: string
+
   truncate?: boolean
 
+  background?: BackgroundColorType
   color?: ColorType
-
-  align?: TextAlignType
-
-  underline?: boolean
-  lineThrough?: boolean
-  decoration?: TextDecorationType
-
-  uppercase?: boolean
-  lowercase?: boolean
-  capitalize?: boolean
-  transform?: TextTransformType
 
   weight?: FontWeightType
   type?: FontFamilyType

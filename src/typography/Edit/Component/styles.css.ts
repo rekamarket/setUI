@@ -1,5 +1,7 @@
 import { style } from '@vanilla-extract/css'
+import { DisplayMap, TextDecorationMap } from 'CSS'
 
 export const ClassName = style({
-  margin: 0,
+  display: DisplayMap.block,
+  textDecoration: TextDecorationMap.none,
 })

@@ -2,9 +2,7 @@ import { FC, createElement } from 'react'
 import cn from 'classnames'
 import {
   Color,
-  TextAlign,
-  TextDecoration,
-  TextTransform,
+  BackgroundColor,
   FontFamily,
   FontWeight,
   FontSize,
@@ -17,23 +15,15 @@ import { Props } from './types'
 import { component } from './data'
 import { ClassName } from './styles.css'
 
-const Text: FC<Props> = ({
+const Edit: FC<Props> = ({
   as,
-  title,
+  cite,
+  datetime,
+  className,
 
   truncate,
+  background,
   color,
-
-  align,
-
-  underline,
-  lineThrough,
-  decoration,
-
-  uppercase,
-  lowercase,
-  capitalize,
-  transform,
 
   type,
   size,
@@ -75,24 +65,10 @@ const Text: FC<Props> = ({
 
     {
       className: cn([
+        className,
         ClassName,
         Color[color] || Color.grey130,
-
-        TextAlign[align] || TextAlign.left,
-
-        underline
-          ? TextDecoration.underline
-          : lineThrough
-          ? TextDecoration.lineThrough
-          : TextDecoration[decoration] || TextDecoration.default,
-
-        capitalize
-          ? TextTransform.capitalize
-          : uppercase
-          ? TextTransform.uppercase
-          : lowercase
-          ? TextTransform.lowercase
-          : TextTransform[transform] || TextTransform.default,
+        BackgroundColor[background] || BackgroundColor.default,
 
         FontFamily[type] || FontFamily.default,
         FontSize[size] || FontSize.medium,
@@ -103,7 +79,8 @@ const Text: FC<Props> = ({
         resolvedPaddingLeft,
         resolvedPaddingRight,
       ]),
-      title,
+      cite,
+      datetime,
     },
 
     children
@@ -112,4 +89,4 @@ const Text: FC<Props> = ({
 
 export type { Props } from './types'
 
-export default Text
+export default Edit
