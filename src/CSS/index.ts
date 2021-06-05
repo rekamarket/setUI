@@ -101,6 +101,13 @@ export {
 } from './textDecorationLine'
 export type { Type as TextDecorationLineType } from './textDecorationLine'
 
+// TextDecorationStyle
+export {
+  Style as TextDecorationStyle,
+  map as TextDecorationStyleMap,
+} from './textDecorationStyle'
+export type { Type as TextDecorationStyleType } from './textDecorationStyle'
+
 
 // TextTransform
 export { Style as TextTransform } from './textTransform'
