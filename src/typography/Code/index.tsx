@@ -1,11 +1,10 @@
 import { FC } from 'react'
 import Component, { Props as ComponentProps } from './Component'
-import { Code, Input, Output, Variable } from './subsets'
+import { Input, Output, Variable } from './subsets'
 import { Placeholder } from './supersets'
 
 interface I<T = unknown> extends FC<T> {
   // subsets
-  Code: typeof Code
   Input: typeof Input
   Output: typeof Output
   Variable: typeof Variable
@@ -14,15 +13,14 @@ interface I<T = unknown> extends FC<T> {
   Placeholder: typeof Placeholder
 }
 
-const C: I<ComponentProps> = (props) => Component(props)
+const Code: I<ComponentProps> = (props) => Component(props)
 
 // subsets
-C.Code = Code
-C.Input = Input
-C.Output = Output
-C.Variable = Variable
+Code.Input = Input
+Code.Output = Output
+Code.Variable = Variable
 
 // supersets
-C.Placeholder = Placeholder
+Code.Placeholder = Placeholder
 
-export default C
+export default Code

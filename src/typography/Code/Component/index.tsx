@@ -15,7 +15,7 @@ import { Props } from './types'
 import { component } from './data'
 import { ClassName } from './styles.css'
 
-const Text: FC<Props> = ({
+const Code: FC<Props> = ({
   as,
   title,
 
@@ -87,4 +87,4 @@ const Text: FC<Props> = ({
 
 export type { Props } from './types'
 
-export default Text
+export default Code
