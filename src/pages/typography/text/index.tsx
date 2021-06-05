@@ -206,7 +206,7 @@ const Page = () => {
         <Heading level={1}>&lt;sup&gt;</Heading>
 
         <p style={{ fontSize: '1rem' }}>
-          The <Text.Emphasis>Pythagorean theorem</Text.Emphasis> is often
+          The <Text.Important>Pythagorean theorem</Text.Important> is often
           expressed as the following equation:
         </p>
 
