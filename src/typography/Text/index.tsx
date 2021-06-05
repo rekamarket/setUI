@@ -11,7 +11,6 @@ import {
   Idiomatic,
   Outdated,
   StressEmphasis,
-  Strong,
   Subscript,
   Superscript,
   UnarticulatedAnnotation,
@@ -31,7 +30,6 @@ interface I<T = unknown> extends FC<T> {
   Outdated: typeof Outdated
   Reference: typeof Citation
   StressEmphasis: typeof StressEmphasis
-  Strong: typeof Strong
   Subscript: typeof Subscript
   Superscript: typeof Superscript
   UnarticulatedAnnotation: typeof UnarticulatedAnnotation
@@ -54,7 +52,6 @@ Text.Idiomatic = Idiomatic
 Text.Outdated = Outdated
 Text.Reference = Citation
 Text.StressEmphasis = StressEmphasis
-Text.Strong = Strong
 Text.Subscript = Subscript
 Text.Superscript = Superscript
 Text.UnarticulatedAnnotation = UnarticulatedAnnotation
