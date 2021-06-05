@@ -1,13 +1,19 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
 import {
+  BackgroundColor,
   Color,
   TextAlign,
-  TextDecoration,
+  TextDecorationColor,
+  TextDecorationLine,
+  getTextDecorationLine,
+  TextDecorationStyle,
+  TextDecorationThickness,
   TextTransform,
   FontFamily,
-  FontWeight,
   FontSize,
+  FontStyle,
+  FontWeight,
   PaddingBottom,
   PaddingLeft,
   PaddingRight,
@@ -20,15 +26,21 @@ import { ClassName } from './styles.css'
 const Text: FC<Props> = ({
   as,
   title,
+  className,
 
   truncate,
+  background,
   color,
 
   align,
 
-  underline,
+  overline,
   lineThrough,
-  decoration,
+  underline,
+  decorationColor,
+  decorationLine,
+  decorationStyle,
+  decorationThickness,
 
   uppercase,
   lowercase,
@@ -37,6 +49,7 @@ const Text: FC<Props> = ({
 
   type,
   size,
+  style,
   weight,
 
   padding,
@@ -75,17 +88,22 @@ const Text: FC<Props> = ({
 
     {
       className: cn([
+        className,
         ClassName,
-        Color[color] || Color.grey130,
+        BackgroundColor[background] || BackgroundColor.default,
         Color[color] || Color.black,
 
         TextAlign[align] || TextAlign.left,
 
-        underline
-          ? TextDecoration.underline
-          : lineThrough
-          ? TextDecoration.lineThrough
-          : TextDecoration[decoration] || TextDecoration.default,
+        TextDecorationColor[decorationColor] || TextDecorationColor.default,
+        getTextDecorationLine({
+          isOverLine: overline,
+          isThrowLine: lineThrough,
+          isUnderLine: underline,
+        }),
+        TextDecorationStyle[decorationStyle] || TextDecorationStyle.default,
+        TextDecorationThickness[decorationThickness] ||
+          TextDecorationThickness.initial,
 
         capitalize
           ? TextTransform.capitalize
@@ -97,7 +115,8 @@ const Text: FC<Props> = ({
 
         FontFamily[type] || FontFamily.default,
         FontSize[size] || FontSize.medium,
-        FontWeight[weight] || FontWeight.default,
+        FontStyle[style] || FontStyle.default,
+        FontWeight[weight] || FontWeight.inherit,
 
         resolvedPaddingTop,
         resolvedPaddingBottom,

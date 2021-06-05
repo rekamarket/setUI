@@ -1,12 +1,17 @@
 import type {
-  PaddingSizeType,
+  BackgroundColorType,
+  ColorType,
   FontFamilyType,
   FontSizeType,
+  FontStyleType,
   FontWeightType,
-  ColorType,
   TextAlignType,
-  TextDecorationType,
+  TextDecorationColorType,
+  TextDecorationLineType,
+  TextDecorationStyleType,
+  TextDecorationThicknessType,
   TextTransformType,
+  PaddingSizeType,
 } from 'CSS'
 
 export type AsType =
@@ -32,24 +37,31 @@ export type AsType =
 export type Props = {
   as?: AsType
   title?: string
+  className?: string
   truncate?: boolean
 
+  background?: BackgroundColorType
   color?: ColorType
 
   align?: TextAlignType
 
-  underline?: boolean
+  overline?: boolean
   lineThrough?: boolean
-  decoration?: TextDecorationType
+  underline?: boolean
+  decorationColor?: TextDecorationColorType
+  decorationLine?: TextDecorationLineType
+  decorationStyle?: TextDecorationStyleType
+  decorationThickness?: TextDecorationThicknessType
 
   uppercase?: boolean
   lowercase?: boolean
   capitalize?: boolean
   transform?: TextTransformType
 
-  weight?: FontWeightType
   type?: FontFamilyType
   size?: FontSizeType
+  style?: FontStyleType
+  weight?: FontWeightType
 
   padding?: PaddingSizeType
   paddingX?: PaddingSizeType
