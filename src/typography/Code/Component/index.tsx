@@ -80,7 +80,7 @@ const Code: FC<Props> = ({
       className: cn([
         ClassName,
         Display[display] || Display.inline,
-        Color[color] || Color.grey130,
+        Color[color] || Color.black,
 
         TextAlign[align] || TextAlign.left,
 
