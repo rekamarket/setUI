@@ -61,7 +61,7 @@ const Time: FC<Props> = ({
     <time
       className={cn([
         ClassName,
-        Color[color] || Color.grey130,
+        Color[color] || Color.black,
 
         FontFamily[type] || FontFamily.default,
         FontSize[size] || FontSize.medium,

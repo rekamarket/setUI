@@ -77,6 +77,7 @@ const Text: FC<Props> = ({
       className: cn([
         ClassName,
         Color[color] || Color.grey130,
+        Color[color] || Color.black,
 
         TextAlign[align] || TextAlign.left,
 

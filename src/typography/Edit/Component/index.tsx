@@ -67,7 +67,7 @@ const Edit: FC<Props> = ({
       className: cn([
         className,
         ClassName,
-        Color[color] || Color.grey130,
+        Color[color] || Color.black,
         BackgroundColor[background] || BackgroundColor.default,
 
         FontFamily[type] || FontFamily.default,

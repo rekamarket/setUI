@@ -79,7 +79,7 @@ const Quote: FC<Props> = ({
         ClassName,
 
         Display[display] || Display.inline,
-        Color[color] || Color.grey130,
+        Color[color] || Color.black,
         BackgroundColor[background] || BackgroundColor.default,
 
         BorderColor[borderColor] || BorderColor.default,
