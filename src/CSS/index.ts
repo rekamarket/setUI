@@ -15,15 +15,15 @@ export { Style as BackgroundColor } from './backgroundColor'
 export type { Type as BackgroundColorType } from './backgroundColor'
 
 // BorderColor
-export { Style as BorderColor } from './borderColor'
+export { Style as BorderColor, map as BorderColorMap } from './borderColor'
 export type { Type as BorderColorType } from './borderColor'
 
 // BorderRadius
-export { Style as BorderRadius } from './borderRadius'
+export { Style as BorderRadius, map as BorderRadiusMap } from './borderRadius'
 export type { Type as BorderRadiusType } from './borderRadius'
 
 // BorderWidth
-export { Style as BorderWidth } from './borderWidth'
+export { Style as BorderWidth, map as BorderWidthMap } from './borderWidth'
 export type { Type as BorderWidthType } from './borderWidth'
 
 // BoxShadow

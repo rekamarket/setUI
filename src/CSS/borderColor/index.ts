@@ -35,7 +35,7 @@ const Values = [
 const VALUES = tuple(...Values)
 export type Type = typeof VALUES[number]
 
-const map: Record<Type, any> = {
+export const map: Record<Type, any> = {
   primary: '#0078D4',
   secondary: '#2B88D8',
   light: '#2B88D8',

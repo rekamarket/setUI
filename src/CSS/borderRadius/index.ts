@@ -5,7 +5,7 @@ const Sizes = ['none', 'small', 'medium', 'large']
 const SIZES = tuple(...Sizes)
 export type Type = typeof SIZES[number]
 
-const map: Record<Type, number> = {
+export const map: Record<Type, number> = {
   none: 0,
   small: 4,
   medium: 8,
