@@ -1,16 +1,13 @@
 import { FC } from 'react'
-import Component, { Props } from '../../Component'
+import { defaultProps } from './defaultProps'
+import Component, { Props as ParentProps } from '../../Component'
 
-const KeyboardInput: FC<Omit<Props, 'as' | 'display'>> = (props) =>
+export type Props = Omit<ParentProps, 'as' | 'display'>
+
+const KeyboardInput: FC<Props> = (props) =>
   Component({
     // props default values
-    borderColor: 'grey160',
-    borderWidth: 'thin',
-    borderRadius: 'small',
-    paddingY: 'xsmall',
-    paddingX: 'xxsmall',
-    weight: 'bold',
-    background: 'grey10',
+    ...defaultProps,
 
     // props passed
     ...props,

@@ -34,4 +34,5 @@ Code.Variable = Variable
 // supersets
 Code.Placeholder = Placeholder
 
+export type Props = ComponentProps
 export default Code
