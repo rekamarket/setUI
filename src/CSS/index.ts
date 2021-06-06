@@ -11,19 +11,35 @@ export { AspectRatio, map as AspectRatioMap } from './aspectRatio'
 export type { Type as AspectRatioType } from './aspectRatio'
 
 // BackgroundColor
-export { Style as BackgroundColor } from './backgroundColor'
+export {
+  Style as BackgroundColor,
+  map as BackgroundColorMap,
+  Keys as BackgroundColorKeys,
+} from './backgroundColor'
 export type { Type as BackgroundColorType } from './backgroundColor'
 
 // BorderColor
-export { Style as BorderColor, map as BorderColorMap } from './borderColor'
+export {
+  Style as BorderColor,
+  map as BorderColorMap,
+  Keys as BorderColorKeys,
+} from './borderColor'
 export type { Type as BorderColorType } from './borderColor'
 
 // BorderRadius
-export { Style as BorderRadius, map as BorderRadiusMap } from './borderRadius'
+export {
+  Style as BorderRadius,
+  map as BorderRadiusMap,
+  Keys as BorderRadiusKeys,
+} from './borderRadius'
 export type { Type as BorderRadiusType } from './borderRadius'
 
 // BorderWidth
-export { Style as BorderWidth, map as BorderWidthMap } from './borderWidth'
+export {
+  Style as BorderWidth,
+  map as BorderWidthMap,
+  Keys as BorderWidthKeys,
+} from './borderWidth'
 export type { Type as BorderWidthType } from './borderWidth'
 
 // BoxShadow
@@ -31,11 +47,15 @@ export { BoxShadow } from './boxShadow'
 export type { BoxShadowType } from './boxShadow'
 
 // Color
-export { Color } from './color'
-export type { ColorType } from './color'
+export { Style as Color, map as ColorMap, Keys as ColorKeys } from './color'
+export type { Type as ColorType } from './color'
 
 // Display
-export { Style as Display, map as DisplayMap } from './display'
+export {
+  Style as Display,
+  map as DisplayMap,
+  Keys as DisplayKeys,
+} from './display'
 export type { Type as DisplayType } from './display'
 
 // FlexDirection
@@ -47,19 +67,35 @@ export { FlexWrap, map as FlexWrapMap } from './flexWrap'
 export type { FlexWrapType } from './flexWrap'
 
 // FontFamily
-export { Style as FontFamily, map as FontFamilyMap } from './fontFamily'
+export {
+  Style as FontFamily,
+  map as FontFamilyMap,
+  Keys as FontFamilyKeys,
+} from './fontFamily'
 export type { Type as FontFamilyType } from './fontFamily'
 
 // FontSize
-export { Style as FontSize, map as FontSizeMap } from './fontSize'
+export {
+  Style as FontSize,
+  map as FontSizeMap,
+  Keys as FontSizeKeys,
+} from './fontSize'
 export type { Type as FontSizeType } from './fontSize'
 
 // FontStyle
-export { Style as FontStyle, map as FontStyleMap } from './fontStyle'
+export {
+  Style as FontStyle,
+  map as FontStyleMap,
+  Keys as FontStyleKeys,
+} from './fontStyle'
 export type { Type as FontStyleType } from './fontStyle'
 
 // FontWeight
-export { Style as FontWeight, map as FontWeightMap } from './fontWeight'
+export {
+  Style as FontWeight,
+  map as FontWeightMap,
+  Keys as FontWeightKeys,
+} from './fontWeight'
 export type { Type as FontWeightType } from './fontWeight'
 
 // Gap
@@ -75,8 +111,15 @@ export { MarginTop, MarginRight, MarginBottom, MarginLeft } from './margin'
 export type { MarginSizeType } from './margin'
 
 // Padding
-export { PaddingTop, PaddingRight, PaddingBottom, PaddingLeft } from './padding'
-export type { PaddingSizeType } from './padding'
+export {
+  PaddingTop,
+  PaddingRight,
+  PaddingBottom,
+  PaddingLeft,
+  map as PaddingMap,
+  Keys as PaddingKeys,
+} from './padding'
+export type { Type as PaddingSizeType } from './padding'
 
 // Position
 export { Position } from './position'

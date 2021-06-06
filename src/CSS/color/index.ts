@@ -1,7 +1,7 @@
 import { mapToStyles, style } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-const Values = [
+export const Keys = [
   'primary',
   'secondary',
   'light',
@@ -32,10 +32,10 @@ const Values = [
   'grey190',
   'black',
 ]
-const VALUES = tuple(...Values)
-export type ColorType = typeof VALUES[number]
+const VALUES = tuple(...Keys)
+export type Type = typeof VALUES[number]
 
-const map: Record<ColorType, any> = {
+export const map: Record<Type, any> = {
   primary: '#0078D4',
   secondary: '#2B88D8',
   light: '#2B88D8',
@@ -71,9 +71,9 @@ const Styles = mapToStyles(map, (value: any) => ({
   color: value,
 }))
 
-export const Color: typeof Styles & {
+export const Style: typeof Styles & {
   default: string
 } = {
   ...Styles,
-  default: Styles['primary' as ColorType],
+  default: Styles['primary' as Type],
 }

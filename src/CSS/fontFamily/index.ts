@@ -1,8 +1,8 @@
 import { mapToStyles, style } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-const Values = ['primary', 'secondary', 'tertiary', 'monospace']
-const VALUES = tuple(...Values)
+export const Keys = ['primary', 'secondary', 'tertiary', 'monospace']
+const VALUES = tuple(...Keys)
 export type Type = typeof VALUES[number]
 
 export const map: Record<Type, any> = {

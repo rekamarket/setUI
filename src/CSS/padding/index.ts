@@ -1,7 +1,7 @@
 import { mapToStyles, style } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-const Sizes = [
+export const Keys = [
   'none',
   'xxxsmall',
   'xxsmall',
@@ -13,10 +13,10 @@ const Sizes = [
   'xxlarge',
   'xxxlarge',
 ]
-const SIZES = tuple(...Sizes)
-export type PaddingSizeType = typeof SIZES[number]
+const VALUES = tuple(...Keys)
+export type Type = typeof VALUES[number]
 
-const map: Record<PaddingSizeType, number> = {
+export const map: Record<Type, number> = {
   none: 0,
   xxxsmall: 2,
   xxsmall: 4,
@@ -29,12 +29,6 @@ const map: Record<PaddingSizeType, number> = {
   xxxlarge: 48,
 }
 
-/* todo: Get custom value
-export const PaddingCustom = (size: PaddingSizeType) => mapToStyles(paddingSizes, (size) => ({
-  paddingTop: size,
-}));
-*/
-
 /* Padding-Top */
 const StylesPaddingTop = mapToStyles(map, (value) => ({
   paddingTop: value,
@@ -44,7 +38,7 @@ export const PaddingTop: typeof StylesPaddingTop & {
   default: string
 } = {
   ...StylesPaddingTop,
-  default: StylesPaddingTop['none' as PaddingSizeType],
+  default: StylesPaddingTop['none' as Type],
 }
 
 /* Padding-Right */
@@ -56,7 +50,7 @@ export const PaddingRight: typeof StylesPaddingRight & {
   default: string
 } = {
   ...StylesPaddingRight,
-  default: StylesPaddingRight['none' as PaddingSizeType],
+  default: StylesPaddingRight['none' as Type],
 }
 
 /* Padding-Botttom */
@@ -68,7 +62,7 @@ export const PaddingBottom: typeof StylesPaddingBottom & {
   default: string
 } = {
   ...StylesPaddingBottom,
-  default: StylesPaddingBottom['none' as PaddingSizeType],
+  default: StylesPaddingBottom['none' as Type],
 }
 
 /* Padding-Left */
@@ -80,5 +74,5 @@ export const PaddingLeft: typeof StylesPaddingLeft & {
   default: string
 } = {
   ...StylesPaddingLeft,
-  default: StylesPaddingLeft['none' as PaddingSizeType],
+  default: StylesPaddingLeft['none' as Type],
 }

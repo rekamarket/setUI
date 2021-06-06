@@ -1,7 +1,7 @@
 import { mapToStyles, style } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-const Sizes = [
+export const Keys = [
   'thin',
   'extraLight',
   'light',
@@ -17,10 +17,10 @@ const Sizes = [
   'initial',
   'unset',
 ]
-const SIZES = tuple(...Sizes)
+const SIZES = tuple(...Keys)
 export type Type = typeof SIZES[number]
 
-export const map: Record<Type, number> = {
+export const map: Record<Type, number | string> = {
   thin: 100,
   extraLight: 200,
   light: 300,
@@ -36,7 +36,7 @@ export const map: Record<Type, number> = {
   unset: 'unset',
 }
 
-const Styles = mapToStyles(map, (value) => ({
+const Styles = mapToStyles(map, (value: any) => ({
   fontWeight: value,
 }))
 

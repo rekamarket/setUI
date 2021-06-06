@@ -1,7 +1,7 @@
 import { mapToStyles, style } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-const Sizes = [
+export const Keys = [
   'LAYOUT',
   'xxxsmall',
   'xxsmall',
@@ -22,8 +22,8 @@ const Sizes = [
   'initial',
   'unset',
 ]
-const SIZES = tuple.mixed(...Sizes)
-export type Type = typeof SIZES[number]
+const VALUES = tuple.mixed(...Keys)
+export type Type = typeof VALUES[number]
 
 export const map: Record<Type, number | string> = {
   // we use this value in `layout` components - to force developer to wrap strings in `typography` components
