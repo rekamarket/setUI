@@ -18,10 +18,17 @@
     "dev": "next",
     "start": "next start",
     "format": "prettier --write src/**/*.ts{,x}",
-    "lint": "tsc --noEmit && eslint src/**/*.ts{,x}"
+    "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.3",
     "@babel/preset-typescript": "^7.13.0",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/react": "^6.2.9",
     "@types/node": "^15.0.2",
     "@types/react": "^17.0.5",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
@@ -29,6 +36,7 @@
     "@vanilla-extract/babel-plugin": "^0.1.0",
     "@vanilla-extract/css": "^0.1.0",
     "@vanilla-extract/webpack-plugin": "^0.1.0",
+    "babel-loader": "^8.2.2",
     "babel-plugin-styled-components": "^1.12.0",
     "eslint": "^7.2.0",
     "eslint-config-airbnb": "18.2.1",
@@ -41,6 +49,7 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^1.7.0",
     "prettier": "^2.2.1",
+    "tsconfig-paths-webpack-plugin": "^3.5.1",
     "typescript": "^4.2.4"
   },
   "husky": {
