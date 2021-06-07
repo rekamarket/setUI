@@ -8,10 +8,7 @@ import {
   FontSize,
   FontStyle,
   FontWeight,
-  PaddingBottom,
-  PaddingLeft,
-  PaddingRight,
-  PaddingTop,
+  paddingResolve,
   BackgroundColor,
   BorderColor,
   BorderRadius,
@@ -23,9 +20,9 @@ import { ClassName } from './styles.css'
 
 const Code: FC<Props> = ({
   as,
+  className,
   title,
 
-  truncate,
   color,
   display,
 
@@ -42,63 +39,40 @@ const Code: FC<Props> = ({
   borderRadius,
   borderWidth,
 
-  padding,
-  paddingX,
-  paddingY,
-  paddingTop,
-  paddingRight,
-  paddingBottom,
-  paddingLeft,
-
   children,
+
+  ...rest
 }) => {
-  const resolvedPaddingTop =
-    PaddingTop[paddingTop] ||
-    PaddingTop[paddingY] ||
-    PaddingTop[padding] ||
-    PaddingTop.none
-  const resolvedPaddingBottom =
-    PaddingBottom[paddingBottom] ||
-    PaddingBottom[paddingY] ||
-    PaddingBottom[padding] ||
-    PaddingBottom.none
-  const resolvedPaddingLeft =
-    PaddingLeft[paddingLeft] ||
-    PaddingLeft[paddingX] ||
-    PaddingLeft[padding] ||
-    PaddingLeft.none
-  const resolvedPaddingRight =
-    PaddingRight[paddingRight] ||
-    PaddingRight[paddingX] ||
-    PaddingRight[padding] ||
-    PaddingRight.none
+  const { paddingTop, paddingRight, paddingBottom, paddingLeft } =
+    paddingResolve<Partial<Props>>(rest)
 
   return createElement(
-    component[as] || component.code,
+    component[as],
 
     {
       className: cn([
+        className,
         ClassName,
-        Display[display] || Display.inline,
-        Color[color] || Color.black,
+        Display[display],
+        Color[color],
 
-        TextAlign[align] || TextAlign.left,
+        TextAlign[align],
 
-        FontFamily[type] || FontFamily.default,
-        FontSize[size] || FontSize.medium,
-        FontStyle[style] || FontStyle.default,
-        FontWeight[weight] || FontWeight.default,
+        FontFamily[type],
+        FontSize[size],
+        FontStyle[style],
+        FontWeight[weight],
 
-        BackgroundColor[background] || BackgroundColor.default,
+        BackgroundColor[background],
 
-        BorderColor[borderColor] || BorderColor.default,
-        BorderRadius[borderRadius] || BorderRadius.default,
-        BorderWidth[borderWidth] || BorderWidth.default,
+        BorderColor[borderColor],
+        BorderRadius[borderRadius],
+        BorderWidth[borderWidth],
 
-        resolvedPaddingTop,
-        resolvedPaddingBottom,
-        resolvedPaddingLeft,
-        resolvedPaddingRight,
+        paddingTop,
+        paddingRight,
+        paddingBottom,
+        paddingLeft,
       ]),
       title,
     },
