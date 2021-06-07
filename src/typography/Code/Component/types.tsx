@@ -11,15 +11,18 @@ import type {
   BorderRadiusType,
   BorderWidthType,
   DisplayType,
+  PaddingType,
 } from 'CSS'
 
 export type AsType = 'code' | 'var' | 'kbd' | 'samp'
 
-export type Props = {
+export type PropsOptional = {
   as?: AsType
+  className?: string
   title?: string
-  truncate?: boolean
+}
 
+export type StyleRequired = {
   color?: ColorType
   display?: DisplayType
 
@@ -35,12 +38,8 @@ export type Props = {
   borderColor?: BorderColorType
   borderRadius?: BorderRadiusType
   borderWidth?: BorderWidthType
-
-  padding?: PaddingSizeType
-  paddingX?: PaddingSizeType
-  paddingY?: PaddingSizeType
-  paddingTop?: PaddingSizeType
-  paddingRight?: PaddingSizeType
-  paddingBottom?: PaddingSizeType
-  paddingLeft?: PaddingSizeType
 }
+
+export type PropsRequired = Required<StyleRequired> & PaddingType
+
+export type Props = PropsOptional & StyleRequired & PaddingType
