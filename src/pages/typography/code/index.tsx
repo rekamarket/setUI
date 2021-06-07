@@ -1,6 +1,24 @@
+import { FC } from 'react'
 import { ButtonLink } from 'button'
-import { Code, Heading, LineBreak } from 'typography'
+import { Code, Heading, LineBreak, Paragraph } from 'typography'
+import Input, { Props } from 'typography/Code/subsets/Input'
 import { Box } from 'layout'
+
+const CustomKey: FC<Props> = (props) =>
+  Input({
+    ...props,
+    background: 'warningPale',
+    borderColor: 'primary',
+    borderRadius: 'medium',
+    borderWidth: 'light',
+    paddingBottom: 'xlarge',
+    paddingLeft: 'xxlarge',
+    paddingRight: 'large',
+    paddingTop: 'medium',
+    size: 'xxxlarge',
+    style: 'normal',
+    weight: 'bold',
+  })
 
 const Page = () => {
   return (
@@ -17,19 +35,21 @@ const Page = () => {
         <Heading level={1}>&lt;kbd&gt;</Heading>
         <p style={{ fontSize: '1rem' }}>
           Please press <Code.Input>Ctrl</Code.Input> +{' '}
-          <Code.Input>Shift</Code.Input> + <Code.Input>R</Code.Input> to
-          re-render an MDN page.
+          <Box marginLeft="small">
+            <CustomKey>Shift</CustomKey>
+          </Box>
+          + <Code.Input>R</Code.Input> to re-render an MDN page.
         </p>
       </Box>
 
       <Box padding="xxlarge">
         <Heading level={1}>&lt;samp&gt;</Heading>
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           <Code.Output>
             Keyboard not found <LineBreak />
             Press F1 to continue
           </Code.Output>
-        </p>
+        </Paragraph>
       </Box>
 
       <Box padding="xxlarge">
