@@ -1,20 +1,23 @@
 import { FC } from 'react'
+import { object } from 'utils'
 import { defaultProps } from './defaultProps'
-import Component, { Props as ParentProps } from '../../Component'
+import type { Props } from './types'
+import Component from '../../Component'
 
-export type Props = Omit<ParentProps, 'as' | 'display'>
+const displayName = 'Code.Input'
 
-const KeyboardInput: FC<Props> = (props) =>
+const Input: FC<Props> = (props) =>
   Component({
-    // props default values
-    ...defaultProps,
-
-    // props passed
-    ...props,
+    ...object.mergePropsWithWarning<Props>(defaultProps, props, displayName),
 
     // props override
     as: 'kbd',
     display: 'inlineBlock',
+    type: 'monospace',
   })
 
-export default KeyboardInput
+Input.displayName = displayName
+
+export { defaultProps } from './defaultProps'
+export type { Props } from './types'
+export default Input
