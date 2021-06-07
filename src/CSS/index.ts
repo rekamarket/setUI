@@ -118,8 +118,9 @@ export {
   PaddingLeft,
   map as PaddingMap,
   Keys as PaddingKeys,
+  resolve as paddingResolve,
 } from './padding'
-export type { Type as PaddingSizeType } from './padding'
+export type { Type as PaddingSizeType, PaddingType } from './padding'
 
 // Position
 export { Position } from './position'
