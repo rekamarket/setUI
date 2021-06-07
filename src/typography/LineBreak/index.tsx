@@ -1,7 +1,5 @@
 import { FC } from 'react'
 
-const LineBreak: FC = () => {
-  return <br />
-}
+const LineBreak: FC = () => <br />
 
 export default LineBreak
