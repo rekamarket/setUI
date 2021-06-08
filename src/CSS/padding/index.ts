@@ -1,5 +1,6 @@
-export type { Keys, Type } from './styles'
+export type { Type } from './styles'
 export {
+  Keys,
   map,
   PaddingTop,
   PaddingRight,
