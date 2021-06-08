@@ -12,8 +12,6 @@ export const component = {
   sub: 'sub',
   mark: 'mark',
   cite: 'cite',
-  del: 'del',
-  ins: 'ins',
   u: 'u',
   s: 's',
   small: 'small',

@@ -28,8 +28,6 @@ export type AsType =
   | 'sub'
   | 'mark'
   | 'cite'
-  | 'del'
-  | 'ins'
   | 'u'
   | 's'
   | 'small'
