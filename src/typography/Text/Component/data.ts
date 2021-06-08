@@ -1,6 +1,4 @@
 export const component = {
-  p: 'p', // should be a subset (since it should use margin)
-  div: 'div', // should be a subset (since it should use margin)
   span: 'span',
   strong: 'strong',
   em: 'em',

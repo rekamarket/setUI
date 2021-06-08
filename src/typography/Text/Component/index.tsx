@@ -84,7 +84,7 @@ const Text: FC<Props> = ({
     PaddingRight.none
 
   return createElement(
-    component[as] || component.p,
+    component[as] || component.span,
 
     {
       className: cn([

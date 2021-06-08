@@ -16,8 +16,6 @@ import type {
 
 export type AsType =
   | 'span'
-  | 'div'
-  | 'p'
   | 'strong'
   | 'em'
   | 'i'
