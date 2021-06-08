@@ -1,14 +1,18 @@
 import { FC } from 'react'
 import { object } from 'utils'
 import { defaultProps } from './defaultProps'
-import type { Props } from './types'
+import type { Props, PropsRequired } from './types'
 import Component from '../../Component'
 
 const displayName = 'Code.Input'
 
 const Input: FC<Props> = (props) =>
   Component({
-    ...object.mergePropsWithWarning<Props>(defaultProps, props, displayName),
+    ...object.mergePropsWithWarning<PropsRequired>(
+      defaultProps,
+      props,
+      displayName
+    ),
 
     // props override
     as: 'kbd',

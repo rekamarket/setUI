@@ -1,5 +1,5 @@
-import type { PropsRequired as ParentProps } from '../../Component'
+import type { Props as ParentProps } from '../../Component'
 
-export type { PaddingType } from '../../Component/types'
+export type { PropsRequired } from '../../Component'
 
 export type Props = Omit<ParentProps, 'as' | 'display' | 'type'>
