@@ -16,7 +16,3 @@ export const component = {
   s: 's',
   small: 'small',
 }
-
-// todo
-// maybe group some subsets, like Code Variable KeyboardInput SampleOutput
-// Or even move them from `<Text />` to `<Code />`
