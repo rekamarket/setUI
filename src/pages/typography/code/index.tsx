@@ -31,10 +31,8 @@ const Page = () => {
         <Heading level={1}>&lt;kbd&gt;</Heading>
         <p style={{ fontSize: '1rem' }}>
           Please press <Code.Input>Ctrl</Code.Input> +{' '}
-          <Box marginLeft="small">
-            <CustomKey>Shift</CustomKey>
-          </Box>
-          + <Code.Input>R</Code.Input> to re-render an MDN page.
+          <CustomKey>Shift</CustomKey>+ <Code.Input>R</Code.Input> to re-render
+          an MDN page.
         </p>
       </Box>
 
