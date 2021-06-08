@@ -1,5 +1,5 @@
 import { ButtonLink } from 'button'
-import { Quote, Heading } from 'typography'
+import { Quote, Heading, Paragraph } from 'typography'
 import { Box, Container } from 'layout'
 
 const Page = () => {
@@ -13,12 +13,12 @@ const Page = () => {
       >
         <Heading level={1}>&lt;q&gt;</Heading>
 
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           When Dave asks HAL to open the pod bay door, HAL answers:{' '}
           <Quote.Inline cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921">
             I'm sorry, Dave. I'm afraid I can't do that.
           </Quote.Inline>
-        </p>
+        </Paragraph>
       </Box>
 
       <Container.Small

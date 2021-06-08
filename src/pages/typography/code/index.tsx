@@ -21,19 +21,19 @@ const Page = () => {
     <main>
       <Box padding="xxlarge">
         <Heading level={1}>&lt;code&gt;</Heading>
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           The <Code>push()</Code> method adds one or more elements to the end of
           an array and returns the new length of the array.
-        </p>
+        </Paragraph>
       </Box>
 
       <Box padding="xxlarge">
         <Heading level={1}>&lt;kbd&gt;</Heading>
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           Please press <Code.Input>Ctrl</Code.Input> +{' '}
           <CustomKey>Shift</CustomKey>+ <Code.Input>R</Code.Input> to re-render
           an MDN page.
-        </p>
+        </Paragraph>
       </Box>
 
       <Box padding="xxlarge">
@@ -48,13 +48,13 @@ const Page = () => {
 
       <Box padding="xxlarge">
         <Heading level={1}>&lt;var&gt;</Heading>
-        <p style={{ fontSize: '1rem' }}>
+        <Paragraph>
           The volume of a box is <Code.Variable>l</Code.Variable> ×{' '}
           <Code.Variable>w</Code.Variable> × <Code.Variable>h</Code.Variable>,
           where <Code.Variable>l</Code.Variable> represents the length,{' '}
           <Code.Variable>w</Code.Variable> the width and{' '}
           <Code.Variable>h</Code.Variable> the height of the box.
-        </p>
+        </Paragraph>
       </Box>
     </main>
   )
