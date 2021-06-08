@@ -3,7 +3,6 @@ import { Story, Meta } from '@storybook/react'
 import { Paragraph } from 'typography'
 import {
   ColorKeys,
-  FontFamilyKeys,
   FontSizeKeys,
   FontStyleKeys,
   FontWeightKeys,
@@ -23,10 +22,6 @@ export default {
     color: {
       options: ColorKeys,
       control: { type: 'select' },
-    },
-    type: {
-      options: FontFamilyKeys,
-      control: { type: 'inline-radio' },
     },
     size: {
       options: FontSizeKeys,
@@ -56,34 +51,34 @@ export default {
       options: BorderWidthKeys,
       control: { type: 'inline-radio' },
     },
-    // padding: {
-    //   options: PaddingKeys,
-    //   control: { type: 'inline-radio' },
-    // },
-    // paddingX: {
-    //   options: PaddingKeys,
-    //   control: { type: 'inline-radio' },
-    // },
-    // paddingY: {
-    //   options: PaddingKeys,
-    //   control: { type: 'inline-radio' },
-    // },
-    // paddingTop: {
-    //   options: PaddingKeys,
-    //   control: { type: 'inline-radio' },
-    // },
-    // paddingRight: {
-    //   options: PaddingKeys,
-    //   control: { type: 'inline-radio' },
-    // },
-    // paddingBottom: {
-    //   options: PaddingKeys,
-    //   control: { type: 'inline-radio' },
-    // },
-    // paddingLeft: {
-    //   options: PaddingKeys,
-    //   control: { type: 'inline-radio' },
-    // },
+    padding: {
+      options: PaddingKeys,
+      control: { type: 'inline-radio' },
+    },
+    paddingX: {
+      options: PaddingKeys,
+      control: { type: 'inline-radio' },
+    },
+    paddingY: {
+      options: PaddingKeys,
+      control: { type: 'inline-radio' },
+    },
+    paddingTop: {
+      options: PaddingKeys,
+      control: { type: 'inline-radio' },
+    },
+    paddingRight: {
+      options: PaddingKeys,
+      control: { type: 'inline-radio' },
+    },
+    paddingBottom: {
+      options: PaddingKeys,
+      control: { type: 'inline-radio' },
+    },
+    paddingLeft: {
+      options: PaddingKeys,
+      control: { type: 'inline-radio' },
+    },
   },
 } as Meta
 

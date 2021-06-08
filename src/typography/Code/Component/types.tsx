@@ -42,4 +42,4 @@ export type Styles = {
 
 export type { PaddingType } from 'CSS'
 export type Props = PropsOptional & Styles // & PaddingType
-export type PropsRequired = PropsOptional & Required<Styles> // & PaddingType
+export type PropsRequired = PropsOptional & Required<Styles> & PaddingType
