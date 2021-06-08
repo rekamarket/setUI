@@ -8,6 +8,7 @@ export const defaultProps: Partial<Props> & PaddingType = {
   background: 'grey10',
   color: 'black',
 
+  // PaddingType
   paddingY: 'xsmall',
   paddingX: 'xxsmall',
 }
