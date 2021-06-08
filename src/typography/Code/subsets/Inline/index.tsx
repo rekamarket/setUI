@@ -4,9 +4,9 @@ import { defaultProps } from './defaultProps'
 import type { Props, PropsRequired } from './types'
 import Component from '../../Component'
 
-const displayName = 'Code.Variable'
+const displayName = 'Code.Inline'
 
-const Variable: FC<Props> = (props) =>
+const Inline: FC<Props> = (props) =>
   Component({
     ...object.mergePropsWithWarning<PropsRequired>(
       defaultProps,
@@ -15,12 +15,12 @@ const Variable: FC<Props> = (props) =>
     ),
 
     // props override
-    as: 'var',
+    as: 'code',
     type: 'monospace',
   })
 
-Variable.displayName = displayName
+Inline.displayName = displayName
 
 export { defaultProps } from './defaultProps'
 export type { Props } from './types'
-export default Variable
+export default Inline

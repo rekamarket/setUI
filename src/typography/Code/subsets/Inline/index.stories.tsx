@@ -1,6 +1,6 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
-import { LineBreak, Paragraph } from 'typography'
+import { Paragraph } from 'typography'
 import {
   ColorKeys,
   FontSizeKeys,
@@ -84,12 +84,10 @@ export default {
 
 const Template: Story<Props> = (args) => (
   <Paragraph borderColor="black" borderWidth="thin" padding="large">
-    <Component {...args}>
-      Keyboard not found <LineBreak />
-      Press F1 to continue
-    </Component>
+    The <Component {...args}>push()</Component> method adds one or more elements
+    to the end of an array and returns the new length of the array.
   </Paragraph>
 )
 
-export const Output = Template.bind({})
-Output.args = defaultProps
+export const Inline = Template.bind({})
+Inline.args = defaultProps
