@@ -1,12 +1,13 @@
-import { Props } from './types'
+import type { Props /*, PaddingType*/ } from './types'
 
-export const defaultProps: Partial<Props> = {
+export const defaultProps: Partial<Props> /* & PaddingType*/ = {
   borderColor: 'grey160',
   borderWidth: 'thin',
   borderRadius: 'small',
-  paddingY: 'xsmall',
-  paddingX: 'xxsmall',
   weight: 'bold',
   background: 'grey10',
   color: 'black',
+
+  // paddingY: 'xsmall',
+  // paddingX: 'xxsmall',
 }

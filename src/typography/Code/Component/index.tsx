@@ -14,7 +14,7 @@ import {
   BorderRadius,
   BorderWidth,
 } from 'CSS'
-import { Props } from './types'
+import { PropsRequired as Props } from './types'
 import { component } from './data'
 import { ClassName } from './styles.css'
 
@@ -41,10 +41,17 @@ const Code: FC<Props> = ({
 
   children,
 
-  ...rest
+  // ...rest
 }) => {
-  const { paddingTop, paddingRight, paddingBottom, paddingLeft } =
-    paddingResolve<Partial<Props>>(rest)
+  // const { paddingTop, paddingRight, paddingBottom, paddingLeft } =
+  //   paddingResolve<Partial<Props>>(rest)
+
+  // console.log({
+  //   paddingTop,
+  //   paddingRight,
+  //   paddingBottom,
+  //   paddingLeft,
+  // });
 
   return createElement(
     component[as],
@@ -69,10 +76,10 @@ const Code: FC<Props> = ({
         BorderRadius[borderRadius],
         BorderWidth[borderWidth],
 
-        paddingTop,
-        paddingRight,
-        paddingBottom,
-        paddingLeft,
+        // paddingTop,
+        // paddingRight,
+        // paddingBottom,
+        // paddingLeft,
       ]),
       title,
     },
@@ -81,6 +88,6 @@ const Code: FC<Props> = ({
   )
 }
 
-export type { Props } from './types'
+export type { Props, PropsRequired } from './types'
 
 export default Code

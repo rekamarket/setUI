@@ -17,12 +17,12 @@ import type {
 export type AsType = 'code' | 'var' | 'kbd' | 'samp'
 
 export type PropsOptional = {
-  as?: AsType
   className?: string
   title?: string
 }
 
-export type StyleRequired = {
+export type Styles = {
+  as?: AsType
   color?: ColorType
   display?: DisplayType
 
@@ -40,6 +40,6 @@ export type StyleRequired = {
   borderWidth?: BorderWidthType
 }
 
-export type PropsRequired = Required<StyleRequired> & PaddingType
-
-export type Props = PropsOptional & StyleRequired & PaddingType
+export type { PaddingType } from 'CSS'
+export type Props = PropsOptional & Styles // & PaddingType
+export type PropsRequired = PropsOptional & Required<Styles> // & PaddingType
