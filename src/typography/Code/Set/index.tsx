@@ -19,10 +19,12 @@ import { component } from './data'
 import { ClassName } from './styles.css'
 
 const Code: FC<PropsRequired> = ({
+  // basic
   as,
   className,
   title,
 
+  // style
   color,
   display,
 

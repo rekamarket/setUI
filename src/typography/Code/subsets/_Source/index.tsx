@@ -4,9 +4,9 @@ import { defaultProps } from './defaultProps'
 import type { Props, PropsRequired } from './types'
 import Set from '../../Set'
 
-const displayName = 'Code.Output'
+const displayName = 'Code'
 
-const Output: FC<Props> = (props) =>
+const Source: FC<Props> = (props) =>
   Set({
     ...object.mergePropsWithWarning<PropsRequired>(
       defaultProps,
@@ -15,12 +15,11 @@ const Output: FC<Props> = (props) =>
     ),
 
     // props override
-    as: 'samp',
     type: 'monospace',
   })
 
-Output.displayName = displayName
+Source.displayName = displayName
 
 export { defaultProps } from './defaultProps'
 export type { Props } from './types'
-export default Output
+export default Source

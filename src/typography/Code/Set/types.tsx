@@ -16,12 +16,12 @@ import type {
 
 export type AsType = 'code' | 'var' | 'kbd' | 'samp'
 
-export type PropsOptional = {
+type BasicProps = {
   className?: string
   title?: string
 }
 
-export type Styles = {
+type StyleProps = {
   as?: AsType
   color?: ColorType
   display?: DisplayType
@@ -41,5 +41,7 @@ export type Styles = {
 }
 
 export type { PaddingType } from 'CSS'
-export type Props = PropsOptional & Styles & PaddingType
-export type PropsRequired = PropsOptional & Required<Styles> & PaddingType
+export type Props = BasicProps & StyleProps & PaddingType
+export type PropsRequired = BasicProps &
+  Required<StyleProps> &
+  Required<PaddingType>

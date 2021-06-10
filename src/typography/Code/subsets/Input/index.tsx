@@ -2,12 +2,12 @@ import { FC } from 'react'
 import { object } from 'utils'
 import { defaultProps } from './defaultProps'
 import type { Props, PropsRequired } from './types'
-import Component from '../../Component'
+import Set from '../../Set'
 
 const displayName = 'Code.Input'
 
 const Input: FC<Props> = (props) =>
-  Component({
+  Set({
     ...object.mergePropsWithWarning<PropsRequired>(
       defaultProps,
       props,
