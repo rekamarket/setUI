@@ -10,7 +10,8 @@
       "hooks": ["hooks"],
       "layout": ["layout"],
       "typography": ["typography"],
-      "utils": ["utils"]
+      "utils": ["utils"],
+      "uiCode": ["variants/typography/Code"]
     },
     "lib": [
       "dom",
