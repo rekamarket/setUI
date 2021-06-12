@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import Input, { Props } from 'typography/Code/subsets/Input'
+import Input, { Props } from 'typography/Code/Subsets/Input'
 
 const CustomKey: FC<Props> = (props) =>
   Input({
