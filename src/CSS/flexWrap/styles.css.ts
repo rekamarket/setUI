@@ -1,4 +1,4 @@
-import { mapToStyles, style } from '@vanilla-extract/css'
+import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
 export const Keys = ['nowrap', 'wrap', 'wrap-reverse']
@@ -11,7 +11,7 @@ export const map: Record<Type, any> = {
   wrapReverse: 'wrap-reverse',
 }
 
-const Styles = mapToStyles(map, (value: any) => ({
+const Styles = styleVariants(map, (value: any) => ({
   flexWrap: value,
 }))
 

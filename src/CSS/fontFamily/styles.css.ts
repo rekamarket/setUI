@@ -1,4 +1,4 @@
-import { mapToStyles, style } from '@vanilla-extract/css'
+import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
 export const Keys = ['primary', 'secondary', 'tertiary', 'monospace']
@@ -12,7 +12,7 @@ export const map: Record<Type, any> = {
   monospace: 'monospace',
 }
 
-const Styles = mapToStyles(map, (value: any) => ({
+const Styles = styleVariants(map, (value: any) => ({
   fontFamily: value,
 }))
 

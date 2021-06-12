@@ -1,3 +1,3 @@
 // ModalWidth
-export { ModalWidth } from './modalWidth'
+export { ModalWidth, ModalWidthMap, ModalWidthKeys } from './modalWidth'
 export type { ModalWidthType } from './modalWidth'

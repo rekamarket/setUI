@@ -1,11 +1,16 @@
 // InputSize
-export { InputSize, InputFontSize } from './inputSize'
+export {
+  InputSize,
+  InputFontSize,
+  InputSizeMap,
+  InputSizeKeys,
+} from './inputSize'
 export type { InputSizeType } from './inputSize'
 
 // InputTheme
-export { InputTheme } from './inputTheme'
+export { InputTheme, InputThemeMap, InputThemeKeys } from './inputTheme'
 export type { InputThemeType } from './inputTheme'
 
 // InputVariant
-export { InputVariant } from './inputVariant'
+export { InputVariant, InputVariantMap, InputVariantKeys } from './inputVariant'
 export type { InputVariantType } from './inputVariant'

@@ -1,4 +1,4 @@
-import { mapToStyles, style } from '@vanilla-extract/css'
+import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
 export const Keys = [4, 8, 16, 64]
@@ -12,7 +12,7 @@ export const map: Record<Type, any> = {
   64: '0px 4.8px 14.4px rgba(0, 0, 0, 0.18), 0px 25.6px 57.6px rgba(0, 0, 0, 0.22)',
 }
 
-const Styles = mapToStyles(map, (value: any) => ({
+const Styles = styleVariants(map, (value: any) => ({
   boxShadow: value,
 }))
 

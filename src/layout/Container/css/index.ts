@@ -1,7 +1,7 @@
 // Direction
-export { Direction } from './direction'
-export type { Type as DirectionType } from './direction'
+export { Direction, DirectionMap, DirectionKeys } from './direction'
+export type { DirectionType } from './direction'
 
 // MaxWidth
-export { MaxWidth, map as MaxWidthMap } from './maxWidth'
-export type { Type as MaxWidthType } from './maxWidth'
+export { MaxWidth, MaxWidthMap, MaxWidthKeys } from './maxWidth'
+export type { MaxWidthType } from './maxWidth'

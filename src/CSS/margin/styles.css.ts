@@ -1,4 +1,4 @@
-import { mapToStyles, style } from '@vanilla-extract/css'
+import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
 export const Keys = [
@@ -30,7 +30,7 @@ export const map: Record<Type, number> = {
 }
 
 /* Margin-Top */
-const StylesMarginTop = mapToStyles(map, (value) => ({
+const StylesMarginTop = styleVariants(map, (value) => ({
   marginTop: value,
 }))
 
@@ -42,7 +42,7 @@ export const MarginTop: typeof StylesMarginTop & {
 }
 
 /* Margin-Right */
-const StylesMarginRight = mapToStyles(map, (value) => ({
+const StylesMarginRight = styleVariants(map, (value) => ({
   marginRight: value,
 }))
 
@@ -54,7 +54,7 @@ export const MarginRight: typeof StylesMarginRight & {
 }
 
 /* Margin-Botttom */
-const StylesMarginBottom = mapToStyles(map, (value) => ({
+const StylesMarginBottom = styleVariants(map, (value) => ({
   marginBottom: value,
 }))
 
@@ -66,7 +66,7 @@ export const MarginBottom: typeof StylesMarginBottom & {
 }
 
 /* Margin-Left */
-const StylesMarginLeft = mapToStyles(map, (value) => ({
+const StylesMarginLeft = styleVariants(map, (value) => ({
   marginLeft: value,
 }))
 

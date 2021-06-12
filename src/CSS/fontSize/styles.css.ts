@@ -1,4 +1,4 @@
-import { mapToStyles, style } from '@vanilla-extract/css'
+import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
 export const Keys = [
@@ -49,7 +49,7 @@ export const map: Record<Type, number | string> = {
   unset: 'unset',
 }
 
-const Styles = mapToStyles(map, (value) => ({
+const Styles = styleVariants(map, (value) => ({
   fontSize: value,
 }))
 

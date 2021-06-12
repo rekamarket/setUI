@@ -1,4 +1,4 @@
-import { mapToStyles, style } from '@vanilla-extract/css'
+import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
 export const Keys = ['none', 'thin', 'light', 'medium', 'bold']
@@ -13,7 +13,7 @@ export const map: Record<Type, number> = {
   bold: 4,
 }
 
-const Styles = mapToStyles(map, (value) => ({
+const Styles = styleVariants(map, (value) => ({
   borderStyle: 'solid',
   borderWidth: value,
 }))

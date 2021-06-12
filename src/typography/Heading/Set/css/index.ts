@@ -1,3 +1,3 @@
 // Weight
-export { Style as Weight } from './weight'
-export type { Type as WeightType } from './weight'
+export { Weight, WeightMap, WeightKeys } from './weight'
+export type { WeightType } from './weight'

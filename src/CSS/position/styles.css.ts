@@ -1,4 +1,4 @@
-import { mapToStyles, style } from '@vanilla-extract/css'
+import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
 export const Keys = ['static', 'relative', 'absolute', 'sticky', 'fixed']
@@ -13,7 +13,7 @@ export const map: Record<Type, string> = {
   fixed: 'fixed',
 }
 
-const Styles = mapToStyles(map, (value: any) => ({
+const Styles = styleVariants(map, (value: any) => ({
   position: value,
 }))
 

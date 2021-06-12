@@ -1,4 +1,4 @@
-import { mapToStyles, style } from '@vanilla-extract/css'
+import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
 export const Keys = [
@@ -30,7 +30,7 @@ export const map: Record<Type, number> = {
 }
 
 /* Padding-Top */
-const StylesPaddingTop = mapToStyles(map, (value) => ({
+const StylesPaddingTop = styleVariants(map, (value) => ({
   paddingTop: value,
 }))
 
@@ -42,7 +42,7 @@ export const PaddingTop: typeof StylesPaddingTop & {
 }
 
 /* Padding-Right */
-const StylesPaddingRight = mapToStyles(map, (value) => ({
+const StylesPaddingRight = styleVariants(map, (value) => ({
   paddingRight: value,
 }))
 
@@ -54,7 +54,7 @@ export const PaddingRight: typeof StylesPaddingRight & {
 }
 
 /* Padding-Botttom */
-const StylesPaddingBottom = mapToStyles(map, (value) => ({
+const StylesPaddingBottom = styleVariants(map, (value) => ({
   paddingBottom: value,
 }))
 
@@ -66,7 +66,7 @@ export const PaddingBottom: typeof StylesPaddingBottom & {
 }
 
 /* Padding-Left */
-const StylesPaddingLeft = mapToStyles(map, (value) => ({
+const StylesPaddingLeft = styleVariants(map, (value) => ({
   paddingLeft: value,
 }))
 

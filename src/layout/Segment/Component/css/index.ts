@@ -1,7 +1,7 @@
 // Direction
-export { Direction, map as DirectionMap } from './direction'
-export type { Type as DirectionType } from './direction'
+export { Direction, DirectionMap, DirectionKeys } from './direction'
+export type { DirectionType } from './direction'
 
 // GridArea
-export { GridArea, map as GridAreaMap } from './gridArea'
-export type { Type as GridAreaType } from './gridArea'
+export { GridArea, GridAreaMap, GridAreaKeys } from './gridArea'
+export type { GridAreaType } from './gridArea'

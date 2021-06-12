@@ -1,4 +1,4 @@
-import { mapToStyles, style } from '@vanilla-extract/css'
+import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
 export const Keys = [
@@ -27,7 +27,7 @@ export const map: Record<Type, any> = {
   notification: 256,
 }
 
-const Styles = mapToStyles(map, (value: any) => ({
+const Styles = styleVariants(map, (value: any) => ({
   zIndex: value,
 }))
 
