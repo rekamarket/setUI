@@ -89,5 +89,5 @@ const Template: Story<Props> = (args) => (
   </Paragraph>
 )
 
-export const Inline = Template.bind({})
-Inline.args = defaultProps
+export const Source = Template.bind({})
+Source.args = defaultProps

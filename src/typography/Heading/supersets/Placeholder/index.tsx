@@ -2,7 +2,7 @@ import { FC } from 'react'
 import PlaceholderComponent, {
   Props as PlaceholderProps,
 } from '../../../Placeholder/Component'
-import Component, { Props } from '../../../Heading/Component/Heading'
+import Component, { Props } from '../../../Heading/Set'
 
 const Placeholder: FC<
   Omit<Props, 'children' | 'color'> & Pick<PlaceholderProps, 'length'>

@@ -6,9 +6,9 @@ import type { Props, PropsRequired } from './types'
 import Set from '../../Set'
 import { ClassName } from './styles.css'
 
-const displayName = 'Heading.H1'
+const displayName = 'Heading.H5'
 
-const H1: FC<Props> = ({ className, ...props }) =>
+const H5: FC<Props> = ({ className, ...props }) =>
   Set({
     ...object.mergePropsWithWarning<PropsRequired>(
       defaultProps,
@@ -17,12 +17,12 @@ const H1: FC<Props> = ({ className, ...props }) =>
     ),
 
     // props override
-    level: 1,
+    level: 5,
     className: cn(ClassName, className),
   })
 
-H1.displayName = displayName
+H5.displayName = displayName
 
 export { defaultProps } from './defaultProps'
 export type { Props } from './types'
-export default H1
+export default H5
