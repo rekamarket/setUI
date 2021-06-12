@@ -107,8 +107,15 @@ export { JustifyContent, map as JustifyContentMap } from './justifyContent'
 export type { JustifyContentType } from './justifyContent'
 
 // Margin
-export { MarginTop, MarginRight, MarginBottom, MarginLeft } from './margin'
-export type { MarginSizeType } from './margin'
+export {
+  MarginTop,
+  MarginRight,
+  MarginBottom,
+  MarginLeft,
+  map as MarginMap,
+  Keys as MarginKeys,
+} from './margin'
+export type { Type as MarginSizeType } from './margin'
 
 // Padding
 export {

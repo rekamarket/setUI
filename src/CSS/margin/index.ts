@@ -1,7 +1,7 @@
 import { mapToStyles, style } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-const Sizes = [
+export const Keys = [
   'none',
   'xxxsmall',
   'xxsmall',
@@ -13,10 +13,10 @@ const Sizes = [
   'xxlarge',
   'xxxlarge',
 ]
-const SIZES = tuple(...Sizes)
-export type MarginSizeType = typeof SIZES[number]
+const VALUES = tuple(...Keys)
+export type Type = typeof VALUES[number]
 
-const map: Record<MarginSizeType, number> = {
+export const map: Record<Type, number> = {
   none: 0,
   xxxsmall: 2,
   xxsmall: 4,
@@ -38,7 +38,7 @@ export const MarginTop: typeof StylesMarginTop & {
   default: string
 } = {
   ...StylesMarginTop,
-  default: StylesMarginTop['none' as MarginSizeType],
+  default: StylesMarginTop['none' as Type],
 }
 
 /* Margin-Right */
@@ -50,7 +50,7 @@ export const MarginRight: typeof StylesMarginRight & {
   default: string
 } = {
   ...StylesMarginRight,
-  default: StylesMarginRight['none' as MarginSizeType],
+  default: StylesMarginRight['none' as Type],
 }
 
 /* Margin-Botttom */
@@ -62,7 +62,7 @@ export const MarginBottom: typeof StylesMarginBottom & {
   default: string
 } = {
   ...StylesMarginBottom,
-  default: StylesMarginBottom['none' as MarginSizeType],
+  default: StylesMarginBottom['none' as Type],
 }
 
 /* Margin-Left */
@@ -74,5 +74,5 @@ export const MarginLeft: typeof StylesMarginLeft & {
   default: string
 } = {
   ...StylesMarginLeft,
-  default: StylesMarginLeft['none' as MarginSizeType],
+  default: StylesMarginLeft['none' as Type],
 }
