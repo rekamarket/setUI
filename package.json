@@ -61,5 +61,8 @@
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write"
     ]
+  },
+  "resolutions": {
+    "typescript": "4.2.2"
   }
 }
