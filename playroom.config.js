@@ -18,7 +18,7 @@ module.exports = {
   baseUrl: '/playroom/',
   webpackConfig: () => ({
     plugins: [
-      new VanillaExtractPlugin({ allowRuntime: true }),
+      new VanillaExtractPlugin(/* { allowRuntime: true } */),
       new MiniCssExtractPlugin()
     ],
     module: {
