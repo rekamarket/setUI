@@ -10,8 +10,8 @@
     "rc-dialog": "^8.5.2",
     "rc-field-form": "^1.20.0",
     "rc-tabs": "^11.9.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "scripts": {
     "build": "next build",
@@ -32,7 +32,7 @@
     "@storybook/addon-links": "^6.2.9",
     "@storybook/react": "^6.2.9",
     "@types/node": "^15.0.2",
-    "@types/react": "^17.0.5",
+    "@types/react": "^17.0.11",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
     "@vanilla-extract/babel-plugin": "^1.0.0",
