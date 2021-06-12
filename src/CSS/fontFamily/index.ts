@@ -1,24 +1,7 @@
-import { mapToStyles, style } from '@vanilla-extract/css'
-import { tuple } from 'utils'
+export {
+  Style as FontFamily,
+  map as FontFamilyMap,
+  Keys as FontFamilyKeys,
+} from './styles.css'
 
-export const Keys = ['primary', 'secondary', 'tertiary', 'monospace']
-const VALUES = tuple(...Keys)
-export type Type = typeof VALUES[number]
-
-export const map: Record<Type, any> = {
-  primary: "'PT Sans', sans-serif",
-  secondary: 'TBD, sans-serif',
-  tertiary: 'None, sans-serif',
-  monospace: 'monospace',
-}
-
-const Styles = mapToStyles(map, (value: any) => ({
-  fontFamily: value,
-}))
-
-export const Style: typeof Styles & {
-  default: string
-} = {
-  ...Styles,
-  default: Styles['primary' as Type],
-}
+export type { Type as FontFamilyType } from './styles.css'

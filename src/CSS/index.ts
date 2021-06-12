@@ -1,138 +1,86 @@
 // AlignContent
-export {
-  Style as AlignContent,
-  map as AlignContentMap,
-  Keys as AlignContentKeys,
-} from './alignContent'
-export type { Type as AlignContentType } from './alignContent'
+export { AlignContent, AlignContentMap, AlignContentKeys } from './alignContent'
+export type { AlignContentType } from './alignContent'
 
 // AlignItems
-export {
-  Style as AlignItems,
-  map as AlignItemsMap,
-  Keys as AlignItemsMapKeys,
-} from './alignItems'
-export type { Type as AlignItemsType } from './alignItems'
+export { AlignItems, AlignItemsMap, AlignItemsMapKeys } from './alignItems'
+export type { AlignItemsType } from './alignItems'
 
 // AspectRatio
-export {
-  Style as AspectRatio,
-  map as AspectRatioMap,
-  Keys as AspectRatioKeys,
-} from './aspectRatio'
-export type { Type as AspectRatioType } from './aspectRatio'
+export { AspectRatio, AspectRatioMap, AspectRatioKeys } from './aspectRatio'
+export type { AspectRatioType } from './aspectRatio'
 
 // BackgroundColor
 export {
-  Style as BackgroundColor,
-  map as BackgroundColorMap,
-  Keys as BackgroundColorKeys,
+  BackgroundColor,
+  BackgroundColorMap,
+  BackgroundColorKeys,
 } from './backgroundColor'
-export type { Type as BackgroundColorType } from './backgroundColor'
+export type { BackgroundColorType } from './backgroundColor'
 
 // BorderColor
-export {
-  Style as BorderColor,
-  map as BorderColorMap,
-  Keys as BorderColorKeys,
-} from './borderColor'
-export type { Type as BorderColorType } from './borderColor'
+export { BorderColor, BorderColorMap, BorderColorKeys } from './borderColor'
+export type { BorderColorType } from './borderColor'
 
 // BorderRadius
-export {
-  Style as BorderRadius,
-  map as BorderRadiusMap,
-  Keys as BorderRadiusKeys,
-} from './borderRadius'
-export type { Type as BorderRadiusType } from './borderRadius'
+export { BorderRadius, BorderRadiusMap, BorderRadiusKeys } from './borderRadius'
+export type { BorderRadiusType } from './borderRadius'
 
 // BorderWidth
-export {
-  Style as BorderWidth,
-  map as BorderWidthMap,
-  Keys as BorderWidthKeys,
-} from './borderWidth'
-export type { Type as BorderWidthType } from './borderWidth'
+export { BorderWidth, BorderWidthMap, BorderWidthKeys } from './borderWidth'
+export type { BorderWidthType } from './borderWidth'
 
 // BoxShadow
-export {
-  Style as BoxShadow,
-  map as BoxShadowMap,
-  Keys as BoxShadowKeys,
-} from './boxShadow'
-export type { Type as BoxShadowType } from './boxShadow'
+export { BoxShadow, BoxShadowMap, BoxShadowKeys } from './boxShadow'
+export type { BoxShadowType } from './boxShadow'
 
 // Color
-export { Style as Color, map as ColorMap, Keys as ColorKeys } from './color'
-export type { Type as ColorType } from './color'
+export { Color, ColorMap, ColorKeys } from './color'
+export type { ColorType } from './color'
 
 // Display
-export {
-  Style as Display,
-  map as DisplayMap,
-  Keys as DisplayKeys,
-} from './display'
-export type { Type as DisplayType } from './display'
+export { Display, DisplayMap, DisplayKeys } from './display'
+export type { DisplayType } from './display'
 
 // FlexDirection
 export {
-  Style as FlexDirection,
-  map as FlexDirectionMap,
-  Keys as FlexDirectionKeys,
+  FlexDirection,
+  FlexDirectionMap,
+  FlexDirectionKeys,
 } from './flexDirection'
-export type { Type as FlexDirectionType } from './flexDirection'
+export type { FlexDirectionType } from './flexDirection'
 
 // FlexWrap
-export {
-  Style as FlexWrap,
-  map as FlexWrapMap,
-  Keys as FlexWrapKeys,
-} from './flexWrap'
-export type { Type as FlexWrapType } from './flexWrap'
+export { FlexWrap, FlexWrapMap, FlexWrapKeys } from './flexWrap'
+export type { FlexWrapType } from './flexWrap'
 
 // FontFamily
-export {
-  Style as FontFamily,
-  map as FontFamilyMap,
-  Keys as FontFamilyKeys,
-} from './fontFamily'
-export type { Type as FontFamilyType } from './fontFamily'
+export { FontFamily, FontFamilyMap, FontFamilyKeys } from './fontFamily'
+export type { FontFamilyType } from './fontFamily'
 
 // FontSize
-export {
-  Style as FontSize,
-  map as FontSizeMap,
-  Keys as FontSizeKeys,
-} from './fontSize'
-export type { Type as FontSizeType } from './fontSize'
+export { FontSize, FontSizeMap, FontSizeKeys } from './fontSize'
+export type { FontSizeType } from './fontSize'
 
 // FontStyle
-export {
-  Style as FontStyle,
-  map as FontStyleMap,
-  Keys as FontStyleKeys,
-} from './fontStyle'
-export type { Type as FontStyleType } from './fontStyle'
+export { FontStyle, FontStyleMap, FontStyleKeys } from './fontStyle'
+export type { FontStyleType } from './fontStyle'
 
 // FontWeight
-export {
-  Style as FontWeight,
-  map as FontWeightMap,
-  Keys as FontWeightKeys,
-} from './fontWeight'
-export type { Type as FontWeightType } from './fontWeight'
+export { FontWeight, FontWeightMap, FontWeightKeys } from './fontWeight'
+export type { FontWeightType } from './fontWeight'
 
 // Gap
-export { Style as Gap, map as GapMap, Keys as GapKeys } from './gap'
-export type { Type as GapType } from './gap'
+export { Gap, GapMap, GapKeys } from './gap'
+export type { GapType } from './gap'
 
 // JustifyContent
 export {
-  Style as JustifyContent,
-  map as JustifyContentMap,
-  Keys as JustifyContentKeys,
+  JustifyContent,
+  JustifyContentMap,
+  JustifyContentKeys,
 } from './justifyContent'
-export type { Type as JustifyContentType } from './justifyContent'
+export type { JustifyContentType } from './justifyContent'
 
 // Margin
 export {
@@ -143,7 +91,7 @@ export {
   map as MarginMap,
   Keys as MarginKeys,
 } from './margin'
-export type { Type as MarginSizeType } from './margin'
+export type { MarginSizeType } from './margin'
 
 // Padding
 export {
@@ -155,65 +103,57 @@ export {
   Keys as PaddingKeys,
   resolve as paddingResolve,
 } from './padding'
-export type { Type as PaddingSizeType, PaddingType } from './padding'
+export type { PaddingSizeType, PaddingType } from './padding'
 
 // Position
-export {
-  Style as Position,
-  map as PositionMap,
-  Keys as PositionKeys,
-} from './position'
-export type { Type as PositionType } from './position'
+export { Position, PositionMap, PositionKeys } from './position'
+export type { PositionType } from './position'
 
 // TextAlign
-export {
-  Style as TextAlign,
-  map as TextAlignMap,
-  Keys as TextAlignKeys,
-} from './textAlign'
-export type { Type as TextAlignType } from './textAlign'
+export { TextAlign, TextAlignMap, TextAlignKeys } from './textAlign'
+export type { TextAlignType } from './textAlign'
 
 // textDecorationColor
 export {
-  Style as TextDecorationColor,
-  map as TextDecorationColorMap,
-  Keys as TextDecorationColorKeys,
+  TextDecorationColor,
+  TextDecorationColorMap,
+  TextDecorationColorKeys,
 } from './textDecorationColor'
-export type { Type as TextDecorationColorType } from './textDecorationColor'
+export type { TextDecorationColorType } from './textDecorationColor'
 
 // TextDecorationLine
 export {
-  Style as TextDecorationLine,
-  map as TextDecorationLineMap,
-  Keys as TextDecorationLineKeys,
-  resolve as textDecorationResolve,
+  TextDecorationLine,
+  TextDecorationLineMap,
+  TextDecorationLineKeys,
+  textDecorationResolve,
 } from './textDecorationLine'
-export type { Type as TextDecorationLineType } from './textDecorationLine'
+export type { TextDecorationLineType } from './textDecorationLine'
 
 // TextDecorationStyle
 export {
-  Style as TextDecorationStyle,
-  map as TextDecorationStyleMap,
-  Keys as TextDecorationStyleKeys,
+  TextDecorationStyle,
+  TextDecorationStyleMap,
+  TextDecorationStyleKeys,
 } from './textDecorationStyle'
-export type { Type as TextDecorationStyleType } from './textDecorationStyle'
+export type { TextDecorationStyleType } from './textDecorationStyle'
 
 // TextDecorationThickness
 export {
-  Style as TextDecorationThickness,
-  map as TextDecorationThicknessMap,
-  Keys as TextDecorationThicknessKeys,
+  TextDecorationThickness,
+  TextDecorationThicknessMap,
+  TextDecorationThicknessKeys,
 } from './textDecorationThickness'
-export type { Type as TextDecorationThicknessType } from './textDecorationThickness'
+export type { TextDecorationThicknessType } from './textDecorationThickness'
 
 // TextTransform
 export {
-  Style as TextTransform,
-  map as TextTransformMap,
-  Keys as TextTransformKeys,
+  TextTransform,
+  TextTransformMap,
+  TextTransformKeys,
 } from './textTransform'
-export type { Type as TextTransformType } from './textTransform'
+export type { TextTransformType } from './textTransform'
 
 // ZIndex
-export { Style as ZIndex, map as ZIndexMap, Keys as ZIndexKeys } from './zIndex'
-export type { Type as ZIndexType } from './zIndex'
+export { ZIndex, ZIndexMap, ZIndexKeys } from './zIndex'
+export type { ZIndexType } from './zIndex'

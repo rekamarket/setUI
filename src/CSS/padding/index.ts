@@ -1,4 +1,5 @@
-export type { Type } from './styles'
+import type { Type } from './styles.css'
+
 export {
   Keys,
   map,
@@ -6,7 +7,8 @@ export {
   PaddingRight,
   PaddingBottom,
   PaddingLeft,
-} from './styles'
+} from './styles.css'
 
 export { resolve } from './resolve'
 export type { PaddingType } from './types'
+export type PaddingSizeType = Type

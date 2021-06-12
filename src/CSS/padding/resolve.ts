@@ -1,4 +1,9 @@
-import { PaddingTop, PaddingRight, PaddingBottom, PaddingLeft } from './styles'
+import {
+  PaddingTop,
+  PaddingRight,
+  PaddingBottom,
+  PaddingLeft,
+} from './styles.css'
 
 export function resolve<T>(props: T) {
   let paddingTop = PaddingTop.none

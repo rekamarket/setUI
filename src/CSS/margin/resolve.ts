@@ -1,4 +1,4 @@
-import { MarginTop, MarginRight, MarginBottom, MarginLeft } from './styles'
+import { MarginTop, MarginRight, MarginBottom, MarginLeft } from './styles.css'
 
 export function resolve<T>(props: T) {
   let marginTop = MarginTop.none

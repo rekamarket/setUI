@@ -1,26 +1,7 @@
-import { mapToStyles, style } from '@vanilla-extract/css'
-import { tuple } from 'utils'
+export {
+  Style as BorderWidth,
+  map as BorderWidthMap,
+  Keys as BorderWidthKeys,
+} from './styles.css'
 
-export const Keys = ['none', 'thin', 'light', 'medium', 'bold']
-const VALUES = tuple(...Keys)
-export type Type = typeof VALUES[number]
-
-export const map: Record<Type, number> = {
-  none: 0,
-  thin: 1,
-  light: 2,
-  medium: 3,
-  bold: 4,
-}
-
-const Styles = mapToStyles(map, (value) => ({
-  borderStyle: 'solid',
-  borderWidth: value,
-}))
-
-export const Style: typeof Styles & {
-  default: string
-} = {
-  ...Styles,
-  default: Styles['none' as Type],
-}
+export type { Type as BorderWidthType } from './styles.css'

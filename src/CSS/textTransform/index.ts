@@ -1,33 +1,7 @@
-import { mapToStyles, style } from '@vanilla-extract/css'
-import { tuple } from 'utils'
+export {
+  Style as TextTransform,
+  map as TextTransformMap,
+  Keys as TextTransformKeys,
+} from './styles.css'
 
-export const Keys = [
-  'none',
-  'uppercase',
-  'lowercase',
-  'capitalize',
-  'fullWidth',
-  'fullSizeKana',
-]
-const VALUES = tuple(...Keys)
-export type Type = typeof VALUES[number]
-
-export const map: Record<Type, any> = {
-  none: 'none',
-  uppercase: 'uppercase',
-  lowercase: 'lowercase',
-  capitalize: 'capitalize',
-  fullWidth: 'full-width',
-  fullSizeKana: 'full-size-kana',
-}
-
-const Styles = mapToStyles(map, (value: any) => ({
-  textTransform: value,
-}))
-
-export const Style: typeof Styles & {
-  default: string
-} = {
-  ...Styles,
-  default: Styles['none' as Type],
-}
+export type { Type as TextTransformType } from './styles.css'
