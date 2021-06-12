@@ -1,7 +1,7 @@
 import { FC } from 'react'
-import Component, { Props as ComponentProps } from './Component'
-import { Legend } from './subsets'
-import { Placeholder } from './supersets'
+import Set, { Props } from './Set'
+import { Legend } from './Subsets'
+import { Placeholder } from './Supersets'
 
 interface I<T = unknown> extends FC<T> {
   // subsets
@@ -11,7 +11,7 @@ interface I<T = unknown> extends FC<T> {
   Placeholder: typeof Placeholder
 }
 
-const Label: I<ComponentProps> = (props) => Component(props)
+const Label: I<Props> = (props) => Set(props)
 
 // subsets
 Label.Legend = Legend

@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import type { Props } from './Set'
-import { Source, Inline, Input, Output, Variable } from './subsets'
-import { Placeholder } from './supersets'
+import { Source, Inline, Input, Output, Variable } from './Subsets'
+import { Placeholder } from './Supersets'
 
 interface I<T = unknown> extends FC<T> {
   // subsets

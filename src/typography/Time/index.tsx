@@ -1,12 +1,12 @@
 import { FC } from 'react'
-import Component, { Props as ComponentProps } from './Component'
-import { Placeholder } from './supersets'
+import Set, { Props } from './Set'
+import { Placeholder } from './Supersets'
 
 interface I<T = unknown> extends FC<T> {
   Placeholder: typeof Placeholder
 }
 
-const Time: I<ComponentProps> = (props) => Component(props)
+const Time: I<Props> = (props) => Set(props)
 
 Time.Placeholder = Placeholder
 

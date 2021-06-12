@@ -1,7 +1,7 @@
 import { FC } from 'react'
-import Component, { Props as ComponentProps } from './Component'
-import { Block, Inline } from './subsets'
-import { Placeholder } from './supersets'
+import Set, { Props } from './Set'
+import { Block, Inline } from './Subsets'
+import { Placeholder } from './Supersets'
 
 interface I<T = unknown> extends FC<T> {
   // subsets
@@ -12,7 +12,7 @@ interface I<T = unknown> extends FC<T> {
   Placeholder: typeof Placeholder
 }
 
-const Quote: I<ComponentProps> = (props) => Component(props)
+const Quote: I<Props> = (props) => Set(props)
 
 // subsets
 Quote.Block = Block
