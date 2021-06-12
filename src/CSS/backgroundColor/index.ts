@@ -36,7 +36,7 @@ export const Keys = [
 const VALUES = tuple(...Keys)
 export type Type = typeof VALUES[number]
 
-const map: Record<Type, any> = {
+export const map: Record<Type, any> = {
   transparent: 'transparent',
   primary: '#0078D4',
   secondary: '#2B88D8',

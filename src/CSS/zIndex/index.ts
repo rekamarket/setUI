@@ -1,7 +1,7 @@
 import { mapToStyles, style } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-const Values = [
+export const Keys = [
   0,
   1,
   2,
@@ -12,10 +12,10 @@ const Values = [
   'modal',
   'notification',
 ]
-const VALUES = tuple.mixed(...Values)
-export type ZIndexType = typeof VALUES[number]
+const VALUES = tuple.mixed(...Keys)
+export type Type = typeof VALUES[number]
 
-export const map: Record<ZIndexType, any> = {
+export const map: Record<Type, any> = {
   0: 0,
   1: 1,
   2: 2,
@@ -31,9 +31,9 @@ const Styles = mapToStyles(map, (value: any) => ({
   zIndex: value,
 }))
 
-export const ZIndex: typeof Styles & {
+export const Style: typeof Styles & {
   default: string
 } = {
   ...Styles,
-  default: Styles[0 as ZIndexType],
+  default: Styles[0 as Type],
 }

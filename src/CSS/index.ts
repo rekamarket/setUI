@@ -1,13 +1,25 @@
 // AlignContent
-export { AlignContent, map as AlignContentMap } from './alignContent'
-export type { AlignContentType } from './alignContent'
+export {
+  Style as AlignContent,
+  map as AlignContentMap,
+  Keys as AlignContentKeys,
+} from './alignContent'
+export type { Type as AlignContentType } from './alignContent'
 
 // AlignItems
-export { AlignItems, map as AlignItemsMap } from './alignItems'
-export type { AlignItemsType } from './alignItems'
+export {
+  Style as AlignItems,
+  map as AlignItemsMap,
+  Keys as AlignItemsMapKeys,
+} from './alignItems'
+export type { Type as AlignItemsType } from './alignItems'
 
 // AspectRatio
-export { AspectRatio, map as AspectRatioMap } from './aspectRatio'
+export {
+  Style as AspectRatio,
+  map as AspectRatioMap,
+  Keys as AspectRatioKeys,
+} from './aspectRatio'
 export type { Type as AspectRatioType } from './aspectRatio'
 
 // BackgroundColor
@@ -43,8 +55,12 @@ export {
 export type { Type as BorderWidthType } from './borderWidth'
 
 // BoxShadow
-export { BoxShadow } from './boxShadow'
-export type { BoxShadowType } from './boxShadow'
+export {
+  Style as BoxShadow,
+  map as BoxShadowMap,
+  Keys as BoxShadowKeys,
+} from './boxShadow'
+export type { Type as BoxShadowType } from './boxShadow'
 
 // Color
 export { Style as Color, map as ColorMap, Keys as ColorKeys } from './color'
@@ -59,12 +75,20 @@ export {
 export type { Type as DisplayType } from './display'
 
 // FlexDirection
-export { FlexDirection, map as FlexDirectionMap } from './flexDirection'
-export type { FlexDirectionType } from './flexDirection'
+export {
+  Style as FlexDirection,
+  map as FlexDirectionMap,
+  Keys as FlexDirectionKeys,
+} from './flexDirection'
+export type { Type as FlexDirectionType } from './flexDirection'
 
 // FlexWrap
-export { FlexWrap, map as FlexWrapMap } from './flexWrap'
-export type { FlexWrapType } from './flexWrap'
+export {
+  Style as FlexWrap,
+  map as FlexWrapMap,
+  Keys as FlexWrapKeys,
+} from './flexWrap'
+export type { Type as FlexWrapType } from './flexWrap'
 
 // FontFamily
 export {
@@ -99,12 +123,16 @@ export {
 export type { Type as FontWeightType } from './fontWeight'
 
 // Gap
-export { Gap } from './gap'
-export type { GapType } from './gap'
+export { Style as Gap, map as GapMap, Keys as GapKeys } from './gap'
+export type { Type as GapType } from './gap'
 
 // JustifyContent
-export { JustifyContent, map as JustifyContentMap } from './justifyContent'
-export type { JustifyContentType } from './justifyContent'
+export {
+  Style as JustifyContent,
+  map as JustifyContentMap,
+  Keys as JustifyContentKeys,
+} from './justifyContent'
+export type { Type as JustifyContentType } from './justifyContent'
 
 // Margin
 export {
@@ -130,17 +158,26 @@ export {
 export type { Type as PaddingSizeType, PaddingType } from './padding'
 
 // Position
-export { Position } from './position'
-export type { PositionType } from './position'
+export {
+  Style as Position,
+  map as PositionMap,
+  Keys as PositionKeys,
+} from './position'
+export type { Type as PositionType } from './position'
 
 // TextAlign
-export { TextAlign } from './textAlign'
-export type { TextAlignType } from './textAlign'
+export {
+  Style as TextAlign,
+  map as TextAlignMap,
+  Keys as TextAlignKeys,
+} from './textAlign'
+export type { Type as TextAlignType } from './textAlign'
 
 // textDecorationColor
 export {
   Style as TextDecorationColor,
   map as TextDecorationColorMap,
+  Keys as TextDecorationColorKeys,
 } from './textDecorationColor'
 export type { Type as TextDecorationColorType } from './textDecorationColor'
 
@@ -148,7 +185,8 @@ export type { Type as TextDecorationColorType } from './textDecorationColor'
 export {
   Style as TextDecorationLine,
   map as TextDecorationLineMap,
-  get as getTextDecorationLine,
+  Keys as TextDecorationLineKeys,
+  resolve as textDecorationResolve,
 } from './textDecorationLine'
 export type { Type as TextDecorationLineType } from './textDecorationLine'
 
@@ -156,6 +194,7 @@ export type { Type as TextDecorationLineType } from './textDecorationLine'
 export {
   Style as TextDecorationStyle,
   map as TextDecorationStyleMap,
+  Keys as TextDecorationStyleKeys,
 } from './textDecorationStyle'
 export type { Type as TextDecorationStyleType } from './textDecorationStyle'
 
@@ -163,13 +202,18 @@ export type { Type as TextDecorationStyleType } from './textDecorationStyle'
 export {
   Style as TextDecorationThickness,
   map as TextDecorationThicknessMap,
+  Keys as TextDecorationThicknessKeys,
 } from './textDecorationThickness'
 export type { Type as TextDecorationThicknessType } from './textDecorationThickness'
 
 // TextTransform
-export { Style as TextTransform } from './textTransform'
+export {
+  Style as TextTransform,
+  map as TextTransformMap,
+  Keys as TextTransformKeys,
+} from './textTransform'
 export type { Type as TextTransformType } from './textTransform'
 
 // ZIndex
-export { ZIndex, map as ZIndexMap } from './zIndex'
-export type { ZIndexType } from './zIndex'
+export { Style as ZIndex, map as ZIndexMap, Keys as ZIndexKeys } from './zIndex'
+export type { Type as ZIndexType } from './zIndex'

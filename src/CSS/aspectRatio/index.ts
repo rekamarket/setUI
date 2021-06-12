@@ -1,7 +1,7 @@
 import { mapToStyles, style } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-const Values = [
+export const Keys = [
   'content',
   '1x1',
   '9x16',
@@ -11,7 +11,7 @@ const Values = [
   'initial',
   'unset',
 ]
-const VALUES = tuple(...Values)
+const VALUES = tuple(...Keys)
 export type Type = typeof VALUES[number]
 
 export const map: Record<Type, any> = {
@@ -29,7 +29,7 @@ const Styles = mapToStyles(map, (value: any) => ({
   aspectRatio: value,
 }))
 
-export const AspectRatio: typeof Styles & {
+export const Style: typeof Styles & {
   default: string
 } = {
   ...Styles,

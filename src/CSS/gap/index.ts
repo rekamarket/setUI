@@ -1,7 +1,7 @@
 import { mapToStyles, style } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-const Sizes = [
+export const Keys = [
   'none',
   'xxxsmall',
   'xxsmall',
@@ -13,10 +13,10 @@ const Sizes = [
   'xxlarge',
   'xxxlarge',
 ]
-const SIZES = tuple(...Sizes)
-export type GapType = typeof SIZES[number]
+const VALUES = tuple(...Keys)
+export type Type = typeof VALUES[number]
 
-const map: Record<GapType, number> = {
+export const map: Record<Type, number> = {
   none: 0,
   xxxsmall: 2,
   xxsmall: 4,
@@ -29,13 +29,13 @@ const map: Record<GapType, number> = {
   xxxlarge: 48,
 }
 
-const StylesGap = mapToStyles(map, (value) => ({
+const Styles = mapToStyles(map, (value) => ({
   gap: value,
 }))
 
-export const Gap: typeof StylesGap & {
+export const Style: typeof Styles & {
   default: string
 } = {
-  ...StylesGap,
-  default: StylesGap['none' as GapType],
+  ...Styles,
+  default: Styles['none' as Type],
 }

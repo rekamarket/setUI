@@ -1,7 +1,7 @@
 import { mapToStyles, style } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-const Values = [
+export const Keys = [
   /* Single keyword */
   'none',
   'underline',
@@ -20,7 +20,7 @@ const Values = [
   'initial',
   'unset',
 ]
-const VALUES = tuple(...Values)
+const VALUES = tuple(...Keys)
 export type Type = typeof VALUES[number]
 
 export const map: Record<Type, any> = {
@@ -54,7 +54,7 @@ export const Style: typeof Styles & {
   default: Styles['unset' as Type],
 }
 
-export const get = ({
+export const resolve = ({
   isOverLine,
   isThrowLine,
   isUnderLine,

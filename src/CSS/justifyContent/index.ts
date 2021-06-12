@@ -1,7 +1,7 @@
 import { mapToStyles, style } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-const Values = [
+export const Keys = [
   'center',
   'start',
   'end',
@@ -17,8 +17,8 @@ const Values = [
   'safeCenter',
   'unsafeCenter',
 ]
-const VALUES = tuple(...Values)
-type Type = typeof VALUES[number]
+const VALUES = tuple(...Keys)
+export type Type = typeof VALUES[number]
 
 export const map: Record<Type, any> = {
   center: 'center',
@@ -42,11 +42,9 @@ const Styles = mapToStyles(map, (value: any) => ({
   justifyContent: value,
 }))
 
-export const JustifyContent: typeof Styles & {
+export const Style: typeof Styles & {
   default: string
 } = {
   ...Styles,
   default: Styles['flexStart' as Type],
 }
-
-export type JustifyContentType = Type

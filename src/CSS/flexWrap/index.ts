@@ -1,9 +1,9 @@
 import { mapToStyles, style } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-const Values = ['nowrap', 'wrap', 'wrap-reverse']
-const VALUES = tuple(...Values)
-type Type = typeof VALUES[number]
+export const Keys = ['nowrap', 'wrap', 'wrap-reverse']
+const VALUES = tuple(...Keys)
+export type Type = typeof VALUES[number]
 
 export const map: Record<Type, any> = {
   nowrap: 'nowrap',
@@ -15,11 +15,9 @@ const Styles = mapToStyles(map, (value: any) => ({
   flexWrap: value,
 }))
 
-export const FlexWrap: typeof Styles & {
+export const Style: typeof Styles & {
   default: string
 } = {
   ...Styles,
   default: Styles['nowrap' as Type],
 }
-
-export type FlexWrapType = Type

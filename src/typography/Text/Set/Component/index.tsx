@@ -6,7 +6,7 @@ import {
   TextAlign,
   TextDecorationColor,
   TextDecorationLine,
-  getTextDecorationLine,
+  textDecorationResolve,
   TextDecorationStyle,
   TextDecorationThickness,
   TextTransform,
@@ -70,7 +70,7 @@ const Text: FC<PropsRequired> = ({
         TextAlign[align] || TextAlign.left,
 
         TextDecorationColor[decorationColor] || TextDecorationColor.default,
-        getTextDecorationLine({
+        textDecorationResolve({
           isOverLine: overline,
           isThrowLine: lineThrough,
           isUnderLine: underline,
