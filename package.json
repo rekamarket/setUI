@@ -20,7 +20,9 @@
     "format": "prettier --write src/**/*.ts{,x}",
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "playroom:start": "playroom start",
+    "playroom:build": "playroom build"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
@@ -48,6 +50,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "playroom": "^0.25.0",
     "prettier": "^2.2.1",
     "tsconfig-paths-webpack-plugin": "^3.5.1",
     "typescript": "4.2.2"
