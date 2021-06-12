@@ -1,6 +1,7 @@
 import { FC } from 'react'
-import Set, { Props } from './Set'
+import { Props } from './Set'
 import {
+  Source,
   Abbreviation,
   Attention,
   Citation,
@@ -38,7 +39,7 @@ interface I<T = unknown> extends FC<T> {
   Placeholder: typeof Placeholder
 }
 
-const Text: I<Props> = (props) => Set(props)
+const Text: I<Props> = (props) => Source(props)
 
 // subsets
 Text.Abbreviation = Abbreviation

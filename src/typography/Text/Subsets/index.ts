@@ -1,3 +1,4 @@
+export { default as Source } from './_Source'
 export { default as Abbreviation } from './Abbreviation'
 export { default as Attention } from './Attention'
 export { default as Citation } from './Citation'
