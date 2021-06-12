@@ -24,6 +24,10 @@ const Index = () => {
   return (
     <main>
       <Container.Small padding="large" margin="large" direction="right">
+        <Heading.H1 color="grey190" size="large">
+          Создать новый альбом
+        </Heading.H1>
+
         <Box
           padding="xxlarge"
           borderColor="grey160"
@@ -32,12 +36,12 @@ const Index = () => {
           background="errorPale"
         >
           <Text.Placeholder />
-          <Text.Strong underline color="error">
+          <Text.Important underline color="error">
             Strong
-          </Text.Strong>
-          <Text.Emphasis lowercase color="error">
+          </Text.Important>
+          <Text.Important lowercase color="error">
             Emphasis
-          </Text.Emphasis>
+          </Text.Important>
           <Flex
             borderColor="primary"
             borderWidth="thin"
@@ -60,7 +64,7 @@ const Index = () => {
         <Tabs.Panel
           key="1"
           tab={
-            <Heading.Thin level={2} color="grey160" padding="large">
+            <Heading.Thin level={2} color="grey160">
               title
             </Heading.Thin>
           }
@@ -73,7 +77,7 @@ const Index = () => {
         <Tabs.Panel
           key="2"
           tab={
-            <Heading.Thin level={2} color="grey160" padding="large">
+            <Heading.Thin level={2} color="grey160">
               title
             </Heading.Thin>
           }
@@ -83,15 +87,27 @@ const Index = () => {
       </Tabs>
 
       <Segment padding="large" gap="large">
-        <Segment.Start padding="large">Segment start</Segment.Start>
-        <Segment.Interval>Segment Interval</Segment.Interval>
-        <Segment.End>Segment End</Segment.End>
+        <Segment.Start padding="large">
+          <Text>Segment start</Text>
+        </Segment.Start>
+        <Segment.Interval>
+          <Text>Segment Interval</Text>
+        </Segment.Interval>
+        <Segment.End>
+          <Text>Segment End</Text>
+        </Segment.End>
       </Segment>
 
       <Segment.Column padding="large" gap="large">
-        <Segment.Start padding="large">SegmentColumn start</Segment.Start>
-        <Segment.Interval>SegmentColumn Interval</Segment.Interval>
-        <Segment.End>SegmentColumn End</Segment.End>
+        <Segment.Start padding="large">
+          <Text>SegmentColumn start</Text>
+        </Segment.Start>
+        <Segment.Interval>
+          <Text>SegmentColumn Interval</Text>
+        </Segment.Interval>
+        <Segment.End>
+          <Text>SegmentColumn End</Text>
+        </Segment.End>
       </Segment.Column>
 
       <Stack gap="large" padding="xlarge">
@@ -108,9 +124,9 @@ const Index = () => {
         onClose={close}
         accent="primary"
         title={
-          <Heading level={2} color="grey190" size="large">
+          <Heading.H1 color="grey190" size="large">
             Создать новый альбом
-          </Heading>
+          </Heading.H1>
         }
       >
         <Form

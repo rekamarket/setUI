@@ -2,19 +2,20 @@ import { FC } from 'react'
 import { ButtonLink } from 'button'
 import { Code, Heading, LineBreak, Paragraph } from 'typography'
 import { Box } from 'layout'
+import { Input } from 'uiCode'
 
 const Page = () => {
   return (
     <main>
       <Box padding="xxlarge">
-        <Heading level={1}>.placeholder - &lt;Code.Placeholder&gt;</Heading>
+        <Heading.H1>.placeholder - &lt;Code.Placeholder&gt;</Heading.H1>
         <Paragraph>
-          The <Code.Placeholder length={23} />
+          The <Code.Placeholder>code</Code.Placeholder>
         </Paragraph>
       </Box>
 
       <Box padding="xxlarge">
-        <Heading level={1}>&lt;code&gt; - &lt;Code.Inline&gt;</Heading>
+        <Heading.H1>&lt;code&gt; - &lt;Code.Inline&gt;</Heading.H1>
         <Paragraph>
           The <Code.Inline>push()</Code.Inline> method adds one or more elements
           to the end of an array and returns the new length of the array.
@@ -22,16 +23,16 @@ const Page = () => {
       </Box>
 
       <Box padding="xxlarge">
-        <Heading level={1}>&lt;kbd&gt; - &lt;Code.Input&gt;</Heading>
+        <Heading.H1>&lt;kbd&gt; - &lt;Code.Input&gt;</Heading.H1>
         <Paragraph>
           Please press <Code.Input>Ctrl</Code.Input> +{' '}
-          <Code.Input>Shift</Code.Input>+ <Code.Input>R</Code.Input> to
+          <Input.Keyboard>Shift</Input.Keyboard>+ <Code.Input>R</Code.Input> to
           re-render an MDN page.
         </Paragraph>
       </Box>
 
       <Box padding="xxlarge">
-        <Heading level={1}>&lt;samp&gt; - &lt;Code.Output&gt;</Heading>
+        <Heading.H1>&lt;samp&gt; - &lt;Code.Output&gt;</Heading.H1>
         <Paragraph>
           <Code.Output>
             Keyboard not found <LineBreak />
@@ -41,7 +42,7 @@ const Page = () => {
       </Box>
 
       <Box padding="xxlarge">
-        <Heading level={1}>&lt;var&gt; - &lt;Code.Variable&gt;</Heading>
+        <Heading.H1>&lt;var&gt; - &lt;Code.Variable&gt;</Heading.H1>
         <Paragraph>
           The volume of a box is <Code.Variable>l</Code.Variable> ×{' '}
           <Code.Variable>w</Code.Variable> × <Code.Variable>h</Code.Variable>,
@@ -55,17 +56,3 @@ const Page = () => {
 }
 
 export default Page
-
-// import Input, { Props } from 'typography/Code/subsets/Input'
-
-// const CustomKey: FC<Props> = (props) =>
-//   Input({
-//     ...props,
-//     background: 'warningPale',
-//     borderColor: 'primary',
-//     borderRadius: 'medium',
-//     borderWidth: 'light',
-//     size: 'xxxlarge',
-//     style: 'normal',
-//     weight: 'bold',
-//   })

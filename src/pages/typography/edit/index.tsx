@@ -1,11 +1,10 @@
 import { ButtonLink } from 'button'
-import { Edit, Heading } from 'typography'
-import { Box } from 'layout'
+import { Edit, Heading, Paragraph } from 'typography'
 
 const Page = () => {
   return (
     <main>
-      <Box padding="xxlarge">
+      <Paragraph padding="xxlarge">
         <Heading level={1}>&lt;ins&gt; and &lt;del&gt;</Heading>
 
         <Edit.Insertion>
@@ -18,7 +17,7 @@ const Page = () => {
         <Edit.Deletion>
           <p>Deletion</p>
         </Edit.Deletion>
-      </Box>
+      </Paragraph>
     </main>
   )
 }

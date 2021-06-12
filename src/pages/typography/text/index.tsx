@@ -11,7 +11,7 @@ const Page = () => {
         borderWidth="thin"
         margin="large"
       >
-        <Heading level={1}>&lt;abbr&gt;</Heading>
+        <Heading.H1>&lt;abbr&gt;</Heading.H1>
 
         <Paragraph>
           You can use{' '}
@@ -32,7 +32,7 @@ const Page = () => {
         borderWidth="thin"
         margin="large"
       >
-        <Heading level={1}>&lt;b&gt;</Heading>
+        <Heading.H1>&lt;b&gt;</Heading.H1>
 
         <Paragraph>
           The two most popular science courses offered by the school are{' '}
@@ -49,7 +49,7 @@ const Page = () => {
         borderWidth="thin"
         margin="large"
       >
-        <Heading level={1}>&lt;cite&gt;</Heading>
+        <Heading.H1>&lt;cite&gt;</Heading.H1>
 
         <blockquote style={{ fontSize: '1rem' }}>
           <Paragraph>
@@ -74,7 +74,7 @@ const Page = () => {
         borderWidth="thin"
         margin="large"
       >
-        <Heading level={1}>&lt;dfn&gt;</Heading>
+        <Heading.H1>&lt;dfn&gt;</Heading.H1>
 
         <Paragraph>
           A <Text.DefinedTerm>validator</Text.DefinedTerm> is a program that
@@ -88,7 +88,7 @@ const Page = () => {
         borderWidth="thin"
         margin="large"
       >
-        <Heading level={1}>&lt;small&gt;</Heading>
+        <Heading.H1>&lt;small&gt;</Heading.H1>
 
         <Paragraph>
           MDN Web Docs is a learning platform for Web technologies and the
@@ -109,7 +109,7 @@ const Page = () => {
         borderWidth="thin"
         margin="large"
       >
-        <Heading level={1}>&lt;strong&gt;</Heading>
+        <Heading.H1>&lt;strong&gt;</Heading.H1>
 
         <Paragraph>
           ... the most important rule, the rule you can never forget, no matter
@@ -124,7 +124,7 @@ const Page = () => {
         borderWidth="thin"
         margin="large"
       >
-        <Heading level={1}>&lt;mark&gt;</Heading>
+        <Heading.H1>&lt;mark&gt;</Heading.H1>
 
         <Paragraph>Search results for "salamander":</Paragraph>
         <ThematicBreak />
@@ -144,7 +144,7 @@ const Page = () => {
         borderWidth="thin"
         margin="large"
       >
-        <Heading level={1}>&lt;i&gt;</Heading>
+        <Heading.H1>&lt;i&gt;</Heading.H1>
 
         <Paragraph>
           I looked at it and thought{' '}
@@ -158,7 +158,7 @@ const Page = () => {
         borderWidth="thin"
         margin="large"
       >
-        <Heading level={1}>&lt;s&gt;</Heading>
+        <Heading.H1>&lt;s&gt;</Heading.H1>
 
         <Paragraph>
           <Text.Outdated>
@@ -174,7 +174,7 @@ const Page = () => {
         borderWidth="thin"
         margin="large"
       >
-        <Heading level={1}>&lt;em&gt;</Heading>
+        <Heading.H1>&lt;em&gt;</Heading.H1>
 
         <Paragraph>
           This is <Text.StressEmphasis>not</Text.StressEmphasis> a drill!
@@ -187,7 +187,7 @@ const Page = () => {
         borderWidth="thin"
         margin="large"
       >
-        <Heading level={1}>&lt;sub&gt;</Heading>
+        <Heading.H1>&lt;sub&gt;</Heading.H1>
 
         <Paragraph>
           Almost every developer's favorite molecule is C
@@ -203,7 +203,7 @@ const Page = () => {
         borderWidth="thin"
         margin="large"
       >
-        <Heading level={1}>&lt;sup&gt;</Heading>
+        <Heading.H1>&lt;sup&gt;</Heading.H1>
 
         <Paragraph>
           The <Text.Important>Pythagorean theorem</Text.Important> is often
@@ -231,7 +231,7 @@ const Page = () => {
         borderWidth="thin"
         margin="large"
       >
-        <Heading level={1}>&lt;u&gt;</Heading>
+        <Heading.H1>&lt;u&gt;</Heading.H1>
 
         <Paragraph>
           You could use this element to highlight{' '}
