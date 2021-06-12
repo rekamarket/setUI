@@ -3,7 +3,7 @@ const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  components: './src/typography/index.ts',
+  components: './src/components/index.ts',
   outputPath: './dist/playroom',
 
   widths: [320, 768, 1024],
@@ -38,7 +38,12 @@ module.exports = {
         {
           test: /\.tsx?$/,
           include: [
+            path.resolve(__dirname, 'src/components/index.ts'),
             path.resolve(__dirname, 'src/CSS/'),
+            path.resolve(__dirname, 'src/interactive/button'),
+            path.resolve(__dirname, 'src/interactive/form'),
+            path.resolve(__dirname, 'src/dialog'),
+            path.resolve(__dirname, 'src/layout/'),
             path.resolve(__dirname, 'src/typography/'),
             path.resolve(__dirname, 'src/utils/'),
             path.resolve(__dirname, 'src/utils/index.ts')
@@ -62,6 +67,10 @@ module.exports = {
       extensions: ['.js', '.ts', '.tsx'],
       alias: {
         CSS: path.resolve(__dirname, 'src/CSS/'),
+        button: path.resolve(__dirname, 'src/interactive/button/index.ts'),
+        dialog: path.resolve(__dirname, 'src/dialog/index.ts'),
+        form: path.resolve(__dirname, 'src/interactive/form/index.ts'),
+        layout: path.resolve(__dirname, 'src/layout/'),
         typography: path.resolve(__dirname, 'src/typography/'),
         utils: path.resolve(__dirname, 'src/utils/index.ts'),
       }
