@@ -5,7 +5,7 @@ export const defaultProps: Partial<Props> & PaddingType = {
 
   weight: 'bold',
   type: 'monospace',
-  size: 'medium',
+  size: 'small',
   style: 'normal',
 
   background: 'transparent',
