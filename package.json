@@ -8,7 +8,7 @@
     "lint-staged": "^11.0.0",
     "next": "10.2.3",
     "rc-dialog": "^8.5.2",
-    "rc-field-form": "^1.20.0",
+    "rc-field-form": "^1.21.0-2",
     "rc-tabs": "^11.9.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
