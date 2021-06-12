@@ -1,19 +1,28 @@
 import { FC } from 'react'
 import cn from 'classnames'
+import { object } from 'utils'
+import { defaultProps } from './defaultProps'
+import type { Props, PropsRequired } from './types'
+import Set from '../../Set'
 import { ClassName } from './styles.css'
-import Component, { Props } from '../../Component'
 
-const Deletion: FC<Omit<Props, 'as'>> = ({ className, ...props }) =>
-  Component({
-    // props default values
-    background: 'errorPale',
+const displayName = 'Edit.Deletion'
 
-    // props passed
-    ...props,
+const Deletion: FC<Props> = ({ className, ...props }) =>
+  Set({
+    ...object.mergePropsWithWarning<PropsRequired>(
+      defaultProps,
+      props,
+      displayName
+    ),
 
     // props override
     as: 'del',
     className: cn(ClassName, className),
   })
 
+Deletion.displayName = displayName
+
+export { defaultProps } from './defaultProps'
+export type { Props } from './types'
 export default Deletion

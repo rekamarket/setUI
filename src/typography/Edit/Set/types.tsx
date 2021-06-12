@@ -5,17 +5,19 @@ import type {
   FontSizeType,
   FontWeightType,
   PaddingSizeType,
+  PaddingType,
 } from 'CSS'
 
 export type AsType = 'del' | 'ins'
 
-export type Props = {
-  as?: AsType
+type BasicProps = {
   cite?: string
   datetime?: string
   className?: string
+}
 
-  truncate?: boolean
+type StyleProps = {
+  as?: AsType
 
   background?: BackgroundColorType
   color?: ColorType
@@ -23,12 +25,10 @@ export type Props = {
   weight?: FontWeightType
   type?: FontFamilyType
   size?: FontSizeType
-
-  padding?: PaddingSizeType
-  paddingX?: PaddingSizeType
-  paddingY?: PaddingSizeType
-  paddingTop?: PaddingSizeType
-  paddingRight?: PaddingSizeType
-  paddingBottom?: PaddingSizeType
-  paddingLeft?: PaddingSizeType
 }
+
+export type { PaddingType } from 'CSS'
+export type Props = BasicProps & StyleProps & PaddingType
+export type PropsRequired = BasicProps &
+  Required<StyleProps> &
+  Required<PaddingType>

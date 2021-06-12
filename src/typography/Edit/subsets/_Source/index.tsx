@@ -6,9 +6,9 @@ import type { Props, PropsRequired } from './types'
 import Set from '../../Set'
 import { ClassName } from './styles.css'
 
-const displayName = 'Edit.Insertion'
+const displayName = 'Edit'
 
-const Insertion: FC<Props> = ({ className, ...props }) =>
+const Edit: FC<Props> = ({ className, ...props }) =>
   Set({
     ...object.mergePropsWithWarning<PropsRequired>(
       defaultProps,
@@ -17,12 +17,11 @@ const Insertion: FC<Props> = ({ className, ...props }) =>
     ),
 
     // props override
-    as: 'ins',
     className: cn(ClassName, className),
   })
 
-Insertion.displayName = displayName
+Edit.displayName = displayName
 
 export { defaultProps } from './defaultProps'
 export type { Props } from './types'
-export default Insertion
+export default Edit
