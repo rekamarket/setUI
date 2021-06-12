@@ -88,8 +88,9 @@ export {
   MarginRight,
   MarginBottom,
   MarginLeft,
-  map as MarginMap,
-  Keys as MarginKeys,
+  MarginMap,
+  MarginKeys,
+  marginResolve,
 } from './margin'
 export type { MarginSizeType } from './margin'
 
@@ -99,9 +100,9 @@ export {
   PaddingRight,
   PaddingBottom,
   PaddingLeft,
-  map as PaddingMap,
-  Keys as PaddingKeys,
-  resolve as paddingResolve,
+  PaddingMap,
+  PaddingKeys,
+  paddingResolve,
 } from './padding'
 export type { PaddingSizeType, PaddingType } from './padding'
 
