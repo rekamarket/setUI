@@ -8,13 +8,6 @@ const Page = () => {
   return (
     <main>
       <Box padding="xxlarge">
-        <Heading.H1>.placeholder - &lt;Code.Placeholder&gt;</Heading.H1>
-        <Paragraph>
-          The <Code.Placeholder>code</Code.Placeholder>
-        </Paragraph>
-      </Box>
-
-      <Box padding="xxlarge">
         <Heading.H1>&lt;code&gt; - &lt;Code.Inline&gt;</Heading.H1>
         <Paragraph>
           The <Code.Inline>push()</Code.Inline> method adds one or more elements
