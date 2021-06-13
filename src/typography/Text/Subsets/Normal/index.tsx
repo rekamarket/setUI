@@ -6,9 +6,9 @@ import type { Props, PropsRequired } from './types'
 import Set from '../../Set'
 import { ClassName } from './styles.css'
 
-const displayName = 'Text'
+const displayName = 'Text.Normal'
 
-const Source: FC<Props> = ({ className, ...props }) =>
+const Normal: FC<Props> = ({ className, ...props }) =>
   Set({
     ...object.mergePropsWithWarning<PropsRequired>(
       defaultProps,
@@ -17,11 +17,12 @@ const Source: FC<Props> = ({ className, ...props }) =>
     ),
 
     // props override
+    as: 'span',
     className: cn(ClassName, className),
   })
 
-Source.displayName = displayName
+Normal.displayName = displayName
 
 export { defaultProps } from './defaultProps'
 export type { Props } from './types'
-export default Source
+export default Normal

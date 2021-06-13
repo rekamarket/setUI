@@ -35,7 +35,7 @@ const Index = () => {
           borderRadius="medium"
           background="errorPale"
         >
-          <Text.Placeholder />
+          <Text>span</Text>
           <Text.Important underline color="error">
             Strong
           </Text.Important>

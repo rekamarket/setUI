@@ -32,13 +32,12 @@ export type AsType =
   | 'small'
 
 type BasicProps = {
+  as: AsType
   className?: string
   title?: string
 }
 
 type StyleProps = {
-  as: AsType
-
   background?: BackgroundColorType
   color?: ColorType
 

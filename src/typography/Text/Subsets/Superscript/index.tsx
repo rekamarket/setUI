@@ -3,13 +3,13 @@ import cn from 'classnames'
 import { object } from 'utils'
 import { defaultProps } from './defaultProps'
 import type { Props, PropsRequired } from './types'
-import Set from '../../Set'
+import ProtoSet from '../../ProtoSet'
 import { ClassName } from './styles.css'
 
 const displayName = 'Text.Superscript'
 
 const Superscript: FC<Props> = ({ className, ...props }) =>
-  Set({
+  ProtoSet({
     ...object.mergePropsWithWarning<PropsRequired>(
       defaultProps,
       props,

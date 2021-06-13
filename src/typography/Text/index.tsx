@@ -1,7 +1,6 @@
 import { FC } from 'react'
-import { Props } from './Set'
+import Set, { Props } from './Set'
 import {
-  Source,
   Abbreviation,
   Attention,
   Citation,
@@ -10,6 +9,7 @@ import {
   Highlight,
   Idiomatic,
   Important,
+  Normal,
   Outdated,
   StressEmphasis,
   Subscript,
@@ -28,6 +28,7 @@ interface I<T = unknown> extends FC<T> {
   Highlight: typeof Highlight
   Idiomatic: typeof Idiomatic
   Important: typeof Important
+  Normal: typeof Normal
   Outdated: typeof Outdated
   Reference: typeof Citation
   StressEmphasis: typeof StressEmphasis
@@ -39,7 +40,7 @@ interface I<T = unknown> extends FC<T> {
   Placeholder: typeof Placeholder
 }
 
-const Text: I<Props> = (props) => Source(props)
+const Text: I<Props> = (props) => Set(props)
 
 // subsets
 Text.Abbreviation = Abbreviation
@@ -50,6 +51,7 @@ Text.Disclaimer = Disclaimer
 Text.Highlight = Highlight
 Text.Idiomatic = Idiomatic
 Text.Important = Important
+Text.Normal = Normal
 Text.Outdated = Outdated
 Text.Reference = Citation
 Text.StressEmphasis = StressEmphasis
@@ -60,4 +62,5 @@ Text.UnarticulatedAnnotation = UnarticulatedAnnotation
 // supersets
 Text.Placeholder = Placeholder
 
+export type { Props } from './Set'
 export default Text
