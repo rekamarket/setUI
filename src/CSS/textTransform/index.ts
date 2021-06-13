@@ -4,4 +4,6 @@ export {
   Keys as TextTransformKeys,
 } from './styles.css'
 
+export { resolve as textTransformResolve } from './resolve'
 export type { Type as TextTransformType } from './styles.css'
+export type { TransformPropsType } from './types'

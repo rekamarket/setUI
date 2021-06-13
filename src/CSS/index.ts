@@ -152,8 +152,9 @@ export {
   TextTransform,
   TextTransformMap,
   TextTransformKeys,
+  textTransformResolve,
 } from './textTransform'
-export type { TextTransformType } from './textTransform'
+export type { TextTransformType, TransformPropsType } from './textTransform'
 
 // ZIndex
 export { ZIndex, ZIndexMap, ZIndexKeys } from './zIndex'
