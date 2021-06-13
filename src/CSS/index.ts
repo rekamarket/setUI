@@ -67,8 +67,13 @@ export { FontStyle, FontStyleMap, FontStyleKeys } from './fontStyle'
 export type { FontStyleType } from './fontStyle'
 
 // FontWeight
-export { FontWeight, FontWeightMap, FontWeightKeys } from './fontWeight'
-export type { FontWeightType } from './fontWeight'
+export {
+  FontWeight,
+  FontWeightMap,
+  FontWeightKeys,
+  fontWeightResolve,
+} from './fontWeight'
+export type { FontWeightType, FontWeightProps } from './fontWeight'
 
 // Gap
 export { Gap, GapMap, GapKeys } from './gap'
