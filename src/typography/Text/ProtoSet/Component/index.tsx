@@ -12,7 +12,7 @@ import {
   textTransformResolve,
   FontFamily,
   FontSize,
-  FontStyle,
+  fontStyleResolve,
   fontWeightResolve,
   paddingResolve,
 } from 'CSS'
@@ -36,7 +36,6 @@ const Text: FC<PropsRequired> = ({
 
   type,
   size,
-  style,
 
   children,
 
@@ -66,7 +65,7 @@ const Text: FC<PropsRequired> = ({
 
         FontFamily[type] || FontFamily.default,
         FontSize[size] || FontSize.medium,
-        FontStyle[style] || FontStyle.default,
+        fontStyleResolve<Partial<PropsRequired>>(rest),
         fontWeightResolve<Partial<PropsRequired>>(rest),
 
         paddingTop,

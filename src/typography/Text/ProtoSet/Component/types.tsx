@@ -3,7 +3,7 @@ import type {
   ColorType,
   FontFamilyType,
   FontSizeType,
-  FontStyleType,
+  FontStyleProps,
   FontWeightProps,
   TextAlignProps,
   TextAlignType,
@@ -51,11 +51,11 @@ type StyleProps = {
 
   type?: FontFamilyType
   size?: FontSizeType
-  style?: FontStyleType
 } & TransformPropsType &
   TextAlignProps &
   TextDecorationLineProps &
-  FontWeightProps
+  FontWeightProps &
+  FontStyleProps
 
 export type { PaddingType } from 'CSS'
 export type Props = BasicProps & StyleProps & PaddingType
