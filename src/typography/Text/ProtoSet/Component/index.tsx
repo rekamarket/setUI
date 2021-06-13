@@ -3,7 +3,7 @@ import cn from 'classnames'
 import {
   BackgroundColor,
   Color,
-  TextAlign,
+  textAlignResolve,
   TextDecorationColor,
   TextDecorationLine,
   textDecorationResolve,
@@ -29,8 +29,6 @@ const Text: FC<PropsRequired> = ({
   // styles
   background,
   color,
-
-  align,
 
   overline,
   lineThrough,
@@ -62,7 +60,7 @@ const Text: FC<PropsRequired> = ({
         BackgroundColor[background] || BackgroundColor.default,
         Color[color] || Color.black,
 
-        TextAlign[align] || TextAlign.left,
+        textAlignResolve<Partial<PropsRequired>>(rest),
 
         TextDecorationColor[decorationColor] || TextDecorationColor.default,
         textDecorationResolve({
