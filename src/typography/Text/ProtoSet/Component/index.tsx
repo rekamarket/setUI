@@ -13,7 +13,7 @@ import {
   FontFamily,
   FontSize,
   FontStyle,
-  FontWeight,
+  fontWeightResolve,
   paddingResolve,
 } from 'CSS'
 import { PropsRequired } from './types'
@@ -37,7 +37,6 @@ const Text: FC<PropsRequired> = ({
   type,
   size,
   style,
-  weight,
 
   children,
 
@@ -68,7 +67,7 @@ const Text: FC<PropsRequired> = ({
         FontFamily[type] || FontFamily.default,
         FontSize[size] || FontSize.medium,
         FontStyle[style] || FontStyle.default,
-        FontWeight[weight] || FontWeight.inherit,
+        fontWeightResolve<Partial<PropsRequired>>(rest),
 
         paddingTop,
         paddingRight,
