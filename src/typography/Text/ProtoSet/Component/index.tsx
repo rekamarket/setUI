@@ -11,7 +11,7 @@ import {
   TextDecorationThickness,
   textTransformResolve,
   FontFamily,
-  FontSize,
+  fontSizeResolve,
   fontStyleResolve,
   fontWeightResolve,
   paddingResolve,
@@ -35,7 +35,6 @@ const Text: FC<PropsRequired> = ({
   decorationThickness,
 
   type,
-  size,
 
   children,
 
@@ -64,7 +63,7 @@ const Text: FC<PropsRequired> = ({
         textTransformResolve<Partial<PropsRequired>>(rest),
 
         FontFamily[type] || FontFamily.default,
-        FontSize[size] || FontSize.medium,
+        fontSizeResolve<Partial<PropsRequired>>(rest),
         fontStyleResolve<Partial<PropsRequired>>(rest),
         fontWeightResolve<Partial<PropsRequired>>(rest),
 
