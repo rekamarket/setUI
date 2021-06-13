@@ -11,6 +11,7 @@ import type {
   TextDecorationStyleType,
   TextDecorationThicknessType,
   TextTransformType,
+  TransformPropsType,
   PaddingSizeType,
   PaddingType,
 } from 'CSS'
@@ -51,16 +52,13 @@ type StyleProps = {
   decorationStyle?: TextDecorationStyleType
   decorationThickness?: TextDecorationThicknessType
 
-  uppercase?: boolean
-  lowercase?: boolean
-  capitalize?: boolean
   transform?: TextTransformType
 
   type?: FontFamilyType
   size?: FontSizeType
   style?: FontStyleType
   weight?: FontWeightType
-}
+} & TransformPropsType
 
 export type { PaddingType } from 'CSS'
 export type Props = BasicProps & StyleProps & PaddingType

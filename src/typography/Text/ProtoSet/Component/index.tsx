@@ -9,7 +9,7 @@ import {
   textDecorationResolve,
   TextDecorationStyle,
   TextDecorationThickness,
-  TextTransform,
+  textTransformResolve,
   FontFamily,
   FontSize,
   FontStyle,
@@ -39,11 +39,6 @@ const Text: FC<PropsRequired> = ({
   decorationLine,
   decorationStyle,
   decorationThickness,
-
-  uppercase,
-  lowercase,
-  capitalize,
-  transform,
 
   type,
   size,
@@ -78,14 +73,7 @@ const Text: FC<PropsRequired> = ({
         TextDecorationStyle[decorationStyle] || TextDecorationStyle.default,
         TextDecorationThickness[decorationThickness] ||
           TextDecorationThickness.initial,
-
-        capitalize
-          ? TextTransform.capitalize
-          : uppercase
-          ? TextTransform.uppercase
-          : lowercase
-          ? TextTransform.lowercase
-          : TextTransform[transform] || TextTransform.default,
+        textTransformResolve<Partial<PropsRequired>>(rest),
 
         FontFamily[type] || FontFamily.default,
         FontSize[size] || FontSize.medium,
