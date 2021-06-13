@@ -6,4 +6,4 @@ export {
 
 export { resolve as textTransformResolve } from './resolve'
 export type { Type as TextTransformType } from './styles.css'
-export type { TransformPropsType } from './types'
+export type { TextTransformProps } from './types'

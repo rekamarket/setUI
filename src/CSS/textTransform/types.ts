@@ -1,4 +1,6 @@
-export type TransformPropsType =
+import type { Type } from './styles.css'
+
+export type TextTransformProps =
   | {
       uppercase?: boolean
     }
@@ -7,4 +9,7 @@ export type TransformPropsType =
     }
   | {
       capitalize?: boolean
+    }
+  | {
+      transform?: Type
     }

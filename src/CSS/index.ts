@@ -177,7 +177,7 @@ export {
   TextTransformKeys,
   textTransformResolve,
 } from './textTransform'
-export type { TextTransformType, TransformPropsType } from './textTransform'
+export type { TextTransformType, TextTransformProps } from './textTransform'
 
 // ZIndex
 export { ZIndex, ZIndexMap, ZIndexKeys } from './zIndex'

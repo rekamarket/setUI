@@ -11,6 +11,9 @@ export function resolve<T>(props: T) {
     case 'capitalize' in props: {
       return Style.capitalize
     }
+    case 'transform' in props: {
+      return Style[props['transform']]
+    }
     default: {
       return Style.none
     }
