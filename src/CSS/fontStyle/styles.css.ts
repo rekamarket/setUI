@@ -32,7 +32,9 @@ const Styles = styleVariants(map, (value: any) => ({
 
 export const Style: typeof Styles & {
   default: string
+  initial: string
 } = {
   ...Styles,
   default: Styles['normal' as Type],
+  initial: Styles['normal' as Type],
 }

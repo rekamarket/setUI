@@ -63,8 +63,13 @@ export { FontSize, FontSizeMap, FontSizeKeys } from './fontSize'
 export type { FontSizeType } from './fontSize'
 
 // FontStyle
-export { FontStyle, FontStyleMap, FontStyleKeys } from './fontStyle'
-export type { FontStyleType } from './fontStyle'
+export {
+  FontStyle,
+  FontStyleMap,
+  FontStyleKeys,
+  fontStyleResolve,
+} from './fontStyle'
+export type { FontStyleType, FontStyleProps } from './fontStyle'
 
 // FontWeight
 export {
