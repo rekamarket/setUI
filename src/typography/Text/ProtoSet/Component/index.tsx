@@ -5,7 +5,6 @@ import {
   Color,
   textAlignResolve,
   TextDecorationColor,
-  TextDecorationLine,
   textDecorationResolve,
   TextDecorationStyle,
   TextDecorationThickness,
