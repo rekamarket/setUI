@@ -10,7 +10,7 @@ export const Keys = [
   'semiBold',
   'bold',
   'extraBold',
-  'black',
+  'heavy',
 
   /* Global values */
   'inherit',
@@ -29,7 +29,7 @@ export const map: Record<Type, number | string> = {
   semiBold: 600,
   bold: 700,
   extraBold: 800,
-  black: 900,
+  heavy: 900,
 
   inherit: 'inherit',
   initial: 'initial',
