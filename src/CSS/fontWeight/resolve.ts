@@ -1,7 +1,6 @@
 import { Style } from './styles.css'
 
 export function resolve<T>(props: T) {
-  console.log('fw', props)
   switch (true) {
     case 'thin' in props: {
       return Style.thin
