@@ -2,7 +2,7 @@ import { FC, createElement } from 'react'
 import cn from 'classnames'
 import {
   BackgroundColor,
-  Color,
+  colorResolve,
   textAlignResolve,
   TextDecorationColor,
   textDecorationResolve,
@@ -27,7 +27,6 @@ const Text: FC<PropsRequired> = ({
 
   // styles
   background,
-  color,
 
   decorationColor,
   decorationStyle,
@@ -50,7 +49,7 @@ const Text: FC<PropsRequired> = ({
         className,
         ClassName,
         BackgroundColor[background] || BackgroundColor.default,
-        Color[color] || Color.black,
+        colorResolve<Partial<PropsRequired>>(rest),
 
         textAlignResolve<Partial<PropsRequired>>(rest),
 
