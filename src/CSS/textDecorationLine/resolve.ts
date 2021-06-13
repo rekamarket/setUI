@@ -1,27 +1,23 @@
-export const resolve = ({
-  isOverLine,
-  isThrowLine,
-  isUnderLine,
-}: {
-  isOverLine?: boolean
-  isThrowLine?: boolean
-  isUnderLine?: boolean
-}): Type => {
-  if (isOverLine && isThrowLine && isUnderLine) {
-    return 'overline_lineThrough_underline'
-  } else if (isOverLine && isThrowLine) {
-    return 'overline_lineThrough'
-  } else if (isOverLine && isUnderLine) {
-    return 'overline_underline'
-  } else if (isThrowLine && isUnderLine) {
-    return 'lineThrough_underline'
-  } else if (isOverLine) {
-    return 'overline'
-  } else if (isThrowLine) {
-    return 'lineThrough'
-  } else if (isUnderLine) {
-    return 'underline'
+import { Style } from './styles.css'
+
+export function resolve<T>(props: T) {
+  if ('overline' in props && 'lineThrough' in props && 'underline' in props) {
+    return Style.overline_lineThrough_underline
+  } else if ('overline' in props && 'lineThrough' in props) {
+    return Style.overline_lineThrough
+  } else if ('overline' in props && 'underline' in props) {
+    return Style.overline_underline
+  } else if ('lineThrough' in props && 'underline' in props) {
+    return Style.lineThrough_underline
+  } else if ('overline' in props) {
+    return Style.overline
+  } else if ('lineThrough' in props) {
+    return Style.lineThrough
+  } else if ('underline' in props) {
+    return Style.underline
+  } else if ('decorationLine' in props) {
+    return Style[props['decorationLine']]
   } else {
-    return 'none'
+    return Style.none
   }
 }

@@ -6,3 +6,4 @@ export {
 
 export { resolve as textDecorationResolve } from './resolve'
 export type { Type as TextDecorationLineType } from './styles.css'
+export type { TextDecorationLineProps } from './types'
