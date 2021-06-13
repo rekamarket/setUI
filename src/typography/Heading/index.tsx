@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { Props } from './Set'
-import { Source, H1, H2, H3, H4, H5, H6 } from './Subsets'
+import Set, { Props } from './Set'
+import { H1, H2, H3, H4, H5, H6 } from './Subsets'
 import { Placeholder } from './Supersets'
 
 interface I<T = unknown> extends FC<T> {
@@ -16,7 +16,7 @@ interface I<T = unknown> extends FC<T> {
   Placeholder: typeof Placeholder
 }
 
-const Heading: I<Props> = (props) => Source(props)
+const Heading: I<Props> = (props) => Set(props)
 
 // subsets
 Heading.H1 = H1
@@ -29,4 +29,5 @@ Heading.H6 = H6
 // supersets
 Heading.Placeholder = Placeholder
 
+export type { Props } from './Set'
 export default Heading

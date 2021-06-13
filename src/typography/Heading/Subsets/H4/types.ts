@@ -1,5 +1,5 @@
-import type { Props as ParentProps } from '../../Set'
+import type { Props as ParentProps } from '../../ProtoSet'
 
-export type { PropsRequired, PaddingType } from '../../Set'
+export type { PropsRequired, PaddingType } from '../../ProtoSet'
 
 export type Props = Omit<ParentProps, 'level'>

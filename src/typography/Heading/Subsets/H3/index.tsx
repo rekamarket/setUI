@@ -3,13 +3,13 @@ import cn from 'classnames'
 import { object } from 'utils'
 import { defaultProps } from './defaultProps'
 import type { Props, PropsRequired } from './types'
-import Set from '../../Set'
+import ProtoSet from '../../ProtoSet'
 import { ClassName } from './styles.css'
 
 const displayName = 'Heading.H3'
 
 const H3: FC<Props> = ({ className, ...props }) =>
-  Set({
+  ProtoSet({
     ...object.mergePropsWithWarning<PropsRequired>(
       defaultProps,
       props,

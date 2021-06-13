@@ -17,13 +17,12 @@ import { WeightType } from '../css'
 export type LevelType = 1 | 2 | 3 | 4 | 5 | 6
 
 type BasicProps = {
+  level: LevelType
   className?: string
   title?: string
 }
 
 type StyleProps = {
-  level: LevelType
-
   color?: ColorType
   display?: DisplayType
 
