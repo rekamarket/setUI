@@ -11,8 +11,8 @@ export function resolve<T>(props: T) {
     case 'light' in props: {
       return Style.light
     }
-    case 'normal' in props: {
-      return Style.normal
+    case 'regular' in props: {
+      return Style.regular
     }
     case 'medium' in props: {
       return Style.medium
@@ -28,6 +28,12 @@ export function resolve<T>(props: T) {
     }
     case 'heavy' in props: {
       return Style.heavy
+    }
+    case 'lighter' in props: {
+      return Style.lighter
+    }
+    case 'bolder' in props: {
+      return Style.bolder
     }
     case 'fontWeight' in props: {
       return Style[props['fontWeight']]

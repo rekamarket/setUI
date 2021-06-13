@@ -11,7 +11,7 @@ export type FontWeightProps =
       light?: boolean
     }
   | {
-      normal?: boolean
+      regular?: boolean
     }
   | {
       medium?: boolean
@@ -27,6 +27,12 @@ export type FontWeightProps =
     }
   | {
       heavy?: boolean
+    }
+  | {
+      lighter?: boolean
+    }
+  | {
+      bolder?: boolean
     }
   | {
       fontWeight?: Type
