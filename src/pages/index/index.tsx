@@ -28,6 +28,8 @@ const Index = () => {
           Создать новый альбом
         </Heading.H1>
 
+        <Heading level={2}>Heading</Heading>
+
         <Box
           padding="xxlarge"
           borderColor="grey160"
@@ -35,7 +37,7 @@ const Index = () => {
           borderRadius="medium"
           background="errorPale"
         >
-          <Text>span</Text>
+          <Text center>span</Text>
           <Text.Important underline color="error">
             Strong
           </Text.Important>
@@ -63,11 +65,7 @@ const Index = () => {
       <Tabs>
         <Tabs.Panel
           key="1"
-          tab={
-            <Heading.Thin level={2} color="grey160">
-              title
-            </Heading.Thin>
-          }
+          tab={<Heading.H2 color="grey160">title</Heading.H2>}
         >
           <Box padding="xxlarge" borderColor="grey160">
             <Heading.Placeholder level={1} />
@@ -76,11 +74,7 @@ const Index = () => {
 
         <Tabs.Panel
           key="2"
-          tab={
-            <Heading.Thin level={2} color="grey160">
-              title
-            </Heading.Thin>
-          }
+          tab={<Heading.H2 color="grey160">title</Heading.H2>}
         >
           <Box.Placeholder padding="xxlarge" />
         </Tabs.Panel>
