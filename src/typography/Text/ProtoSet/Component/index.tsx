@@ -30,11 +30,7 @@ const Text: FC<PropsRequired> = ({
   background,
   color,
 
-  overline,
-  lineThrough,
-  underline,
   decorationColor,
-  decorationLine,
   decorationStyle,
   decorationThickness,
 
@@ -62,12 +58,8 @@ const Text: FC<PropsRequired> = ({
 
         textAlignResolve<Partial<PropsRequired>>(rest),
 
+        textDecorationResolve<Partial<PropsRequired>>(rest),
         TextDecorationColor[decorationColor] || TextDecorationColor.default,
-        textDecorationResolve({
-          isOverLine: overline,
-          isThrowLine: lineThrough,
-          isUnderLine: underline,
-        }),
         TextDecorationStyle[decorationStyle] || TextDecorationStyle.default,
         TextDecorationThickness[decorationThickness] ||
           TextDecorationThickness.initial,
