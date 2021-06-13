@@ -7,5 +7,5 @@ export type TextDecorationLineProps =
       underline?: boolean
     }
   | {
-      decorationLine?: Type
+      decoration?: Type
     }

@@ -8,5 +8,5 @@ export type FontStyleProps =
       oblique?: boolean
     }
   | {
-      fontStyle?: Type
+      style?: Type
     }

@@ -15,8 +15,8 @@ export function resolve<T>(props: T) {
     return Style.lineThrough
   } else if ('underline' in props) {
     return Style.underline
-  } else if ('decorationLine' in props) {
-    return Style[props['decorationLine']]
+  } else if ('decoration' in props) {
+    return Style[props['decoration']]
   } else {
     return Style.none
   }

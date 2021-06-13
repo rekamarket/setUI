@@ -35,8 +35,8 @@ export function resolve<T>(props: T) {
     case 'bolder' in props: {
       return Style.bolder
     }
-    case 'fontWeight' in props: {
-      return Style[props['fontWeight']]
+    case 'weight' in props: {
+      return Style[props['weight']]
     }
     default: {
       return Style.initial

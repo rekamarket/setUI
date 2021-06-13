@@ -62,5 +62,5 @@ export type FontSizeProps =
       larger?: boolean
     }
   | {
-      fontSize?: Type
+      size?: Type
     }

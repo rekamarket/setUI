@@ -62,8 +62,8 @@ export function resolve<T>(props: T) {
     case 'larger' in props: {
       return Style.larger
     }
-    case 'fontSize' in props: {
-      return Style[props['fontSize']]
+    case 'size' in props: {
+      return Style[props['size']]
     }
     default: {
       return Style.initial

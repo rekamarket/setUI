@@ -8,8 +8,8 @@ export function resolve<T>(props: T) {
     case 'oblique' in props: {
       return Style.oblique
     }
-    case 'fontStyle' in props: {
-      return Style[props['fontStyle']]
+    case 'style' in props: {
+      return Style[props['style']]
     }
     default: {
       return Style.initial

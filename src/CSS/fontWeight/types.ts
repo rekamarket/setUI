@@ -35,5 +35,5 @@ export type FontWeightProps =
       bolder?: boolean
     }
   | {
-      fontWeight?: Type
+      weight?: Type
     }
