@@ -35,8 +35,8 @@ export { BoxShadow, BoxShadowMap, BoxShadowKeys } from './boxShadow'
 export type { BoxShadowType } from './boxShadow'
 
 // Color
-export { Color, ColorMap, ColorKeys } from './color'
-export type { ColorType } from './color'
+export { Color, ColorMap, ColorKeys, colorResolve } from './color'
+export type { ColorType, ColorProps } from './color'
 
 // Display
 export { Display, DisplayMap, DisplayKeys } from './display'

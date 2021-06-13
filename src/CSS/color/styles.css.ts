@@ -609,7 +609,9 @@ const Styles = styleVariants(map, (value: any) => ({
 
 export const Style: typeof Styles & {
   default: string
+  initial: string
 } = {
   ...Styles,
   default: Styles['primary' as Type],
+  initial: Styles['inherit' as Type],
 }
