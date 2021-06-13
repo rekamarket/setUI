@@ -59,8 +59,13 @@ export { FontFamily, FontFamilyMap, FontFamilyKeys } from './fontFamily'
 export type { FontFamilyType } from './fontFamily'
 
 // FontSize
-export { FontSize, FontSizeMap, FontSizeKeys } from './fontSize'
-export type { FontSizeType } from './fontSize'
+export {
+  FontSize,
+  FontSizeMap,
+  FontSizeKeys,
+  fontSizeResolve,
+} from './fontSize'
+export type { FontSizeType, FontSizeProps } from './fontSize'
 
 // FontStyle
 export {
