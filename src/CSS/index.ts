@@ -139,7 +139,10 @@ export {
   TextDecorationLineKeys,
   textDecorationResolve,
 } from './textDecorationLine'
-export type { TextDecorationLineType } from './textDecorationLine'
+export type {
+  TextDecorationLineType,
+  TextDecorationLineProps,
+} from './textDecorationLine'
 
 // TextDecorationStyle
 export {
