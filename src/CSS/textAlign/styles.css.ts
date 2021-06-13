@@ -51,7 +51,9 @@ const Styles = styleVariants(map, (value: any) => ({
 
 export const Style: typeof Styles & {
   default: string
+  initial: string
 } = {
   ...Styles,
   default: Styles['start' as Type],
+  initial: Styles['start' as Type],
 }

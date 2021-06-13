@@ -111,8 +111,13 @@ export { Position, PositionMap, PositionKeys } from './position'
 export type { PositionType } from './position'
 
 // TextAlign
-export { TextAlign, TextAlignMap, TextAlignKeys } from './textAlign'
-export type { TextAlignType } from './textAlign'
+export {
+  TextAlign,
+  TextAlignMap,
+  TextAlignKeys,
+  textAlignResolve,
+} from './textAlign'
+export type { TextAlignType, TextAlignProps } from './textAlign'
 
 // textDecorationColor
 export {
