@@ -1,15 +1,19 @@
 import type { Type } from './styles.css'
 
+interface Uppercase {
+  readonly uppercase?: boolean
+}
+interface Lowercase {
+  readonly lowercase?: boolean
+}
+interface Capitalize {
+  readonly capitalize?: boolean
+}
+
 export type TextTransformProps =
-  | {
-      uppercase?: boolean
-    }
-  | {
-      lowercase?: boolean
-    }
-  | {
-      capitalize?: boolean
-    }
+  | Uppercase
+  | Lowercase
+  | Capitalize
   | {
       transform?: Type
     }

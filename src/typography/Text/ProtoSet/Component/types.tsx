@@ -38,6 +38,14 @@ type BasicProps = {
   title?: string
 }
 
+type Styles = TextTransformProps &
+  TextAlignProps &
+  TextDecorationLineProps &
+  FontWeightProps &
+  FontStyleProps &
+  FontSizeProps &
+  ColorProps
+
 type StyleProps = {
   background?: BackgroundColorType
 
@@ -46,13 +54,7 @@ type StyleProps = {
   decorationThickness?: TextDecorationThicknessType
 
   type?: FontFamilyType
-} & TextTransformProps &
-  TextAlignProps &
-  TextDecorationLineProps &
-  FontWeightProps &
-  FontStyleProps &
-  FontSizeProps &
-  ColorProps
+} & Styles
 
 export type { PaddingType } from 'CSS'
 export type Props = BasicProps & StyleProps & PaddingType
