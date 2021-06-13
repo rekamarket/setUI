@@ -1,3 +1,3 @@
 // Weight
-export { Weight, WeightMap, WeightKeys } from './weight'
-export type { WeightType } from './weight'
+export { Weight, WeightMap, WeightKeys, weightResolve } from './weight'
+export type { WeightType, WeightProps } from './weight'

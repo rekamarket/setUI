@@ -1,10 +1,15 @@
 import type {
   PaddingSizeType,
   FontFamilyType,
-  FontSizeType,
-  FontStyleType,
-  ColorType,
-  TextAlignType,
+  FontSizeProps,
+  FontStyleProps,
+  ColorProps,
+  TextAlignProps,
+  TextDecorationColorType,
+  TextDecorationLineProps,
+  TextDecorationStyleType,
+  TextDecorationThicknessType,
+  TextTransformProps,
   BackgroundColorType,
   BorderColorType,
   BorderRadiusType,
@@ -22,23 +27,25 @@ type BasicProps = {
   title?: string
 }
 
+type Styles = TextTransformProps &
+  TextAlignProps &
+  TextDecorationLineProps &
+  FontStyleProps &
+  FontSizeProps &
+  ColorProps &
+  WeightType
+
 type StyleProps = {
-  color?: ColorType
   display?: DisplayType
 
-  align?: TextAlignType
-
   weight?: WeightType
-  type?: FontFamilyType
-  size?: FontSizeType
-  style?: FontStyleType
 
   background?: BackgroundColorType
 
   borderColor?: BorderColorType
   borderRadius?: BorderRadiusType
   borderWidth?: BorderWidthType
-}
+} & Styles
 
 export type { PaddingType } from 'CSS'
 export type Props = BasicProps & StyleProps & PaddingType

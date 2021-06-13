@@ -1,11 +1,17 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
 import {
+  colorResolve,
+  textAlignResolve,
+  TextDecorationColor,
+  textDecorationResolve,
+  TextDecorationStyle,
+  TextDecorationThickness,
+  textTransformResolve,
+  fontSizeResolve,
+  fontStyleResolve,
+  fontWeightResolve,
   FontFamily,
-  FontSize,
-  FontStyle,
-  Color,
-  TextAlign,
   BackgroundColor,
   BorderColor,
   BorderRadius,
@@ -13,7 +19,7 @@ import {
   Display,
   paddingResolve,
 } from 'CSS'
-import { Weight } from '../css'
+import { weightResolve } from '../css'
 import { PropsRequired } from './types'
 import { headers } from './data'
 import { ClassName } from './styles.css'
@@ -25,15 +31,13 @@ const Heading: FC<PropsRequired> = ({
   title,
 
   // styles
-  color,
   display,
 
-  align,
-
   type,
-  size,
-  style,
-  weight,
+
+  decorationColor,
+  decorationStyle,
+  decorationThickness,
 
   background,
 
@@ -56,14 +60,21 @@ const Heading: FC<PropsRequired> = ({
         className,
         ClassName,
         Display[display],
-        Color[color],
+        colorResolve<Partial<PropsRequired>>(rest),
 
-        TextAlign[align],
+        textAlignResolve<Partial<PropsRequired>>(rest),
 
-        FontFamily[type],
-        FontSize[size],
-        FontStyle[style],
-        Weight[weight],
+        textDecorationResolve<Partial<PropsRequired>>(rest),
+        TextDecorationColor[decorationColor] || TextDecorationColor.default,
+        TextDecorationStyle[decorationStyle] || TextDecorationStyle.default,
+        TextDecorationThickness[decorationThickness] ||
+          TextDecorationThickness.initial,
+        textTransformResolve<Partial<PropsRequired>>(rest),
+
+        FontFamily[type] || FontFamily.default,
+        fontSizeResolve<Partial<PropsRequired>>(rest),
+        fontSizeResolve<Partial<PropsRequired>>(rest),
+        weightResolve<Partial<PropsRequired>>(rest),
 
         BackgroundColor[background],
 

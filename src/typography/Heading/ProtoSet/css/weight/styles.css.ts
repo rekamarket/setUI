@@ -1,12 +1,12 @@
 import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-export const Keys = ['normal', 'bold']
+export const Keys = ['regular', 'bold']
 const VALUES = tuple(...Keys)
 export type Type = typeof VALUES[number]
 
 export const map: Record<Type, number> = {
-  normal: 400,
+  regular: 400,
   bold: 700,
 }
 
