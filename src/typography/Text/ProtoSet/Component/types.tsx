@@ -11,8 +11,7 @@ import type {
   TextDecorationLineProps,
   TextDecorationStyleType,
   TextDecorationThicknessType,
-  TextTransformType,
-  TransformPropsType,
+  TextTransformProps,
   PaddingSizeType,
   PaddingType,
 } from 'CSS'
@@ -47,10 +46,8 @@ type StyleProps = {
   decorationStyle?: TextDecorationStyleType
   decorationThickness?: TextDecorationThicknessType
 
-  transform?: TextTransformType
-
   type?: FontFamilyType
-} & TransformPropsType &
+} & TextTransformProps &
   TextAlignProps &
   TextDecorationLineProps &
   FontWeightProps &
