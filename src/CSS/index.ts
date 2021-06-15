@@ -195,6 +195,10 @@ export {
 } from './textTransform'
 export type { TextTransformType, TextTransformProps } from './textTransform'
 
+// Width
+export { Width, WidthMap, WidthKeys } from './width'
+export type { WidthType } from './width'
+
 // ZIndex
 export { ZIndex, ZIndexMap, ZIndexKeys } from './zIndex'
 export type { ZIndexType } from './zIndex'
