@@ -7,7 +7,8 @@ import type {
   JustifyContentType,
 
   // generic
-  BackgroundColorType,
+  BackgroundProps,
+  BackgroundOpacityProps,
   BorderColorType,
   BorderRadiusType,
   BorderWidthType,
@@ -15,6 +16,7 @@ import type {
   MarginSizeType,
   PaddingSizeType,
   ZIndexType,
+  WidthType,
 } from 'CSS'
 
 export type Props = {
@@ -29,8 +31,6 @@ export type Props = {
   justifyContent?: JustifyContentType
 
   // generic
-  background?: BackgroundColorType
-
   borderColor?: BorderColorType
   borderRadius?: BorderRadiusType
   borderWidth?: BorderWidthType
@@ -56,4 +56,6 @@ export type Props = {
   paddingLeft?: PaddingSizeType
 
   zIndex?: ZIndexType
-}
+  width?: WidthType
+} & BackgroundProps &
+  BackgroundOpacityProps

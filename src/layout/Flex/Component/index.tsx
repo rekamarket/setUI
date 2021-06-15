@@ -15,7 +15,8 @@ import {
   JustifyContentMap,
 
   // generic
-  BackgroundColor,
+  backgroundResolve,
+  BackgroundOpacity,
   BorderColor,
   BorderRadius,
   BorderWidth,
@@ -29,6 +30,7 @@ import {
   PaddingRight,
   PaddingTop,
   ZIndex,
+  Width,
 } from 'CSS'
 import { Props } from './types'
 import { ClassName } from './styles.css'
@@ -43,8 +45,7 @@ const Flex: VFC<Props> = ({
   justifyContent,
 
   // generic
-  background,
-
+  opacity,
   borderColor,
   borderRadius,
   borderWidth,
@@ -70,8 +71,11 @@ const Flex: VFC<Props> = ({
   paddingLeft,
 
   zIndex,
+  width,
 
   children,
+
+  ...rest
 }) => {
   const resolvedGapX = Gap[gapX] || Gap[gap] || Gap.none
   const resolvedGapY = Gap[gapY] || Gap[gap] || Gap.none
@@ -133,7 +137,8 @@ const Flex: VFC<Props> = ({
         JustifyContent[justifyContent] || JustifyContent.default,
 
         // generic
-        BackgroundColor[background] || BackgroundColor.default,
+        backgroundResolve<Partial<Props>>(rest),
+        BackgroundOpacity[opacity] || BackgroundOpacity.default,
 
         BorderColor[borderColor] || BorderColor.default,
         BorderRadius[borderRadius] || BorderRadius.default,
@@ -153,6 +158,7 @@ const Flex: VFC<Props> = ({
         resolvedPaddingRight,
 
         ZIndex[zIndex] || ZIndex.default,
+        Width[width] || Width.default,
       ])}
     >
       {children}
