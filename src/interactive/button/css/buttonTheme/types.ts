@@ -1,26 +1,5 @@
 import type { Type } from './styles.css'
 
-interface Primary {
-  readonly primary?: boolean
+export type ThemeProps = {
+  theme?: Type
 }
-
-interface Secondary {
-  readonly secondary?: boolean
-}
-
-interface White {
-  readonly white?: boolean
-}
-
-interface Black {
-  readonly black?: boolean
-}
-
-export type ThemeProps =
-  | Primary
-  | Secondary
-  | White
-  | Black
-  | {
-      theme?: Type
-    }

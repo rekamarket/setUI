@@ -1,26 +1,16 @@
 // ButtonSize
-export {
-  ButtonSize,
-  ButtonSizeMap,
-  ButtonSizeKeys,
-  sizeResolve,
-} from './buttonSize'
-export type { ButtonSizeType, SizeProps } from './buttonSize'
+export { Size, SizeMap, SizeKeys, sizeResolve } from './buttonSize'
+export type { SizeType, SizeProps } from './buttonSize'
 
 // ButtonTheme
-export {
-  ButtonTheme,
-  ButtonThemeMap,
-  ButtonThemeKeys,
-  themeResolve,
-} from './buttonTheme'
-export type { ButtonThemeType, ThemeProps } from './buttonTheme'
+export { Theme, ThemeMap, ThemeKeys, themeResolve } from './buttonTheme'
+export type { ThemeType, ThemeProps } from './buttonTheme'
 
 // ButtonVariant
 export {
-  ButtonVariant,
-  ButtonVariantMap,
-  ButtonVariantKeys,
+  Variant,
+  VariantMap,
+  VariantKeys,
   variantResolve,
 } from './buttonVariant'
-export type { ButtonVariantType, VariantProps } from './buttonVariant'
+export type { VariantType, VariantProps } from './buttonVariant'
