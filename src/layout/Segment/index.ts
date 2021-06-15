@@ -1,4 +1,4 @@
-import { VFC } from 'react'
+import React, { VFC } from 'react'
 import Component, { Props as ComponentProps } from './Component/Segment'
 import Interval, { Props as IntervalProps } from './Component/Interval'
 import Start, { Props as StartProps } from './Component/Start'

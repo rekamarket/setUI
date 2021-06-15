@@ -1,4 +1,4 @@
-import { VFC, createElement } from 'react'
+import React, { VFC, createElement } from 'react'
 import cn from 'classnames'
 import {
   Gap,

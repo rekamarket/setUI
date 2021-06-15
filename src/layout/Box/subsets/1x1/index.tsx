@@ -1,4 +1,4 @@
-import { VFC } from 'react'
+import React, { VFC } from 'react'
 import Component, { Props } from '../../Component'
 
 const x1x1: VFC<Omit<Props, 'aspectRatio'>> = (props) =>

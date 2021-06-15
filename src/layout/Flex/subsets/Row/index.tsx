@@ -1,4 +1,4 @@
-import { VFC } from 'react'
+import React, { VFC } from 'react'
 import { FlexDirectionMap } from 'CSS'
 import Component, { Props } from '../../Component'
 

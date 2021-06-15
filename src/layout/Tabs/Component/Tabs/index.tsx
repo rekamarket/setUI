@@ -1,4 +1,4 @@
-import { VFC } from 'react'
+import React, { VFC } from 'react'
 import cn from 'classnames'
 import Tabs from 'rc-tabs'
 import {

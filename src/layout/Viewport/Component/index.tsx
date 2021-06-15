@@ -1,4 +1,4 @@
-import { VFC } from 'react'
+import React, { VFC } from 'react'
 import cn from 'classnames'
 import { Props } from './types'
 import { ClassName } from './styles.css'

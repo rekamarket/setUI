@@ -1,4 +1,4 @@
-import { VFC } from 'react'
+import React, { VFC } from 'react'
 import Component, { Props as ComponentProps } from './Component'
 import { Column, Row, Inline, Center } from './subsets'
 

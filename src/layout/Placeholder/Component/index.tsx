@@ -1,4 +1,4 @@
-import { VFC, useMemo } from 'react'
+import React, { VFC, useMemo } from 'react'
 import cn from 'classnames'
 import { BackgroundColor } from 'CSS'
 import { Props } from './types'

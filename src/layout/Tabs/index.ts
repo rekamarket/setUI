@@ -1,4 +1,4 @@
-import { VFC } from 'react'
+import React, { VFC } from 'react'
 import Component from './Component/Tabs'
 import type { Props as ComponentProps } from './Component/Tabs'
 import Panel from './Component/Panel'

@@ -1,4 +1,4 @@
-import { VFC } from 'react'
+import React, { VFC } from 'react'
 import Component, { Props as ComponentProps } from './Component'
 import { x16x9, x4x3, x1x1 } from './subsets'
 import { Placeholder } from './supersets'

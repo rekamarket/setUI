@@ -1,4 +1,4 @@
-import { VFC } from 'react'
+import React, { VFC } from 'react'
 import Component, { Props } from '../../Component/Segment'
 
 const Column: VFC<Omit<Props, 'direction'>> = (props) =>
