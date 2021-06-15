@@ -1,11 +1,11 @@
 import React, { VFC } from 'react'
 import cn from 'classnames'
-import Flex from 'layout/Flex'
+import FlexComponent from 'layout/Flex'
 import GroupContext from '../../context/group'
 import type { Props } from './types'
 import { ClassName } from './styles.css'
 
-const Group: VFC<Props> = ({
+const Flex: VFC<Props> = ({
   size,
   theme,
   variant,
@@ -14,7 +14,7 @@ const Group: VFC<Props> = ({
   ...flexProps
 }) => {
   return (
-    <Flex {...flexProps} className={cn(ClassName, className)}>
+    <FlexComponent {...flexProps} className={cn(ClassName, className)}>
       <GroupContext.Provider
         value={{
           size,
@@ -24,8 +24,8 @@ const Group: VFC<Props> = ({
       >
         {children}
       </GroupContext.Provider>
-    </Flex>
+    </FlexComponent>
   )
 }
 
-export default Group
+export default Flex

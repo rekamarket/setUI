@@ -1,14 +1,23 @@
 import { VFC } from 'react'
 import Set, { Props } from './Set'
-import { Group } from './Supersets'
+import { Icon } from './Subsets'
+import { Flex } from './Supersets'
 
 interface I<T = unknown> extends VFC<T> {
-  Group: typeof Group
+  // subsets
+  Icon: typeof Icon
+
+  // supersets
+  Flex: typeof Flex
 }
 
 const Button: I<Props> = (props) => Set(props)
 
-Button.Group = Group
+// subsets
+Button.Icon = Icon
+
+// supersets
+Button.Flex = Flex
 
 export type { Props } from './Set'
 export default Button
