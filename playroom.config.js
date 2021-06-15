@@ -53,7 +53,6 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               presets: [
-                'next/babel',
                 '@babel/preset-env',
                 '@babel/preset-typescript',
                 '@babel/preset-react'
