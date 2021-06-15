@@ -1,10 +1,20 @@
 import { VFC, createElement } from 'react'
 import cn from 'classnames'
-import { sizeResolve, themeResolve, variantResolve } from '../../../css'
+import {
+  ButtonSize,
+  sizeResolve,
+  ButtonTheme,
+  themeResolve,
+  ButtonVariant,
+  variantResolve,
+} from '../../../css'
 import { Props } from './types'
 import { ClassName } from './styles.css'
+import { useSize } from '../../context/group'
 
 const Button: VFC<Props> = ({ disabled, className, children, ...rest }) => {
+  const { size, theme, variant } = useSize()
+
   return createElement(
     'button',
 
@@ -12,9 +22,9 @@ const Button: VFC<Props> = ({ disabled, className, children, ...rest }) => {
       className: cn([
         ClassName,
         className,
-        sizeResolve<Partial<Props>>(rest),
-        themeResolve<Partial<Props>>(rest),
-        variantResolve<Partial<Props>>(rest),
+        size ? ButtonSize[size] : sizeResolve<Partial<Props>>(rest),
+        theme ? ButtonTheme[theme] : themeResolve<Partial<Props>>(rest),
+        variant ? ButtonVariant[variant] : variantResolve<Partial<Props>>(rest),
       ]),
 
       disabled,
