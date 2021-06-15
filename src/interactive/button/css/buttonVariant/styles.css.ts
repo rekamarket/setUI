@@ -1,7 +1,7 @@
 import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-export const Keys = ['solid', 'ghost', 'soft', 'transparent']
+export const Keys = ['solid', 'ghost', 'soft', 'text']
 const VALUES = tuple(...Keys)
 export type Type = typeof VALUES[number]
 
@@ -87,7 +87,7 @@ export const map: Record<Type, Value> = {
       borderColor: '#F3F2F1',
     },
   },
-  transparent: {
+  text: {
     color: 'var(--color)',
     backgroundColor: 'transparent',
     borderColor: 'transparent',
