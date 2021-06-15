@@ -121,6 +121,10 @@ export {
 } from './margin'
 export type { MarginSizeType } from './margin'
 
+// Opacity
+export { Opacity, OpacityMap, OpacityKeys } from './opacity'
+export type { OpacityType, OpacityProps } from './opacity'
+
 // Padding
 export {
   PaddingTop,
