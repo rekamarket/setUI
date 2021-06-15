@@ -5,11 +5,13 @@ export const Keys = ['none', 'small', 'medium', 'large']
 const VALUES = tuple(...Keys)
 export type Type = typeof VALUES[number]
 
-export const map: Record<Type, number> = {
+export const map: Record<Type, number | string> = {
   none: 0,
   small: 4,
   medium: 8,
   large: 12,
+  pill: 9999,
+  circle: '50%',
 }
 
 const Styles = styleVariants(map, (value) => ({
