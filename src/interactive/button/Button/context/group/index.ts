@@ -3,7 +3,7 @@ import type { SizeProps, ThemeProps, VariantProps } from '../../../css'
 
 export type Props = SizeProps & ThemeProps & VariantProps
 
-const Context = createContext<ContextProps>({})
+const Context = createContext<Props>({})
 
 export const useSize = () => useContext(Context)
 
