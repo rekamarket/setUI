@@ -2,16 +2,16 @@ import { VFC, createElement } from 'react'
 import cn from 'classnames'
 import { AspectRatio, BorderRadius } from 'CSS'
 import {
-  ButtonSize,
+  Size,
   sizeResolve,
-  ButtonTheme,
+  Theme,
   themeResolve,
-  ButtonVariant,
+  Variant,
   variantResolve,
 } from '../../../css'
 import { Props } from './types'
 import { ClassName } from './styles.css'
-import { useSize } from '../../context/group'
+import { useSize, useTheme, useVariant } from '../../context'
 
 const Button: VFC<Props> = ({
   aspectRatio,
@@ -21,7 +21,9 @@ const Button: VFC<Props> = ({
   children,
   ...rest
 }) => {
-  const { size, theme, variant } = useSize()
+  const size = useSize()
+  const theme = useTheme()
+  const variant = useVariant()
 
   return createElement(
     'button',
@@ -30,9 +32,13 @@ const Button: VFC<Props> = ({
       className: cn([
         ClassName,
         className,
-        size ? ButtonSize[size] : sizeResolve<Partial<Props>>(rest),
-        theme ? ButtonTheme[theme] : themeResolve<Partial<Props>>(rest),
-        variant ? ButtonVariant[variant] : variantResolve<Partial<Props>>(rest),
+        rest?.size ? Size[rest?.size] : size ? Size[size] : Size.default,
+        rest?.theme ? Theme[rest?.theme] : theme ? Theme[theme] : Theme.default,
+        rest?.variant
+          ? Variant[rest?.variant]
+          : variant
+          ? Variant[variant]
+          : Variant.default,
         AspectRatio[aspectRatio] || AspectRatio.default,
         BorderRadius[borderRadius] || BorderRadius.default,
       ]),
