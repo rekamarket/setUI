@@ -1,3 +1,4 @@
+import type { AspectRatioType, BorderRadiusType } from 'CSS'
 import type { SizeProps, ThemeProps, VariantProps } from '../../../css'
 
 interface CustomClickHandler {
@@ -15,6 +16,8 @@ type BasicProps = {
   title?: string
   disabled?: boolean
   children: any
+  aspectRatio?: AspectRatioType
+  borderRadius?: BorderRadiusType
 } & ClickHandler
 
 type StyleProps = SizeProps & ThemeProps & VariantProps
