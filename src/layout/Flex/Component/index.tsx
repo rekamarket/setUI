@@ -34,6 +34,7 @@ import { Props } from './types'
 import { ClassName } from './styles.css'
 
 const Flex: VFC<Props> = ({
+  className,
   // flex
   alignContent,
   alignItems,
@@ -121,6 +122,7 @@ const Flex: VFC<Props> = ({
     <div
       className={cn([
         // root
+        className,
         ClassName,
 
         // flex
