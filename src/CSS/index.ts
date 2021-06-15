@@ -17,6 +17,16 @@ export {
   BackgroundColorKeys,
 } from './backgroundColor'
 export type { BackgroundColorType } from './backgroundColor'
+// BackgroundOpacity
+export {
+  BackgroundOpacity,
+  BackgroundOpacityMap,
+  BackgroundOpacityKeys,
+} from './backgroundOpacity'
+export type {
+  BackgroundOpacityType,
+  BackgroundOpacityProps,
+} from './backgroundOpacity'
 
 // BorderColor
 export { BorderColor, BorderColorMap, BorderColorKeys } from './borderColor'
