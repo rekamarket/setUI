@@ -1,81 +1,53 @@
 import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-export const Keys = [
-  'transparent',
-  'primary',
-  'secondary',
-  'light',
-  'lighter',
-  'lighterAlt',
-  'dark',
-  'darker',
-  'darkerAlt',
-  'error',
-  'errorPale',
-  'success',
-  'successPale',
-  'warning',
-  'warningPale',
-  'info',
-  'infoPale',
-  'white',
-  'grey10',
-  'grey20',
-  'grey30',
-  'grey40',
-  'grey50',
-  'grey60',
-  'grey90',
-  'grey130',
-  'grey150',
-  'grey160',
-  'grey190',
-  'black',
-]
+export const Keys = ['primary', 'secondary', 'black', 'white']
 const VALUES = tuple(...Keys)
 export type Type = typeof VALUES[number]
 
-export const map: Record<Type, any> = {
-  transparent: 'transparent',
-  primary: '#0078D4',
-  secondary: '#2B88D8',
-  light: '#2B88D8',
-  lighter: '#DEECF9',
-  lighterAlt: '#EFF6FC',
-  dark: '#005A9E',
-  darker: '#004578',
-  darkerAlt: '#106EBE',
-  error: '#A80000',
-  errorPale: '#FDE7E9',
-  success: '#107C10',
-  successPale: '#DFF6DD',
-  warning: '#D83B01',
-  warningPale: '#FED9CC',
-  info: '#797775',
-  infoPale: '#FFF4CE',
-  white: '#FFF',
-  grey10: '#FAF9F8',
-  grey20: '#F3F2F1',
-  grey30: '#EDEBE9',
-  grey40: '#E1DFDD',
-  grey50: '#D2D0CE',
-  grey60: '#C8C6C4',
-  grey90: '#A19F9D',
-  grey130: '#605E5C',
-  grey150: '#3B3A39',
-  grey160: '#323130',
-  grey190: '#201F1E',
-  black: '#000',
+type Properties = 'hue' | 'saturation' | 'lightness'
+type Values = string | number
+type Value = {
+  [key in Properties]: Values
+}
+
+export const map: Record<Type, Record<Properties, Values>> = {
+  primary: {
+    hue: 206,
+    saturation: '100%',
+    lightness: '41.6%',
+  },
+  secondary: {
+    hue: 207.7,
+    saturation: '68.9%',
+    lightness: '50.8%',
+  },
+  white: {
+    hue: 0,
+    saturation: '0%',
+    lightness: '100%',
+  },
+  black: {
+    hue: 0,
+    saturation: '0%',
+    lightness: '0%',
+  },
 }
 
 const Styles = styleVariants(map, (value: any) => ({
-  backgroundColor: value,
+  '--background-hue': String(value.hue),
+  '--background-saturation': String(value.saturation),
+  '--background-lightness': String(value.lightness),
+  '--background-color':
+    'hsl(var(--background-hue) var(--background-saturation) var(--background-lightness) / var(--background-opacity))',
+  backgroundColor: 'var(--background-color)',
 }))
 
 export const Style: typeof Styles & {
   default: string
+  initial: string
 } = {
   ...Styles,
-  default: Styles['transparent' as Type],
+  default: Styles['primary' as Type],
+  initial: Styles['inherit' as Type],
 }

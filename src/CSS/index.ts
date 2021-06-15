@@ -15,8 +15,10 @@ export {
   BackgroundColor,
   BackgroundColorMap,
   BackgroundColorKeys,
+  backgroundResolve,
 } from './backgroundColor'
-export type { BackgroundColorType } from './backgroundColor'
+export type { BackgroundColorType, BackgroundProps } from './backgroundColor'
+
 // BackgroundOpacity
 export {
   BackgroundOpacity,
