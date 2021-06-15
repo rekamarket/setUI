@@ -7,6 +7,9 @@ export { Stack } from 'layout'
 export { Tabs } from 'layout'
 export { Viewport } from 'layout'
 
+// button
+export { Button } from 'button'
+
 // typography
 export { Code } from 'typography'
 export { Edit } from 'typography'
