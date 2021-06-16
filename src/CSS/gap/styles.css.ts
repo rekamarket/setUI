@@ -30,6 +30,7 @@ export const map: Record<Type, number> = {
 }
 
 const Styles = styleVariants(map, (value) => ({
+  '--gap': value,
   gap: value,
 }))
 
