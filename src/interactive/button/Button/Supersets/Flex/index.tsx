@@ -1,11 +1,17 @@
 import React, { VFC } from 'react'
 import cn from 'classnames'
 import FlexComponent from 'layout/Flex'
-import { SizeContext, ThemeContext, VariantContext } from '../../context'
+import {
+  RadiusContext,
+  SizeContext,
+  ThemeContext,
+  VariantContext,
+} from '../../context'
 import type { Props } from './types'
 import { ClassName } from './styles.css'
 
 const Flex: VFC<Props> = ({
+  radius,
   size,
   theme,
   variant,
@@ -15,13 +21,15 @@ const Flex: VFC<Props> = ({
 }) => {
   return (
     <FlexComponent {...flexProps} className={cn(ClassName, className)}>
-      <SizeContext.Provider value={size}>
-        <ThemeContext.Provider value={theme}>
-          <VariantContext.Provider value={variant}>
-            {children}
-          </VariantContext.Provider>
-        </ThemeContext.Provider>
-      </SizeContext.Provider>
+      <RadiusContext.Provider value={radius}>
+        <SizeContext.Provider value={size}>
+          <ThemeContext.Provider value={theme}>
+            <VariantContext.Provider value={variant}>
+              {children}
+            </VariantContext.Provider>
+          </ThemeContext.Provider>
+        </SizeContext.Provider>
+      </RadiusContext.Provider>
     </FlexComponent>
   )
 }
