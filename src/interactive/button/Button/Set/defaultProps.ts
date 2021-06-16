@@ -1,5 +1,3 @@
 import type { Props } from './types'
 
-export const defaultProps: Partial<Props> = {
-  theme: 'primary',
-}
+export const defaultProps: Partial<Props> = {}
