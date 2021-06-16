@@ -51,6 +51,7 @@ export const map: Record<Type, Record<Properties, number | string>> = {
 }
 
 const Styles = styleVariants(map, (value) => ({
+  '--size': value.height,
   height: value.height,
   fontSize: value.fontSize,
   borderWidth: value.borderWidth,
