@@ -1,16 +1,12 @@
-// ButtonSize
-export { Size, SizeMap, SizeKeys, sizeResolve } from './buttonSize'
-export type { SizeType, SizeProps } from './buttonSize'
 
-// ButtonTheme
-export { Theme, ThemeMap, ThemeKeys, themeResolve } from './buttonTheme'
-export type { ThemeType, ThemeProps } from './buttonTheme'
+// Size
+export { Size, SizeMap, SizeKeys, sizeResolve } from './size'
+export type { SizeType, SizeProps } from './size'
 
-// ButtonVariant
-export {
-  Variant,
-  VariantMap,
-  VariantKeys,
-  variantResolve,
-} from './buttonVariant'
-export type { VariantType, VariantProps } from './buttonVariant'
+// Theme
+export { Theme, ThemeMap, ThemeKeys, themeResolve } from './theme'
+export type { ThemeType, ThemeProps } from './theme'
+
+// Variant
+export { Variant, VariantMap, VariantKeys, variantResolve } from './variant'
+export type { VariantType, VariantProps } from './variant'
