@@ -15,23 +15,15 @@ const Flex: VFC<Props> = ({
   size,
   theme,
   variant,
-  children,
   className,
   ...flexProps
-}) => {
-  return (
-    <FlexComponent {...flexProps} className={cn(ClassName, className)}>
-      <RadiusContext.Provider value={radius}>
-        <SizeContext.Provider value={size}>
-          <ThemeContext.Provider value={theme}>
-            <VariantContext.Provider value={variant}>
-              {children}
-            </VariantContext.Provider>
-          </ThemeContext.Provider>
-        </SizeContext.Provider>
-      </RadiusContext.Provider>
-    </FlexComponent>
-  )
-}
+}) =>
+  [
+    <VariantContext.Provider value={variant} />,
+    <ThemeContext.Provider value={theme} />,
+    <SizeContext.Provider value={size} />,
+    <RadiusContext.Provider value={radius} />,
+    <FlexComponent {...flexProps} className={cn(ClassName, className)} />,
+  ].reduceRight((prev, provider) => React.cloneElement(provider, {}, prev))
 
 export default Flex
