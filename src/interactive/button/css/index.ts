@@ -1,3 +1,6 @@
+// Radius
+export { Radius, RadiusMap, RadiusKeys, radiusResolve } from './radius'
+export type { RadiusType, RadiusProps } from './radius'
 
 // Size
 export { Size, SizeMap, SizeKeys, sizeResolve } from './size'
