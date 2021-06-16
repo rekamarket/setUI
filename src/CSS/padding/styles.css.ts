@@ -31,6 +31,7 @@ export const map: Record<Type, number> = {
 
 /* Padding-Top */
 const StylesPaddingTop = styleVariants(map, (value) => ({
+  '--paddingTop': value,
   paddingTop: value,
 }))
 
@@ -43,6 +44,7 @@ export const PaddingTop: typeof StylesPaddingTop & {
 
 /* Padding-Right */
 const StylesPaddingRight = styleVariants(map, (value) => ({
+  '--paddingRight': value,
   paddingRight: value,
 }))
 
@@ -55,6 +57,7 @@ export const PaddingRight: typeof StylesPaddingRight & {
 
 /* Padding-Botttom */
 const StylesPaddingBottom = styleVariants(map, (value) => ({
+  '--paddingBottom': value,
   paddingBottom: value,
 }))
 
@@ -67,6 +70,7 @@ export const PaddingBottom: typeof StylesPaddingBottom & {
 
 /* Padding-Left */
 const StylesPaddingLeft = styleVariants(map, (value) => ({
+  '--paddingLeft': value,
   paddingLeft: value,
 }))
 
