@@ -1,10 +1,15 @@
 import { FC } from 'react'
-import Button, { Props } from 'button'
+import { ProtoSet, ProtoSetProps } from 'button'
 
-const CustomButton: FC<Props> = (props) =>
-  Button({
+const defaultStyle = {
+  size: 'small',
+  theme: 'black',
+}
+
+const CustomButton: FC<Omit<ProtoSetProps, 'defaultStyle'>> = (props) =>
+  ProtoSet({
     ...props,
-    size: 'small',
+    defaultStyle,
   })
 
 export default CustomButton
