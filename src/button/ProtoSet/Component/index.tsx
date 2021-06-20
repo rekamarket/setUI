@@ -2,11 +2,11 @@ import { VFC, createElement } from 'react'
 import cn from 'classnames'
 import { AspectRatio } from 'CSS'
 import { Radius, Size, Theme, Variant } from '../css'
-import { Props } from './types'
+import { PropsRequired } from './types'
 import { ClassName } from './styles.css'
 import { useRadius, useSize, useTheme, useVariant } from '../../context'
 
-const Button: VFC<Props> = ({
+const Button: VFC<PropsRequired> = ({
   aspectRatio,
   disabled,
   className,

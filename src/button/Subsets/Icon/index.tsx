@@ -16,6 +16,7 @@ const Icon: FC<Props> = ({ className, ...props }) =>
       displayName
     ),
 
+    defaultStyle: defaultProps,
     // props override
     aspectRatio: '1x1',
     className: cn(ClassName, className),

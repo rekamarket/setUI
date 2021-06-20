@@ -29,5 +29,7 @@ export type { IconProps } from './Subsets'
 export { Flex, List } from './Supersets'
 export type { FlexProps, ListProps } from './Supersets'
 
+export { default as ProtoSet } from './ProtoSet'
+export type { Props as ProtoSetProps } from './ProtoSet'
 export type { Props } from './Set'
 export default Button
