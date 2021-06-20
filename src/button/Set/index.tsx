@@ -16,6 +16,7 @@ const Button: VFC<Props> = ({ className, ...props }) =>
       displayName
     ),
 
+    defaultStyle: defaultProps,
     // props override
     className: cn(ClassName, className),
   })

@@ -21,5 +21,11 @@ type BasicProps = {
 
 type StyleProps = RadiusProps & SizeProps & ThemeProps & VariantProps
 
-export type Props = BasicProps & StyleProps
-export type PropsRequired = BasicProps & Required<StyleProps>
+type DefaultStyleProps = {
+  defaultStyle: Partial<StyleProps>
+}
+
+export type Props = BasicProps & StyleProps & DefaultStyleProps
+export type PropsRequired = BasicProps &
+  Required<StyleProps> &
+  DefaultStyleProps

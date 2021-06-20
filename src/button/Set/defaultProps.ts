@@ -1,3 +1,5 @@
 import type { Props } from './types'
 
-export const defaultProps: Partial<Props> = {}
+export const defaultProps: Partial<Props> = {
+  theme: 'primary',
+}

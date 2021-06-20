@@ -1,3 +1,5 @@
+// todo: rename it - now it should not merge the props, justt check if there is an overlap.
+
 function mergePropsWithWarning<T>(
   defaultProps,
   props,
@@ -22,10 +24,7 @@ function mergePropsWithWarning<T>(
     }
   })
 
-  return {
-    ...defaultProps,
-    ...props,
-  }
+  return props
 }
 
 export default {

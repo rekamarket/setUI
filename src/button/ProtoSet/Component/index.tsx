@@ -10,6 +10,7 @@ const Button: VFC<Props> = ({
   aspectRatio,
   disabled,
   className,
+  defaultStyle,
   children,
   ...rest
 }) => {
@@ -30,13 +31,29 @@ const Button: VFC<Props> = ({
           ? Radius[rest?.radius]
           : radius
           ? Radius[radius]
+          : defaultStyle?.radius
+          ? Radius[defaultStyle.radius]
           : Radius.default,
-        rest?.size ? Size[rest?.size] : size ? Size[size] : Size.default,
-        rest?.theme ? Theme[rest?.theme] : theme ? Theme[theme] : Theme.default,
+        rest?.size
+          ? Size[rest?.size]
+          : size
+          ? Size[size]
+          : defaultStyle?.size
+          ? Size[defaultStyle.size]
+          : Size.default,
+        rest?.theme
+          ? Theme[rest?.theme]
+          : theme
+          ? Theme[theme]
+          : defaultStyle?.theme
+          ? Theme[defaultStyle.theme]
+          : Theme.default,
         rest?.variant
           ? Variant[rest?.variant]
           : variant
           ? Variant[variant]
+          : defaultStyle?.variant
+          ? Variant[defaultStyle.variant]
           : Variant.default,
         AspectRatio[aspectRatio] || AspectRatio.default,
       ]),
