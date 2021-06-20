@@ -31,4 +31,5 @@ const List: VFC<Props> = ({
     />,
   ].reduceRight((prev, provider) => React.cloneElement(provider, {}, prev))
 
+export type { Props } from './types'
 export default List

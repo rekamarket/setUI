@@ -21,5 +21,13 @@ Button.Icon = Icon
 Button.Flex = Flex
 Button.List = List
 
+// subsets
+export { Icon } from './Subsets'
+export type { IconProps } from './Subsets'
+
+// supersets
+export { Flex, List } from './Supersets'
+export type { FlexProps, ListProps } from './Supersets'
+
 export type { Props } from './Set'
 export default Button

@@ -26,4 +26,5 @@ const Flex: VFC<Props> = ({
     <FlexComponent {...flexProps} className={cn(ClassName, className)} />,
   ].reduceRight((prev, provider) => React.cloneElement(provider, {}, prev))
 
+export type { Props } from './types'
 export default Flex
