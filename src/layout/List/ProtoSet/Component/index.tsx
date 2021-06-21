@@ -36,10 +36,13 @@ import {
   dividerColorResolve,
   dividerWeightResolve,
 } from '../css'
+import { component } from './data'
 import { PropsRequired } from './types'
 import { ClassName } from './styles.css'
 
 const Flex: VFC<PropsRequired> = ({
+  as,
+  value,
   className,
   // flex
   alignContent,
@@ -125,9 +128,11 @@ const Flex: VFC<PropsRequired> = ({
     PaddingRight[padding] ||
     PaddingRight.none
 
-  return (
-    <div
-      className={cn([
+  return createElement(
+    component[as],
+
+    {
+      className: cn([
         // root
         className,
         ClassName,
@@ -165,12 +170,12 @@ const Flex: VFC<PropsRequired> = ({
 
         dividerColorResolve<Partial<Props>>(rest),
         dividerWeightResolve<Partial<Props>>(rest),
-      ])}
-    >
-      {Children.map(children, (child) => (
-        <li>{child}</li>
-      ))}
-    </div>
+      ]),
+    },
+
+    Children.map(children, (child, i) => (
+      <li {...(i === 0 && value ? { value } : {})}>{child}</li>
+    ))
   )
 }
 

@@ -19,7 +19,11 @@ import type {
 } from 'CSS'
 import { DirectionProps, DividerColorProps, DividerWeightProps } from '../css'
 
+export type AsType = 'ul' | 'ol' | 'menu'
+
 type BasicProps = {
+  as: AsType
+  value?: string
   children?: JSX.Element | Array<JSX.Element>
   className?: string
 }
