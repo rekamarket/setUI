@@ -36,8 +36,9 @@ import {
   dividerColorResolve,
   dividerWeightResolve,
 } from '../css'
+import { displayName as dividerName } from '../SubComponents/Divider'
 import { component } from './data'
-import { PropsRequired } from './types'
+import { Props, PropsRequired } from './types'
 import { ClassName } from './styles.css'
 
 const Flex: VFC<PropsRequired> = ({
@@ -138,14 +139,14 @@ const Flex: VFC<PropsRequired> = ({
         ClassName,
 
         // flex
-        directionResolve<Partial<Props>>(rest),
+        directionResolve<Partial<PropsRequired>>(rest),
         AlignContent[alignContent] || AlignContent.default,
         AlignItems[alignItems] || AlignItems.default,
         FlexWrap[wrap] || FlexWrap.default,
         JustifyContent[justifyContent] || JustifyContent.default,
 
         // generic
-        backgroundResolve<Partial<Props>>(rest),
+        backgroundResolve<Partial<PropsRequired>>(rest),
         BackgroundOpacity[opacity] || BackgroundOpacity.default,
 
         BorderColor[borderColor] || BorderColor.default,
@@ -168,14 +169,17 @@ const Flex: VFC<PropsRequired> = ({
         ZIndex[zIndex] || ZIndex.default,
         Width[width] || Width.default,
 
-        dividerColorResolve<Partial<Props>>(rest),
-        dividerWeightResolve<Partial<Props>>(rest),
+        dividerColorResolve<Partial<PropsRequired>>(rest),
+        dividerWeightResolve<Partial<PropsRequired>>(rest),
       ]),
     },
 
-    Children.map(children, (child, i) => (
-      <li {...(i === 0 && value ? { value } : {})}>{child}</li>
-    ))
+    Children.map(children, (child, i) => {
+      if (child.type.displayName === dividerName) {
+        return child
+      }
+      return <li {...(i === 0 && value ? { value } : {})}>{child}</li>
+    })
   )
 }
 

@@ -1,3 +1,9 @@
+import { createContext, useContext } from 'react'
+import type { Type } from './styles.css'
+
+export const DividerColorContext = createContext<Type>('default')
+export const useDividerColor = () => useContext(DividerColorContext)
+
 export {
   Style as DividerColor,
   map as DividerColorMap,
