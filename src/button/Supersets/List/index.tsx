@@ -6,7 +6,7 @@ import {
   SizeContext,
   ThemeContext,
   VariantContext,
-} from '../../context'
+} from '../../ProtoSet/css'
 import { defaultProps } from './defaultProps'
 import type { Props } from './types'
 import { ClassName } from './styles.css'

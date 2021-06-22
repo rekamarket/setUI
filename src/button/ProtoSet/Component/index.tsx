@@ -4,7 +4,6 @@ import { AspectRatio } from 'CSS'
 import { Radius, Size, Theme, Variant } from '../css'
 import { PropsRequired } from './types'
 import { ClassName } from './styles.css'
-import { useRadius, useSize, useTheme, useVariant } from '../../context'
 
 const Button: VFC<PropsRequired> = ({
   aspectRatio,
@@ -14,11 +13,6 @@ const Button: VFC<PropsRequired> = ({
   children,
   ...rest
 }) => {
-  const radius = useRadius()
-  const size = useSize()
-  const theme = useTheme()
-  const variant = useVariant()
-
   return createElement(
     'button',
 
@@ -29,29 +23,21 @@ const Button: VFC<PropsRequired> = ({
 
         rest?.radius
           ? Radius[rest?.radius]
-          : radius
-          ? Radius[radius]
           : defaultStyle?.radius
           ? Radius[defaultStyle.radius]
           : Radius.default,
         rest?.size
           ? Size[rest?.size]
-          : size
-          ? Size[size]
           : defaultStyle?.size
           ? Size[defaultStyle.size]
           : Size.default,
         rest?.theme
           ? Theme[rest?.theme]
-          : theme
-          ? Theme[theme]
           : defaultStyle?.theme
           ? Theme[defaultStyle.theme]
           : Theme.default,
         rest?.variant
           ? Variant[rest?.variant]
-          : variant
-          ? Variant[variant]
           : defaultStyle?.variant
           ? Variant[defaultStyle.variant]
           : Variant.default,

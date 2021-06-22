@@ -1,3 +1,9 @@
+import { createContext, useContext } from 'react'
+import type { Type } from './styles.css'
+
+export const VariantContext = createContext<Type>('default')
+export const useVariant = () => useContext(VariantContext)
+
 export {
   Style as Variant,
   map as VariantMap,

@@ -1,3 +1,9 @@
+import { createContext, useContext } from 'react'
+import type { Type } from './styles.css'
+
+export const RadiusContext = createContext<Type>('default')
+export const useRadius = () => useContext(RadiusContext)
+
 export {
   Style as Radius,
   map as RadiusMap,
