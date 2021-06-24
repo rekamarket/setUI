@@ -9,6 +9,17 @@ export {
 } from './radius'
 export type { RadiusType, RadiusProps } from './radius'
 
+// Radius
+export {
+  Shape,
+  ShapeMap,
+  ShapeKeys,
+  shapeResolve,
+  useShape,
+  ShapeContext,
+} from './shape'
+export type { ShapeType, ShapeProps } from './shape'
+
 // Size
 export {
   Size,
