@@ -1,5 +1,16 @@
 import type { Type } from './styles.css'
 
-export type AxisProps = {
-  axis?: Type
+interface Vertical {
+  readonly vertical?: boolean
 }
+
+interface Horizontal {
+  readonly horizontal?: boolean
+}
+
+export type AxisProps =
+  | Vertical
+  | Horizontal
+  | {
+      axis?: Type
+    }

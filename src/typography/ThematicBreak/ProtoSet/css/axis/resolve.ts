@@ -1,12 +1,16 @@
-import { Style } from './styles.css'
-
 export function resolve<T>(props: T) {
   switch (true) {
+    case 'vertical' in props: {
+      return 'vertical'
+    }
+    case 'horizontal' in props: {
+      return 'horizontal'
+    }
     case 'axis' in props: {
-      return Style[props['axis']]
+      return props['axis']
     }
     default: {
-      return Style.default
+      return undefined
     }
   }
 }
