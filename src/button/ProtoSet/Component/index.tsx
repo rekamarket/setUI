@@ -1,59 +1,20 @@
-import { VFC, createElement } from 'react'
+import { VFC } from 'react'
 import cn from 'classnames'
-import { AspectRatio } from 'CSS'
-import { Radius, Size, Theme, Variant } from '../css'
-import { PropsRequired } from './types'
+import ProtoComponent from '../ProtoComponent'
+import type { Props } from './types'
+import { Radius, Shape, Size, Theme, Variant } from '../css'
 import { ClassName } from './styles.css'
 
-const Button: VFC<PropsRequired> = ({
-  aspectRatio,
-  disabled,
-  className,
-  defaultStyle,
-  children,
-  ...rest
-}) => {
-  return createElement(
-    'button',
+const ButtonComponent: VFC<Props> = ({ defaultStyle, className, ...rest }) =>
+  ProtoComponent({
+    ...rest,
+    className: cn(ClassName, className),
+    radius: rest?.radius || defaultStyle?.radius || 'default',
+    shape: rest?.shape || defaultStyle.shape || 'default',
+    size: rest?.size || defaultStyle.size || 'default',
+    theme: rest?.theme || defaultStyle.theme || 'default',
+    variant: rest?.variant || defaultStyle.variant || 'default',
+  })
 
-    {
-      className: cn([
-        ClassName,
-        className,
-
-        rest?.radius
-          ? Radius[rest?.radius]
-          : defaultStyle?.radius
-          ? Radius[defaultStyle.radius]
-          : Radius.default,
-        rest?.size
-          ? Size[rest?.size]
-          : defaultStyle?.size
-          ? Size[defaultStyle.size]
-          : Size.default,
-        rest?.theme
-          ? Theme[rest?.theme]
-          : defaultStyle?.theme
-          ? Theme[defaultStyle.theme]
-          : Theme.default,
-        rest?.variant
-          ? Variant[rest?.variant]
-          : defaultStyle?.variant
-          ? Variant[defaultStyle.variant]
-          : Variant.default,
-        AspectRatio[aspectRatio] || AspectRatio.default,
-      ]),
-
-      disabled,
-
-      ...('onClick' in rest ? { type: 'button' } : {}),
-      ...rest,
-    },
-
-    children
-  )
-}
-
-export type { Props, PropsRequired } from './types'
-
-export default Button
+export type { Props, DefaultStyleProps } from './types'
+export default ButtonComponent

@@ -3,6 +3,7 @@ import cn from 'classnames'
 import FlexComponent from 'layout/Flex'
 import {
   RadiusContext,
+  ShapeContext,
   SizeContext,
   ThemeContext,
   VariantContext,
@@ -12,6 +13,7 @@ import { ClassName } from './styles.css'
 
 const Flex: VFC<Props> = ({
   radius,
+  shape,
   size,
   theme,
   variant,
@@ -22,6 +24,7 @@ const Flex: VFC<Props> = ({
     <VariantContext.Provider value={variant} />,
     <ThemeContext.Provider value={theme} />,
     <SizeContext.Provider value={size} />,
+    <ShapeContext.Provider value={shape} />,
     <RadiusContext.Provider value={radius} />,
     <FlexComponent {...flexProps} className={cn(ClassName, className)} />,
   ].reduceRight((prev, provider) => React.cloneElement(provider, {}, prev))

@@ -1,15 +1,7 @@
-import type {
-  RadiusProps,
-  SizeProps,
-  ThemeProps,
-  VariantProps,
-} from '../../ProtoSet/css'
+import type { StyleProps } from '../../ProtoSet'
 import type { Props as FlexProps } from 'layout/Flex'
 
 export type Props = {
   children: any
-} & RadiusProps &
-  SizeProps &
-  ThemeProps &
-  VariantProps &
+} & StyleProps &
   FlexProps

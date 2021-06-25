@@ -1,3 +1,3 @@
-import type { Props } from './types'
+import type { DefaultStyleProps } from './types'
 
-export const defaultProps: Partial<Props> = {}
+export const defaultStyle: DefaultStyleProps = {}

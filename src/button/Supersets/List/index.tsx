@@ -3,6 +3,7 @@ import cn from 'classnames'
 import ListComponent from 'layout/List'
 import {
   RadiusContext,
+  ShapeContext,
   SizeContext,
   ThemeContext,
   VariantContext,
@@ -13,6 +14,7 @@ import { ClassName } from './styles.css'
 
 const List: VFC<Props> = ({
   radius,
+  shape,
   size,
   theme,
   variant,
@@ -23,6 +25,7 @@ const List: VFC<Props> = ({
     <VariantContext.Provider value={variant} />,
     <ThemeContext.Provider value={theme} />,
     <SizeContext.Provider value={size} />,
+    <ShapeContext.Provider value={shape} />,
     <RadiusContext.Provider value={radius} />,
     <ListComponent
       {...defaultProps}
