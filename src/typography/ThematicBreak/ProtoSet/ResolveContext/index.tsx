@@ -2,7 +2,7 @@ import { VFC } from 'react'
 import cn from 'classnames'
 import { useAxis, useColor, useOffset, useWeight } from '../ProtoComponent'
 import { Props } from './types'
-import Component from '../Component'
+import Component from '../ResolveDefaultStyles'
 import { ClassName } from './styles.css'
 
 const ContextComponent: VFC<Props> = ({ className, ...rest }) => {

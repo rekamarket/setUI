@@ -8,7 +8,7 @@ interface I<T = unknown> extends VFC<T> {
   // Icon: typeof Icon
 
   // supersets
-  Flex: typeof Flex
+  $Flex: typeof Flex
 }
 
 const ThematicBreak: I<Props> = (props) => Set(props)
@@ -21,7 +21,7 @@ const ThematicBreak: I<Props> = (props) => Set(props)
 // export type { IconProps } from './Subsets'
 
 // supersets
-ThematicBreak.Flex = Flex
+ThematicBreak.$Flex = Flex
 
 export { default as ProtoSet } from './ProtoSet'
 export type { Props as ProtoSetProps } from './ProtoSet'

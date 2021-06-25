@@ -1,4 +1,4 @@
-import Component from './ContextComponent'
+import Component from './ResolveContext'
 
 export {
   AxisContext,
@@ -7,6 +7,6 @@ export {
   WeightContext,
 } from './ProtoComponent'
 export type { StyleProps } from './ProtoComponent'
-export type { DefaultStyleProps } from './Component'
-export type { Props } from './ContextComponent'
+export type { DefaultStyleProps } from './ResolveDefaultStyles'
+export type { Props } from './ResolveContext'
 export default Component
