@@ -1,7 +1,7 @@
 import { createContext, useContext } from 'react'
 import type { Type } from './styles.css'
 
-export const ThemeContext = createContext<Type>('default')
+export const ThemeContext = createContext<Type>(undefined)
 export const useTheme = () => useContext(ThemeContext)
 
 export {

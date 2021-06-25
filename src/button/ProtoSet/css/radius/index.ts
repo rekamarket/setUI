@@ -1,7 +1,7 @@
 import { createContext, useContext } from 'react'
 import type { Type } from './styles.css'
 
-export const RadiusContext = createContext<Type>('default')
+export const RadiusContext = createContext<Type>(undefined)
 export const useRadius = () => useContext(RadiusContext)
 
 export {

@@ -1,7 +1,7 @@
 import { createContext, useContext } from 'react'
 import type { Type } from './styles.css'
 
-export const ShapeContext = createContext<Type>('default')
+export const ShapeContext = createContext<Type>(undefined)
 export const useShape = () => useContext(ShapeContext)
 
 export {

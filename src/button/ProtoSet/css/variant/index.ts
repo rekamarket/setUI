@@ -1,7 +1,7 @@
 import { createContext, useContext } from 'react'
 import type { Type } from './styles.css'
 
-export const VariantContext = createContext<Type>('default')
+export const VariantContext = createContext<Type>(undefined)
 export const useVariant = () => useContext(VariantContext)
 
 export {
