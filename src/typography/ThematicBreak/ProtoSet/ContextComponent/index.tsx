@@ -1,11 +1,11 @@
 import { VFC } from 'react'
 import cn from 'classnames'
-import { useAxis, useColor, useOffset, useWeight } from '../css'
+import { useAxis, useColor, useOffset, useWeight } from '../ProtoComponent'
 import { Props } from './types'
 import Component from '../Component'
 import { ClassName } from './styles.css'
 
-const SuperComponent: VFC<Props> = ({ className, ...rest }) => {
+const ContextComponent: VFC<Props> = ({ className, ...rest }) => {
   const axis = useAxis()
   const color = useColor()
   const offset = useOffset()
@@ -22,4 +22,4 @@ const SuperComponent: VFC<Props> = ({ className, ...rest }) => {
 }
 
 export type { Props } from './types'
-export default SuperComponent
+export default ContextComponent

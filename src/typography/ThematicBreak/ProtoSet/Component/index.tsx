@@ -1,7 +1,11 @@
 import { VFC } from 'react'
 import cn from 'classnames'
-import { axisResolve, colorResolve, offsetResolve, weightResolve } from '../css'
-import ProtoComponent from '../ProtoComponent'
+import ProtoComponent, {
+  axisResolve,
+  colorResolve,
+  offsetResolve,
+  weightResolve,
+} from '../ProtoComponent'
 import type { Props } from './types'
 import { ClassName } from './styles.css'
 
