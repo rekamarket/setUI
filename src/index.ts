@@ -1,6 +1,7 @@
 // button
 export { default as Button } from './button'
 export { CustomButton } from './variants/button'
+export { default as CustomHR } from './variants/hr'
 // layout
 export { default as Box } from './layout/Box'
 export { default as Container } from './layout/Container'
