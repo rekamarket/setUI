@@ -1,5 +1,6 @@
 import { VFC } from 'react'
 import cn from 'classnames'
+import { textTransformResolve } from 'CSS'
 import ProtoComponent, {
   radiusResolve,
   shapeResolve,
@@ -19,6 +20,11 @@ const ButtonComponent: VFC<Props> = ({ defaultStyle, className, ...rest }) =>
     shape: shapeResolve(rest) || rest?.shape || defaultStyle.shape || 'default',
     size: sizeResolve(rest) || rest?.size || defaultStyle.size || 'default',
     theme: themeResolve(rest) || rest?.theme || defaultStyle.theme || 'default',
+    transform:
+      textTransformResolve(rest) ||
+      rest?.transform ||
+      defaultStyle.transform ||
+      'default',
     variant:
       variantResolve(rest) ||
       rest?.variant ||

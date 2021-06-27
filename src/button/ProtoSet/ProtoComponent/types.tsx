@@ -1,3 +1,5 @@
+import type { TextTransformProps } from 'CSS'
+
 import type {
   RadiusProps,
   ShapeProps,
@@ -27,6 +29,7 @@ export type StyleProps = RadiusProps &
   ShapeProps &
   SizeProps &
   ThemeProps &
-  VariantProps
+  VariantProps &
+  TextTransformProps
 
 export type Props = BasicProps & Required<StyleProps>

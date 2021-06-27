@@ -1,5 +1,6 @@
 import { VFC, createElement } from 'react'
 import cn from 'classnames'
+import { TextTransform } from 'CSS'
 import { Radius, Shape, Size, Theme, Variant } from './css'
 import { Props } from './types'
 import { ClassName } from './styles.css'
@@ -11,6 +12,7 @@ const ProtoComponent: VFC<Props> = ({
   shape,
   size,
   theme,
+  transform,
   variant,
   children,
   ...rest
@@ -27,6 +29,7 @@ const ProtoComponent: VFC<Props> = ({
         Shape[shape],
         Size[size],
         Theme[theme],
+        TextTransform[transform],
         Variant[variant],
       ]),
 
