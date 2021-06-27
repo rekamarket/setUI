@@ -1,7 +1,7 @@
 import { VFC } from 'react'
 import Set, { Props } from './Set'
 import { Icon } from './Subsets'
-import { Flex, List } from './Supersets'
+import { Flex, Group, List } from './Supersets'
 
 interface I<T = unknown> extends VFC<T> {
   // subsets
@@ -9,6 +9,7 @@ interface I<T = unknown> extends VFC<T> {
 
   // supersets
   $Flex: typeof Flex
+  $Group: typeof Group
   $List: typeof List
 }
 
@@ -19,6 +20,7 @@ Button.Icon = Icon
 
 // supersets
 Button.$Flex = Flex
+Button.$Group = Group
 Button.$List = List
 
 // subsets
@@ -26,7 +28,7 @@ export { Icon } from './Subsets'
 export type { IconProps } from './Subsets'
 
 // supersets
-export { Flex, List } from './Supersets'
+export { Flex, Group, List } from './Supersets'
 export type { FlexProps, ListProps } from './Supersets'
 
 export { default as ProtoSet } from './ProtoSet'

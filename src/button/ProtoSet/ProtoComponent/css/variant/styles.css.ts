@@ -1,7 +1,7 @@
 import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-export const Keys = ['solid', 'ghost', 'soft', 'text']
+export const Keys = ['solid', 'ghost', 'soft', 'text', 'INHERIT']
 const VALUES = tuple(...Keys)
 export type Type = typeof VALUES[number]
 
@@ -106,6 +106,30 @@ export const map: Record<Type, Value> = {
       color: '#A19F9D',
     },
   },
+  INHERIT: {
+    color: 'inherit',
+    backgroundColor: 'inherit',
+    borderColor: 'inherit',
+    hover: {
+      backgroundColor: 'inherit)',
+      borderColor: 'inherit',
+    },
+    active: {
+      backgroundColor: 'inherit',
+      borderColor: 'inherit',
+    },
+    focus: {
+      outlineColor: 'inherit',
+      outlineStyle: 'inherit',
+      backgroundColor: 'inherit',
+      borderColor: 'inherit',
+    },
+    disabled: {
+      color: 'inherit',
+      backgroundColor: 'inherit',
+      borderColor: 'inherit',
+    },
+  },
 }
 
 const Styles = styleVariants(map, (value) => ({
@@ -126,4 +150,19 @@ export const Style: typeof Styles & {
 } = {
   ...Styles,
   default: Styles['solid' as Type],
+}
+
+const BasicStyles = styleVariants(map, (value) => ({
+  color: String(value.color),
+  borderColor: String(value.borderColor),
+  backgroundColor: String(value.backgroundColor),
+  borderStyle: 'solid',
+  outlineStyle: 'none',
+}))
+
+export const BasicStyle: typeof BasicStyles & {
+  default: string
+} = {
+  ...BasicStyles,
+  default: BasicStyles['solid' as Type],
 }

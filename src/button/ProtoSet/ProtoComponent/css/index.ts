@@ -45,6 +45,7 @@ export type { ThemeType, ThemeProps } from './theme'
 // Variant
 export {
   Variant,
+  VariantBasic,
   VariantMap,
   VariantKeys,
   variantResolve,

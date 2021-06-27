@@ -6,6 +6,7 @@ export const useVariant = () => useContext(VariantContext)
 
 export {
   Style as Variant,
+  BasicStyle as VariantBasic,
   map as VariantMap,
   Keys as VariantKeys,
 } from './styles.css'
