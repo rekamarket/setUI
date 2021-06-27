@@ -4,7 +4,7 @@ import type {
   SizeProps,
   ThemeProps,
   VariantProps,
-} from '../css'
+} from './css'
 
 interface CustomClickHandler {
   readonly onClick: () => void

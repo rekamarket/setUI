@@ -8,8 +8,8 @@ interface I<T = unknown> extends VFC<T> {
   Icon: typeof Icon
 
   // supersets
-  Flex: typeof Flex
-  List: typeof List
+  $Flex: typeof Flex
+  $List: typeof List
 }
 
 const Button: I<Props> = (props) => Set(props)
@@ -18,8 +18,8 @@ const Button: I<Props> = (props) => Set(props)
 Button.Icon = Icon
 
 // supersets
-Button.Flex = Flex
-Button.List = List
+Button.$Flex = Flex
+Button.$List = List
 
 // subsets
 export { Icon } from './Subsets'

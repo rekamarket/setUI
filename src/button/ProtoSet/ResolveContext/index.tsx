@@ -1,8 +1,14 @@
 import { VFC } from 'react'
 import cn from 'classnames'
-import { useRadius, useShape, useSize, useTheme, useVariant } from '../css'
+import {
+  useRadius,
+  useShape,
+  useSize,
+  useTheme,
+  useVariant,
+} from '../ProtoComponent'
 import { Props } from './types'
-import Component from '../Component'
+import Component from '../ResolveDefaultStyles'
 import { ClassName } from './styles.css'
 
 const Button: VFC<Props> = ({ className, ...rest }) => {

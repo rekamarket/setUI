@@ -7,7 +7,7 @@ import {
   SizeContext,
   ThemeContext,
   VariantContext,
-} from '../../ProtoSet/css'
+} from '../../ProtoSet'
 import { defaultProps } from './defaultProps'
 import type { Props } from './types'
 import { ClassName } from './styles.css'
@@ -22,17 +22,19 @@ const List: VFC<Props> = ({
   ...listProps
 }) =>
   [
-    <VariantContext.Provider value={variant} />,
-    <ThemeContext.Provider value={theme} />,
-    <SizeContext.Provider value={size} />,
-    <ShapeContext.Provider value={shape} />,
     <RadiusContext.Provider value={radius} />,
+    <ShapeContext.Provider value={shape} />,
+    <SizeContext.Provider value={size} />,
+    <ThemeContext.Provider value={theme} />,
+    <VariantContext.Provider value={variant} />,
+  ].reduce(
+    (prev, provider) => React.cloneElement(provider, {}, prev),
     <ListComponent
       {...defaultProps}
       {...listProps}
       className={cn(ClassName, className)}
-    />,
-  ].reduceRight((prev, provider) => React.cloneElement(provider, {}, prev))
+    />
+  )
 
 export type { Props } from './types'
 export default List
