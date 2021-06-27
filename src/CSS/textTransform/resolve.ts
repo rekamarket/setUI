@@ -1,21 +1,19 @@
-import { Style } from './styles.css'
-
 export function resolve<T>(props: T) {
   switch (true) {
     case 'uppercase' in props: {
-      return Style.uppercase
+      return 'uppercase'
     }
     case 'lowercase' in props: {
-      return Style.lowercase
+      return 'lowercase'
     }
     case 'capitalize' in props: {
-      return Style.capitalize
+      return 'capitalize'
     }
     case 'transform' in props: {
-      return Style[props['transform']]
+      return props['transform']
     }
     default: {
-      return Style.none
+      return undefined
     }
   }
 }
