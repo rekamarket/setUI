@@ -7,7 +7,6 @@
       "button": ["interactive/button"],
       "dialog": ["dialog"],
       "form": ["interactive/form"],
-      "hooks": ["hooks"],
       "layers": ["layers"],
       "layout": ["layout"],
       "typography": ["typography"],
