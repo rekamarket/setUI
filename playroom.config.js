@@ -58,6 +58,7 @@ module.exports = {
         'button': path.resolve(__dirname, 'src/button/'),
         'dialog': path.resolve(__dirname, 'src/dialog/'),
         'form': path.resolve(__dirname, 'src/form/'),
+        'layers': path.resolve(__dirname, 'src/layers/'),
         'layout': path.resolve(__dirname, 'src/layout/'),
         'typography': path.resolve(__dirname, 'src/typography/'),
         'utils': path.resolve(__dirname, 'src/utils/'),
