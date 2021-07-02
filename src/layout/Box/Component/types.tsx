@@ -8,7 +8,7 @@ import type {
   PaddingSizeType,
   ZIndexType,
 } from 'CSS'
-import { BoxLayerProps } from 'layers'
+import { BlockLayerProps } from 'layers'
 
 export type Props = {
   children?: JSX.Element | Array<JSX.Element>
@@ -16,4 +16,4 @@ export type Props = {
   aspectRatio?: AspectRatioType
 
   zIndex?: ZIndexType
-} & BoxLayerProps
+} & BlockLayerProps
