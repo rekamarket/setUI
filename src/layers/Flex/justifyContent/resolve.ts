@@ -1,7 +1,9 @@
+import { Style } from './styles.css'
+
 export function resolve<T>(props: T) {
   switch (true) {
-    case 'backgroundOpacity' in props: {
-      return props['backgroundOpacity']
+    case 'justifyContent' in props: {
+      return props['justifyContent']
     }
     default: {
       return undefined

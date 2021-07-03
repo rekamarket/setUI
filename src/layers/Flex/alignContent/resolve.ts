@@ -1,7 +1,7 @@
 export function resolve<T>(props: T) {
   switch (true) {
-    case 'backgroundOpacity' in props: {
-      return props['backgroundOpacity']
+    case 'alignContent' in props: {
+      return props['alignContent']
     }
     default: {
       return undefined
