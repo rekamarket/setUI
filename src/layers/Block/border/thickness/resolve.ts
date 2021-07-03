@@ -1,7 +1,7 @@
 export function resolve<T>(props: T) {
   switch (true) {
-    case 'borderWidth' in props: {
-      return props['borderWidth']
+    case 'borderThickness' in props: {
+      return props['borderThickness']
     }
     default: {
       return undefined
