@@ -1,3 +1,12 @@
+// Clip
+export {
+  BackgroundClip,
+  BackgroundClipMap,
+  BackgroundClipKeys,
+  backgroundClipResolve,
+} from './clip'
+export type { BackgroundClipType, BackgroundClipProps } from './clip'
+
 // Color
 export {
   BackgroundColor,

@@ -9,6 +9,8 @@ import {
   borderThicknessResolve,
 } from './border'
 import {
+  BackgroundClip,
+  backgroundClipResolve,
   BackgroundColor,
   backgroundColorResolve,
   BackgroundOpacity,
@@ -21,6 +23,7 @@ import type {
   BorderColorType,
   BorderRadiusType,
   BorderThicknessType,
+  BackgroundClipType,
   BackgroundColorType,
   BackgroundOpacityType,
   PaddingType,
@@ -39,6 +42,7 @@ class BoxLayer {
   borderThickness: BorderThicknessType
 
   // background
+  backgroundClip: BackgroundClipType
   backgroundColor: BackgroundColorType
   backgroundOpacity: BackgroundOpacityType
 
@@ -64,6 +68,7 @@ class BoxLayer {
     this.borderThickness = borderThicknessResolve<Props>(props)
 
     // background
+    this.backgroundClip = backgroundClipResolve<Props>(props)
     this.backgroundColor = backgroundColorResolve<Props>(props)
     this.backgroundOpacity = backgroundOpacityResolve<Props>(props)
 
@@ -100,6 +105,7 @@ class BoxLayer {
 
   public get background() {
     return [
+      BackgroundClip[this.backgroundClip],
       BackgroundColor[this.backgroundColor],
       BackgroundOpacity[this.backgroundOpacity],
     ]
