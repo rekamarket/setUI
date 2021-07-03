@@ -1,38 +1,18 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
-import {
-  BackgroundColor,
-  colorResolve,
-  textAlignResolve,
-  TextDecorationColor,
-  textDecorationResolve,
-  TextDecorationStyle,
-  TextDecorationThickness,
-  textTransformResolve,
-  FontFamily,
-  fontSizeResolve,
-  fontStyleResolve,
-  fontWeightResolve,
-  paddingResolve,
-} from 'CSS'
+import { paddingResolve } from 'CSS'
+import { TextLayer } from 'layers'
 import { PropsRequired } from './types'
 import { component } from './data'
 import { ClassName } from './styles.css'
+
+const styles = new TextLayer()
 
 const Text: FC<PropsRequired> = ({
   // basic
   as,
   title,
   className,
-
-  // styles
-  background,
-
-  decorationColor,
-  decorationStyle,
-  decorationThickness,
-
-  type,
 
   children,
 
@@ -48,27 +28,13 @@ const Text: FC<PropsRequired> = ({
       className: cn([
         className,
         ClassName,
-        BackgroundColor[background] || BackgroundColor.default,
-        colorResolve<Partial<PropsRequired>>(rest),
-
-        textAlignResolve<Partial<PropsRequired>>(rest),
-
-        textDecorationResolve<Partial<PropsRequired>>(rest),
-        TextDecorationColor[decorationColor] || TextDecorationColor.default,
-        TextDecorationStyle[decorationStyle] || TextDecorationStyle.default,
-        TextDecorationThickness[decorationThickness] ||
-          TextDecorationThickness.initial,
-        textTransformResolve<Partial<PropsRequired>>(rest),
-
-        FontFamily[type] || FontFamily.default,
-        fontSizeResolve<Partial<PropsRequired>>(rest),
-        fontStyleResolve<Partial<PropsRequired>>(rest),
-        fontWeightResolve<Partial<PropsRequired>>(rest),
 
         paddingTop,
         paddingRight,
         paddingBottom,
         paddingLeft,
+
+        styles.set(rest).box,
       ]),
       title,
     },

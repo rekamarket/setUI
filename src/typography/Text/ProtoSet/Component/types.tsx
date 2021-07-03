@@ -1,20 +1,5 @@
-import type {
-  BackgroundColorType,
-  ColorProps,
-  FontFamilyType,
-  FontSizeProps,
-  FontStyleProps,
-  FontWeightProps,
-  TextAlignProps,
-  TextAlignType,
-  TextDecorationColorType,
-  TextDecorationLineProps,
-  TextDecorationStyleType,
-  TextDecorationThicknessType,
-  TextTransformProps,
-  PaddingSizeType,
-  PaddingType,
-} from 'CSS'
+import type { PaddingType } from 'CSS'
+import { TextLayerProps } from 'layers'
 
 export type AsType =
   | 'span'
@@ -38,26 +23,8 @@ type BasicProps = {
   title?: string
 }
 
-type Styles = TextTransformProps &
-  TextAlignProps &
-  TextDecorationLineProps &
-  FontWeightProps &
-  FontStyleProps &
-  FontSizeProps &
-  ColorProps
-
-type StyleProps = {
-  background?: BackgroundColorType
-
-  decorationColor?: TextDecorationColorType
-  decorationStyle?: TextDecorationStyleType
-  decorationThickness?: TextDecorationThicknessType
-
-  type?: FontFamilyType
-} & Styles
-
 export type { PaddingType } from 'CSS'
-export type Props = BasicProps & StyleProps & PaddingType
+export type Props = BasicProps & TextLayerProps & PaddingType
 export type PropsRequired = BasicProps &
-  Required<StyleProps> &
+  Required<TextLayerProps> &
   Required<PaddingType>
