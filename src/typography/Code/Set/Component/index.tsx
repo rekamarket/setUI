@@ -1,22 +1,13 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
-import {
-  Color,
-  Display,
-  TextAlign,
-  FontFamily,
-  FontSize,
-  FontStyle,
-  FontWeight,
-  paddingResolve,
-  BackgroundColor,
-  BorderColor,
-  BorderRadius,
-  BorderWidth,
-} from 'CSS'
+import { Display } from 'CSS'
+import { BlockLayer, TextLayer } from 'layers'
 import { PropsRequired } from './types'
 import { component } from './data'
 import { ClassName } from './styles.css'
+
+const block = new BlockLayer()
+const text = new TextLayer()
 
 const Code: FC<PropsRequired> = ({
   // basic
@@ -25,29 +16,12 @@ const Code: FC<PropsRequired> = ({
   title,
 
   // style
-  color,
   display,
-
-  align,
-
-  type,
-  size,
-  style,
-  weight,
-
-  background,
-
-  borderColor,
-  borderRadius,
-  borderWidth,
 
   children,
 
   ...rest
 }) => {
-  const { paddingTop, paddingRight, paddingBottom, paddingLeft } =
-    paddingResolve<Partial<PropsRequired>>(rest)
-
   return createElement(
     component[as],
 
@@ -56,25 +30,8 @@ const Code: FC<PropsRequired> = ({
         className,
         ClassName,
         Display[display],
-        Color[color],
-
-        TextAlign[align],
-
-        FontFamily[type],
-        FontSize[size],
-        FontStyle[style],
-        FontWeight[weight],
-
-        BackgroundColor[background],
-
-        BorderColor[borderColor],
-        BorderRadius[borderRadius],
-        BorderWidth[borderWidth],
-
-        paddingTop,
-        paddingRight,
-        paddingBottom,
-        paddingLeft,
+        block.set(rest).padding,
+        text.set(rest).box,
       ]),
       title,
     },
@@ -83,6 +40,6 @@ const Code: FC<PropsRequired> = ({
   )
 }
 
-export type { Props, PropsRequired, PaddingType } from './types'
+export type { Props, PropsRequired } from './types'
 
 export default Code

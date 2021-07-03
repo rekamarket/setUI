@@ -1,12 +1,12 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
-import { paddingResolve } from 'CSS'
-import { TextLayer } from 'layers'
+import { BlockLayer, TextLayer } from 'layers'
 import { PropsRequired } from './types'
 import { component } from './data'
 import { ClassName } from './styles.css'
 
-const styles = new TextLayer()
+const block = new BlockLayer()
+const text = new TextLayer()
 
 const Text: FC<PropsRequired> = ({
   // basic
@@ -18,9 +18,6 @@ const Text: FC<PropsRequired> = ({
 
   ...rest
 }) => {
-  const { paddingTop, paddingRight, paddingBottom, paddingLeft } =
-    paddingResolve<Partial<PropsRequired>>(rest)
-
   return createElement(
     component[as],
 
@@ -29,12 +26,8 @@ const Text: FC<PropsRequired> = ({
         className,
         ClassName,
 
-        paddingTop,
-        paddingRight,
-        paddingBottom,
-        paddingLeft,
-
-        styles.set(rest).box,
+        block.set(rest).padding,
+        text.set(rest).box,
       ]),
       title,
     },
@@ -43,6 +36,6 @@ const Text: FC<PropsRequired> = ({
   )
 }
 
-export type { Props, PropsRequired, PaddingType } from './types'
+export type { Props, PropsRequired } from './types'
 
 export default Text

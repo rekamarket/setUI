@@ -1,18 +1,5 @@
-import type {
-  PaddingSizeType,
-  FontFamilyType,
-  FontSizeType,
-  FontStyleType,
-  FontWeightType,
-  ColorType,
-  TextAlignType,
-  BackgroundColorType,
-  BorderColorType,
-  BorderRadiusType,
-  BorderWidthType,
-  DisplayType,
-  PaddingType,
-} from 'CSS'
+import type { DisplayType } from 'CSS'
+import type { BlockLayerProps, TextLayerProps } from 'layers'
 
 export type AsType = 'code' | 'var' | 'kbd' | 'samp'
 
@@ -23,25 +10,9 @@ type BasicProps = {
 
 type StyleProps = {
   as?: AsType
-  color?: ColorType
   display?: DisplayType
+} & BlockLayerProps &
+  TextLayerProps
 
-  align?: TextAlignType
-
-  weight?: FontWeightType
-  type?: FontFamilyType
-  size?: FontSizeType
-  style?: FontStyleType
-
-  background?: BackgroundColorType
-
-  borderColor?: BorderColorType
-  borderRadius?: BorderRadiusType
-  borderWidth?: BorderWidthType
-}
-
-export type { PaddingType } from 'CSS'
-export type Props = BasicProps & StyleProps & PaddingType
-export type PropsRequired = BasicProps &
-  Required<StyleProps> &
-  Required<PaddingType>
+export type Props = BasicProps & StyleProps
+export type PropsRequired = BasicProps & Required<StyleProps>

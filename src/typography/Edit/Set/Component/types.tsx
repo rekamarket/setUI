@@ -1,12 +1,4 @@
-import type {
-  BackgroundColorType,
-  ColorType,
-  FontFamilyType,
-  FontSizeType,
-  FontWeightType,
-  PaddingSizeType,
-  PaddingType,
-} from 'CSS'
+import type { BlockLayerProps, TextLayerProps } from 'layers'
 
 export type AsType = 'del' | 'ins'
 
@@ -18,17 +10,8 @@ type BasicProps = {
 
 type StyleProps = {
   as?: AsType
+} & BlockLayerProps &
+  TextLayerProps
 
-  background?: BackgroundColorType
-  color?: ColorType
-
-  weight?: FontWeightType
-  type?: FontFamilyType
-  size?: FontSizeType
-}
-
-export type { PaddingType } from 'CSS'
-export type Props = BasicProps & StyleProps & PaddingType
-export type PropsRequired = BasicProps &
-  Required<StyleProps> &
-  Required<PaddingType>
+export type Props = BasicProps & StyleProps
+export type PropsRequired = BasicProps & Required<StyleProps>

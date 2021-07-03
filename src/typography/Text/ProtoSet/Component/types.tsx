@@ -1,5 +1,5 @@
 import type { PaddingType } from 'CSS'
-import { TextLayerProps } from 'layers'
+import type { BlockLayerProps, TextLayerProps } from 'layers'
 
 export type AsType =
   | 'span'
@@ -23,8 +23,7 @@ type BasicProps = {
   title?: string
 }
 
-export type { PaddingType } from 'CSS'
-export type Props = BasicProps & TextLayerProps & PaddingType
+export type Props = BasicProps & BlockLayerProps & TextLayerProps
 export type PropsRequired = BasicProps &
-  Required<TextLayerProps> &
-  Required<PaddingType>
+  Required<BlockLayerProps> &
+  Required<TextLayerProps>

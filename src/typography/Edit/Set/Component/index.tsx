@@ -1,16 +1,12 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
-import {
-  Color,
-  BackgroundColor,
-  FontFamily,
-  FontWeight,
-  FontSize,
-  paddingResolve,
-} from 'CSS'
+import { BlockLayer, TextLayer } from 'layers'
 import { PropsRequired } from './types'
 import { component } from './data'
 import { ClassName } from './styles.css'
+
+const block = new BlockLayer()
+const text = new TextLayer()
 
 const Edit: FC<PropsRequired> = ({
   // basic
@@ -19,21 +15,10 @@ const Edit: FC<PropsRequired> = ({
   datetime,
   className,
 
-  // styles
-  background,
-  color,
-
-  type,
-  size,
-  weight,
-
   children,
 
   ...rest
 }) => {
-  const { paddingTop, paddingRight, paddingBottom, paddingLeft } =
-    paddingResolve<Partial<PropsRequired>>(rest)
-
   return createElement(
     component[as],
 
@@ -41,17 +26,9 @@ const Edit: FC<PropsRequired> = ({
       className: cn([
         className,
         ClassName,
-        Color[color],
-        BackgroundColor[background],
-
-        FontFamily[type],
-        FontSize[size],
-        FontWeight[weight],
-
-        paddingTop,
-        paddingRight,
-        paddingBottom,
-        paddingLeft,
+        block.set(rest).padding,
+        block.set(rest).background,
+        text.set(rest).box,
       ]),
       cite,
       dateTime: datetime,
@@ -61,6 +38,6 @@ const Edit: FC<PropsRequired> = ({
   )
 }
 
-export type { Props, PropsRequired, PaddingType } from './types'
+export type { Props, PropsRequired } from './types'
 
 export default Edit
