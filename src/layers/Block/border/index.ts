@@ -16,6 +16,15 @@ export {
 } from './radius'
 export type { BorderRadiusType, BorderRadiusProps } from './radius'
 
+// Style
+export {
+  BorderStyle,
+  BorderStyleMap,
+  BorderStyleKeys,
+  borderStyleResolve,
+} from './style'
+export type { BorderStyleType, BorderStyleProps } from './style'
+
 // Thickness
 export {
   BorderThickness,

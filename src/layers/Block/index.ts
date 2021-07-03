@@ -5,6 +5,8 @@ import {
   borderColorResolve,
   BorderRadius,
   borderRadiusResolve,
+  BorderStyle,
+  borderStyleResolve,
   BorderThickness,
   borderThicknessResolve,
 } from './border'
@@ -22,6 +24,7 @@ import type {
   MarginType,
   BorderColorType,
   BorderRadiusType,
+  BorderStyleType,
   BorderThicknessType,
   BackgroundClipType,
   BackgroundColorType,
@@ -39,6 +42,7 @@ class BoxLayer {
   // border
   borderColor: BorderColorType
   borderRadius: BorderRadiusType
+  borderStyle: BorderStyleType
   borderThickness: BorderThicknessType
 
   // background
@@ -65,6 +69,7 @@ class BoxLayer {
     // border
     this.borderColor = borderColorResolve<Props>(props)
     this.borderRadius = borderRadiusResolve<Props>(props)
+    this.borderStyle = borderStyleResolve<Props>(props)
     this.borderThickness = borderThicknessResolve<Props>(props)
 
     // background
@@ -97,6 +102,7 @@ class BoxLayer {
     return [
       BorderColor[this.borderColor],
       BorderRadius[this.borderRadius],
+      BorderStyle[this.borderStyle],
       BorderThickness[this.borderThickness],
     ]
       .filter(Boolean)
