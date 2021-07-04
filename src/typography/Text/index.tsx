@@ -16,7 +16,7 @@ import {
   Superscript,
   UnarticulatedAnnotation,
 } from './Subsets'
-import { Placeholder } from './Supersets'
+// import { Placeholder } from './Supersets'
 
 interface I<T = unknown> extends FC<T> {
   // subsets
@@ -37,7 +37,7 @@ interface I<T = unknown> extends FC<T> {
   UnarticulatedAnnotation: typeof UnarticulatedAnnotation
 
   // supersets
-  Placeholder: typeof Placeholder
+  // Placeholder: typeof Placeholder
 }
 
 const Text: I<Props> = (props) => Set(props)
@@ -60,7 +60,7 @@ Text.Superscript = Superscript
 Text.UnarticulatedAnnotation = UnarticulatedAnnotation
 
 // supersets
-Text.Placeholder = Placeholder
+// Text.Placeholder = Placeholder
 
 export type { Props } from './Set'
 export default Text

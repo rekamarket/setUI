@@ -1,4 +1,3 @@
-import { StateStyle } from 'utils'
 import { Color, colorResolve } from './color'
 import {
   FontFamily,

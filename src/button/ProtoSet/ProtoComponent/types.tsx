@@ -1,4 +1,4 @@
-import type { TextTransformProps } from 'CSS'
+import type { TextTransformProps } from 'layers/Text/text'
 
 import type {
   RadiusProps,

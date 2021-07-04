@@ -1,4 +1,3 @@
-import { StateStyle } from 'utils'
 import { marginResolve } from './margin'
 import {
   BorderColor,
