@@ -1,28 +1,14 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
-import {
-  colorResolve,
-  textAlignResolve,
-  TextDecorationColor,
-  textDecorationResolve,
-  TextDecorationStyle,
-  TextDecorationThickness,
-  textTransformResolve,
-  fontSizeResolve,
-  fontStyleResolve,
-  fontWeightResolve,
-  FontFamily,
-  BackgroundColor,
-  BorderColor,
-  BorderRadius,
-  BorderWidth,
-  Display,
-  paddingResolve,
-} from 'CSS'
+import { Display } from 'CSS'
+import { BlockLayer, TextLayer } from 'layers'
 import { weightResolve } from '../css'
 import { PropsRequired } from './types'
 import { headers } from './data'
 import { ClassName } from './styles.css'
+
+const block = new BlockLayer()
+const text = new TextLayer()
 
 const Heading: FC<PropsRequired> = ({
   // basic
@@ -33,25 +19,10 @@ const Heading: FC<PropsRequired> = ({
   // styles
   display,
 
-  type,
-
-  decorationColor,
-  decorationStyle,
-  decorationThickness,
-
-  background,
-
-  borderColor,
-  borderRadius,
-  borderWidth,
-
   children,
 
   ...rest
 }) => {
-  const { paddingTop, paddingRight, paddingBottom, paddingLeft } =
-    paddingResolve<Partial<PropsRequired>>(rest)
-
   return createElement(
     headers[level],
 
@@ -60,32 +31,10 @@ const Heading: FC<PropsRequired> = ({
         className,
         ClassName,
         Display[display],
-        colorResolve<Partial<PropsRequired>>(rest),
-
-        textAlignResolve<Partial<PropsRequired>>(rest),
-
-        textDecorationResolve<Partial<PropsRequired>>(rest),
-        TextDecorationColor[decorationColor] || TextDecorationColor.default,
-        TextDecorationStyle[decorationStyle] || TextDecorationStyle.default,
-        TextDecorationThickness[decorationThickness] ||
-          TextDecorationThickness.initial,
-        textTransformResolve<Partial<PropsRequired>>(rest),
-
-        FontFamily[type] || FontFamily.default,
-        fontSizeResolve<Partial<PropsRequired>>(rest),
-        fontSizeResolve<Partial<PropsRequired>>(rest),
+        block.set(rest).background,
+        block.set(rest).border,
+        text.set(rest).box,
         weightResolve<Partial<PropsRequired>>(rest),
-
-        BackgroundColor[background],
-
-        BorderColor[borderColor],
-        BorderRadius[borderRadius],
-        BorderWidth[borderWidth],
-
-        paddingTop,
-        paddingRight,
-        paddingBottom,
-        paddingLeft,
       ]),
     },
 
@@ -93,6 +42,6 @@ const Heading: FC<PropsRequired> = ({
   )
 }
 
-export type { Props, PropsRequired, PaddingType } from './types'
+export type { Props, PropsRequired } from './types'
 
 export default Heading
