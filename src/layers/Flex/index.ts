@@ -1,4 +1,3 @@
-import { StateStyle } from 'utils'
 import { AlignContent, alignContentResolve } from './alignContent'
 import { AlignItems, alignItemsResolve } from './alignItems'
 import { FlexDirection, flexDirectionResolve } from './flexDirection'
@@ -73,6 +72,13 @@ class FlexLayer {
       .join(' ')
   }
 }
+
+export { AlignContentMap } from './alignContent'
+export { AlignItemsMap } from './alignItems'
+export { FlexDirectionMap } from './flexDirection'
+export { FlexWrapMap } from './flexWrap'
+export { GapMap } from './gap'
+export { JustifyContentMap } from './justifyContent'
 
 export type { Props } from './types'
 export default FlexLayer
