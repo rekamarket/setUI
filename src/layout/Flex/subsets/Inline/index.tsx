@@ -4,7 +4,7 @@ import {
   AlignContentMap,
   AlignItemsMap,
   FlexWrapMap,
-} from 'CSS'
+} from 'layers/Flex'
 import Component, { Props } from '../../Component'
 
 const Inline: VFC<

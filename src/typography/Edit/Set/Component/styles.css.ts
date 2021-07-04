@@ -1,5 +1,6 @@
 import { style } from '@vanilla-extract/css'
-import { DisplayMap, TextDecorationLineMap } from 'CSS'
+import { DisplayMap } from 'CSS'
+import { TextDecorationLineMap } from 'layers/Text/text'
 
 export const ClassName = style({
   display: DisplayMap.block,

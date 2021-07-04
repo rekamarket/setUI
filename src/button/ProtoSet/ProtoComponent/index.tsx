@@ -1,6 +1,6 @@
 import { VFC, createElement } from 'react'
 import cn from 'classnames'
-import { TextTransform } from 'CSS'
+import { TextTransform } from 'layers/Text/text'
 import { Radius, Shape, Size, Theme, Variant } from './css'
 import { Props } from './types'
 import { ClassName } from './styles.css'

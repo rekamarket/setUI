@@ -1,11 +1,10 @@
 import React, { VFC, useMemo } from 'react'
 import cn from 'classnames'
-import { BackgroundColor } from 'CSS'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 import { Size } from '../css'
 
-const Component: VFC<Props> = ({ color, size, length = 3 }) => {
+const Component: VFC<Props> = ({ size, length = 3 }) => {
   const blocks = useMemo(() => Array.from({ length }), [length])
 
   return (
@@ -13,11 +12,7 @@ const Component: VFC<Props> = ({ color, size, length = 3 }) => {
       {blocks.map((_, index) => (
         <div
           key={index}
-          className={cn([
-            ClassName,
-            BackgroundColor[color] || BackgroundColor.default,
-            Size[size] || Size.default,
-          ])}
+          className={cn([ClassName, Size[size] || Size.default])}
         />
       ))}
     </>

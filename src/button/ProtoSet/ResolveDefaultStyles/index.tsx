@@ -1,6 +1,6 @@
 import { VFC } from 'react'
 import cn from 'classnames'
-import { textTransformResolve } from 'CSS'
+import { textTransformResolve } from 'layers/Text/text'
 import ProtoComponent, {
   radiusResolve,
   shapeResolve,

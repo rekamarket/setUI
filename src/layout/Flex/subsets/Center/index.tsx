@@ -5,7 +5,7 @@ import {
   FlexDirectionMap,
   FlexWrapMap,
   JustifyContentMap,
-} from 'CSS'
+} from 'layers/Flex'
 import Component, { Props } from '../../Component'
 
 const Center: VFC<

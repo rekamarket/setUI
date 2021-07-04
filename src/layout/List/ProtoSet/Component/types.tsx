@@ -1,22 +1,5 @@
-import type {
-  // flex
-  AlignContentType,
-  AlignItemsType,
-  FlexWrapType,
-  JustifyContentType,
-
-  // generic
-  BackgroundProps,
-  BackgroundOpacityProps,
-  BorderColorType,
-  BorderRadiusType,
-  BorderWidthType,
-  GapType,
-  MarginSizeType,
-  PaddingSizeType,
-  ZIndexType,
-  WidthType,
-} from 'CSS'
+import type { ZIndexType, WidthType } from 'CSS'
+import type { BlockLayerProps, FlexLayerProps } from 'layers'
 import { DirectionProps, DividerColorProps, DividerWeightProps } from '../css'
 
 export type AsType = 'ul' | 'ol' | 'menu'
@@ -28,44 +11,13 @@ type BasicProps = {
   className?: string
 }
 
-type Styles = BackgroundProps &
-  BackgroundOpacityProps &
+type Styles = BlockLayerProps &
+  FlexLayerProps &
   DirectionProps &
   DividerColorProps &
   DividerWeightProps
 
 type StyleProps = {
-  // flex
-  alignContent?: AlignContentType
-  alignItems?: AlignItemsType
-  wrap?: FlexWrapType
-  justifyContent?: JustifyContentType
-
-  // generic
-  borderColor?: BorderColorType
-  borderRadius?: BorderRadiusType
-  borderWidth?: BorderWidthType
-
-  gap?: GapType
-  gapX?: GapType
-  gapY?: GapType
-
-  margin?: MarginSizeType
-  marginX?: MarginSizeType
-  marginY?: MarginSizeType
-  marginTop?: MarginSizeType
-  marginRight?: MarginSizeType
-  marginBottom?: MarginSizeType
-  marginLeft?: MarginSizeType
-
-  padding?: PaddingSizeType
-  paddingX?: PaddingSizeType
-  paddingY?: PaddingSizeType
-  paddingTop?: PaddingSizeType
-  paddingRight?: PaddingSizeType
-  paddingBottom?: PaddingSizeType
-  paddingLeft?: PaddingSizeType
-
   zIndex?: ZIndexType
   width?: WidthType
 } & Styles

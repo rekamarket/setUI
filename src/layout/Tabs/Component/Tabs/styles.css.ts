@@ -1,5 +1,5 @@
 import { style, globalStyle } from '@vanilla-extract/css'
-import { FontWeightMap } from 'CSS'
+import { FontWeightMap } from 'layers/Text/font'
 
 export const ClassName = style({
   border: '1px solid #333',
