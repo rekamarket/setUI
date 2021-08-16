@@ -2,13 +2,18 @@ import { FC, createElement } from 'react'
 import cn from 'classnames'
 import { Display } from 'CSS'
 import { BlockLayer, TextLayer } from 'layers'
-import { weightResolve } from '../css'
+import { weightResolve, Weight, WeightProps } from '../css'
 import { PropsRequired } from './types'
 import { headers } from './data'
 import { ClassName } from './styles.css'
 
 const block = new BlockLayer()
-const text = new TextLayer()
+const text = new TextLayer<WeightProps>({
+  fontWeight: {
+    resolver: weightResolve,
+    Style: Weight,
+  },
+})
 
 const Heading: FC<PropsRequired> = ({
   // basic
@@ -33,7 +38,6 @@ const Heading: FC<PropsRequired> = ({
         Display[display],
         block.set(rest).box,
         text.set(rest).box,
-        weightResolve<Partial<PropsRequired>>(rest),
       ]),
     },
 

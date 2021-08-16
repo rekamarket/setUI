@@ -1,18 +1,16 @@
-import { Style } from './styles.css'
-
 export function resolve<T>(props: T) {
   switch (true) {
     case 'regular' in props: {
-      return Style.regular
+      return 'regular'
     }
     case 'bold' in props: {
-      return Style.bold
+      return 'bold'
     }
-    case 'weight' in props: {
-      return Style[props['weight']]
+    case 'fontWeight' in props: {
+      return props['fontWeight']
     }
     default: {
-      return Style.initial
+      return undefined
     }
   }
 }

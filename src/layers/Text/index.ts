@@ -25,6 +25,7 @@ import {
   textTransformResolve,
 } from './text'
 import type {
+  ConfigOverride,
   Props,
   ColorType,
   FontFamilyType,
@@ -61,6 +62,16 @@ class TextLayer {
   CSStextDecorationThickness: TextDecorationThicknessType
   CSStextTransform: TextTransformType
 
+  constructor(config?: ConfigOverride) {
+    if (config && 'fontWeight' in config) {
+      this.fontWeightResolve = config.fontWeight.resolver;
+      this.FontWeight = config.fontWeight.Style;
+    } else {
+      this.fontWeightResolve = fontWeightResolve;
+      this.FontWeight = FontWeight;
+    }
+  }
+
   public set(props: Props) {
     console.log('set', props)
 
@@ -71,7 +82,7 @@ class TextLayer {
     this.CSSfontFamily = fontFamilyResolve<Props>(props)
     this.CSSfontSize = fontSizeResolve<Props>(props)
     this.CSSfontStyle = fontStyleResolve<Props>(props)
-    this.CSSfontWeight = fontWeightResolve<Props>(props)
+    this.CSSfontWeight = this.fontWeightResolve<Props>(props)
 
     // outline
     this.CSSoutline = outlineResolve<Props>(props)
@@ -97,7 +108,7 @@ class TextLayer {
       FontFamily[this.CSSfontFamily],
       FontSize[this.CSSfontSize],
       FontStyle[this.CSSfontStyle],
-      FontWeight[this.CSSfontWeight],
+      this.FontWeight[this.CSSfontWeight],
     ]
       .filter(Boolean)
       .join(' ')

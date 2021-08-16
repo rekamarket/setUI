@@ -12,5 +12,5 @@ export type WeightProps =
   | Regular
   | Bold
   | {
-      weight?: Type
+      fontWeight?: Type
     }

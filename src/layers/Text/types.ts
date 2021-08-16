@@ -28,6 +28,13 @@ type TextProps = TextAlignProps &
 
 export type Props = ColorProps & FontProps & OutlineProps & TextProps
 
+export type ConfigOverride = {
+  fontWeight?: {
+    resolver: () => string;
+    Style: any;
+  }
+}
+
 export type { ColorType } from './color'
 export type {
   FontFamilyType,
