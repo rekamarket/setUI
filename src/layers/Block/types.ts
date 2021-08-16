@@ -22,6 +22,14 @@ type BackgroundProps = BackgroundClipProps &
 
 export type Props = MarginProps & BorderProps & BackgroundProps & PaddingProps
 
+export type Config = {
+  mutations?: any
+  useBackground?: boolean
+  useBorder?: boolean
+  useMargin?: boolean
+  usePadding?: boolean
+}
+
 export type { MarginType } from './margin'
 export type {
   BorderColorType,

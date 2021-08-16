@@ -19,6 +19,7 @@ import {
 } from './background'
 import { paddingResolve } from './padding'
 import type {
+  Config,
   Props,
   MarginType,
   BorderColorType,
@@ -55,6 +56,75 @@ class BoxLayer {
   paddingBottom: PaddingType
   paddingLeft: PaddingType
 
+  constructor(config?: Config) {
+    if (config?.useBackground) {
+      this.background = () => {
+        return [
+          BackgroundClip[this.backgroundClip],
+          BackgroundColor[this.backgroundColor],
+          BackgroundOpacity[this.backgroundOpacity],
+        ]
+          .filter(Boolean)
+          .join(' ')
+      }
+    } else {
+      this.background = () => {
+        return ''
+      }
+    }
+
+    if (config?.useBorder) {
+      this.border = () => {
+        return [
+          BorderColor[this.borderColor],
+          BorderRadius[this.borderRadius],
+          BorderStyle[this.borderStyle],
+          BorderThickness[this.borderThickness],
+        ]
+          .filter(Boolean)
+          .join(' ')
+      }
+    } else {
+      this.border = () => {
+        return ''
+      }
+    }
+
+    if (config?.useMargin) {
+      this.margin = () => {
+        return [
+          this.marginTop,
+          this.marginRight,
+          this.marginBottom,
+          this.marginLeft,
+        ]
+          .filter(Boolean)
+          .join(' ')
+      }
+    } else {
+      this.margin = () => {
+        return ''
+      }
+    }
+
+    if (config?.usePadding) {
+      this.padding = () => {
+        return [
+          this.paddingTop,
+          this.paddingRight,
+          this.paddingBottom,
+          this.paddingLeft,
+        ]
+          .filter(Boolean)
+          .join(' ')
+      }
+    } else {
+      this.padding = () => {
+        return ''
+      }
+    }
+  }
+
   public set(props: Props) {
     console.log('set', props)
 
@@ -86,55 +156,14 @@ class BoxLayer {
     return this
   }
 
-  public get margin() {
-    return [
-      this.marginTop,
-      this.marginRight,
-      this.marginBottom,
-      this.marginLeft,
-    ]
-      .filter(Boolean)
-      .join(' ')
-  }
-
-  public get border() {
-    return [
-      BorderColor[this.borderColor],
-      BorderRadius[this.borderRadius],
-      BorderStyle[this.borderStyle],
-      BorderThickness[this.borderThickness],
-    ]
-      .filter(Boolean)
-      .join(' ')
-  }
-
-  public get background() {
-    return [
-      BackgroundClip[this.backgroundClip],
-      BackgroundColor[this.backgroundColor],
-      BackgroundOpacity[this.backgroundOpacity],
-    ]
-      .filter(Boolean)
-      .join(' ')
-  }
-
-  public get padding() {
-    return [
-      this.paddingTop,
-      this.paddingRight,
-      this.paddingBottom,
-      this.paddingLeft,
-    ]
-      .filter(Boolean)
-      .join(' ')
-  }
-
   public get outer() {
-    return [this.margin, this.border, this.background].filter(Boolean).join(' ')
+    return [this.margin(), this.border(), this.background()]
+      .filter(Boolean)
+      .join(' ')
   }
 
   public get inner() {
-    return [this.padding].filter(Boolean).join(' ')
+    return [this.padding()].filter(Boolean).join(' ')
   }
 
   public get box() {

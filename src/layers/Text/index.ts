@@ -64,11 +64,11 @@ class TextLayer {
 
   constructor(config?: ConfigOverride) {
     if (config && 'fontWeight' in config) {
-      this.fontWeightResolve = config.fontWeight.resolver;
-      this.FontWeight = config.fontWeight.Style;
+      this.fontWeightResolve = config.fontWeight.resolver
+      this.FontWeight = config.fontWeight.Style
     } else {
-      this.fontWeightResolve = fontWeightResolve;
-      this.FontWeight = FontWeight;
+      this.fontWeightResolve = fontWeightResolve
+      this.FontWeight = FontWeight
     }
   }
 

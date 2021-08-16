@@ -5,7 +5,9 @@ import { PropsRequired } from './types'
 import { component } from './data'
 import { ClassName } from './styles.css'
 
-const block = new BlockLayer()
+const block = new BlockLayer({
+  usePadding: true,
+})
 const text = new TextLayer()
 
 const Text: FC<PropsRequired> = ({
@@ -26,7 +28,7 @@ const Text: FC<PropsRequired> = ({
         className,
         ClassName,
 
-        block.set(rest).padding,
+        block.set(rest).box,
         text.set(rest).box,
       ]),
       title,
