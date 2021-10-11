@@ -3,10 +3,10 @@ import type { Props, PaddingType } from './types'
 export const defaultProps: Partial<Props> & PaddingType = {
   color: 'black',
 
-  fontWeight: 'bold',
-  fontType: 'monospace',
-  fontSize: 'xxlarge',
-  fontStyle: 'normal',
+  weight: 'bold',
+  type: 'monospace',
+  size: 'xxlarge',
+  style: 'normal',
 
   background: 'transparent',
 

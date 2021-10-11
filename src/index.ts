@@ -1,6 +1,7 @@
 // button
 export { default as Button } from './button'
 // layout
+export { default as Article } from './layout/Article'
 export { default as Box } from './layout/Box'
 export { default as Container } from './layout/Container'
 export { default as Flex } from './layout/Flex'

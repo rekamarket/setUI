@@ -1,41 +1,40 @@
-import { FC, createElement } from 'react'
+import React, { VFC, createElement } from 'react'
 import cn from 'classnames'
-import { ZIndex } from 'CSS'
 import { BlockLayer, TextLayer } from 'layers'
+import { Length } from '../css'
 import { Props } from './types'
 import { ClassName } from './styles.css'
+import { component } from './data'
 
 const block = new BlockLayer({
+  useBorder: true,
   usePadding: true,
-  useMargin: true,
 })
 const text = new TextLayer()
 
-const Paragraph: FC<Props> = ({
+const Article: VFC<Props> = ({
+  as,
   className,
-
-  zIndex,
-
+  length,
   children,
-
   ...rest
-}) => {
-  return (
-    <p
-      className={cn([
-        // root
+}) =>
+  createElement(
+    component[as],
+
+    {
+      className: cn([
         className,
         ClassName,
+        Length[length],
         block.set(rest).box,
         text.set(rest).box,
-        ZIndex[zIndex] || ZIndex.default,
-      ])}
-    >
-      {children}
-    </p>
+      ]),
+    },
+
+    children
   )
-}
 
 export type { Props } from './types'
 
-export default Paragraph
+export default Article

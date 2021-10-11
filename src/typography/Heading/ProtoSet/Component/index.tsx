@@ -31,25 +31,21 @@ const Heading: FC<PropsRequired> = ({
   children,
 
   ...rest
-}) => {
-  console.log('text.set(rest).box', text.set(rest).box)
+}) => createElement(
+  headers[level],
 
-  return createElement(
-    headers[level],
+  {
+    className: cn([
+      className,
+      ClassName,
+      Display[display],
+      block.set(rest).box,
+      text.set(rest).box,
+    ]),
+  },
 
-    {
-      className: cn([
-        className,
-        ClassName,
-        Display[display],
-        block.set(rest).box,
-        text.set(rest).box,
-      ]),
-    },
-
-    children
-  )
-}
+  children
+)
 
 export type { Props, PropsRequired } from './types'
 
