@@ -8,18 +8,20 @@ import { ClassName } from './styles.css'
 
 const displayName = 'Heading.H1'
 
-const H1: FC<Props> = ({ className, ...props }) =>
-  ProtoSet({
-    ...object.mergePropsWithWarning<PropsRequired>(
-      defaultProps,
-      props,
-      displayName
-    ),
+const H1: FC<Props> = ({ className, ...props }) => {
+  console.log(
+    '>',
+    object.mergePropsWithWarning<PropsRequired>(defaultProps, props)
+  )
+
+  return ProtoSet({
+    ...object.mergePropsWithWarning<PropsRequired>(defaultProps, props),
 
     // props override
     level: 1,
     className: cn(ClassName, className),
   })
+}
 
 H1.displayName = displayName
 

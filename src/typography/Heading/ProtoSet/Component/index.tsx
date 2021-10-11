@@ -7,7 +7,11 @@ import { PropsRequired } from './types'
 import { headers } from './data'
 import { ClassName } from './styles.css'
 
-const block = new BlockLayer()
+const block = new BlockLayer({
+  usePadding: true,
+  useMargin: true,
+})
+
 const text = new TextLayer<WeightProps>({
   fontWeight: {
     resolver: weightResolve,
@@ -28,6 +32,8 @@ const Heading: FC<PropsRequired> = ({
 
   ...rest
 }) => {
+  console.log('text.set(rest).box', text.set(rest).box)
+
   return createElement(
     headers[level],
 

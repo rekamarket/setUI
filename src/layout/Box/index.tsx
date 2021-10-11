@@ -1,25 +1,32 @@
-import React, { VFC } from 'react'
-import Component, { Props as ComponentProps } from './Component'
-// import { x16x9, x4x3, x1x1 } from './subsets'
-// import { Placeholder } from './supersets'
+import { FC } from 'react'
+import Set, { Props } from './Set'
+// import { H1, H2, H3, H4, H5, H6 } from './Subsets'
+// import { Placeholder } from './Supersets'
 
-interface I<T = unknown> extends VFC<T> {
+interface I<T = unknown> extends FC<T> {
   // subsets
-  // x16x9: typeof x16x9
-  // x4x3: typeof x4x3
-  // x1x1: typeof x1x1
+  // H1: typeof H1
+  // H2: typeof H2
+  // H3: typeof H3
+  // H4: typeof H4
+  // H5: typeof H5
+  // H6: typeof H6
   // supersets
   // Placeholder: typeof Placeholder
 }
 
-const Box: I<ComponentProps> = (props) => Component(props)
+const Box: I<Props> = (props) => Set(props)
 
 // subsets
-// Box.x16x9 = x16x9
-// Box.x4x3 = x4x3
-// Box.x1x1 = x1x1
+// Heading.H1 = H1
+// Heading.H2 = H2
+// Heading.H3 = H3
+// Heading.H4 = H4
+// Heading.H5 = H5
+// Heading.H6 = H6
 
 // supersets
-// Box.Placeholder = Placeholder
+// Heading.Placeholder = Placeholder
 
+export type { Props } from './Set'
 export default Box

@@ -1,3 +1,4 @@
 {
-  "plugins": ["@vanilla-extract/babel-plugin"]
+  "presets": ["next/babel"],
+  "plugins": [["styled-components", { "ssr": true }], "@vanilla-extract/babel-plugin"]
 }

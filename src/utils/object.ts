@@ -24,7 +24,10 @@ function mergePropsWithWarning<T>(
     }
   })
 
-  return props
+  return {
+    ...defaultProps,
+    ...props,
+  }
 }
 
 export default {

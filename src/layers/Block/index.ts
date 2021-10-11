@@ -10,12 +10,22 @@ import {
   borderThicknessResolve,
 } from './border'
 import {
+  BackgroundAttachment,
+  backgroundAttachmentResolve,
   BackgroundClip,
   backgroundClipResolve,
   BackgroundColor,
   backgroundColorResolve,
   BackgroundOpacity,
   backgroundOpacityResolve,
+  BackgroundOrigin,
+  backgroundOriginResolve,
+  BackgroundPosition,
+  backgroundPositionResolve,
+  BackgroundRepeat,
+  backgroundRepeatResolve,
+  BackgroundSize,
+  backgroundSizeResolve,
 } from './background'
 import { paddingResolve } from './padding'
 import type {
@@ -26,31 +36,45 @@ import type {
   BorderRadiusType,
   BorderStyleType,
   BorderThicknessType,
+  BackgroundAttachmentType,
   BackgroundClipType,
   BackgroundColorType,
   BackgroundOpacityType,
+  BackgroundOriginType,
+  BackgroundPositionType,
+  BackgroundRepeatType,
+  BackgroundSizeType,
   PaddingType,
 } from './types'
 
 class BoxLayer {
   // margin
+  margin: () => string
   marginTop: MarginType
   marginRight: MarginType
   marginBottom: MarginType
   marginLeft: MarginType
 
   // border
+  border: () => string
   borderColor: BorderColorType
   borderRadius: BorderRadiusType
   borderStyle: BorderStyleType
   borderThickness: BorderThicknessType
 
   // background
+  background: () => string
+  backgroundAttachment: BackgroundAttachmentType
   backgroundClip: BackgroundClipType
   backgroundColor: BackgroundColorType
   backgroundOpacity: BackgroundOpacityType
+  backgroundOrigin: BackgroundOriginType
+  backgroundPosition: BackgroundPositionType
+  backgroundRepeat: BackgroundRepeatType
+  backgroundSize: BackgroundSizeType
 
   // padding
+  padding: () => string
   paddingTop: PaddingType
   paddingRight: PaddingType
   paddingBottom: PaddingType
@@ -60,9 +84,14 @@ class BoxLayer {
     if (config?.useBackground) {
       this.background = () => {
         return [
+          BackgroundAttachment[this.backgroundAttachment],
           BackgroundClip[this.backgroundClip],
           BackgroundColor[this.backgroundColor],
           BackgroundOpacity[this.backgroundOpacity],
+          BackgroundOrigin[this.backgroundOrigin],
+          BackgroundPosition[this.backgroundPosition],
+          BackgroundRepeat[this.backgroundRepeat],
+          BackgroundSize[this.backgroundSize],
         ]
           .filter(Boolean)
           .join(' ')
@@ -142,9 +171,14 @@ class BoxLayer {
     this.borderThickness = borderThicknessResolve<Props>(props)
 
     // background
+    this.backgroundAttachment = backgroundAttachmentResolve<Props>(props)
     this.backgroundClip = backgroundClipResolve<Props>(props)
     this.backgroundColor = backgroundColorResolve<Props>(props)
     this.backgroundOpacity = backgroundOpacityResolve<Props>(props)
+    this.backgroundOrigin = backgroundOriginResolve<Props>(props)
+    this.backgroundPosition = backgroundPositionResolve<Props>(props)
+    this.backgroundRepeat = backgroundRepeatResolve<Props>(props)
+    this.backgroundSize = backgroundSizeResolve<Props>(props)
 
     // padding
     const padding = paddingResolve<Props>(props)

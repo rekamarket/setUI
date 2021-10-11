@@ -4,32 +4,36 @@ import { AspectRatio, ZIndex } from 'CSS'
 import { BlockLayer } from 'layers'
 import { Props } from './types'
 import { ClassName } from './styles.css'
+import { component } from './data'
 
-const styles = new BlockLayer()
+const block = new BlockLayer({
+  useBorder: true,
+  usePadding: true,
+})
 
 const Box: VFC<Props> = ({
+  as,
+  className,
   aspectRatio,
-
   zIndex,
-
   children,
-
   ...rest
-}) => {
-  return (
-    <div
-      className={cn([
-        // root
+}) =>
+  createElement(
+    component[as],
+
+    {
+      className: cn([
+        className,
         ClassName,
         AspectRatio[aspectRatio] || AspectRatio.default,
         ZIndex[zIndex] || ZIndex.default,
-        styles.set(rest).box,
-      ])}
-    >
-      {children}
-    </div>
+        block.set(rest).box,
+      ]),
+    },
+
+    children
   )
-}
 
 export type { Props } from './types'
 
