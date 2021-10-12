@@ -1,23 +1,25 @@
 import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-export const Keys = ['small', 'medium', 'large']
+export const Keys = ['none', 'thin', 'light', 'medium', 'bold']
 const VALUES = tuple(...Keys)
 export type Type = typeof VALUES[number]
 
 export const map: Record<Type, number> = {
-  small: 24,
-  medium: 48,
-  large: 64,
+  none: 0,
+  thin: 1,
+  light: 2,
+  medium: 3,
+  bold: 4,
 }
 
 const Styles = styleVariants(map, (value) => ({
-  '--length': `${value}ch`,
+  '--divider-weight': value,
 }))
 
 export const Style: typeof Styles & {
   default: string
 } = {
   ...Styles,
-  default: Styles['medium' as Type],
+  default: Styles['none' as Type],
 }

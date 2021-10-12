@@ -12,13 +12,7 @@ const block = new BlockLayer({
 })
 const text = new TextLayer()
 
-const Article: VFC<Props> = ({
-  as,
-  className,
-  length,
-  children,
-  ...rest
-}) =>
+const Article: VFC<Props> = ({ as, className, length, children, ...rest }) =>
   createElement(
     component[as],
 

@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import Set, { Props } from './Set'
 // import { H1, H2, H3, H4, H5, H6 } from './Subsets'
-import { FullBleed, Paragraph } from './Supersets'
+import { FullBleed } from './Supersets'
 
 interface I<T = unknown> extends FC<T> {
   // subsets
@@ -13,7 +13,6 @@ interface I<T = unknown> extends FC<T> {
   // H6: typeof H6
   // supersets
   FullBleed: typeof FullBleed
-  Paragraph: typeof Paragraph
 }
 
 const Article: I<Props> = (props) => Set(props)
@@ -28,7 +27,6 @@ const Article: I<Props> = (props) => Set(props)
 
 // supersets
 Article.FullBleed = FullBleed
-Article.Paragraph = Paragraph
 
 export type { Props } from './Set'
 export default Article

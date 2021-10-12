@@ -12,7 +12,10 @@ import { component } from './data'
 import { Props, PropsRequired } from './types'
 import { ClassName } from './styles.css'
 
-const block = new BlockLayer()
+const block = new BlockLayer({
+  usePadding: true,
+  useMargin: true,
+})
 const flex = new FlexLayer()
 
 const Flex: VFC<PropsRequired> = ({

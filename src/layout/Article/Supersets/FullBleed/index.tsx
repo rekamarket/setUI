@@ -3,10 +3,7 @@ import cn from 'classnames'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
-const FullBleed: FC<Props> = ({
-  className,
-  children,
-}) => (
+const FullBleed: FC<Props> = ({ className, children }) => (
   <div
     className={cn([
       // root
@@ -16,7 +13,7 @@ const FullBleed: FC<Props> = ({
   >
     {children}
   </div>
-);
+)
 
 export type { Props } from './types'
 
