@@ -1,10 +1,12 @@
+import { Style } from './styles.css'
+
 export function resolve<T>(props: T) {
   switch (true) {
     case 'marker' in props: {
-      return 'marker'
+      return Style[props['marker']]
     }
     default: {
-      return undefined
+      return Style.default
     }
   }
 }

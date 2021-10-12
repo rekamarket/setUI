@@ -6,6 +6,8 @@ import {
   directionResolve,
   dividerColorResolve,
   dividerWeightResolve,
+  markerResolve,
+  markerPositionResolve,
 } from '../css'
 import { displayName as dividerName } from '../SubComponents/Divider'
 import { component } from './data'
@@ -15,6 +17,7 @@ import { ClassName } from './styles.css'
 const block = new BlockLayer({
   usePadding: true,
   useMargin: true,
+  useBorder: true,
 })
 const flex = new FlexLayer()
 
@@ -29,35 +32,35 @@ const Flex: VFC<PropsRequired> = ({
   children,
 
   ...rest
-}) => {
-  return createElement(
-    component[as],
+}) => createElement(
+  component[as],
 
-    {
-      className: cn([
-        // root
-        className,
-        ClassName,
+  {
+    className: cn([
+      // root
+      className,
+      ClassName,
 
-        block.set(rest).box,
-        flex.set(rest).box,
+      block.set(rest).box,
+      flex.set(rest).box,
 
-        ZIndex[zIndex] || ZIndex.default,
-        Width[width] || Width.default,
+      ZIndex[zIndex] || ZIndex.default,
+      Width[width] || Width.default,
 
-        dividerColorResolve<Partial<PropsRequired>>(rest),
-        dividerWeightResolve<Partial<PropsRequired>>(rest),
-      ]),
-    },
+      dividerColorResolve<Partial<PropsRequired>>(rest),
+      dividerWeightResolve<Partial<PropsRequired>>(rest),
+      markerResolve<Partial<PropsRequired>>(rest),
+      markerPositionResolve<Partial<PropsRequired>>(rest),
+    ]),
+  },
 
-    Children.map(children, (child, i) => {
-      if (child.type.displayName === dividerName) {
-        return child
-      }
-      return <li {...(i === 0 && value ? { value } : {})}>{child}</li>
-    })
-  )
-}
+  Children.map(children, (child, i) => {
+    if (child.type.displayName === dividerName) {
+      return child
+    }
+    return <li {...(i === 0 && value ? { value } : {})}>{child}</li>
+  })
+)
 
 export type { Props, PropsRequired } from './types'
 

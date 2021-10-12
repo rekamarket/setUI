@@ -1,6 +1,6 @@
 import type { ZIndexType, WidthType } from 'CSS'
 import type { BlockLayerProps, FlexLayerProps } from 'layers'
-import { DirectionProps, DividerColorProps, DividerWeightProps } from '../css'
+import { DirectionProps, DividerColorProps, DividerWeightProps, MarkerProps, MarkerPositionProps} from '../css'
 
 export type AsType = 'ul' | 'ol' | 'menu'
 
@@ -15,7 +15,7 @@ type Styles = BlockLayerProps &
   FlexLayerProps &
   DirectionProps &
   DividerColorProps &
-  DividerWeightProps
+  DividerWeightProps & MarkerProps & MarkerPositionProps
 
 type StyleProps = {
   zIndex?: ZIndexType

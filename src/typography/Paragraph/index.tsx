@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import Set, { Props } from './Set'
+import Set, { Props } from './ProtoSet'
 // import { Placeholder } from './Supersets'
 
 interface I<T = unknown> extends FC<T> {

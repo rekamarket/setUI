@@ -1,23 +1,23 @@
 import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-export const Keys = ['none', 'bullet', 'circle']
+export const Keys = ['inside', 'outside']
 const VALUES = tuple(...Keys)
 export type Type = typeof VALUES[number]
 
 export const map: Record<Type, string> = {
-  none: 'none',
-  bullet: `"•"`, // U+2022 - Bullet
-  circle: `"●"`, // U+25CF - Black Circle
+  inside: 'inside',
+  outside: 'outside',
 }
 
 const Styles = styleVariants(map, (value) => ({
-  listStyleType: value,
+  listStylePosition: value as any,
 }))
 
 export const Style: typeof Styles & {
   default: string
 } = {
   ...Styles,
-  default: Styles['none' as Type],
+  default: Styles['inside' as Type],
+  initial: Styles['outside' as Type],
 }
