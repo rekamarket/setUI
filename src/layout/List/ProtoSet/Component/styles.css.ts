@@ -8,9 +8,9 @@ export const ClassName = style({
 })
 
 globalStyle(`${ClassName} li::marker`, {
-  listStyleType: "inherit",
+  listStyleType: 'inherit',
   fontSize: 14,
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-});
+})

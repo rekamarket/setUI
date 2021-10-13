@@ -1,3 +1,4 @@
+export { default as BlockQuote } from './BlockQuote'
 export { default as Heading } from './Heading'
 export { default as LineBreak } from './LineBreak'
 export { default as Paragraph } from './Paragraph'

@@ -32,35 +32,36 @@ const Flex: VFC<PropsRequired> = ({
   children,
 
   ...rest
-}) => createElement(
-  component[as],
+}) =>
+  createElement(
+    component[as],
 
-  {
-    className: cn([
-      // root
-      className,
-      ClassName,
+    {
+      className: cn([
+        // root
+        className,
+        ClassName,
 
-      block.set(rest).box,
-      flex.set(rest).box,
+        block.set(rest).box,
+        flex.set(rest).box,
 
-      ZIndex[zIndex] || ZIndex.default,
-      Width[width] || Width.default,
+        ZIndex[zIndex] || ZIndex.default,
+        Width[width] || Width.default,
 
-      dividerColorResolve<Partial<PropsRequired>>(rest),
-      dividerWeightResolve<Partial<PropsRequired>>(rest),
-      markerResolve<Partial<PropsRequired>>(rest),
-      markerPositionResolve<Partial<PropsRequired>>(rest),
-    ]),
-  },
+        dividerColorResolve<Partial<PropsRequired>>(rest),
+        dividerWeightResolve<Partial<PropsRequired>>(rest),
+        markerResolve<Partial<PropsRequired>>(rest),
+        markerPositionResolve<Partial<PropsRequired>>(rest),
+      ]),
+    },
 
-  Children.map(children, (child, i) => {
-    if (child.type.displayName === dividerName) {
-      return child
-    }
-    return <li {...(i === 0 && value ? { value } : {})}>{child}</li>
-  })
-)
+    Children.map(children, (child, i) => {
+      if (child.type.displayName === dividerName) {
+        return child
+      }
+      return <li {...(i === 0 && value ? { value } : {})}>{child}</li>
+    })
+  )
 
 export type { Props, PropsRequired } from './types'
 

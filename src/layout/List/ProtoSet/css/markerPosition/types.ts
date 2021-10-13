@@ -8,10 +8,9 @@ interface Outside {
   readonly outside?: boolean
 }
 
-export type MarkerPositionProps = 
+export type MarkerPositionProps =
   | Inside
   | Outside
   | {
-    markerPosition?: Type
-  }
-
+      markerPosition?: Type
+    }

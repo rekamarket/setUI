@@ -13,6 +13,7 @@ export { default as Tabs } from './layout/Tabs'
 export { default as BackgroundImage } from './layout/BackgroundImage'
 
 // typography
+export { default as BlockQuote } from './typography/BlockQuote'
 export { default as Heading } from './typography/Heading'
 export { default as LineBreak } from './typography/LineBreak'
 export { default as Paragraph } from './typography/Paragraph'
