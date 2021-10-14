@@ -1,14 +1,12 @@
 import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-export const Keys = ['primary', 'secondary', 'tertiary', 'monospace']
+export const Keys = ['primary', 'monospace']
 const VALUES = tuple(...Keys)
 export type Type = typeof VALUES[number]
 
 export const map: Record<Type, any> = {
-  primary: "'PT Sans', sans-serif",
-  secondary: 'TBD, sans-serif',
-  tertiary: 'None, sans-serif',
+  primary: "'Montserrat', Arial, sans-serif",
   monospace: 'monospace',
 }
 

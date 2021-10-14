@@ -2,7 +2,7 @@ import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
 export const Keys = [
-  'currentcolor',
+  'currentColor',
 
   'primary',
   'secondary',
@@ -37,7 +37,7 @@ const VALUES = tuple(...Keys)
 export type Type = typeof VALUES[number]
 
 export const map: Record<Type, any> = {
-  currentcolor: 'currentcolor',
+  currentColor: 'currentColor',
 
   primary: '#0078D4',
   secondary: '#2B88D8',
@@ -78,6 +78,6 @@ export const Style: typeof Styles & {
   initial: string
 } = {
   ...Styles,
-  default: Styles['currentcolor' as Type],
-  initial: Styles['currentcolor' as Type],
+  default: Styles['currentColor' as Type],
+  initial: Styles['currentColor' as Type],
 }

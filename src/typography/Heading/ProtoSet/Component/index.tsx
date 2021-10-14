@@ -48,6 +48,7 @@ const Heading: FC<PropsRequired> = ({
     children
   )
 
+export { LevelKeys } from './types'
 export type { Props, PropsRequired } from './types'
 
 export default Heading

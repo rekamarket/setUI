@@ -6,14 +6,9 @@ import type { Props, PropsRequired } from './types'
 import ProtoSet from '../../ProtoSet'
 import { ClassName } from './styles.css'
 
-const displayName = 'Heading.H1'
+export const displayName = 'Heading.H1'
 
 const H1: FC<Props> = ({ className, ...props }) => {
-  console.log(
-    '>',
-    object.mergePropsWithWarning<PropsRequired>(defaultProps, props)
-  )
-
   return ProtoSet({
     ...object.mergePropsWithWarning<PropsRequired>(defaultProps, props),
 

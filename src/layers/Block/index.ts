@@ -121,6 +121,7 @@ class BoxLayer {
 
     if (config?.useMargin) {
       this.margin = () => {
+        console.log('this.marginTop', this.marginTop)
         return [
           this.marginTop,
           this.marginRight,
@@ -155,10 +156,9 @@ class BoxLayer {
   }
 
   public set(props: Props) {
-    console.log('set', props)
-
     // margin
     const margin = marginResolve<Props>(props)
+    console.log('set', props, margin)
     this.marginTop = margin.top
     this.marginRight = margin.right
     this.marginBottom = margin.bottom
@@ -201,9 +201,19 @@ class BoxLayer {
   }
 
   public get box() {
+    console.log('s>', this.outer, this.inner)
     return [this.outer, this.inner].filter(Boolean).join(' ')
   }
 }
 
-export type { Props } from './types'
+export { PaddingKeys } from './padding'
+export { MarginKeys } from './margin'
+
+export type {
+  Props,
+  BorderProps,
+  BackgroundProps,
+  MarginProps,
+  PaddingProps,
+} from './types'
 export default BoxLayer

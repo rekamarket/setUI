@@ -17,11 +17,14 @@ import {
 } from './background'
 import { PaddingProps } from './padding'
 
-type BorderProps = BorderColorProps &
+export type BorderProps = BorderColorProps &
   BorderRadiusProps &
   BorderStyleProps &
   BorderThicknessProps
-type BackgroundProps = BackgroundAttachmentProps & any // & BackgroundClipProps & BackgroundColorProps & BackgroundOpacityProps & BackgroundOriginProps & BackgroundPositionProps & BackgroundRepeatProps & BackgroundSizeProps
+export type BackgroundProps = BackgroundAttachmentProps & any // & BackgroundClipProps & BackgroundColorProps & BackgroundOpacityProps & BackgroundOriginProps & BackgroundPositionProps & BackgroundRepeatProps & BackgroundSizeProps
+
+export type { MarginProps } from './margin'
+export type { PaddingProps } from './padding'
 
 export type Props = MarginProps & BorderProps & BackgroundProps & PaddingProps
 

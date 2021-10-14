@@ -6,7 +6,7 @@ import type { Props, PropsRequired } from './types'
 import ProtoSet from '../../ProtoSet'
 import { ClassName } from './styles.css'
 
-const displayName = 'Heading.H6'
+export const displayName = 'Heading.H6'
 
 const H6: FC<Props> = ({ className, ...props }) =>
   ProtoSet({

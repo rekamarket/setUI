@@ -3,14 +3,20 @@ import type { Props } from './types'
 export const defaultProps: Partial<Props> = {
   color: 'black',
 
-  fontWeight: 'bold',
-  fontType: 'monospace',
-  fontSize: 'xxlarge',
+  fontFamily: 'primary',
+  fontSize: 'xxxxlarge',
   fontStyle: 'normal',
+  fontWeight: 'bold',
 
-  background: 'transparent',
+  outline: 'none',
 
-  borderColor: 'transparent',
-  borderRadius: '0',
-  borderWidth: 'none',
+  textAlign: 'start',
+  textDecorationColor: 'currentColor',
+  textDecorationLine: 'none',
+  textDecorationStyle: 'inherit',
+  textDecorationThickness: 'initial',
+  textTransform: 'none',
+
+  margin: 'none',
+  padding: 'none',
 }

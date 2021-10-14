@@ -50,6 +50,8 @@ class TextLayer {
   CSSfontSize: FontSizeType
   CSSfontStyle: FontStyleType
   CSSfontWeight: FontWeightType
+  FontWeight: Record<string, string>
+  fontWeightResolve: <T>(props: T) => string
 
   // outline
   CSSoutline: OutlineType
@@ -73,8 +75,6 @@ class TextLayer {
   }
 
   public set(props: Props) {
-    console.log('set', props)
-
     // color
     this.CSScolor = colorResolve<Props>(props)
 
@@ -138,5 +138,21 @@ class TextLayer {
   }
 }
 
+export { ColorKeys } from './color'
+export {
+  FontFamilyKeys,
+  FontSizeKeys,
+  FontStyleKeys,
+  FontWeightKeys,
+} from './font'
+export { OutlineKeys } from './outline'
+export {
+  TextAlignKeys,
+  TextDecorationColorKeys,
+  TextDecorationLineKeys,
+  TextDecorationStyleKeys,
+  TextDecorationThicknessKeys,
+  TextTransformKeys,
+} from './text'
 export type { Props } from './types'
 export default TextLayer

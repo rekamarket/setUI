@@ -3,6 +3,7 @@ import { tuple } from 'utils'
 
 export const Keys = [
   'LAYOUT',
+  'xxxxsmall',
   'xxxsmall',
   'xxsmall',
   'xsmall',
@@ -12,6 +13,7 @@ export const Keys = [
   'xlarge',
   'xxlarge',
   'xxxlarge',
+  'xxxxlarge',
 
   /* <relative-size> values */
   'smaller',
@@ -29,15 +31,17 @@ export const map: Record<Type, number | string> = {
   // we use this value in `layout` components - to force developer to wrap strings in `typography` components
   LAYOUT: 0,
 
-  xxxsmall: 10,
-  xxsmall: 12,
-  xsmall: 14,
-  small: 16,
-  medium: 18,
-  large: 20,
-  xlarge: 28,
-  xxlarge: 32,
-  xxxlarge: 42,
+  xxxxsmall: 10,
+  xxxsmall: 12,
+  xxsmall: 14,
+  xsmall: 16,
+  small: 18,
+  medium: 24,
+  large: 36,
+  xlarge: 48,
+  xxlarge: 60,
+  xxxlarge: 72,
+  xxxxlarge: 96,
 
   /* <relative-size> values */
   smaller: 'smaller',

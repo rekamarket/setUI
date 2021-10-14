@@ -13,8 +13,8 @@ export function resolve<T>(props: T) {
     return 'line-through'
   } else if ('underline' in props) {
     return 'underline'
-  } else if ('decoration' in props) {
-    return props['decoration']
+  } else if ('textDecorationLine' in props) {
+    return props['textDecorationLine']
   } else {
     return undefined
   }
