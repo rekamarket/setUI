@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import Set, { Props } from './ProtoSet'
+import Set, { Props } from './Set'
 // import { Placeholder } from './Supersets'
 
 interface I<T = unknown> extends FC<T> {
@@ -10,6 +10,7 @@ interface I<T = unknown> extends FC<T> {
 const Paragraph: I<Props> = (props) => Set(props)
 
 // supersets
-// Paragraph.Placeholder = Placeholder
+// Heading.Placeholder = Placeholder
 
+export type { Props } from './Set'
 export default Paragraph

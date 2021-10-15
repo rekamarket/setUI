@@ -3,22 +3,21 @@ import cn from 'classnames'
 import { object } from 'utils'
 import { defaultProps } from './defaultProps'
 import type { Props } from './types'
-import ProtoSet from '../../ProtoSet'
+import ProtoSet from '../ProtoSet'
 import { ClassName } from './styles.css'
 
-export const displayName = 'BackgroundImage.Section'
+export const displayName = 'Paragraph'
 
-const Section: FC<Props> = ({ className, ...props }) =>
+const Set: FC<Props> = ({ className, ...props }) =>
   ProtoSet({
-    ...object.mergePropsWithWarning(defaultProps, props, displayName),
+    ...object.mergePropsWithWarning<any>(defaultProps, props, displayName),
 
     // props override
-    as: 'section',
     className: cn(ClassName, className),
   })
 
-Section.displayName = displayName
+Set.displayName = displayName
 
 export { defaultProps } from './defaultProps'
 export type { Props } from './types'
-export default Section
+export default Set

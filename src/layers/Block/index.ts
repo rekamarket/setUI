@@ -209,6 +209,24 @@ class BoxLayer {
 export { PaddingKeys } from './padding'
 export { MarginKeys } from './margin'
 
+export {
+  BackgroundAttachmentKeys,
+  BackgroundClipKeys,
+  BackgroundColorKeys,
+  BackgroundOpacityKeys,
+  BackgroundOriginKeys,
+  BackgroundPositionKeys,
+  BackgroundRepeatKeys,
+  BackgroundSizeKeys,
+} from './background'
+
+export {
+  BorderColorKeys,
+  BorderRadiusKeys,
+  BorderStyleKeys,
+  BorderThicknessKeys,
+} from './border'
+
 export type {
   Props,
   BorderProps,

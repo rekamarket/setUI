@@ -73,12 +73,12 @@ class FlexLayer {
   }
 }
 
-export { AlignContentMap } from './alignContent'
-export { AlignItemsMap } from './alignItems'
-export { FlexDirectionMap } from './flexDirection'
-export { FlexWrapMap } from './flexWrap'
-export { GapMap } from './gap'
-export { JustifyContentMap } from './justifyContent'
+export { AlignContentMap, AlignContentKeys } from './alignContent'
+export { AlignItemsMap, AlignItemsKeys } from './alignItems'
+export { FlexDirectionMap, FlexDirectionKeys } from './flexDirection'
+export { FlexWrapMap, FlexWrapKeys } from './flexWrap'
+export { GapMap, GapKeys } from './gap'
+export { JustifyContentMap, JustifyContentKeys } from './justifyContent'
 
 export type { Props } from './types'
 export default FlexLayer

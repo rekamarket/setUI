@@ -1,10 +1,6 @@
 import type { Props } from './types'
 
 export const defaultProps: Partial<Props> = {
-  symbol: 'LeftDoubleQuotation',
-  symbolGap: 'medium',
-  symbolSize: 'medium',
-
   color: 'black',
 
   fontFamily: 'primary',

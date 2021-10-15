@@ -2,12 +2,10 @@ import { style } from '@vanilla-extract/css'
 
 export const ClassName = style({
   display: 'grid',
-  gridTemplateAreas: `'before content after'`,
-  gridArea: 'content',
+  gridTemplateColumns: 'auto 1fr',
 
   selectors: {
     '&:before': {
-      gridArea: 'before',
       content: 'var(--symbol)',
       paddingRight: 'var(--symbol-gap)',
       fontSize: 'var(--symbol-size)',
