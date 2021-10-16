@@ -1,14 +1,14 @@
 import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-export const Keys = ['none', 'quote', 'doubleQuote', 'LeftDoubleQuotation']
+export const Keys = ['none', 'Quote', 'DoubleQuote', 'LeftDoubleQuotation']
 const VALUES = tuple(...Keys)
 export type Type = typeof VALUES[number]
 
 export const map: Record<Type, string> = {
   none: 'none',
-  quote: `"'"`,
-  doubleQuote: `"''"`,
+  Quote: `"'"`,
+  DoubleQuote: `"''"`,
   LeftDoubleQuotation: `"“"`, // U+201C
 }
 

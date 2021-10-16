@@ -38,5 +38,5 @@ const BlockQuote: FC<PropsRequired> = ({
 )
 
 export type { Props, PropsRequired } from './types'
-
+export { SymbolKeys, SymbolGapKeys, SymbolSizeKeys } from './css'
 export default BlockQuote

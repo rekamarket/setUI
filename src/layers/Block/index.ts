@@ -201,10 +201,17 @@ class BoxLayer {
   }
 
   public get box() {
-    console.log('s>', this.outer, this.inner)
     return [this.outer, this.inner].filter(Boolean).join(' ')
   }
 }
+
+export {
+  argTypes,
+  backgroundArgTypes,
+  borderArgTypes,
+  marginArgTypes,
+  paddingArgTypes,
+} from './storybook'
 
 export { PaddingKeys } from './padding'
 export { MarginKeys } from './margin'

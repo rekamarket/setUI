@@ -1,13 +1,20 @@
 import type { BlockLayerProps, TextLayerProps } from 'layers'
-import { SymbolProps } from './css'
+import { SymbolProps, SymbolGapProps, SymbolSizeProps } from './css'
 
 type BasicProps = {
   className?: string
   cite?: string
 }
 
-export type Props = BasicProps & BlockLayerProps & TextLayerProps & SymbolProps
+export type Props = BasicProps &
+  TextLayerProps &
+  SymbolProps &
+  SymbolGapProps &
+  SymbolSizeProps &
+  BlockLayerProps
 export type PropsRequired = BasicProps &
-  Required<BlockLayerProps> &
   Required<TextLayerProps> &
-  SymbolProps
+  SymbolProps &
+  SymbolGapProps &
+  SymbolSizeProps &
+  Required<BlockLayerProps>

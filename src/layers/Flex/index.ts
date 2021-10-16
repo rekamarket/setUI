@@ -73,6 +73,7 @@ class FlexLayer {
   }
 }
 
+export { argTypes } from './storybook'
 export { AlignContentMap, AlignContentKeys } from './alignContent'
 export { AlignItemsMap, AlignItemsKeys } from './alignItems'
 export { FlexDirectionMap, FlexDirectionKeys } from './flexDirection'

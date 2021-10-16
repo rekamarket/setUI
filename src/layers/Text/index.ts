@@ -154,5 +154,12 @@ export {
   TextDecorationThicknessKeys,
   TextTransformKeys,
 } from './text'
+export {
+  argTypes,
+  colorArgTypes,
+  fontArgTypes,
+  outlineArgTypes,
+  textArgTypes,
+} from './storybook'
 export type { Props } from './types'
 export default TextLayer
