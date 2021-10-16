@@ -6,6 +6,7 @@ module.exports = {
   components: './src/index.ts',
   outputPath: './dist/playroom',
 
+  snippets: './src/snippets/index.tsx',
   widths: [320, 768, 1024],
   port: 9000,
   openBrowser: true,
@@ -66,4 +67,5 @@ module.exports = {
     }
   }),
   iframeSandbox: 'allow-scripts',
+  typeScriptFiles: ['src/**/*.{ts,tsx}', '!**/node_modules'],
 };
