@@ -3,15 +3,15 @@ import { defaultProps } from '../defaultProps'
 import ProtoSet from '../../../ProtoSet'
 import { Props } from './types'
 
-export const displayName = 'H1'
+export const displayName = 'H6'
 
-const H1: FC<Props> = (props) =>
+const H6: FC<Props> = (props) =>
   ProtoSet({
     ...defaultProps,
     ...props,
-    level: 1,
+    level: 6,
   })
 
-H1.displayName = displayName
+H6.displayName = displayName
 
-export default H1
+export default H6

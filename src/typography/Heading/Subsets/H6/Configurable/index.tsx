@@ -6,17 +6,17 @@ import type { Props } from './types'
 import ProtoSet from '../../../ProtoSet'
 import { ClassName } from '../styles.css'
 
-export const displayName = 'Heading.H1'
+export const displayName = 'Heading.H6'
 
-const H1: FC<Props> = ({ className, ...props }) =>
+const H6: FC<Props> = ({ className, ...props }) =>
   ProtoSet({
     ...object.mergePropsWithWarning<any>(defaultProps, props),
 
     // props override
-    level: 1,
+    level: 6,
     className: cn(ClassName, className),
   })
 
-H1.displayName = displayName
+H6.displayName = displayName
 
-export default H1
+export default H6

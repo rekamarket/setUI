@@ -1,5 +1,5 @@
 export { default as BlockQuote } from './BlockQuote'
-export { default as Heading, H1 } from './Heading'
+export { default as Heading, H1, H2, H3, H4, H5, H6 } from './Heading'
 export { default as LineBreak } from './LineBreak'
 export { default as Paragraph } from './Paragraph'
 export { default as Placeholder } from './Placeholder'

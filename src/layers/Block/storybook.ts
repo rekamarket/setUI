@@ -71,6 +71,13 @@ export const borderArgTypes = {
   },
 }
 
+export const marginShorthandnArgTypes = {
+  margin: {
+    options: MarginKeys,
+    control: { type: 'select' },
+  },
+}
+
 export const marginArgTypes = {
   marginTop: {
     options: MarginKeys,
@@ -96,8 +103,12 @@ export const marginArgTypes = {
     options: MarginKeys,
     control: { type: 'select' },
   },
-  margin: {
-    options: MarginKeys,
+  ...marginShorthandnArgTypes,
+}
+
+export const paddingShorthandArgTypes = {
+  padding: {
+    options: PaddingKeys,
     control: { type: 'select' },
   },
 }
@@ -127,10 +138,7 @@ export const paddingArgTypes = {
     options: PaddingKeys,
     control: { type: 'select' },
   },
-  padding: {
-    options: PaddingKeys,
-    control: { type: 'select' },
-  },
+  ...paddingShorthandArgTypes,
 }
 
 export const argTypes = {

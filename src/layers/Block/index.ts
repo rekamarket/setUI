@@ -210,7 +210,9 @@ export {
   backgroundArgTypes,
   borderArgTypes,
   marginArgTypes,
+  marginShorthandnArgTypes,
   paddingArgTypes,
+  paddingShorthandArgTypes,
 } from './storybook'
 
 export { PaddingKeys } from './padding'

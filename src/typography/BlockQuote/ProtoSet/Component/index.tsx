@@ -20,25 +20,21 @@ const BlockQuote: FC<PropsRequired> = ({
   children,
 
   ...rest
-}) => {
-  console.log('>', symbol.set(rest).box)
+}) => (
+  <blockquote
+    cite={cite}
+    className={cn([
+      className,
+      ClassName,
 
-  return (
-    <blockquote
-      cite={cite}
-      className={cn([
-        className,
-        ClassName,
-
-        block.set(rest).box,
-        text.set(rest).box,
-        symbol.set(rest).box,
-      ])}
-    >
-      {children}
-    </blockquote>
-  )
-}
+      block.set(rest).box,
+      text.set(rest).box,
+      symbol.set(rest).box,
+    ])}
+  >
+    {children}
+  </blockquote>
+)
 
 export type { Props, PropsRequired } from './types'
 export { symbolArgTypes } from './layers'
