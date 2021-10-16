@@ -1,12 +1,10 @@
-import { Style } from './styles.css'
-
 export function resolve<T>(props: T) {
   switch (true) {
     case 'symbolGap' in props: {
-      return Style[props['symbolGap']]
+      return props['symbolGap']
     }
     default: {
-      return Style.default
+      return undefined
     }
   }
 }

@@ -4,7 +4,7 @@ import { argTypes as textArgTypes } from 'layers/Text'
 import { marginArgTypes, paddingArgTypes } from 'layers/Block'
 import { defaultProps } from './defaultProps'
 import Component, { Props, displayName } from './'
-import { SymbolKeys, SymbolGapKeys, SymbolSizeKeys } from '../ProtoSet'
+import { symbolArgTypes } from '../ProtoSet'
 
 export default {
   component: Component,
@@ -21,20 +21,7 @@ Default.args = {
 }
 
 Default.argTypes = {
-  // native
-  symbol: {
-    options: SymbolKeys,
-    control: { type: 'select ' },
-  },
-  symbolGap: {
-    options: SymbolGapKeys,
-    control: { type: 'select ' },
-  },
-  symbolSize: {
-    options: SymbolSizeKeys,
-    control: { type: 'select ' },
-  },
-
+  ...symbolArgTypes,
   ...textArgTypes,
   ...marginArgTypes,
   ...paddingArgTypes,
