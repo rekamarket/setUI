@@ -1,17 +1,17 @@
 import { FC } from 'react'
 import Set, { Props } from './Set'
-import { Main, Section } from './Subsets'
+import { Cover } from './Subsets'
 
 interface I<T = unknown> extends FC<T> {
   // subsets
-  Main: typeof Main
-  Section: typeof Section
+  Cover: typeof Cover
 }
 
 const BackgroundImage: I<Props> = (props) => Set(props)
 
-BackgroundImage.Main = Main
-BackgroundImage.Section = Section
+BackgroundImage.Cover = Cover
 
+export { Cover } from './Subsets'
 export type { Props } from './Set'
+export { default as CoverSnippets } from './Subsets/Cover/snippets'
 export default BackgroundImage

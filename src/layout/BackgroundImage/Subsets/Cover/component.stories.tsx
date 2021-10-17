@@ -14,6 +14,13 @@ const Template: Story<Props> = (args) => <Component {...args} />
 
 export const Default = Template.bind({})
 
+Default.parameters = {
+  controls: {
+    sort: 'requiredFirst',
+    include: ['children', 'image'],
+  },
+}
+
 Default.args = {
   ...defaultProps,
   image:
@@ -22,6 +29,6 @@ Default.args = {
 }
 
 Default.argTypes = {
-  ...flexArgTypes,
   ...blockArgTypes,
+  ...flexArgTypes,
 }

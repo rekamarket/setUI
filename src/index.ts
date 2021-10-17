@@ -10,7 +10,7 @@ export { default as List } from './layout/List'
 export { default as Segment } from './layout/Segment'
 export { default as Stack } from './layout/Stack'
 export { default as Tabs } from './layout/Tabs'
-export { default as BackgroundImage } from './layout/BackgroundImage'
+export { default as BackgroundImage, Cover } from './layout/BackgroundImage'
 
 // typography
 export { default as BlockQuote } from './typography/BlockQuote'

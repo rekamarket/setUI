@@ -7,4 +7,8 @@ export { default as Placeholder } from './Placeholder'
 export { default as Segment } from './Segment'
 export { default as Stack } from './Stack'
 export { default as Tabs } from './Tabs'
-export { default as BackgroundImage } from './BackgroundImage'
+export {
+  default as BackgroundImage,
+  Cover,
+  CoverSnippets,
+} from './BackgroundImage'

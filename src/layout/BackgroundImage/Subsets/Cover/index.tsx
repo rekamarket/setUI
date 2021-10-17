@@ -6,7 +6,7 @@ import type { Props } from './types'
 import ProtoSet from '../../ProtoSet'
 import { ClassName } from './styles.css'
 
-export const displayName = 'BackgroundImage.Section'
+export const displayName = 'Cover'
 
 const Section: FC<Props> = ({ className, ...props }) =>
   ProtoSet({

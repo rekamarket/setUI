@@ -1,5 +1,6 @@
 import React from 'react'
 import render from 'react-element-to-jsx-string'
+import { CoverSnippets as Cover } from 'layout'
 import {
   H1Snippets as H1,
   H2Snippets as H2,
@@ -22,10 +23,10 @@ import {
   //SubscriptSnippets as Subscript,
   //SuperscriptSnippets as Superscript,
   //UnarticulatedAnnotationSnippets as UnarticulatedAnnotation,
+  ParagraphSnippets as Paragraph,
 } from 'typography'
 
 export default [
-  ...H1,
   ...H1,
   ...H2,
   ...H3,
@@ -47,4 +48,6 @@ export default [
   // ...Subscript,
   // ...Superscript,
   // ...UnarticulatedAnnotation,
+  ...Paragraph,
+  ...Cover,
 ]

@@ -1,4 +1,5 @@
 export { default as BlockQuote } from './BlockQuote'
+
 export {
   default as Heading,
   H1,
@@ -14,9 +15,13 @@ export {
   H6,
   H6Snippets,
 } from './Heading'
+
 export { default as LineBreak } from './LineBreak'
-export { default as Paragraph } from './Paragraph'
+
+export { default as Paragraph, ParagraphSnippets } from './Paragraph'
+
 export { default as Placeholder } from './Placeholder'
+
 export {
   default as Text,
   Abbreviation,
@@ -50,5 +55,6 @@ export {
   UnarticulatedAnnotation,
   UnarticulatedAnnotationSnippets,
 } from './Text'
+
 export { default as ThematicBreak } from './ThematicBreak'
 export { default as Time } from './Time'
