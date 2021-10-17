@@ -19,8 +19,8 @@ const Text: FC<PropsRequired> = ({
   children,
 
   ...rest
-}) => {
-  return createElement(
+}) =>
+  createElement(
     component[as],
 
     {
@@ -36,8 +36,7 @@ const Text: FC<PropsRequired> = ({
 
     children
   )
-}
 
-export type { Props, PropsRequired } from './types'
+export type { Props } from './types'
 
 export default Text

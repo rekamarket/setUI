@@ -1,6 +1,6 @@
-import type { Props, PaddingType } from './types'
+import type { Props } from './types'
 
-export const defaultProps: Partial<Props> & PaddingType = {
+export const defaultProps: Partial<Props> = {
   as: 'span',
 
   // PaddingType

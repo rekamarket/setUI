@@ -1,5 +1,3 @@
 import { style } from '@vanilla-extract/css'
 
-export const ClassName = style({
-  verticalAlign: 'super',
-})
+export const ClassName = style({})

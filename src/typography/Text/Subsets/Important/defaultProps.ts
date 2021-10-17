@@ -1,15 +1,24 @@
-import type { Props, PaddingType } from './types'
+import type { Props } from './types'
 
-export const defaultProps: Partial<Props> & PaddingType = {
+export const basicProps: Partial<Props> = {
+  fontFamily: 'primary',
+  fontStyle: 'normal',
+
+  outline: 'none',
+
+  textAlign: 'start',
+  textDecorationColor: 'currentColor',
+  textDecorationLine: 'none',
+  textDecorationStyle: 'inherit',
+  textDecorationThickness: 'initial',
+  textTransform: 'none',
+}
+
+export const defaultProps: Partial<Props> = {
+  ...basicProps,
+
   color: 'black',
 
-  weight: 'bold',
-  type: 'monospace',
-  size: 'xsmall',
-  style: 'normal',
-
-  background: 'transparent',
-
-  // PaddingType
-  padding: 'none',
+  fontSize: 'medium',
+  fontWeight: 'bold',
 }

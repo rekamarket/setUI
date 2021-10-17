@@ -1,4 +1,3 @@
-import type { PaddingType } from 'CSS'
 import type { BlockLayerProps, TextLayerProps } from 'layers'
 
 export type AsType =

@@ -25,6 +25,23 @@ export {
 } from './typography/Heading'
 export { default as LineBreak } from './typography/LineBreak'
 export { default as Paragraph } from './typography/Paragraph'
-export { default as Text } from './typography/Text'
+export {
+  default as Text,
+  Abbreviation,
+  Attention,
+  Citation,
+  DefinedTerm,
+  Disclaimer,
+  Highlight,
+  Idiomatic,
+  Important,
+  Normal as Span,
+  Outdated,
+  Reference,
+  StressEmphasis,
+  Subscript,
+  Superscript,
+  UnarticulatedAnnotation,
+} from './typography/Text'
 export { default as ThematicBreak } from './typography/ThematicBreak'
 export { default as Time } from './typography/Time'

@@ -1,20 +1,20 @@
 import { FC } from 'react'
 import Set, { Props } from './Set'
 import {
-  Abbreviation,
-  Attention,
-  Citation,
-  DefinedTerm,
-  Disclaimer,
-  Highlight,
-  Idiomatic,
-  Important,
-  Normal,
-  Outdated,
-  StressEmphasis,
-  Subscript,
-  Superscript,
-  UnarticulatedAnnotation,
+  AbbreviationConfigurable as Abbreviation,
+  AttentionConfigurable as Attention,
+  CitationConfigurable as Citation,
+  DefinedTermConfigurable as DefinedTerm,
+  DisclaimerConfigurable as Disclaimer,
+  HighlightConfigurable as Highlight,
+  IdiomaticConfigurable as Idiomatic,
+  ImportantConfigurable as Important,
+  NormalConfigurable as Normal,
+  OutdatedConfigurable as Outdated,
+  StressEmphasisConfigurable as StressEmphasis,
+  SubscriptConfigurable as Subscript,
+  SuperscriptConfigurable as Superscript,
+  UnarticulatedAnnotationConfigurable as UnarticulatedAnnotation,
 } from './Subsets'
 // import { Placeholder } from './Supersets'
 
@@ -63,4 +63,36 @@ Text.UnarticulatedAnnotation = UnarticulatedAnnotation
 // Text.Placeholder = Placeholder
 
 export type { Props } from './Set'
+export {
+  AbbreviationIdiomatic as Abbreviation,
+  AbbreviationSnippets,
+  AttentionIdiomatic as Attention,
+  AttentionSnippets,
+  CitationIdiomatic as Citation,
+  CitationSnippets,
+  DefinedTermIdiomatic as DefinedTerm,
+  DefinedTermSnippets,
+  DisclaimerIdiomatic as Disclaimer,
+  DisclaimerSnippets,
+  HighlightIdiomatic as Highlight,
+  HighlightSnippets,
+  IdiomaticIdiomatic as Idiomatic,
+  IdiomaticSnippets,
+  ImportantIdiomatic as Important,
+  ImportantSnippets,
+  NormalIdiomatic as Normal,
+  NormalSnippets,
+  OutdatedIdiomatic as Outdated,
+  OutdatedSnippets,
+  CitationIdiomatic as Reference,
+  CitationSnippets as ReferenceSnippets,
+  StressEmphasisIdiomatic as StressEmphasis,
+  StressEmphasisSnippets,
+  SubscriptIdiomatic as Subscript,
+  SubscriptSnippets,
+  SuperscriptIdiomatic as Superscript,
+  SuperscriptSnippets,
+  UnarticulatedAnnotationIdiomatic as UnarticulatedAnnotation,
+  UnarticulatedAnnotationSnippets,
+} from './Subsets'
 export default Text
