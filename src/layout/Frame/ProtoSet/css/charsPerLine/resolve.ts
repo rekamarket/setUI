@@ -12,8 +12,8 @@ export function resolve<T>(props: T) {
     // case 'bold' in props: {
     //   return 'bold'
     // }
-    case 'length' in props: {
-      return props['length']
+    case 'charsPerLine' in props: {
+      return props['charsPerLine']
     }
     default: {
       return undefined

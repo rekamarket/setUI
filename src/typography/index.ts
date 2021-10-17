@@ -1,4 +1,4 @@
-export { default as BlockQuote } from './BlockQuote'
+export { default as BlockQuote, BlockQuoteSnippets } from './BlockQuote'
 
 export {
   default as Heading,

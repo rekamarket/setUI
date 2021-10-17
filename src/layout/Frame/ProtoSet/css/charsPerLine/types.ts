@@ -13,11 +13,11 @@ import type { Type } from './styles.css'
 //   readonly bold?: boolean
 // }
 
-export type LengthProps =
+export type CharsPerLineProps =
   // | Thin
   // | Light
   // | Medium
   // | Bold
   {
-    length?: Type
+    charsPerLine?: Type
   }

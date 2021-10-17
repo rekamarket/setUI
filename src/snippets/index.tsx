@@ -1,7 +1,12 @@
 import React from 'react'
 import render from 'react-element-to-jsx-string'
-import { CoverSnippets as Cover } from 'layout'
 import {
+  CoverSnippets as Cover,
+  FrameSnippets as Frame,
+  FullBleedSnippets as FullBleed,
+} from 'layout'
+import {
+  BlockQuoteSnippets as BlockQuote,
   H1Snippets as H1,
   H2Snippets as H2,
   H3Snippets as H3,
@@ -49,5 +54,8 @@ export default [
   // ...Superscript,
   // ...UnarticulatedAnnotation,
   ...Paragraph,
+  ...BlockQuote,
   ...Cover,
+  ...Frame,
+  ...FullBleed,
 ]

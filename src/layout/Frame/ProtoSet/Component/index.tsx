@@ -1,7 +1,7 @@
 import React, { VFC, createElement } from 'react'
 import cn from 'classnames'
 import { BlockLayer, TextLayer } from 'layers'
-import { Length } from '../css'
+import { CharsPerLine } from '../css'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 import { component } from './data'
@@ -12,7 +12,13 @@ const block = new BlockLayer({
 })
 const text = new TextLayer()
 
-const Article: VFC<Props> = ({ as, className, length, children, ...rest }) =>
+const Article: VFC<Props> = ({
+  as,
+  className,
+  charsPerLine,
+  children,
+  ...rest
+}) =>
   createElement(
     component[as],
 
@@ -20,7 +26,7 @@ const Article: VFC<Props> = ({ as, className, length, children, ...rest }) =>
       className: cn([
         className,
         ClassName,
-        Length[length],
+        CharsPerLine[charsPerLine],
         block.set(rest).box,
         text.set(rest).box,
       ]),

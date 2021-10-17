@@ -12,5 +12,6 @@ const BlockQuote: I<Props> = (props) => Set(props)
 // supersets
 // Text.Placeholder = Placeholder
 
+export { default as BlockQuoteSnippets } from './Set/snippets'
 export type { Props } from './Set'
 export default BlockQuote

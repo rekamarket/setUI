@@ -15,7 +15,7 @@ interface I<T = unknown> extends FC<T> {
   FullBleed: typeof FullBleed
 }
 
-const Article: I<Props> = (props) => Set(props)
+const Frame: I<Props> = (props) => Set(props)
 
 // subsets
 // Heading.H1 = H1
@@ -26,7 +26,9 @@ const Article: I<Props> = (props) => Set(props)
 // Heading.H6 = H6
 
 // supersets
-Article.FullBleed = FullBleed
+Frame.FullBleed = FullBleed
 
+export { default as FrameSnippets } from './Set/snippets'
+export { default as FullBleedSnippets } from './Supersets/FullBleed/snippets'
 export type { Props } from './Set'
-export default Article
+export default Frame

@@ -1,9 +1,9 @@
 import { style, globalStyle } from '@vanilla-extract/css'
-import { LengthMap } from '../css/length'
+import { CharsPerLineMap } from '../css/charsPerLine'
 
 export const ClassName = style({
   display: 'grid',
-  gridTemplateColumns: `1fr min(var(--length, ${LengthMap.large}ch), 100%) 1fr`,
+  gridTemplateColumns: `1fr min(var(--length, ${CharsPerLineMap.large}ch), 100%) 1fr`,
 })
 
 globalStyle(`${ClassName} > *`, {

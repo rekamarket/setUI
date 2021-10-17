@@ -6,10 +6,11 @@ import type { Props } from './types'
 import ProtoSet from '../ProtoSet'
 import { ClassName } from './styles.css'
 
-const displayName = 'Article'
+export const displayName = 'Frame'
 
 const Set: FC<Props> = ({ className, ...props }) =>
   ProtoSet({
+    as: 'div',
     ...object.mergePropsWithWarning<any>(defaultProps, props),
 
     // props override

@@ -1,7 +1,7 @@
-export { default as Article } from './Article'
 export { default as Box } from './Box'
 export { default as Container } from './Container'
 export { default as Flex } from './Flex'
+export { default as Frame, FrameSnippets, FullBleedSnippets } from './Frame'
 export { default as List } from './List'
 export { default as Placeholder } from './Placeholder'
 export { default as Segment } from './Segment'

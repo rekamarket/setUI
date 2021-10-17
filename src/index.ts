@@ -1,10 +1,10 @@
 // button
 export { default as Button } from './button'
 // layout
-export { default as Article } from './layout/Article'
 export { default as Box } from './layout/Box'
 export { default as Container } from './layout/Container'
 export { default as Flex } from './layout/Flex'
+export { default as Frame } from './layout/Frame'
 export { default as List } from './layout/List'
 // export { default as Placeholder } from './layout/Placeholder'
 export { default as Segment } from './layout/Segment'
