@@ -39,10 +39,16 @@ Heading.H6 = H6
 export type { Props } from './Set'
 export {
   H1Idiomatic as H1,
+  H1Snippets,
   H2Idiomatic as H2,
+  H2Snippets,
   H3Idiomatic as H3,
+  H3Snippets,
   H4Idiomatic as H4,
+  H4Snippets,
   H5Idiomatic as H5,
+  H5Snippets,
   H6Idiomatic as H6,
+  H6Snippets,
 } from './Subsets'
 export default Heading
