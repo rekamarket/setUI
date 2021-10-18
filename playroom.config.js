@@ -67,5 +67,6 @@ module.exports = {
     }
   }),
   iframeSandbox: 'allow-scripts',
+  frameComponent: './playroom/Frame.tsx',
   typeScriptFiles: ['src/**/*.{ts,tsx}', '!**/node_modules'],
 };
