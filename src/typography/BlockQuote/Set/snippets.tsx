@@ -5,6 +5,6 @@ export default [
   {
     group: displayName,
     name: '<blockquote>',
-    code: render(<Component>Цитата</Component>),
+    code: render(<Component>Блок с цитатой</Component>),
   },
 ]

@@ -1,10 +1,10 @@
-import React from 'react'
-import render from 'react-element-to-jsx-string'
 import {
   CoverSnippets as Cover,
   FrameSnippets as Frame,
   FullBleedSnippets as FullBleed,
+  UnorderedSnippets as Unordered,
 } from 'layout'
+
 import {
   BlockQuoteSnippets as BlockQuote,
   H1Snippets as H1,
@@ -58,4 +58,5 @@ export default [
   ...Cover,
   ...Frame,
   ...FullBleed,
+  ...Unordered,
 ]
