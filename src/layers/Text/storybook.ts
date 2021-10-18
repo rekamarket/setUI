@@ -7,7 +7,6 @@ import {
 } from './font'
 import { OutlineKeys } from './outline'
 import {
-  TextAlignKeys,
   TextDecorationColorKeys,
   TextDecorationLineKeys,
   TextDecorationStyleKeys,
@@ -49,10 +48,6 @@ export const outlineArgTypes = {
 }
 
 export const textArgTypes = {
-  textAlign: {
-    options: TextAlignKeys,
-    control: { type: 'select' },
-  },
   textDecorationColor: {
     options: TextDecorationColorKeys,
     control: { type: 'select' },

@@ -8,9 +8,9 @@ import type { Type } from './styles.css'
 //   readonly pill?: boolean
 // }
 
-export type BorderRadiusProps =
+export type CornerRadiusProps =
   // | Circle
   // | Pill
   {
-    borderRadius?: Type
+    cornerRadius?: Type
   }

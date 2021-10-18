@@ -7,15 +7,6 @@ export {
 } from './color'
 export type { BorderColorType, BorderColorProps } from './color'
 
-// Radius
-export {
-  BorderRadius,
-  BorderRadiusMap,
-  BorderRadiusKeys,
-  borderRadiusResolve,
-} from './radius'
-export type { BorderRadiusType, BorderRadiusProps } from './radius'
-
 // Style
 export {
   BorderStyle,

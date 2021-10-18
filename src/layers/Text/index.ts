@@ -11,8 +11,6 @@ import {
 } from './font'
 import { Outline, outlineResolve } from './outline'
 import {
-  TextAlign,
-  textAlignResolve,
   TextDecorationColor,
   textDecorationColorResolve,
   TextDecorationLine,
@@ -33,7 +31,6 @@ import type {
   FontStyleType,
   FontWeightType,
   OutlineType,
-  TextAlignType,
   TextDecorationColorType,
   TextDecorationLineType,
   TextDecorationStyleType,
@@ -57,7 +54,6 @@ class TextLayer {
   CSSoutline: OutlineType
 
   // text
-  CSStextAlign: TextAlignType
   CSStextDecorationColor: TextDecorationColorType
   CSStextDecorationLine: TextDecorationLineType
   CSStextDecorationStyle: TextDecorationStyleType
@@ -88,7 +84,6 @@ class TextLayer {
     this.CSSoutline = outlineResolve<Props>(props)
 
     // text
-    this.CSStextAlign = textAlignResolve<Props>(props)
     this.CSStextDecorationColor = textDecorationColorResolve<Props>(props)
     this.CSStextDecorationLine = textDecorationLineResolve<Props>(props)
     this.CSStextDecorationStyle = textDecorationStyleResolve<Props>(props)
@@ -120,7 +115,6 @@ class TextLayer {
 
   public get text() {
     return [
-      TextAlign[this.CSStextAlign],
       TextDecorationColor[this.CSStextDecorationColor],
       TextDecorationLine[this.CSStextDecorationLine],
       TextDecorationStyle[this.CSStextDecorationStyle],
@@ -147,7 +141,6 @@ export {
 } from './font'
 export { OutlineKeys } from './outline'
 export {
-  TextAlignKeys,
   TextDecorationColorKeys,
   TextDecorationLineKeys,
   TextDecorationStyleKeys,

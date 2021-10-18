@@ -7,7 +7,6 @@ import {
 } from './font'
 import { OutlineProps } from './outline'
 import {
-  TextAlignProps,
   TextDecorationColorProps,
   TextDecorationLineProps,
   TextDecorationStyleProps,
@@ -19,8 +18,7 @@ type FontProps = FontFamilyProps &
   FontSizeProps &
   FontStyleProps &
   FontWeightProps
-type TextProps = TextAlignProps &
-  TextDecorationColorProps &
+type TextProps = TextDecorationColorProps &
   TextDecorationLineProps &
   TextDecorationStyleProps &
   TextDecorationThicknessProps &
@@ -44,7 +42,6 @@ export type {
 } from './font'
 export type { OutlineType } from './outline'
 export type {
-  TextAlignType,
   TextDecorationColorType,
   TextDecorationLineType,
   TextDecorationStyleType,

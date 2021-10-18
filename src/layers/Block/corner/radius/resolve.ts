@@ -6,8 +6,8 @@ export function resolve<T>(props: T) {
     // case 'pill' in props: {
     //   return 'pill'
     // }
-    case 'borderRadius' in props: {
-      return props['borderRadius']
+    case 'cornerRadius' in props: {
+      return props['cornerRadius']
     }
     default: {
       return undefined

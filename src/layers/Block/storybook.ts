@@ -8,14 +8,11 @@ import {
   BackgroundRepeatKeys,
   BackgroundSizeKeys,
 } from './background'
-import {
-  BorderColorKeys,
-  BorderRadiusKeys,
-  BorderStyleKeys,
-  BorderThicknessKeys,
-} from './border'
+import { BorderColorKeys, BorderStyleKeys, BorderThicknessKeys } from './border'
+import { CornerRadiusKeys } from './corner'
 import { PaddingKeys } from './padding'
 import { MarginKeys } from './margin'
+import { TextAlignKeys } from './text'
 
 export const backgroundArgTypes = {
   backgroundAttachment: {
@@ -57,16 +54,19 @@ export const borderArgTypes = {
     options: BorderColorKeys,
     control: { type: 'select' },
   },
-  borderRadius: {
-    options: BorderRadiusKeys,
-    control: { type: 'select' },
-  },
   borderStyle: {
     options: BorderStyleKeys,
     control: { type: 'select' },
   },
   borderThickness: {
     options: BorderThicknessKeys,
+    control: { type: 'select' },
+  },
+}
+
+export const cornerArgTypes = {
+  cornerRadius: {
+    options: CornerRadiusKeys,
     control: { type: 'select' },
   },
 }
@@ -141,9 +141,18 @@ export const paddingArgTypes = {
   ...paddingShorthandArgTypes,
 }
 
+export const textArgTypes = {
+  textAlign: {
+    options: TextAlignKeys,
+    control: { type: 'select' },
+  },
+}
+
 export const argTypes = {
   ...backgroundArgTypes,
   ...borderArgTypes,
+  ...cornerArgTypes,
   ...marginArgTypes,
   ...paddingArgTypes,
+  ...textArgTypes,
 }

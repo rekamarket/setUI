@@ -1,14 +1,3 @@
-import { marginResolve } from './margin'
-import {
-  BorderColor,
-  borderColorResolve,
-  BorderRadius,
-  borderRadiusResolve,
-  BorderStyle,
-  borderStyleResolve,
-  BorderThickness,
-  borderThicknessResolve,
-} from './border'
 import {
   BackgroundAttachment,
   backgroundAttachmentResolve,
@@ -27,15 +16,21 @@ import {
   BackgroundSize,
   backgroundSizeResolve,
 } from './background'
+import {
+  BorderColor,
+  borderColorResolve,
+  BorderStyle,
+  borderStyleResolve,
+  BorderThickness,
+  borderThicknessResolve,
+} from './border'
+import { CornerRadius, cornerRadiusResolve } from './corner'
+import { marginResolve } from './margin'
 import { paddingResolve } from './padding'
+import { TextAlign, textAlignResolve } from './text'
 import type {
   Config,
   Props,
-  MarginType,
-  BorderColorType,
-  BorderRadiusType,
-  BorderStyleType,
-  BorderThicknessType,
   BackgroundAttachmentType,
   BackgroundClipType,
   BackgroundColorType,
@@ -44,24 +39,16 @@ import type {
   BackgroundPositionType,
   BackgroundRepeatType,
   BackgroundSizeType,
+  BorderColorType,
+  BorderStyleType,
+  BorderThicknessType,
+  CornerRadiusType,
+  MarginType,
   PaddingType,
+  TextAlignType,
 } from './types'
 
 class BoxLayer {
-  // margin
-  margin: () => string
-  marginTop: MarginType
-  marginRight: MarginType
-  marginBottom: MarginType
-  marginLeft: MarginType
-
-  // border
-  border: () => string
-  borderColor: BorderColorType
-  borderRadius: BorderRadiusType
-  borderStyle: BorderStyleType
-  borderThickness: BorderThicknessType
-
   // background
   background: () => string
   backgroundAttachment: BackgroundAttachmentType
@@ -73,12 +60,33 @@ class BoxLayer {
   backgroundRepeat: BackgroundRepeatType
   backgroundSize: BackgroundSizeType
 
+  // border
+  border: () => string
+  borderColor: BorderColorType
+  borderStyle: BorderStyleType
+  borderThickness: BorderThicknessType
+
+  // corner
+  corner: () => string
+  cornerRadius: CornerRadiusType
+
+  // margin
+  margin: () => string
+  marginTop: MarginType
+  marginRight: MarginType
+  marginBottom: MarginType
+  marginLeft: MarginType
+
   // padding
   padding: () => string
   paddingTop: PaddingType
   paddingRight: PaddingType
   paddingBottom: PaddingType
   paddingLeft: PaddingType
+
+  // text
+  text: () => string
+  textAlign: TextAlignType
 
   constructor(config?: Config) {
     if (config?.useBackground) {
@@ -106,7 +114,6 @@ class BoxLayer {
       this.border = () => {
         return [
           BorderColor[this.borderColor],
-          BorderRadius[this.borderRadius],
           BorderStyle[this.borderStyle],
           BorderThickness[this.borderThickness],
         ]
@@ -121,7 +128,6 @@ class BoxLayer {
 
     if (config?.useMargin) {
       this.margin = () => {
-        console.log('this.marginTop', this.marginTop)
         return [
           this.marginTop,
           this.marginRight,
@@ -153,12 +159,31 @@ class BoxLayer {
         return ''
       }
     }
+
+    if (config?.useCorner || true) {
+      this.corner = () => {
+        return [CornerRadius[this.cornerRadius]].filter(Boolean).join(' ')
+      }
+    } else {
+      this.corner = () => {
+        return ''
+      }
+    }
+
+    if (config?.useText || true) {
+      this.text = () => {
+        return [TextAlign[this.textAlign]].filter(Boolean).join(' ')
+      }
+    } else {
+      this.text = () => {
+        return ''
+      }
+    }
   }
 
   public set(props: Props) {
     // margin
     const margin = marginResolve<Props>(props)
-    console.log('set', props, margin)
     this.marginTop = margin.top
     this.marginRight = margin.right
     this.marginBottom = margin.bottom
@@ -166,9 +191,11 @@ class BoxLayer {
 
     // border
     this.borderColor = borderColorResolve<Props>(props)
-    this.borderRadius = borderRadiusResolve<Props>(props)
     this.borderStyle = borderStyleResolve<Props>(props)
     this.borderThickness = borderThicknessResolve<Props>(props)
+
+    // corner
+    this.cornerRadius = cornerRadiusResolve<Props>(props)
 
     // background
     this.backgroundAttachment = backgroundAttachmentResolve<Props>(props)
@@ -187,17 +214,20 @@ class BoxLayer {
     this.paddingBottom = padding.bottom
     this.paddingLeft = padding.left
 
+    // text
+    this.textAlign = textAlignResolve<Props>(props)
+
     return this
   }
 
   public get outer() {
-    return [this.margin(), this.border(), this.background()]
+    return [this.margin(), this.border(), this.background(), this.corner()]
       .filter(Boolean)
       .join(' ')
   }
 
   public get inner() {
-    return [this.padding()].filter(Boolean).join(' ')
+    return [this.padding(), this.text()].filter(Boolean).join(' ')
   }
 
   public get box() {
@@ -229,12 +259,7 @@ export {
   BackgroundSizeKeys,
 } from './background'
 
-export {
-  BorderColorKeys,
-  BorderRadiusKeys,
-  BorderStyleKeys,
-  BorderThicknessKeys,
-} from './border'
+export { BorderColorKeys, BorderStyleKeys, BorderThicknessKeys } from './border'
 
 export type {
   Props,

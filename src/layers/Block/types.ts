@@ -1,10 +1,3 @@
-import { MarginProps } from './margin'
-import {
-  BorderColorProps,
-  BorderRadiusProps,
-  BorderStyleProps,
-  BorderThicknessProps,
-} from './border'
 import {
   BackgroundAttachmentProps,
   BackgroundClipProps,
@@ -15,18 +8,32 @@ import {
   BackgroundRepeatProps,
   BackgroundSizeProps,
 } from './background'
+import {
+  BorderColorProps,
+  BorderStyleProps,
+  BorderThicknessProps,
+} from './border'
+import { CornerRadiusProps } from './corner'
+import { MarginProps } from './margin'
 import { PaddingProps } from './padding'
+import { TextAlignProps } from './text'
 
 export type BorderProps = BorderColorProps &
-  BorderRadiusProps &
   BorderStyleProps &
   BorderThicknessProps
 export type BackgroundProps = BackgroundAttachmentProps & any // & BackgroundClipProps & BackgroundColorProps & BackgroundOpacityProps & BackgroundOriginProps & BackgroundPositionProps & BackgroundRepeatProps & BackgroundSizeProps
+export type CornerProps = CornerRadiusProps
+export type TextProps = TextAlignProps
 
 export type { MarginProps } from './margin'
 export type { PaddingProps } from './padding'
 
-export type Props = MarginProps & BorderProps & BackgroundProps & PaddingProps
+export type Props = MarginProps &
+  BorderProps &
+  BackgroundProps &
+  PaddingProps &
+  CornerProps &
+  TextProps
 
 export type Config = {
   mutations?: any
@@ -34,15 +41,10 @@ export type Config = {
   useBorder?: boolean
   useMargin?: boolean
   usePadding?: boolean
+  useCorner?: boolean
+  useText?: boolean
 }
 
-export type { MarginType } from './margin'
-export type {
-  BorderColorType,
-  BorderRadiusType,
-  BorderStyleType,
-  BorderThicknessType,
-} from './border'
 export type {
   BackgroundAttachmentType,
   BackgroundClipType,
@@ -53,4 +55,12 @@ export type {
   BackgroundRepeatType,
   BackgroundSizeType,
 } from './background'
+export type {
+  BorderColorType,
+  BorderStyleType,
+  BorderThicknessType,
+} from './border'
+export type { CornerRadiusType } from './corner'
+export type { MarginType } from './margin'
 export type { PaddingType } from './padding'
+export type { TextAlignType } from './text'

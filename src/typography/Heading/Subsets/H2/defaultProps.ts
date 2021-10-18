@@ -5,7 +5,7 @@ export const basicProps: Partial<Props> = {
 
   outline: 'none',
 
-  textAlign: 'start',
+  textAlign: 'inherit',
   textDecorationColor: 'currentColor',
   textDecorationLine: 'none',
   textDecorationStyle: 'inherit',

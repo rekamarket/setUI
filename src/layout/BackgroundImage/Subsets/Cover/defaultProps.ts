@@ -5,4 +5,5 @@ export const defaultProps: Partial<Props> = {
   backgroundSize: 'cover',
   alignItems: 'center',
   justifyContent: 'center',
+  textAlign: 'center',
 }
