@@ -51,6 +51,17 @@ export {
 } from './marker'
 export type { MarkerType, MarkerProps } from './marker'
 
+// MarkerGap
+export {
+  MarkerGap,
+  MarkerGapMap,
+  MarkerGapKeys,
+  markerGapResolve,
+  useMarkerGap,
+  MarkerGapContext,
+} from './markerGap'
+export type { MarkerGapType, MarkerGapProps } from './markerGap'
+
 // Marker
 export {
   MarkerPosition,
@@ -61,3 +72,14 @@ export {
   MarkerPositionContext,
 } from './markerPosition'
 export type { MarkerPositionType, MarkerPositionProps } from './markerPosition'
+
+// MarkerSize
+export {
+  MarkerSize,
+  MarkerSizeMap,
+  MarkerSizeKeys,
+  markerSizeResolve,
+  useMarkerSize,
+  MarkerSizeContext,
+} from './markerSize'
+export type { MarkerSizeType, MarkerSizeProps } from './markerSize'

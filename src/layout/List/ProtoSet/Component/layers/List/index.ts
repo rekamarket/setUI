@@ -9,8 +9,12 @@ import {
   dividerWeightResolve,
   Marker,
   markerResolve,
+  MarkerGap,
+  markerGapResolve,
   MarkerPosition,
   markerPositionResolve,
+  MarkerSize,
+  markerSizeResolve,
 } from './css'
 
 import type {
@@ -21,7 +25,9 @@ import type {
   DividerOffsetType,
   DividerWeightType,
   MarkerType,
+  MarkerGapType,
   MarkerPositionType,
+  MarkerSizeType,
 } from './types'
 
 class SymbolLayer {
@@ -31,7 +37,9 @@ class SymbolLayer {
   dividerOffset: DividerOffsetType
   dividerWeight: DividerWeightType
   marker: MarkerType
+  markerGap: MarkerGapType
   markerPosition: MarkerPositionType
+  markerSize: MarkerSizeType
 
   constructor(config?: Config) {
     this.style = () => {
@@ -41,7 +49,9 @@ class SymbolLayer {
         DividerOffset[this.dividerOffset],
         DividerWeight[this.dividerWeight],
         Marker[this.marker],
+        MarkerGap[this.markerGap],
         MarkerPosition[this.markerPosition],
+        MarkerSize[this.markerSize],
       ]
         .filter(Boolean)
         .join(' ')
@@ -54,7 +64,9 @@ class SymbolLayer {
     this.dividerOffset = dividerOffsetResolve<Props>(props)
     this.dividerWeight = dividerWeightResolve<Props>(props)
     this.marker = markerResolve<Props>(props)
+    this.markerGap = markerGapResolve<Props>(props)
     this.markerPosition = markerPositionResolve<Props>(props)
+    this.markerSize = markerSizeResolve<Props>(props)
     return this
   }
 

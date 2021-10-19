@@ -4,7 +4,9 @@ import {
   DividerOffsetProps,
   DividerWeightProps,
   MarkerProps,
+  MarkerGapProps,
   MarkerPositionProps,
+  MarkerSizeProps,
 } from './css'
 
 export type Props = DirectionProps &
@@ -12,7 +14,9 @@ export type Props = DirectionProps &
   DividerOffsetProps &
   DividerWeightProps &
   MarkerProps &
-  MarkerPositionProps
+  MarkerGapProps &
+  MarkerPositionProps &
+  MarkerSizeProps
 
 export type Config = any
 
@@ -22,5 +26,7 @@ export type {
   DividerOffsetType,
   DividerWeightType,
   MarkerType,
+  MarkerGapType,
   MarkerPositionType,
+  MarkerSizeType,
 } from './css'

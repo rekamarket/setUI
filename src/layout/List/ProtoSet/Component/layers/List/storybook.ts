@@ -4,7 +4,9 @@ import {
   DividerOffsetKeys,
   DividerWeightKeys,
   MarkerKeys,
+  MarkerGapKeys,
   MarkerPositionKeys,
+  MarkerSizeKeys,
 } from './css'
 
 export const argTypes = {
@@ -28,8 +30,16 @@ export const argTypes = {
     options: MarkerKeys,
     control: { type: 'select' },
   },
+  markerGap: {
+    options: MarkerGapKeys,
+    control: { type: 'select' },
+  },
   markerPosition: {
     options: MarkerPositionKeys,
+    control: { type: 'select' },
+  },
+  markerSize: {
+    options: MarkerSizeKeys,
     control: { type: 'select' },
   },
 }

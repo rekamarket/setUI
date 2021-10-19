@@ -7,10 +7,20 @@ export const ClassName = style({
   position: 'relative',
 })
 
-globalStyle(`${ClassName} li::marker`, {
-  listStyleType: 'inherit',
-  fontSize: 14,
+globalStyle(`${ClassName} li`, {
   display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
+  alignItems: 'flex-start',
+  listStyleType: 'none',
+})
+
+globalStyle(`${ClassName} li::before`, {
+  content: `var(--marker)`,
+  fontSize: `var(--marker-size)`,
+  paddingRight: `var(--marker-gap)`,
+  paddingLeft: `var(--marker-gap)`,
+  marginTop: 8,
+})
+
+globalStyle(`${ClassName} li::marker`, {
+  display: 'none',
 })

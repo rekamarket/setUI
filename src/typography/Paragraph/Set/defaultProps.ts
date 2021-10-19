@@ -4,7 +4,7 @@ export const defaultProps: Partial<Props> = {
   color: 'black',
 
   fontFamily: 'primary',
-  fontSize: 'small',
+  fontSize: 'medium',
   fontStyle: 'normal',
   fontWeight: 'regular',
 

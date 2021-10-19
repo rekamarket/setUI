@@ -12,6 +12,7 @@ export const map: Record<Type, string> = {
 }
 
 const Styles = styleVariants(map, (value) => ({
+  '--marker': value,
   listStyleType: value,
 }))
 
