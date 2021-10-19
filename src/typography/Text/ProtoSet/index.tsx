@@ -1,4 +1,4 @@
-import Component from './ResolveContext'
+import Component from './Component'
 
-export type { Props, PropsRequired } from './ResolveContext'
+export type { Props } from './Component'
 export default Component

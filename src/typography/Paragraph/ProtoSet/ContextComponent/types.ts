@@ -1,1 +1,1 @@
-export type { Props } from '../Component';
+export type { Props } from '../Component'
