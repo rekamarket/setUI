@@ -13,6 +13,7 @@ const BackgroundImage: FC<Props> = ({ className, ...props }) =>
     ...object.mergePropsWithWarning(defaultProps, props, displayName),
 
     // props override
+    as: 'div',
     className: cn(ClassName, className),
   })
 
