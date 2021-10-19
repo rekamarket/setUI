@@ -4,6 +4,7 @@ import { ZIndex } from 'CSS'
 import { BlockLayer, TextLayer } from 'layers'
 import { Props } from './types'
 import { ClassName } from './styles.css'
+import { component } from './data'
 
 const block = new BlockLayer({
   usePadding: true,
@@ -11,29 +12,22 @@ const block = new BlockLayer({
 })
 const text = new TextLayer()
 
-const Paragraph: FC<Props> = ({
-  className,
+const Paragraph: FC<Props> = ({ as, className, zIndex, children, ...rest }) =>
+  createElement(
+    component[as],
 
-  zIndex,
+    {
+      className: cn([
+        className,
+        ClassName,
+        block.set(rest).box,
+        text.set(rest).box,
+        ZIndex[zIndex] || ZIndex.default,
+      ]),
+    },
 
-  children,
-
-  ...rest
-}) => (
-  <p
-    className={cn([
-      // root
-      className,
-      ClassName,
-      block.set(rest).box,
-      text.set(rest).box,
-      ZIndex[zIndex] || ZIndex.default,
-    ])}
-  >
-    {children}
-  </p>
-)
+    children
+  )
 
 export type { Props } from './types'
-
 export default Paragraph

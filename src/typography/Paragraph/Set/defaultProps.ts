@@ -16,6 +16,7 @@ export const basicProps: Partial<Props> = {
 
 export const defaultProps: Partial<Props> = {
   ...basicProps,
+  as: 'p',
 
   color: 'black',
 
