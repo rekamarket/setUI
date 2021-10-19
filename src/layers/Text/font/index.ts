@@ -8,7 +8,14 @@ export {
 export type { FontFamilyType, FontFamilyProps } from './family'
 
 // Size
-export { FontSize, FontSizeMap, FontSizeKeys, fontSizeResolve } from './size'
+export {
+  FontSize,
+  FontSizeMap,
+  FontSizeKeys,
+  fontSizeResolve,
+  useFontSize,
+  FontSizeContext,
+} from './size'
 export type { FontSizeType, FontSizeProps } from './size'
 
 // Style

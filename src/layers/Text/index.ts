@@ -136,6 +136,8 @@ export { ColorKeys } from './color'
 export {
   FontFamilyKeys,
   FontSizeKeys,
+  useFontSize,
+  FontSizeContext,
   FontStyleKeys,
   FontWeightKeys,
 } from './font'

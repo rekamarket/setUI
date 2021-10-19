@@ -19,22 +19,20 @@ const Paragraph: FC<Props> = ({
   children,
 
   ...rest
-}) => {
-  return (
-    <p
-      className={cn([
-        // root
-        className,
-        ClassName,
-        block.set(rest).box,
-        text.set(rest).box,
-        ZIndex[zIndex] || ZIndex.default,
-      ])}
-    >
-      {children}
-    </p>
-  )
-}
+}) => (
+  <p
+    className={cn([
+      // root
+      className,
+      ClassName,
+      block.set(rest).box,
+      text.set(rest).box,
+      ZIndex[zIndex] || ZIndex.default,
+    ])}
+  >
+    {children}
+  </p>
+)
 
 export type { Props } from './types'
 
