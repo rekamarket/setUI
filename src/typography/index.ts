@@ -18,7 +18,12 @@ export {
 
 export { default as LineBreak } from './LineBreak'
 
-export { default as Paragraph, ParagraphSnippets } from './Paragraph'
+export {
+  default as Paragraph,
+  Div,
+  DivSnippets,
+  ParagraphSnippets,
+} from './Paragraph'
 
 export { default as Placeholder } from './Placeholder'
 

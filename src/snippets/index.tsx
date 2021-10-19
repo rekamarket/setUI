@@ -29,6 +29,7 @@ import {
   //SuperscriptSnippets as Superscript,
   //UnarticulatedAnnotationSnippets as UnarticulatedAnnotation,
   ParagraphSnippets as Paragraph,
+  DivSnippets as Div,
 } from 'typography'
 
 export default [
@@ -54,6 +55,7 @@ export default [
   // ...Superscript,
   // ...UnarticulatedAnnotation,
   ...Paragraph,
+  ...Div,
   ...BlockQuote,
   ...Cover,
   ...Frame,
