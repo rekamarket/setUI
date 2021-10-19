@@ -1,1 +1,1 @@
-export type { Props } from '../ProtoSet'
+export type { Props } from '../../ProtoSet'

@@ -35,43 +35,43 @@ export const map: Record<Type, Record<string, number | string>> = {
 
   xxxsmall: {
     fontSize: 14,
-    lineHeight: '10px',
+    lineHeight: 'calc(10px + 6px)',
   },
   xxsmall: {
     fontSize: 14,
-    lineHeight: '10px',
+    lineHeight: 'calc(10px + 6px)',
   },
   xsmall: {
     fontSize: 14,
-    lineHeight: '10px',
+    lineHeight: 'calc(10px + 6px)',
   },
   small: {
     fontSize: 14,
-    lineHeight: '10px',
+    lineHeight: 'calc(10px + 6px)',
   },
   medium: {
     fontSize: 17,
-    lineHeight: 'calc(12px + 4px)',
+    lineHeight: 'calc(12px + 6px)',
   },
   large: {
     fontSize: 25,
-    lineHeight: '18px',
+    lineHeight: 'calc(18px + 7px)',
   },
   xlarge: {
     fontSize: 35,
-    lineHeight: '25px',
+    lineHeight: 'calc(25px + 7px)',
   },
   xxlarge: {
     fontSize: 48,
-    lineHeight: '34px',
+    lineHeight: 'calc(34px + 8px)',
   },
   xxxlarge: {
     fontSize: 60,
-    lineHeight: '42px',
+    lineHeight: 'calc(42px + 8px)',
   },
   xxxxlarge: {
     fontSize: 72,
-    lineHeight: '50px',
+    lineHeight: 'calc(52px + 8px)',
   },
 
   /* <relative-size> values */

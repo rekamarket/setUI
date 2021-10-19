@@ -1,10 +1,10 @@
 import { FC } from 'react'
 import cn from 'classnames'
 import { object } from 'utils'
-import { defaultProps } from './defaultProps'
+import { defaultProps } from '../defaultProps'
 import type { Props } from './types'
-import ProtoSet from '../ProtoSet'
-import { ClassName } from './styles.css'
+import ProtoSet from '../../ProtoSet'
+import { ClassName } from '../styles.css'
 
 export const displayName = 'Paragraph'
 
@@ -18,6 +18,4 @@ const Set: FC<Props> = ({ className, ...props }) =>
 
 Set.displayName = displayName
 
-export { defaultProps } from './defaultProps'
-export type { Props } from './types'
 export default Set
