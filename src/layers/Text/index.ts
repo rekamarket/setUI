@@ -1,7 +1,4 @@
-import {
-  Color,
-  colorResolve,
-} from './color'
+import { Color, colorResolve } from './color'
 import {
   FontFamily,
   fontFamilyResolve,
@@ -135,11 +132,7 @@ class TextLayer {
   }
 }
 
-import {
-  useColor,
-  ColorContext,
-  ColorKeys,
-} from './color'
+export { useColor, ColorContext, ColorKeys } from './color'
 export {
   FontFamilyKeys,
   FontSizeKeys,

@@ -1,5 +1,5 @@
 import { VFC } from 'react'
-import { useFontSize } from 'layers/Text'
+import { useColor, useFontSize } from 'layers/Text'
 import { defaultProps } from '../defaultProps'
 import ProtoSet from '../../../ProtoSet'
 import { Props } from './types'
@@ -7,6 +7,7 @@ import { Props } from './types'
 export const displayName = 'Important'
 
 const Important: VFC<Props> = (props) => {
+  const color = useColor()
   const fontSize = useFontSize()
 
   return ProtoSet({
@@ -15,6 +16,7 @@ const Important: VFC<Props> = (props) => {
 
     // override
     as: 'strong',
+    color: props?.color || color || defaultProps.color,
     fontSize: props?.fontSize || fontSize || defaultProps.fontSize,
   })
 }

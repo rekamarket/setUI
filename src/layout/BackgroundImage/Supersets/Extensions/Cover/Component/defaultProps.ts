@@ -6,4 +6,5 @@ export const defaultProps: Partial<Props> = {
   alignItems: 'center',
   justifyContent: 'center',
   textAlign: 'center',
+  overlay: 'primary',
 }

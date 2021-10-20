@@ -13,5 +13,5 @@ BackgroundImage.Cover = Cover
 
 export { Cover } from './Supersets'
 export type { Props } from './Set'
-export { default as CoverSnippets } from './Supersets/Extensions/Cover/snippets'
+export { default as CoverSnippets } from './Supersets/Extensions/Cover/Component/snippets'
 export default BackgroundImage

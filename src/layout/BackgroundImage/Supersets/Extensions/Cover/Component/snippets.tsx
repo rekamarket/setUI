@@ -7,7 +7,10 @@ export default [
     group: displayName,
     name: 'Обложка',
     code: render(
-      <Component image="https://upload.wikimedia.org/wikipedia/commons/d/d6/Dresden_Codex_pp.58-62_78.jpg">
+      <Component
+        image="https://upload.wikimedia.org/wikipedia/commons/d/d6/Dresden_Codex_pp.58-62_78.jpg"
+        color="white"
+      >
         <H1>Центрированный заголовок</H1>
       </Component>
     ),
