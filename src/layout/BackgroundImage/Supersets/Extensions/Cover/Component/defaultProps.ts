@@ -4,7 +4,10 @@ export const defaultProps: Partial<Props> = {
   backgroundAttachment: 'fixed',
   backgroundSize: 'cover',
   alignItems: 'center',
-  justifyContent: 'center',
   textAlign: 'center',
   overlay: 'primary',
+  flexDirection: 'column',
+  gap: 'xxxlarge',
+  justifyContent: 'flexStart',
+  paddingTop: 'xxxlarge',
 }

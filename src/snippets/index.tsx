@@ -30,6 +30,7 @@ import {
   //UnarticulatedAnnotationSnippets as UnarticulatedAnnotation,
   ParagraphSnippets as Paragraph,
   DivSnippets as Div,
+  TimeSnippets as Time,
 } from 'typography'
 
 export default [
@@ -61,4 +62,5 @@ export default [
   ...Frame,
   ...FullBleed,
   ...Unordered,
+  ...Time,
 ]

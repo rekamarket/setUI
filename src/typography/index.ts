@@ -62,4 +62,4 @@ export {
 } from './Text'
 
 export { default as ThematicBreak } from './ThematicBreak'
-export { default as Time } from './Time'
+export { default as Time, TimeSnippets } from './Time'

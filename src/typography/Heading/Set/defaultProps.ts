@@ -20,5 +20,6 @@ export const defaultProps: Partial<Props> = {
   textTransform: 'none',
 
   margin: 'none',
-  padding: 'none',
+  paddingX: 'none',
+  paddingY: 'medium',
 }

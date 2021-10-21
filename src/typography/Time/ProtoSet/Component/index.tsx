@@ -4,7 +4,10 @@ import { BlockLayer, TextLayer } from 'layers'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
-const block = new BlockLayer()
+const block = new BlockLayer({
+  useMargin: true,
+  usePadding: true,
+})
 const text = new TextLayer()
 
 const Time: FC<Props> = ({
@@ -14,17 +17,15 @@ const Time: FC<Props> = ({
   children,
 
   ...rest
-}) => {
-  return (
-    <time
-      className={cn([ClassName, block.set(rest).padding, text.set(rest).box])}
-      dateTime={datetime}
-      title={title}
-    >
-      {children}
-    </time>
-  )
-}
+}) => (
+  <time
+    className={cn([ClassName, block.set(rest).padding, text.set(rest).box])}
+    dateTime={datetime}
+    title={title}
+  >
+    {children}
+  </time>
+)
 
 export type { Props } from './types'
 

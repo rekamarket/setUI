@@ -6,7 +6,7 @@ import type { Props } from './types'
 import ProtoSet from '../../ProtoSet'
 import { ClassName } from './styles.css'
 
-export const displayName = 'Ul'
+export const displayName = 'UnorderedList'
 
 const Unordered: FC<Props> = ({ className, ...props }) =>
   ProtoSet({

@@ -23,5 +23,6 @@ export const defaultProps: Partial<Props> = {
   fontWeight: 'bold',
 
   margin: 'none',
-  padding: 'none',
+  paddingX: 'none',
+  paddingY: 'medium',
 }

@@ -18,15 +18,15 @@ export type Type = typeof VALUES[number]
 
 export const map: Record<Type, number> = {
   none: 0,
-  xxxsmall: 2,
-  xxsmall: 4,
-  xsmall: 6,
-  small: 8,
-  medium: 12,
-  large: 16,
-  xlarge: 20,
-  xxlarge: 24,
-  xxxlarge: 48,
+  xxxsmall: 4,
+  xxsmall: 8,
+  xsmall: 12,
+  small: 16,
+  medium: 24,
+  large: 36,
+  xlarge: 48,
+  xxlarge: 96,
+  xxxlarge: 128,
 }
 
 const Styles = styleVariants(map, (value) => ({

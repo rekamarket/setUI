@@ -22,7 +22,7 @@ List.Unordered = Unordered
 // supersets
 // List.Placeholder = Placeholder
 
-export { Unordered as Ul } from './Subsets'
+export { Unordered as UnorderedList } from './Subsets'
 export { default as UnorderedSnippets } from './Subsets/Unordered/snippets'
 export type { Props } from './Set'
 export default List

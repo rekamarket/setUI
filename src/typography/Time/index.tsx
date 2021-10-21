@@ -10,4 +10,5 @@ const Time: I<Props> = (props) => Set(props)
 
 // Time.Placeholder = Placeholder
 
+export { default as TimeSnippets } from './Set/snippets'
 export default Time

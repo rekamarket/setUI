@@ -12,6 +12,8 @@ export const basicProps: Partial<Props> = {
   textDecorationStyle: 'inherit',
   textDecorationThickness: 'initial',
   textTransform: 'none',
+  paddingX: 'none',
+  paddingY: 'medium',
 }
 
 export const defaultProps: Partial<Props> = {
