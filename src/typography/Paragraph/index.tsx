@@ -16,7 +16,8 @@ Paragraph.Div = Div
 // supersets
 // Heading.Placeholder = Placeholder
 
-export { DivIdiomatic as Div, DivSnippets } from './Subsets'
+export { DivIdiomatic as Div, DivSnippets, DivClassName } from './Subsets'
 export { default as ParagraphSnippets } from './Set/Idiomatic/snippets'
+export { ClassName as ParagraphClassName } from './Set'
 export type { Props } from './Set'
 export default Paragraph

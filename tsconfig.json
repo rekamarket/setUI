@@ -1,18 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "baseUrl": "./src",
-    "paths": {
-      "CSS": ["CSS"],
-      "button": ["interactive/button"],
-      "dialog": ["dialog"],
-      "form": ["interactive/form"],
-      "layers": ["layers"],
-      "layout": ["layout"],
-      "typography": ["typography"],
-      "utils": ["utils"],
-      "uiCode": ["variants/typography/Code"]
-    },
+    "outDir": "dist",
+    "plugins": [
+      { "transform": "@zerollup/ts-transform-paths", "exclude": ["*"] }
+    ],
     "lib": [
       "dom",
       "dom.iterable",
@@ -22,20 +15,19 @@
     "skipLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
+    "esModuleInterop": false,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "noEmit": false
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "src/**/*"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules", "dist"
   ]
 }
