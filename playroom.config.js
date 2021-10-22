@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   components: './src/index.ts',
-  outputPath: './dist/playroom',
+  outputPath: './playroom',
 
   snippets: './src/snippets/index.tsx',
   widths: [320, 768, 1024],
@@ -16,7 +16,7 @@ module.exports = {
       Hello World!
     </Button>
   `,
-  baseUrl: '/playroom/',
+  baseUrl: './',
   webpackConfig: () => ({
     plugins: [
       new VanillaExtractPlugin(/* { allowRuntime: true } */),
