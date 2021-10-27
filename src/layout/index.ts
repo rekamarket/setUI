@@ -9,6 +9,7 @@ export { default as Stack } from './Stack'
 export { default as Tabs } from './Tabs'
 export {
   default as BackgroundImage,
+  BackgroundImageSnippets,
   Cover,
   CoverSnippets,
 } from './BackgroundImage'

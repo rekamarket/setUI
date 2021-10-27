@@ -1,4 +1,5 @@
 import {
+  BackgroundImageSnippets as BackgroundImage,
   CoverSnippets as Cover,
   FrameSnippets as Frame,
   FullBleedSnippets as FullBleed,
@@ -58,6 +59,7 @@ export default [
   ...Paragraph,
   ...TextBlock,
   ...BlockQuote,
+  ...BackgroundImage,
   ...Cover,
   ...Frame,
   ...FullBleed,
