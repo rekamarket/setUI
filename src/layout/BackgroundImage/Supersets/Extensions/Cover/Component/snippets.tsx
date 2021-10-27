@@ -10,7 +10,7 @@ export default [
         image="https://upload.wikimedia.org/wikipedia/commons/d/d6/Dresden_Codex_pp.58-62_78.jpg"
         color="white"
       >
-        <${H1.displayName}>Центрированный заголовок</${H1.displayName}>
+        <H1>Центрированный заголовок</H1>
       </${displayName}>
     `,
   },
@@ -23,7 +23,7 @@ export default [
         color="white"
       >
         <Time>04.12.1995</Time>
-        <${H1.displayName}>Центрированный заголовок</${H1.displayName}>
+        <H1>Центрированный заголовок</H1>
       </${displayName}>
     `,
   },

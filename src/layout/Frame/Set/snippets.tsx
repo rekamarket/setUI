@@ -1,16 +1,14 @@
-import render from 'react-element-to-jsx-string'
-import Component, { displayName } from './'
-import { Paragraph, H1 } from 'typography'
+import { displayName } from './'
 
 export default [
   {
     group: displayName,
     name: '<Frame>',
-    code: render(
-      <Component charsPerLine="large">
+    code: `
+      <${displayName} charsPerLine="large">
         <H1>Заголовок первого уровня</H1>
         <Paragraph>Многострочный текст</Paragraph>
-      </Component>
-    ),
+      </${displayName}>
+    `,
   },
 ]
