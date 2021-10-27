@@ -55,6 +55,7 @@ module.exports = {
     resolve: {
       extensions: ['.js', '.ts', '.tsx'],
       alias: {
+        'axioms': path.resolve(__dirname, 'src/axioms/'),
         'CSS': path.resolve(__dirname, 'src/CSS/'),
         'button': path.resolve(__dirname, 'src/button/'),
         'dialog': path.resolve(__dirname, 'src/dialog/'),
