@@ -1,10 +1,9 @@
-import render from 'react-element-to-jsx-string'
-import Component, { displayName } from './'
+import { displayName } from './'
 
 export default [
   {
     group: displayName,
-    name: `<time>: Время\Дата`,
-    code: render(<Component>04.12.1995</Component>),
+    name: `<time>: Время Дата`,
+    code: `<${displayName}>04.12.1995</${displayName}>`,
   },
 ]

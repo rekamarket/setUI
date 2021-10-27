@@ -6,7 +6,7 @@ import type { Props } from './types'
 import ProtoSet from '../../ProtoSet'
 import { ClassName } from '../styles.css'
 
-export const displayName = 'Paragraph__'
+export const displayName = 'Paragraph'
 
 const Set: FC<Props> = ({ className, ...props }) =>
   ProtoSet({
