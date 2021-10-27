@@ -5,6 +5,7 @@ import { defaultProps } from './defaultProps'
 import type { Props } from './types'
 import ProtoSet from '../ProtoSet'
 import { ClassName } from './styles.css'
+import { article } from 'axioms'
 
 export const displayName = 'Frame'
 
@@ -14,7 +15,7 @@ const Set: FC<Props> = ({ className, ...props }) =>
     ...object.mergePropsWithWarning<any>(defaultProps, props),
 
     // props override
-    className: cn(ClassName, className),
+    className: cn(ClassName, className, article),
   })
 
 Set.displayName = displayName

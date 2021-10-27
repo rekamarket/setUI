@@ -40,15 +40,21 @@ export type { Props } from './Set'
 export {
   H1Idiomatic as H1,
   H1Snippets,
+  h1,
   H2Idiomatic as H2,
   H2Snippets,
+  h2,
   H3Idiomatic as H3,
   H3Snippets,
+  h3,
   H4Idiomatic as H4,
   H4Snippets,
+  h4,
   H5Idiomatic as H5,
   H5Snippets,
+  h5,
   H6Idiomatic as H6,
   H6Snippets,
+  h6,
 } from './Subsets'
 export default Heading

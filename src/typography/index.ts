@@ -3,16 +3,22 @@ export { default as BlockQuote, BlockQuoteSnippets } from './BlockQuote'
 export {
   default as Heading,
   H1,
+  h1,
   H1Snippets,
   H2,
+  h2,
   H2Snippets,
   H3,
+  h3,
   H3Snippets,
   H4,
+  h4,
   H4Snippets,
   H5,
+  h5,
   H5Snippets,
   H6,
+  h6,
   H6Snippets,
 } from './Heading'
 
@@ -20,6 +26,7 @@ export { default as LineBreak } from './LineBreak'
 
 export {
   default as Paragraph,
+  paragraph,
   Div,
   DivSnippets,
   ParagraphSnippets,

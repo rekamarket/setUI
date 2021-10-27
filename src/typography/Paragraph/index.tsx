@@ -18,6 +18,6 @@ Paragraph.Div = Div
 
 export { DivIdiomatic as Div, DivSnippets, DivClassName } from './Subsets'
 export { default as ParagraphSnippets } from './Set/Idiomatic/snippets'
-export { ClassName as ParagraphClassName } from './Set'
+export { paragraph } from './Set'
 export type { Props } from './Set'
 export default Paragraph
