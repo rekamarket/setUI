@@ -4,7 +4,7 @@ import Component, { displayName } from './'
 export default [
   {
     group: displayName,
-    name: 'Заголовок третьего уровня',
+    name: '<h3>: Заголовок третьего уровня',
     code: render(<Component>Заголовок третьего уровня</Component>),
   },
 ]

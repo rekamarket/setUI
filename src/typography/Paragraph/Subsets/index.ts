@@ -1,6 +1,5 @@
 export {
-  Configurable as DivConfigurable,
-  Idiomatic as DivIdiomatic,
-  idiomaticSnippets as DivSnippets,
-  ClassName as DivClassName,
-} from './Div'
+  Configurable as TextBlockConfigurable,
+  Idiomatic as TextBlockIdiomatic,
+  idiomaticSnippets as TextBlockSnippets,
+} from './TextBlock'

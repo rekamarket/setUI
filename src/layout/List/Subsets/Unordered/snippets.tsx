@@ -5,7 +5,7 @@ import { Important } from 'typography'
 export default [
   {
     group: displayName,
-    name: 'Ненумерованный список',
+    name: '<ul>: Ненумерованный список',
     code: render(
       <Component>
         <Important>Пункт 1</Important>

@@ -4,7 +4,7 @@ import Component, { displayName } from './'
 export default [
   {
     group: displayName,
-    name: '<span>',
+    name: '<span>: строчный текст',
     code: render(<Component>строчный текст</Component>),
   },
 ]

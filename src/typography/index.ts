@@ -27,9 +27,9 @@ export { default as LineBreak } from './LineBreak'
 export {
   default as Paragraph,
   paragraph,
-  Div,
-  DivSnippets,
   ParagraphSnippets,
+  TextBlock,
+  TextBlockSnippets,
 } from './Paragraph'
 
 export { default as Placeholder } from './Placeholder'
@@ -52,8 +52,6 @@ export {
   IdiomaticSnippets,
   Important,
   ImportantSnippets,
-  Normal,
-  NormalSnippets,
   Outdated,
   OutdatedSnippets,
   Reference,
@@ -64,6 +62,8 @@ export {
   SubscriptSnippets,
   Superscript,
   SuperscriptSnippets,
+  TextInline,
+  TextInlineSnippets,
   UnarticulatedAnnotation,
   UnarticulatedAnnotationSnippets,
 } from './Text'

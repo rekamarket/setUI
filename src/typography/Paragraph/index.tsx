@@ -1,22 +1,22 @@
 import { FC } from 'react'
 import { Props, Configurable as Set } from './Set'
-import { DivConfigurable as Div } from './Subsets'
+import { TextBlockConfigurable as TextBlock } from './Subsets'
 // import { Placeholder } from './Supersets'
 
 interface I<T = unknown> extends FC<T> {
-  Div: typeof Div
+  TextBlock: typeof TextBlock
   // supersets
   // Placeholder: typeof Placeholder
 }
 
 const Paragraph: I<Props> = (props) => Set(props)
 
-Paragraph.Div = Div
+Paragraph.TextBlock = TextBlock
 
 // supersets
 // Heading.Placeholder = Placeholder
 
-export { DivIdiomatic as Div, DivSnippets, DivClassName } from './Subsets'
+export { TextBlockIdiomatic as TextBlock, TextBlockSnippets } from './Subsets'
 export { default as ParagraphSnippets } from './Set/Idiomatic/snippets'
 export { paragraph } from './Set'
 export type { Props } from './Set'

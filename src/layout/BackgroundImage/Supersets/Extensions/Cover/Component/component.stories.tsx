@@ -1,4 +1,3 @@
-import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import { argTypes as blockArgTypes } from 'layers/Block'
 import { argTypes as flexArgTypes } from 'layers/Flex'
@@ -7,7 +6,7 @@ import Component, { Props, displayName } from './'
 
 export default {
   component: Component,
-  title: `Typography/${displayName}`,
+  title: displayName,
 } as Meta
 
 const Template: Story<Props> = (args) => <Component {...args} />

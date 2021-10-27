@@ -6,17 +6,17 @@ import type { Props } from './types'
 import ProtoSet from '../../../ProtoSet'
 import { ClassName } from '../styles.css'
 
-export const displayName = 'Div'
+export const displayName = 'Text.TextInline'
 
-const Set: FC<Props> = ({ className, ...props }) =>
+const TextInline: FC<Props> = ({ className, ...props }) =>
   ProtoSet({
-    ...object.mergePropsWithWarning<any>(defaultProps, props, displayName),
+    ...object.mergePropsWithWarning<any>(defaultProps, props),
 
     // props override
-    as: 'div',
+    as: 'span',
     className: cn(ClassName, className),
   })
 
-Set.displayName = displayName
+TextInline.displayName = displayName
 
-export default Set
+export default TextInline

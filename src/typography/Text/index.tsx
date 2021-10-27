@@ -9,11 +9,11 @@ import {
   HighlightConfigurable as Highlight,
   IdiomaticConfigurable as Idiomatic,
   ImportantConfigurable as Important,
-  NormalConfigurable as Normal,
   OutdatedConfigurable as Outdated,
   StressEmphasisConfigurable as StressEmphasis,
   SubscriptConfigurable as Subscript,
   SuperscriptConfigurable as Superscript,
+  TextInlineConfigurable as TextInline,
   UnarticulatedAnnotationConfigurable as UnarticulatedAnnotation,
 } from './Subsets'
 // import { Placeholder } from './Supersets'
@@ -28,12 +28,12 @@ interface I<T = unknown> extends FC<T> {
   Highlight: typeof Highlight
   Idiomatic: typeof Idiomatic
   Important: typeof Important
-  Normal: typeof Normal
   Outdated: typeof Outdated
   Reference: typeof Citation
   StressEmphasis: typeof StressEmphasis
   Subscript: typeof Subscript
   Superscript: typeof Superscript
+  TextInline: typeof TextInline
   UnarticulatedAnnotation: typeof UnarticulatedAnnotation
 
   // supersets
@@ -51,12 +51,12 @@ Text.Disclaimer = Disclaimer
 Text.Highlight = Highlight
 Text.Idiomatic = Idiomatic
 Text.Important = Important
-Text.Normal = Normal
 Text.Outdated = Outdated
 Text.Reference = Citation
 Text.StressEmphasis = StressEmphasis
 Text.Subscript = Subscript
 Text.Superscript = Superscript
+Text.TextInline = TextInline
 Text.UnarticulatedAnnotation = UnarticulatedAnnotation
 
 // supersets
@@ -80,8 +80,6 @@ export {
   IdiomaticSnippets,
   ImportantIdiomatic as Important,
   ImportantSnippets,
-  NormalIdiomatic as Normal,
-  NormalSnippets,
   OutdatedIdiomatic as Outdated,
   OutdatedSnippets,
   CitationIdiomatic as Reference,
@@ -92,6 +90,8 @@ export {
   SubscriptSnippets,
   SuperscriptIdiomatic as Superscript,
   SuperscriptSnippets,
+  TextInlineIdiomatic as TextInline,
+  TextInlineSnippets,
   UnarticulatedAnnotationIdiomatic as UnarticulatedAnnotation,
   UnarticulatedAnnotationSnippets,
 } from './Subsets'

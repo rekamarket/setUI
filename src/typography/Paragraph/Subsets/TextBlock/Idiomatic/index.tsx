@@ -6,17 +6,17 @@ import type { Props } from './types'
 import ProtoSet from '../../../ProtoSet'
 import { ClassName } from '../styles.css'
 
-export const displayName = 'Text.Normal'
+export const displayName = 'TextBlock'
 
-const Normal: FC<Props> = ({ className, ...props }) =>
+const Set: FC<Props> = ({ className, ...props }) =>
   ProtoSet({
-    ...object.mergePropsWithWarning<any>(defaultProps, props),
+    ...object.mergePropsWithWarning<any>(defaultProps, props, displayName),
 
     // props override
-    as: 'span',
+    as: 'div',
     className: cn(ClassName, className),
   })
 
-Normal.displayName = displayName
+Set.displayName = displayName
 
-export default Normal
+export default Set

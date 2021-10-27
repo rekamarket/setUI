@@ -3,15 +3,15 @@ import { defaultProps } from '../defaultProps'
 import ProtoSet from '../../../ProtoSet'
 import { Props } from './types'
 
-export const displayName = 'Span'
+export const displayName = 'TextInline'
 
-const Normal: FC<Props> = (props) =>
+const TextInline: FC<Props> = (props) =>
   ProtoSet({
     ...defaultProps,
     ...props,
     as: 'span',
   })
 
-Normal.displayName = displayName
+TextInline.displayName = displayName
 
-export default Normal
+export default TextInline

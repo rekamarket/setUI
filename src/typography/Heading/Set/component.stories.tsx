@@ -1,4 +1,3 @@
-import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import { argTypes as textArgTypes } from 'layers/Text'
 import { marginArgTypes, paddingArgTypes } from 'layers/Block'
@@ -8,7 +7,7 @@ import { LevelKeys } from '../ProtoSet'
 
 export default {
   component: Component,
-  title: `Typography/${displayName}`,
+  title: displayName,
 } as Meta
 
 const Template: Story<Props> = (args) => <Component {...args} />

@@ -1,6 +1,7 @@
 import type { Props } from './types'
 
 export const basicProps: Partial<Props> = {
+  fontFamily: 'primary',
   fontStyle: 'normal',
 
   outline: 'none',
@@ -18,10 +19,6 @@ export const defaultProps: Partial<Props> = {
 
   color: 'black',
 
-  fontFamily: 'primary',
-  fontSize: 'xxxxlarge',
+  fontSize: 'medium',
   fontWeight: 'bold',
-
-  margin: 'none',
-  padding: 'none',
 }

@@ -4,7 +4,7 @@ import Component, { displayName } from './'
 export default [
   {
     group: displayName,
-    name: '<b>',
+    name: '<b>: жирный шрифт',
     code: render(
       <Component>
         Используйте в таких случаях, как ключевые слова в кратком содержании,

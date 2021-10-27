@@ -47,12 +47,6 @@ export {
 } from './Important'
 
 export {
-  Configurable as NormalConfigurable,
-  Idiomatic as NormalIdiomatic,
-  idiomaticSnippets as NormalSnippets,
-} from './Normal'
-
-export {
   Configurable as OutdatedConfigurable,
   Idiomatic as OutdatedIdiomatic,
   idiomaticSnippets as OutdatedSnippets,
@@ -75,6 +69,12 @@ export {
   Idiomatic as SuperscriptIdiomatic,
   idiomaticSnippets as SuperscriptSnippets,
 } from './Superscript'
+
+export {
+  Configurable as TextInlineConfigurable,
+  Idiomatic as TextInlineIdiomatic,
+  idiomaticSnippets as TextInlineSnippets,
+} from './TextInline'
 
 export {
   Configurable as UnarticulatedAnnotationConfigurable,

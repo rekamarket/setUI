@@ -5,7 +5,7 @@ import { H1, Time } from 'typography'
 export default [
   {
     group: displayName,
-    name: 'Обложка',
+    name: '<section>: Обложка',
     code: render(
       <Component
         image="https://upload.wikimedia.org/wikipedia/commons/d/d6/Dresden_Codex_pp.58-62_78.jpg"
@@ -17,7 +17,7 @@ export default [
   },
   {
     group: displayName,
-    name: 'Обложка с датой',
+    name: '<section>: Обложка с датой',
     code: render(
       <Component
         image="https://upload.wikimedia.org/wikipedia/commons/d/d6/Dresden_Codex_pp.58-62_78.jpg"

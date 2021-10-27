@@ -1,25 +1,18 @@
-import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import { argTypes as textArgTypes } from 'layers/Text'
+import { marginArgTypes, paddingArgTypes } from 'layers/Block'
 import { defaultProps } from '../defaultProps'
 import Component, { displayName } from './'
 import { Props } from './types'
 
 export default {
   component: Component,
-  title: displayName,
+  title: `Custom/Typography/${displayName}`,
 } as Meta
 
 const Template: Story<Props> = (args) => <Component {...args} />
 
 export const Default = Template.bind({})
-
-Default.parameters = {
-  controls: {
-    sort: 'requiredFirst',
-    include: ['children', 'color', 'fontSize', 'fontWeight'],
-  },
-}
 
 Default.args = {
   ...defaultProps,
@@ -27,7 +20,7 @@ Default.args = {
 }
 
 Default.argTypes = {
-  color: textArgTypes.color,
-  fontSize: textArgTypes.fontSize,
-  fontWeight: textArgTypes.fontWeight,
+  ...textArgTypes,
+  ...marginArgTypes,
+  ...paddingArgTypes,
 }

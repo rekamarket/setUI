@@ -24,7 +24,7 @@ export {
   H6,
 } from './typography/Heading'
 export { default as LineBreak } from './typography/LineBreak'
-export { default as Paragraph, Div } from './typography/Paragraph'
+export { default as Paragraph, TextBlock } from './typography/Paragraph'
 export {
   default as Text,
   Abbreviation,
@@ -35,7 +35,7 @@ export {
   Highlight,
   Idiomatic,
   Important,
-  Normal as Span,
+  TextInline,
   Outdated,
   Reference,
   StressEmphasis,
