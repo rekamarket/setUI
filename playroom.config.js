@@ -12,9 +12,10 @@ module.exports = {
   openBrowser: true,
   paramType: 'search', // default is 'hash'
   exampleCode: `
-    <Button>
-      Hello World!
-    </Button>
+    <Frame charsPerLine="large">
+      <H1>Заголовок первого уровня</H1>
+      <Paragraph>Многострочный текст</Paragraph>
+    </Frame>
   `,
   baseUrl: './',
   webpackConfig: () => ({
