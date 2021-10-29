@@ -35,53 +35,83 @@ export const map: Record<Type, Record<string, number | string>> = {
 
   xxxsmall: {
     // fontSize: 14,
-    fontSize: `clamp(${14 / 16 / 2}rem, ${14 / 16 / 2}rem + 2vmin, ${14 / 16 / 2}rem + 4vmin)`,
-    lineHeight: `calc(${14 / 16 / 2}rem + 6px)`,
+    fontSize: `clamp(${14 / 16 / 2}rem, ${14 / 16 / 2}rem + 2vmin, ${
+      14 / 16 / 2
+    }rem + 4vmin)`,
+    // lineHeight: `calc(${14 / 16 / 2}rem + 6px)`,
+    lineHeight: 1,
   },
   xxsmall: {
     // fontSize: 14,
-    fontSize: `clamp(${14 / 16 / 2}rem, ${14 / 16 / 2}rem + 2vmin, ${14 / 16 / 2}rem + 4vmin)`,
-    lineHeight: `calc(${14 / 16 / 2}rem + 6px)`,
+    fontSize: `clamp(${14 / 16 / 2}rem, ${14 / 16 / 2}rem + 2vmin, ${
+      14 / 16 / 2
+    }rem + 4vmin)`,
+    // lineHeight: `calc(${14 / 16 / 2}rem + 6px)`,
+    lineHeight: 1,
   },
   xsmall: {
     // fontSize: 14,
-    fontSize: `clamp(${14 / 16 / 2}rem, ${14 / 16 / 2}rem + 2vmin, ${14 / 16 / 2}rem + 4vmin)`,
-    lineHeight: `calc(${14 / 16 / 2}rem + 6px)`,
+    fontSize: `clamp(${14 / 16 / 2}rem, ${14 / 16 / 2}rem + 2vmin, ${
+      14 / 16 / 2
+    }rem + 4vmin)`,
+    // lineHeight: `calc(${14 / 16 / 2}rem + 6px)`,
+    lineHeight: 1,
   },
   small: {
     // fontSize: 14,
-    fontSize: `clamp(${14 / 16 / 2}rem, ${14 / 16 / 2}rem + 2vmin, ${14 / 16 / 2}rem + 4vmin)`,
-    lineHeight: `calc(${14 / 16 / 2}rem + 6px)`,
+    fontSize: `clamp(${14 / 16 / 2}rem, ${14 / 16 / 2}rem + 2vmin, ${
+      14 / 16 / 2
+    }rem + 4vmin)`,
+    // lineHeight: `calc(${14 / 16 / 2}rem + 6px)`,
+    lineHeight: 1,
   },
   medium: {
     // fontSize: 17,
-    fontSize: `clamp(${17 / 16 / 2}rem, ${17 / 16 / 2}rem + 2vmin, ${17 / 16 / 2}rem + 4vmin)`,
-    lineHeight: `calc(${17 / 16 / 2}rem + 6px)`,
+    fontSize: `clamp(${17 / 16 / 2}rem, ${17 / 16 / 2}rem + 2vmin, ${
+      17 / 16 / 2
+    }rem + 4vmin)`,
+    // lineHeight: `calc(${17 / 16 / 2}rem + 6px)`,
+    lineHeight: 1,
   },
   large: {
     // fontSize: 25,
-    fontSize: `clamp(${25 / 16 / 2}rem, ${25 / 16 / 2}rem + 2vmin, ${25 / 16 / 2}rem + 4vmin)`,
-    lineHeight: `calc(${25 / 16 / 2}rem + 7px)`,
+    fontSize: `clamp(${25 / 16 / 2}rem, ${25 / 16 / 2}rem + 2vmin, ${
+      25 / 16 / 2
+    }rem + 4vmin)`,
+    // lineHeight: `calc(${25 / 16 / 2}rem + 7px)`,
+    lineHeight: 1,
   },
   xlarge: {
     // fontSize: 35,
-    fontSize: `clamp(${35 / 16 / 2}rem, ${35 / 16 / 2}rem + 2vmin, ${35 / 16 / 2}rem + 4vmin)`,
-    lineHeight: `calc(${35 / 16 / 2}rem + 7px)`,
+    fontSize: `clamp(${35 / 16 / 2}rem, ${35 / 16 / 2}rem + 2vmin, ${
+      35 / 16 / 2
+    }rem + 4vmin)`,
+    // lineHeight: `calc(${35 / 16 / 2}rem + 7px)`,
+    lineHeight: 1,
   },
   xxlarge: {
     // fontSize: 48,
-    fontSize: `clamp(${48 / 16 / 2}rem, ${48 / 16 / 2}rem + 2vmin, ${48 / 16 / 2}rem + 4vmin)`,
-    lineHeight: `calc(${48 / 16 / 2}rem + 8px)`,
+    fontSize: `clamp(${48 / 16 / 2}rem, ${48 / 16 / 2}rem + 2vmin, ${
+      48 / 16 / 2
+    }rem + 4vmin)`,
+    // lineHeight: `calc(${48 / 16 / 2}rem + 8px)`,
+    lineHeight: 1,
   },
   xxxlarge: {
     // fontSize: 60,
-    fontSize: `clamp(${60 / 16 / 2}rem, ${60 / 16 / 2}rem + 2vmin, ${60 / 16 / 2}rem + 4vmin)`,
-    lineHeight: `calc(${60 / 16 / 2}rem + 8px)`,
+    fontSize: `clamp(${60 / 16 / 2}rem, ${60 / 16 / 2}rem + 2vmin, ${
+      60 / 16 / 2
+    }rem + 4vmin)`,
+    // lineHeight: `calc(${60 / 16 / 2}rem + 8px)`,
+    lineHeight: 1,
   },
   xxxxlarge: {
     // fontSize: 72,
-    fontSize: `clamp(${72 / 16 / 2}rem, ${72 / 16 / 2}rem + 2vmin, ${72 / 16 / 2}rem + 4vmin)`,
-    lineHeight: `calc(${72 / 16 / 2}rem + 8px)`,
+    fontSize: `clamp(${72 / 16 / 2}rem, ${72 / 16 / 2}rem + 2vmin, ${
+      72 / 16 / 2
+    }rem + 4vmin)`,
+    // lineHeight: `calc(${72 / 16 / 2}rem + 8px)`,
+    lineHeight: 1,
   },
 
   /* <relative-size> values */
