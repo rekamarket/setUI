@@ -29,6 +29,7 @@ export {
   paragraph,
   ParagraphSnippets,
   TextBlock,
+  textBlock,
   TextBlockSnippets,
 } from './Paragraph'
 

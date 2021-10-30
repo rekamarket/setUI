@@ -1,5 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css'
-import { h1, h2, h3, h4, h5, h6, paragraph } from 'typography'
+import { h1, h2, h3, h4, h5, h6, paragraph, textBlock } from 'typography'
 
 const className = style({})
 
@@ -32,6 +32,10 @@ globalStyle(`${className} ${h1} + ${paragraph}`, {
   paddingTop: 0,
 })
 
+globalStyle(`${className} ${h1} + ${textBlock}`, {
+  paddingTop: 0,
+})
+
 // h2
 globalStyle(`${className} ${h2} + ${h1}`, {
   paddingTop: 0,
@@ -56,7 +60,12 @@ globalStyle(`${className} ${h2} + ${h5}`, {
 globalStyle(`${className} ${h2} + ${h6}`, {
   paddingTop: 0,
 })
+
 globalStyle(`${className} ${h2} + ${paragraph}`, {
+  paddingTop: 0,
+})
+
+globalStyle(`${className} ${h2} + ${textBlock}`, {
   paddingTop: 0,
 })
 
@@ -89,6 +98,10 @@ globalStyle(`${className} ${h3} + ${paragraph}`, {
   paddingTop: 0,
 })
 
+globalStyle(`${className} ${h3} + ${textBlock}`, {
+  paddingTop: 0,
+})
+
 // h4
 globalStyle(`${className} ${h4} + ${h1}`, {
   paddingTop: 0,
@@ -115,6 +128,10 @@ globalStyle(`${className} ${h4} + ${h6}`, {
 })
 
 globalStyle(`${className} ${h4} + ${paragraph}`, {
+  paddingTop: 0,
+})
+
+globalStyle(`${className} ${h4} + ${textBlock}`, {
   paddingTop: 0,
 })
 
@@ -147,6 +164,10 @@ globalStyle(`${className} ${h5} + ${paragraph}`, {
   paddingTop: 0,
 })
 
+globalStyle(`${className} ${h5} + ${textBlock}`, {
+  paddingTop: 0,
+})
+
 // h6
 globalStyle(`${className} ${h6} + ${h1}`, {
   paddingTop: 0,
@@ -176,6 +197,10 @@ globalStyle(`${className} ${h6} + ${paragraph}`, {
   paddingTop: 0,
 })
 
+globalStyle(`${className} ${h6} + ${textBlock}`, {
+  paddingTop: 0,
+})
+
 // paragraph
 globalStyle(`${className} ${paragraph} + ${h1}`, {
   paddingTop: 0,
@@ -202,6 +227,43 @@ globalStyle(`${className} ${paragraph} + ${h6}`, {
 })
 
 globalStyle(`${className} ${paragraph} + ${paragraph}`, {
+  paddingTop: 0,
+})
+
+globalStyle(`${className} ${paragraph} + ${textBlock}`, {
+  paddingTop: 0,
+})
+
+// textBlock
+globalStyle(`${className} ${textBlock} + ${h1}`, {
+  paddingTop: 0,
+})
+
+globalStyle(`${className} ${textBlock} + ${h2}`, {
+  paddingTop: 0,
+})
+
+globalStyle(`${className} ${textBlock} + ${h3}`, {
+  paddingTop: 0,
+})
+
+globalStyle(`${className} ${textBlock} + ${h4}`, {
+  paddingTop: 0,
+})
+
+globalStyle(`${className} ${textBlock} + ${h5}`, {
+  paddingTop: 0,
+})
+
+globalStyle(`${className} ${textBlock} + ${h6}`, {
+  paddingTop: 0,
+})
+
+globalStyle(`${className} ${textBlock} + ${paragraph}`, {
+  paddingTop: 0,
+})
+
+globalStyle(`${className} ${textBlock} + ${textBlock}`, {
   paddingTop: 0,
 })
 

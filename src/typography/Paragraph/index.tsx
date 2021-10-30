@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Props, Configurable as Set } from './Set'
+import { Props, Idiomatic as Set } from './Set'
 import { TextBlockConfigurable as TextBlock } from './Subsets'
 // import { Placeholder } from './Supersets'
 
@@ -16,7 +16,11 @@ Paragraph.TextBlock = TextBlock
 // supersets
 // Heading.Placeholder = Placeholder
 
-export { TextBlockIdiomatic as TextBlock, TextBlockSnippets } from './Subsets'
+export {
+  TextBlockIdiomatic as TextBlock,
+  TextBlockSnippets,
+  textBlock,
+} from './Subsets'
 export { default as ParagraphSnippets } from './Set/Idiomatic/snippets'
 export { paragraph } from './Set'
 export type { Props } from './Set'
