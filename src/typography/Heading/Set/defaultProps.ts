@@ -22,4 +22,6 @@ export const defaultProps: Partial<Props> = {
   margin: 'none',
   paddingX: 'none',
   paddingY: 'medium',
+
+  charsPerLine: 'medium',
 }

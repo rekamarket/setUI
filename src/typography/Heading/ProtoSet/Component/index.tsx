@@ -2,7 +2,7 @@ import { FC, createElement } from 'react'
 import cn from 'classnames'
 import { Display } from 'CSS'
 import { BlockLayer, TextLayer } from 'layers'
-import { weightResolve, Weight, WeightProps } from '../css'
+import { CharsPerLine, weightResolve, Weight, WeightProps } from '../css'
 import { PropsRequired } from './types'
 import { headers } from './data'
 import { ClassName } from './styles.css'
@@ -30,6 +30,7 @@ const Heading: FC<PropsRequired> = ({
 
   children,
 
+  charsPerLine,
   ...rest
 }) =>
   createElement(
@@ -39,6 +40,7 @@ const Heading: FC<PropsRequired> = ({
       className: cn([
         className,
         ClassName,
+        CharsPerLine[charsPerLine],
         Display[display],
         block.set(rest).box,
         text.set(rest).box,
