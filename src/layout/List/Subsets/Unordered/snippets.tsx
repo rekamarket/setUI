@@ -1,6 +1,6 @@
 import render from 'react-element-to-jsx-string'
 import Component, { displayName } from './'
-import { Important } from 'typography'
+import { Important, TextInline } from 'typography'
 
 export default [
   {
@@ -8,8 +8,10 @@ export default [
     name: '<ul>: Ненумерованный список',
     code: render(
       <Component>
-        <Important>Пункт 1</Important>
-        <Important>Пункт 2</Important>
+        <TextInline>
+          Пункт 1 <Important>очень важная часть</Important>
+        </TextInline>
+        <TextInline>Пункт 2</TextInline>
       </Component>
     ),
   },

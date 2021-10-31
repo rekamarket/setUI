@@ -6,7 +6,7 @@ import Component, { Props, displayName } from './'
 
 export default {
   component: Component,
-  title: displayName,
+  title: `${displayName} | Обложка`,
 } as Meta
 
 const Template: Story<Props> = (args) => <Component {...args} />
@@ -16,7 +16,7 @@ export const Default = Template.bind({})
 Default.parameters = {
   controls: {
     sort: 'requiredFirst',
-    include: ['children', 'image'],
+    include: ['image'],
   },
 }
 
@@ -24,7 +24,6 @@ Default.args = {
   ...defaultProps,
   image:
     'https://upload.wikimedia.org/wikipedia/commons/d/d6/Dresden_Codex_pp.58-62_78.jpg',
-  children: `<${displayName}>`,
 }
 
 Default.argTypes = {
