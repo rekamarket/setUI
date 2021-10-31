@@ -2,6 +2,7 @@ export { default as BlockQuote, BlockQuoteSnippets } from './BlockQuote'
 
 export {
   default as Heading,
+  HeadingSnippets,
   H1,
   h1,
   H1Snippets,

@@ -8,6 +8,7 @@ import {
 
 import {
   BlockQuoteSnippets as BlockQuote,
+  HeadingSnippets as Heading,
   H1Snippets as H1,
   H2Snippets as H2,
   H3Snippets as H3,
@@ -35,6 +36,7 @@ import {
 } from 'typography'
 
 export default [
+  ...Heading,
   ...H1,
   ...H2,
   ...H3,

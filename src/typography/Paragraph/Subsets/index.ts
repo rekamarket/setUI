@@ -2,5 +2,6 @@ export {
   Configurable as TextBlockConfigurable,
   Idiomatic as TextBlockIdiomatic,
   idiomaticSnippets as TextBlockSnippets,
-  textBlock,
 } from './TextBlock'
+
+export { ClassName as textBlock } from './TextBlock/styles.css'

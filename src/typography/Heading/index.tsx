@@ -36,6 +36,7 @@ Heading.H6 = H6
 // supersets
 // Heading.Placeholder = Placeholder
 
+export { default as HeadingSnippets } from './Set/snippets'
 export type { Props } from './Set'
 export {
   H1Idiomatic as H1,
