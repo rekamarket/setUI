@@ -7,7 +7,7 @@ import { Props } from './types'
 
 export default {
   component: Component,
-  title: displayName,
+  title: `${displayName} | Текст блочный`,
 } as Meta
 
 const Template: Story<Props> = (args) => <Component {...args} />

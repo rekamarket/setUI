@@ -10,7 +10,7 @@ import { Props } from './types'
 
 export default {
   component: Component,
-  title: displayName,
+  title: `${displayName} | Заголовок второго уровня`,
 } as Meta
 
 const Template: Story<Props> = (args) => <Component {...args} />
