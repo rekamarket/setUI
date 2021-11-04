@@ -1,18 +1,19 @@
 import { VFC } from 'react'
 import cn from 'classnames'
 import { textTransformResolve } from 'layers/Text/text'
-import ProtoComponent, {
+import Component from '../ProtoComponent'
+import {
   radiusResolve,
   shapeResolve,
   sizeResolve,
   themeResolve,
   variantResolve,
-} from '../ProtoComponent'
+} from 'layers/Button'
 import type { Props } from './types'
 import { ClassName } from './styles.css'
 
 const ButtonComponent: VFC<Props> = ({ defaultStyle, className, ...rest }) =>
-  ProtoComponent({
+  Component({
     ...rest,
     className: cn(ClassName, className),
     radius:

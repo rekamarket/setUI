@@ -10,10 +10,10 @@ import {
   sizeResolve,
   Theme,
   themeResolve,
-  VariantBasic,
+  Variant,
   VariantContext,
   variantResolve,
-} from '../../ProtoSet'
+} from 'layers/Button'
 import type { Props } from './types'
 import { ClassName } from './styles.css'
 
@@ -25,8 +25,8 @@ const Group: VFC<Props> = ({
   variant,
   className,
   ...flexProps
-}) => {
-  return [<VariantContext.Provider value="INHERIT" />].reduce(
+}) =>
+  [<VariantContext.Provider value="INHERIT" />].reduce(
     (prev, provider) => React.cloneElement(provider, {}, prev),
     <FlexComponent
       {...flexProps}
@@ -36,11 +36,10 @@ const Group: VFC<Props> = ({
         Radius[radiusResolve(flexProps) || radius || 'default'],
         Size[shapeResolve(flexProps) || shape || 'default'],
         Theme[themeResolve(flexProps) || theme || 'default'],
-        VariantBasic[variantResolve(flexProps) || variant || 'default']
+        Variant[variantResolve(flexProps) || variant || 'default']
       )}
     />
   )
-}
 
 export type { Props } from './types'
 export default Group

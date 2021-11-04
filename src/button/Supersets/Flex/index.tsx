@@ -7,7 +7,7 @@ import {
   SizeContext,
   ThemeContext,
   VariantContext,
-} from '../../ProtoSet'
+} from 'layers/Button'
 import type { Props } from './types'
 import { ClassName } from './styles.css'
 

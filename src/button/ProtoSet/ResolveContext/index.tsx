@@ -6,7 +6,7 @@ import {
   useSize,
   useTheme,
   useVariant,
-} from '../ProtoComponent'
+} from 'layers/Button'
 import { Props } from './types'
 import Component from '../ResolveDefaultStyles'
 import { ClassName } from './styles.css'

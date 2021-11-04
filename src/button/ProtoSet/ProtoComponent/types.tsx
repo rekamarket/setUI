@@ -1,12 +1,5 @@
 import type { TextTransformProps } from 'layers/Text/text'
-
-import type {
-  RadiusProps,
-  ShapeProps,
-  SizeProps,
-  ThemeProps,
-  VariantProps,
-} from './css'
+import type { ButtonLayerProps } from 'layers'
 
 interface CustomClickHandler {
   readonly onClick: () => void
@@ -25,11 +18,6 @@ type BasicProps = {
   children: any
 } & ClickHandler
 
-export type StyleProps = RadiusProps &
-  ShapeProps &
-  SizeProps &
-  ThemeProps &
-  VariantProps &
-  TextTransformProps
+export type StyleProps = ButtonLayerProps
 
-export type Props = BasicProps & Required<StyleProps>
+export type Props = BasicProps & StyleProps

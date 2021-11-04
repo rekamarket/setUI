@@ -1,7 +1,7 @@
-import type { StyleProps } from '../../ProtoSet'
+import type { ButtonLayerProps } from 'layers'
 import type { Props as FlexProps } from 'layout/Flex'
 
 export type Props = {
   children: any
-} & StyleProps &
+} & ButtonLayerProps &
   FlexProps
