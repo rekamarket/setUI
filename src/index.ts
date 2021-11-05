@@ -1,5 +1,7 @@
 // button
 export { default as Button } from './button'
+export { default as Link } from './link'
+
 // layout
 export { default as Box } from './layout/Box'
 export { default as Container } from './layout/Container'
@@ -44,5 +46,6 @@ export {
   Superscript,
   UnarticulatedAnnotation,
 } from './typography/Text'
+export { Space, NonBreakable } from './typography/Symbols'
 export { default as ThematicBreak } from './typography/ThematicBreak'
 export { default as Time } from './typography/Time'
