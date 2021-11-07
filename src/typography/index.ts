@@ -24,6 +24,7 @@ export {
 } from './Heading'
 
 export { default as LineBreak } from './LineBreak'
+export { default as Link, LinkSnippets } from './Link'
 
 export {
   default as Paragraph,

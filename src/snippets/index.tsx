@@ -7,6 +7,7 @@ import {
 } from 'layout'
 
 import {
+  LinkSnippets as Link,
   BlockQuoteSnippets as BlockQuote,
   HeadingSnippets as Heading,
   H1Snippets as H1,
@@ -38,6 +39,7 @@ import {
 
 export default [
   ...Symbols,
+  ...Link,
   ...Heading,
   ...H1,
   ...H2,
