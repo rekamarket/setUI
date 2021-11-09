@@ -71,4 +71,5 @@ export {
 } from './Text'
 
 export { default as ThematicBreak } from './ThematicBreak'
+export { Space, NonBreakable, SymbolsSnippets } from './Symbols'
 export { default as Time, TimeSnippets } from './Time'

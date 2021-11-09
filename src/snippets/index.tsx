@@ -33,9 +33,11 @@ import {
   ParagraphSnippets as Paragraph,
   TextBlockSnippets as TextBlock,
   TimeSnippets as Time,
+  SymbolsSnippets as Symbols,
 } from 'typography'
 
 export default [
+  ...Symbols,
   ...Heading,
   ...H1,
   ...H2,
