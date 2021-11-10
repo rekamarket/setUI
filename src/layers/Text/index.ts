@@ -10,6 +10,7 @@ import {
   fontWeightResolve,
 } from './font'
 import { Outline, outlineResolve } from './outline'
+import { spacingResolve } from './spacing'
 import {
   TextDecorationColor,
   textDecorationColorResolve,
@@ -31,6 +32,7 @@ import type {
   FontStyleType,
   FontWeightType,
   OutlineType,
+  SpacingType,
   TextDecorationColorType,
   TextDecorationLineType,
   TextDecorationStyleType,
@@ -53,6 +55,11 @@ class TextLayer {
   // outline
   CSSoutline: OutlineType
 
+  // spacing
+  spacing: () => string
+  spacingBefore: SpacingType
+  spacingAfter: SpacingType
+
   // text
   CSStextDecorationColor: TextDecorationColorType
   CSStextDecorationLine: TextDecorationLineType
@@ -68,6 +75,16 @@ class TextLayer {
       this.fontWeightResolve = fontWeightResolve
       this.FontWeight = FontWeight
     }
+
+    if (config?.useSpacing) {
+      this.spacing = () => {
+        return [this.spacingBefore, this.spacingAfter].filter(Boolean).join(' ')
+      }
+    } else {
+      this.spacing = () => {
+        return ''
+      }
+    }
   }
 
   public set(props: Props) {
@@ -82,6 +99,11 @@ class TextLayer {
 
     // outline
     this.CSSoutline = outlineResolve<Props>(props)
+
+    // spacing
+    const spacing = spacingResolve<Props>(props)
+    this.spacingBefore = spacing.start
+    this.spacingAfter = spacing.end
 
     // text
     this.CSStextDecorationColor = textDecorationColorResolve<Props>(props)
@@ -126,7 +148,7 @@ class TextLayer {
   }
 
   public get box() {
-    return [this.color, this.font, this.outline, this.text]
+    return [this.color, this.font, this.outline, this.text, this.spacing()]
       .filter(Boolean)
       .join(' ')
   }
