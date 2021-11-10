@@ -1,14 +1,13 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
-import { BlockLayer, TextLayer } from 'layers'
+import { TextLayer } from 'layers'
 import { PropsRequired } from './types'
 import { component } from './data'
 import { ClassName } from './styles.css'
 
-const block = new BlockLayer({
-  usePadding: true,
+const text = new TextLayer({
+  useSpacing: true,
 })
-const text = new TextLayer()
 
 const Text: FC<PropsRequired> = ({
   // basic
@@ -24,13 +23,7 @@ const Text: FC<PropsRequired> = ({
     component[as],
 
     {
-      className: cn([
-        className,
-        ClassName,
-
-        block.set(rest).box,
-        text.set(rest).box,
-      ]),
+      className: cn([className, ClassName, text.set(rest).box]),
       title,
     },
 
