@@ -5,7 +5,10 @@ import { Props } from './types'
 import { ClassName } from './styles.css'
 
 const link = new LinkLayer()
-const text = new TextLayer()
+
+const text = new TextLayer({
+  useSpacing: true,
+})
 
 const Link: FC<Props> = ({
   href,
