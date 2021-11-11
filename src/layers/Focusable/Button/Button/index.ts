@@ -1,3 +1,5 @@
+import { Theme, themeResolve } from '../../css'
+
 import {
   Shape,
   shapeResolve,
@@ -10,12 +12,14 @@ import {
 import type {
   ConfigOverride,
   Props,
+  ThemeType,
   ShapeType,
   SizeType,
   VariantType,
 } from './types'
 
 class ButtonLayer {
+  CSStheme: ThemeType
   CSSshape: ShapeType
   CSSsize: SizeType
   CSSvariant: VariantType
@@ -23,11 +27,16 @@ class ButtonLayer {
   constructor(config?: ConfigOverride) {}
 
   public set(props: Props) {
+    this.CSStheme = themeResolve<Props>(props)
     this.CSSshape = shapeResolve<Props>(props)
     this.CSSsize = sizeResolve<Props>(props)
     this.CSSvariant = variantResolve<Props>(props)
 
     return this
+  }
+
+  public get theme() {
+    return Theme[this.CSStheme]
   }
 
   public get shape() {
@@ -43,9 +52,19 @@ class ButtonLayer {
   }
 
   public get box() {
-    return [this.shape, this.size, this.variant].filter(Boolean).join(' ')
+    return [this.theme, this.shape, this.size, this.variant]
+      .filter(Boolean)
+      .join(' ')
   }
 }
+
+export {
+  Theme,
+  useTheme,
+  themeResolve,
+  ThemeContext,
+  ThemeKeys,
+} from '../../css'
 
 export {
   Shape,

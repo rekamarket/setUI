@@ -1,23 +1,8 @@
-import {
-  argTypes as argTypesLink,
-  ShapeKeys,
-  SizeKeys,
-  VariantKeys,
-} from '../css'
+import { argTypes as argTypesLink } from '../../css'
+
+import { argTypes as argTypesButton } from '../css'
 
 export const argTypes = {
   ...argTypesLink,
-
-  Shape: {
-    options: ShapeKeys,
-    control: { type: 'select' },
-  },
-  Size: {
-    options: SizeKeys,
-    control: { type: 'select' },
-  },
-  Variant: {
-    options: VariantKeys,
-    control: { type: 'select' },
-  },
+  ...argTypesButton,
 }

@@ -3,12 +3,11 @@ import cn from 'classnames'
 import { textTransformResolve } from 'layers/Text/text'
 import Component from '../ProtoComponent'
 import {
-  radiusResolve,
   shapeResolve,
   sizeResolve,
   themeResolve,
   variantResolve,
-} from 'layers/Button'
+} from 'layers/Focusable/Button/Button'
 import type { Props } from './types'
 import { ClassName } from './styles.css'
 
@@ -16,8 +15,6 @@ const ButtonComponent: VFC<Props> = ({ defaultStyle, className, ...rest }) =>
   Component({
     ...rest,
     className: cn(ClassName, className),
-    radius:
-      radiusResolve(rest) || rest?.radius || defaultStyle.radius || 'default',
     shape: shapeResolve(rest) || rest?.shape || defaultStyle.shape || 'default',
     size: sizeResolve(rest) || rest?.size || defaultStyle.size || 'default',
     theme: themeResolve(rest) || rest?.theme || defaultStyle.theme || 'default',

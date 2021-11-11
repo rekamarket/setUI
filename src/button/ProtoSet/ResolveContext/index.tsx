@@ -1,18 +1,16 @@
 import { VFC } from 'react'
 import cn from 'classnames'
 import {
-  useRadius,
   useShape,
   useSize,
   useTheme,
   useVariant,
-} from 'layers/Button'
+} from 'layers/Focusable/Button/Button'
 import { Props } from './types'
 import Component from '../ResolveDefaultStyles'
 import { ClassName } from './styles.css'
 
 const Button: VFC<Props> = ({ className, ...rest }) => {
-  const radius = useRadius()
   const shape = useShape()
   const size = useSize()
   const theme = useTheme()
@@ -21,7 +19,6 @@ const Button: VFC<Props> = ({ className, ...rest }) => {
   return Component({
     ...rest,
     className: cn(ClassName, className),
-    radius: rest?.radius || radius,
     shape: rest?.shape || shape,
     size: rest?.size || size,
     theme: rest?.theme || theme,
