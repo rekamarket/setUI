@@ -13,11 +13,11 @@ type Value = {
 
 export const map: Record<Type, Record<Properties, Values>> = {
   primary: {
-    hue: 40.2,
-    saturation: '89.6%',
-    lightness: '62.2%',
+    hue: 218,
+    saturation: '100%',
+    lightness: '40%',
     alpha: 1,
-    textColor: '#5B2A81',
+    textColor: '#fff',
   },
   secondary: {
     hue: 0,

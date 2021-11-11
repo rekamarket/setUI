@@ -1,6 +1,5 @@
 // button
-export { default as Button } from './button'
-export { default as Link } from './typography/Link'
+export { Button, ButtonLink, ButtonIcon } from './button'
 
 // layout
 export { default as Box } from './layout/Box'
@@ -16,6 +15,7 @@ export { default as Tabs } from './layout/Tabs'
 export { default as BackgroundImage, Cover } from './layout/BackgroundImage'
 
 // typography
+export { default as Link } from './typography/Link'
 export { default as BlockQuote } from './typography/BlockQuote'
 export {
   default as Heading,
