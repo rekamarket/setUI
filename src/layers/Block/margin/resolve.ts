@@ -12,7 +12,6 @@ export function resolve<T>(
   } else if ('marginY' in props && props['marginY']) {
     marginTop = MarginTop[props['marginY']]
   } else if ('margin' in props && props['margin']) {
-    console.log('here', props['margin'])
     marginTop = MarginTop[props['margin']]
   }
 
