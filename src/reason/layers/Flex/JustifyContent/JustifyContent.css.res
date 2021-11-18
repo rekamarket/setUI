@@ -42,7 +42,7 @@ type variant = {
 
 @module("@vanilla-extract/css") external styleVariants: (options, cssResolve) => variant = "styleVariants"
 
-module FlexWrap = {
+module JustifyContent = {
   @genType
   type t = [
     | #center
@@ -63,6 +63,7 @@ module FlexWrap = {
 
   let initial = #flexStart;
 
+  @genType
   let style = styleVariants({
     "center": "center",
     "start": "start",

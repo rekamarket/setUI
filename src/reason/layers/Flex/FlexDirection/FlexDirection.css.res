@@ -33,6 +33,7 @@ module FlexDirection = {
 
   let initial = #row;
 
+  @genType
   let style = styleVariants({
     "row": "row",
     "rowReverse": "row-reverse",

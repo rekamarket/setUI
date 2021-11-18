@@ -49,6 +49,7 @@ type variant = {
 @module("@vanilla-extract/css") external styleVariants: (options, cssResolve) => variant = "styleVariants"
 
 module AlignContent = {
+  @genType
   type t = [
     | #center
     | #start
@@ -71,6 +72,7 @@ module AlignContent = {
 
   let initial = #normal;
 
+  @genType
   let style = styleVariants({
     "center": "center",
     "start": "start",

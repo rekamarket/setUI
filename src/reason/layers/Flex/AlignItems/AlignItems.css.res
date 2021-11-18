@@ -40,7 +40,7 @@ type variant = {
 
 @module("@vanilla-extract/css") external styleVariants: (options, cssResolve) => variant = "styleVariants"
 
-module AlignContent = {
+module AlignItems = {
   @genType
   type t = [
     | #normal
@@ -60,6 +60,7 @@ module AlignContent = {
 
   let initial = #stretch;
 
+  @genType
   let style = styleVariants({
     "normal": "normal",
     "stretch": "stretch",

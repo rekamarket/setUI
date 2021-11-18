@@ -30,6 +30,7 @@ module FlexWrap = {
 
   let initial = #nowrap;
 
+  @genType
   let style = styleVariants({
     "nowrap": "nowrap",
     "wrap": "wrap",
