@@ -16,6 +16,6 @@ export type BackgroundAttachmentProps =
   // | Scroll
   // | Fixed
   // | Local
-  | {
-      backgroundAttachment?: Type
-    }
+  {
+    backgroundAttachment?: Type
+  }

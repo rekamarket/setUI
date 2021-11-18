@@ -9,9 +9,9 @@ export function resolve<T>(props: T) {
     // case 'local' in props: {
     //   return 'local'
     // }
-    // case 'backgroundAttachment' in props: {
-    //   return props['backgroundAttachment']
-    // }
+    case 'backgroundAttachment' in props: {
+      return props['backgroundAttachment']
+    }
     default: {
       return undefined
     }

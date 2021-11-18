@@ -1,13 +1,11 @@
-import Footer from 'components/Footer';
-import './_app.css';
+import Footer from '../src/components/Footer'
+import '../styles/globals.css'
 
-const App = ({ Component, pageProps }) => {
-  return (
-    <div>
-      <Component {...pageProps} />
-      <Footer />
-    </div>
-  )
-}
+const App = ({ Component, pageProps }) => (
+  <>
+    <Component {...pageProps} />
+    <Footer />
+  </>
+)
 
-export default App;
+export default App

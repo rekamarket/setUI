@@ -26,6 +26,6 @@ export type BackgroundRepeatProps =
   // | Space
   // | Round
   // | NoRepeat
-  | {
-      backgroundRepeat?: Type
-    }
+  {
+    backgroundRepeat?: Type
+  }

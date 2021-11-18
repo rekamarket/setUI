@@ -19,6 +19,7 @@ const Unordered: FC<Props> = ({ className, ...props }) =>
 
 Unordered.displayName = displayName
 
+export { ClassName as unorderedList } from './styles.css'
 export { defaultProps } from './defaultProps'
 export type { Props } from './types'
 export default Unordered

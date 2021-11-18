@@ -23,6 +23,7 @@ const Ordered: FC<Props> = ({ className, ...props }) =>
 
 Ordered.displayName = displayName
 
+export { ClassName as orderedList } from './styles.css'
 export { defaultProps } from './defaultProps'
 export type { Props } from './types'
 export default Ordered

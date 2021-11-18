@@ -6,8 +6,6 @@ export const defaultProps: Partial<Props> = {
   alignItems: 'center',
   textAlign: 'center',
   overlay: 'primary',
-  flexDirection: 'column',
-  gap: 'xxxlarge',
-  justifyContent: 'flexStart',
-  paddingTop: 'xxxlarge',
+  paddingX: 'medium',
+  justifyContent: 'center',
 }

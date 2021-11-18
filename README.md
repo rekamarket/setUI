@@ -1,6 +1,5 @@
 # SetUI - new and easy way to style components
 
-
 Experimental syntax goal:
 
 ```js

@@ -1,13 +1,7 @@
 import { styleVariants } from '@vanilla-extract/css'
 import { tuple } from 'utils'
 
-export const Keys = [
-  'none',
-  'transparent',
-  'primary',
-  'black',
-  'white',
-]
+export const Keys = ['none', 'transparent', 'primary', 'black', 'white']
 const VALUES = tuple(...Keys)
 export type Type = typeof VALUES[number]
 

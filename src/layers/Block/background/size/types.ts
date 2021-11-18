@@ -11,6 +11,6 @@ import type { Type } from './styles.css'
 export type BackgroundSizeProps =
   // | Cover
   // | Contain
-  | {
-      backgroundSize?: Type
-    }
+  {
+    backgroundSize?: Type
+  }

@@ -20,5 +20,4 @@ const FullBleed: FC<Props> = ({ className, children }) => (
 FullBleed.displayName = displayName
 
 export type { Props } from './types'
-
 export default FullBleed

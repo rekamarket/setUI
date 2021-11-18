@@ -1,6 +1,9 @@
 // button
 export { Button, ButtonLink, ButtonIcon } from './button'
 
+// image
+export { default as Image } from './image/Image'
+
 // layout
 export { default as Box } from './layout/Box'
 export { default as Container } from './layout/Container'

@@ -1,6 +1,6 @@
-const path = require('path');
-const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path')
+const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   components: './src/index.ts',
@@ -21,7 +21,7 @@ module.exports = {
   webpackConfig: () => ({
     plugins: [
       new VanillaExtractPlugin(/* { allowRuntime: true } */),
-      new MiniCssExtractPlugin()
+      new MiniCssExtractPlugin(),
     ],
     module: {
       rules: [
@@ -32,10 +32,10 @@ module.exports = {
             {
               loader: require.resolve('css-loader'),
               options: {
-                url: false // Required as image imports should be handled via JS/TS import statements
-              }
-            }
-          ]
+                url: false, // Required as image imports should be handled via JS/TS import statements
+              },
+            },
+          ],
         },
         {
           test: /\.tsx?$/,
@@ -46,29 +46,30 @@ module.exports = {
               presets: [
                 '@babel/preset-env',
                 '@babel/preset-typescript',
-                '@babel/preset-react'
-              ]
-            }
-          }
-        }
-      ]
+                '@babel/preset-react',
+              ],
+            },
+          },
+        },
+      ],
     },
     resolve: {
       extensions: ['.js', '.ts', '.tsx'],
       alias: {
-        'axioms': path.resolve(__dirname, 'src/axioms/'),
-        'CSS': path.resolve(__dirname, 'src/CSS/'),
-        'button': path.resolve(__dirname, 'src/button/'),
-        'dialog': path.resolve(__dirname, 'src/dialog/'),
-        'form': path.resolve(__dirname, 'src/form/'),
-        'layers': path.resolve(__dirname, 'src/layers/'),
-        'layout': path.resolve(__dirname, 'src/layout/'),
-        'typography': path.resolve(__dirname, 'src/typography/'),
-        'utils': path.resolve(__dirname, 'src/utils/'),
-      }
-    }
+        axioms: path.resolve(__dirname, 'src/axioms/'),
+        CSS: path.resolve(__dirname, 'src/CSS/'),
+        button: path.resolve(__dirname, 'src/button/'),
+        dialog: path.resolve(__dirname, 'src/dialog/'),
+        form: path.resolve(__dirname, 'src/form/'),
+        image: path.resolve(__dirname, 'src/image/'),
+        layers: path.resolve(__dirname, 'src/layers/'),
+        layout: path.resolve(__dirname, 'src/layout/'),
+        typography: path.resolve(__dirname, 'src/typography/'),
+        utils: path.resolve(__dirname, 'src/utils/'),
+      },
+    },
   }),
   iframeSandbox: 'allow-scripts',
   frameComponent: './playroom/Frame.tsx',
   typeScriptFiles: ['src/**/*.{ts,tsx}', '!**/node_modules'],
-};
+}

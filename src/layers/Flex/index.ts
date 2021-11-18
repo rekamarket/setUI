@@ -23,8 +23,6 @@ class FlexLayer {
   CSSjustifyContent: JustifyContentType
 
   public set(props: Props) {
-    console.log('set', props)
-
     this.CSSalignContent = alignContentResolve<Props>(props)
     this.CSSalignItems = alignItemsResolve<Props>(props)
     this.CSSflexDirection = flexDirectionResolve<Props>(props)

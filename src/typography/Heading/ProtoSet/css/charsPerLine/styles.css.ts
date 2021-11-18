@@ -7,13 +7,11 @@ export type Type = typeof VALUES[number]
 
 export const map: Record<Type, number | string> = {
   none: 'none',
-  small: 12,
   medium: 24,
-  large: 48,
 }
 
 const Styles = styleVariants(map, (value) => ({
-  maxWidth: `${value}ch`,
+  maxWidth: typeof value === 'number' ? `${value}ch` : value,
 }))
 
 export const Style: typeof Styles & {

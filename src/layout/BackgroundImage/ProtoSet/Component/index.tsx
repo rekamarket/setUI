@@ -6,6 +6,7 @@ import { component } from './data'
 import { ClassName } from './styles.css'
 
 const block = new BlockLayer({
+  useMargin: true,
   usePadding: true,
   useBackground: true,
 })

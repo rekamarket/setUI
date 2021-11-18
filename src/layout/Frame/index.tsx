@@ -28,6 +28,8 @@ const Frame: I<Props> = (props) => Set(props)
 // supersets
 Frame.FullBleed = FullBleed
 
+export { ClassName as fullBleed } from './Supersets/FullBleed/styles.css'
+export { ClassName as frame } from './Set/styles.css'
 export { default as FrameSnippets } from './Set/snippets'
 export { default as FullBleedSnippets } from './Supersets/FullBleed/snippets'
 export type { Props } from './Set'

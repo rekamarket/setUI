@@ -1,3 +1,3 @@
 export { default as Menu } from './Menu'
-export { default as Ordered } from './Ordered'
-export { default as Unordered } from './Unordered'
+export { default as Ordered, orderedList } from './Ordered'
+export { default as Unordered, unorderedList } from './Unordered'
