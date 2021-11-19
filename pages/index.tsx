@@ -37,10 +37,9 @@ const IndexPage: NextPage = () => (
       {list.map(e => (
         <li key={e.key} className={classes.item}>
           <article className={classes.article}>
-            <H2 className={classes.title}>{e.title}</H2>
+            <H2 className={classes.title}><a href={e.link} className={classes.link}>{e.title}</a></H2>
             <Paragraph className={classes.description}>{e.description}</Paragraph>
             <Time className={classes.date}>{e.date}</Time>
-            <a href={e.link} className={classes.link + " " + "sr-only"}>{e.title}</a>
           </article>
         </li>
       ))}
