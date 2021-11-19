@@ -12,6 +12,10 @@ module.exports = {
   openBrowser: true,
   paramType: 'search', // default is 'hash'
   exampleCode: `
+    <Title>
+      Заголовок страницы
+    </Title>
+
     <Frame charsPerLine="large">
       <H1>Заголовок первого уровня</H1>
       <Paragraph>Многострочный текст</Paragraph>

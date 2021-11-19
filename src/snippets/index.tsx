@@ -1,3 +1,7 @@
+import { TitleSnippets as Title } from 'head'
+
+import { ImageSnippets as Image } from 'image'
+
 import {
   BackgroundImageSnippets as BackgroundImage,
   CoverSnippets as Cover,
@@ -38,6 +42,7 @@ import {
 } from 'typography'
 
 export default [
+  ...Title,
   ...Symbols,
   ...Link,
   ...Heading,
@@ -65,6 +70,7 @@ export default [
   ...Paragraph,
   ...TextBlock,
   ...BlockQuote,
+  ...Image,
   ...BackgroundImage,
   ...Cover,
   ...Frame,

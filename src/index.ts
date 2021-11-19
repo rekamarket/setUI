@@ -1,6 +1,9 @@
 // button
 export { Button, ButtonLink, ButtonIcon } from './button'
 
+// head
+export { default as Title } from './head/Title'
+
 // image
 export { default as Image } from './image/Image'
 
