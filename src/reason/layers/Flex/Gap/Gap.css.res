@@ -51,6 +51,7 @@ module Gap = {
 
   let initial = #none;
 
+  @genType
   let style = styleVariants({
     "none": 0,
     "xxxsmall": 4,

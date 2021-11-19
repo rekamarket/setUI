@@ -1,7 +1,8 @@
 import React, { VFC, createElement } from 'react'
 import cn from 'classnames'
 import { ZIndex, Width } from 'CSS'
-import { BlockLayer, FlexLayer } from 'layers'
+import { BlockLayer } from 'layers'
+import FlexLayer from 'reason/layers/Flex'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
