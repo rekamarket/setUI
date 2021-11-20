@@ -1,18 +1,18 @@
-import { AlignContent, AlignContent_t } from './AlignContent/AlignContent.css.gen'
-import { AlignItems, AlignItems_t } from './AlignItems/AlignItems.css.gen'
-import { FlexDirection, FlexDirection_t } from './FlexDirection/FlexDirection.css.gen'
-import { FlexWrap, FlexWrap_t } from './FlexWrap/FlexWrap.css.gen'
-import { Gap, Gap_t } from './Gap/Gap.css.gen'
-import { JustifyContent, JustifyContent_t } from './JustifyContent/JustifyContent.css.gen'
+import { AlignContent } from './AlignContent/AlignContent.css.gen'
+import { AlignItems } from './AlignItems/AlignItems.css.gen'
+import { FlexDirection } from './FlexDirection/FlexDirection.css.gen'
+import { FlexWrap } from './FlexWrap/FlexWrap.css.gen'
+import { Gap } from './Gap/Gap.css.gen'
+import { JustifyContent } from './JustifyContent/JustifyContent.css.gen'
 import type { Props } from './types'
 
 class FlexLayer {
-  alignContent: AlignContent_t
-  alignItems: AlignItems_t
-  flexDirection: FlexDirection_t
-  flexWrap: FlexWrap_t
-  gap: Gap_t
-  justifyContent: JustifyContent_t
+  alignContent: string
+  alignItems: string
+  flexDirection: string
+  flexWrap: string
+  gap: string
+  justifyContent: string
 
   public set(props: Props) {
     this.alignContent = AlignContent.resolve(props)
