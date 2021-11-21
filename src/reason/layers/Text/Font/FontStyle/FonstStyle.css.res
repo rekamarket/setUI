@@ -37,8 +37,10 @@ module FontStyle = {
     | #unset
   ]
 
+  @genType
   let initial = #normal;
 
+  @genType
   let style = styleVariants({
     "normal": "normal",
     "italic": "italic",

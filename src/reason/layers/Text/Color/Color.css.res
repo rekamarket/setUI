@@ -31,8 +31,10 @@ module Color = {
     | #white
   ]
 
+  @genType
   let initial = #primary;
 
+  @genType
   let style = styleVariants({
     "primary": "#0078D4",
     "secondary": "#2B88D8",

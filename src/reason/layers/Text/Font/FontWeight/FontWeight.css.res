@@ -61,8 +61,10 @@ module FontWeight = {
     | #unset
   ]
 
+  @genType
   let initial = #normal;
 
+  @genType
   let style = styleVariants({
     "thin": "100",
     "extraLight": "200",

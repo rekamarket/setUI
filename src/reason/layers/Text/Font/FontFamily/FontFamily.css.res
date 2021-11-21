@@ -25,8 +25,10 @@ module FontFamily = {
     | #monospace
   ]
 
+  @genType
   let initial = #primary;
 
+  @genType
   let style = styleVariants({
     "primary": "'Montserrat', Arial, sans-serif",
     "monospace": "monospace",
