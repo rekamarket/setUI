@@ -17,7 +17,6 @@ type options = {
   "safeCenter": value,
   "unsafeCenter": value,
   "unset": value,
-  "normal": value,
 };
 
 type output = {
@@ -43,7 +42,6 @@ type variant = {
   "safeCenter": string,
   "unsafeCenter": string,
   "unset": string,
-  "normal": string,
 };
 
 @module("@vanilla-extract/css") external styleVariants: (options, cssResolve) => variant = "styleVariants"
@@ -67,7 +65,6 @@ module AlignContent = {
     | #safeCenter
     | #unsafeCenter
     | #unset
-    | #normal
   ]
 
   let initial = #normal;
@@ -90,7 +87,6 @@ module AlignContent = {
     "safeCenter": "safe center",
     "unsafeCenter": "unsafe center",
     "unset": "unset",
-    "normal": "normal",
   }, (value) => {
     let output = {
       "alignContent": value,
