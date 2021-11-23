@@ -27,6 +27,9 @@ module ColorIndex = {
 
   type output = { "color": value }
   type cssResolve = (value) => output
+  let cssResolve = (value) => {
+    { "color": value }
+  };
 
   @genType
   let initial = #primary;

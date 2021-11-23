@@ -5,9 +5,7 @@ open ColorIndex
 module Color = {
   include ColorIndex;
 
-  let style = styleVariants(options, (value) => {
-    { "color": value };
-  })
+  let style = styleVariants(options, cssResolve)
 
   @genType
   let resolve = (t) => {
