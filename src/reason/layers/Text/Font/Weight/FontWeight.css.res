@@ -43,7 +43,6 @@ type variant = {
 @module("@vanilla-extract/css") external styleVariants: (options, cssResolve) => variant = "styleVariants"
 
 module FontWeight = {
-  @genType
   type t = [
     | #thin
     | #extraLight
@@ -62,9 +61,11 @@ module FontWeight = {
   ]
 
   @genType
-  let initial = #normal;
+  type i = { "fontWeight": t }
 
   @genType
+  let initial = #normal;
+
   let style = styleVariants({
     "thin": "100",
     "extraLight": "200",
@@ -81,10 +82,7 @@ module FontWeight = {
     "initial": "initial",
     "unset": "unset",
   }, (value) => {
-    let output = {
-      "fontWeight": value,
-    };
-    output
+    { "fontWeight": value };
   })
 
   @genType

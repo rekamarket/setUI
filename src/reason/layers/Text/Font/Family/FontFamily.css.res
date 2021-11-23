@@ -19,24 +19,22 @@ type variant = {
 @module("@vanilla-extract/css") external styleVariants: (options, cssResolve) => variant = "styleVariants"
 
 module FontFamily = {
-  @genType
   type t = [
     | #primary
     | #monospace
   ]
 
   @genType
-  let initial = #primary;
+  type i = { "fontFamily": t }
 
   @genType
+  let initial = #primary;
+
   let style = styleVariants({
     "primary": "'Montserrat', Arial, sans-serif",
     "monospace": "monospace",
   }, (value) => {
-    let output = {
-      "fontFamily": value,
-    };
-    output
+    { "fontFamily": value };
   })
 
   @genType

@@ -1,24 +1,28 @@
 type value = string;
 
 type options = {
-  "normal": value,
-  "italic": value,
-  "oblique": value,
+  "solid": value,
+  "double": value,
+  "dotted": value,
+  "dashed": value,
+  "wavy": value,
   "inherit": value,
   "initial": value,
   "unset": value,
 };
 
 type output = {
-  "fontStyle": value,
+  "textDecorationStyle": value,
 }
 
 type cssResolve = (value) => output
 
 type variant = {
-  "normal": string,
-  "italic": string,
-  "oblique": string,
+  "solid": string,
+  "double": string,
+  "dotted": string,
+  "dashed": string,
+  "wavy": string,
   "inherit": string,
   "initial": string,
   "unset": string,
@@ -26,41 +30,45 @@ type variant = {
 
 @module("@vanilla-extract/css") external styleVariants: (options, cssResolve) => variant = "styleVariants"
 
-module FontStyle = {
-  @genType
+module TextDecorationStyle = {
   type t = [
-    | #normal
-    | #italic
-    | #oblique
+    | #solid
+    | #double
+    | #dotted
+    | #dashed
+    | #wavy
     | #inherit
     | #initial
     | #unset
   ]
 
   @genType
-  let initial = #normal;
+  type i = { "textDecorationStyle": t }
 
   @genType
+  let initial = #solid;
+
   let style = styleVariants({
-    "normal": "normal",
-    "italic": "italic",
-    "oblique": "oblique",
+    "solid": "solid",
+    "double": "double",
+    "dotted": "dotted",
+    "dashed": "dashed",
+    "wavy": "wavy",
     "inherit": "inherit",
     "initial": "initial",
     "unset": "unset",
   }, (value) => {
-    let output = {
-      "fontStyle": value,
-    };
-    output
+    { "textDecorationStyle": value };
   })
 
   @genType
   let resolve = (t) => {
     switch (t) {
-    | #normal => style["normal"]
-    | #italic => style["italic"]
-    | #oblique => style["oblique"]
+    | #solid => style["solid"]
+    | #double => style["double"]
+    | #dotted => style["dotted"]
+    | #dashed => style["dashed"]
+    | #wavy => style["wavy"]
     | #inherit => style["inherit"]
     | #initial => style["initial"]
     | #unset => style["unset"]

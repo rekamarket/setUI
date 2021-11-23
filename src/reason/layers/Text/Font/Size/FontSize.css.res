@@ -44,10 +44,12 @@ type variant = {
 @module("@vanilla-extract/css") external styleVariants: (options, cssResolve) => variant = "styleVariants"
 
 module FontSize = {
-  @genType
   type t =
     | Scale(int)
     | Relative(relative)
+
+  @genType
+  type i = { "fontSize": t }
 
   @genType
   let initial = Scale(0);
@@ -64,7 +66,6 @@ module FontSize = {
     }
   }
 
-  @genType
   let style = styleVariants({
     "none": toString(Scale(0)),
     "xxxsmall": toString(Scale(4)),

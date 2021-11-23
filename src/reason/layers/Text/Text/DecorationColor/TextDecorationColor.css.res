@@ -1,67 +1,62 @@
 type value = string;
 
 type options = {
+  "currentColor": value,
   "primary": value,
   "secondary": value,
   "black": value,
   "white": value,
-  "transparent": value,
-  "initial": value,
 };
 
 type output = {
-  "backgroundColor": value,
+  "textDecorationColor": value,
 }
 
 type cssResolve = (value) => output
 
 type variant = {
+  "currentColor": string,
   "primary": string,
   "secondary": string,
   "black": string,
   "white": string,
-  "transparent": string,
-  "initial": string,
 };
 
 @module("@vanilla-extract/css") external styleVariants: (options, cssResolve) => variant = "styleVariants"
 
-module BackgroundColor = {
+module TextDecorationColor = {
   type t = [
+    | #currentColor
     | #primary
     | #secondary
     | #black
     | #white
-    | #transparent
-    | #initial
   ]
 
   @genType
-  type i = { "backgroundColor": t }
+  type i = { "textDecorationColor": t }
 
   @genType
-  let initial = #initial;
+  let initial = #currentColor;
 
   let style = styleVariants({
+    "currentColor": "currentColor",
     "primary": "#0078D4",
     "secondary": "#2B88D8",
     "black": "#000000",
     "white": "#FFFFFF",
-    "transparent": "transparent",
-    "initial": "initial",
   }, (value) => {
-    { "backgroundColor": value };
+    { "textDecorationColor": value };
   })
 
   @genType
   let resolve = (t) => {
     switch (t) {
+    | #currentColor => style["currentColor"]
     | #primary => style["primary"]
     | #secondary => style["secondary"]
     | #black => style["black"]
     | #white => style["white"]
-    | #transparent => style["transparent"]
-    | #initial => style["initial"]
     };
   }
 }

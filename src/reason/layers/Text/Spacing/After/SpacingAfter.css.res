@@ -10,11 +10,10 @@ type cssResolve = (SpacingShared.value) => output
 
 module SpacingAfter = {
   @genType
+  type i = { "spacingAfter": SpacingShared.t }
+
   let style = styleVariants(SpacingShared.options, (value) => {
-    let output = {
-      "paddingInlineEnd": value,
-    };
-    output
+    { "paddingInlineEnd": value };
   })
 
   @genType

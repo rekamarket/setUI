@@ -1,8 +1,6 @@
 module SpacingShared = {
-  @genType
   type value = int;
 
-  @genType
   type options = {
     "none": value,
     "xxxsmall": value,
@@ -16,7 +14,6 @@ module SpacingShared = {
     "xxxlarge": value,
   };
 
-  @genType
   type variant = {
     "none": string,
     "xxxsmall": string,

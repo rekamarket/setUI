@@ -10,11 +10,10 @@ type cssResolve = (SpacingShared.value) => output
 
 module SpacingBefore = {
   @genType
+  type i = { "spacingBefore": SpacingShared.t }
+
   let style = styleVariants(SpacingShared.options, (value) => {
-    let output = {
-      "paddingInlineStart": value,
-    };
-    output
+    { "paddingInlineStart": value };
   })
 
   @genType
