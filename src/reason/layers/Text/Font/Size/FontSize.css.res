@@ -1,87 +1,11 @@
-type relative = [
-  | #smaller
-  | #larger
-]
+open FontSizeIndex
 
-type value = string
-
-type options = {
-  "none": value,
-  "xxxsmall": value,
-  "xxsmall": value,
-  "xsmall": value,
-  "small": value,
-  "medium": value,
-  "large": value,
-  "xlarge": value,
-  "xxlarge": value,
-  "xxxlarge": value,
-  "smaller": value,
-  "larger": value,
-};
-
-type output = {
-  "fontSize": value,
-}
-
-type cssResolve = (value) => output
-
-type variant = {
-  "none": string,
-  "xxxsmall": string,
-  "xxsmall": string,
-  "xsmall": string,
-  "small": string,
-  "medium": string,
-  "large": string,
-  "xlarge": string,
-  "xxlarge": string,
-  "xxxlarge": string,
-  "smaller": string,
-  "larger": string,
-};
-
-@module("@vanilla-extract/css") external styleVariants: (options, cssResolve) => variant = "styleVariants"
+@module("@vanilla-extract/css") external styleVariants: (FontSizeIndex.options, FontSizeIndex.cssResolve) => FontSizeIndex.variant = "styleVariants"
 
 module FontSize = {
-  type t =
-    | Scale(int)
-    | Relative(relative)
+  include FontSizeIndex
 
-  @genType
-  type i = { "fontSize": t }
-
-  @genType
-  let initial = Scale(0);
-
-  let toString = (t) => {
-    switch (t) {
-      | Scale(int) => int -> Belt.Int.toString
-      | Relative(relative) => {
-        switch (relative) {
-          | #smaller => relative :> string
-          | #larger => relative :> string
-        }
-      }
-    }
-  }
-
-  let style = styleVariants({
-    "none": toString(Scale(0)),
-    "xxxsmall": toString(Scale(4)),
-    "xxsmall": toString(Scale(8)),
-    "xsmall": toString(Scale(12)),
-    "small": toString(Scale(16)),
-    "medium": toString(Scale(24)),
-    "large": toString(Scale(36)),
-    "xlarge": toString(Scale(48)),
-    "xxlarge": toString(Scale(96)),
-    "xxxlarge": toString(Scale(128)),
-    "smaller": toString(Relative(#smaller)),
-    "larger": toString(Relative(#larger)),
-  }, (value) => {
-    { "fontSize": value }
-  })
+  let style = styleVariants(options, cssResolve)
 
   @genType
   let resolve = (t) => {

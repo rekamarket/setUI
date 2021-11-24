@@ -1,4 +1,4 @@
-module SpacingShared = {
+module Spacing = {
   type value = int;
 
   type options = {

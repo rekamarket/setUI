@@ -1,20 +1,11 @@
-open SpacingShared
+open SpacingBeforeIndex
 
-type output = {
-  "paddingInlineStart": SpacingShared.value,
-}
-
-type cssResolve = (SpacingShared.value) => output
-
-@module("@vanilla-extract/css") external styleVariants: (SpacingShared.options, cssResolve) => SpacingShared.variant = "styleVariants"
+@module("@vanilla-extract/css") external styleVariants: (SpacingBeforeIndex.options, SpacingBeforeIndex.cssResolve) => SpacingBeforeIndex.variant = "styleVariants"
 
 module SpacingBefore = {
-  @genType
-  type i = { "spacingBefore": SpacingShared.t }
+  include SpacingBeforeIndex
 
-  let style = styleVariants(SpacingShared.options, (value) => {
-    { "paddingInlineStart": value };
-  })
+  let style = styleVariants(options, cssResolve)
 
   @genType
   let resolve = (t) => {

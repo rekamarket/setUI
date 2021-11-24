@@ -1,41 +1,11 @@
-type value = string;
+open FontFamilyIndex
 
-type options = {
-  "primary": value,
-  "monospace": value,
-};
-
-type output = {
-  "fontFamily": value,
-}
-
-type cssResolve = (value) => output
-
-type variant = {
-  "primary": string,
-  "monospace": string,
-};
-
-@module("@vanilla-extract/css") external styleVariants: (options, cssResolve) => variant = "styleVariants"
+@module("@vanilla-extract/css") external styleVariants: (FontFamilyIndex.options, FontFamilyIndex.cssResolve) => FontFamilyIndex.variant = "styleVariants"
 
 module FontFamily = {
-  type t = [
-    | #primary
-    | #monospace
-  ]
+  include FontFamilyIndex
 
-  @genType
-  type i = { "fontFamily": t }
-
-  @genType
-  let initial = #primary;
-
-  let style = styleVariants({
-    "primary": "'Montserrat', Arial, sans-serif",
-    "monospace": "monospace",
-  }, (value) => {
-    { "fontFamily": value };
-  })
+  let style = styleVariants(options, cssResolve)
 
   @genType
   let resolve = (t) => {

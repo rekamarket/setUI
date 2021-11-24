@@ -1,7 +1,8 @@
-module ColorIndex = {
+module TextDecorationColorIndex = {
   type value = string;
 
   type options = {
+    "currentColor": value,
     "primary": value,
     "secondary": value,
     "black": value,
@@ -9,6 +10,7 @@ module ColorIndex = {
   };
 
   type t = [
+    | #currentColor
     | #primary
     | #secondary
     | #black
@@ -16,6 +18,7 @@ module ColorIndex = {
   ]
 
   type variant = {
+    "currentColor": string,
     "primary": string,
     "secondary": string,
     "black": string,
@@ -23,20 +26,20 @@ module ColorIndex = {
   };
 
   @genType
-  type i = { "color": t }
+  type i = { "textDecorationColor": t }
 
-  type output = { "color": value }
+  type output = { "textDecorationColor": value }
   type cssResolve = (value) => output
-  let cssResolve = (value) => {{ "color": value }};
+  let cssResolve = (value) => {{ "textDecorationColor": value }};
 
   @genType
-  let initial = #primary;
+  let initial = #currentColor;
 
-  @genType
   let options = {
+    "currentColor": "currentColor",
     "primary": "#0078D4",
     "secondary": "#2B88D8",
     "black": "#000000",
     "white": "#FFFFFF",
-  };
+  }
 }

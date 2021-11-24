@@ -1,20 +1,11 @@
-open SpacingShared
+open SpacingAfterIndex
 
-type output = {
-  "paddingInlineEnd": SpacingShared.value,
-}
-
-type cssResolve = (SpacingShared.value) => output
-
-@module("@vanilla-extract/css") external styleVariants: (SpacingShared.options, cssResolve) => SpacingShared.variant = "styleVariants"
+@module("@vanilla-extract/css") external styleVariants: (SpacingAfterIndex.options, SpacingAfterIndex.cssResolve) => SpacingAfterIndex.variant = "styleVariants"
 
 module SpacingAfter = {
-  @genType
-  type i = { "spacingAfter": SpacingShared.t }
+  include SpacingAfterIndex
 
-  let style = styleVariants(SpacingShared.options, (value) => {
-    { "paddingInlineEnd": value };
-  })
+  let style = styleVariants(options, cssResolve)
 
   @genType
   let resolve = (t) => {

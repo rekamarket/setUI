@@ -1,65 +1,11 @@
-type value = string;
+open TextDecorationStyleIndex
 
-type options = {
-  "solid": value,
-  "double": value,
-  "dotted": value,
-  "dashed": value,
-  "wavy": value,
-  "inherit": value,
-  "initial": value,
-  "unset": value,
-};
-
-type output = {
-  "textDecorationStyle": value,
-}
-
-type cssResolve = (value) => output
-
-type variant = {
-  "solid": string,
-  "double": string,
-  "dotted": string,
-  "dashed": string,
-  "wavy": string,
-  "inherit": string,
-  "initial": string,
-  "unset": string,
-};
-
-@module("@vanilla-extract/css") external styleVariants: (options, cssResolve) => variant = "styleVariants"
+@module("@vanilla-extract/css") external styleVariants: (TextDecorationStyleIndex.options, TextDecorationStyleIndex.cssResolve) => TextDecorationStyleIndex.variant = "styleVariants"
 
 module TextDecorationStyle = {
-  type t = [
-    | #solid
-    | #double
-    | #dotted
-    | #dashed
-    | #wavy
-    | #inherit
-    | #initial
-    | #unset
-  ]
+  include TextDecorationStyleIndex
 
-  @genType
-  type i = { "textDecorationStyle": t }
-
-  @genType
-  let initial = #solid;
-
-  let style = styleVariants({
-    "solid": "solid",
-    "double": "double",
-    "dotted": "dotted",
-    "dashed": "dashed",
-    "wavy": "wavy",
-    "inherit": "inherit",
-    "initial": "initial",
-    "unset": "unset",
-  }, (value) => {
-    { "textDecorationStyle": value };
-  })
+  let style = styleVariants(options, cssResolve)
 
   @genType
   let resolve = (t) => {

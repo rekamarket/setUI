@@ -1,4 +1,4 @@
-module ColorIndex = {
+module BackgroundColorIndex = {
   type value = string;
 
   type options = {
@@ -6,6 +6,8 @@ module ColorIndex = {
     "secondary": value,
     "black": value,
     "white": value,
+    "transparent": value,
+    "initial": value,
   };
 
   type t = [
@@ -13,6 +15,8 @@ module ColorIndex = {
     | #secondary
     | #black
     | #white
+    | #transparent
+    | #initial
   ]
 
   type variant = {
@@ -20,23 +24,26 @@ module ColorIndex = {
     "secondary": string,
     "black": string,
     "white": string,
+    "transparent": string,
+    "initial": string,
   };
 
   @genType
-  type i = { "color": t }
+  type i = { "backgroundColor": t }
 
-  type output = { "color": value }
+  type output = { "backgroundColor": value }
   type cssResolve = (value) => output
-  let cssResolve = (value) => {{ "color": value }};
+  let cssResolve = (value) => {{ "backgroundColor": value }};
 
   @genType
-  let initial = #primary;
+  let initial = #initial;
 
-  @genType
   let options = {
     "primary": "#0078D4",
     "secondary": "#2B88D8",
     "black": "#000000",
     "white": "#FFFFFF",
-  };
+    "transparent": "transparent",
+    "initial": "initial",
+  }
 }
