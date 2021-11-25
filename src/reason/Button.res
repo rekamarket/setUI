@@ -1,9 +1,9 @@
-open AlignContent
+open ColorIndex
 
 module Button = {
   @genType
   @react.component
-  let make = (~count: int, ~color: AlignContent.t) => {
+  let make = (~count: int, ~color: ColorIndex.t) => {
     let times = switch count {
     | 1 => "once"
     | 2 => "twice"
@@ -11,6 +11,6 @@ module Button = {
     }
     let msg = "Click me " ++ times
 
-    <button className={AlignContent.resolve(color)}> {msg->React.string} </button>
+    <button className={color :> string}> {msg->React.string} </button>
   }
 }
