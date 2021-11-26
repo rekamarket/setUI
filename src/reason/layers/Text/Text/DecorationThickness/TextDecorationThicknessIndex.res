@@ -17,10 +17,17 @@ module TextDecorationThicknessIndex = {
     | #unset
   ]
 
-  type t =
-    | Single(single)
-    | Scale(int)
-    | Global(global)
+  type t = [
+    | #auto
+    | #fromFont
+    | #thin
+    | #light
+    | #medium
+    | #bold
+    | #inherit
+    | #initial
+    | #unset
+  ]
 
   type value = string
 
@@ -55,28 +62,35 @@ module TextDecorationThicknessIndex = {
   type cssResolve = (value) => output
   let cssResolve = (value) => { "textDecorationThickness": value }
 
-  @genType
-  let initial = Scale(0);
+  let toString = (int) => `${int -> Belt.Int.toString}px`
 
-  let toString = (t) => {
-    switch (t) {
-      | Single(single) => single :> string
-      | Scale(int) => int -> Belt.Int.toString
-      | Global(global) => global :> string
-    }
-  }
+  let a: single = #auto;
+  let auto = (a :> string);
+
+  let b: single = #fromFont;
+  let fromFont = (b :> string);
+
+  let c: global = #inherit;
+  let inheritValue = (c :> string);
+
+  let d: global = #initial;
+  @genType
+  let initial = (d :> string);
+
+  let e: global = #unset;
+  let unset = (e :> string);
 
   let options = {
-    "auto": toString(Single(#auto)),
-    "fromFont": toString(Single(#fromFont)),
+    "auto": auto,
+    "fromFont": fromFont,
 
-    "thin": toString(Scale(1)),
-    "light": toString(Scale(2)),
-    "medium": toString(Scale(3)),
-    "bold": toString(Scale(4)),
+    "thin": toString(1),
+    "light": toString(2),
+    "medium": toString(3),
+    "bold": toString(4),
 
-    "inherit": toString(Global(#inherit)),
-    "initial": toString(Global(#initial)),
-    "unset": toString(Global(#unset)),
+    "inherit": inheritValue,
+    "initial": initial,
+    "unset": unset,
   }
 }

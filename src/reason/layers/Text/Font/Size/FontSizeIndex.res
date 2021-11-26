@@ -1,12 +1,21 @@
 module FontSizeIndex = {
-  type relative = [
-    | #smaller
+  type t = [
+    // relative
     | #larger
-  ]
+    | #smaller
 
-  type t =
-    | String(string)
-    | Relative(relative)
+    // scale
+    | #none
+    | #xxxsmall
+    | #xxsmall
+    | #xsmall
+    | #small
+    | #medium
+    | #large
+    | #xlarge
+    | #xxlarge
+    | #xxxlarge
+  ]
 
   type value = string;
 
@@ -40,12 +49,7 @@ module FontSizeIndex = {
     "larger": string,
   };
 
-  type m = Int(int) | Relative(relative)
-
-  let toString: (m) => string = switch (m) {
-    | Relative(relative) => relative :> string
-    | Int(int) => `${int -> Belt.Int.toString}px`
-  }
+  let toString = (int) => `${int -> Belt.Int.toString}px`
 
   @genType
   type i = { "fontSize": t }
@@ -56,6 +60,12 @@ module FontSizeIndex = {
 
   @genType
   let initial = 0;
+
+  let a: t = #smaller;
+  let smaller = (a :> string);
+
+  let b: t = #larger;
+  let larger = (b :> string);
 
   let options = {
     "none": toString(0),
@@ -68,7 +78,7 @@ module FontSizeIndex = {
     "xlarge": toString(48),
     "xxlarge": toString(96),
     "xxxlarge": toString(128),
-    "smaller": toString(Relative(#smaller)),
-    "larger": toString(Relative(#larger)),
+    "smaller": smaller,
+    "larger": larger,
   }
 }
