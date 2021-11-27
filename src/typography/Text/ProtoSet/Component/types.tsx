@@ -1,4 +1,5 @@
-import type { BlockLayerProps, TextLayerProps } from 'layers'
+import type { BlockLayerProps } from 'layers'
+import type { Props as TextLayerProps } from 'reason/layers/Text'
 
 export type AsType =
   | 'span'
