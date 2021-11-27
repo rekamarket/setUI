@@ -1,5 +1,5 @@
 import type { DisplayType } from 'CSS'
-import type { TextLayerProps } from 'layers'
+import type { Props as TextLayerProps } from 'reason/layers/Text'
 import type { MarginProps, PaddingProps } from 'layers/Block'
 import { CharsPerLineType, WeightType } from '../css'
 

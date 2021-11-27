@@ -1,7 +1,8 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
 import { Display } from 'CSS'
-import { BlockLayer, TextLayer } from 'layers'
+import TextLayer from 'reason/layers/Text'
+import { BlockLayer } from 'layers'
 import { CharsPerLine, weightResolve, Weight, WeightProps } from '../css'
 import { PropsRequired } from './types'
 import { headers } from './data'
@@ -12,12 +13,13 @@ const block = new BlockLayer({
   useMargin: true,
 })
 
-const text = new TextLayer<WeightProps>({
-  fontWeight: {
-    resolver: weightResolve,
-    Style: Weight,
-  },
-})
+// const text = new TextLayer<WeightProps>({
+//   fontWeight: {
+//     resolver: weightResolve,
+//     Style: Weight,
+//   },
+// })
+const text = new TextLayer()
 
 const Heading: FC<PropsRequired> = ({
   // basic
@@ -31,6 +33,21 @@ const Heading: FC<PropsRequired> = ({
   children,
 
   charsPerLine,
+
+  // text
+  color,
+  fontFamily,
+  fontSize,
+  fontStyle,
+  fontWeight,
+  backgroundColor,
+  spacingBefore,
+  spacingAfter,
+  textDecorationColor,
+  textDecorationLine,
+  textDecorationStyle,
+  textDecorationThickness,
+  textTransform,
   ...rest
 }) =>
   createElement(
@@ -43,7 +60,21 @@ const Heading: FC<PropsRequired> = ({
         CharsPerLine[charsPerLine],
         Display[display],
         block.set(rest).box,
-        text.set(rest).box,
+        text.resolve({
+          color,
+          fontFamily,
+          fontSize,
+          fontStyle,
+          fontWeight,
+          backgroundColor,
+          spacingBefore,
+          spacingAfter,
+          textDecorationColor,
+          textDecorationLine,
+          textDecorationStyle,
+          textDecorationThickness,
+          textTransform,
+        }),
       ]),
     },
 

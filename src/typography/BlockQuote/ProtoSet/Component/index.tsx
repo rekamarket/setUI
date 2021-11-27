@@ -1,6 +1,7 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
-import { BlockLayer, TextLayer } from 'layers'
+import TextLayer from 'reason/layers/Text'
+import { BlockLayer } from 'layers'
 import { PropsRequired } from './types'
 import { ClassName } from './styles.css'
 import { SymbolLayer } from './layers'
@@ -19,6 +20,21 @@ const BlockQuote: FC<PropsRequired> = ({
 
   children,
 
+  // text
+  color,
+  fontFamily,
+  fontSize,
+  fontStyle,
+  fontWeight,
+  backgroundColor,
+  spacingBefore,
+  spacingAfter,
+  textDecorationColor,
+  textDecorationLine,
+  textDecorationStyle,
+  textDecorationThickness,
+  textTransform,
+
   ...rest
 }) => (
   <blockquote
@@ -28,7 +44,21 @@ const BlockQuote: FC<PropsRequired> = ({
       ClassName,
 
       block.set(rest).box,
-      text.set(rest).box,
+      text.resolve({
+        color,
+        fontFamily,
+        fontSize,
+        fontStyle,
+        fontWeight,
+        backgroundColor,
+        spacingBefore,
+        spacingAfter,
+        textDecorationColor,
+        textDecorationLine,
+        textDecorationStyle,
+        textDecorationThickness,
+        textTransform,
+      }),
       symbol.set(rest).box,
     ])}
   >

@@ -1,5 +1,6 @@
 import type { ZIndexType } from 'CSS'
-import type { BlockLayerProps, TextLayerProps } from 'layers'
+import type { Props as TextLayerProps } from 'reason/layers/Text'
+import type { BlockLayerProps } from 'layers'
 
 export type AsType = 'p' | 'div'
 

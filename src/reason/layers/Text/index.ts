@@ -28,7 +28,7 @@ class TextLayer {
   textDecorationThickness: string
   textTransform: string
 
-  public set({
+  resolve({
     color,
     fontFamily,
     fontSize,
@@ -59,10 +59,6 @@ class TextLayer {
     )
     this.textTransform = TextTransform_resolve(textTransform)
 
-    return this
-  }
-
-  public get box() {
     return [
       this.color,
       this.fontFamily,

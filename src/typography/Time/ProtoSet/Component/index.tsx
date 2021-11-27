@@ -1,6 +1,7 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
-import { BlockLayer, TextLayer } from 'layers'
+import TextLayer from 'reason/layers/Text'
+import { BlockLayer } from 'layers'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
@@ -16,10 +17,42 @@ const Time: FC<Props> = ({
 
   children,
 
+  // text
+  color,
+  fontFamily,
+  fontSize,
+  fontStyle,
+  fontWeight,
+  backgroundColor,
+  spacingBefore,
+  spacingAfter,
+  textDecorationColor,
+  textDecorationLine,
+  textDecorationStyle,
+  textDecorationThickness,
+  textTransform,
   ...rest
 }) => (
   <time
-    className={cn([ClassName, block.set(rest).padding, text.set(rest).box])}
+    className={cn([
+      ClassName,
+      block.set(rest).padding,
+      text.resolve({
+        color,
+        fontFamily,
+        fontSize,
+        fontStyle,
+        fontWeight,
+        backgroundColor,
+        spacingBefore,
+        spacingAfter,
+        textDecorationColor,
+        textDecorationLine,
+        textDecorationStyle,
+        textDecorationThickness,
+        textTransform,
+      }),
+    ])}
     dateTime={datetime}
     title={title}
   >
