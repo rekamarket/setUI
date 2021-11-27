@@ -1,2 +1,7 @@
+.merlin
 /node_modules
 /.next
+/lib/bs
+/out/*.html
+/src/reason/**/*.js
+/src/reason/**/*.gen.tsx
