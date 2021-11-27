@@ -1,14 +1,13 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
-import { LinkLayer, TextLayer } from 'layers'
+import TextLayer from 'reason/layers/Text'
+import { LinkLayer } from 'layers'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
 const link = new LinkLayer()
 
-const text = new TextLayer({
-  useSpacing: true,
-})
+const text = new TextLayer()
 
 const Link: FC<Props> = ({
   href,
@@ -17,6 +16,20 @@ const Link: FC<Props> = ({
 
   children,
 
+  // text
+  color,
+  fontFamily,
+  fontSize,
+  fontStyle,
+  fontWeight,
+  backgroundColor,
+  spacingBefore,
+  spacingAfter,
+  textDecorationColor,
+  textDecorationLine,
+  textDecorationStyle,
+  textDecorationThickness,
+  textTransform,
   ...rest
 }) => (
   <a
@@ -25,7 +38,21 @@ const Link: FC<Props> = ({
       className,
       ClassName,
       link.set(rest).box,
-      text.set(rest).box,
+      text.resolve({
+        color,
+        fontFamily,
+        fontSize,
+        fontStyle,
+        fontWeight,
+        backgroundColor,
+        spacingBefore,
+        spacingAfter,
+        textDecorationColor,
+        textDecorationLine,
+        textDecorationStyle,
+        textDecorationThickness,
+        textTransform,
+      }),
     ])}
     title={title}
   >
