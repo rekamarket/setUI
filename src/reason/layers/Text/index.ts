@@ -51,9 +51,12 @@ class TextLayer {
     this.backgroundColor = OutlineStyle_resolve(backgroundColor)
     this.spacingBefore = SpacingBeforeStyle_resolve(spacingBefore)
     this.spacingAfter = SpacingAfterStyle_resolve(spacingAfter)
-    this.textDecorationColor = TextDecorationColorStyle_resolve(textDecorationColor)
-    this.textDecorationLine = TextDecorationLineStyle_resolve(textDecorationLine)
-    this.textDecorationStyle = TextDecorationStyleStyle_resolve(textDecorationStyle)
+    this.textDecorationColor =
+      TextDecorationColorStyle_resolve(textDecorationColor)
+    this.textDecorationLine =
+      TextDecorationLineStyle_resolve(textDecorationLine)
+    this.textDecorationStyle =
+      TextDecorationStyleStyle_resolve(textDecorationStyle)
     this.textDecorationThickness = TextDecorationThicknessStyle_resolve(
       textDecorationThickness
     )

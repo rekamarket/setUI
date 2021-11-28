@@ -32,4 +32,25 @@ import { IPaddingBlockStartStyle_i } from './Padding/BlockStart(padding-top)/Pad
 import { IPaddingInlineEndStyle_i } from './Padding/InlineEnd(padding-right)/PaddingInlineEndStyle.css.gen'
 import { IPaddingInlineStartStyle_i } from './Padding/InlineStart(padding-left)/PaddingInlineStartStyle.css.gen'
 
-export type Props = IBackgroundAttachmentStyle_i & IBackgroundClipStyle_i & IBackgroundColorStyle_i & IBackgroundOpacityStyle_i & IBackgroundOriginStyle_i & IBackgroundPositionStyle_i & IBackgroundRepeatStyle_i & IBackgroundSizeStyle_i & IBorderColorStyle_i & IBorderOpacityStyle_i & IBorderStyleStyle_i & IBorderThicknessStyle_i & IContentAlignStyle_i & ICornerRadiusStyle_i & IMarginBlockEndStyle_i & IMarginBlockStartStyle_i & IMarginInlineEndStyle_i & IMarginInlineStartStyle_i & IPaddingBlockEndStyle_i & IPaddingBlockStartStyle_i & IPaddingInlineEndStyle_i & IPaddingInlineStartStyle_i
+export type Props = IBackgroundAttachmentStyle_i &
+  IBackgroundClipStyle_i &
+  IBackgroundColorStyle_i &
+  IBackgroundOpacityStyle_i &
+  IBackgroundOriginStyle_i &
+  IBackgroundPositionStyle_i &
+  IBackgroundRepeatStyle_i &
+  IBackgroundSizeStyle_i &
+  IBorderColorStyle_i &
+  IBorderOpacityStyle_i &
+  IBorderStyleStyle_i &
+  IBorderThicknessStyle_i &
+  IContentAlignStyle_i &
+  ICornerRadiusStyle_i &
+  IMarginBlockEndStyle_i &
+  IMarginBlockStartStyle_i &
+  IMarginInlineEndStyle_i &
+  IMarginInlineStartStyle_i &
+  IPaddingBlockEndStyle_i &
+  IPaddingBlockStartStyle_i &
+  IPaddingInlineEndStyle_i &
+  IPaddingInlineStartStyle_i

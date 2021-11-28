@@ -60,67 +60,68 @@ const Interval: VFC<Props> = ({
   paddingBlockStart,
   paddingInlineEnd,
   paddingInlineStart,
-}) => createElement(
-  tags[as] || tags.div,
+}) =>
+  createElement(
+    tags[as] || tags.div,
 
-  {
-    className: cn([
-      // root
-      ClassName,
+    {
+      className: cn([
+        // root
+        ClassName,
 
-      // generic
-      AspectRatio[aspectRatio] || AspectRatio.default,
+        // generic
+        AspectRatio[aspectRatio] || AspectRatio.default,
 
-      block.resolve({
-        // background
-        backgroundAttachment,
-        backgroundClip,
-        backgroundColor,
-        backgroundOpacity,
-        backgroundOrigin,
-        backgroundPosition,
-        backgroundRepeat,
-        backgroundSize,
+        block.resolve({
+          // background
+          backgroundAttachment,
+          backgroundClip,
+          backgroundColor,
+          backgroundOpacity,
+          backgroundOrigin,
+          backgroundPosition,
+          backgroundRepeat,
+          backgroundSize,
 
-        // border
-        borderColor,
-        borderOpacity,
-        borderStyle,
-        borderThickness,
+          // border
+          borderColor,
+          borderOpacity,
+          borderStyle,
+          borderThickness,
 
-        // content
-        contentAlign,
+          // content
+          contentAlign,
 
-        // corner
-        cornerRadius,
+          // corner
+          cornerRadius,
 
-        // margin
-        marginBlockEnd,
-        marginBlockStart,
-        marginInlineEnd,
-        marginInlineStart,
+          // margin
+          marginBlockEnd,
+          marginBlockStart,
+          marginInlineEnd,
+          marginInlineStart,
 
-        // padding
-        paddingBlockEnd,
-        paddingBlockStart,
-        paddingInlineEnd,
-        paddingInlineStart,
-      }),
-      flex.resolve({
-        alignContent,
-        alignItems,
-        flexDirection,
-        flexWrap,
-        gap,
-        justifyContent,
-      }),
+          // padding
+          paddingBlockEnd,
+          paddingBlockStart,
+          paddingInlineEnd,
+          paddingInlineStart,
+        }),
+        flex.resolve({
+          alignContent,
+          alignItems,
+          flexDirection,
+          flexWrap,
+          gap,
+          justifyContent,
+        }),
 
-      ZIndex[zIndex] || ZIndex.default,
-    ]),
-  },
+        ZIndex[zIndex] || ZIndex.default,
+      ]),
+    },
 
-  children
-)
+    children
+  )
 
 export type { Props } from './types'
 

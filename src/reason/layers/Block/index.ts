@@ -32,43 +32,42 @@ import { PaddingBlockStartStyle_resolve } from './Padding/BlockStart(padding-top
 import { PaddingInlineEndStyle_resolve } from './Padding/InlineEnd(padding-right)/PaddingInlineEndStyle.css.gen'
 import { PaddingInlineStartStyle_resolve } from './Padding/InlineStart(padding-left)/PaddingInlineStartStyle.css.gen'
 
-
 import type { Props } from './types'
 
 class BlockLayer {
   // background
-  backgroundAttachment: string;
-  backgroundClip: string;
-  backgroundColor: string;
-  backgroundOpacity: string;
-  backgroundOrigin: string;
-  backgroundPosition: string;
-  backgroundRepeat: string;
-  backgroundSize: string;
+  backgroundAttachment: string
+  backgroundClip: string
+  backgroundColor: string
+  backgroundOpacity: string
+  backgroundOrigin: string
+  backgroundPosition: string
+  backgroundRepeat: string
+  backgroundSize: string
 
   // border
-  borderColor: string;
-  borderOpacity: string;
-  borderStyle: string;
-  borderThickness: string;
+  borderColor: string
+  borderOpacity: string
+  borderStyle: string
+  borderThickness: string
 
   // content
-  contentAlign: string;
+  contentAlign: string
 
   // corner
-  cornerRadius: string;
+  cornerRadius: string
 
   // margin
-  marginBlockEnd: string;
-  marginBlockStart: string;
-  marginInlineEnd: string;
-  marginInlineStart: string;
+  marginBlockEnd: string
+  marginBlockStart: string
+  marginInlineEnd: string
+  marginInlineStart: string
 
   // padding
-  paddingBlockEnd: string;
-  paddingBlockStart: string;
-  paddingInlineEnd: string;
-  paddingInlineStart: string;
+  paddingBlockEnd: string
+  paddingBlockStart: string
+  paddingInlineEnd: string
+  paddingInlineStart: string
 
   resolve({
     // background
@@ -106,12 +105,14 @@ class BlockLayer {
     paddingInlineStart,
   }: Props) {
     // background
-    this.backgroundAttachment = BackgroundAttachmentStyle_resolve(backgroundAttachment)
+    this.backgroundAttachment =
+      BackgroundAttachmentStyle_resolve(backgroundAttachment)
     this.backgroundClip = BackgroundClipStyle_resolve(backgroundClip)
     this.backgroundColor = BackgroundColorStyle_resolve(backgroundColor)
     this.backgroundOpacity = BackgroundOpacityStyle_resolve(backgroundOpacity)
     this.backgroundOrigin = BackgroundOriginStyle_resolve(backgroundOrigin)
-    this.backgroundPosition = BackgroundPositionStyle_resolve(backgroundPosition)
+    this.backgroundPosition =
+      BackgroundPositionStyle_resolve(backgroundPosition)
     this.backgroundRepeat = BackgroundRepeatStyle_resolve(backgroundRepeat)
     this.backgroundSize = BackgroundSizeStyle_resolve(backgroundSize)
 
@@ -137,7 +138,8 @@ class BlockLayer {
     this.paddingBlockEnd = PaddingBlockEndStyle_resolve(paddingBlockEnd)
     this.paddingBlockStart = PaddingBlockStartStyle_resolve(paddingBlockStart)
     this.paddingInlineEnd = PaddingInlineEndStyle_resolve(paddingInlineEnd)
-    this.paddingInlineStart = PaddingInlineStartStyle_resolve(paddingInlineStart)
+    this.paddingInlineStart =
+      PaddingInlineStartStyle_resolve(paddingInlineStart)
 
     return [
       // background

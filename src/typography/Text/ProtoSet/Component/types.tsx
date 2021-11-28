@@ -23,5 +23,4 @@ type BasicProps = {
 }
 
 export type Props = BasicProps & TextLayerProps
-export type PropsRequired = BasicProps &
-  Required<TextLayerProps>
+export type PropsRequired = BasicProps & Required<TextLayerProps>
