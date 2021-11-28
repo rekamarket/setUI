@@ -1,18 +1,12 @@
 import React, { VFC, createElement } from 'react'
 import cn from 'classnames'
 import { ZIndex, Width } from 'CSS'
-import { BlockLayer } from 'layers'
+import BlockLayer from 'reason/layers/Block'
 import FlexLayer from 'reason/layers/Flex'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
-const block = new BlockLayer({
-  usePadding: true,
-  useMargin: true,
-  useBorder: true,
-  useBackground: true,
-})
-
+const block = new BlockLayer()
 const flex = new FlexLayer()
 
 const Grid: VFC<Props> = ({
@@ -30,7 +24,40 @@ const Grid: VFC<Props> = ({
   flexWrap,
   gap,
   justifyContent,
-  ...rest
+
+  // background
+  backgroundAttachment,
+  backgroundClip,
+  backgroundColor,
+  backgroundOpacity,
+  backgroundOrigin,
+  backgroundPosition,
+  backgroundRepeat,
+  backgroundSize,
+
+  // border
+  borderColor,
+  borderOpacity,
+  borderStyle,
+  borderThickness,
+
+  // content
+  contentAlign,
+
+  // corner
+  cornerRadius,
+
+  // margin
+  marginBlockEnd,
+  marginBlockStart,
+  marginInlineEnd,
+  marginInlineStart,
+
+  // padding
+  paddingBlockEnd,
+  paddingBlockStart,
+  paddingInlineEnd,
+  paddingInlineStart,
 }) => (
   <div
     className={cn([
@@ -38,7 +65,41 @@ const Grid: VFC<Props> = ({
       className,
       ClassName,
 
-      block.set(rest).box,
+      block.resolve({
+        // background
+        backgroundAttachment,
+        backgroundClip,
+        backgroundColor,
+        backgroundOpacity,
+        backgroundOrigin,
+        backgroundPosition,
+        backgroundRepeat,
+        backgroundSize,
+
+        // border
+        borderColor,
+        borderOpacity,
+        borderStyle,
+        borderThickness,
+
+        // content
+        contentAlign,
+
+        // corner
+        cornerRadius,
+
+        // margin
+        marginBlockEnd,
+        marginBlockStart,
+        marginInlineEnd,
+        marginInlineStart,
+
+        // padding
+        paddingBlockEnd,
+        paddingBlockStart,
+        paddingInlineEnd,
+        paddingInlineStart,
+      }),
       flex.resolve({
         alignContent,
         alignItems,

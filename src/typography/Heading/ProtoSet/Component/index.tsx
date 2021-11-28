@@ -2,7 +2,7 @@ import { FC, createElement } from 'react'
 import cn from 'classnames'
 import { Display } from 'CSS'
 import TextLayer from 'reason/layers/Text'
-import { BlockLayer } from 'layers'
+import BlockLayer from 'reason/layers/Block'
 import { CharsPerLine, weightResolve, Weight, WeightProps } from '../css'
 import { PropsRequired } from './types'
 import { headers } from './data'
@@ -48,7 +48,40 @@ const Heading: FC<PropsRequired> = ({
   textDecorationStyle,
   textDecorationThickness,
   textTransform,
-  ...rest
+
+  // background
+  backgroundAttachment,
+  backgroundClip,
+  backgroundColor,
+  backgroundOpacity,
+  backgroundOrigin,
+  backgroundPosition,
+  backgroundRepeat,
+  backgroundSize,
+
+  // border
+  borderColor,
+  borderOpacity,
+  borderStyle,
+  borderThickness,
+
+  // content
+  contentAlign,
+
+  // corner
+  cornerRadius,
+
+  // margin
+  marginBlockEnd,
+  marginBlockStart,
+  marginInlineEnd,
+  marginInlineStart,
+
+  // padding
+  paddingBlockEnd,
+  paddingBlockStart,
+  paddingInlineEnd,
+  paddingInlineStart,
 }) =>
   createElement(
     headers[level],
@@ -59,7 +92,41 @@ const Heading: FC<PropsRequired> = ({
         ClassName,
         CharsPerLine[charsPerLine],
         Display[display],
-        block.set(rest).box,
+        block.resolve({
+          // background
+          backgroundAttachment,
+          backgroundClip,
+          backgroundColor,
+          backgroundOpacity,
+          backgroundOrigin,
+          backgroundPosition,
+          backgroundRepeat,
+          backgroundSize,
+
+          // border
+          borderColor,
+          borderOpacity,
+          borderStyle,
+          borderThickness,
+
+          // content
+          contentAlign,
+
+          // corner
+          cornerRadius,
+
+          // margin
+          marginBlockEnd,
+          marginBlockStart,
+          marginInlineEnd,
+          marginInlineStart,
+
+          // padding
+          paddingBlockEnd,
+          paddingBlockStart,
+          paddingInlineEnd,
+          paddingInlineStart,
+        }),
         text.resolve({
           color,
           fontFamily,

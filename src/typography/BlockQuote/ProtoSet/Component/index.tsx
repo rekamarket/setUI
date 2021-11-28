@@ -1,15 +1,12 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
 import TextLayer from 'reason/layers/Text'
-import { BlockLayer } from 'layers'
+import BlockLayer from 'reason/layers/Block'
 import { PropsRequired } from './types'
 import { ClassName } from './styles.css'
 import { SymbolLayer } from './layers'
 
-const block = new BlockLayer({
-  usePadding: true,
-  useMargin: true,
-})
+const block = new BlockLayer()
 const text = new TextLayer()
 const symbol = new SymbolLayer()
 
@@ -35,7 +32,39 @@ const BlockQuote: FC<PropsRequired> = ({
   textDecorationThickness,
   textTransform,
 
-  ...rest
+  // background
+  backgroundAttachment,
+  backgroundClip,
+  backgroundColor,
+  backgroundOpacity,
+  backgroundOrigin,
+  backgroundPosition,
+  backgroundRepeat,
+  backgroundSize,
+
+  // border
+  borderColor,
+  borderOpacity,
+  borderStyle,
+  borderThickness,
+
+  // content
+  contentAlign,
+
+  // corner
+  cornerRadius,
+
+  // margin
+  marginBlockEnd,
+  marginBlockStart,
+  marginInlineEnd,
+  marginInlineStart,
+
+  // padding
+  paddingBlockEnd,
+  paddingBlockStart,
+  paddingInlineEnd,
+  paddingInlineStart,
 }) => (
   <blockquote
     cite={cite}
@@ -43,7 +72,41 @@ const BlockQuote: FC<PropsRequired> = ({
       className,
       ClassName,
 
-      block.set(rest).box,
+      block.resolve({
+        // background
+        backgroundAttachment,
+        backgroundClip,
+        backgroundColor,
+        backgroundOpacity,
+        backgroundOrigin,
+        backgroundPosition,
+        backgroundRepeat,
+        backgroundSize,
+
+        // border
+        borderColor,
+        borderOpacity,
+        borderStyle,
+        borderThickness,
+
+        // content
+        contentAlign,
+
+        // corner
+        cornerRadius,
+
+        // margin
+        marginBlockEnd,
+        marginBlockStart,
+        marginInlineEnd,
+        marginInlineStart,
+
+        // padding
+        paddingBlockEnd,
+        paddingBlockStart,
+        paddingInlineEnd,
+        paddingInlineStart,
+      }),
       text.resolve({
         color,
         fontFamily,

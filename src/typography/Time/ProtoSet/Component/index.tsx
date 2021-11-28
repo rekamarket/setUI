@@ -1,14 +1,9 @@
 import { FC, createElement } from 'react'
 import cn from 'classnames'
 import TextLayer from 'reason/layers/Text'
-import { BlockLayer } from 'layers'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
-const block = new BlockLayer({
-  useMargin: true,
-  usePadding: true,
-})
 const text = new TextLayer()
 
 const Time: FC<Props> = ({
@@ -31,7 +26,6 @@ const Time: FC<Props> = ({
   textDecorationStyle,
   textDecorationThickness,
   textTransform,
-  ...rest
 }) => (
   <time
     className={cn([

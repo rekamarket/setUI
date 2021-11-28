@@ -1,7 +1,8 @@
 import type { ZIndexType, WidthType } from 'CSS'
-import type { BlockLayerProps } from 'layers'
+import type { Props as BlockLayerProps } from 'reason/layers/Block'
 import type { Props as FlexLayerProps } from 'reason/layers/Flex'
 import { ListProps } from './layers'
+
 export type AsType = 'ul' | 'ol' | 'menu'
 
 type BasicProps = {

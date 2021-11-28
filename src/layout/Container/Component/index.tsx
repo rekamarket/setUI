@@ -1,7 +1,7 @@
 import React, { VFC, createElement } from 'react'
 import cn from 'classnames'
 import { AspectRatio, ZIndex } from 'CSS'
-import { BlockLayer } from 'layers'
+import BlockLayer from 'reason/layers/Block'
 import { Direction, MaxWidth } from '../css'
 import { tags } from './data'
 import { Props } from './types'
@@ -21,7 +21,40 @@ const Container: VFC<Props> = ({
   zIndex,
 
   children,
-  ...rest
+
+  // background
+  backgroundAttachment,
+  backgroundClip,
+  backgroundColor,
+  backgroundOpacity,
+  backgroundOrigin,
+  backgroundPosition,
+  backgroundRepeat,
+  backgroundSize,
+
+  // border
+  borderColor,
+  borderOpacity,
+  borderStyle,
+  borderThickness,
+
+  // content
+  contentAlign,
+
+  // corner
+  cornerRadius,
+
+  // margin
+  marginBlockEnd,
+  marginBlockStart,
+  marginInlineEnd,
+  marginInlineStart,
+
+  // padding
+  paddingBlockEnd,
+  paddingBlockStart,
+  paddingInlineEnd,
+  paddingInlineStart,
 }) => {
   return createElement(
     tags[as] || tags.div,
@@ -38,7 +71,41 @@ const Container: VFC<Props> = ({
         // generic
         AspectRatio[aspectRatio] || AspectRatio.default,
 
-        block.set(rest).box,
+        block.resolve({
+          // background
+          backgroundAttachment,
+          backgroundClip,
+          backgroundColor,
+          backgroundOpacity,
+          backgroundOrigin,
+          backgroundPosition,
+          backgroundRepeat,
+          backgroundSize,
+
+          // border
+          borderColor,
+          borderOpacity,
+          borderStyle,
+          borderThickness,
+
+          // content
+          contentAlign,
+
+          // corner
+          cornerRadius,
+
+          // margin
+          marginBlockEnd,
+          marginBlockStart,
+          marginInlineEnd,
+          marginInlineStart,
+
+          // padding
+          paddingBlockEnd,
+          paddingBlockStart,
+          paddingInlineEnd,
+          paddingInlineStart,
+        }),
 
         ZIndex[zIndex] || ZIndex.default,
       ]),

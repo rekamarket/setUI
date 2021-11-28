@@ -1,16 +1,13 @@
 import React, { VFC, createElement } from 'react'
 import cn from 'classnames'
 import TextLayer from 'reason/layers/Text'
-import { BlockLayer } from 'layers'
+import BlockLayer from 'reason/layers/Block'
 import { CharsPerLine } from '../css'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 import { component } from './data'
 
-const block = new BlockLayer({
-  useBorder: true,
-  usePadding: true,
-})
+const block = new BlockLayer()
 const text = new TextLayer()
 
 const Article: VFC<Props> = ({
@@ -34,7 +31,39 @@ const Article: VFC<Props> = ({
   textDecorationThickness,
   textTransform,
 
-  ...rest
+  // background
+  backgroundAttachment,
+  backgroundClip,
+  backgroundColor,
+  backgroundOpacity,
+  backgroundOrigin,
+  backgroundPosition,
+  backgroundRepeat,
+  backgroundSize,
+
+  // border
+  borderColor,
+  borderOpacity,
+  borderStyle,
+  borderThickness,
+
+  // content
+  contentAlign,
+
+  // corner
+  cornerRadius,
+
+  // margin
+  marginBlockEnd,
+  marginBlockStart,
+  marginInlineEnd,
+  marginInlineStart,
+
+  // padding
+  paddingBlockEnd,
+  paddingBlockStart,
+  paddingInlineEnd,
+  paddingInlineStart,
 }) =>
   createElement(
     component[as],
@@ -44,7 +73,41 @@ const Article: VFC<Props> = ({
         className,
         ClassName,
         CharsPerLine[charsPerLine],
-        block.set(rest).box,
+        block.resolve({
+          // background
+          backgroundAttachment,
+          backgroundClip,
+          backgroundColor,
+          backgroundOpacity,
+          backgroundOrigin,
+          backgroundPosition,
+          backgroundRepeat,
+          backgroundSize,
+
+          // border
+          borderColor,
+          borderOpacity,
+          borderStyle,
+          borderThickness,
+
+          // content
+          contentAlign,
+
+          // corner
+          cornerRadius,
+
+          // margin
+          marginBlockEnd,
+          marginBlockStart,
+          marginInlineEnd,
+          marginInlineStart,
+
+          // padding
+          paddingBlockEnd,
+          paddingBlockStart,
+          paddingInlineEnd,
+          paddingInlineStart,
+        }),
         text.resolve({
           color,
           fontFamily,

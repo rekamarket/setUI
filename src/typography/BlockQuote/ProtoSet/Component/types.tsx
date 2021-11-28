@@ -1,5 +1,5 @@
-import type { BlockLayerProps } from 'layers'
 import type { Props as TextLayerProps } from 'reason/layers/Text'
+import type { Props as BlockLayerProps } from 'reason/layers/Block'
 import { SymbolProps } from './layers'
 
 type BasicProps = {

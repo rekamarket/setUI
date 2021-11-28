@@ -1,6 +1,6 @@
 import { tuple } from 'utils'
 import type { AspectRatioType, ZIndexType } from 'CSS'
-import type { BlockLayerProps } from 'layers'
+import type { Props as BlockLayerProps } from 'reason/layers/Block'
 import type { Props as FlexLayerProps } from 'reason/layers/Flex'
 
 const Tags = ['footer', 'div', 'span']

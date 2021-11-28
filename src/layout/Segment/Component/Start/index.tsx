@@ -1,7 +1,7 @@
 import React, { VFC, createElement } from 'react'
 import cn from 'classnames'
 import { AspectRatio, ZIndex } from 'CSS'
-import { BlockLayer } from 'layers'
+import BlockLayer from 'reason/layers/Block'
 import FlexLayer from 'reason/layers/Flex'
 import { tags } from './data'
 import { Props } from './types'
@@ -26,36 +26,101 @@ const Start: VFC<Props> = ({
   flexWrap,
   gap,
   justifyContent,
-  ...rest
-}) => {
-  return createElement(
-    tags[as] || tags.div,
 
-    {
-      className: cn([
-        // root
-        ClassName,
+  // background
+  backgroundAttachment,
+  backgroundClip,
+  backgroundColor,
+  backgroundOpacity,
+  backgroundOrigin,
+  backgroundPosition,
+  backgroundRepeat,
+  backgroundSize,
 
-        // generic
-        AspectRatio[aspectRatio] || AspectRatio.default,
+  // border
+  borderColor,
+  borderOpacity,
+  borderStyle,
+  borderThickness,
 
-        block.set(rest).box,
-        flex.resolve({
-          alignContent,
-          alignItems,
-          flexDirection,
-          flexWrap,
-          gap,
-          justifyContent,
-        }),
+  // content
+  contentAlign,
 
-        ZIndex[zIndex] || ZIndex.default,
-      ]),
-    },
+  // corner
+  cornerRadius,
 
-    children
-  )
-}
+  // margin
+  marginBlockEnd,
+  marginBlockStart,
+  marginInlineEnd,
+  marginInlineStart,
+
+  // padding
+  paddingBlockEnd,
+  paddingBlockStart,
+  paddingInlineEnd,
+  paddingInlineStart,
+}) => createElement(
+  tags[as] || tags.div,
+
+  {
+    className: cn([
+      // root
+      ClassName,
+
+      // generic
+      AspectRatio[aspectRatio] || AspectRatio.default,
+
+      block.resolve({
+        // background
+        backgroundAttachment,
+        backgroundClip,
+        backgroundColor,
+        backgroundOpacity,
+        backgroundOrigin,
+        backgroundPosition,
+        backgroundRepeat,
+        backgroundSize,
+
+        // border
+        borderColor,
+        borderOpacity,
+        borderStyle,
+        borderThickness,
+
+        // content
+        contentAlign,
+
+        // corner
+        cornerRadius,
+
+        // margin
+        marginBlockEnd,
+        marginBlockStart,
+        marginInlineEnd,
+        marginInlineStart,
+
+        // padding
+        paddingBlockEnd,
+        paddingBlockStart,
+        paddingInlineEnd,
+        paddingInlineStart,
+      }),
+      flex.resolve({
+        alignContent,
+        alignItems,
+        flexDirection,
+        flexWrap,
+        gap,
+        justifyContent,
+      }),
+
+      ZIndex[zIndex] || ZIndex.default,
+    ]),
+  },
+
+  children
+)
 
 export type { Props } from './types'
 

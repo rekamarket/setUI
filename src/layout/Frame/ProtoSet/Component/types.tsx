@@ -1,4 +1,4 @@
-import { BlockLayerProps } from 'layers'
+import type { Props as BlockLayerProps } from 'reason/layers/Block'
 import type { Props as TextLayerProps } from 'reason/layers/Text'
 import { CharsPerLineProps } from '../css'
 

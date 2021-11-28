@@ -1,4 +1,3 @@
-import type { BlockLayerProps } from 'layers'
 import type { Props as TextLayerProps } from 'reason/layers/Text'
 
 export type AsType =
@@ -23,7 +22,6 @@ type BasicProps = {
   title?: string
 }
 
-export type Props = BasicProps & BlockLayerProps & TextLayerProps
+export type Props = BasicProps & TextLayerProps
 export type PropsRequired = BasicProps &
-  Required<BlockLayerProps> &
   Required<TextLayerProps>

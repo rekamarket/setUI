@@ -1,6 +1,6 @@
 import { tuple } from 'utils'
 import type { AspectRatioType, ZIndexType } from 'CSS'
-import { BlockLayerProps } from 'layers'
+import { Props as BlockLayerProps } from 'reason/layers/Block'
 import { DirectionType, MaxWidthType } from '../css'
 
 const Tags = ['div', 'section']

@@ -1,5 +1,5 @@
 import type { AspectRatioType, ZIndexType } from 'CSS'
-import { BlockLayerProps } from 'layers'
+import { Props as BlockLayerProps } from 'reason/layers/Block'
 
 export type AsType = 'div' | 'section'
 
