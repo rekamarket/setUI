@@ -1,13 +1,13 @@
-import { IAlignContent_i } from './AlignContent.css.gen'
-import { IAlignItems_i } from './AlignItems.css.gen'
-import { IFlexDirection_i } from './FlexDirection.css.gen'
-import { IFlexWrap_i } from './FlexWrap.css.gen'
-import { IGap_i } from './Gap.css.gen'
-import { IJustifyContent_i } from './JustifyContent.css.gen'
+import { IAlignContentStyle_i } from './AlignContent/AlignContentStyle.css.gen'
+import { IAlignItemsStyle_i } from './AlignItems/AlignItemsStyle.css.gen'
+import { IFlexDirectionStyle_i } from './FlexDirection/FlexDirectionStyle.css.gen'
+import { IFlexWrapStyle_i } from './FlexWrap/FlexWrapStyle.css.gen'
+import { IGapStyle_i } from './Gap/GapStyle.css.gen'
+import { IJustifyContentStyle_i } from './JustifyContent/JustifyContentStyle.css.gen'
 
-export type Props = IAlignContent_i &
-  IAlignItems_i &
-  IFlexDirection_i &
-  IFlexWrap_i &
-  IGap_i &
-  IJustifyContent_i
+export type Props = IAlignContentStyle_i &
+  IAlignItemsStyle_i &
+  IFlexDirectionStyle_i &
+  IFlexWrapStyle_i &
+  IGapStyle_i &
+  IJustifyContentStyle_i

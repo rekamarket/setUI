@@ -1,9 +1,9 @@
-import { AlignContent_resolve } from './AlignContent.css.gen'
-import { AlignItems_resolve } from './AlignItems.css.gen'
-import { FlexDirection_resolve } from './FlexDirection.css.gen'
-import { FlexWrap_resolve } from './FlexWrap.css.gen'
-import { Gap_resolve } from './Gap.css.gen'
-import { JustifyContent_resolve } from './JustifyContent.css.gen'
+import { AlignContentStyle_resolve } from './AlignContent/AlignContentStyle.css.gen'
+import { AlignItemsStyle_resolve } from './AlignItems/AlignItemsStyle.css.gen'
+import { FlexDirectionStyle_resolve } from './FlexDirection/FlexDirectionStyle.css.gen'
+import { FlexWrapStyle_resolve } from './FlexWrap/FlexWrapStyle.css.gen'
+import { GapStyle_resolve } from './Gap/GapStyle.css.gen'
+import { JustifyContentStyle_resolve } from './JustifyContent/JustifyContentStyle.css.gen'
 import type { Props } from './types'
 
 class FlexLayer {
@@ -22,12 +22,12 @@ class FlexLayer {
     gap,
     justifyContent,
   }: Props) {
-    this.alignContent = AlignContent_resolve(alignContent)
-    this.alignItems = AlignItems_resolve(alignItems)
-    this.flexDirection = FlexDirection_resolve(flexDirection)
-    this.flexWrap = FlexWrap_resolve(flexWrap)
-    this.gap = Gap_resolve(gap)
-    this.justifyContent = JustifyContent_resolve(justifyContent)
+    this.alignContent = AlignContentStyle_resolve(alignContent)
+    this.alignItems = AlignItemsStyle_resolve(alignItems)
+    this.flexDirection = FlexDirectionStyle_resolve(flexDirection)
+    this.flexWrap = FlexWrapStyle_resolve(flexWrap)
+    this.gap = GapStyle_resolve(gap)
+    this.justifyContent = JustifyContentStyle_resolve(justifyContent)
 
     return [
       this.alignContent,

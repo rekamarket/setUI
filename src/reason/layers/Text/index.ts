@@ -1,16 +1,16 @@
-import { Color_resolve } from './Color/Color.css.gen'
-import { FontFamily_resolve } from './Font/Family/FontFamily.css.gen'
-import { FontSize_resolve } from './Font/Size/FontSize.css.gen'
-import { FontStyle_resolve } from './Font/Style/FontStyle.css.gen'
-import { FontWeight_resolve } from './Font/Weight/FontWeight.css.gen'
-import { Outline_resolve } from './Outline/Outline(background-color)/Outline.css.gen'
-import { SpacingAfter_resolve } from './Spacing/After(padding-inline-end)/SpacingAfter.css.gen'
-import { SpacingBefore_resolve } from './Spacing/Before(padding-inline-start)/SpacingBefore.css.gen'
-import { TextDecorationColor_resolve } from './Text/DecorationColor/TextDecorationColor.css.gen'
-import { TextDecorationLine_resolve } from './Text/DecorationLine/TextDecorationLine.css.gen'
-import { TextDecorationStyle_resolve } from './Text/DecorationStyle/TextDecorationStyle.css.gen'
-import { TextDecorationThickness_resolve } from './Text/DecorationThickness/TextDecorationThickness.css.gen'
-import { TextTransform_resolve } from './Text/Transform/TextTransform.css.gen'
+import { ColorStyle_resolve } from './Color/ColorStyle.css.gen'
+import { FontFamilyStyle_resolve } from './Font/Family/FontFamilyStyle.css.gen'
+import { FontSizeStyle_resolve } from './Font/Size/FontSizeStyle.css.gen'
+import { FontStyleStyle_resolve } from './Font/Style/FontStyleStyle.css.gen'
+import { FontWeightStyle_resolve } from './Font/Weight/FontWeightStyle.css.gen'
+import { OutlineStyle_resolve } from './Outline/Outline(background-color)/OutlineStyle.css.gen'
+import { SpacingAfterStyle_resolve } from './Spacing/After(padding-inline-end)/SpacingAfterStyle.css.gen'
+import { SpacingBeforeStyle_resolve } from './Spacing/Before(padding-inline-start)/SpacingBeforeStyle.css.gen'
+import { TextDecorationColorStyle_resolve } from './Text/DecorationColor/TextDecorationColorStyle.css.gen'
+import { TextDecorationLineStyle_resolve } from './Text/DecorationLine/TextDecorationLineStyle.css.gen'
+import { TextDecorationStyleStyle_resolve } from './Text/DecorationStyle/TextDecorationStyleStyle.css.gen'
+import { TextDecorationThicknessStyle_resolve } from './Text/DecorationThickness/TextDecorationThicknessStyle.css.gen'
+import { TextTransformStyle_resolve } from './Text/Transform/TextTransformStyle.css.gen'
 import type { Props } from './types'
 
 class TextLayer {
@@ -43,21 +43,21 @@ class TextLayer {
     textDecorationThickness,
     textTransform,
   }: Props) {
-    this.color = Color_resolve(color)
-    this.fontFamily = FontFamily_resolve(fontFamily)
-    this.fontSize = FontSize_resolve(fontSize)
-    this.fontStyle = FontStyle_resolve(fontStyle)
-    this.fontWeight = FontWeight_resolve(fontWeight)
-    this.backgroundColor = Outline_resolve(backgroundColor)
-    this.spacingBefore = SpacingBefore_resolve(spacingBefore)
-    this.spacingAfter = SpacingAfter_resolve(spacingAfter)
-    this.textDecorationColor = TextDecorationColor_resolve(textDecorationColor)
-    this.textDecorationLine = TextDecorationLine_resolve(textDecorationLine)
-    this.textDecorationStyle = TextDecorationStyle_resolve(textDecorationStyle)
-    this.textDecorationThickness = TextDecorationThickness_resolve(
+    this.color = ColorStyle_resolve(color)
+    this.fontFamily = FontFamilyStyle_resolve(fontFamily)
+    this.fontSize = FontSizeStyle_resolve(fontSize)
+    this.fontStyle = FontStyleStyle_resolve(fontStyle)
+    this.fontWeight = FontWeightStyle_resolve(fontWeight)
+    this.backgroundColor = OutlineStyle_resolve(backgroundColor)
+    this.spacingBefore = SpacingBeforeStyle_resolve(spacingBefore)
+    this.spacingAfter = SpacingAfterStyle_resolve(spacingAfter)
+    this.textDecorationColor = TextDecorationColorStyle_resolve(textDecorationColor)
+    this.textDecorationLine = TextDecorationLineStyle_resolve(textDecorationLine)
+    this.textDecorationStyle = TextDecorationStyleStyle_resolve(textDecorationStyle)
+    this.textDecorationThickness = TextDecorationThicknessStyle_resolve(
       textDecorationThickness
     )
-    this.textTransform = TextTransform_resolve(textTransform)
+    this.textTransform = TextTransformStyle_resolve(textTransform)
 
     return [
       this.color,

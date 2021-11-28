@@ -1,27 +1,27 @@
-import { IColor_i } from './Color/Color.css.gen'
-import { IFontFamily_i } from './Font/Family/FontFamily.css.gen'
-import { IFontSize_i } from './Font/Size/FontSize.css.gen'
-import { IFontStyle_i } from './Font/Style/FontStyle.css.gen'
-import { IFontWeight_i } from './Font/Weight/FontWeight.css.gen'
-import { IOutline_i } from './Outline/Outline(background-color)/Outline.css.gen'
-import { ISpacingAfter_i } from './Spacing/After(padding-inline-end)/SpacingAfter.css.gen'
-import { ISpacingBefore_i } from './Spacing/Before(padding-inline-start)/SpacingBefore.css.gen'
-import { ITextDecorationColor_i } from './Text/DecorationColor/TextDecorationColor.css.gen'
-import { ITextDecorationLine_i } from './Text/DecorationLine/TextDecorationLine.css.gen'
-import { ITextDecorationStyle_i } from './Text/DecorationStyle/TextDecorationStyle.css.gen'
-import { ITextDecorationThickness_i } from './Text/DecorationThickness/TextDecorationThickness.css.gen'
-import { ITextTransform_i } from './Text/Transform/TextTransform.css.gen'
+import { IColorStyle_i } from './Color/ColorStyle.css.gen'
+import { IFontFamilyStyle_i } from './Font/Family/FontFamilyStyle.css.gen'
+import { IFontSizeStyle_i } from './Font/Size/FontSizeStyle.css.gen'
+import { IFontStyleStyle_i } from './Font/Style/FontStyleStyle.css.gen'
+import { IFontWeightStyle_i } from './Font/Weight/FontWeightStyle.css.gen'
+import { IOutlineStyle_i } from './Outline/Outline(background-color)/OutlineStyle.css.gen'
+import { ISpacingAfterStyle_i } from './Spacing/After(padding-inline-end)/SpacingAfterStyle.css.gen'
+import { ISpacingBeforeStyle_i } from './Spacing/Before(padding-inline-start)/SpacingBeforeStyle.css.gen'
+import { ITextDecorationColorStyle_i } from './Text/DecorationColor/TextDecorationColorStyle.css.gen'
+import { ITextDecorationLineStyle_i } from './Text/DecorationLine/TextDecorationLineStyle.css.gen'
+import { ITextDecorationStyleStyle_i } from './Text/DecorationStyle/TextDecorationStyleStyle.css.gen'
+import { ITextDecorationThicknessStyle_i } from './Text/DecorationThickness/TextDecorationThicknessStyle.css.gen'
+import { ITextTransformStyle_i } from './Text/Transform/TextTransformStyle.css.gen'
 
-export type Props = IColor_i &
-  IFontFamily_i &
-  IFontSize_i &
-  IFontStyle_i &
-  IFontWeight_i &
-  IBackgroundColor_i &
-  ISpacingAfter_i &
-  ISpacingBefore_i &
-  ITextDecorationColor_i &
-  ITextDecorationLine_i &
-  ITextDecorationStyle_i &
-  ITextDecorationThickness_i &
-  ITextTransform_i
+export type Props = IColorStyle_i &
+  IFontFamilyStyle_i &
+  IFontSizeStyle_i &
+  IFontStyleStyle_i &
+  IFontWeightStyle_i &
+  IOutlineStyle_i &
+  ISpacingAfterStyle_i &
+  ISpacingBeforeStyle_i &
+  ITextDecorationColorStyle_i &
+  ITextDecorationLineStyle_i &
+  ITextDecorationStyleStyle_i &
+  ITextDecorationThicknessStyle_i &
+  ITextTransformStyle_i

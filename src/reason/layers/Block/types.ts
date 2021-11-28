@@ -1,35 +1,35 @@
 // Background
-import { IBackgroundAttachment_i } from './Background/Attachment/BackgroundAttachment.css.gen'
-import { IBackgroundClip_i } from './Background/Clip/BackgroundClip.css.gen'
-import { IBackgroundColor_i } from './Background/Color/BackgroundColor.css.gen'
-import { IBackgroundOpacity_i } from './Background/Opacity(--background-color)/BackgroundOpacity.css.gen'
-import { IBackgroundOrigin_i } from './Background/Origin/BackgroundOrigin.css.gen'
-import { IBackgroundPosition_i } from './Background/Position/BackgroundPosition.css.gen'
-import { IBackgroundRepeat_i } from './Background/Repeat/BackgroundRepeat.css.gen'
-import { IBackgroundSize_i } from './Background/Size/BackgroundSize.css.gen'
+import { IBackgroundAttachmentStyle_i } from './Background/Attachment/BackgroundAttachmentStyle.css.gen'
+import { IBackgroundClipStyle_i } from './Background/Clip/BackgroundClipStyle.css.gen'
+import { IBackgroundColorStyle_i } from './Background/Color/BackgroundColorStyle.css.gen'
+import { IBackgroundOpacityStyle_i } from './Background/Opacity(--background-color)/BackgroundOpacityStyle.css.gen'
+import { IBackgroundOriginStyle_i } from './Background/Origin/BackgroundOriginStyle.css.gen'
+import { IBackgroundPositionStyle_i } from './Background/Position/BackgroundPositionStyle.css.gen'
+import { IBackgroundRepeatStyle_i } from './Background/Repeat/BackgroundRepeatStyle.css.gen'
+import { IBackgroundSizeStyle_i } from './Background/Size/BackgroundSizeStyle.css.gen'
 
 // Border
-import { IBorderColor_i } from './Border/Color/BorderColor.css.gen'
-import { IBorderOpacity_i } from './Border/Opacity(--border-opacity)/BorderOpacity.css.gen'
-import { IBorderStyle_i } from './Border/Style/BorderStyle.css.gen'
-import { IBorderThickness_i } from './Border/Thickness(border-width)/BorderThickness.css.gen'
+import { IBorderColorStyle_i } from './Border/Color/BorderColorStyle.css.gen'
+import { IBorderOpacityStyle_i } from './Border/Opacity(--border-opacity)/BorderOpacityStyle.css.gen'
+import { IBorderStyleStyle_i } from './Border/Style/BorderStyleStyle.css.gen'
+import { IBorderThicknessStyle_i } from './Border/Thickness(border-width)/BorderThicknessStyle.css.gen'
 
 // Content
-import { IContentAlign_i } from './Content/Align(text-align)/ContentAlign.css.gen'
+import { IContentAlignStyle_i } from './Content/Align(text-align)/ContentAlignStyle.css.gen'
 
 // Corner
-import { ICornerRadius_i } from './Corner/Radius(border-radius)/CornerRadius.css.gen'
+import { ICornerRadiusStyle_i } from './Corner/Radius(border-radius)/CornerRadiusStyle.css.gen'
 
 // Margin
-import { IMarginBlockEnd_i } from './Margin/BlockEnd(margin-bottom)/MarginBlockEnd.css.gen'
-import { IMarginBlockStart_i } from './Margin/BlockStart(margin-top)/MarginBlockStart.css.gen'
-import { IMarginInlineEnd_i } from './Margin/InlineEnd(margin-right)/MarginInlineEnd.css.gen'
-import { IMarginInlineStart_i } from './Margin/InlineStart(margin-left)/MarginInlineStart.css.gen'
+import { IMarginBlockEndStyle_i } from './Margin/BlockEnd(margin-bottom)/MarginBlockEndStyle.css.gen'
+import { IMarginBlockStartStyle_i } from './Margin/BlockStart(margin-top)/MarginBlockStartStyle.css.gen'
+import { IMarginInlineEndStyle_i } from './Margin/InlineEnd(margin-right)/MarginInlineEndStyle.css.gen'
+import { IMarginInlineStartStyle_i } from './Margin/InlineStart(margin-left)/MarginInlineStartStyle.css.gen'
 
 // Padding
-import { IPaddingBlockEnd_i } from './Padding/BlockEnd(padding-bottom)/PaddingBlockEnd.css.gen'
-import { IPaddingBlockStart_i } from './Padding/BlockStart(padding-top)/PaddingBlockStart.css.gen'
-import { IPaddingInlineEnd_i } from './Padding/InlineEnd(padding-right)/PaddingInlineEnd.css.gen'
-import { IPaddingInlineStart_i } from './Padding/InlineStart(padding-left)/PaddingInlineStart.css.gen'
+import { IPaddingBlockEndStyle_i } from './Padding/BlockEnd(padding-bottom)/PaddingBlockEndStyle.css.gen'
+import { IPaddingBlockStartStyle_i } from './Padding/BlockStart(padding-top)/PaddingBlockStartStyle.css.gen'
+import { IPaddingInlineEndStyle_i } from './Padding/InlineEnd(padding-right)/PaddingInlineEndStyle.css.gen'
+import { IPaddingInlineStartStyle_i } from './Padding/InlineStart(padding-left)/PaddingInlineStartStyle.css.gen'
 
-export type Props = IBackgroundAttachment_i & IBackgroundClip_i & IBackgroundColor_i & IBackgroundOpacity_i & IBackgroundOrigin_i & IBackgroundPosition_i & IBackgroundRepeat_i & IBackgroundSize_i & IBorderColor_i & IBorderOpacity_i & IBorderStyle_i & IBorderThickness_i & IContentAlign_i & ICornerRadius_i & IMarginBlockEnd_i & IMarginBlockStart_i & IMarginInlineEnd_i & IMarginInlineStart_i & IPaddingBlockEnd_i & IPaddingBlockStart_i & IPaddingInlineEnd_i & IPaddingInlineStart_i
+export type Props = IBackgroundAttachmentStyle_i & IBackgroundClipStyle_i & IBackgroundColorStyle_i & IBackgroundOpacityStyle_i & IBackgroundOriginStyle_i & IBackgroundPositionStyle_i & IBackgroundRepeatStyle_i & IBackgroundSizeStyle_i & IBorderColorStyle_i & IBorderOpacityStyle_i & IBorderStyleStyle_i & IBorderThicknessStyle_i & IContentAlignStyle_i & ICornerRadiusStyle_i & IMarginBlockEndStyle_i & IMarginBlockStartStyle_i & IMarginInlineEndStyle_i & IMarginInlineStartStyle_i & IPaddingBlockEndStyle_i & IPaddingBlockStartStyle_i & IPaddingInlineEndStyle_i & IPaddingInlineStartStyle_i

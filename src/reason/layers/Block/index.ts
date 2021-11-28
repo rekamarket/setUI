@@ -1,36 +1,36 @@
 // Background
-import { BackgroundAttachment_resolve } from './Background/Attachment/BackgroundAttachment.css.gen'
-import { BackgroundClip_resolve } from './Background/Clip/BackgroundClip.css.gen'
-import { BackgroundColor_resolve } from './Background/Color/BackgroundColor.css.gen'
-import { BackgroundOpacity_resolve } from './Background/Opacity(--background-color)/BackgroundOpacity.css.gen'
-import { BackgroundOrigin_resolve } from './Background/Origin/BackgroundOrigin.css.gen'
-import { BackgroundPosition_resolve } from './Background/Position/BackgroundPosition.css.gen'
-import { BackgroundRepeat_resolve } from './Background/Repeat/BackgroundRepeat.css.gen'
-import { BackgroundSize_resolve } from './Background/Size/BackgroundSize.css.gen'
+import { BackgroundAttachmentStyle_resolve } from './Background/Attachment/BackgroundAttachmentStyle.css.gen'
+import { BackgroundClipStyle_resolve } from './Background/Clip/BackgroundClipStyle.css.gen'
+import { BackgroundColorStyle_resolve } from './Background/Color/BackgroundColorStyle.css.gen'
+import { BackgroundOpacityStyle_resolve } from './Background/Opacity(--background-color)/BackgroundOpacityStyle.css.gen'
+import { BackgroundOriginStyle_resolve } from './Background/Origin/BackgroundOriginStyle.css.gen'
+import { BackgroundPositionStyle_resolve } from './Background/Position/BackgroundPositionStyle.css.gen'
+import { BackgroundRepeatStyle_resolve } from './Background/Repeat/BackgroundRepeatStyle.css.gen'
+import { BackgroundSizeStyle_resolve } from './Background/Size/BackgroundSizeStyle.css.gen'
 
 // Border
-import { BorderColor_resolve } from './Border/Color/BorderColor.css.gen'
-import { BorderOpacity_resolve } from './Border/Opacity(--border-opacity)/BorderOpacity.css.gen'
-import { BorderStyle_resolve } from './Border/Style/BorderStyle.css.gen'
-import { BorderThickness_resolve } from './Border/Thickness(border-width)/BorderThickness.css.gen'
+import { BorderColorStyle_resolve } from './Border/Color/BorderColorStyle.css.gen'
+import { BorderOpacityStyle_resolve } from './Border/Opacity(--border-opacity)/BorderOpacityStyle.css.gen'
+import { BorderStyleStyle_resolve } from './Border/Style/BorderStyleStyle.css.gen'
+import { BorderThicknessStyle_resolve } from './Border/Thickness(border-width)/BorderThicknessStyle.css.gen'
 
 // Content
-import { ContentAlign_resolve } from './Content/Align(text-align)/ContentAlign.css.gen'
+import { ContentAlignStyle_resolve } from './Content/Align(text-align)/ContentAlignStyle.css.gen'
 
 // Corner
-import { CornerRadius_resolve } from './Corner/Radius(border-radius)/CornerRadius.css.gen'
+import { CornerRadiusStyle_resolve } from './Corner/Radius(border-radius)/CornerRadiusStyle.css.gen'
 
 // Margin
-import { MarginBlockEnd_resolve } from './Margin/BlockEnd(margin-bottom)/MarginBlockEnd.css.gen'
-import { MarginBlockStart_resolve } from './Margin/BlockStart(margin-top)/MarginBlockStart.css.gen'
-import { MarginInlineEnd_resolve } from './Margin/InlineEnd(margin-right)/MarginInlineEnd.css.gen'
-import { MarginInlineStart_resolve } from './Margin/InlineStart(margin-left)/MarginInlineStart.css.gen'
+import { MarginBlockEndStyle_resolve } from './Margin/BlockEnd(margin-bottom)/MarginBlockEndStyle.css.gen'
+import { MarginBlockStartStyle_resolve } from './Margin/BlockStart(margin-top)/MarginBlockStartStyle.css.gen'
+import { MarginInlineEndStyle_resolve } from './Margin/InlineEnd(margin-right)/MarginInlineEndStyle.css.gen'
+import { MarginInlineStartStyle_resolve } from './Margin/InlineStart(margin-left)/MarginInlineStartStyle.css.gen'
 
 // Padding
-import { PaddingBlockEnd_resolve } from './Padding/BlockEnd(padding-bottom)/PaddingBlockEnd.css.gen'
-import { PaddingBlockStart_resolve } from './Padding/BlockStart(padding-top)/PaddingBlockStart.css.gen'
-import { PaddingInlineEnd_resolve } from './Padding/InlineEnd(padding-right)/PaddingInlineEnd.css.gen'
-import { PaddingInlineStart_resolve } from './Padding/InlineStart(padding-left)/PaddingInlineStart.css.gen'
+import { PaddingBlockEndStyle_resolve } from './Padding/BlockEnd(padding-bottom)/PaddingBlockEndStyle.css.gen'
+import { PaddingBlockStartStyle_resolve } from './Padding/BlockStart(padding-top)/PaddingBlockStartStyle.css.gen'
+import { PaddingInlineEndStyle_resolve } from './Padding/InlineEnd(padding-right)/PaddingInlineEndStyle.css.gen'
+import { PaddingInlineStartStyle_resolve } from './Padding/InlineStart(padding-left)/PaddingInlineStartStyle.css.gen'
 
 
 import type { Props } from './types'
@@ -106,38 +106,38 @@ class BlockLayer {
     paddingInlineStart,
   }: Props) {
     // background
-    this.backgroundAttachment = BackgroundAttachment_resolve(backgroundAttachment)
-    this.backgroundClip = BackgroundClip_resolve(backgroundClip)
-    this.backgroundColor = BackgroundColor_resolve(backgroundColor)
-    this.backgroundOpacity = BackgroundOpacity_resolve(backgroundOpacity)
-    this.backgroundOrigin = BackgroundOrigin_resolve(backgroundOrigin)
-    this.backgroundPosition = BackgroundPosition_resolve(backgroundPosition)
-    this.backgroundRepeat = BackgroundRepeat_resolve(backgroundRepeat)
-    this.backgroundSize = BackgroundSize_resolve(backgroundSize)
+    this.backgroundAttachment = BackgroundAttachmentStyle_resolve(backgroundAttachment)
+    this.backgroundClip = BackgroundClipStyle_resolve(backgroundClip)
+    this.backgroundColor = BackgroundColorStyle_resolve(backgroundColor)
+    this.backgroundOpacity = BackgroundOpacityStyle_resolve(backgroundOpacity)
+    this.backgroundOrigin = BackgroundOriginStyle_resolve(backgroundOrigin)
+    this.backgroundPosition = BackgroundPositionStyle_resolve(backgroundPosition)
+    this.backgroundRepeat = BackgroundRepeatStyle_resolve(backgroundRepeat)
+    this.backgroundSize = BackgroundSizeStyle_resolve(backgroundSize)
 
     // border
-    this.borderColor = BorderColor_resolve(borderColor)
-    this.borderOpacity = BorderOpacity_resolve(borderOpacity)
-    this.borderStyle = BorderStyle_resolve(borderStyle)
-    this.borderThickness = BorderThickness_resolve(borderThickness)
+    this.borderColor = BorderColorStyle_resolve(borderColor)
+    this.borderOpacity = BorderOpacityStyle_resolve(borderOpacity)
+    this.borderStyle = BorderStyleStyle_resolve(borderStyle)
+    this.borderThickness = BorderThicknessStyle_resolve(borderThickness)
 
     // content
-    this.contentAlign = ContentAlign_resolve(contentAlign)
+    this.contentAlign = ContentAlignStyle_resolve(contentAlign)
 
     // corner
-    this.cornerRadius = CornerRadius_resolve(cornerRadius)
+    this.cornerRadius = CornerRadiusStyle_resolve(cornerRadius)
 
     // margin
-    this.marginBlockEnd = MarginBlockEnd_resolve(marginBlockEnd)
-    this.marginBlockStart = MarginBlockStart_resolve(marginBlockStart)
-    this.marginInlineEnd = MarginInlineEnd_resolve(marginInlineEnd)
-    this.marginInlineStart = MarginInlineStart_resolve(marginInlineStart)
+    this.marginBlockEnd = MarginBlockEndStyle_resolve(marginBlockEnd)
+    this.marginBlockStart = MarginBlockStartStyle_resolve(marginBlockStart)
+    this.marginInlineEnd = MarginInlineEndStyle_resolve(marginInlineEnd)
+    this.marginInlineStart = MarginInlineStartStyle_resolve(marginInlineStart)
 
     // padding
-    this.paddingBlockEnd = PaddingBlockEnd_resolve(paddingBlockEnd)
-    this.paddingBlockStart = PaddingBlockStart_resolve(paddingBlockStart)
-    this.paddingInlineEnd = PaddingInlineEnd_resolve(paddingInlineEnd)
-    this.paddingInlineStart = PaddingInlineStart_resolve(paddingInlineStart)
+    this.paddingBlockEnd = PaddingBlockEndStyle_resolve(paddingBlockEnd)
+    this.paddingBlockStart = PaddingBlockStartStyle_resolve(paddingBlockStart)
+    this.paddingInlineEnd = PaddingInlineEndStyle_resolve(paddingInlineEnd)
+    this.paddingInlineStart = PaddingInlineStartStyle_resolve(paddingInlineStart)
 
     return [
       // background
