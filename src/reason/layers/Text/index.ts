@@ -3,7 +3,7 @@ import { FontFamily_resolve } from './Font/Family/FontFamily.css.gen'
 import { FontSize_resolve } from './Font/Size/FontSize.css.gen'
 import { FontStyle_resolve } from './Font/Style/FontStyle.css.gen'
 import { FontWeight_resolve } from './Font/Weight/FontWeight.css.gen'
-import { BackgroundColor_resolve } from './Outline/BackgroundColor/BackgroundColor.css.gen'
+import { Outline_resolve } from './Outline/Outline(background-color)/Outline.css.gen'
 import { SpacingAfter_resolve } from './Spacing/After/SpacingAfter.css.gen'
 import { SpacingBefore_resolve } from './Spacing/Before/SpacingBefore.css.gen'
 import { TextDecorationColor_resolve } from './Text/DecorationColor/TextDecorationColor.css.gen'
@@ -48,7 +48,7 @@ class TextLayer {
     this.fontSize = FontSize_resolve(fontSize)
     this.fontStyle = FontStyle_resolve(fontStyle)
     this.fontWeight = FontWeight_resolve(fontWeight)
-    this.backgroundColor = BackgroundColor_resolve(backgroundColor)
+    this.backgroundColor = Outline_resolve(backgroundColor)
     this.spacingBefore = SpacingBefore_resolve(spacingBefore)
     this.spacingAfter = SpacingAfter_resolve(spacingAfter)
     this.textDecorationColor = TextDecorationColor_resolve(textDecorationColor)

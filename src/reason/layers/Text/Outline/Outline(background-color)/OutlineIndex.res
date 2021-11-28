@@ -1,4 +1,4 @@
-module BackgroundColorIndex = {
+module OutlineIndex = {
   type value = string;
 
   type options = {

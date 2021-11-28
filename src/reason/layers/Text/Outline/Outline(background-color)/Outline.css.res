@@ -1,9 +1,9 @@
-open BackgroundColorIndex
+open OutlineIndex
 
-@module("@vanilla-extract/css") external styleVariants: (BackgroundColorIndex.options, BackgroundColorIndex.cssResolve) => BackgroundColorIndex.variant = "styleVariants"
+@module("@vanilla-extract/css") external styleVariants: (OutlineIndex.options, OutlineIndex.cssResolve) => OutlineIndex.variant = "styleVariants"
 
-module BackgroundColor = {
-  include BackgroundColorIndex;
+module Outline = {
+  include OutlineIndex;
 
   let style = styleVariants(options, cssResolve)
 
