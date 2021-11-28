@@ -1,7 +1,6 @@
 import { VFC, createElement } from 'react'
 import NextImage from 'next/image'
 import cn from 'classnames'
-import { BlockLayer, FlexLayer } from 'layers'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
