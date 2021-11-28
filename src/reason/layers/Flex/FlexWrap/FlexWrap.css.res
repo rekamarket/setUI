@@ -1,46 +1,12 @@
-type value = string;
+open FlexWrapIndex
 
-type options = {
-  "nowrap": value,
-  "wrap": value,
-  "wrapReverse": value,
-};
-
-type output = {
-  "flexWrap": value,
-}
-
-type cssResolve = (value) => output
-
-type variant = {
-  "nowrap": string,
-  "wrap": string,
-  "wrapReverse": string,
-};
-
-@module("@vanilla-extract/css") external styleVariants: (options, cssResolve) => variant = "styleVariants"
+@module("@vanilla-extract/css") external styleVariants: (FlexWrapIndex.options, FlexWrapIndex.cssResolve) => FlexWrapIndex.variant = "styleVariants"
 
 module FlexWrap = {
-  @genType
-  type t = [
-    | #nowrap
-    | #wrap
-    | #wrapReverse
-  ]
-
-  let initial = #nowrap;
+  include FlexWrapIndex
 
   @genType
-  let style = styleVariants({
-    "nowrap": "nowrap",
-    "wrap": "wrap",
-    "wrapReverse": "wrap-reverse",
-  }, (value) => {
-    let output = {
-      "flexWrap": value,
-    };
-    output
-  })
+  let style = styleVariants(options, cssResolve)
 
   @genType
   let resolve = (t) => {

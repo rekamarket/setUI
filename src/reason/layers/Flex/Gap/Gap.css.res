@@ -1,74 +1,12 @@
-type value = int;
+open GapIndex
 
-type options = {
-  "none": value,
-  "xxxsmall": value,
-  "xxsmall": value,
-  "xsmall": value,
-  "small": value,
-  "medium": value,
-  "large": value,
-  "xlarge": value,
-  "xxlarge": value,
-  "xxxlarge": value,
-};
-
-type output = {
-  "gap": value,
-}
-
-type cssResolve = (value) => output
-
-type variant = {
-  "none": string,
-  "xxxsmall": string,
-  "xxsmall": string,
-  "xsmall": string,
-  "small": string,
-  "medium": string,
-  "large": string,
-  "xlarge": string,
-  "xxlarge": string,
-  "xxxlarge": string,
-};
-
-@module("@vanilla-extract/css") external styleVariants: (options, cssResolve) => variant = "styleVariants"
+@module("@vanilla-extract/css") external styleVariants: (GapIndex.options, GapIndex.cssResolve) => GapIndex.variant = "styleVariants"
 
 module Gap = {
-  @genType
-  type t = [
-    | #none
-    | #xxxsmall
-    | #xxsmall
-    | #xsmall
-    | #small
-    | #medium
-    | #large
-    | #xlarge
-    | #xxlarge
-    | #xxxlarge
-  ]
-
-  let initial = #none;
+  include GapIndex
 
   @genType
-  let style = styleVariants({
-    "none": 0,
-    "xxxsmall": 4,
-    "xxsmall": 8,
-    "xsmall": 12,
-    "small": 16,
-    "medium": 24,
-    "large": 36,
-    "xlarge": 48,
-    "xxlarge": 96,
-    "xxxlarge": 128,
-  }, (value) => {
-    let output = {
-      "gap": value,
-    };
-    output
-  })
+  let style = styleVariants(options, cssResolve)
 
   @genType
   let resolve = (t) => {
