@@ -1,6 +1,7 @@
 import React, { VFC, createElement } from 'react'
 import cn from 'classnames'
-import { BlockLayer, TextLayer } from 'layers'
+import TextLayer from 'reason/layers/Text'
+import { BlockLayer } from 'layers'
 import { CharsPerLine } from '../css'
 import { Props } from './types'
 import { ClassName } from './styles.css'
@@ -17,6 +18,22 @@ const Article: VFC<Props> = ({
   className,
   charsPerLine,
   children,
+
+  // text
+  color,
+  fontFamily,
+  fontSize,
+  fontStyle,
+  fontWeight,
+  backgroundColor,
+  spacingBefore,
+  spacingAfter,
+  textDecorationColor,
+  textDecorationLine,
+  textDecorationStyle,
+  textDecorationThickness,
+  textTransform,
+
   ...rest
 }) =>
   createElement(
@@ -28,7 +45,21 @@ const Article: VFC<Props> = ({
         ClassName,
         CharsPerLine[charsPerLine],
         block.set(rest).box,
-        text.set(rest).box,
+        text.resolve({
+          color,
+          fontFamily,
+          fontSize,
+          fontStyle,
+          fontWeight,
+          backgroundColor,
+          spacingBefore,
+          spacingAfter,
+          textDecorationColor,
+          textDecorationLine,
+          textDecorationStyle,
+          textDecorationThickness,
+          textTransform,
+        }),
       ]),
     },
 

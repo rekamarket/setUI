@@ -17,6 +17,13 @@ const Flex: VFC<Props> = ({
 
   children,
 
+  // flex
+  alignContent,
+  alignItems,
+  flexDirection,
+  flexWrap,
+  gap,
+  justifyContent,
   ...rest
 }) => {
   return (
@@ -27,7 +34,14 @@ const Flex: VFC<Props> = ({
         ClassName,
 
         block.set(rest).box,
-        flex.set(rest).box,
+        flex.resolve({
+          alignContent,
+          alignItems,
+          flexDirection,
+          flexWrap,
+          gap,
+          justifyContent,
+        }),
 
         ZIndex[zIndex] || ZIndex.default,
         Width[width] || Width.default,

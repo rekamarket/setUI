@@ -1,4 +1,5 @@
-import { BlockLayerProps, TextLayerProps } from 'layers'
+import { BlockLayerProps } from 'layers'
+import type { Props as TextLayerProps } from 'reason/layers/Text'
 import { CharsPerLineProps } from '../css'
 
 export type AsType = 'div' | 'section'

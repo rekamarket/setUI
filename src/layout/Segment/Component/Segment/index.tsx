@@ -1,7 +1,8 @@
 import React, { VFC, createElement } from 'react'
 import cn from 'classnames'
 import { AspectRatio, ZIndex } from 'CSS'
-import { BlockLayer, FlexLayer } from 'layers'
+import { BlockLayer } from 'layers'
+import FlexLayer from 'reason/layers/Flex'
 import { Direction } from '../css'
 import { tags } from './data'
 import { Props } from './types'
@@ -23,6 +24,13 @@ const Segment: VFC<Props> = ({
 
   children,
 
+  // flex
+  alignContent,
+  alignItems,
+  flexDirection,
+  flexWrap,
+  gap,
+  justifyContent,
   ...rest
 }) => {
   return createElement(
@@ -40,7 +48,14 @@ const Segment: VFC<Props> = ({
         AspectRatio[aspectRatio] || AspectRatio.default,
 
         block.set(rest).box,
-        flex.set(rest).box,
+        flex.resolve({
+          alignContent,
+          alignItems,
+          flexDirection,
+          flexWrap,
+          gap,
+          justifyContent,
+        }),
 
         ZIndex[zIndex] || ZIndex.default,
       ]),

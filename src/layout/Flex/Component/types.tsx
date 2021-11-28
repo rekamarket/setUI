@@ -1,5 +1,6 @@
 import type { ZIndexType, WidthType } from 'CSS'
-import type { BlockLayerProps, FlexLayerProps } from 'layers'
+import type { BlockLayerProps } from 'layers'
+import type { Props as FlexLayerProps } from 'reason/layers/Flex'
 
 export type Props = {
   children?: JSX.Element | Array<JSX.Element>

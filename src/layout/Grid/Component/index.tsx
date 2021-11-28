@@ -1,7 +1,8 @@
 import React, { VFC, createElement } from 'react'
 import cn from 'classnames'
 import { ZIndex, Width } from 'CSS'
-import { BlockLayer, FlexLayer } from 'layers'
+import { BlockLayer } from 'layers'
+import FlexLayer from 'reason/layers/Flex'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
@@ -22,6 +23,13 @@ const Grid: VFC<Props> = ({
 
   children,
 
+  // flex
+  alignContent,
+  alignItems,
+  flexDirection,
+  flexWrap,
+  gap,
+  justifyContent,
   ...rest
 }) => (
   <div
@@ -31,7 +39,14 @@ const Grid: VFC<Props> = ({
       ClassName,
 
       block.set(rest).box,
-      flex.set(rest).box,
+      flex.resolve({
+        alignContent,
+        alignItems,
+        flexDirection,
+        flexWrap,
+        gap,
+        justifyContent,
+      }),
 
       ZIndex[zIndex] || ZIndex.default,
       Width[width] || Width.default,

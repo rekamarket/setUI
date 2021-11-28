@@ -1,4 +1,5 @@
-import type { BlockLayerProps, FlexLayerProps } from 'layers'
+import type { BlockLayerProps } from 'layers'
+import type { Props as FlexLayerProps } from 'reason/layers/Flex'
 
 export type AsType = 'main' | 'section' | 'div'
 

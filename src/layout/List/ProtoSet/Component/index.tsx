@@ -1,7 +1,8 @@
 import React, { VFC, Children, createElement } from 'react'
 import cn from 'classnames'
 import { ZIndex, Width } from 'CSS'
-import { BlockLayer, FlexLayer } from 'layers'
+import { BlockLayer } from 'layers'
+import FlexLayer from 'reason/layers/Flex'
 import { ListLayer } from './layers'
 import { component } from './data'
 import { Props, PropsRequired } from './types'
@@ -26,6 +27,13 @@ const Flex: VFC<PropsRequired> = ({
 
   children,
 
+  // flex
+  alignContent,
+  alignItems,
+  flexDirection,
+  flexWrap,
+  gap,
+  justifyContent,
   ...rest
 }) =>
   createElement(
@@ -38,7 +46,14 @@ const Flex: VFC<PropsRequired> = ({
         ClassName,
 
         block.set(rest).box,
-        flex.set(rest).box,
+        flex.resolve({
+          alignContent,
+          alignItems,
+          flexDirection,
+          flexWrap,
+          gap,
+          justifyContent,
+        }),
         list.set(rest).box,
 
         ZIndex[zIndex] || ZIndex.default,

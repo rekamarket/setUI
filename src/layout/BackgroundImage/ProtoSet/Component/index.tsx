@@ -1,6 +1,7 @@
 import { FC, createElement, useMemo } from 'react'
 import cn from 'classnames'
-import { BlockLayer, FlexLayer } from 'layers'
+import { BlockLayer } from 'layers'
+import FlexLayer from 'reason/layers/Flex'
 import { Props } from './types'
 import { component } from './data'
 import { ClassName } from './styles.css'
@@ -17,6 +18,14 @@ const BackgroundImage: FC<Props> = ({
   className,
   image,
   children,
+
+  // flex
+  alignContent,
+  alignItems,
+  flexDirection,
+  flexWrap,
+  gap,
+  justifyContent,
   ...rest
 }) => {
   const style = useMemo(
@@ -34,7 +43,14 @@ const BackgroundImage: FC<Props> = ({
         className,
         ClassName,
         block.set(rest).box,
-        flex.set(rest).box,
+        flex.resolve({
+          alignContent,
+          alignItems,
+          flexDirection,
+          flexWrap,
+          gap,
+          justifyContent,
+        }),
       ]),
       style,
     },
