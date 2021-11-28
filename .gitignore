@@ -4,4 +4,3 @@
 /lib/bs
 /out/*.html
 /src/reason/**/*.js
-/src/reason/**/*.gen.tsx
