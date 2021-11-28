@@ -2,7 +2,7 @@
 import { IBackgroundAttachment_i } from './Background/Attachment/BackgroundAttachment.css.gen'
 import { IBackgroundClip_i } from './Background/Clip/BackgroundClip.css.gen'
 import { IBackgroundColor_i } from './Background/Color/BackgroundColor.css.gen'
-import { IBackgroundOpacity_i } from './Background/Opacity(synthetic)/BackgroundOpacity.css.gen'
+import { IBackgroundOpacity_i } from './Background/Opacity(--background-color)/BackgroundOpacity.css.gen'
 import { IBackgroundOrigin_i } from './Background/Origin/BackgroundOrigin.css.gen'
 import { IBackgroundPosition_i } from './Background/Position/BackgroundPosition.css.gen'
 import { IBackgroundRepeat_i } from './Background/Repeat/BackgroundRepeat.css.gen'
@@ -10,7 +10,7 @@ import { IBackgroundSize_i } from './Background/Size/BackgroundSize.css.gen'
 
 // Border
 import { IBorderColor_i } from './Border/Color/BorderColor.css.gen'
-import { IBorderOpacity_i } from './Border/Opacity(synthetic)/BorderOpacity.css.gen'
+import { IBorderOpacity_i } from './Border/Opacity(--border-opacity)/BorderOpacity.css.gen'
 import { IBorderStyle_i } from './Border/Style/BorderStyle.css.gen'
 import { IBorderThickness_i } from './Border/Thickness(border-width)/BorderThickness.css.gen'
 

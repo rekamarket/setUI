@@ -2,7 +2,7 @@
 import { BackgroundAttachment_resolve } from './Background/Attachment/BackgroundAttachment.css.gen'
 import { BackgroundClip_resolve } from './Background/Clip/BackgroundClip.css.gen'
 import { BackgroundColor_resolve } from './Background/Color/BackgroundColor.css.gen'
-import { BackgroundOpacity_resolve } from './Background/Opacity(synthetic)/BackgroundOpacity.css.gen'
+import { BackgroundOpacity_resolve } from './Background/Opacity(--background-color)/BackgroundOpacity.css.gen'
 import { BackgroundOrigin_resolve } from './Background/Origin/BackgroundOrigin.css.gen'
 import { BackgroundPosition_resolve } from './Background/Position/BackgroundPosition.css.gen'
 import { BackgroundRepeat_resolve } from './Background/Repeat/BackgroundRepeat.css.gen'
@@ -10,7 +10,7 @@ import { BackgroundSize_resolve } from './Background/Size/BackgroundSize.css.gen
 
 // Border
 import { BorderColor_resolve } from './Border/Color/BorderColor.css.gen'
-import { BorderOpacity_resolve } from './Border/Opacity(synthetic)/BorderOpacity.css.gen'
+import { BorderOpacity_resolve } from './Border/Opacity(--border-opacity)/BorderOpacity.css.gen'
 import { BorderStyle_resolve } from './Border/Style/BorderStyle.css.gen'
 import { BorderThickness_resolve } from './Border/Thickness(border-width)/BorderThickness.css.gen'
 
