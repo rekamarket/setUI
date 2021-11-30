@@ -1,5 +1,5 @@
 import type { Props as BlockLayerProps } from 'reason/layers/Block'
-import type { Props as TextLayerProps } from 'reason/layers/Text'
+import type { PropsWithCFT as TextLayerProps } from 'reason/layers/Text'
 import { CharsPerLineProps } from '../css'
 
 export type AsType = 'div' | 'section'

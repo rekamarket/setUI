@@ -19,7 +19,13 @@ const block = new BlockLayer({
 //     Style: Weight,
 //   },
 // })
-const text = new TextLayer()
+const text = new TextLayer({
+  useColor: true,
+  useFont: true,
+  useOutline: false,
+  useSpacing: false,
+  useText: true,
+})
 
 const Heading: FC<PropsRequired> = ({
   // basic
@@ -40,9 +46,6 @@ const Heading: FC<PropsRequired> = ({
   fontSize,
   fontStyle,
   fontWeight,
-  backgroundColor,
-  spacingBefore,
-  spacingAfter,
   textDecorationColor,
   textDecorationLine,
   textDecorationStyle,
@@ -133,9 +136,6 @@ const Heading: FC<PropsRequired> = ({
           fontSize,
           fontStyle,
           fontWeight,
-          backgroundColor,
-          spacingBefore,
-          spacingAfter,
           textDecorationColor,
           textDecorationLine,
           textDecorationStyle,

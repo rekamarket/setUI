@@ -7,7 +7,12 @@ import { ClassName } from './styles.css'
 import { SymbolLayer } from './layers'
 
 const block = new BlockLayer()
-const text = new TextLayer()
+
+const text = new TextLayer({
+  useColor: true,
+  useFont: true,
+})
+
 const symbol = new SymbolLayer()
 
 const BlockQuote: FC<PropsRequired> = ({
@@ -23,14 +28,6 @@ const BlockQuote: FC<PropsRequired> = ({
   fontSize,
   fontStyle,
   fontWeight,
-  backgroundColor,
-  spacingBefore,
-  spacingAfter,
-  textDecorationColor,
-  textDecorationLine,
-  textDecorationStyle,
-  textDecorationThickness,
-  textTransform,
 
   // background
   backgroundAttachment,
@@ -65,6 +62,8 @@ const BlockQuote: FC<PropsRequired> = ({
   paddingBlockStart,
   paddingInlineEnd,
   paddingInlineStart,
+
+  ...rest
 }) => (
   <blockquote
     cite={cite}
@@ -113,14 +112,6 @@ const BlockQuote: FC<PropsRequired> = ({
         fontSize,
         fontStyle,
         fontWeight,
-        backgroundColor,
-        spacingBefore,
-        spacingAfter,
-        textDecorationColor,
-        textDecorationLine,
-        textDecorationStyle,
-        textDecorationThickness,
-        textTransform,
       }),
       symbol.set(rest).box,
     ])}

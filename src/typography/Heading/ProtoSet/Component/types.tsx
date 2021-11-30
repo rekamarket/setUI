@@ -1,5 +1,5 @@
 import type { DisplayType } from 'CSS'
-import type { Props as TextLayerProps } from 'reason/layers/Text'
+import type { PropsWithCFT as TextLayerProps } from 'reason/layers/Text'
 import type { Props as BlockLayerProps } from 'reason/layers/Block'
 import { CharsPerLineType, WeightType } from '../css'
 

@@ -8,22 +8,27 @@ import { ClassName } from './styles.css'
 import { component } from './data'
 
 const block = new BlockLayer()
-const text = new TextLayer()
+
+const text = new TextLayer({
+  useColor: true,
+  useFont: true,
+  useOutline: false,
+  useSpacing: false,
+  useText: true,
+})
 
 const Paragraph: FC<Props> = ({
   as,
   className,
   zIndex,
   children,
+
   // text
   color,
   fontFamily,
   fontSize,
   fontStyle,
   fontWeight,
-  backgroundColor,
-  spacingBefore,
-  spacingAfter,
   textDecorationColor,
   textDecorationLine,
   textDecorationStyle,
@@ -112,9 +117,6 @@ const Paragraph: FC<Props> = ({
           fontSize,
           fontStyle,
           fontWeight,
-          backgroundColor,
-          spacingBefore,
-          spacingAfter,
           textDecorationColor,
           textDecorationLine,
           textDecorationStyle,

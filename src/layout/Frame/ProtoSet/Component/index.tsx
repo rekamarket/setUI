@@ -8,7 +8,14 @@ import { ClassName } from './styles.css'
 import { component } from './data'
 
 const block = new BlockLayer()
-const text = new TextLayer()
+
+const text = new TextLayer({
+  useColor: true,
+  useFont: true,
+  useOutline: false,
+  useSpacing: false,
+  useText: true,
+})
 
 const Article: VFC<Props> = ({
   as,
@@ -22,9 +29,6 @@ const Article: VFC<Props> = ({
   fontSize,
   fontStyle,
   fontWeight,
-  backgroundColor,
-  spacingBefore,
-  spacingAfter,
   textDecorationColor,
   textDecorationLine,
   textDecorationStyle,
@@ -114,9 +118,6 @@ const Article: VFC<Props> = ({
           fontSize,
           fontStyle,
           fontWeight,
-          backgroundColor,
-          spacingBefore,
-          spacingAfter,
           textDecorationColor,
           textDecorationLine,
           textDecorationStyle,
