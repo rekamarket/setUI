@@ -32,10 +32,11 @@ import { PaddingBlockStartStyle_resolve } from './Padding/BlockStart(padding-top
 import { PaddingInlineEndStyle_resolve } from './Padding/InlineEnd(padding-right)/PaddingInlineEndStyle.css.gen'
 import { PaddingInlineStartStyle_resolve } from './Padding/InlineStart(padding-left)/PaddingInlineStartStyle.css.gen'
 
-import type { Props } from './types'
+import type { Props, Config } from './types'
 
 class BlockLayer {
   // background
+  background: () => string
   backgroundAttachment: string
   backgroundClip: string
   backgroundColor: string
@@ -46,28 +47,103 @@ class BlockLayer {
   backgroundSize: string
 
   // border
+  border: () => string
   borderColor: string
   borderOpacity: string
   borderStyle: string
   borderThickness: string
 
   // content
+  content: () => string
   contentAlign: string
 
   // corner
+  corner: () => string
   cornerRadius: string
 
   // margin
+  margin: () => string
   marginBlockEnd: string
   marginBlockStart: string
   marginInlineEnd: string
   marginInlineStart: string
 
   // padding
+  padding: () => string
   paddingBlockEnd: string
   paddingBlockStart: string
   paddingInlineEnd: string
   paddingInlineStart: string
+
+  constructor(config?: Config) {
+    this.background = () => ''
+    this.border = () => ''
+    this.content = () => ''
+    this.corner = () => ''
+    this.margin = () => ''
+    this.padding = () => ''
+
+    if ('useBackground' in config) {
+      this.background = () =>
+        [
+          this.backgroundAttachment,
+          this.backgroundClip,
+          this.backgroundColor,
+          this.backgroundOpacity,
+          this.backgroundOrigin,
+          this.backgroundPosition,
+          this.backgroundRepeat,
+          this.backgroundSize,
+        ]
+          .filter(Boolean)
+          .join(' ')
+    }
+
+    if ('useBorder' in config) {
+      this.border = () =>
+        [
+          this.borderColor,
+          this.borderOpacity,
+          this.borderStyle,
+          this.borderThickness,
+        ]
+          .filter(Boolean)
+          .join(' ')
+    }
+
+    if ('useContent' in config) {
+      this.content = () => [this.contentAlign].filter(Boolean).join(' ')
+    }
+
+    if ('useCorner' in config) {
+      this.corner = () => [this.cornerRadius].filter(Boolean).join(' ')
+    }
+
+    if ('useMargin' in config) {
+      this.margin = () =>
+        [
+          this.marginBlockEnd,
+          this.marginBlockStart,
+          this.marginInlineEnd,
+          this.marginInlineStart,
+        ]
+          .filter(Boolean)
+          .join(' ')
+    }
+
+    if ('usePadding' in config) {
+      this.padding = () =>
+        [
+          // padding
+          this.paddingBlockEnd,
+          this.paddingBlockStart,
+          this.paddingInlineEnd,
+          this.paddingInlineStart,
+        ]
+          .filter(Boolean)
+          .join(' ')
+    }
+  }
 
   resolve({
     // background
@@ -142,39 +218,12 @@ class BlockLayer {
       PaddingInlineStartStyle_resolve(paddingInlineStart)
 
     return [
-      // background
-      this.backgroundAttachment,
-      this.backgroundClip,
-      this.backgroundColor,
-      this.backgroundOpacity,
-      this.backgroundOrigin,
-      this.backgroundPosition,
-      this.backgroundRepeat,
-      this.backgroundSize,
-
-      // border
-      this.borderColor,
-      this.borderOpacity,
-      this.borderStyle,
-      this.borderThickness,
-
-      // content
-      this.contentAlign,
-
-      // corner
-      this.cornerRadius,
-
-      // margin
-      this.marginBlockEnd,
-      this.marginBlockStart,
-      this.marginInlineEnd,
-      this.marginInlineStart,
-
-      // padding
-      this.paddingBlockEnd,
-      this.paddingBlockStart,
-      this.paddingInlineEnd,
-      this.paddingInlineStart,
+      this.background(),
+      this.border(),
+      this.content(),
+      this.corner(),
+      this.margin(),
+      this.padding(),
     ]
       .filter(Boolean)
       .join(' ')
