@@ -1,5 +1,3 @@
-import type { Props as ParentProps, PropsRequired } from '../ProtoSet'
+import type { Props as ParentProps } from '../ProtoSet'
 
-export type { PropsRequired } from '../ProtoSet'
-
-export type Props = Omit<ParentProps, 'level'> & PropsRequired
+export type Props = Omit<ParentProps, 'level'>

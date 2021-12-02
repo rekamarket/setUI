@@ -1,4 +1,4 @@
-import { VFC } from 'react'
+import React, { VFC } from 'react'
 
 export const displayName = 'NonBreakable'
 

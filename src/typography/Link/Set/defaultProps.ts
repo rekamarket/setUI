@@ -1,22 +1,16 @@
 import type { Props } from './types'
 
-export const basicProps: Partial<Props> = {
+export const defaultProps: Omit<Props, 'children' | 'href'> = {
+  color: 'primary',
+
+  fontSize: 'medium',
+  fontWeight: 'normal',
   fontFamily: 'primary',
   fontStyle: 'normal',
 
-  outline: 'none',
-
   textDecorationColor: 'currentColor',
-  textDecorationLine: 'none',
-  textDecorationStyle: 'inherit',
-  textDecorationThickness: 'initial',
+  textDecorationLine: 'underline',
+  textDecorationStyle: 'solid',
+  textDecorationThickness: 'thin',
   textTransform: 'none',
-}
-
-export const defaultProps: Partial<Props> = {
-  ...basicProps,
-
-  color: 'black',
-  fontSize: 'medium',
-  fontWeight: 'regular',
 }

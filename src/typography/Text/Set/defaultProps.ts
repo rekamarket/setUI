@@ -1,8 +1,9 @@
 import type { Props } from './types'
 
-export const defaultProps: Partial<Props> = {
-  as: 'span',
-
-  // PaddingType
-  padding: 'none',
+export const defaultProps: Omit<Props, 'children'> = {
+  color: 'black',
+  fontFamily: 'primary',
+  fontSize: 'medium',
+  fontStyle: 'normal',
+  fontWeight: 'normal',
 }

@@ -1,3 +1,3 @@
 import type { Props as ParentProps } from '../ProtoSet'
 
-export type Props = ParentProps
+export type Props = Omit<ParentProps, 'as'>

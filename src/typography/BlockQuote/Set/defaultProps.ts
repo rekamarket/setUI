@@ -1,26 +1,27 @@
 import type { Props } from './types'
 
-export const defaultProps: Partial<Props> = {
-  symbol: 'LeftDoubleQuotation',
-  symbolGap: 'medium',
-  symbolSize: 'medium',
-
+export const defaultProps: Omit<Props, 'children'> = {
   color: 'black',
 
+  quoteGap: 'medium',
+  quotePosition: 'inside',
+  quoteSize: 'medium',
+  quoteSymbol: 'RightDoubleAngle',
+
   fontFamily: 'primary',
-  fontSize: 'small',
+  fontSize: 'medium',
   fontStyle: 'normal',
-  fontWeight: 'regular',
+  fontWeight: 'normal',
 
-  outline: 'none',
+  contentAlign: 'start',
 
-  textAlign: 'start',
-  textDecorationColor: 'currentColor',
-  textDecorationLine: 'none',
-  textDecorationStyle: 'inherit',
-  textDecorationThickness: 'initial',
-  textTransform: 'none',
+  paddingBlockEnd: 'medium',
+  paddingBlockStart: 'medium',
+  paddingInlineStart: 'none',
+  paddingInlineEnd: 'none',
 
-  margin: 'none',
-  padding: 'none',
+  marginInlineStart: 'none',
+  marginInlineEnd: 'none',
+  marginBlockStart: 'none',
+  marginBlockEnd: 'none',
 }

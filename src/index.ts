@@ -1,57 +1,38 @@
-// button
-export { Button, ButtonLink, ButtonIcon } from './button'
-
-// head
-export { default as Title } from './head/Title'
-
-// image
-export { default as Image } from './image/Image'
-
-// layout
-export { default as Box } from './layout/Box'
-export { default as Container } from './layout/Container'
-export { default as Flex } from './layout/Flex'
-export { default as Frame } from './layout/Frame'
-export { default as Grid, Spiral } from './layout/Grid'
-export { default as List, UnorderedList } from './layout/List'
-// export { default as Placeholder } from './layout/Placeholder'
-export { default as Segment } from './layout/Segment'
-export { default as Stack } from './layout/Stack'
-export { default as Tabs } from './layout/Tabs'
-export { default as BackgroundImage, Cover } from './layout/BackgroundImage'
-
-// typography
-export { default as Link } from './typography/Link'
-export { default as BlockQuote } from './typography/BlockQuote'
 export {
-  default as Heading,
+  BackgroundImage,
+  Cover,
+  Flex,
+  Frame,
+  List,
+  UnorderedList,
+} from './layout'
+
+export {
+  BlockQuote,
+  blockQuote,
+  Heading,
   H1,
+  h1,
   H2,
+  h2,
   H3,
+  h3,
   H4,
+  h4,
   H5,
+  h5,
   H6,
-} from './typography/Heading'
-export { default as LineBreak } from './typography/LineBreak'
-export { default as Paragraph, TextBlock } from './typography/Paragraph'
-export {
-  default as Text,
-  Abbreviation,
-  Attention,
-  Citation,
-  DefinedTerm,
-  Disclaimer,
-  Highlight,
-  Idiomatic,
+  h6,
+  Paragraph,
+  paragraph,
+  TextBlock,
+  textBlock,
+  Text,
   Important,
   TextInline,
-  Outdated,
-  Reference,
-  StressEmphasis,
-  Subscript,
-  Superscript,
-  UnarticulatedAnnotation,
-} from './typography/Text'
-export { Space, NonBreakable } from './typography/Symbols'
-export { default as ThematicBreak } from './typography/ThematicBreak'
-export { default as Time } from './typography/Time'
+  LineBreak,
+  Space,
+  NonBreakable,
+  Time,
+  Link,
+} from './typography'

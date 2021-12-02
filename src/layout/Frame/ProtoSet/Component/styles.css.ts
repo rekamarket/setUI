@@ -1,9 +1,9 @@
 import { style, globalStyle } from '@vanilla-extract/css'
-import { CharsPerLineMap } from '../css/charsPerLine'
+import { MaxInlineSizeByCharacters } from 'layers/MaxInlineSize/MaxInlineSizeByCharacters/MaxInlineSizeByCharacters'
 
 export const ClassName = style({
   display: 'grid',
-  gridTemplateColumns: `1fr min(var(--length, ${CharsPerLineMap.large}ch), 100%) 1fr`,
+  gridTemplateColumns: `1fr min(var(--max-inline-size-by-characters, ${MaxInlineSizeByCharacters.options.medium}), 100%) 1fr`,
 })
 
 globalStyle(`${ClassName} > *`, {

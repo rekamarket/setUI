@@ -1,16 +1,13 @@
-import { style } from '@vanilla-extract/css'
+import { style, globalStyle } from '@vanilla-extract/css'
 
 export const ClassName = style({
   display: 'grid',
   gridTemplateColumns: 'auto 1fr',
+})
 
-  selectors: {
-    '&:before': {
-      content: 'var(--symbol)',
-      paddingRight: 'var(--symbol-gap)',
-      fontSize: 'var(--symbol-size)',
-      lineHeight: 1,
-      marginTop: '-0.1309em',
-    },
-  },
+globalStyle(`${ClassName}::before`, {
+  content: `var(--quote-symbol)`,
+  fontSize: `var(--quote-size)`,
+  paddingRight: `var(--quote-gap)`,
+  paddingLeft: `var(--quote-gap)`,
 })

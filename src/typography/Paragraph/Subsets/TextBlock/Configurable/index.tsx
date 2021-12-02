@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { VFC } from 'react'
 import cn from 'classnames'
 import { object } from 'utils'
 import { defaultProps } from '../defaultProps'
@@ -8,9 +8,10 @@ import { ClassName } from '../styles.css'
 
 export const displayName = 'TextBlock'
 
-const Set: FC<Props> = ({ className, ...props }) =>
+const Set: VFC<Props> = ({ children, className, ...props }) =>
   ProtoSet({
-    ...object.mergePropsWithWarning<any>(defaultProps, props, displayName),
+    children,
+    ...object.mergePropsWithWarning(defaultProps, props, displayName),
 
     // props override
     as: 'div',

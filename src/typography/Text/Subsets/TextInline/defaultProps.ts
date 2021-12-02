@@ -1,24 +1,9 @@
 import type { Props } from './types'
 
-export const basicProps: Partial<Props> = {
-  fontFamily: 'primary',
-  fontStyle: 'normal',
-
-  outline: 'none',
-
-  textAlign: 'start',
-  textDecorationColor: 'currentColor',
-  textDecorationLine: 'none',
-  textDecorationStyle: 'inherit',
-  textDecorationThickness: 'initial',
-  textTransform: 'none',
-}
-
-export const defaultProps: Partial<Props> = {
-  ...basicProps,
-
+export const defaultProps: Omit<Props, 'children'> = {
   color: 'black',
-
+  fontFamily: 'primary',
   fontSize: 'medium',
-  fontWeight: 'regular',
+  fontStyle: 'normal',
+  fontWeight: 'normal',
 }

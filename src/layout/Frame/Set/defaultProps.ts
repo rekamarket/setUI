@@ -1,31 +1,22 @@
 import type { Props } from './types'
 
-export const defaultProps: Partial<Props> = {
+export const defaultProps: Omit<Props, 'children'> = {
+  maxInlineSize: 'large',
   color: 'black',
+  contentAlign: 'start',
 
   fontSize: 'medium',
-  fontWeight: 'regular',
+  fontWeight: 'normal',
   fontFamily: 'primary',
   fontStyle: 'normal',
 
-  outline: 'none',
+  marginBlockEnd: 'none',
+  marginBlockStart: 'none',
+  marginInlineEnd: 'none',
+  marginInlineStart: 'none',
 
-  textAlign: 'start',
-  textDecorationColor: 'currentColor',
-  textDecorationLine: 'none',
-  textDecorationStyle: 'inherit',
-  textDecorationThickness: 'initial',
-  textTransform: 'none',
-
-  background: 'transparent',
-
-  borderColor: 'transparent',
-  borderRadius: '0',
-  borderWidth: 'none',
-
-  // PaddingType
-  paddingX: 'medium',
-  paddingY: 'large',
-
-  charsPerLine: 'medium',
+  paddingBlockEnd: 'none',
+  paddingBlockStart: 'none',
+  paddingInlineEnd: 'none',
+  paddingInlineStart: 'none',
 }

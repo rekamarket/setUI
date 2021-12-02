@@ -1,25 +1,21 @@
-import React, { VFC, Children, createElement } from 'react'
+import { VFC, Children, createElement } from 'react'
 import cn from 'classnames'
-import { ZIndex, Width } from 'CSS'
-import BlockLayer from 'reason/layers/Block'
-import FlexLayer from 'reason/layers/Flex'
-import { ListLayer } from './layers'
+import {
+  FlexLayer,
+  MarkerLayer,
+  MarginLayer,
+  PaddingLayer,
+  ColorLayer,
+  FontLayer,
+} from 'layers'
 import { component } from './data'
-import { Props, PropsRequired } from './types'
+import { Props } from './types'
 import { ClassName } from './styles.css'
 
-const block = new BlockLayer()
-const flex = new FlexLayer()
-const list = new ListLayer()
-
-const Flex: VFC<PropsRequired> = ({
+const List: VFC<Props> = ({
   as,
   value,
   className,
-
-  zIndex,
-  width,
-
   children,
 
   // flex
@@ -30,27 +26,11 @@ const Flex: VFC<PropsRequired> = ({
   gap,
   justifyContent,
 
-  // background
-  backgroundAttachment,
-  backgroundClip,
-  backgroundColor,
-  backgroundOpacity,
-  backgroundOrigin,
-  backgroundPosition,
-  backgroundRepeat,
-  backgroundSize,
-
-  // border
-  borderColor,
-  borderOpacity,
-  borderStyle,
-  borderThickness,
-
-  // content
-  contentAlign,
-
-  // corner
-  cornerRadius,
+  // marker
+  markerGap,
+  markerPosition,
+  markerSize,
+  markerSymbol,
 
   // margin
   marginBlockEnd,
@@ -63,6 +43,13 @@ const Flex: VFC<PropsRequired> = ({
   paddingBlockStart,
   paddingInlineEnd,
   paddingInlineStart,
+
+  // text
+  color,
+  fontFamily,
+  fontSize,
+  fontStyle,
+  fontWeight,
 }) =>
   createElement(
     component[as],
@@ -73,42 +60,7 @@ const Flex: VFC<PropsRequired> = ({
         className,
         ClassName,
 
-        block.resolve({
-          // background
-          backgroundAttachment,
-          backgroundClip,
-          backgroundColor,
-          backgroundOpacity,
-          backgroundOrigin,
-          backgroundPosition,
-          backgroundRepeat,
-          backgroundSize,
-
-          // border
-          borderColor,
-          borderOpacity,
-          borderStyle,
-          borderThickness,
-
-          // content
-          contentAlign,
-
-          // corner
-          cornerRadius,
-
-          // margin
-          marginBlockEnd,
-          marginBlockStart,
-          marginInlineEnd,
-          marginInlineStart,
-
-          // padding
-          paddingBlockEnd,
-          paddingBlockStart,
-          paddingInlineEnd,
-          paddingInlineStart,
-        }),
-        flex.resolve({
+        FlexLayer({
           alignContent,
           alignItems,
           flexDirection,
@@ -116,18 +68,45 @@ const Flex: VFC<PropsRequired> = ({
           gap,
           justifyContent,
         }),
-        list.set(rest).box,
 
-        ZIndex[zIndex] || ZIndex.default,
-        Width[width] || Width.default,
+        MarkerLayer({
+          markerGap,
+          markerPosition,
+          markerSize,
+          markerSymbol,
+        }),
+
+        MarginLayer({
+          marginBlockEnd,
+          marginBlockStart,
+          marginInlineEnd,
+          marginInlineStart,
+        }),
+
+        PaddingLayer({
+          paddingBlockEnd,
+          paddingBlockStart,
+          paddingInlineEnd,
+          paddingInlineStart,
+        }),
+
+        ColorLayer({
+          color,
+        }),
+
+        FontLayer({
+          fontFamily,
+          fontSize,
+          fontStyle,
+          fontWeight,
+        }),
       ]),
     },
 
-    Children.map(children, (child, i) => (
-      <li {...(i === 0 && value ? { value } : {})}>{child}</li>
-    ))
+    Children.map(children, (child, i) =>
+      createElement('li', i === 0 && value ? { value } : {}, child)
+    )
   )
 
-export { listArgTypes } from './layers'
-export type { Props, PropsRequired } from './types'
-export default Flex
+export type { Props } from './types'
+export default List

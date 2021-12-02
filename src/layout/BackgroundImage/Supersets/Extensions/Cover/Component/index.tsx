@@ -1,18 +1,15 @@
-import { cloneElement, FC } from 'react'
+import { cloneElement, VFC } from 'react'
 import cn from 'classnames'
 import { object } from 'utils'
 import { defaultProps } from './defaultProps'
 import type { Props } from './types'
 import ProtoSet from '../../../../ProtoSet'
 import { ClassName } from './styles.css'
-import { ColorContext } from 'layers/Text'
-import { ShadowLayer } from './layers'
-
-const shadow = new ShadowLayer()
+import { ColorContext, OverlayLayer } from 'layers'
 
 export const displayName = 'Cover'
 
-const Section: FC<Props> = ({ color, className, ...props }) =>
+const Section: VFC<Props> = ({ color, className, ...props }) =>
   [<ColorContext.Provider value={color} />].reduce(
     (prev, provider) => cloneElement(provider, {}, prev),
     ProtoSet({
@@ -20,13 +17,24 @@ const Section: FC<Props> = ({ color, className, ...props }) =>
 
       // props override
       as: 'section',
-      className: cn(ClassName, className, shadow.set({ overlay: color }).box),
-      color: color,
+      backgroundAttachment: 'fixed',
+      backgroundSize: 'cover',
+      alignItems: 'center',
+      contentAlign: 'center',
+      justifyContent: 'center',
+      className: cn(
+        ClassName,
+        className,
+
+        OverlayLayer({
+          overlayColor: color,
+        })
+      ),
+      color,
     })
   )
 
 Section.displayName = displayName
 
-export { defaultProps } from './defaultProps'
 export type { Props } from './types'
 export default Section

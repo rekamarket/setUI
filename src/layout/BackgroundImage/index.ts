@@ -1,18 +1,16 @@
-import { FC } from 'react'
+import { ForwardRefExoticComponent, RefAttributes } from 'react'
 import Set, { Props } from './Set'
 import { Cover } from './Supersets'
 
-interface I<T = unknown> extends FC<T> {
-  // subsets
+interface CompoundedComponent
+  extends ForwardRefExoticComponent<Props & RefAttributes<HTMLElement>> {
   Cover: typeof Cover
 }
 
-const BackgroundImage: I<Props> = (props) => Set(props)
+const BackgroundImage = Set as CompoundedComponent
 
 BackgroundImage.Cover = Cover
 
 export { Cover } from './Supersets'
 export type { Props } from './Set'
-export { default as BackgroundImageSnippets } from './Set/snippets'
-export { default as CoverSnippets } from './Supersets/Extensions/Cover/Component/snippets'
 export default BackgroundImage

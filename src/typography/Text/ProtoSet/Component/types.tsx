@@ -1,4 +1,4 @@
-import type { Props as TextLayerProps } from 'reason/layers/Text'
+import type { IFontLayer, IColorLayer } from 'layers'
 
 export type AsType =
   | 'span'
@@ -16,11 +16,9 @@ export type AsType =
   | 's'
   | 'small'
 
-type BasicProps = {
+export interface Props extends IFontLayer, IColorLayer {
   as: AsType
   className?: string
   title?: string
+  children: string
 }
-
-export type Props = BasicProps & TextLayerProps
-export type PropsRequired = BasicProps & Required<TextLayerProps>

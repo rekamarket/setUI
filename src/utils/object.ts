@@ -24,10 +24,15 @@ function mergePropsWithWarning<T>(
     }
   })
 
-  return {
-    ...defaultProps,
-    ...props,
+  const o: T = { ...defaultProps }
+
+  for (const [key, value] of Object.entries(props)) {
+    if (value) {
+      o[key] = value
+    }
   }
+
+  return o
 }
 
 export default {

@@ -1,1 +1,1 @@
-export { article } from './Article'
+export { default as ARTICLE } from './Article/index.css'

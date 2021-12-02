@@ -1,8 +1,8 @@
 import { style, globalStyle } from '@vanilla-extract/css'
-import { FontSizeMap } from 'layers/Text/font'
+// import { FontSizeMap } from 'layers/Text/font'
 
 export const ClassName = style({
-  ...FontSizeMap.LAYOUT,
+  // ...FontSizeMap.LAYOUT,
   display: 'grid',
   position: 'relative',
 })
@@ -14,11 +14,10 @@ globalStyle(`${ClassName} li`, {
 })
 
 globalStyle(`${ClassName} li::before`, {
-  content: `var(--marker)`,
+  content: `var(--marker-symbol)`,
   fontSize: `var(--marker-size)`,
   paddingRight: `var(--marker-gap)`,
   paddingLeft: `var(--marker-gap)`,
-  marginTop: 8,
 })
 
 globalStyle(`${ClassName} li::marker`, {

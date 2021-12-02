@@ -9,6 +9,7 @@
   ],
   "gentypeconfig": {
     "language": "typescript",
+    "generatedFileExtension": ".gen.ts",
     "importPath": "relative",
     "shims": {
       "Js": "Js",
