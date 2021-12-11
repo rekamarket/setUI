@@ -1,6 +1,8 @@
 .merlin
 /node_modules
 /.next
+/dist
 /lib/bs
 /out/*.html
 /src/reason/**/*.js
+.npmrc
