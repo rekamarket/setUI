@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var QuotePositionStyle_key = QuotePosition.QuotePosition.key;
+
 var QuotePositionStyle_initial = QuotePosition.QuotePosition.initial;
 
 var QuotePositionStyle = {
+  key: QuotePositionStyle_key,
   initial: QuotePositionStyle_initial,
   options: options,
   style: style

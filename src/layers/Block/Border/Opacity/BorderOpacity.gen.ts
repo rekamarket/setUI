@@ -14,7 +14,3 @@ export type BorderOpacity_t =
   | 80
   | 90
   | 100
-
-export interface IBorderOpacity_i {
-  readonly borderOpacity: BorderOpacity_t
-}

@@ -8,7 +8,8 @@ var PaddingBlockStart_options = Padding.Padding.options;
 
 var PaddingBlockStart = {
   initial: PaddingBlockStart_initial,
-  options: PaddingBlockStart_options
+  options: PaddingBlockStart_options,
+  key: "paddingBlockStart"
 };
 
 export {

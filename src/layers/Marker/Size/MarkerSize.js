@@ -15,6 +15,7 @@ var options = {
 };
 
 var MarkerSize = {
+  key: "markerSize",
   initial: "none",
   options: options
 };

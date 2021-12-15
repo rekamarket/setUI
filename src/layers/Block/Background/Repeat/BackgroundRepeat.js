@@ -19,6 +19,7 @@ var options = {
 };
 
 var BackgroundRepeat = {
+  key: "backgroundRepeat",
   initial: "center",
   options: options
 };

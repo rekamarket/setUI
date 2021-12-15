@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var ColorStyle_key = Color.Color.key;
+
 var ColorStyle_initial = Color.Color.initial;
 
 var ColorStyle = {
+  key: ColorStyle_key,
   initial: ColorStyle_initial,
   options: options,
   style: style

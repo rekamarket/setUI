@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var CornerRadiusStyle_key = CornerRadius.CornerRadius.key;
+
 var CornerRadiusStyle_initial = CornerRadius.CornerRadius.initial;
 
 var CornerRadiusStyle = {
+  key: CornerRadiusStyle_key,
   initial: CornerRadiusStyle_initial,
   options: options,
   style: style

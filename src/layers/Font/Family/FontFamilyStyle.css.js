@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var FontFamilyStyle_key = FontFamily.FontFamily.key;
+
 var FontFamilyStyle_initial = FontFamily.FontFamily.initial;
 
 var FontFamilyStyle = {
+  key: FontFamilyStyle_key,
   initial: FontFamilyStyle_initial,
   options: options,
   style: style

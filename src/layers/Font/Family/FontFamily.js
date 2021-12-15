@@ -7,6 +7,7 @@ var options = {
 };
 
 var FontFamily = {
+  key: "fontFamily",
   initial: "primary",
   options: options
 };

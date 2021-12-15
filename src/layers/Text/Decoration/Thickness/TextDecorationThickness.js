@@ -14,6 +14,7 @@ var options = {
 };
 
 var TextDecorationThickness = {
+  key: "textDecorationThickness",
   initial: "initial",
   options: options
 };

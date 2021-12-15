@@ -9,6 +9,7 @@ var options = {
 };
 
 var MaxInlineSizeByCharacters = {
+  key: "maxInlineSize",
   initial: "none",
   options: options
 };

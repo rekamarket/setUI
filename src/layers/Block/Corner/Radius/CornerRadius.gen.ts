@@ -9,7 +9,3 @@ export type CornerRadius_t =
   | 'large'
   | 'pill'
   | 'circle'
-
-export interface ICornerRadius_i {
-  readonly cornerRadius: CornerRadius_t
-}

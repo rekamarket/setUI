@@ -15,9 +15,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var BorderColorStyle_key = BorderColor.BorderColor.key;
+
 var BorderColorStyle_initial = BorderColor.BorderColor.initial;
 
 var BorderColorStyle = {
+  key: BorderColorStyle_key,
   initial: BorderColorStyle_initial,
   options: options,
   style: style

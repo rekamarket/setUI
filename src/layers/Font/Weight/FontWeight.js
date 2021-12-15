@@ -19,6 +19,7 @@ var options = {
 };
 
 var FontWeight = {
+  key: "fontWeight",
   initial: "normal",
   options: options
 };

@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var TextTransformStyle_key = TextTransform.TextTransform.key;
+
 var TextTransformStyle_initial = TextTransform.TextTransform.initial;
 
 var TextTransformStyle = {
+  key: TextTransformStyle_key,
   initial: TextTransformStyle_initial,
   options: options,
   style: style

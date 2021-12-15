@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var BackgroundOpacityStyle_key = BackgroundOpacity.BackgroundOpacity.key;
+
 var BackgroundOpacityStyle_initial = BackgroundOpacity.BackgroundOpacity.initial;
 
 var BackgroundOpacityStyle = {
+  key: BackgroundOpacityStyle_key,
   initial: BackgroundOpacityStyle_initial,
   options: options,
   style: style

@@ -13,9 +13,12 @@ var style = Css.styleVariants(options, (function (value) {
 
 var PaddingBlockEndStyle_initial = PaddingBlockEnd.PaddingBlockEnd.initial;
 
+var PaddingBlockEndStyle_key = PaddingBlockEnd.PaddingBlockEnd.key;
+
 var PaddingBlockEndStyle = {
   initial: PaddingBlockEndStyle_initial,
   options: options,
+  key: PaddingBlockEndStyle_key,
   style: style
 };
 

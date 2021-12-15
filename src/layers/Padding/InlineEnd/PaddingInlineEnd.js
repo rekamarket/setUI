@@ -8,7 +8,8 @@ var PaddingInlineEnd_options = Padding.Padding.options;
 
 var PaddingInlineEnd = {
   initial: PaddingInlineEnd_initial,
-  options: PaddingInlineEnd_options
+  options: PaddingInlineEnd_options,
+  key: "paddingInlineEnd"
 };
 
 export {

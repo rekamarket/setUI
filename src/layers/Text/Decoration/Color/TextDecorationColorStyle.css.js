@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var TextDecorationColorStyle_key = TextDecorationColor.TextDecorationColor.key;
+
 var TextDecorationColorStyle_initial = TextDecorationColor.TextDecorationColor.initial;
 
 var TextDecorationColorStyle = {
+  key: TextDecorationColorStyle_key,
   initial: TextDecorationColorStyle_initial,
   options: options,
   style: style

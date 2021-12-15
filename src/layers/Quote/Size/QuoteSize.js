@@ -15,6 +15,7 @@ var options = {
 };
 
 var QuoteSize = {
+  key: "quoteSize",
   initial: "none",
   options: options
 };

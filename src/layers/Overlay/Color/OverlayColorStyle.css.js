@@ -7,13 +7,17 @@ var options = OverlayColor.OverlayColor.options;
 
 var style = Css.styleVariants(options, (function (value) {
         return {
+                visibility: "visible",
                 "--overlay-color": value
               };
       }));
 
+var OverlayColorStyle_key = OverlayColor.OverlayColor.key;
+
 var OverlayColorStyle_initial = OverlayColor.OverlayColor.initial;
 
 var OverlayColorStyle = {
+  key: OverlayColorStyle_key,
   initial: OverlayColorStyle_initial,
   options: options,
   style: style

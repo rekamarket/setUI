@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var MarkerSizeStyle_key = MarkerSize.MarkerSize.key;
+
 var MarkerSizeStyle_initial = MarkerSize.MarkerSize.initial;
 
 var MarkerSizeStyle = {
+  key: MarkerSizeStyle_key,
   initial: MarkerSizeStyle_initial,
   options: options,
   style: style

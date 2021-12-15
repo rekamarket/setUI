@@ -15,9 +15,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var BackgroundColorStyle_key = BackgroundColor.BackgroundColor.key;
+
 var BackgroundColorStyle_initial = BackgroundColor.BackgroundColor.initial;
 
 var BackgroundColorStyle = {
+  key: BackgroundColorStyle_key,
   initial: BackgroundColorStyle_initial,
   options: options,
   style: style

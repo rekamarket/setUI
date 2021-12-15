@@ -13,6 +13,7 @@ var options = {
 };
 
 var BackgroundSize = {
+  key: "backgroundSize",
   initial: "auto",
   options: options
 };

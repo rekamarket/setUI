@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var FlexWrapStyle_key = FlexWrap.FlexWrap.key;
+
 var FlexWrapStyle_initial = FlexWrap.FlexWrap.initial;
 
 var FlexWrapStyle = {
+  key: FlexWrapStyle_key,
   initial: FlexWrapStyle_initial,
   options: options,
   style: style

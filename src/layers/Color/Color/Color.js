@@ -9,6 +9,7 @@ var options = {
 };
 
 var Color = {
+  key: "color",
   initial: "primary",
   options: options
 };

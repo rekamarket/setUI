@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var FlexDirectionStyle_key = FlexDirection.FlexDirection.key;
+
 var FlexDirectionStyle_initial = FlexDirection.FlexDirection.initial;
 
 var FlexDirectionStyle = {
+  key: FlexDirectionStyle_key,
   initial: FlexDirectionStyle_initial,
   options: options,
   style: style

@@ -15,6 +15,7 @@ var options = {
 };
 
 var MarkerGap = {
+  key: "markerGap",
   initial: "none",
   options: options
 };

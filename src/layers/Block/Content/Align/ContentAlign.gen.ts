@@ -16,7 +16,3 @@ export type ContentAlign_t =
   | 'inherit'
   | 'initial'
   | 'unset'
-
-export interface IContentAlign_i {
-  readonly contentAlign: ContentAlign_t
-}

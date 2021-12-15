@@ -8,7 +8,8 @@ var PaddingBlockEnd_options = Padding.Padding.options;
 
 var PaddingBlockEnd = {
   initial: PaddingBlockEnd_initial,
-  options: PaddingBlockEnd_options
+  options: PaddingBlockEnd_options,
+  key: "paddingBlockEnd"
 };
 
 export {

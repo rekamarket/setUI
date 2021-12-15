@@ -13,9 +13,12 @@ var style = Css.styleVariants(options, (function (value) {
 
 var PaddingBlockStartStyle_initial = PaddingBlockStart.PaddingBlockStart.initial;
 
+var PaddingBlockStartStyle_key = PaddingBlockStart.PaddingBlockStart.key;
+
 var PaddingBlockStartStyle = {
   initial: PaddingBlockStartStyle_initial,
   options: options,
+  key: PaddingBlockStartStyle_key,
   style: style
 };
 

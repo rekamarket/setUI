@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var BorderThicknessStyle_key = BorderThickness.BorderThickness.key;
+
 var BorderThicknessStyle_initial = BorderThickness.BorderThickness.initial;
 
 var BorderThicknessStyle = {
+  key: BorderThicknessStyle_key,
   initial: BorderThicknessStyle_initial,
   options: options,
   style: style

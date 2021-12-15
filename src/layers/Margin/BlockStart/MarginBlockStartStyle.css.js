@@ -13,9 +13,12 @@ var style = Css.styleVariants(options, (function (value) {
 
 var MarginBlockStartStyle_initial = MarginBlockStart.MarginBlockStart.initial;
 
+var MarginBlockStartStyle_key = MarginBlockStart.MarginBlockStart.key;
+
 var MarginBlockStartStyle = {
   initial: MarginBlockStartStyle_initial,
   options: options,
+  key: MarginBlockStartStyle_key,
   style: style
 };
 

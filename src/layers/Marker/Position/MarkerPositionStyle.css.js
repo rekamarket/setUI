@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var MarkerPositionStyle_key = MarkerPosition.MarkerPosition.key;
+
 var MarkerPositionStyle_initial = MarkerPosition.MarkerPosition.initial;
 
 var MarkerPositionStyle = {
+  key: MarkerPositionStyle_key,
   initial: MarkerPositionStyle_initial,
   options: options,
   style: style

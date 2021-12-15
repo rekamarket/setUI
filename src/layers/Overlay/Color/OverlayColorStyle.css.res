@@ -5,5 +5,10 @@ open OverlayColor
 module OverlayColorStyle = {
   include OverlayColor;
 
-  let style = styleVariants(options, (value) => {{ "--overlay-color": value }})
+  let style = styleVariants(options, (value) => {
+    {
+      "visibility": "visible",
+      "--overlay-color": value
+    }
+  })
 }

@@ -17,7 +17,3 @@ export type BorderStyle_t =
   | 'initial'
   | 'revert'
   | 'unset'
-
-export interface IBorderStyle_i {
-  readonly borderStyle: BorderStyle_t
-}

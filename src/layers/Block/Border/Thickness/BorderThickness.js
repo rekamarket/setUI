@@ -10,6 +10,7 @@ var options = {
 };
 
 var BorderThickness = {
+  key: "borderThickness",
   initial: "none",
   options: options
 };

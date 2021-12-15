@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var GapStyle_key = Gap.Gap.key;
+
 var GapStyle_initial = Gap.Gap.initial;
 
 var GapStyle = {
+  key: GapStyle_key,
   initial: GapStyle_initial,
   options: options,
   style: style

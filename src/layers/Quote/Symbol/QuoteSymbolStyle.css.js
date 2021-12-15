@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var QuoteSymbolStyle_key = QuoteSymbol.QuoteSymbol.key;
+
 var QuoteSymbolStyle_initial = QuoteSymbol.QuoteSymbol.initial;
 
 var QuoteSymbolStyle = {
+  key: QuoteSymbolStyle_key,
   initial: QuoteSymbolStyle_initial,
   options: options,
   style: style

@@ -18,6 +18,7 @@ var options = {
 };
 
 var AlignItems = {
+  key: "alignItems",
   initial: "stretch",
   options: options
 };

@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var BackgroundClipStyle_key = BackgroundClip.BackgroundClip.key;
+
 var BackgroundClipStyle_initial = BackgroundClip.BackgroundClip.initial;
 
 var BackgroundClipStyle = {
+  key: BackgroundClipStyle_key,
   initial: BackgroundClipStyle_initial,
   options: options,
   style: style

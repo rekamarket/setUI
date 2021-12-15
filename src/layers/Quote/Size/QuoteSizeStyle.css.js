@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var QuoteSizeStyle_key = QuoteSize.QuoteSize.key;
+
 var QuoteSizeStyle_initial = QuoteSize.QuoteSize.initial;
 
 var QuoteSizeStyle = {
+  key: QuoteSizeStyle_key,
   initial: QuoteSizeStyle_initial,
   options: options,
   style: style

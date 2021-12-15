@@ -8,7 +8,8 @@ var MarginBlockEnd_options = Margin.Margin.options;
 
 var MarginBlockEnd = {
   initial: MarginBlockEnd_initial,
-  options: MarginBlockEnd_options
+  options: MarginBlockEnd_options,
+  key: "marginBlockEnd"
 };
 
 export {

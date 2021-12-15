@@ -10,7 +10,3 @@ export type BackgroundOrigin_t =
   | 'initial'
   | 'revert'
   | 'unset'
-
-export interface IBackgroundOrigin_i {
-  readonly backgroundOrigin: BackgroundOrigin_t
-}

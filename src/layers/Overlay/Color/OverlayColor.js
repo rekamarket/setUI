@@ -12,6 +12,7 @@ var options = {
 };
 
 var OverlayColor = {
+  key: "overlayColor",
   initial: initial,
   options: options
 };

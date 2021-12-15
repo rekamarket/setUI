@@ -8,6 +8,7 @@ var options = {
 };
 
 var FlexWrap = {
+  key: "flexWrap",
   initial: "nowrap",
   options: options
 };

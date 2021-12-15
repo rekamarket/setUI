@@ -10,6 +10,7 @@ var options = {
 };
 
 var TextDecorationColor = {
+  key: "textDecorationColor",
   initial: "currentColor",
   options: options
 };

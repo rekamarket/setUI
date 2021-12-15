@@ -15,6 +15,7 @@ var options = {
 };
 
 var Gap = {
+  key: "gap",
   initial: "none",
   options: options
 };

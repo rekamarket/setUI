@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var BackgroundSizeStyle_key = BackgroundSize.BackgroundSize.key;
+
 var BackgroundSizeStyle_initial = BackgroundSize.BackgroundSize.initial;
 
 var BackgroundSizeStyle = {
+  key: BackgroundSizeStyle_key,
   initial: BackgroundSizeStyle_initial,
   options: options,
   style: style

@@ -7,13 +7,17 @@ var options = MaxInlineSizeByCharacters.MaxInlineSizeByCharacters.options;
 
 var style = Css.styleVariants(options, (function (value) {
         return {
+                visibility: "visible",
                 "--max-inline-size-by-characters": value
               };
       }));
 
+var MaxInlineSizeByCharactersStyle_key = MaxInlineSizeByCharacters.MaxInlineSizeByCharacters.key;
+
 var MaxInlineSizeByCharactersStyle_initial = MaxInlineSizeByCharacters.MaxInlineSizeByCharacters.initial;
 
 var MaxInlineSizeByCharactersStyle = {
+  key: MaxInlineSizeByCharactersStyle_key,
   initial: MaxInlineSizeByCharactersStyle_initial,
   options: options,
   style: style

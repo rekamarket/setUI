@@ -13,9 +13,12 @@ var style = Css.styleVariants(options, (function (value) {
 
 var MarginInlineStartStyle_initial = MarginInlineStart.MarginInlineStart.initial;
 
+var MarginInlineStartStyle_key = MarginInlineStart.MarginInlineStart.key;
+
 var MarginInlineStartStyle = {
   initial: MarginInlineStartStyle_initial,
   options: options,
+  key: MarginInlineStartStyle_key,
   style: style
 };
 

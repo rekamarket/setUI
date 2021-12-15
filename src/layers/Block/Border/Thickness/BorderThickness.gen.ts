@@ -3,7 +3,3 @@
 
 // tslint:disable-next-line:interface-over-type-literal
 export type BorderThickness_t = 'none' | 'thin' | 'light' | 'medium' | 'bold'
-
-export interface IBorderThickness_i {
-  readonly borderThickness: BorderThickness_t
-}

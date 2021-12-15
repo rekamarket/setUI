@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var FontWeightStyle_key = FontWeight.FontWeight.key;
+
 var FontWeightStyle_initial = FontWeight.FontWeight.initial;
 
 var FontWeightStyle = {
+  key: FontWeightStyle_key,
   initial: FontWeightStyle_initial,
   options: options,
   style: style

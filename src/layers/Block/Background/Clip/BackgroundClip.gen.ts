@@ -11,7 +11,3 @@ export type BackgroundClip_t =
   | 'initial'
   | 'revert'
   | 'unset'
-
-export interface IBackgroundClip_i {
-  readonly backgroundClip: BackgroundClip_t
-}

@@ -14,6 +14,7 @@ var options = {
 };
 
 var BackgroundPosition = {
+  key: "backgroundPosition",
   initial: "center",
   options: options
 };

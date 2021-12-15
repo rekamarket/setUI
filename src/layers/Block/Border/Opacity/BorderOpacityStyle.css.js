@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var BorderOpacityStyle_key = BorderOpacity.BorderOpacity.key;
+
 var BorderOpacityStyle_initial = BorderOpacity.BorderOpacity.initial;
 
 var BorderOpacityStyle = {
+  key: BorderOpacityStyle_key,
   initial: BorderOpacityStyle_initial,
   options: options,
   style: style

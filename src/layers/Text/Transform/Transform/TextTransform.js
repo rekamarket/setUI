@@ -11,6 +11,7 @@ var options = {
 };
 
 var TextTransform = {
+  key: "textTransform",
   initial: "none",
   options: options
 };

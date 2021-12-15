@@ -12,6 +12,7 @@ var options = {
 };
 
 var BackgroundOrigin = {
+  key: "backgroundOrigin",
   initial: "paddingBox",
   options: options
 };

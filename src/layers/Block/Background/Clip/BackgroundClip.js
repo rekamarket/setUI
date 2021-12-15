@@ -13,6 +13,7 @@ var options = {
 };
 
 var BackgroundClip = {
+  key: "backgroundClip",
   initial: "borderBox",
   options: options
 };

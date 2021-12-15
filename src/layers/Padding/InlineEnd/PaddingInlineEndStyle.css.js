@@ -13,9 +13,12 @@ var style = Css.styleVariants(options, (function (value) {
 
 var PaddingInlineEndStyle_initial = PaddingInlineEnd.PaddingInlineEnd.initial;
 
+var PaddingInlineEndStyle_key = PaddingInlineEnd.PaddingInlineEnd.key;
+
 var PaddingInlineEndStyle = {
   initial: PaddingInlineEndStyle_initial,
   options: options,
+  key: PaddingInlineEndStyle_key,
   style: style
 };
 

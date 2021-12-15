@@ -8,6 +8,7 @@ var options = {
 };
 
 var MarkerSymbol = {
+  key: "markerSymbol",
   initial: "bullet",
   options: options
 };

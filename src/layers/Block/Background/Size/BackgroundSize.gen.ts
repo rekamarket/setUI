@@ -11,7 +11,3 @@ export type BackgroundSize_t =
   | 'initial'
   | 'revert'
   | 'unset'
-
-export interface IBackgroundSize_i {
-  readonly backgroundSize: BackgroundSize_t
-}

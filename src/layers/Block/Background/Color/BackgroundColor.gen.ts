@@ -3,7 +3,3 @@
 
 // tslint:disable-next-line:interface-over-type-literal
 export type BackgroundColor_t = 'primary' | 'secondary' | 'white' | 'black'
-
-export interface IBackgroundColor_i {
-  readonly backgroundColor: BackgroundColor_t
-}

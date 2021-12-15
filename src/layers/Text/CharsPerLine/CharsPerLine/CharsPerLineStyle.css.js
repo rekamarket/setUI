@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var CharsPerLineStyle_key = CharsPerLine.CharsPerLine.key;
+
 var CharsPerLineStyle_initial = CharsPerLine.CharsPerLine.initial;
 
 var CharsPerLineStyle = {
+  key: CharsPerLineStyle_key,
   initial: CharsPerLineStyle_initial,
   options: options,
   style: style

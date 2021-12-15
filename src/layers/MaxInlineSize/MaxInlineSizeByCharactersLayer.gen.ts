@@ -6,7 +6,7 @@ import * as MaxInlineSizeByCharactersLayerBS__Es6Import from './MaxInlineSizeByC
 const MaxInlineSizeByCharactersLayerBS: any =
   MaxInlineSizeByCharactersLayerBS__Es6Import
 
-import type { MaxInlineSizeByCharacters_t as MaxInlineSizeByCharacters_MaxInlineSizeByCharacters_t } from '../../../src/layers/MaxInlineSize/MaxInlineSizeByCharacters/MaxInlineSizeByCharacters.gen'
+import type { MaxInlineSizeByCharacters_t as MaxInlineSizeByCharacters_MaxInlineSizeByCharacters_t } from '../../../src/layers/MaxInlineSize/ByCharacters/MaxInlineSizeByCharacters.gen'
 
 export interface IMaxInlineSizeByCharactersLayer_i {
   readonly maxInlineSize: MaxInlineSizeByCharacters_MaxInlineSizeByCharacters_t

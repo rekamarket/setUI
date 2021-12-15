@@ -21,6 +21,7 @@ var options = {
 };
 
 var AlignContent = {
+  key: "alignContent",
   initial: "normal",
   options: options
 };

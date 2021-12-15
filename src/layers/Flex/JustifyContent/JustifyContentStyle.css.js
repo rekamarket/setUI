@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var JustifyContentStyle_key = JustifyContent.JustifyContent.key;
+
 var JustifyContentStyle_initial = JustifyContent.JustifyContent.initial;
 
 var JustifyContentStyle = {
+  key: JustifyContentStyle_key,
   initial: JustifyContentStyle_initial,
   options: options,
   style: style

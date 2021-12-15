@@ -8,7 +8,8 @@ var MarginBlockStart_options = Margin.Margin.options;
 
 var MarginBlockStart = {
   initial: MarginBlockStart_initial,
-  options: MarginBlockStart_options
+  options: MarginBlockStart_options,
+  key: "marginBlockStart"
 };
 
 export {

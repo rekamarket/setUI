@@ -17,7 +17,3 @@ export type BackgroundRepeat_t =
   | 'initial'
   | 'revert'
   | 'unset'
-
-export interface IBackgroundRepeat_i {
-  readonly backgroundRepeat: BackgroundRepeat_t
-}

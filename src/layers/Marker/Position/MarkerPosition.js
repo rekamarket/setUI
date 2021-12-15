@@ -7,6 +7,7 @@ var options = {
 };
 
 var MarkerPosition = {
+  key: "markerPosition",
   initial: "outside",
   options: options
 };

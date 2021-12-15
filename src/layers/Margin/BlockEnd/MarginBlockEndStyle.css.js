@@ -13,9 +13,12 @@ var style = Css.styleVariants(options, (function (value) {
 
 var MarginBlockEndStyle_initial = MarginBlockEnd.MarginBlockEnd.initial;
 
+var MarginBlockEndStyle_key = MarginBlockEnd.MarginBlockEnd.key;
+
 var MarginBlockEndStyle = {
   initial: MarginBlockEndStyle_initial,
   options: options,
+  key: MarginBlockEndStyle_key,
   style: style
 };
 

@@ -18,6 +18,7 @@ var options = {
 };
 
 var ContentAlign = {
+  key: "contentAlign",
   initial: "start",
   options: options
 };

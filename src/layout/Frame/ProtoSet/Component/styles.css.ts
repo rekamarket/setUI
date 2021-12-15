@@ -1,5 +1,5 @@
 import { style, globalStyle } from '@vanilla-extract/css'
-import { MaxInlineSizeByCharacters } from 'layers/MaxInlineSize/MaxInlineSizeByCharacters/MaxInlineSizeByCharacters'
+import { MaxInlineSizeByCharacters } from 'layers/MaxInlineSize/ByCharacters/MaxInlineSizeByCharacters'
 
 export const ClassName = style({
   display: 'grid',

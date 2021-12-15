@@ -12,7 +12,3 @@ export type BackgroundPosition_t =
   | 'initial'
   | 'revert'
   | 'unset'
-
-export interface IBackgroundPosition_i {
-  readonly backgroundPosition: BackgroundPosition_t
-}

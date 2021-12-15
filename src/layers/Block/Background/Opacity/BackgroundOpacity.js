@@ -16,6 +16,7 @@ var options = {
 };
 
 var BackgroundOpacity = {
+  key: "backgroundOpacity",
   initial: 100,
   options: options
 };

@@ -9,6 +9,7 @@ var options = {
 };
 
 var FlexDirection = {
+  key: "flexDirection",
   initial: "row",
   options: options
 };

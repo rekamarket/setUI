@@ -16,6 +16,7 @@ var options = {
 };
 
 var BorderOpacity = {
+  key: "borderOpacity",
   initial: 100,
   options: options
 };

@@ -19,6 +19,7 @@ var options = {
 };
 
 var BorderStyle = {
+  key: "borderStyle",
   initial: "none",
   options: options
 };

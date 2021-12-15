@@ -13,6 +13,7 @@ var options = {
 };
 
 var TextDecorationStyle = {
+  key: "textDecorationStyle",
   initial: "solid",
   options: options
 };

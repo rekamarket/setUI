@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var QuoteGapStyle_key = QuoteGap.QuoteGap.key;
+
 var QuoteGapStyle_initial = QuoteGap.QuoteGap.initial;
 
 var QuoteGapStyle = {
+  key: QuoteGapStyle_key,
   initial: QuoteGapStyle_initial,
   options: options,
   style: style

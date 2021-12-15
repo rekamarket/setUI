@@ -9,6 +9,7 @@ var options = {
 };
 
 var CharsPerLine = {
+  key: "charsPerLine",
   initial: "none",
   options: options
 };

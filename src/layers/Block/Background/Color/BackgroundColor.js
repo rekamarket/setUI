@@ -25,6 +25,7 @@ var options = {
 };
 
 var BackgroundColor = {
+  key: "backgroundColor",
   initial: "primary",
   options: options
 };

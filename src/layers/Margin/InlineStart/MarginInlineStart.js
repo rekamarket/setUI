@@ -8,7 +8,8 @@ var MarginInlineStart_options = Margin.Margin.options;
 
 var MarginInlineStart = {
   initial: MarginInlineStart_initial,
-  options: MarginInlineStart_options
+  options: MarginInlineStart_options,
+  key: "marginInlineStart"
 };
 
 export {

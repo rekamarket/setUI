@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var BackgroundRepeatStyle_key = BackgroundRepeat.BackgroundRepeat.key;
+
 var BackgroundRepeatStyle_initial = BackgroundRepeat.BackgroundRepeat.initial;
 
 var BackgroundRepeatStyle = {
+  key: BackgroundRepeatStyle_key,
   initial: BackgroundRepeatStyle_initial,
   options: options,
   style: style

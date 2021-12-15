@@ -7,6 +7,7 @@ var options = {
 };
 
 var QuotePosition = {
+  key: "quotePosition",
   initial: "outside",
   options: options
 };

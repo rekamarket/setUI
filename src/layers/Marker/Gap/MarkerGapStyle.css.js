@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var MarkerGapStyle_key = MarkerGap.MarkerGap.key;
+
 var MarkerGapStyle_initial = MarkerGap.MarkerGap.initial;
 
 var MarkerGapStyle = {
+  key: MarkerGapStyle_key,
   initial: MarkerGapStyle_initial,
   options: options,
   style: style

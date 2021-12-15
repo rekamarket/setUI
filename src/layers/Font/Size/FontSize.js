@@ -17,6 +17,7 @@ var options = {
 };
 
 var FontSize = {
+  key: "fontSize",
   initial: "none",
   options: options
 };

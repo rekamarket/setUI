@@ -11,6 +11,7 @@ var options = {
 };
 
 var CornerRadius = {
+  key: "cornerRadius",
   initial: "none",
   options: options
 };

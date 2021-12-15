@@ -19,6 +19,7 @@ var options = {
 };
 
 var JustifyContent = {
+  key: "justifyContent",
   initial: "flexStart",
   options: options
 };

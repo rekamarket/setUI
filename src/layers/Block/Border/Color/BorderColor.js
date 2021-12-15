@@ -25,6 +25,7 @@ var options = {
 };
 
 var BorderColor = {
+  key: "borderColor",
   initial: "primary",
   options: options
 };

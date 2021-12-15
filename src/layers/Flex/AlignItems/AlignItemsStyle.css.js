@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var AlignItemsStyle_key = AlignItems.AlignItems.key;
+
 var AlignItemsStyle_initial = AlignItems.AlignItems.initial;
 
 var AlignItemsStyle = {
+  key: AlignItemsStyle_key,
   initial: AlignItemsStyle_initial,
   options: options,
   style: style

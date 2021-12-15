@@ -12,9 +12,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var MarkerSymbolStyle_key = MarkerSymbol.MarkerSymbol.key;
+
 var MarkerSymbolStyle_initial = MarkerSymbol.MarkerSymbol.initial;
 
 var MarkerSymbolStyle = {
+  key: MarkerSymbolStyle_key,
   initial: MarkerSymbolStyle_initial,
   options: options,
   style: style

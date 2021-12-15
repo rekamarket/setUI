@@ -11,6 +11,7 @@ var options = {
 };
 
 var FontStyle = {
+  key: "fontStyle",
   initial: "normal",
   options: options
 };

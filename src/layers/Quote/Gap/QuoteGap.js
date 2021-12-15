@@ -15,6 +15,7 @@ var options = {
 };
 
 var QuoteGap = {
+  key: "quoteGap",
   initial: "none",
   options: options
 };

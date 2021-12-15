@@ -14,7 +14,3 @@ export type BackgroundOpacity_t =
   | 80
   | 90
   | 100
-
-export interface IBackgroundOpacity_i {
-  readonly backgroundOpacity: BackgroundOpacity_t
-}

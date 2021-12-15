@@ -12,9 +12,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var FontSizeStyle_key = FontSize.FontSize.key;
+
 var FontSizeStyle_initial = FontSize.FontSize.initial;
 
 var FontSizeStyle = {
+  key: FontSizeStyle_key,
   initial: FontSizeStyle_initial,
   options: options,
   style: style

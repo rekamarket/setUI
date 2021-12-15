@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var BackgroundOriginStyle_key = BackgroundOrigin.BackgroundOrigin.key;
+
 var BackgroundOriginStyle_initial = BackgroundOrigin.BackgroundOrigin.initial;
 
 var BackgroundOriginStyle = {
+  key: BackgroundOriginStyle_key,
   initial: BackgroundOriginStyle_initial,
   options: options,
   style: style

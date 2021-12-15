@@ -17,6 +17,7 @@ var options = {
 };
 
 var TextDecorationLine = {
+  key: "textDecorationLine",
   initial: "none",
   options: options
 };

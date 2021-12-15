@@ -10,6 +10,7 @@ var options = {
 };
 
 var QuoteSymbol = {
+  key: "quoteSymbol",
   initial: "none",
   options: options
 };

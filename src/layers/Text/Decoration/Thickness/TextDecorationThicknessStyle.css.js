@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var TextDecorationThicknessStyle_key = TextDecorationThickness.TextDecorationThickness.key;
+
 var TextDecorationThicknessStyle_initial = TextDecorationThickness.TextDecorationThickness.initial;
 
 var TextDecorationThicknessStyle = {
+  key: TextDecorationThicknessStyle_key,
   initial: TextDecorationThicknessStyle_initial,
   options: options,
   style: style

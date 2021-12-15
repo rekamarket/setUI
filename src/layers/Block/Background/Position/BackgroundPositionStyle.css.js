@@ -11,9 +11,12 @@ var style = Css.styleVariants(options, (function (value) {
               };
       }));
 
+var BackgroundPositionStyle_key = BackgroundPosition.BackgroundPosition.key;
+
 var BackgroundPositionStyle_initial = BackgroundPosition.BackgroundPosition.initial;
 
 var BackgroundPositionStyle = {
+  key: BackgroundPositionStyle_key,
   initial: BackgroundPositionStyle_initial,
   options: options,
   style: style

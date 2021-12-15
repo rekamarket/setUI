@@ -13,9 +13,12 @@ var style = Css.styleVariants(options, (function (value) {
 
 var PaddingInlineStartStyle_initial = PaddingInlineStart.PaddingInlineStart.initial;
 
+var PaddingInlineStartStyle_key = PaddingInlineStart.PaddingInlineStart.key;
+
 var PaddingInlineStartStyle = {
   initial: PaddingInlineStartStyle_initial,
   options: options,
+  key: PaddingInlineStartStyle_key,
   style: style
 };
 

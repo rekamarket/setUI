@@ -8,7 +8,8 @@ var PaddingInlineStart_options = Padding.Padding.options;
 
 var PaddingInlineStart = {
   initial: PaddingInlineStart_initial,
-  options: PaddingInlineStart_options
+  options: PaddingInlineStart_options,
+  key: "paddingInlineStart"
 };
 
 export {
