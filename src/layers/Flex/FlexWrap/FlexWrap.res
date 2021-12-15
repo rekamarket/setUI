@@ -1,5 +1,5 @@
 module FlexWrap = {
-  type value = string;
+  let key = "flexWrap"
 
   @genType
   type t = [
@@ -8,11 +8,21 @@ module FlexWrap = {
     | #wrapReverse
   ]
 
+  let initial = #nowrap;
+
+  type value = string;
+
   type options = {
     "nowrap": value,
     "wrap": value,
     "wrapReverse": value,
   };
+
+  let options = {
+    "nowrap": "nowrap",
+    "wrap": "wrap",
+    "wrapReverse": "wrap-reverse",
+  }
 
   type variant = {
     "nowrap": string,
@@ -20,17 +30,6 @@ module FlexWrap = {
     "wrapReverse": string,
   };
 
-  type i = { "flexWrap": t }
-
   type output = { "flexWrap": value }
   type cssResolve = (value) => output
-  // let cssResolve = (value) => {{ "flexWrap": value }};
-
-  let initial = #nowrap;
-
-  let options = {
-    "nowrap": "nowrap",
-    "wrap": "wrap",
-    "wrapReverse": "wrap-reverse",
-  }
 }

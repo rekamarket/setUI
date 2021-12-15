@@ -1,32 +1,4 @@
 module Margin = {
-  type value = int;
-
-  type options = {
-    "none": value,
-    "xxxsmall": value,
-    "xxsmall": value,
-    "xsmall": value,
-    "small": value,
-    "medium": value,
-    "large": value,
-    "xlarge": value,
-    "xxlarge": value,
-    "xxxlarge": value,
-  };
-
-  type variant = {
-    "none": string,
-    "xxxsmall": string,
-    "xxsmall": string,
-    "xsmall": string,
-    "small": string,
-    "medium": string,
-    "large": string,
-    "xlarge": string,
-    "xxlarge": string,
-    "xxxlarge": string,
-  };
-
   @genType
   type t = [
     | #none
@@ -43,6 +15,21 @@ module Margin = {
 
   let initial = #none;
 
+  type value = int;
+
+  type options = {
+    "none": value,
+    "xxxsmall": value,
+    "xxsmall": value,
+    "xsmall": value,
+    "small": value,
+    "medium": value,
+    "large": value,
+    "xlarge": value,
+    "xxlarge": value,
+    "xxxlarge": value,
+  };
+
   let options = {
     "none": 0,
     "xxxsmall": 4,
@@ -54,5 +41,18 @@ module Margin = {
     "xlarge": 48,
     "xxlarge": 96,
     "xxxlarge": 128,
+  };
+
+  type variant = {
+    "none": string,
+    "xxxsmall": string,
+    "xxsmall": string,
+    "xsmall": string,
+    "small": string,
+    "medium": string,
+    "large": string,
+    "xlarge": string,
+    "xxlarge": string,
+    "xxxlarge": string,
   };
 }

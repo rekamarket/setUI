@@ -1,10 +1,5 @@
 module FontFamily = {
-  type value = string;
-
-  type options = {
-    "primary": value,
-    "monospace": value,
-  };
+  let key = "fontFamily"
 
   @genType
   type t = [
@@ -12,21 +7,25 @@ module FontFamily = {
     | #monospace
   ]
 
-  type variant = {
-    "primary": string,
-    "monospace": string,
-  };
-
-  type i = { "fontFamily": t }
-
-  type output = { "fontFamily": value }
-  type cssResolve = (value) => output
-  // let cssResolve = (value) => {{ "fontFamily": value }};
-
   let initial = #primary;
+
+  type value = string;
+
+  type options = {
+    "primary": value,
+    "monospace": value,
+  };
 
   let options = {
     "primary": "'Montserrat', Arial, sans-serif",
     "monospace": "monospace",
   };
+
+  type variant = {
+    "primary": string,
+    "monospace": string,
+  };
+
+  type output = { "fontFamily": value }
+  type cssResolve = (value) => output
 }

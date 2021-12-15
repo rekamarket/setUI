@@ -1,4 +1,17 @@
 module BorderThickness = {
+  let key = "borderThickness"
+
+  @genType
+  type t = [
+    | #none
+    | #thin
+    | #light
+    | #medium
+    | #bold
+  ]
+
+  let initial = #none;
+
   type value = string;
 
   type options = {
@@ -9,13 +22,13 @@ module BorderThickness = {
     "bold": value,
   };
 
-  type t = [
-    | #none
-    | #thin
-    | #light
-    | #medium
-    | #bold
-  ]
+  let options = {
+    "none": "0px",
+    "thin": "1px",
+    "light": "2px",
+    "medium": "3px",
+    "bold": "4px",
+  }
 
   type variant = {
     "none": string,
@@ -25,20 +38,6 @@ module BorderThickness = {
     "bold": string,
   };
 
-  @genType
-  type i = { "borderThickness": t }
-
   type output = { "borderWidth": value }
   type cssResolve = (value) => output
-  // let cssResolve = (value) => {{ "borderWidth": value }};
-
-  let initial = #none;
-
-  let options = {
-    "none": "0px",
-    "thin": "1px",
-    "light": "2px",
-    "medium": "3px",
-    "bold": "4px",
-  }
 }

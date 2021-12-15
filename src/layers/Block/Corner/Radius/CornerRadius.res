@@ -1,4 +1,18 @@
 module CornerRadius = {
+  let key = "cornerRadius"
+
+  @genType
+  type t = [
+    | #none
+    | #small
+    | #medium
+    | #large
+    | #pill
+    | #circle
+  ]
+
+  let initial = #none;
+
   type value = string;
 
   type options = {
@@ -10,14 +24,14 @@ module CornerRadius = {
     "circle": value,
   };
 
-  type t = [
-    | #none
-    | #small
-    | #medium
-    | #large
-    | #pill
-    | #circle
-  ]
+  let options = {
+    "none": "0px",
+    "small": "4px",
+    "medium": "8px",
+    "large": "12px",
+    "pill": "9999px",
+    "circle": "50%",
+  }
 
   type variant = {
     "none": string,
@@ -28,21 +42,6 @@ module CornerRadius = {
     "circle": string,
   };
 
-  @genType
-  type i = { "cornerRadius": t }
-
   type output = { "borderRadius": value }
   type cssResolve = (value) => output
-  // let cssResolve = (value) => {{ "borderRadius": value }};
-
-  let initial = #none;
-
-  let options = {
-    "none": "0px",
-    "small": "4px",
-    "medium": "8px",
-    "large": "12px",
-    "pill": "9999px",
-    "circle": "50%",
-  }
 }

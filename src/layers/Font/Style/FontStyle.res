@@ -1,5 +1,5 @@
 module FontStyle = {
-  type value = string;
+  let key = "fontStyle"
 
   @genType
   type t = [
@@ -11,6 +11,10 @@ module FontStyle = {
     | #unset
   ]
 
+  let initial = #normal;
+
+  type value = string;
+
   type options = {
     "normal": value,
     "italic": value,
@@ -19,6 +23,15 @@ module FontStyle = {
     "initial": value,
     "unset": value,
   };
+
+  let options = {
+    "normal": "normal",
+    "italic": "italic",
+    "oblique": "oblique",
+    "inherit": "inherit",
+    "initial": "initial",
+    "unset": "unset",
+  }
 
   type variant = {
     "normal": string,
@@ -29,20 +42,6 @@ module FontStyle = {
     "unset": string,
   };
 
-  type i = { "fontStyle": t }
-
   type output = { "fontStyle": value }
   type cssResolve = (value) => output
-  // let cssResolve = (value) => {{ "fontStyle": value }};
-
-  let initial = #normal;
-
-  let options = {
-    "normal": "normal",
-    "italic": "italic",
-    "oblique": "oblique",
-    "inherit": "inherit",
-    "initial": "initial",
-    "unset": "unset",
-  }
 }

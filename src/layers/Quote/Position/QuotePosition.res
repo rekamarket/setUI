@@ -1,5 +1,5 @@
 module QuotePosition = {
-  type value = string;
+  let key = "quotePosition"
 
   @genType
   type t = [
@@ -7,25 +7,25 @@ module QuotePosition = {
     | #outside
   ]
 
+  let initial = #outside;
+
+  type value = string;
+
   type options = {
     "inside": value,
     "outside": value,
   };
+
+  let options = {
+    "inside": "inside",
+    "outside": "outside",
+  }
 
   type variant = {
     "inside": string,
     "outside": string,
   };
 
-  type i = { "quotePosition": t }
-
   type output = { "--quote-position": value }
   type cssResolve = (value) => output
-
-  let initial = #outside;
-
-  let options = {
-    "inside": "inside",
-    "outside": "outside",
-  }
 }

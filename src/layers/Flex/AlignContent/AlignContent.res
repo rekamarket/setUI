@@ -1,24 +1,5 @@
 module AlignContent = {
-  type value = string;
-
-  type options = {
-    "center": value,
-    "start": value,
-    "end": value,
-    "flexStart": value,
-    "flexEnd": value,
-    "normal": value,
-    "baseline": value,
-    "firstBaseline": value,
-    "lastBaseline": value,
-    "spaceBetween": value,
-    "spaceAround": value,
-    "spaceEvenly": value,
-    "stretch": value,
-    "safeCenter": value,
-    "unsafeCenter": value,
-    "unset": value,
-  };
+  let key = "alignContent"
 
   @genType
   type t = [
@@ -40,32 +21,28 @@ module AlignContent = {
     | #unset
   ]
 
-  type variant = {
-    "center": string,
-    "start": string,
-    "end": string,
-    "flexStart": string,
-    "flexEnd": string,
-    "normal": string,
-    "baseline": string,
-    "firstBaseline": string,
-    "lastBaseline": string,
-    "spaceBetween": string,
-    "spaceAround": string,
-    "spaceEvenly": string,
-    "stretch": string,
-    "safeCenter": string,
-    "unsafeCenter": string,
-    "unset": string,
-  };
-
-  type i = { "alignContent": t }
-
-  type output = { "alignContent": value }
-  type cssResolve = (value) => output
-  // let cssResolve = (value) => {{ "alignContent": value }};
-
   let initial = #normal;
+
+  type value = string;
+
+  type options = {
+    "center": value,
+    "start": value,
+    "end": value,
+    "flexStart": value,
+    "flexEnd": value,
+    "normal": value,
+    "baseline": value,
+    "firstBaseline": value,
+    "lastBaseline": value,
+    "spaceBetween": value,
+    "spaceAround": value,
+    "spaceEvenly": value,
+    "stretch": value,
+    "safeCenter": value,
+    "unsafeCenter": value,
+    "unset": value,
+  };
 
   let options = {
     "center": "center",
@@ -85,4 +62,26 @@ module AlignContent = {
     "unsafeCenter": "unsafe center",
     "unset": "unset",
   }
+
+  type variant = {
+    "center": string,
+    "start": string,
+    "end": string,
+    "flexStart": string,
+    "flexEnd": string,
+    "normal": string,
+    "baseline": string,
+    "firstBaseline": string,
+    "lastBaseline": string,
+    "spaceBetween": string,
+    "spaceAround": string,
+    "spaceEvenly": string,
+    "stretch": string,
+    "safeCenter": string,
+    "unsafeCenter": string,
+    "unset": string,
+  };
+
+  type output = { "alignContent": value }
+  type cssResolve = (value) => output
 }

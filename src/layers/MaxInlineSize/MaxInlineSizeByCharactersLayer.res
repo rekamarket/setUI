@@ -2,7 +2,7 @@ open Js.Array2;
 
 open MaxInlineSizeByCharacters;
 type maxInlineSize = { style: MaxInlineSizeByCharacters.variant }
-@module("./MaxInlineSizeByCharacters/MaxInlineSizeByCharactersStyle.css.js") external maxInlineSize: maxInlineSize = "MaxInlineSizeByCharactersStyle"
+@module("./ByCharacters/MaxInlineSizeByCharactersStyle.css.js") external maxInlineSize: maxInlineSize = "MaxInlineSizeByCharactersStyle"
 
 module MaxInlineSizeByCharactersLayer = {
   @genType

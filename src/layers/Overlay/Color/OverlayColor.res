@@ -1,6 +1,8 @@
 open Color
 
 module OverlayColor = {
+  let key = "overlayColor"
+
   @genType
   type t = Color.t
   let initial = Color.initial;
@@ -14,6 +16,10 @@ module OverlayColor = {
     "white": "#000000",
   };
 
-  type output = { "--overlay-color": Color.value }
+  type output = {
+    "visibility": string,
+    "--overlay-color": Color.value,
+  }
+
   type cssResolve = (Color.value) => output
 }

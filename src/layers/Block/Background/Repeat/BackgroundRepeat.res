@@ -1,4 +1,26 @@
 module BackgroundRepeat = {
+  let key = "backgroundRepeat"
+
+  @genType
+  type t = [
+    | #repeatX
+    | #repeatY
+    | #repeat
+    | #space
+    | #round
+    | #noRepeat
+    | #repeat_Space
+    | #repeat_Repeat
+    | #round_Space
+    | #noRepeat_Round
+    | #inherit
+    | #initial
+    | #revert
+    | #unset
+  ]
+
+  let initial = #center;
+
   type value = string;
 
   type options = {
@@ -17,49 +39,6 @@ module BackgroundRepeat = {
     "revert": value,
     "unset": value,
   };
-
-  type t = [
-    | #repeatX
-    | #repeatY
-    | #repeat
-    | #space
-    | #round
-    | #noRepeat
-    | #repeat_Space
-    | #repeat_Repeat
-    | #round_Space
-    | #noRepeat_Round
-    | #inherit
-    | #initial
-    | #revert
-    | #unset
-  ]
-
-  type variant = {
-    "repeatX": string,
-    "repeatY": string,
-    "repeat": string,
-    "space": string,
-    "round": string,
-    "noRepeat": string,
-    "repeat_Space": string,
-    "repeat_Repeat": string,
-    "round_Space": string,
-    "noRepeat_Round": string,
-    "inherit": string,
-    "initial": string,
-    "revert": string,
-    "unset": string,
-  };
-
-  @genType
-  type i = { "backgroundRepeat": t }
-
-  type output = { "backgroundRepeat": value }
-  type cssResolve = (value) => output
-  // let cssResolve = (value) => {{ "backgroundRepeat": value }};
-
-  let initial = #center;
 
   let options = {
     "repeatX": "repeat-x",
@@ -81,4 +60,24 @@ module BackgroundRepeat = {
     "revert": "revert",
     "unset": "unset",
   }
+
+  type variant = {
+    "repeatX": string,
+    "repeatY": string,
+    "repeat": string,
+    "space": string,
+    "round": string,
+    "noRepeat": string,
+    "repeat_Space": string,
+    "repeat_Repeat": string,
+    "round_Space": string,
+    "noRepeat_Round": string,
+    "inherit": string,
+    "initial": string,
+    "revert": string,
+    "unset": string,
+  };
+
+  type output = { "backgroundRepeat": value }
+  type cssResolve = (value) => output
 }

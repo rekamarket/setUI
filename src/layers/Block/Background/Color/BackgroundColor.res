@@ -1,4 +1,16 @@
 module BackgroundColor = {
+  let key = "backgroundColor"
+
+  @genType
+  type t = [
+    | #primary
+    | #secondary
+    | #white
+    | #black
+  ]
+
+  let initial = #primary;
+
   type value = {
     "hue": string,
     "saturation": string,
@@ -11,43 +23,6 @@ module BackgroundColor = {
     "white": value,
     "black": value,
   };
-
-  type t = [
-    | #primary
-    | #secondary
-    | #white
-    | #black
-  ]
-
-  type variant = {
-    "primary": string,
-    "secondary": string,
-    "white": string,
-    "black": string,
-  };
-
-  @genType
-  type i = { "backgroundColor": t }
-
-  type output = {
-    "--background-hue": string,
-    "--background-saturation": string,
-    "--background-lightness": string,
-    "--background-color": string,
-    "backgroundColor": string,
-  }
-  type cssResolve = (value) => output
-  // let cssResolve = (value) => {
-  //   {
-  //     "--background-hue": value["hue"],
-  //     "--background-saturation": value["saturation"],
-  //     "--background-lightness": value["lightness"],
-  //     "--background-color": "hsl(var(--background-hue) var(--background-saturation) var(--background-lightness) / var(--background-opacity, 1))",
-  //     "backgroundColor": "var(--background-color)",
-  //   }
-  // };
-
-  let initial = #primary;
 
   let options = {
     "primary": {
@@ -71,4 +46,21 @@ module BackgroundColor = {
       "lightness": "0%",
     },
   }
+
+  type variant = {
+    "primary": string,
+    "secondary": string,
+    "white": string,
+    "black": string,
+  };
+
+  type output = {
+    "--background-hue": string,
+    "--background-saturation": string,
+    "--background-lightness": string,
+    "--background-color": string,
+    "backgroundColor": string,
+  }
+
+  type cssResolve = (value) => output
 }

@@ -1,5 +1,5 @@
 module JustifyContent = {
-  type value = string;
+  let key = "justifyContent"
 
   @genType
   type t = [
@@ -19,6 +19,10 @@ module JustifyContent = {
     | #unsafeCenter
   ]
 
+  let initial = #flexStart;
+
+  type value = string;
+
   type options = {
     "center": value,
     "start": value,
@@ -35,6 +39,23 @@ module JustifyContent = {
     "safeCenter": value,
     "unsafeCenter": value,
   };
+
+  let options = {
+    "center": "center",
+    "start": "start",
+    "end": "end",
+    "flexStart": "flex-start",
+    "flexEnd": "flex-end",
+    "left": "left",
+    "right": "right",
+    "normal": "normal",
+    "spaceBetween": "space-between",
+    "spaceAround": "space-around",
+    "spaceEvenly": "space-evenly",
+    "stretch": "stretch",
+    "safeCenter": "safe center",
+    "unsafeCenter": "unsafe center",
+  }
 
   type variant = {
     "center": string,
@@ -53,28 +74,6 @@ module JustifyContent = {
     "unsafeCenter": string,
   };
 
-  type i = { "justifyContent": t }
-
   type output = { "justifyContent": value }
   type cssResolve = (value) => output
-  // let cssResolve = (value) => {{ "justifyContent": value }};
-
-  let initial = #flexStart;
-
-  let options = {
-    "center": "center",
-    "start": "start",
-    "end": "end",
-    "flexStart": "flex-start",
-    "flexEnd": "flex-end",
-    "left": "left",
-    "right": "right",
-    "normal": "normal",
-    "spaceBetween": "space-between",
-    "spaceAround": "space-around",
-    "spaceEvenly": "space-evenly",
-    "stretch": "stretch",
-    "safeCenter": "safe center",
-    "unsafeCenter": "unsafe center",
-  }
 }

@@ -1,4 +1,20 @@
 module BackgroundClip = {
+  let key = "backgroundClip"
+
+  @genType
+  type t = [
+    | #borderBox
+    | #paddingBox
+    | #contentBox
+    | #text
+    | #inherit
+    | #initial
+    | #revert
+    | #unset
+  ]
+
+  let initial = #borderBox;
+
   type value = string;
 
   type options = {
@@ -11,37 +27,6 @@ module BackgroundClip = {
     "revert": value,
     "unset": value,
   };
-
-  type t = [
-    | #borderBox
-    | #paddingBox
-    | #contentBox
-    | #text
-    | #inherit
-    | #initial
-    | #revert
-    | #unset
-  ]
-
-  type variant = {
-    "borderBox": string,
-    "paddingBox": string,
-    "contentBox": string,
-    "text": string,
-    "inherit": string,
-    "initial": string,
-    "revert": string,
-    "unset": string,
-  };
-
-  @genType
-  type i = { "backgroundClip": t }
-
-  type output = { "backgroundClip": value }
-  type cssResolve = (value) => output
-  // let cssResolve = (value) => {{ "backgroundClip": value }};
-
-  let initial = #borderBox;
 
   let options = {
     /* Keyword values */
@@ -56,4 +41,18 @@ module BackgroundClip = {
     "revert": "revert",
     "unset": "unset",
   }
+
+  type variant = {
+    "borderBox": string,
+    "paddingBox": string,
+    "contentBox": string,
+    "text": string,
+    "inherit": string,
+    "initial": string,
+    "revert": string,
+    "unset": string,
+  };
+
+  type output = { "backgroundClip": value }
+  type cssResolve = (value) => output
 }

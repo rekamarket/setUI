@@ -1,4 +1,20 @@
 module BackgroundSize = {
+  let key = "backgroundSize"
+
+  @genType
+  type t = [
+    | #cover
+    | #contain
+    | #50
+    | #auto
+    | #inherit
+    | #initial
+    | #revert
+    | #unset
+  ]
+
+  let initial = #auto;
+
   type value = string;
 
   type options = {
@@ -11,37 +27,6 @@ module BackgroundSize = {
     "revert": value,
     "unset": value,
   };
-
-  type t = [
-    | #cover
-    | #contain
-    | #50
-    | #auto
-    | #inherit
-    | #initial
-    | #revert
-    | #unset
-  ]
-
-  type variant = {
-    "cover": string,
-    "contain": string,
-    "50": string,
-    "auto": string,
-    "inherit": string,
-    "initial": string,
-    "revert": string,
-    "unset": string,
-  };
-
-  @genType
-  type i = { "backgroundSize": t }
-
-  type output = { "backgroundSize": value }
-  type cssResolve = (value) => output
-  // let cssResolve = (value) => {{ "backgroundSize": value }};
-
-  let initial = #auto;
 
   let options = {
     /* Keyword values */
@@ -58,4 +43,18 @@ module BackgroundSize = {
     "revert": "revert",
     "unset": "unset",
   }
+
+  type variant = {
+    "cover": string,
+    "contain": string,
+    "50": string,
+    "auto": string,
+    "inherit": string,
+    "initial": string,
+    "revert": string,
+    "unset": string,
+  };
+
+  type output = { "backgroundSize": value }
+  type cssResolve = (value) => output
 }

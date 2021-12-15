@@ -1,4 +1,19 @@
 module BackgroundOrigin = {
+  let key = "backgroundOrigin"
+
+  @genType
+  type t = [
+    | #borderBox
+    | #paddingBox
+    | #contentBox
+    | #inherit
+    | #initial
+    | #revert
+    | #unset
+  ]
+
+  let initial = #paddingBox;
+
   type value = string;
 
   type options = {
@@ -10,35 +25,6 @@ module BackgroundOrigin = {
     "revert": value,
     "unset": value,
   };
-
-  type t = [
-    | #borderBox
-    | #paddingBox
-    | #contentBox
-    | #inherit
-    | #initial
-    | #revert
-    | #unset
-  ]
-
-  type variant = {
-    "borderBox": string,
-    "paddingBox": string,
-    "contentBox": string,
-    "inherit": string,
-    "initial": string,
-    "revert": string,
-    "unset": string,
-  };
-
-  @genType
-  type i = { "backgroundOrigin": t }
-
-  type output = { "backgroundOrigin": value }
-  type cssResolve = (value) => output
-  // let cssResolve = (value) => {{ "backgroundOrigin": value }};
-
-  let initial = #paddingBox;
 
   let options = {
     /* Keyword values */
@@ -52,4 +38,17 @@ module BackgroundOrigin = {
     "revert": "revert",
     "unset": "unset",
   }
+
+  type variant = {
+    "borderBox": string,
+    "paddingBox": string,
+    "contentBox": string,
+    "inherit": string,
+    "initial": string,
+    "revert": string,
+    "unset": string,
+  };
+
+  type output = { "backgroundOrigin": value }
+  type cssResolve = (value) => output
 }

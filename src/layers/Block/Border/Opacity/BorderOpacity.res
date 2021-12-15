@@ -1,4 +1,23 @@
 module BorderOpacity = {
+  let key = "borderOpacity"
+
+  @genType
+  type t = [
+    | #0
+    | #10
+    | #20
+    | #30
+    | #40
+    | #50
+    | #60
+    | #70
+    | #80
+    | #90
+    | #100
+  ]
+
+  let initial = #100;
+
   type value = string;
 
   type options = {
@@ -15,19 +34,19 @@ module BorderOpacity = {
     "100": value,
   };
 
-  type t = [
-    | #0
-    | #10
-    | #20
-    | #30
-    | #40
-    | #50
-    | #60
-    | #70
-    | #80
-    | #90
-    | #100
-  ]
+  let options = {
+    "0": "0",
+    "10": ".1",
+    "20": ".2",
+    "30": ".3",
+    "40": ".4",
+    "50": ".5",
+    "60": ".6",
+    "70": ".7",
+    "80": ".8",
+    "90": ".9",
+    "100": "1",
+  }
 
   type variant = {
     "0": string,
@@ -43,26 +62,6 @@ module BorderOpacity = {
     "100": string,
   };
 
-  @genType
-  type i = { "borderOpacity": t }
-
   type output = { "--border-opacity": value }
   type cssResolve = (value) => output
-  // let cssResolve = (value) => {{ "--border-opacity": value }};
-
-  let initial = #100;
-
-  let options = {
-    "0": "0",
-    "10": ".1",
-    "20": ".2",
-    "30": ".3",
-    "40": ".4",
-    "50": ".5",
-    "60": ".6",
-    "70": ".7",
-    "80": ".8",
-    "90": ".9",
-    "100": "1",
-  }
 }

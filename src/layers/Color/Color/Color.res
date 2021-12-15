@@ -1,4 +1,6 @@
 module Color = {
+  let key = "color"
+
   @genType
   type t = [
     | #primary
@@ -18,18 +20,18 @@ module Color = {
     "white": value,
   };
 
-  type variant = {
-    "primary": string,
-    "secondary": string,
-    "black": string,
-    "white": string,
-  };
-
   let options = {
     "primary": "#0078D4",
     "secondary": "#2B88D8",
     "black": "#000000",
     "white": "#FFFFFF",
+  };
+
+  type variant = {
+    "primary": string,
+    "secondary": string,
+    "black": string,
+    "white": string,
   };
 
   type output = { "color": value }

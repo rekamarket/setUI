@@ -1,4 +1,16 @@
 module BorderColor = {
+  let key = "borderColor"
+
+  @genType
+  type t = [
+    | #primary
+    | #secondary
+    | #white
+    | #black
+  ]
+
+  let initial = #primary;
+
   type value = {
     "hue": string,
     "saturation": string,
@@ -11,43 +23,6 @@ module BorderColor = {
     "white": value,
     "black": value,
   };
-
-  type t = [
-    | #primary
-    | #secondary
-    | #white
-    | #black
-  ]
-
-  type variant = {
-    "primary": string,
-    "secondary": string,
-    "white": string,
-    "black": string,
-  };
-
-  @genType
-  type i = { "borderColor": t }
-
-  type output = {
-    "--border-hue": string,
-    "--border-saturation": string,
-    "--border-lightness": string,
-    "--border-color": string,
-    "borderColor": string,
-  }
-  type cssResolve = (value) => output
-  // let cssResolve = (value) => {
-  //   {
-  //     "--border-hue": value["hue"],
-  //     "--border-saturation": value["saturation"],
-  //     "--border-lightness": value["lightness"],
-  //     "--border-color": "hsl(var(--border-hue) var(--border-saturation) var(--border-lightness) / var(--border-opacity, 1))",
-  //     "borderColor": "var(--border-color)",
-  //   }
-  // };
-
-  let initial = #primary;
 
   let options = {
     "primary": {
@@ -71,4 +46,20 @@ module BorderColor = {
       "lightness": "0%",
     },
   }
+
+  type variant = {
+    "primary": string,
+    "secondary": string,
+    "white": string,
+    "black": string,
+  };
+
+  type output = {
+    "--border-hue": string,
+    "--border-saturation": string,
+    "--border-lightness": string,
+    "--border-color": string,
+    "borderColor": string,
+  }
+  type cssResolve = (value) => output
 }

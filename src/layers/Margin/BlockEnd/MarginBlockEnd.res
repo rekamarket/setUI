@@ -3,10 +3,9 @@ open Margin
 module MarginBlockEnd = {
   include Margin
 
-  type output = { "marginBlockEnd": Margin.value }
-  type cssResolve = (Margin.value) => output
-  // let cssResolve = (value) => {{ "marginBlockEnd": value }};
-
+  let key = "marginBlockEnd"
   @genType
   type i = { "marginBlockEnd": Margin.t }
+  type output = { "marginBlockEnd": Margin.value }
+  type cssResolve = (Margin.value) => output
 }

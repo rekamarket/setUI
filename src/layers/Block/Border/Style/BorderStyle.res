@@ -1,4 +1,26 @@
 module BorderStyle = {
+  let key = "borderStyle"
+
+  @genType
+  type t = [
+    | #none
+    | #hidden
+    | #dotted
+    | #dashed
+    | #solid
+    | #double
+    | #groove
+    | #ridge
+    | #inset
+    | #outset
+    | #inherit
+    | #initial
+    | #revert
+    | #unset
+  ]
+
+  let initial = #none;
+
   type value = string;
 
   type options = {
@@ -17,49 +39,6 @@ module BorderStyle = {
     "revert": value,
     "unset": value,
   };
-
-  type t = [
-    | #none
-    | #hidden
-    | #dotted
-    | #dashed
-    | #solid
-    | #double
-    | #groove
-    | #ridge
-    | #inset
-    | #outset
-    | #inherit
-    | #initial
-    | #revert
-    | #unset
-  ]
-
-  type variant = {
-    "none": string,
-    "hidden": string,
-    "dotted": string,
-    "dashed": string,
-    "solid": string,
-    "double": string,
-    "groove": string,
-    "ridge": string,
-    "inset": string,
-    "outset": string,
-    "inherit": string,
-    "initial": string,
-    "revert": string,
-    "unset": string,
-  };
-
-  @genType
-  type i = { "borderStyle": t }
-
-  type output = { "borderStyle": value }
-  type cssResolve = (value) => output
-  // let cssResolve = (value) => {{ "borderStyle": value }};
-
-  let initial = #none;
 
   let options = {
     /* Keyword values */
@@ -80,4 +59,24 @@ module BorderStyle = {
     "revert": "revert",
     "unset": "unset",
   }
+
+  type variant = {
+    "none": string,
+    "hidden": string,
+    "dotted": string,
+    "dashed": string,
+    "solid": string,
+    "double": string,
+    "groove": string,
+    "ridge": string,
+    "inset": string,
+    "outset": string,
+    "inherit": string,
+    "initial": string,
+    "revert": string,
+    "unset": string,
+  };
+
+  type output = { "borderStyle": value }
+  type cssResolve = (value) => output
 }

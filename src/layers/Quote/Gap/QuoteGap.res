@@ -1,5 +1,5 @@
 module QuoteGap = {
-  type value = int;
+  let key = "quoteGap"
 
   @genType
   type t = [
@@ -15,6 +15,10 @@ module QuoteGap = {
     | #xxxlarge
   ]
 
+  let initial = #none;
+
+  type value = int;
+
   type options = {
     "none": value,
     "xxxsmall": value,
@@ -27,6 +31,19 @@ module QuoteGap = {
     "xxlarge": value,
     "xxxlarge": value,
   };
+
+  let options = {
+    "none": 0,
+    "xxxsmall": 4,
+    "xxsmall": 8,
+    "xsmall": 12,
+    "small": 16,
+    "medium": 24,
+    "large": 36,
+    "xlarge": 48,
+    "xxlarge": 96,
+    "xxxlarge": 128,
+  }
 
   type variant = {
     "none": string,
@@ -41,23 +58,6 @@ module QuoteGap = {
     "xxxlarge": string,
   };
 
-  type i = { "quoteGap": t }
-
   type output = { "--quote-gap": value }
   type cssResolve = (value) => output
-
-  let initial = #none;
-
-  let options = {
-    "none": 0,
-    "xxxsmall": 4,
-    "xxsmall": 8,
-    "xsmall": 12,
-    "small": 16,
-    "medium": 24,
-    "large": 36,
-    "xlarge": 48,
-    "xxlarge": 96,
-    "xxxlarge": 128,
-  }
 }

@@ -1,4 +1,6 @@
 module TextDecorationThickness = {
+  let key = "textDecorationThickness"
+
   type single = [
     | #auto
     | #fromFont
@@ -30,6 +32,8 @@ module TextDecorationThickness = {
     | #unset
   ]
 
+  let initial = #initial;
+
   type value = string
 
   type options = {
@@ -44,26 +48,6 @@ module TextDecorationThickness = {
     "unset": value,
   };
 
-  type variant = {
-    "auto": string,
-    "fromFont": string,
-    "thin": string,
-    "light": string,
-    "medium": string,
-    "bold": string,
-    "inherit": string,
-    "initial": string,
-    "unset": string,
-  };
-
-  type i = { "textDecorationThickness": t }
-
-  type output = { "textDecorationThickness": value }
-  type cssResolve = (value) => output
-  // let cssResolve = (value) => { "textDecorationThickness": value }
-
-  let initial = #initial;
-
   let options = {
     "auto": "auto",
     "fromFont": "fromFont",
@@ -77,4 +61,19 @@ module TextDecorationThickness = {
     "initial": "initial",
     "unset": "unset",
   }
+
+  type variant = {
+    "auto": string,
+    "fromFont": string,
+    "thin": string,
+    "light": string,
+    "medium": string,
+    "bold": string,
+    "inherit": string,
+    "initial": string,
+    "unset": string,
+  };
+
+  type output = { "textDecorationThickness": value }
+  type cssResolve = (value) => output
 }

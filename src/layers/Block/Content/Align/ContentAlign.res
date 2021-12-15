@@ -1,4 +1,25 @@
 module ContentAlign = {
+  let key = "contentAlign"
+
+  @genType
+  type t = [
+    | #left
+    | #right
+    | #center
+    | #justify
+    | #justifyAll
+    | #start
+    | #end
+    | #matchParent
+    | #dot
+    | #dotCenter
+    | #inherit
+    | #initial
+    | #unset
+  ]
+
+  let initial = #start;
+
   type value = string;
 
   type options = {
@@ -16,47 +37,6 @@ module ContentAlign = {
     "initial": value,
     "unset": value,
   };
-
-  type t = [
-    | #left
-    | #right
-    | #center
-    | #justify
-    | #justifyAll
-    | #start
-    | #end
-    | #matchParent
-    | #dot
-    | #dotCenter
-    | #inherit
-    | #initial
-    | #unset
-  ]
-
-  type variant = {
-    "left": string,
-    "right": string,
-    "center": string,
-    "justify": string,
-    "justifyAll": string,
-    "start": string,
-    "end": string,
-    "matchParent": string,
-    "dot": string,
-    "dotCenter": string,
-    "inherit": string,
-    "initial": string,
-    "unset": string,
-  };
-
-  @genType
-  type i = { "contentAlign": t }
-
-  type output = { "textAlign": value }
-  type cssResolve = (value) => output
-  // let cssResolve = (value) => {{ "textAlign": value }};
-
-  let initial = #start;
 
   let options = {
     /* Keyword values */
@@ -78,4 +58,23 @@ module ContentAlign = {
     "initial": "initial",
     "unset": "unset",
   }
+
+  type variant = {
+    "left": string,
+    "right": string,
+    "center": string,
+    "justify": string,
+    "justifyAll": string,
+    "start": string,
+    "end": string,
+    "matchParent": string,
+    "dot": string,
+    "dotCenter": string,
+    "inherit": string,
+    "initial": string,
+    "unset": string,
+  };
+
+  type output = { "textAlign": value }
+  type cssResolve = (value) => output
 }

@@ -1,4 +1,21 @@
 module BackgroundPosition = {
+  let key = "backgroundPosition"
+
+  @genType
+  type t = [
+    | #top
+    | #bottom
+    | #left
+    | #right
+    | #center
+    | #inherit
+    | #initial
+    | #revert
+    | #unset
+  ]
+
+  let initial = #center;
+
   type value = string;
 
   type options = {
@@ -12,39 +29,6 @@ module BackgroundPosition = {
     "revert": value,
     "unset": value,
   };
-
-  type t = [
-    | #top
-    | #bottom
-    | #left
-    | #right
-    | #center
-    | #inherit
-    | #initial
-    | #revert
-    | #unset
-  ]
-
-  type variant = {
-    "top": string,
-    "bottom": string,
-    "left": string,
-    "right": string,
-    "center": string,
-    "inherit": string,
-    "initial": string,
-    "revert": string,
-    "unset": string,
-  };
-
-  @genType
-  type i = { "backgroundPosition": t }
-
-  type output = { "backgroundPosition": value }
-  type cssResolve = (value) => output
-  // let cssResolve = (value) => {{ "backgroundPosition": value }};
-
-  let initial = #center;
 
   let options = {
     /* Keyword values */
@@ -60,4 +44,19 @@ module BackgroundPosition = {
     "revert": "revert",
     "unset": "unset",
   }
+
+  type variant = {
+    "top": string,
+    "bottom": string,
+    "left": string,
+    "right": string,
+    "center": string,
+    "inherit": string,
+    "initial": string,
+    "revert": string,
+    "unset": string,
+  };
+
+  type output = { "backgroundPosition": value }
+  type cssResolve = (value) => output
 }

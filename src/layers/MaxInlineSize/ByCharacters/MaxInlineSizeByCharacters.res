@@ -1,5 +1,5 @@
-module CharsPerLine = {
-  let key = "charsPerLine"
+module MaxInlineSizeByCharacters = {
+  let key = "maxInlineSize"
 
   @genType
   type t = [
@@ -22,9 +22,9 @@ module CharsPerLine = {
 
   let options = {
     "none": "0",
-    "small": "18ch",
-    "medium": "24ch",
-    "large": "36ch",
+    "small": "36ch",
+    "medium": "48ch",
+    "large": "64ch",
   };
 
   type variant = {
@@ -34,6 +34,10 @@ module CharsPerLine = {
     "large": string,
   };
 
-  type output = { "maxWidth": value }
+  type output = {
+    "visibility": string,
+    "--max-inline-size-by-characters": value,
+  }
+
   type cssResolve = (value) => output
 }

@@ -1,5 +1,5 @@
 module MarkerSymbol = {
-  type value = string;
+  let key = "markerSymbol"
 
   @genType
   type t = [
@@ -8,11 +8,21 @@ module MarkerSymbol = {
     | #circle
   ]
 
+  let initial = #bullet;
+
+  type value = string;
+
   type options = {
     "none": value,
     "bullet": value,
     "circle": value,
   };
+
+  let options = {
+    "none": "none",
+    "bullet": `"•"`, // U+2022 - Bullet
+    "circle": `"●"`, // U+25CF - Black Circle
+  }
 
   type variant = {
     "none": string,
@@ -20,20 +30,10 @@ module MarkerSymbol = {
     "circle": string,
   };
 
-  type i = { "markerSymbol": t }
-
   type output = {
     "--marker-symbol": value,
     "listStyleType": value
   }
 
   type cssResolve = (value) => output
-
-  let initial = #bullet;
-
-  let options = {
-    "none": "none",
-    "bullet": `"•"`, // U+2022 - Bullet
-    "circle": `"●"`, // U+25CF - Black Circle
-  }
 }

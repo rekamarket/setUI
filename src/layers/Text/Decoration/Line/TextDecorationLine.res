@@ -1,20 +1,5 @@
 module TextDecorationLine = {
-  type value = string
-
-  type options = {
-    "none": value,
-    "underline": value,
-    "overline": value,
-    "lineThrough": value,
-    "blink": value,
-    "overline_lineThrough": value,
-    "overline_underline": value,
-    "lineThrough_underline": value,
-    "overline_lineThrough_underline": value,
-    "inherit": value,
-    "initial": value,
-    "unset": value,
-  };
+  let key = "textDecorationLine"
 
   @genType
   type t = [
@@ -32,28 +17,24 @@ module TextDecorationLine = {
     | #unset
   ]
 
-  type variant = {
-    "none": string,
-    "underline": string,
-    "overline": string,
-    "lineThrough": string,
-    "blink": string,
-    "overline_lineThrough": string,
-    "overline_underline": string,
-    "lineThrough_underline": string,
-    "overline_lineThrough_underline": string,
-    "inherit": string,
-    "initial": string,
-    "unset": string,
-  };
-
-  type i = { "textDecorationLine": t }
-
-  type output = { "textDecorationLine": value }
-  type cssResolve = (value) => output
-  // let cssResolve = (value) => { "textDecorationLine": value }
-
   let initial = #none;
+
+  type value = string
+
+  type options = {
+    "none": value,
+    "underline": value,
+    "overline": value,
+    "lineThrough": value,
+    "blink": value,
+    "overline_lineThrough": value,
+    "overline_underline": value,
+    "lineThrough_underline": value,
+    "overline_lineThrough_underline": value,
+    "inherit": value,
+    "initial": value,
+    "unset": value,
+  };
 
   let options = {
     "none": "none",
@@ -69,4 +50,22 @@ module TextDecorationLine = {
     "initial": "initial",
     "unset": "unset",
   }
+
+  type variant = {
+    "none": string,
+    "underline": string,
+    "overline": string,
+    "lineThrough": string,
+    "blink": string,
+    "overline_lineThrough": string,
+    "overline_underline": string,
+    "lineThrough_underline": string,
+    "overline_lineThrough_underline": string,
+    "inherit": string,
+    "initial": string,
+    "unset": string,
+  };
+
+  type output = { "textDecorationLine": value }
+  type cssResolve = (value) => output
 }

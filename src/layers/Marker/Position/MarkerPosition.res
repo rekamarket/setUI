@@ -1,5 +1,5 @@
 module MarkerPosition = {
-  type value = string;
+  let key = "markerPosition"
 
   @genType
   type t = [
@@ -7,25 +7,25 @@ module MarkerPosition = {
     | #outside
   ]
 
+  let initial = #outside;
+
+  type value = string;
+
   type options = {
     "inside": value,
     "outside": value,
   };
+
+  let options = {
+    "inside": "inside",
+    "outside": "outside",
+  }
 
   type variant = {
     "inside": string,
     "outside": string,
   };
 
-  type i = { "listStylePosition": t }
-
   type output = { "listStylePosition": value }
   type cssResolve = (value) => output
-
-  let initial = #outside;
-
-  let options = {
-    "inside": "inside",
-    "outside": "outside",
-  }
 }

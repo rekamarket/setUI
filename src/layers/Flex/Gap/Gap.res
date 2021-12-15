@@ -1,5 +1,5 @@
 module Gap = {
-  type value = int;
+  let key = "gap"
 
   @genType
   type t = [
@@ -15,6 +15,10 @@ module Gap = {
     | #xxxlarge
   ]
 
+  let initial = #none;
+
+  type value = int;
+
   type options = {
     "none": value,
     "xxxsmall": value,
@@ -27,6 +31,19 @@ module Gap = {
     "xxlarge": value,
     "xxxlarge": value,
   };
+
+  let options = {
+    "none": 0,
+    "xxxsmall": 4,
+    "xxsmall": 8,
+    "xsmall": 12,
+    "small": 16,
+    "medium": 24,
+    "large": 36,
+    "xlarge": 48,
+    "xxlarge": 96,
+    "xxxlarge": 128,
+  }
 
   type variant = {
     "none": string,
@@ -41,24 +58,6 @@ module Gap = {
     "xxxlarge": string,
   };
 
-  type i = { "gap": t }
-
   type output = { "gap": value }
   type cssResolve = (value) => output
-  // let cssResolve = (value) => {{ "gap": value }};
-
-  let initial = #none;
-
-  let options = {
-    "none": 0,
-    "xxxsmall": 4,
-    "xxsmall": 8,
-    "xsmall": 12,
-    "small": 16,
-    "medium": 24,
-    "large": 36,
-    "xlarge": 48,
-    "xxlarge": 96,
-    "xxxlarge": 128,
-  }
 }

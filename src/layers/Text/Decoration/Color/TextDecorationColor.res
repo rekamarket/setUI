@@ -1,13 +1,5 @@
 module TextDecorationColor = {
-  type value = string;
-
-  type options = {
-    "currentColor": value,
-    "primary": value,
-    "secondary": value,
-    "black": value,
-    "white": value,
-  };
+  let key = "textDecorationColor"
 
   @genType
   type t = [
@@ -18,21 +10,17 @@ module TextDecorationColor = {
     | #white
   ]
 
-  type variant = {
-    "currentColor": string,
-    "primary": string,
-    "secondary": string,
-    "black": string,
-    "white": string,
-  };
-
-  type i = { "textDecorationColor": t }
-
-  type output = { "textDecorationColor": value }
-  type cssResolve = (value) => output
-  // let cssResolve = (value) => {{ "textDecorationColor": value }};
-
   let initial = #currentColor;
+
+  type value = string;
+
+  type options = {
+    "currentColor": value,
+    "primary": value,
+    "secondary": value,
+    "black": value,
+    "white": value,
+  };
 
   let options = {
     "currentColor": "currentColor",
@@ -41,4 +29,15 @@ module TextDecorationColor = {
     "black": "#000000",
     "white": "#FFFFFF",
   }
+
+  type variant = {
+    "currentColor": string,
+    "primary": string,
+    "secondary": string,
+    "black": string,
+    "white": string,
+  };
+
+  type output = { "textDecorationColor": value }
+  type cssResolve = (value) => output
 }
