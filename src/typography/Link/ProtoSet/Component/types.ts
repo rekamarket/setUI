@@ -5,6 +5,15 @@ import type {
   ITextTransformLayer,
 } from 'layers'
 
+type ReactNode =
+  | React.ReactChild
+  | React.ReactNodeArray
+  | ReadonlyArray<ReactNode>
+  | React.ReactPortal
+// | boolean
+// | null
+// | undefined;
+
 export interface Props
   extends IColorLayer,
     ITextDecorationLayer,
@@ -13,5 +22,5 @@ export interface Props
   href: string
   className?: string
   title?: string
-  children: string
+  children: ReactNode
 }
