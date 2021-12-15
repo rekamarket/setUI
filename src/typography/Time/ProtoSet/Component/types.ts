@@ -13,5 +13,5 @@ export interface Props
   className?: string
   datetime: string
   title?: string
-  children: string
+  children: ReactNode
 }
