@@ -9,5 +9,9 @@ export type Props = Partial<
     | 'fontFamily'
     | 'fontSize'
     | 'fontWeight'
+    | 'charsPerLine'
+    | 'paddingBlockStart'
+    | 'paddingBlockEnd'
+    | 'contentAlign'
   >
 >
