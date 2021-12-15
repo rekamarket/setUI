@@ -1,4 +1,4 @@
-import { cloneElement, VFC } from 'react'
+import React, { cloneElement, VFC } from 'react'
 import cn from 'classnames'
 import { object } from 'utils'
 import { defaultProps } from './defaultProps'
@@ -17,11 +17,7 @@ const Section: VFC<Props> = ({ color, className, ...props }) =>
 
       // props override
       as: 'section',
-      backgroundAttachment: 'fixed',
-      backgroundSize: 'cover',
-      alignItems: 'center',
-      contentAlign: 'center',
-      justifyContent: 'center',
+
       className: cn(
         ClassName,
         className,

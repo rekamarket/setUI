@@ -1,15 +1,28 @@
 import type { Props } from './types'
 
-export const defaultProps: Partial<
-  Omit<
-    Props,
-    | 'children'
-    | 'as'
-    | 'backgroundAttachment'
-    | 'backgroundSize'
-    | 'alignItems'
-    | 'contentAlign'
-    | 'justifyContent'
-    | 'image'
-  >
-> = {}
+export const defaultProps: Omit<Props, 'children' | 'image' | 'as'> = {
+  color: 'white',
+  alignContent: 'center',
+  alignItems: 'center',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  gap: 'medium',
+  backgroundAttachment: 'fixed',
+  backgroundOpacity: 100,
+  backgroundClip: 'initial',
+  backgroundColor: 'primary',
+  backgroundOrigin: 'initial',
+  backgroundPosition: 'initial',
+  backgroundRepeat: 'noRepeat',
+  backgroundSize: 'cover',
+  contentAlign: 'center',
+  marginBlockEnd: 'none',
+  marginInlineEnd: 'none',
+  marginBlockStart: 'none',
+  marginInlineStart: 'none',
+  paddingBlockEnd: 'none',
+  paddingInlineEnd: 'none',
+  paddingBlockStart: 'none',
+  paddingInlineStart: 'none',
+}

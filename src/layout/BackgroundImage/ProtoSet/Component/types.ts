@@ -1,15 +1,10 @@
 import type {
   IFlexLayer,
   IBackgroundLayer,
-  IBorderLayer,
   IContentLayer,
-  ICornerLayer,
   IMarginLayer,
   IPaddingLayer,
   IColorLayer,
-  ITextDecorationLayer,
-  IFontLayer,
-  ITextTransformLayer,
 } from 'layers'
 
 export type AsType = 'main' | 'section' | 'div'
@@ -26,15 +21,10 @@ type ReactNode =
 export interface Props
   extends IFlexLayer,
     IBackgroundLayer,
-    IBorderLayer,
     IContentLayer,
-    ICornerLayer,
     IMarginLayer,
     IPaddingLayer,
-    IColorLayer,
-    ITextDecorationLayer,
-    IFontLayer,
-    ITextTransformLayer {
+    IColorLayer {
   as: AsType
   image: string
   className?: string

@@ -33,15 +33,6 @@ const BackgroundImage: VFC<Props> = ({
 
   // text
   color,
-  fontFamily,
-  fontSize,
-  fontStyle,
-  fontWeight,
-  textDecorationColor,
-  textDecorationLine,
-  textDecorationStyle,
-  textDecorationThickness,
-  textTransform,
 
   // background
   backgroundAttachment,
@@ -53,17 +44,8 @@ const BackgroundImage: VFC<Props> = ({
   backgroundRepeat,
   backgroundSize,
 
-  // border
-  borderColor,
-  borderOpacity,
-  borderStyle,
-  borderThickness,
-
   // content
   contentAlign,
-
-  // corner
-  cornerRadius,
 
   // margin
   marginBlockEnd,
@@ -112,19 +94,8 @@ const BackgroundImage: VFC<Props> = ({
           backgroundSize,
         }),
 
-        BorderLayer({
-          borderColor,
-          borderOpacity,
-          borderStyle,
-          borderThickness,
-        }),
-
         ContentLayer({
           contentAlign,
-        }),
-
-        CornerLayer({
-          cornerRadius,
         }),
 
         MarginLayer({
@@ -143,24 +114,6 @@ const BackgroundImage: VFC<Props> = ({
 
         ColorLayer({
           color,
-        }),
-
-        TextDecorationLayer({
-          textDecorationColor,
-          textDecorationLine,
-          textDecorationStyle,
-          textDecorationThickness,
-        }),
-
-        FontLayer({
-          fontFamily,
-          fontSize,
-          fontStyle,
-          fontWeight,
-        }),
-
-        TextTransformLayer({
-          textTransform,
         }),
       ]),
       style,
