@@ -1,3 +1,5 @@
+export { ARTICLE } from './axioms'
+
 export {
   BackgroundImage,
   Cover,
