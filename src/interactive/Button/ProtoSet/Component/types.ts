@@ -1,9 +1,4 @@
-import type {
-  IThemeColorLayer,
-  IInteractiveLayer,
-  ICornerLayer,
-  IMarginLayer,
-} from 'layers'
+import type { IThemeColorLayer, IInteractiveLayer, IMarginLayer } from 'layers'
 
 export type AsType = 'button' | 'div'
 
@@ -19,7 +14,6 @@ type ReactNode =
 export interface Props
   extends IThemeColorLayer,
     IInteractiveLayer,
-    ICornerLayer,
     IMarginLayer {
   as: AsType
   className?: string

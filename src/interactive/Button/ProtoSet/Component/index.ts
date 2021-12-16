@@ -1,11 +1,6 @@
 import { VFC, createElement } from 'react'
 import cn from 'classnames'
-import {
-  ThemeColorLayer,
-  InteractiveLayer,
-  CornerLayer,
-  MarginLayer,
-} from 'layers'
+import { ThemeColorLayer, InteractiveLayer, MarginLayer } from 'layers'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 import { component } from './data'
@@ -17,11 +12,8 @@ const Button: VFC<Props> = ({
 
   color,
 
-  interactiveShape,
-  interactiveSize,
-  interactiveVariant,
-
-  cornerRadius,
+  size,
+  variant,
 
   // margin
   marginBlockEnd,
@@ -42,13 +34,8 @@ const Button: VFC<Props> = ({
         }),
 
         InteractiveLayer({
-          interactiveShape,
-          interactiveSize,
-          interactiveVariant,
-        }),
-
-        CornerLayer({
-          cornerRadius,
+          size,
+          variant,
         }),
 
         MarginLayer({

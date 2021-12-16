@@ -3,11 +3,8 @@ import type { Props } from './types'
 export const defaultProps: Omit<Props, 'children'> = {
   color: 'primary',
 
-  cornerRadius: 'small',
-
-  interactiveShape: 'rect',
-  interactiveSize: 'medium',
-  interactiveVariant: 'solid',
+  size: 'medium',
+  variant: 'solid',
 
   marginInlineStart: 'none',
   marginInlineEnd: 'none',
