@@ -1,13 +1,13 @@
 open Js.Array2;
+open ThemeColor;
 
-open Color;
-type color = { style: Color.variant }
-@module("./Color/ColorStyle.css.js") external color: color = "ColorStyle"
+type color = { style: ThemeColor.variant }
+@module("./ThemeColorStyle.css.js") external color: color = "ThemeColorStyle"
 
-module ColorLayer = {
+module ThemeColorLayer = {
   @genType
   type i = {
-    "color": Color.t,
+    "color": ThemeColor.t,
   };
 
   @genType

@@ -7,7 +7,6 @@ var options = OverlayColor.OverlayColor.options;
 
 var style = Css.styleVariants(options, (function (value) {
         return {
-                visibility: "visible",
                 "--overlay-color": value
               };
       }));

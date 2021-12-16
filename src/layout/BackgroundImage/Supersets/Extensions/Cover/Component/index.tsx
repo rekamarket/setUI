@@ -5,7 +5,7 @@ import { defaultProps } from './defaultProps'
 import type { Props } from './types'
 import ProtoSet from '../../../../ProtoSet'
 import { ClassName } from './styles.css'
-import { ColorContext, OverlayLayer } from 'layers'
+import { ColorContext, OverlayColorLayer } from 'layers'
 
 export const displayName = 'Cover'
 
@@ -22,8 +22,8 @@ const Section: VFC<Props> = ({ color, className, ...props }) =>
         ClassName,
         className,
 
-        OverlayLayer({
-          overlayColor: color,
+        OverlayColorLayer({
+          color,
         })
       ),
       color,

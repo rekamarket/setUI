@@ -1,9 +1,8 @@
 open ColorReflection
 
-module Color = {
+module OverlayColor = {
   include ColorReflection
 
-  let key = "color"
   @genType
   type i = { "color": ColorReflection.t }
 
@@ -23,6 +22,6 @@ module Color = {
     "white": value,
   };
 
-  type output = { "color": value }
+  type output = { "--overlay-color": value }
   type cssResolve = (value) => output
 }

@@ -1,8 +1,16 @@
 import { createContext, useContext } from 'react'
 
 // color
-export { ColorLayer_resolve as ColorLayer } from './Color/ColorLayer.gen'
-export type { IColorLayer_i as IColorLayer } from './Color/ColorLayer.gen'
+export { ColorLayer_resolve as ColorLayer } from './Color/Color/ColorLayer.gen'
+export type { IColorLayer_i as IColorLayer } from './Color/Color/ColorLayer.gen'
+
+// overlayColor
+export { OverlayColorLayer_resolve as OverlayColorLayer } from './Color/Overlay/OverlayColorLayer.gen'
+export type { IOverlayColorLayer_i as IOverlayColorLayer } from './Color/Overlay/OverlayColorLayer.gen'
+
+// themeColor
+export { ThemeColorLayer_resolve as ThemeColorLayer } from './Color/Theme/ThemeColorLayer.gen'
+export type { IThemeColorLayer_i as IThemeColorLayer } from './Color/Theme/ThemeColorLayer.gen'
 
 // block
 export { BackgroundLayer_resolve as BackgroundLayer } from './Block/Background/BackgroundLayer.gen'
@@ -36,10 +44,6 @@ export type { IMarkerLayer_i as IMarkerLayer } from './Marker/MarkerLayer.gen'
 export { MaxInlineSizeByCharactersLayer_resolve as MaxInlineSizeByCharactersLayer } from './MaxInlineSize/MaxInlineSizeByCharactersLayer.gen'
 export type { IMaxInlineSizeByCharactersLayer_i as IMaxInlineSizeByCharactersLayer } from './MaxInlineSize/MaxInlineSizeByCharactersLayer.gen'
 
-// overlay
-export { OverlayLayer_resolve as OverlayLayer } from './Overlay/OverlayLayer.gen'
-export type { IOverlayLayer_i as IOverlayLayer } from './Overlay/OverlayLayer.gen'
-
 // quote
 export { QuoteLayer_resolve as QuoteLayer } from './Quote/QuoteLayer.gen'
 export type { IQuoteLayer_i as IQuoteLayer } from './Quote/QuoteLayer.gen'
@@ -51,6 +55,10 @@ export type { ICharsPerLineLayer_i as ICharsPerLineLayer } from './Text/CharsPer
 // font
 export { FontLayer_resolve as FontLayer } from './Font/FontLayer.gen'
 export type { IFontLayer_i as IFontLayer } from './Font/FontLayer.gen'
+
+// interactive
+export { InteractiveLayer_resolve as InteractiveLayer } from './Interactive/InteractiveLayer.gen'
+export type { IInteractiveLayer_i as IInteractiveLayer } from './Interactive/InteractiveLayer.gen'
 
 // text
 export { TextDecorationLayer_resolve as TextDecorationLayer } from './Text/Decoration/TextDecorationLayer.gen'

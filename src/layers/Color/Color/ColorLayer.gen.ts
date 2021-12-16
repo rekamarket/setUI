@@ -5,7 +5,7 @@
 import * as ColorLayerBS__Es6Import from './ColorLayer.js'
 const ColorLayerBS: any = ColorLayerBS__Es6Import
 
-import type { Color_t as Color_Color_t } from '../../../src/layers/Color/Color/Color.gen'
+import type { Color_t as Color_Color_t } from './Color.gen'
 
 export interface IColorLayer_i {
   readonly color: Color_Color_t

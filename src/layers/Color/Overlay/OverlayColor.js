@@ -9,16 +9,18 @@ var options = {
   white: "#FFFFFF"
 };
 
-var Color_initial = ColorReflection.ColorReflection.initial;
+var OverlayColor_key = ColorReflection.ColorReflection.key;
 
-var Color = {
-  initial: Color_initial,
-  key: "color",
+var OverlayColor_initial = ColorReflection.ColorReflection.initial;
+
+var OverlayColor = {
+  key: OverlayColor_key,
+  initial: OverlayColor_initial,
   options: options
 };
 
 export {
-  Color ,
+  OverlayColor ,
   
 }
 /* No side effect */
