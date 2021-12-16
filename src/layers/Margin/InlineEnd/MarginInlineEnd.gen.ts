@@ -1,7 +1,7 @@
 /* TypeScript file generated from MarginInlineEnd.res by genType. */
 /* eslint-disable import/first */
 
-import type { Margin_t as Margin_Margin_t } from '../../../../src/layers/Margin/Margin.gen'
+import type { MarginReflection_t as MarginReflection_MarginReflection_t } from '../../../../src/layers/Margin/MarginReflection.gen'
 
 // tslint:disable-next-line:interface-over-type-literal
 export type MarginInlineEnd_t =
@@ -17,5 +17,5 @@ export type MarginInlineEnd_t =
   | 'xsmall'
 
 export interface IMarginInlineEnd_i {
-  readonly marginInlineEnd: Margin_Margin_t
+  readonly marginInlineEnd: MarginReflection_MarginReflection_t
 }

@@ -1,20 +1,20 @@
 open Js.Array2;
-open Margin;
+open MarginReflection;
 
 open MarginBlockEnd;
-type marginBlockEnd = { style: Margin.variant }
+type marginBlockEnd = { style: MarginReflection.variant }
 @module("./BlockEnd/MarginBlockEndStyle.css.js") external marginBlockEnd: marginBlockEnd = "MarginBlockEndStyle"
 
 open MarginBlockStart;
-type marginBlockStart = { style: Margin.variant }
+type marginBlockStart = { style: MarginReflection.variant }
 @module("./BlockStart/MarginBlockStartStyle.css.js") external marginBlockStart: marginBlockStart = "MarginBlockStartStyle"
 
 open MarginInlineEnd;
-type marginInlineEnd = { style: Margin.variant }
+type marginInlineEnd = { style: MarginReflection.variant }
 @module("./InlineEnd/MarginInlineEndStyle.css.js") external marginInlineEnd: marginInlineEnd = "MarginInlineEndStyle"
 
 open MarginInlineStart;
-type marginInlineStart = { style: Margin.variant }
+type marginInlineStart = { style: MarginReflection.variant }
 @module("./InlineStart/MarginInlineStartStyle.css.js") external marginInlineStart: marginInlineStart = "MarginInlineStartStyle"
 
 module MarginLayer = {

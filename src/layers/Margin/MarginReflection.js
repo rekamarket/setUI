@@ -14,13 +14,13 @@ var options = {
   xxxlarge: 128
 };
 
-var Margin = {
+var MarginReflection = {
   initial: "none",
   options: options
 };
 
 export {
-  Margin ,
+  MarginReflection ,
   
 }
 /* No side effect */

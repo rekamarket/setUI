@@ -1,11 +1,11 @@
-open Margin
+open MarginReflection
 
 module MarginInlineStart = {
-  include Margin
+  include MarginReflection
 
   let key = "marginInlineStart"
   @genType
-  type i = { "marginInlineStart": Margin.t }
-  type output = { "marginInlineStart": Margin.value }
-  type cssResolve = (Margin.value) => output
+  type i = { "marginInlineStart": MarginReflection.t }
+  type output = { "marginInlineStart": MarginReflection.value }
+  type cssResolve = (MarginReflection.value) => output
 }

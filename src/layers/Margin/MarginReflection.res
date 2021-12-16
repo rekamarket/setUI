@@ -1,4 +1,4 @@
-module Margin = {
+module MarginReflection = {
   @genType
   type t = [
     | #none

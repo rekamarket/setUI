@@ -1,8 +1,8 @@
-/* TypeScript file generated from Margin.res by genType. */
+/* TypeScript file generated from MarginReflection.res by genType. */
 /* eslint-disable import/first */
 
 // tslint:disable-next-line:interface-over-type-literal
-export type Margin_t =
+export type MarginReflection_t =
   | 'none'
   | 'xxxsmall'
   | 'xxsmall'
