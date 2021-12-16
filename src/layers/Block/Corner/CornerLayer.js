@@ -8,9 +8,13 @@ function resolve(i) {
   var match = i.cornerRadius;
   return [match === "pill" ? cornerRadius.style.pill : (
                 match === "circle" ? cornerRadius.style.circle : (
-                    match === "large" ? cornerRadius.style.large : (
-                        match === "medium" ? cornerRadius.style.medium : (
-                            match === "small" ? cornerRadius.style.small : cornerRadius.style.none
+                    match === "xlarge" ? cornerRadius.style.xlarge : (
+                        match === "large" ? cornerRadius.style.large : (
+                            match === "xsmall" ? cornerRadius.style.xsmall : (
+                                match === "medium" ? cornerRadius.style.medium : (
+                                    match === "small" ? cornerRadius.style.small : cornerRadius.style.none
+                                  )
+                              )
                           )
                       )
                   )

@@ -3,9 +3,11 @@
 
 var options = {
   none: "0px",
-  small: "4px",
+  xsmall: "4px",
+  small: "6px",
   medium: "8px",
   large: "12px",
+  xlarge: "16px",
   pill: "9999px",
   circle: "50%"
 };

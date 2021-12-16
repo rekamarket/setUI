@@ -19,6 +19,8 @@ export const CornerLayer_resolve: (i: {
     | 'none'
     | 'pill'
     | 'small'
+    | 'xlarge'
+    | 'xsmall'
 }) => string = CornerLayerBS.CornerLayer.resolve
 
 export const CornerLayer: {
@@ -30,5 +32,7 @@ export const CornerLayer: {
       | 'none'
       | 'pill'
       | 'small'
+      | 'xlarge'
+      | 'xsmall'
   }) => string
 } = CornerLayerBS.CornerLayer

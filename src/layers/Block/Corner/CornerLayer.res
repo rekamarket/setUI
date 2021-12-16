@@ -14,9 +14,11 @@ module CornerLayer = {
   let resolve = (i) => [
     switch (i["cornerRadius"]) {
     | #none   => cornerRadius.style["none"]
+    | #xsmall  => cornerRadius.style["xsmall"]
     | #small  => cornerRadius.style["small"]
     | #medium => cornerRadius.style["medium"]
     | #large  => cornerRadius.style["large"]
+    | #xlarge => cornerRadius.style["xlarge"]
     | #pill   => cornerRadius.style["pill"]
     | #circle => cornerRadius.style["circle"]
     },
