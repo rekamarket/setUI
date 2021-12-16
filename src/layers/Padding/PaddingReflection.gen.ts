@@ -1,8 +1,8 @@
-/* TypeScript file generated from Padding.res by genType. */
+/* TypeScript file generated from PaddingReflection.res by genType. */
 /* eslint-disable import/first */
 
 // tslint:disable-next-line:interface-over-type-literal
-export type Padding_t =
+export type PaddingReflection_t =
   | 'none'
   | 'xxxsmall'
   | 'xxsmall'

@@ -1,12 +1,12 @@
 open Js.Array2;
-open Padding;
+open PaddingReflection;
 
 open PaddingInlineEnd;
-type paddingInlineEnd = { style: Padding.variant }
+type paddingInlineEnd = { style: PaddingReflection.variant }
 @module("./InlineEnd/PaddingInlineEndStyle.css.js") external paddingInlineEnd: paddingInlineEnd = "PaddingInlineEndStyle"
 
 open PaddingInlineStart;
-type paddingInlineStart = { style: Padding.variant }
+type paddingInlineStart = { style: PaddingReflection.variant }
 @module("./InlineStart/PaddingInlineStartStyle.css.js") external paddingInlineStart: paddingInlineStart = "PaddingInlineStartStyle"
 
 module PaddingInlineLayer = {

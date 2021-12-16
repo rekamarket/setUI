@@ -14,13 +14,13 @@ var options = {
   xxxlarge: 128
 };
 
-var Padding = {
+var PaddingReflection = {
   initial: "none",
   options: options
 };
 
 export {
-  Padding ,
+  PaddingReflection ,
   
 }
 /* No side effect */

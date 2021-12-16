@@ -1,7 +1,7 @@
 /* TypeScript file generated from PaddingBlockEnd.res by genType. */
 /* eslint-disable import/first */
 
-import type { Padding_t as Padding_Padding_t } from '../../../../src/layers/Padding/Padding.gen'
+import type { PaddingReflection_t as PaddingReflection_PaddingReflection_t } from '../../../../src/layers/Padding/PaddingReflection.gen'
 
 // tslint:disable-next-line:interface-over-type-literal
 export type PaddingBlockEnd_t =
@@ -17,5 +17,5 @@ export type PaddingBlockEnd_t =
   | 'xsmall'
 
 export interface IPaddingBlockEnd_i {
-  readonly paddingBlockEnd: Padding_Padding_t
+  readonly paddingBlockEnd: PaddingReflection_PaddingReflection_t
 }

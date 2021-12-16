@@ -1,7 +1,7 @@
 /* TypeScript file generated from PaddingInlineStart.res by genType. */
 /* eslint-disable import/first */
 
-import type { Padding_t as Padding_Padding_t } from '../../../../src/layers/Padding/Padding.gen'
+import type { PaddingReflection_t as PaddingReflection_PaddingReflection_t } from '../../../../src/layers/Padding/PaddingReflection.gen'
 
 // tslint:disable-next-line:interface-over-type-literal
 export type PaddingInlineStart_t =
@@ -17,5 +17,5 @@ export type PaddingInlineStart_t =
   | 'xsmall'
 
 export interface IPaddingInlineStart_i {
-  readonly paddingInlineStart: Padding_Padding_t
+  readonly paddingInlineStart: PaddingReflection_PaddingReflection_t
 }

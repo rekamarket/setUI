@@ -1,11 +1,11 @@
-open Padding
+open PaddingReflection
 
 module PaddingBlockEnd = {
-  include Padding
+  include PaddingReflection
 
   let key = "paddingBlockEnd"
   @genType
-  type i = { "paddingBlockEnd": Padding.t }
-  type output = { "paddingBlockEnd": Padding.value }
-  type cssResolve = (Padding.value) => output
+  type i = { "paddingBlockEnd": PaddingReflection.t }
+  type output = { "paddingBlockEnd": PaddingReflection.value }
+  type cssResolve = (PaddingReflection.value) => output
 }
