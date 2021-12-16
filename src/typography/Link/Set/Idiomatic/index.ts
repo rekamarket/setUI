@@ -16,6 +16,7 @@ const Link: VFC<Props> = ({
   color,
   fontSize: fontSizeFromProps,
   fontWeight,
+  ...rest
 }) => {
   const fontSize = useFontSize()
 
@@ -28,6 +29,7 @@ const Link: VFC<Props> = ({
         color,
         fontSize: fontSizeFromProps || fontSize,
         fontWeight,
+        ...rest,
       },
       displayName
     ),

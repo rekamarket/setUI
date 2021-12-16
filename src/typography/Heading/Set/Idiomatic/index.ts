@@ -15,6 +15,7 @@ const Set: VFC<Props> = ({
   color,
   fontSize,
   fontWeight,
+  ...rest
 }) =>
   ProtoSet({
     children,
@@ -25,6 +26,7 @@ const Set: VFC<Props> = ({
         color,
         fontSize,
         fontWeight,
+        ...rest,
       },
       displayName
     ),

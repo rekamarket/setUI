@@ -14,6 +14,7 @@ const H3: VFC<Props> = ({
   children,
   fontSize: fontSizeFromProps,
   color: colorFromProps,
+  ...rest
 }) => {
   const color = useColor()
   const fontSize = useFontSize()
@@ -26,6 +27,7 @@ const H3: VFC<Props> = ({
       {
         fontSize: fontSizeFromProps || fontSize,
         color: colorFromProps || color,
+        ...rest,
       },
       displayName
     ),

@@ -11,6 +11,7 @@ const TextInline: VFC<Props> = ({
   className,
   children,
   fontSize: fontSizeFromProps,
+  ...rest
 }) => {
   const fontSize = useFontSize()
 
@@ -22,6 +23,7 @@ const TextInline: VFC<Props> = ({
       defaultProps,
       {
         fontSize: fontSizeFromProps || fontSize,
+        ...rest,
       },
       displayName
     ),

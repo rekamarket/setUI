@@ -15,6 +15,7 @@ const Set: VFC<Props> = ({
   color,
   fontSize: fontSizeFromProps,
   fontWeight,
+  ...rest
 }) => {
   const fontSize = useFontSize()
 
@@ -27,6 +28,7 @@ const Set: VFC<Props> = ({
         color,
         fontSize: fontSizeFromProps || fontSize,
         fontWeight,
+        ...rest,
       },
       displayName
     ),

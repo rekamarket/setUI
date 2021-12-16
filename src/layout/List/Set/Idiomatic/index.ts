@@ -8,7 +8,14 @@ import { ClassName } from '../styles.css'
 
 export const displayName = 'List'
 
-const List: VFC<Props> = ({ children, as, className, color, fontSize }) =>
+const List: VFC<Props> = ({
+  children,
+  as,
+  className,
+  color,
+  fontSize,
+  ...rest
+}) =>
   ProtoSet({
     children,
     as,
@@ -18,6 +25,7 @@ const List: VFC<Props> = ({ children, as, className, color, fontSize }) =>
       {
         color,
         fontSize,
+        ...rest,
       },
       displayName
     ),

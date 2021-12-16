@@ -14,6 +14,7 @@ const Text: VFC<Props> = ({
   color,
   fontSize,
   fontWeight,
+  ...rest
 }) =>
   ProtoSet({
     children,
@@ -24,6 +25,7 @@ const Text: VFC<Props> = ({
         color,
         fontSize,
         fontWeight,
+        ...rest,
       },
       displayName
     ),
