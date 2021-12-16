@@ -3,15 +3,10 @@ import cn from 'classnames'
 import {
   FlexLayer,
   BackgroundLayer,
-  BorderLayer,
   ContentLayer,
-  CornerLayer,
   MarginLayer,
   PaddingLayer,
   ColorLayer,
-  TextDecorationLayer,
-  FontLayer,
-  TextTransformLayer,
 } from 'layers'
 import { Props } from './types'
 import { component } from './data'
