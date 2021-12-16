@@ -1,5 +1,7 @@
 export { ARTICLE } from './axioms'
 
+export { Button } from './interactive'
+
 export {
   BackgroundImage,
   Cover,
