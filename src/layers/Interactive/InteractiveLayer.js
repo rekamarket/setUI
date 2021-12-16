@@ -2,25 +2,34 @@
 
 import * as InteractiveSizeStyleCssJs from "./Size/InteractiveSizeStyle.css.js";
 import * as InteractiveVariantStyleCssJs from "./Variant/InteractiveVariantStyle.css.js";
+import * as InteractiveColorStyleCssJs from "../Color/Interactive/InteractiveColorStyle.css.js";
+
+var interactiveColor = InteractiveColorStyleCssJs.InteractiveColorStyle;
 
 var interactiveSize = InteractiveSizeStyleCssJs.InteractiveSizeStyle;
 
 var interactiveVariant = InteractiveVariantStyleCssJs.InteractiveVariantStyle;
 
 function resolve(i) {
-  var match = i.size;
-  var match$1 = i.variant;
+  var match = i.color;
+  var match$1 = i.size;
+  var match$2 = i.variant;
   return [
-            match === "large" ? interactiveSize.style.large : (
-                match === "xsmall" ? interactiveSize.style.xsmall : (
-                    match === "medium" ? interactiveSize.style.medium : (
-                        match === "small" ? interactiveSize.style.small : interactiveSize.style.xlarge
+            match === "secondary" ? interactiveColor.style.secondary : (
+                match === "primary" ? interactiveColor.style.primary : (
+                    match === "black" ? interactiveColor.style.black : interactiveColor.style.white
+                  )
+              ),
+            match$1 === "large" ? interactiveSize.style.large : (
+                match$1 === "xsmall" ? interactiveSize.style.xsmall : (
+                    match$1 === "medium" ? interactiveSize.style.medium : (
+                        match$1 === "small" ? interactiveSize.style.small : interactiveSize.style.xlarge
                       )
                   )
               ),
-            match$1 === "solid" ? interactiveVariant.style.solid : (
-                match$1 === "ghost" ? interactiveVariant.style.ghost : (
-                    match$1 === "borderless" ? interactiveVariant.style.borderless : interactiveVariant.style.text
+            match$2 === "solid" ? interactiveVariant.style.solid : (
+                match$2 === "ghost" ? interactiveVariant.style.ghost : (
+                    match$2 === "borderless" ? interactiveVariant.style.borderless : interactiveVariant.style.text
                   )
               )
           ].join(" ");
@@ -31,9 +40,10 @@ var InteractiveLayer = {
 };
 
 export {
+  interactiveColor ,
   interactiveSize ,
   interactiveVariant ,
   InteractiveLayer ,
   
 }
-/* interactiveSize Not a pure module */
+/* interactiveColor Not a pure module */

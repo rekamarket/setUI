@@ -8,8 +8,7 @@ var options = {
     fontSize: "10px",
     borderRadius: "4px",
     borderWidth: "1px",
-    outlineWidth: String(1) + "px",
-    outlineOffset: String(-3) + "px"
+    outlineOffset: "-4px"
   },
   small: {
     paddingBlock: "10px",
@@ -17,8 +16,7 @@ var options = {
     fontSize: "12px",
     borderRadius: "6px",
     borderWidth: "1px",
-    outlineWidth: String(2) + "px",
-    outlineOffset: String(-4) + "px"
+    outlineOffset: "-4px"
   },
   medium: {
     paddingBlock: "12px",
@@ -26,8 +24,7 @@ var options = {
     fontSize: "14px",
     borderRadius: "8px",
     borderWidth: "2px",
-    outlineWidth: String(3) + "px",
-    outlineOffset: String(-6) + "px"
+    outlineOffset: "-8px"
   },
   large: {
     paddingBlock: "18px",
@@ -35,8 +32,7 @@ var options = {
     fontSize: "15px",
     borderRadius: "12px",
     borderWidth: "2px",
-    outlineWidth: String(3) + "px",
-    outlineOffset: String(-7) + "px"
+    outlineOffset: "-8px"
   },
   xlarge: {
     paddingBlock: "26px",
@@ -44,8 +40,7 @@ var options = {
     fontSize: "16px",
     borderRadius: "16px",
     borderWidth: "2px",
-    outlineWidth: String(4) + "px",
-    outlineOffset: String(-9) + "px"
+    outlineOffset: "-8px"
   }
 };
 
@@ -59,4 +54,4 @@ export {
   InteractiveSize ,
   
 }
-/* options Not a pure module */
+/* No side effect */

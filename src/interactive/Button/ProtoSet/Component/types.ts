@@ -1,4 +1,4 @@
-import type { IThemeColorLayer, IInteractiveLayer, IMarginLayer } from 'layers'
+import type { IInteractiveLayer, IMarginLayer } from 'layers'
 
 export type AsType = 'button' | 'div'
 
@@ -11,10 +11,7 @@ type ReactNode =
 // | null
 // | undefined;
 
-export interface Props
-  extends IThemeColorLayer,
-    IInteractiveLayer,
-    IMarginLayer {
+export interface Props extends IInteractiveLayer, IMarginLayer {
   as: AsType
   className?: string
   children: ReactNode

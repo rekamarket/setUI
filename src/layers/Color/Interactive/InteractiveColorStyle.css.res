@@ -1,9 +1,9 @@
-open ThemeColor
+open InteractiveColor
 
-@module("@vanilla-extract/css") external styleVariants: (ThemeColor.options, ThemeColor.cssResolve) => ThemeColor.variant = "styleVariants"
+@module("@vanilla-extract/css") external styleVariants: (InteractiveColor.options, InteractiveColor.cssResolve) => InteractiveColor.variant = "styleVariants"
 
-module ThemeColorStyle = {
-  include ThemeColor;
+module InteractiveColorStyle = {
+  include InteractiveColor;
 
   let style = styleVariants(options, (value) => {
     {

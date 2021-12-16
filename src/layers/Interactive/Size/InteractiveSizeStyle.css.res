@@ -12,7 +12,7 @@ module InteractiveSizeStyle = {
       "fontSize": value["fontSize"],
       "borderRadius": value["borderRadius"],
       "borderWidth": value["borderWidth"],
-      "outlineWidth": value["outlineWidth"],
+      "outlineWidth": value["borderWidth"],
       "outlineOffset": value["outlineOffset"],
     }
   })

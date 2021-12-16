@@ -33,18 +33,18 @@ var options = {
   }
 };
 
-var ThemeColor_key = ColorReflection.ColorReflection.key;
+var InteractiveColor_key = ColorReflection.ColorReflection.key;
 
-var ThemeColor_initial = ColorReflection.ColorReflection.initial;
+var InteractiveColor_initial = ColorReflection.ColorReflection.initial;
 
-var ThemeColor = {
-  key: ThemeColor_key,
-  initial: ThemeColor_initial,
+var InteractiveColor = {
+  key: InteractiveColor_key,
+  initial: InteractiveColor_initial,
   options: options
 };
 
 export {
-  ThemeColor ,
+  InteractiveColor ,
   
 }
 /* No side effect */

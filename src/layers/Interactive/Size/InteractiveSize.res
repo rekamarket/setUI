@@ -18,7 +18,6 @@ module InteractiveSize = {
     "fontSize": string,
     "borderRadius": string,
     "borderWidth": string,
-    "outlineWidth": string,
     "outlineOffset": string,
   };
 
@@ -37,8 +36,7 @@ module InteractiveSize = {
       "fontSize": "10px",
       "borderRadius": "4px",
       "borderWidth": "1px",
-      "outlineWidth": `${(24 / 16) -> Belt.Int.toString}px`,
-      "outlineOffset": `${(24 / -8) -> Belt.Int.toString}px`,
+      "outlineOffset": "-4px",
     },
 
     "small": {
@@ -47,8 +45,7 @@ module InteractiveSize = {
       "fontSize": "12px",
       "borderRadius": "6px",
       "borderWidth": "1px",
-      "outlineWidth": `${(36 / 16) -> Belt.Int.toString}px`,
-      "outlineOffset": `${(36 / -8) -> Belt.Int.toString}px`,
+      "outlineOffset": "-4px",
     },
 
     "medium": {
@@ -57,8 +54,7 @@ module InteractiveSize = {
       "fontSize": "14px",
       "borderRadius": "8px",
       "borderWidth": "2px",
-      "outlineWidth": `${(48 / 16) -> Belt.Int.toString}px`,
-      "outlineOffset": `${(48 / -8) -> Belt.Int.toString}px`,
+      "outlineOffset": "-8px",
     },
 
     "large": {
@@ -67,8 +63,7 @@ module InteractiveSize = {
       "fontSize": "15px",
       "borderRadius": "12px",
       "borderWidth": "2px",
-      "outlineWidth": `${(60 / 16) -> Belt.Int.toString}px`,
-      "outlineOffset": `${(60 / -8) -> Belt.Int.toString}px`,
+      "outlineOffset": "-8px",
     },
 
     "xlarge": {
@@ -77,8 +72,7 @@ module InteractiveSize = {
       "fontSize": "16px",
       "borderRadius": "16px",
       "borderWidth": "2px",
-      "outlineWidth": `${(72 / 16) -> Belt.Int.toString}px`,
-      "outlineOffset": `${(72 / -8) -> Belt.Int.toString}px`,
+      "outlineOffset": "-8px",
     },
   }
 

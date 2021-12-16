@@ -1,6 +1,6 @@
 open ColorReflection
 
-module ThemeColor = {
+module InteractiveColor = {
   include ColorReflection
 
   @genType

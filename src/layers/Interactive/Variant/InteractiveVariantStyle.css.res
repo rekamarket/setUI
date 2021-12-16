@@ -13,6 +13,10 @@ module InteractiveVariantStyle = {
       "borderStyle": "solid",
       "outlineStyle": "none",
       "transition": ".2s color ease-in, .2s border ease-in, .2s background ease-in",
+      ":hover": value[":hover"],
+      ":active": value[":active"],
+      ":focus": value[":focus"],
+      ":disabled": value[":disabled"],
     }
   })
 }

@@ -9,8 +9,8 @@ export { OverlayColorLayer_resolve as OverlayColorLayer } from './Color/Overlay/
 export type { IOverlayColorLayer_i as IOverlayColorLayer } from './Color/Overlay/OverlayColorLayer.gen'
 
 // themeColor
-export { ThemeColorLayer_resolve as ThemeColorLayer } from './Color/Theme/ThemeColorLayer.gen'
-export type { IThemeColorLayer_i as IThemeColorLayer } from './Color/Theme/ThemeColorLayer.gen'
+export { InteractiveColorLayer_resolve as InteractiveColorLayer } from './Color/Interactive/InteractiveColorLayer.gen'
+export type { IInteractiveColorLayer_i as IInteractiveolorLayer } from './Color/Interactive/InteractiveColorLayer.gen'
 
 // block
 export { BackgroundLayer_resolve as BackgroundLayer } from './Block/Background/BackgroundLayer.gen'
