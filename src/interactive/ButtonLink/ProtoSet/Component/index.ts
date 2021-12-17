@@ -1,11 +1,12 @@
 import { VFC, createElement } from 'react'
 import cn from 'classnames'
-import { ButtonLayer, MarginLayer } from 'layers'
+import { ButtonLinkLayer, MarginLayer } from 'layers'
 import { Props } from './types'
 import { ClassName } from './styles.css'
 
-const Button: VFC<Props> = ({
+const ButtonLink: VFC<Props> = ({
   className,
+  href,
   children,
 
   color,
@@ -21,14 +22,15 @@ const Button: VFC<Props> = ({
   ...rest
 }) =>
   createElement(
-    'button',
+    'a',
 
     {
+      href,
       className: cn([
         className,
         ClassName,
 
-        ButtonLayer({
+        ButtonLinkLayer({
           color,
           size,
           variant,
@@ -48,4 +50,4 @@ const Button: VFC<Props> = ({
   )
 
 export type { Props, NodeProps } from './types'
-export default Button
+export default ButtonLink

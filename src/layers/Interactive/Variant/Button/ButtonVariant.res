@@ -1,15 +1,10 @@
-module InteractiveVariant = {
-  let key = "interactiveVariant"
+open VariantReflection
+
+module ButtonVariant = {
+  include VariantReflection
 
   @genType
-  type t = [
-    | #solid
-    | #ghost
-    | #borderless
-    | #text
-  ]
-
-  let initial = #solid;
+  type i = { "variant": VariantReflection.t }
 
   type state = {
     "color": string,
@@ -189,13 +184,6 @@ module InteractiveVariant = {
       },
     },
   }
-
-  type variant = {
-    "solid": string,
-    "ghost": string,
-    "borderless": string,
-    "text": string,
-  };
 
   type stateOutput = {
     "color": string,

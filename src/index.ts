@@ -1,6 +1,6 @@
 export { ARTICLE } from './axioms'
 
-export { Button } from './interactive'
+export { Button, ButtonIcon, ButtonLink } from './interactive'
 
 export {
   BackgroundImage,

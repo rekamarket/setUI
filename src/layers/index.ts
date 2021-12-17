@@ -57,8 +57,11 @@ export { FontLayer_resolve as FontLayer } from './Font/FontLayer.gen'
 export type { IFontLayer_i as IFontLayer } from './Font/FontLayer.gen'
 
 // interactive
-export { InteractiveLayer_resolve as InteractiveLayer } from './Interactive/InteractiveLayer.gen'
-export type { IInteractiveLayer_i as IInteractiveLayer } from './Interactive/InteractiveLayer.gen'
+export { ButtonLayer_resolve as ButtonLayer } from './Interactive/ButtonLayer.gen'
+export type { IButtonLayer_i as IButtonLayer } from './Interactive/ButtonLayer.gen'
+
+export { ButtonLinkLayer_resolve as ButtonLinkLayer } from './Interactive/ButtonLinkLayer.gen'
+export type { IButtonLinkLayer_i as IButtonLinkLayer } from './Interactive/ButtonLinkLayer.gen'
 
 // text
 export { TextDecorationLayer_resolve as TextDecorationLayer } from './Text/Decoration/TextDecorationLayer.gen'

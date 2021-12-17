@@ -1,4 +1,4 @@
-import type { IButtonLayer, IMarginLayer } from 'layers'
+import type { IButtonLinkLayer, IMarginLayer } from 'layers'
 
 type ReactNode =
   | React.ReactChild
@@ -10,11 +10,11 @@ type ReactNode =
 // | undefined;
 
 export type NodeProps = Omit<
-  React.HTMLProps<HTMLButtonElement>,
+  React.HTMLProps<HTMLAnchorElement>,
   'color' | 'size'
 >
 
-export interface Props extends NodeProps, IButtonLayer, IMarginLayer {
+export interface Props extends NodeProps, IButtonLinkLayer, IMarginLayer {
   className?: string
   children: ReactNode
 }

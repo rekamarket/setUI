@@ -8,16 +8,16 @@ open InteractiveSize;
 type interactiveSize = { style: InteractiveSize.variant }
 @module("./Size/InteractiveSizeStyle.css.js") external interactiveSize: interactiveSize = "InteractiveSizeStyle"
 
-open InteractiveVariant;
-type interactiveVariant = { style: InteractiveVariant.variant }
-@module("./Variant/InteractiveVariantStyle.css.js") external interactiveVariant: interactiveVariant = "InteractiveVariantStyle"
+open ButtonVariant;
+type variant = { style: ButtonVariant.variant }
+@module("./Variant/Button/ButtonVariantStyle.css.js") external variant: variant = "ButtonVariantStyle"
 
-module InteractiveLayer = {
+module ButtonLayer = {
   @genType
   type i = {
     "color": InteractiveColor.t,
     "size": InteractiveSize.t,
-    "variant": InteractiveVariant.t,
+    "variant": ButtonVariant.t,
   }
 
   @genType
@@ -38,10 +38,10 @@ module InteractiveLayer = {
     },
 
     switch (i["variant"]) {
-    | #solid      => interactiveVariant.style["solid"]
-    | #ghost      => interactiveVariant.style["ghost"]
-    | #borderless => interactiveVariant.style["borderless"]
-    | #text       => interactiveVariant.style["text"]
+    | #solid      => variant.style["solid"]
+    | #ghost      => variant.style["ghost"]
+    | #borderless => variant.style["borderless"]
+    | #text       => variant.style["text"]
     },
   ] -> joinWith(" ");
 }

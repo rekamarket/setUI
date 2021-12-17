@@ -1,9 +1,9 @@
-open InteractiveVariant
+open ButtonVariant
 
-@module("@vanilla-extract/css") external styleVariants: (InteractiveVariant.options, InteractiveVariant.cssResolve) => InteractiveVariant.variant = "styleVariants"
+@module("@vanilla-extract/css") external styleVariants: (ButtonVariant.options, ButtonVariant.cssResolve) => ButtonVariant.variant = "styleVariants"
 
-module InteractiveVariantStyle = {
-  include InteractiveVariant;
+module ButtonVariantStyle = {
+  include ButtonVariant;
 
   let style = styleVariants(options, (value) => {
     {
