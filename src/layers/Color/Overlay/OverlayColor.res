@@ -9,10 +9,10 @@ module OverlayColor = {
   type value = string;
 
   let options = {
-    "primary": "#0078D4",
-    "secondary": "#2B88D8",
-    "black": "#000000",
-    "white": "#FFFFFF",
+    "primary": "#2B88D8",
+    "secondary": "#0078D4",
+    "black": "#FFFFFF",
+    "white": "#000000",
   };
 
   type options = {
