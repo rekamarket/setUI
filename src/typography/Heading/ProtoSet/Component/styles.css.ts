@@ -1,6 +1,8 @@
 import { style } from '@vanilla-extract/css'
 
 export const ClassName = style({
+  wordBreak: 'break-all',
+
   selectors: {
     '&::before': {
       content: `""`,
