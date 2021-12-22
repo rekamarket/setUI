@@ -1,51 +1,48 @@
 import { VFC, createElement } from 'react'
 import cn from 'classnames'
-import { ButtonLayer, MarginLayer } from 'layers'
 import { Props } from './types'
-import { ClassName } from './styles.css'
+import {
+  ClassName,
+  ClassNameHasIcon,
+  ContentStart,
+  Content,
+} from './styles.css'
+import Component from '../HostComponent'
+import { LoaderIcon } from '../../../injections'
 
-const Button: VFC<Props> = ({
-  className,
-  children,
-
-  color,
-  size,
-  variant,
-
-  // margin
-  marginBlockEnd,
-  marginBlockStart,
-  marginInlineEnd,
-  marginInlineStart,
-
-  ...rest
-}) =>
-  createElement(
-    'button',
-
-    {
-      className: cn([
+const Button: VFC<Props> = (props) => {
+  switch (true) {
+    case props.loading: {
+      const {
         className,
-        ClassName,
+        loading = false,
+        loadingNode = LoaderIcon,
+        ...rest
+      } = props
 
-        ButtonLayer({
-          color,
-          size,
-          variant,
+      return Component({
+        ...rest,
+        className: cn(ClassName, className, loading && ClassNameHasIcon),
+
+        slotStart: createElement(
+          'span',
+          {
+            className: ContentStart,
+          },
+          loadingNode
+        ),
+
+        slotMiddle: createElement('span', {
+          className: Content,
         }),
+      })
+    }
 
-        MarginLayer({
-          marginBlockEnd,
-          marginBlockStart,
-          marginInlineEnd,
-          marginInlineStart,
-        }),
-      ]),
-      ...rest,
-    },
+    default: {
+      return Component(props)
+    }
+  }
+}
 
-    children
-  )
-
-export type { Props, NodeProps } from './types'
+export type { Props } from './types'
 export default Button

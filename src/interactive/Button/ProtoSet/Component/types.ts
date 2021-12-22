@@ -1,4 +1,4 @@
-import type { IButtonLayer, IMarginLayer } from 'layers'
+import type { Props as HostProps } from '../HostComponent'
 
 type ReactNode =
   | React.ReactChild
@@ -9,12 +9,8 @@ type ReactNode =
 // | null
 // | undefined;
 
-export type NodeProps = Omit<
-  React.HTMLProps<HTMLButtonElement>,
-  'color' | 'size'
->
-
-export interface Props extends NodeProps, IButtonLayer, IMarginLayer {
-  className?: string
-  children: ReactNode
+export interface Props
+  extends Omit<HostProps, 'slotStart' | 'slotMiddle' | 'slotEnd'> {
+  loading?: boolean
+  loadingNode?: ReactNode
 }
