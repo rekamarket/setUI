@@ -3,10 +3,10 @@
 import * as ColorReflection from "../ColorReflection.js";
 
 var options = {
-  primary: "#0078D4",
-  secondary: "#2B88D8",
-  black: "#000000",
-  white: "#FFFFFF"
+  primary: "#2B88D8",
+  secondary: "#0078D4",
+  black: "#FFFFFF",
+  white: "#000000"
 };
 
 var OverlayColor_key = ColorReflection.ColorReflection.key;
