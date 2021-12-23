@@ -5,6 +5,6 @@ const rotate = keyframes({
 })
 
 export const ClassName = style({
-  display: 'inline-block',
+  display: 'flex',
   animation: `1s infinite ${rotate} linear`,
 })
