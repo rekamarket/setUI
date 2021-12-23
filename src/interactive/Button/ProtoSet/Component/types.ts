@@ -13,4 +13,6 @@ export interface Props
   extends Omit<HostProps, 'slotStart' | 'slotMiddle' | 'slotEnd'> {
   loading?: boolean
   loadingNode?: ReactNode
+  iconNode?: ReactNode
+  iconPosition?: 'start' | 'end'
 }

@@ -1,13 +1,6 @@
 import { style } from '@vanilla-extract/css'
 
-export const ClassName = style({
-  fontWeight: 700,
-  textTransform: 'uppercase',
-  fontFamily: `'Montserrat', Arial, sans-serif`,
-  display: 'flex',
-  alignItems: 'center',
-  gap: 'var(--gap)',
-})
+export const ClassName = style({})
 
 export const ContentStart = style({
   ':empty': {

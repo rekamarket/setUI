@@ -13,9 +13,10 @@ module InteractiveSize = {
   let initial = #medium;
 
   type value = {
-    "paddingBlock": string,
-    "paddingInline": string,
-    "fontSize": string,
+    "--gap-overlap": string,
+    "--spacing-inline": string,
+    "--spacing-block": string,
+    "--font-size": string,
     "borderRadius": string,
     "borderWidth": string,
     "outlineOffset": string,
@@ -31,48 +32,53 @@ module InteractiveSize = {
 
   let options = {
     "xsmall": {
-      "paddingBlock": "7px",
-      "paddingInline": "12px",
-      "fontSize": "10px",
-      "borderRadius": "4px",
+      "--gap-overlap": "1em",
+      "--spacing-inline": "2em",
+      "--spacing-block": "1em",
+      "--font-size": "0.75em",
+      "borderRadius": "2px",
       "borderWidth": "1px",
       "outlineOffset": "-4px",
     },
 
     "small": {
-      "paddingBlock": "10px",
-      "paddingInline": "16px",
-      "fontSize": "12px",
-      "borderRadius": "6px",
+      "--gap-overlap": "1em",
+      "--spacing-inline": "2em",
+      "--spacing-block": "1em",
+      "--font-size": "0.85em",
+      "borderRadius": "3px",
       "borderWidth": "1px",
       "outlineOffset": "-4px",
     },
 
     "medium": {
-      "paddingBlock": "12px",
-      "paddingInline": "20px",
-      "fontSize": "14px",
-      "borderRadius": "8px",
-      "borderWidth": "2px",
-      "outlineOffset": "-8px",
+      "--gap-overlap": "1em",
+      "--spacing-inline": "2em",
+      "--spacing-block": "1em",
+      "--font-size": "1em",
+      "borderRadius": "4px",
+      "borderWidth": "1px",
+      "outlineOffset": "-4px",
     },
 
     "large": {
-      "paddingBlock": "18px",
-      "paddingInline": "24px",
-      "fontSize": "15px",
-      "borderRadius": "12px",
+      "--gap-overlap": "1em",
+      "--spacing-inline": "2em",
+      "--spacing-block": "1em",
+      "--font-size": "1.2em",
+      "borderRadius": "6px",
       "borderWidth": "2px",
-      "outlineOffset": "-8px",
+      "outlineOffset": "-4px",
     },
 
     "xlarge": {
-      "paddingBlock": "26px",
-      "paddingInline": "32px",
-      "fontSize": "16px",
-      "borderRadius": "16px",
+      "--gap-overlap": "1em",
+      "--spacing-inline": "2em",
+      "--spacing-block": "1em",
+      "--font-size": "1.5em",
+      "borderRadius": "8px",
       "borderWidth": "2px",
-      "outlineOffset": "-8px",
+      "outlineOffset": "-4px",
     },
   }
 
@@ -85,12 +91,12 @@ module InteractiveSize = {
   };
 
   type output = {
-    "paddingBlock": string,
-    "paddingInline": string,
-    "fontSize": string,
+    "--gap-overlap": string,
+    "--spacing-inline": string,
+    "--spacing-block": string,
+    "--font-size": string,
     "borderRadius": string,
     "borderWidth": string,
-    "outlineWidth": string,
     "outlineOffset": string,
   }
 

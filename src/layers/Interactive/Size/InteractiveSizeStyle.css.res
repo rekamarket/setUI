@@ -7,12 +7,12 @@ module InteractiveSizeStyle = {
 
   let style = styleVariants(options, (value) => {
     {
-      "paddingBlock": value["paddingBlock"],
-      "paddingInline": value["paddingInline"],
-      "fontSize": value["fontSize"],
+      "--gap-overlap": value["--gap-overlap"],
+      "--spacing-inline": value["--spacing-inline"],
+      "--spacing-block": value["--spacing-block"],
+      "--font-size": value["--font-size"],
       "borderRadius": value["borderRadius"],
       "borderWidth": value["borderWidth"],
-      "outlineWidth": value["borderWidth"],
       "outlineOffset": value["outlineOffset"],
     }
   })

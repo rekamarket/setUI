@@ -3,45 +3,91 @@ import cn from 'classnames'
 import { Props } from './types'
 import {
   ClassName,
-  ClassNameHasIcon,
+  RootStart,
+  RootEnd,
+  RootHasIcon,
+  RootLoading,
   ContentStart,
   Content,
+  ContentEnd,
+  Loader,
 } from './styles.css'
 import Component from '../HostComponent'
 import { LoaderIcon } from '../../../injections'
 
-const Button: VFC<Props> = (props) => {
-  switch (true) {
-    case props.loading: {
-      const {
-        className,
-        loading = false,
-        loadingNode = LoaderIcon,
-        ...rest
-      } = props
+const slotMiddle = createElement('span', {
+  className: Content,
+})
 
-      return Component({
-        ...rest,
-        className: cn(ClassName, className, loading && ClassNameHasIcon),
+const Button: VFC<Props> = ({
+  className,
+  iconNode,
+  iconPosition = 'start',
+  loading = false,
+  loadingNode = LoaderIcon,
+  ...props
+}) => {
+  const node = loading ? loadingNode : iconNode
 
-        slotStart: createElement(
-          'span',
-          {
-            className: ContentStart,
-          },
-          loadingNode
-        ),
+  if (node) {
+    switch (iconPosition) {
+      case 'start': {
+        return Component({
+          ...props,
+          className: cn(
+            className,
+            ClassName,
+            RootStart,
+            iconNode && RootHasIcon,
+            loading && RootLoading
+          ),
 
-        slotMiddle: createElement('span', {
-          className: Content,
-        }),
-      })
-    }
+          slotStart: createElement(
+            'span',
+            {
+              className: cn(ContentStart, loading && Loader),
+            },
+            node
+          ),
 
-    default: {
-      return Component(props)
+          slotMiddle,
+        })
+      }
+
+      case 'end': {
+        return Component({
+          ...props,
+          className: cn(
+            className,
+            ClassName,
+            RootEnd,
+            iconNode && RootHasIcon,
+            loading && RootLoading
+          ),
+
+          slotMiddle,
+
+          slotEnd: createElement(
+            'span',
+            {
+              className: cn(ContentEnd, loading && Loader),
+            },
+            node
+          ),
+        })
+      }
+
+      default: {
+        throw new Error('unknown `iconPosition` property for <Button />')
+      }
     }
   }
+
+  return Component({
+    ...props,
+    className: cn(className, ClassName),
+    slotMiddle,
+  })
 }
 
 export type { Props } from './types'

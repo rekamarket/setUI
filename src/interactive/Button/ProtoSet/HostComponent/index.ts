@@ -64,14 +64,21 @@ const Host: VFC<Props> = ({
             },
             children
           )
-        : children,
+        : createElement(
+            'span',
+            {
+              key: 'Content',
+              className: Content,
+            },
+            children
+          ),
 
       slotEnd &&
         cloneElement(slotEnd, {
           key: 'ContentEnd',
           className: cn(ContentEnd, slotEnd.props.className),
         }),
-    ]
+    ].filter(Boolean)
   )
 
 export type { Props, NodeProps } from './types'
