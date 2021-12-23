@@ -17,6 +17,6 @@ export const defaultProps: Omit<Props, 'children'> = {
 
   paddingBlockEnd: 'none',
   paddingBlockStart: 'none',
-  paddingInlineEnd: 'none',
-  paddingInlineStart: 'none',
+  paddingInlineEnd: 'medium',
+  paddingInlineStart: 'medium',
 }
