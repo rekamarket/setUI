@@ -2,16 +2,17 @@ import { VFC } from 'react'
 import cn from 'classnames'
 import { object } from 'utils'
 import { useColor, useFontSize } from 'layers'
-import { defaultProps } from '../defaultProps'
-import ProtoSet from '../../../ProtoSet'
-import { Props } from './types'
-import { ClassName } from '../styles.css'
+import { defaultProps } from './defaultProps'
+import { ClassName } from './styles.css'
+import { NonRepresentation, MinimumRepresentation } from '../types'
+import ProtoSet from '../ProtoSet'
 
-export const displayName = 'H5'
+export const displayName = 'Set'
 
-const H5: VFC<Props> = ({
+const Component: VFC<NonRepresentation & MinimumRepresentation> = ({
   className,
   children,
+  level = 1,
   fontSize: fontSizeFromProps,
   color: colorFromProps,
   ...rest
@@ -20,8 +21,6 @@ const H5: VFC<Props> = ({
   const fontSize = useFontSize()
 
   return ProtoSet({
-    children,
-
     ...object.mergePropsWithWarning(
       defaultProps,
       {
@@ -33,11 +32,12 @@ const H5: VFC<Props> = ({
     ),
 
     // override
-    level: 5,
+    children,
+    level,
     className: cn(ClassName, className),
   })
 }
 
-H5.displayName = displayName
+Component.displayName = displayName
 
-export default H5
+export default Component

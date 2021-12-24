@@ -1,3 +1,4 @@
-export { default as Configurable } from './Configurable'
-export { default as Idiomatic } from './Idiomatic'
-export { ClassName as h3 } from './styles.css'
+export { default as Generic } from './Generic'
+export { default as Pure } from './Pure'
+export { ClassName } from './styles.css'
+export { defaultProps as styles } from './defaultProps'

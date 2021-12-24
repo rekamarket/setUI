@@ -1,4 +1,4 @@
-export { default as Configurable } from './Configurable'
-export { default as Idiomatic } from './Idiomatic'
-export type { Props } from './Idiomatic/types'
-export { ClassName as heading } from './styles.css'
+export { default as Generic } from './Generic'
+export { default as Pure } from './Pure'
+export { ClassName } from './styles.css'
+export { defaultProps as styles } from './defaultProps'
