@@ -2,16 +2,24 @@ import { VFC } from 'react'
 import cn from 'classnames'
 import { object } from 'utils'
 import { useColor, useFontSize } from 'layers'
-import { defaultProps } from './defaultProps'
-import { ClassName } from './styles.css'
+import { displayName as pureName } from './Pure'
 import { NonRepresentation, MinimumRepresentation } from '../../types'
 import ProtoSet from '../../ProtoSet'
+import { defaultProps } from './defaultProps'
+import { ClassName } from './styles.css'
 
-export const displayName = 'H1'
+export const displayName = `${pureName}.Mimic`
 
-export interface Props extends NonRepresentation, MinimumRepresentation {}
+type AsLevelType = 1 | 2 | 4 | 5 | 6
 
-const Component: VFC<Props> = ({
+interface MimicProps {
+  as: AsLevelType
+}
+
+const Component: VFC<
+  MimicProps & NonRepresentation & MinimumRepresentation
+> = ({
+  as,
   className,
   children,
   fontSize: fontSizeFromProps,
@@ -34,7 +42,7 @@ const Component: VFC<Props> = ({
 
     // override
     OVERRIDE_TAG_SEMANTICS: false,
-    level: 1,
+    level: as,
     children,
     className: cn(ClassName, className),
   })

@@ -9,7 +9,9 @@ import ProtoSet from '../../ProtoSet'
 
 export const displayName = 'H3'
 
-const Component: VFC<NonRepresentation & MinimumRepresentation> = ({
+export interface Props extends NonRepresentation, MinimumRepresentation {}
+
+const Component: VFC<Props> = ({
   className,
   children,
   fontSize: fontSizeFromProps,
