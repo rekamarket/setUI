@@ -1,4 +1,4 @@
-import React, { cloneElement, VFC } from 'react'
+import { createElement, cloneElement, VFC } from 'react'
 import cn from 'classnames'
 import { object } from 'utils'
 import { defaultProps } from './defaultProps'
@@ -10,7 +10,11 @@ import { ColorContext, OverlayColorLayer } from 'layers'
 export const displayName = 'Cover'
 
 const Section: VFC<Props> = ({ color, className, ...props }) =>
-  [<ColorContext.Provider value={color} />].reduce(
+  [
+    createElement(ColorContext.Provider, {
+      value: color,
+    }),
+  ].reduce(
     (prev, provider) => cloneElement(provider, {}, prev),
     ProtoSet({
       ...object.mergePropsWithWarning(defaultProps, props, displayName),

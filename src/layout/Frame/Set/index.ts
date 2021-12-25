@@ -1,4 +1,4 @@
-import React, { cloneElement, VFC } from 'react'
+import { createElement, cloneElement, VFC } from 'react'
 import cn from 'classnames'
 import { object } from 'utils'
 import { defaultProps } from './defaultProps'
@@ -11,15 +11,19 @@ import { FontSizeContext } from 'layers'
 export const displayName = 'Frame'
 
 const Set: VFC<Props> = ({ children, className, fontSize, ...props }) =>
-  [<FontSizeContext.Provider value={fontSize} />].reduce(
+  [
+    createElement(FontSizeContext.Provider, {
+      value: fontSize,
+    }),
+  ].reduce(
     (prev, provider) => cloneElement(provider, {}, prev),
     ProtoSet({
       fontSize,
-      children,
 
       ...object.mergePropsWithWarning(defaultProps, props),
 
       // props override
+      children,
       as: 'div',
       className: cn(ClassName, className, ARTICLE),
     })
