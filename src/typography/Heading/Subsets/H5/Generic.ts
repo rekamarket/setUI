@@ -14,8 +14,9 @@ const Component: VFC<NonSemantic> = ({ children, className, ...props }) =>
     ...object.mergePropsWithWarning(defaultProps, props),
 
     // props override
-    children,
+    OVERRIDE_TAG_SEMANTICS: false,
     level: 5,
+    children,
     className: cn(ClassName, className),
   })
 

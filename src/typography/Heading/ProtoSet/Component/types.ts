@@ -20,6 +20,11 @@ type ReactNode =
 // | null
 // | undefined;
 
+export type NodeProps = Omit<
+  React.HTMLProps<HTMLHeadingElement>,
+  'color' | 'size'
+>
+
 export interface Props
   extends ICharsPerLineLayer,
     IContentLayer,
@@ -28,6 +33,7 @@ export interface Props
     IColorLayer,
     IFontLayer,
     ITextTransformLayer {
+  OVERRIDE_TAG_SEMANTICS: boolean
   level: LevelType
   className?: string
   title?: string

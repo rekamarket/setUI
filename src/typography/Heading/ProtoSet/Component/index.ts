@@ -9,12 +9,13 @@ import {
   FontLayer,
   TextTransformLayer,
 } from 'layers'
-import { Props } from './types'
+import { Props, NodeProps } from './types'
 import { headers } from './data'
 import { ClassName } from './styles.css'
 
-const Heading: VFC<Props> = ({
+const Heading: VFC<Props & NodeProps> = ({
   // basic
+  OVERRIDE_TAG_SEMANTICS,
   level,
   className,
   title,
@@ -48,11 +49,20 @@ const Heading: VFC<Props> = ({
   paddingBlockStart,
   paddingInlineEnd,
   paddingInlineStart,
+
+  ...rest
 }) =>
   createElement(
-    headers[level],
+    OVERRIDE_TAG_SEMANTICS ? 'div' : headers[level],
 
     {
+      ...(OVERRIDE_TAG_SEMANTICS
+        ? {
+            role: 'heading',
+            'aria-level': level,
+          }
+        : {}),
+
       className: cn([
         className,
         ClassName,
@@ -95,12 +105,12 @@ const Heading: VFC<Props> = ({
         }),
       ]),
       title,
+      ...rest,
     },
 
     children
   )
 
 export { LevelKeys } from './types'
-export type { Props } from './types'
-
+export type { Props, NodeProps } from './types'
 export default Heading

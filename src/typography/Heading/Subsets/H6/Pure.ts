@@ -31,8 +31,9 @@ const Component: VFC<NonRepresentation & MinimumRepresentation> = ({
     ),
 
     // override
-    children,
+    OVERRIDE_TAG_SEMANTICS: false,
     level: 6,
+    children,
     className: cn(ClassName, className),
   })
 }

@@ -5,11 +5,11 @@ export type NonSemantic = Omit<ParentProps, 'level'>
 
 export type NonRepresentation = Pick<
   ParentProps,
-  'level' | 'children' | 'className'
+  'OVERRIDE_TAG_SEMANTICS' | 'level' | 'children' | 'className' | 'title'
 >
 export type PureRepresentation = Omit<
   ParentProps,
-  'level' | 'children' | 'className'
+  'OVERRIDE_TAG_SEMANTICS' | 'level' | 'children' | 'className' | 'title'
 >
 
 export type MinimumRepresentation = Partial<
