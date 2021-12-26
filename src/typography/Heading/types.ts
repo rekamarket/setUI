@@ -1,12 +1,14 @@
 import type { Props as ParentProps } from './ProtoSet'
 
 export type { Props } from './ProtoSet'
-export type NonSemantic = Omit<ParentProps, 'level'>
 
+export type Semantic = Pick<ParentProps, 'level' | 'OVERRIDE_TAG_SEMANTICS'>
+export type NonSemantic = Omit<ParentProps, 'level' | 'OVERRIDE_TAG_SEMANTICS'> // Props - Semantic
 export type NonRepresentation = Pick<
-  ParentProps,
-  'OVERRIDE_TAG_SEMANTICS' | 'level' | 'children' | 'className' | 'title'
+  NonSemantic,
+  'children' | 'className' | 'title'
 >
+
 export type PureRepresentation = Omit<
   ParentProps,
   'OVERRIDE_TAG_SEMANTICS' | 'level' | 'children' | 'className' | 'title'
@@ -14,7 +16,7 @@ export type PureRepresentation = Omit<
 
 export type MinimumRepresentation = Partial<
   Pick<
-    ParentProps,
+    PureRepresentation,
     | 'color'
     | 'fontFamily'
     | 'fontSize'

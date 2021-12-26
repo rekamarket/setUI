@@ -1,5 +1,5 @@
 import type { Props } from './types'
-import { Generic, Pure } from './Set'
+import { Generic } from './Set'
 
 import {
   H1Generic as H1,
@@ -14,7 +14,6 @@ interface CompoundedComponent
   extends React.ForwardRefExoticComponent<
     Props & React.RefAttributes<HTMLElement>
   > {
-  Set: typeof Generic
   H1: typeof H1
   H2: typeof H2
   H3: typeof H3
@@ -23,10 +22,9 @@ interface CompoundedComponent
   H6: typeof H6
 }
 
-const Heading = Pure as CompoundedComponent
+const Heading = Generic as CompoundedComponent
 
 // subsets
-Heading.Set = Generic
 Heading.H1 = H1
 Heading.H2 = H2
 Heading.H3 = H3
@@ -35,5 +33,6 @@ Heading.H5 = H5
 Heading.H6 = H6
 
 export type { Props } from './types'
+export { Pure as H, h } from './Set'
 export { H1, h1, H2, h2, H3, h3, H4, h4, H5, h5, H6, h6 } from './Subsets'
 export default Heading

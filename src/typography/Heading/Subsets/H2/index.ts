@@ -1,16 +1,16 @@
-import { default as Hollow } from './Hollow'
+import { default as Mimic } from './Mimic'
 import { default as Pure, Props } from './Pure'
 
 interface CompoundedComponent
   extends React.ForwardRefExoticComponent<
     Props & React.RefAttributes<HTMLElement>
   > {
-  Hollow: typeof Hollow
+  Mimic: typeof Mimic
 }
 
 const H2 = Pure as CompoundedComponent
 
-H2.Hollow = Hollow
+H2.Mimic = Mimic
 
 export { default as Generic } from './Generic'
 export { ClassName } from './styles.css'

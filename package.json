@@ -1,6 +1,6 @@
 {
   "private": false,
-  "version": "0.0.74",
+  "version": "0.0.80",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",

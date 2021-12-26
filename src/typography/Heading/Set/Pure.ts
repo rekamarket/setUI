@@ -4,15 +4,20 @@ import { object } from 'utils'
 import { useColor, useFontSize } from 'layers'
 import { defaultProps } from './defaultProps'
 import { ClassName } from './styles.css'
-import { NonRepresentation, MinimumRepresentation } from '../types'
+import { Semantic, NonRepresentation, MinimumRepresentation } from '../types'
 import ProtoSet from '../ProtoSet'
 
-export const displayName = 'Set'
+export const displayName = 'H'
 
-const Component: VFC<NonRepresentation & MinimumRepresentation> = ({
+export interface Props
+  extends Pick<Semantic, 'level'>,
+    NonRepresentation,
+    MinimumRepresentation {}
+
+const Component: VFC<Props> = ({
+  level = 1,
   className,
   children,
-  level = 1,
   fontSize: fontSizeFromProps,
   color: colorFromProps,
   ...rest
@@ -32,8 +37,9 @@ const Component: VFC<NonRepresentation & MinimumRepresentation> = ({
     ),
 
     // override
-    children,
+    OVERRIDE_TAG_SEMANTICS: false,
     level,
+    children,
     className: cn(ClassName, className),
   })
 }

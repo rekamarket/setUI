@@ -15,6 +15,8 @@ export {
   BlockQuote,
   blockQuote,
   Heading,
+  H,
+  h,
   H1,
   h1,
   H2,

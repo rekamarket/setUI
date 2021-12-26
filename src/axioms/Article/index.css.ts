@@ -1,12 +1,71 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React from 'react'
 import { globalStyle, style } from '@vanilla-extract/css'
-import { h1, h2, h3, h4, h5, h6, paragraph, textBlock } from '../../typography'
+import {
+  h,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  paragraph,
+  textBlock,
+} from '../../typography'
 import { list, orderedList, unorderedList } from '../../layout'
 
 const className = style({})
 
+// h
+globalStyle(`${className} ${h} + ${h1}`, {
+  paddingTop: 0,
+})
+
+globalStyle(`${className} ${h} + ${h2}`, {
+  paddingTop: 0,
+})
+
+globalStyle(`${className} ${h} + ${h3}`, {
+  paddingTop: 0,
+})
+
+globalStyle(`${className} ${h} + ${h4}`, {
+  paddingTop: 0,
+})
+
+globalStyle(`${className} ${h} + ${h5}`, {
+  paddingTop: 0,
+})
+
+globalStyle(`${className} ${h} + ${h6}`, {
+  paddingTop: 0,
+})
+
+// globalStyle(`${className} ${h} + ${paragraph}`, {
+//   paddingTop: 0,
+// })
+
+// globalStyle(`${className} ${h} + ${textBlock}`, {
+//   paddingTop: 0,
+// })
+
+globalStyle(`${className} ${h} + ${list}`, {
+  paddingTop: 0,
+})
+
+globalStyle(`${className} ${h} + ${orderedList}`, {
+  paddingTop: 0,
+})
+
+globalStyle(`${className} ${h} + ${unorderedList}`, {
+  paddingTop: 0,
+})
+
 // h1
+globalStyle(`${className} ${h1} + ${h}`, {
+  paddingTop: 0,
+})
+
 globalStyle(`${className} ${h1} + ${h1}`, {
   fontSize: '0 !important',
 })
@@ -52,6 +111,10 @@ globalStyle(`${className} ${h1} + ${unorderedList}`, {
 })
 
 // h2
+globalStyle(`${className} ${h2} + ${h}`, {
+  paddingTop: 0,
+})
+
 globalStyle(`${className} ${h2} + ${h1}`, {
   fontSize: '0 !important',
 })
@@ -97,6 +160,10 @@ globalStyle(`${className} ${h2} + ${unorderedList}`, {
 })
 
 // h3
+globalStyle(`${className} ${h3} + ${h}`, {
+  paddingTop: 0,
+})
+
 globalStyle(`${className} ${h3} + ${h1}`, {
   fontSize: '0 !important',
 })
@@ -142,6 +209,10 @@ globalStyle(`${className} ${h3} + ${unorderedList}`, {
 })
 
 // h4
+globalStyle(`${className} ${h4} + ${h}`, {
+  paddingTop: 0,
+})
+
 globalStyle(`${className} ${h4} + ${h1}`, {
   fontSize: '0 !important',
 })
@@ -187,6 +258,10 @@ globalStyle(`${className} ${h4} + ${unorderedList}`, {
 })
 
 // h5
+globalStyle(`${className} ${h5} + ${h}`, {
+  paddingTop: 0,
+})
+
 globalStyle(`${className} ${h5} + ${h1}`, {
   fontSize: '0 !important',
 })
@@ -232,6 +307,10 @@ globalStyle(`${className} ${h5} + ${unorderedList}`, {
 })
 
 // h6
+globalStyle(`${className} ${h6} + ${h}`, {
+  paddingTop: 0,
+})
+
 globalStyle(`${className} ${h6} + ${h1}`, {
   fontSize: '0 !important',
 })
@@ -277,6 +356,10 @@ globalStyle(`${className} ${h6} + ${unorderedList}`, {
 })
 
 // paragraph
+globalStyle(`${className} ${paragraph} + ${h}`, {
+  paddingTop: 0,
+})
+
 globalStyle(`${className} ${paragraph} + ${h1}`, {
   paddingTop: 0,
 })
@@ -322,6 +405,10 @@ globalStyle(`${className} ${paragraph} + ${unorderedList}`, {
 })
 
 // textBlock
+globalStyle(`${className} ${textBlock} + ${h}`, {
+  paddingTop: 0,
+})
+
 globalStyle(`${className} ${textBlock} + ${h1}`, {
   paddingTop: 0,
 })
@@ -367,6 +454,10 @@ globalStyle(`${className} ${textBlock} + ${unorderedList}`, {
 })
 
 // list
+globalStyle(`${className} ${list} + ${h}`, {
+  paddingTop: 0,
+})
+
 globalStyle(`${className} ${list} + ${h1}`, {
   paddingTop: 0,
 })
@@ -412,6 +503,10 @@ globalStyle(`${className} ${list} + ${unorderedList}`, {
 })
 
 // orderedList
+globalStyle(`${className} ${orderedList} + ${h}`, {
+  paddingTop: 0,
+})
+
 globalStyle(`${className} ${orderedList} + ${h1}`, {
   paddingTop: 0,
 })
@@ -457,6 +552,10 @@ globalStyle(`${className} ${orderedList} + ${unorderedList}`, {
 })
 
 // unorderedList
+globalStyle(`${className} ${unorderedList} + ${h}`, {
+  paddingTop: 0,
+})
+
 globalStyle(`${className} ${unorderedList} + ${h1}`, {
   paddingTop: 0,
 })
