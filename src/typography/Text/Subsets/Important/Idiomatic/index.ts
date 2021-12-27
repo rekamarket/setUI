@@ -1,5 +1,5 @@
 import { VFC } from 'react'
-import { useFontSize } from 'layers'
+import { useColor, useFontSize } from 'layers'
 import { object } from 'utils'
 import { defaultProps } from '../defaultProps'
 import ProtoSet from '../../../ProtoSet'
@@ -10,9 +10,11 @@ export const displayName = 'Important'
 const Important: VFC<Props> = ({
   className,
   children,
+  color: colorFromProps,
   fontSize: fontSizeFromProps,
   ...rest
 }) => {
+  const color = useColor()
   const fontSize = useFontSize()
 
   return ProtoSet({
@@ -22,6 +24,7 @@ const Important: VFC<Props> = ({
     ...object.mergePropsWithWarning(
       defaultProps,
       {
+        color: colorFromProps || color,
         fontSize: fontSizeFromProps || fontSize,
         ...rest,
       },

@@ -53,12 +53,16 @@ const BackgroundImage: VFC<Props> = ({
   paddingBlockStart,
   paddingInlineEnd,
   paddingInlineStart,
+
+  style,
+  ...rest
 }) => {
-  const style = useMemo(
+  const styleMerged = useMemo(
     () => ({
+      ...style,
       backgroundImage: `url(${image})`,
     }),
-    [image]
+    [style, image]
   )
 
   return createElement(
@@ -111,7 +115,8 @@ const BackgroundImage: VFC<Props> = ({
           color,
         }),
       ]),
-      style,
+      style: styleMerged,
+      ...rest,
     },
 
     children

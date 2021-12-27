@@ -1,4 +1,4 @@
-import Component from './Component'
+import Component from './ContextComponent'
 
-export type { Props } from './Component'
+export type { Props } from './ContextComponent'
 export default Component

@@ -19,7 +19,8 @@ type ReactNode =
 // | undefined;
 
 export interface Props
-  extends IFlexLayer,
+  extends Basic,
+    IFlexLayer,
     IBackgroundLayer,
     IContentLayer,
     IMarginLayer,

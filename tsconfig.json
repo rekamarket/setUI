@@ -19,6 +19,9 @@
     "noEmit": false,
     "allowSyntheticDefaultImports": true
   },
+  "paths": {
+    "*": ["src/global.d.ts"]
+  },
   "include": ["next-env.d.ts", "src/**/*"],
   "exclude": ["node_modules", "dist"]
 }

@@ -1,5 +1,5 @@
 import type { Props as ParentProps } from '../types'
 
 export type Props = Partial<
-  Pick<ParentProps, 'children' | 'className' | 'fontSize'>
+  Pick<ParentProps, 'children' | 'className' | 'color' | 'fontSize'>
 >

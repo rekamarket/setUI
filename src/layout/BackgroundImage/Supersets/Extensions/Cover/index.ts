@@ -1,1 +1,1 @@
-export { default as Cover } from './Component'
+export { default as Cover } from './ContextComponent'

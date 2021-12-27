@@ -10,7 +10,7 @@ import { ClassName } from './styles.css'
 
 export const displayName = `${pureName}.Mimic`
 
-type AsLevelType = 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'div'
+type AsLevelType = 2 | 3 | 4 | 5 | 6
 
 interface MimicProps {
   as: AsLevelType
