@@ -15,3 +15,13 @@ export enum ARIARoles {
   None = 'None',
   Any = 'Any',
 }
+
+export type Meta<DOMInterface> = {
+  Tag: string
+  ContentCategories: Array<ContentCategories>
+  PermittedContent: Array<ContentCategories>
+  TagOmission: Array<unknown>
+  ImplicitARIARole: Array<ARIARoles>
+  PermittedARIARoles: Array<ARIARoles>
+  DOMInterface: DOMInterface
+}

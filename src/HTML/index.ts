@@ -1,3 +1,3 @@
-export { ARIARoles, ContentCategories } from './types'
+export { ARIARoles, ContentCategories, Meta } from './types'
 
 export { Div } from './tags'

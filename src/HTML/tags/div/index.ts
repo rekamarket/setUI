@@ -1,27 +1,16 @@
-import { ARIARoles, ContentCategories } from 'HTML'
+import { ARIARoles, ContentCategories, Meta } from 'HTML'
 
-const Tag = 'div'
-
-const ContentCategories = [
-  ContentCategories.FlowContent,
-  ContentCategories.PalpableContent,
-]
-
-const PermittedContent = [ContentCategories.FlowConten]
-
-const TagOmission = []
-
-const ImplicitARIARole = [ARIARoles.None]
-const PermittedARIARoles = [ARIARoles.Any]
-
-const DOMInterface = HTMLDivElement
-
-export default {
-  Tag,
-  ContentCategories,
-  PermittedContent,
-  TagOmission,
-  ImplicitARIARole,
-  PermittedARIARoles,
-  DOMInterface,
+const meta: Meta<HTMLDivElement> = {
+  Tag: 'div',
+  ContentCategories: [
+    ContentCategories.FlowContent,
+    ContentCategories.PalpableContent,
+  ],
+  PermittedContent: [ContentCategories.FlowConten],
+  TagOmission: [],
+  ImplicitARIARole: [ARIARoles.None],
+  PermittedARIARoles: [ARIARoles.Any],
+  DOMInterface: HTMLDivElement,
 }
+
+export default meta
