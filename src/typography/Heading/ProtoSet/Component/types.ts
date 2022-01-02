@@ -7,6 +7,7 @@ import type {
   IFontLayer,
   ITextTransformLayer,
 } from 'layers'
+import { Div } from 'HTML'
 
 export const LevelKeys = [1, 2, 3, 4, 5, 6]
 export type LevelType = 1 | 2 | 3 | 4 | 5 | 6
@@ -24,6 +25,9 @@ export type NodeProps = Omit<
   React.HTMLProps<HTMLHeadingElement>,
   'color' | 'size'
 >
+
+export type AsKeys = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', Div.Tag]
+export type AsType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | Div.Tag
 
 export interface Props
   extends ICharsPerLineLayer,

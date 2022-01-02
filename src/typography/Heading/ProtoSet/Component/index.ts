@@ -111,6 +111,7 @@ const Heading: VFC<Props & NodeProps> = ({
     children
   )
 
+export { mimicryAs } from './data'
 export { LevelKeys } from './types'
-export type { Props, NodeProps } from './types'
+export type { Props, NodeProps, AsType } from './types'
 export default Heading
