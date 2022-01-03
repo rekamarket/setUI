@@ -10,14 +10,12 @@ import { ClassName } from './styles.css'
 
 export const displayName = `${pureName}.Mimic`
 
-type AsLevelType = Omit<AsType, 'h1'>
+type AsLevelType = Exclude<AsType, 'h1'>
 const mimicry = mimicryAs<AsLevelType>(1)
 
-interface MimicProps {
+interface Props extends NonSemantic {
   as: AsLevelType
 }
-
-interface Props extends MimicProps, NonSemantic {}
 
 const Component: VFC<Props> = ({
   as,

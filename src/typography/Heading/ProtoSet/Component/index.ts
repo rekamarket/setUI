@@ -8,9 +8,10 @@ import {
   ColorLayer,
   FontLayer,
   TextTransformLayer,
+  TextOverflowLayer,
 } from 'layers'
 import { Props, NodeProps } from './types'
-import { headers } from './data'
+import { tags } from './data'
 import { ClassName } from './styles.css'
 
 const Heading: VFC<Props & NodeProps> = ({
@@ -32,9 +33,6 @@ const Heading: VFC<Props & NodeProps> = ({
   fontStyle,
   fontWeight,
 
-  // text
-  textTransform,
-
   // content
   contentAlign,
 
@@ -50,10 +48,19 @@ const Heading: VFC<Props & NodeProps> = ({
   paddingInlineEnd,
   paddingInlineStart,
 
+  // text
+  textTransform,
+
+  // textOverflow
+  hyphens,
+  overflowWrap,
+  textOverflow,
+  wordBreak,
+
   ...rest
 }) =>
   createElement(
-    OVERRIDE_TAG_SEMANTICS ? 'div' : headers[level],
+    OVERRIDE_TAG_SEMANTICS ? 'div' : tags[level],
 
     {
       ...(OVERRIDE_TAG_SEMANTICS
@@ -103,6 +110,13 @@ const Heading: VFC<Props & NodeProps> = ({
         TextTransformLayer({
           textTransform,
         }),
+
+        TextOverflowLayer({
+          hyphens,
+          overflowWrap,
+          textOverflow,
+          wordBreak,
+        }),
       ]),
       title,
       ...rest,
@@ -112,6 +126,5 @@ const Heading: VFC<Props & NodeProps> = ({
   )
 
 export { mimicryAs } from './data'
-export { LevelKeys } from './types'
 export type { Props, NodeProps, AsType } from './types'
 export default Heading

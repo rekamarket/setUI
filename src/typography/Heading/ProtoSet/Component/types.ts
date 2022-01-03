@@ -6,11 +6,8 @@ import type {
   IColorLayer,
   IFontLayer,
   ITextTransformLayer,
+  ITextOverflowLayer,
 } from 'layers'
-import { Div } from 'HTML'
-
-export const LevelKeys = [1, 2, 3, 4, 5, 6]
-export type LevelType = 1 | 2 | 3 | 4 | 5 | 6
 
 type ReactNode =
   | React.ReactChild
@@ -26,8 +23,8 @@ export type NodeProps = Omit<
   'color' | 'size'
 >
 
-export type AsKeys = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', Div.Tag]
-export type AsType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | Div.Tag
+export type LevelType = 1 | 2 | 3 | 4 | 5 | 6
+export type AsType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'div'
 
 export interface Props
   extends ICharsPerLineLayer,
@@ -36,7 +33,8 @@ export interface Props
     IPaddingLayer,
     IColorLayer,
     IFontLayer,
-    ITextTransformLayer {
+    ITextTransformLayer,
+    ITextOverflowLayer {
   OVERRIDE_TAG_SEMANTICS: boolean
   level: LevelType
   className?: string

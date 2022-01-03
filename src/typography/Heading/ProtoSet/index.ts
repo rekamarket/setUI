@@ -1,5 +1,5 @@
 import Component from './Component'
 
-export { LevelKeys } from './Component'
-export type { Props } from './Component'
+export { mimicryAs } from './Component'
+export type { Props, NodeProps, AsType } from './Component'
 export default Component

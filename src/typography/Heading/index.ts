@@ -1,5 +1,5 @@
-import type { Props } from './types'
-import { Generic } from './Set'
+import Set from './Set'
+import type { Props } from './Set'
 
 import {
   H1Generic as H1,
@@ -22,7 +22,7 @@ interface CompoundedComponent
   H6: typeof H6
 }
 
-const Heading = Generic as CompoundedComponent
+const Heading = Set as CompoundedComponent
 
 // subsets
 Heading.H1 = H1
@@ -33,6 +33,6 @@ Heading.H5 = H5
 Heading.H6 = H6
 
 export type { Props } from './types'
-export { Pure as H, h } from './Set'
+export { heading } from './Set'
 export { H1, h1, H2, h2, H3, h3, H4, h4, H5, h5, H6, h6 } from './Subsets'
 export default Heading

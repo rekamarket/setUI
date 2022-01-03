@@ -2,8 +2,7 @@ export { default as BlockQuote, blockQuote } from './BlockQuote'
 
 export {
   default as Heading,
-  H,
-  h,
+  heading,
   H1,
   h1,
   H2,

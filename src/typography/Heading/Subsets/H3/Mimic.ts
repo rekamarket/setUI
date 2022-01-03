@@ -3,22 +3,21 @@ import cn from 'classnames'
 import { object } from 'utils'
 import { useColor, useFontSize } from 'layers'
 import { displayName as pureName } from './Pure'
-import { NonRepresentation, MinimumRepresentation } from '../../types'
-import ProtoSet from '../../ProtoSet'
+import { NonSemantic } from '../../types'
+import ProtoSet, { mimicryAs, AsType } from '../../ProtoSet'
 import { defaultProps } from './defaultProps'
 import { ClassName } from './styles.css'
 
 export const displayName = `${pureName}.Mimic`
 
-type AsLevelType = 1 | 2 | 4 | 5 | 6
+type AsLevelType = Exclude<AsType, 'h3'>
+const mimicry = mimicryAs<AsLevelType>(3)
 
-interface MimicProps {
+interface Props extends NonSemantic {
   as: AsLevelType
 }
 
-const Component: VFC<
-  MimicProps & NonRepresentation & MinimumRepresentation
-> = ({
+const Component: VFC<Props> = ({
   as,
   className,
   children,
@@ -30,6 +29,8 @@ const Component: VFC<
   const fontSize = useFontSize()
 
   return ProtoSet({
+    ...mimicry(as),
+
     ...object.mergePropsWithWarning(
       defaultProps,
       {
@@ -41,8 +42,6 @@ const Component: VFC<
     ),
 
     // override
-    OVERRIDE_TAG_SEMANTICS: false,
-    level: as,
     children,
     className: cn(ClassName, className),
   })
