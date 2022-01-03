@@ -10,15 +10,6 @@ import type {
 
 export type AsType = 'ul' | 'ol' | 'menu'
 
-type ReactNode =
-  | React.ReactChild
-  | React.ReactNodeArray
-  | ReadonlyArray<ReactNode>
-  | React.ReactPortal
-// | boolean
-// | null
-// | undefined;
-
 export interface Props
   extends IFlexLayer,
     IMarkerLayer,

@@ -16,15 +16,6 @@ export type AsType =
   | 's'
   | 'small'
 
-type ReactNode =
-  | React.ReactChild
-  | React.ReactNodeArray
-  | ReadonlyArray<ReactNode>
-  | React.ReactPortal
-// | boolean
-// | null
-// | undefined;
-
 export interface Props extends IFontLayer, IColorLayer {
   as: AsType
   className?: string
