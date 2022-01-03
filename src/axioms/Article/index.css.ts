@@ -2,7 +2,7 @@
 import React from 'react'
 import { globalStyle, style } from '@vanilla-extract/css'
 import {
-  h,
+  heading,
   h1,
   h2,
   h3,
@@ -16,53 +16,53 @@ import { list, orderedList, unorderedList } from '../../layout'
 
 const className = style({})
 
-// h
-globalStyle(`${className} ${h} + ${h1}`, {
+// heading
+globalStyle(`${className} ${heading} + ${h1}`, {
   paddingTop: 0,
 })
 
-globalStyle(`${className} ${h} + ${h2}`, {
+globalStyle(`${className} ${heading} + ${h2}`, {
   paddingTop: 0,
 })
 
-globalStyle(`${className} ${h} + ${h3}`, {
+globalStyle(`${className} ${heading} + ${h3}`, {
   paddingTop: 0,
 })
 
-globalStyle(`${className} ${h} + ${h4}`, {
+globalStyle(`${className} ${heading} + ${h4}`, {
   paddingTop: 0,
 })
 
-globalStyle(`${className} ${h} + ${h5}`, {
+globalStyle(`${className} ${heading} + ${h5}`, {
   paddingTop: 0,
 })
 
-globalStyle(`${className} ${h} + ${h6}`, {
+globalStyle(`${className} ${heading} + ${h6}`, {
   paddingTop: 0,
 })
 
-// globalStyle(`${className} ${h} + ${paragraph}`, {
+// globalStyle(`${className} ${heading} + ${paragraph}`, {
 //   paddingTop: 0,
 // })
 
-// globalStyle(`${className} ${h} + ${textBlock}`, {
+// globalStyle(`${className} ${heading} + ${textBlock}`, {
 //   paddingTop: 0,
 // })
 
-globalStyle(`${className} ${h} + ${list}`, {
+globalStyle(`${className} ${heading} + ${list}`, {
   paddingTop: 0,
 })
 
-globalStyle(`${className} ${h} + ${orderedList}`, {
+globalStyle(`${className} ${heading} + ${orderedList}`, {
   paddingTop: 0,
 })
 
-globalStyle(`${className} ${h} + ${unorderedList}`, {
+globalStyle(`${className} ${heading} + ${unorderedList}`, {
   paddingTop: 0,
 })
 
 // h1
-globalStyle(`${className} ${h1} + ${h}`, {
+globalStyle(`${className} ${h1} + ${heading}`, {
   paddingTop: 0,
 })
 
@@ -111,7 +111,7 @@ globalStyle(`${className} ${h1} + ${unorderedList}`, {
 })
 
 // h2
-globalStyle(`${className} ${h2} + ${h}`, {
+globalStyle(`${className} ${h2} + ${heading}`, {
   paddingTop: 0,
 })
 
@@ -160,7 +160,7 @@ globalStyle(`${className} ${h2} + ${unorderedList}`, {
 })
 
 // h3
-globalStyle(`${className} ${h3} + ${h}`, {
+globalStyle(`${className} ${h3} + ${heading}`, {
   paddingTop: 0,
 })
 
@@ -209,7 +209,7 @@ globalStyle(`${className} ${h3} + ${unorderedList}`, {
 })
 
 // h4
-globalStyle(`${className} ${h4} + ${h}`, {
+globalStyle(`${className} ${h4} + ${heading}`, {
   paddingTop: 0,
 })
 
@@ -258,7 +258,7 @@ globalStyle(`${className} ${h4} + ${unorderedList}`, {
 })
 
 // h5
-globalStyle(`${className} ${h5} + ${h}`, {
+globalStyle(`${className} ${h5} + ${heading}`, {
   paddingTop: 0,
 })
 
@@ -307,7 +307,7 @@ globalStyle(`${className} ${h5} + ${unorderedList}`, {
 })
 
 // h6
-globalStyle(`${className} ${h6} + ${h}`, {
+globalStyle(`${className} ${h6} + ${heading}`, {
   paddingTop: 0,
 })
 
@@ -356,7 +356,7 @@ globalStyle(`${className} ${h6} + ${unorderedList}`, {
 })
 
 // paragraph
-globalStyle(`${className} ${paragraph} + ${h}`, {
+globalStyle(`${className} ${paragraph} + ${heading}`, {
   paddingTop: 0,
 })
 
@@ -405,7 +405,7 @@ globalStyle(`${className} ${paragraph} + ${unorderedList}`, {
 })
 
 // textBlock
-globalStyle(`${className} ${textBlock} + ${h}`, {
+globalStyle(`${className} ${textBlock} + ${heading}`, {
   paddingTop: 0,
 })
 
@@ -454,7 +454,7 @@ globalStyle(`${className} ${textBlock} + ${unorderedList}`, {
 })
 
 // list
-globalStyle(`${className} ${list} + ${h}`, {
+globalStyle(`${className} ${list} + ${heading}`, {
   paddingTop: 0,
 })
 
@@ -503,7 +503,7 @@ globalStyle(`${className} ${list} + ${unorderedList}`, {
 })
 
 // orderedList
-globalStyle(`${className} ${orderedList} + ${h}`, {
+globalStyle(`${className} ${orderedList} + ${heading}`, {
   paddingTop: 0,
 })
 
@@ -552,7 +552,7 @@ globalStyle(`${className} ${orderedList} + ${unorderedList}`, {
 })
 
 // unorderedList
-globalStyle(`${className} ${unorderedList} + ${h}`, {
+globalStyle(`${className} ${unorderedList} + ${heading}`, {
   paddingTop: 0,
 })
 
