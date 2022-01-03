@@ -1,16 +1,16 @@
 import { ARIARoles, ContentCategories, Meta } from 'HTML'
 
-const meta: Meta<HTMLDivElement> = {
+const meta: Meta = {
   Tag: 'div',
   ContentCategories: [
     ContentCategories.FlowContent,
     ContentCategories.PalpableContent,
   ],
-  PermittedContent: [ContentCategories.FlowConten],
+  PermittedContent: [ContentCategories.FlowContent],
   TagOmission: [],
   ImplicitARIARole: [ARIARoles.None],
   PermittedARIARoles: [ARIARoles.Any],
-  DOMInterface: HTMLDivElement,
 }
 
+// const DOMInterface = HTMLDivElement;
 export default meta

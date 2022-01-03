@@ -16,12 +16,11 @@ export enum ARIARoles {
   Any = 'Any',
 }
 
-export type Meta<DOMInterface> = {
+export type Meta = {
   Tag: string
   ContentCategories: Array<ContentCategories>
   PermittedContent: Array<ContentCategories>
   TagOmission: Array<unknown>
   ImplicitARIARole: Array<ARIARoles>
   PermittedARIARoles: Array<ARIARoles>
-  DOMInterface: DOMInterface
 }
