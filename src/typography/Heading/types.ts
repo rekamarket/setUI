@@ -24,6 +24,8 @@ export type MinimumRepresentation = Partial<
     | 'charsPerLine'
     | 'paddingBlockStart'
     | 'paddingBlockEnd'
+    | 'paddingInlineStart'
+    | 'paddingInlineEnd'
     | 'contentAlign'
   >
 >
