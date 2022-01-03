@@ -29,6 +29,7 @@ export {
   H6,
   h6,
   Paragraph,
+  P,
   paragraph,
   TextBlock,
   textBlock,

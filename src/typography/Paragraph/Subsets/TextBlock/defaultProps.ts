@@ -19,4 +19,6 @@ export const defaultProps: Omit<Props, 'children'> = {
   marginInlineEnd: 'none',
   marginBlockStart: 'none',
   marginBlockEnd: 'none',
+
+  lineClamp: 'none',
 }

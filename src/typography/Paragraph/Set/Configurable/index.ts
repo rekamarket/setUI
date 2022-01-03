@@ -6,7 +6,7 @@ import type { Props } from './types'
 import ProtoSet from '../../ProtoSet'
 import { ClassName } from '../styles.css'
 
-export const displayName = 'Q.Paragraph'
+export const displayName = 'P'
 
 const Set: VFC<Props> = ({ children, className, ...props }) =>
   ProtoSet({

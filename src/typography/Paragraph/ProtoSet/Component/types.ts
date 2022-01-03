@@ -4,6 +4,7 @@ import type {
   IPaddingLayer,
   IColorLayer,
   IFontLayer,
+  ILineClampLayer,
 } from 'layers'
 
 export type AsType = 'p' | 'div'
@@ -22,7 +23,8 @@ export interface Props
     IMarginLayer,
     IPaddingLayer,
     IColorLayer,
-    IFontLayer {
+    IFontLayer,
+    ILineClampLayer {
   as: AsType
   className?: string
   children: ReactNode

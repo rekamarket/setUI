@@ -9,8 +9,11 @@ interface CompoundedComponent
 }
 
 const Paragraph = Set as CompoundedComponent
+
 Paragraph.TextBlock = TextBlock
 
+export { default as P } from './ProtoSet'
+export type { Props as ProtoProps } from './ProtoSet'
 export { TextBlockIdiomatic as TextBlock, textBlock } from './Subsets'
 export { paragraph } from './Set'
 export type { Props } from './Set'

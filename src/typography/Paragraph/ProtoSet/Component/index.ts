@@ -6,6 +6,7 @@ import {
   PaddingLayer,
   ColorLayer,
   FontLayer,
+  LineClampLayer,
 } from 'layers'
 import { Props } from './types'
 import { ClassName } from './styles.css'
@@ -37,6 +38,10 @@ const Paragraph: VFC<Props> = ({
   paddingBlockStart,
   paddingInlineEnd,
   paddingInlineStart,
+
+  lineClamp,
+
+  ...rest
 }) =>
   createElement(
     component[as],
@@ -74,7 +79,13 @@ const Paragraph: VFC<Props> = ({
           fontStyle,
           fontWeight,
         }),
+
+        LineClampLayer({
+          lineClamp,
+        }),
       ]),
+
+      ...rest,
     },
 
     children
