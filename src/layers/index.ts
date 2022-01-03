@@ -21,6 +21,8 @@ export { ContentLayer_resolve as ContentLayer } from './Block/Content/ContentLay
 export type { IContentLayer_i as IContentLayer } from './Block/Content/ContentLayer.gen'
 export { CornerLayer_resolve as CornerLayer } from './Block/Corner/CornerLayer.gen'
 export type { ICornerLayer_i as ICornerLayer } from './Block/Corner/CornerLayer.gen'
+export { LineClampLayer_resolve as LineClampLayer } from './Block/LineClamp/LineClampLayer.gen'
+export type { ILineClampLayer_i as ILineClampLayer } from './Block/LineClamp/LineClampLayer.gen'
 
 // margin
 export { MarginLayer_resolve as MarginLayer } from './Margin/MarginLayer.gen'
