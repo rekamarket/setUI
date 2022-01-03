@@ -1,7 +1,7 @@
 import type { PureRepresentation } from '../../types'
 
 export const defaultProps: PureRepresentation = {
-  charsPerLine: 'medium',
+  charsPerLine: 'none',
 
   // color
   color: 'black',
@@ -29,4 +29,10 @@ export const defaultProps: PureRepresentation = {
   paddingBlockStart: 'medium',
   paddingInlineStart: 'none',
   paddingInlineEnd: 'none',
+
+  // textOverflow
+  hyphens: 'none',
+  overflowWrap: 'normal',
+  textOverflow: 'initial',
+  wordBreak: 'breakWord',
 }
