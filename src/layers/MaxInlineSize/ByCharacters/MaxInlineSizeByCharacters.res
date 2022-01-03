@@ -21,7 +21,7 @@ module MaxInlineSizeByCharacters = {
   };
 
   let options = {
-    "none": "0",
+    "none": "max-content",
     "small": "36ch",
     "medium": "48ch",
     "large": "64ch",

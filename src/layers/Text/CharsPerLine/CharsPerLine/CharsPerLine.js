@@ -2,7 +2,7 @@
 
 
 var options = {
-  none: "0",
+  none: "max-content",
   small: "18ch",
   medium: "24ch",
   large: "36ch"
