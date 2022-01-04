@@ -9,7 +9,7 @@ import ProtoSet from '../../ProtoSet'
 
 export const displayName = 'H1'
 
-export interface Props extends NonRepresentation, MinimumRepresentation {}
+export type Props = NonRepresentation & MinimumRepresentation
 
 const Component: VFC<Props> = ({
   className,
@@ -33,7 +33,6 @@ const Component: VFC<Props> = ({
     ),
 
     // override
-    OVERRIDE_TAG_SEMANTICS: false,
     level: 1,
     children,
     className: cn(ClassName, className),

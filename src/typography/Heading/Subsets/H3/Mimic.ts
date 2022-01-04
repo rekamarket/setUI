@@ -4,21 +4,21 @@ import { object } from 'utils'
 import { useColor, useFontSize } from 'layers'
 import { displayName as pureName } from './Pure'
 import { NonSemantic } from '../../types'
-import ProtoSet, { mimicryAs, AsType } from '../../ProtoSet'
+import ProtoSet, { mimicryAs, Semantics } from '../../ProtoSet'
 import { defaultProps } from './defaultProps'
 import { ClassName } from './styles.css'
 
 export const displayName = `${pureName}.Mimic`
 
-type AsLevelType = Exclude<AsType, 'h3'>
+type AsLevelType = Exclude<Semantics, 'h3'>
 const mimicry = mimicryAs<AsLevelType>(3)
 
 interface Props extends NonSemantic {
-  as: AsLevelType
+  tag: AsLevelType
 }
 
 const Component: VFC<Props> = ({
-  as,
+  tag,
   className,
   children,
   fontSize: fontSizeFromProps,
@@ -29,7 +29,7 @@ const Component: VFC<Props> = ({
   const fontSize = useFontSize()
 
   return ProtoSet({
-    ...mimicry(as),
+    ...mimicry(tag),
 
     ...object.mergePropsWithWarning(
       defaultProps,

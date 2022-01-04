@@ -32,7 +32,6 @@ const Component: VFC<NonSemantic> = ({
     ),
 
     // props override
-    OVERRIDE_TAG_SEMANTICS: false,
     level: 2,
     children,
     className: cn(ClassName, className),

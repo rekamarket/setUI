@@ -1,5 +1,5 @@
 import Component from './Component'
 
-export { mimicryAs } from './Component'
-export type { Props, NodeProps, AsType } from './Component'
+export { mimicryAs, getTagByLevel } from './Component'
+export type { Props, NodeProps, Semantics } from './Component'
 export default Component

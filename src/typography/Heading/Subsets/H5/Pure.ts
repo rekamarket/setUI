@@ -33,7 +33,6 @@ const Component: VFC<Props> = ({
     ),
 
     // override
-    OVERRIDE_TAG_SEMANTICS: false,
     level: 5,
     children,
     className: cn(ClassName, className),

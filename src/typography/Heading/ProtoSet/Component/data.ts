@@ -1,62 +1,56 @@
-import type { LevelType, Props, AsType } from './types'
+import type { Props, Semantics, LevelType, SemanticCore } from './types'
 
-export const mimicryAs: <T extends AsType>(
-  level: Props['level']
-) => (as: T) => Pick<Props, 'level' | 'OVERRIDE_TAG_SEMANTICS'> =
-  (level) => (as) => {
-    switch (as) {
-      case 'h1': {
-        return {
-          level: 1,
-          OVERRIDE_TAG_SEMANTICS: false,
-        }
+export const mimicryAs: <T extends Semantics>(
+  level: LevelType
+) => (tag: T) => Pick<Props, 'level' | 'tag'> = (level) => (tag) => {
+  switch (tag) {
+    case 'h1': {
+      return {
+        level: 1,
       }
+    }
 
-      case 'h2': {
-        return {
-          level: 2,
-          OVERRIDE_TAG_SEMANTICS: false,
-        }
+    case 'h2': {
+      return {
+        level: 2,
       }
+    }
 
-      case 'h3': {
-        return {
-          level: 3,
-          OVERRIDE_TAG_SEMANTICS: false,
-        }
+    case 'h3': {
+      return {
+        level: 3,
       }
+    }
 
-      case 'h4': {
-        return {
-          level: 4,
-          OVERRIDE_TAG_SEMANTICS: false,
-        }
+    case 'h4': {
+      return {
+        level: 4,
       }
+    }
 
-      case 'h5': {
-        return {
-          level: 5,
-          OVERRIDE_TAG_SEMANTICS: false,
-        }
+    case 'h5': {
+      return {
+        level: 5,
       }
+    }
 
-      case 'h6': {
-        return {
-          level: 6,
-          OVERRIDE_TAG_SEMANTICS: false,
-        }
+    case 'h6': {
+      return {
+        level: 6,
       }
+    }
 
-      case 'div': {
-        return {
-          level,
-          OVERRIDE_TAG_SEMANTICS: true,
-        }
+    case 'div':
+    case 'span': {
+      return {
+        level,
+        tag,
       }
     }
   }
+}
 
-export const tags: Record<LevelType, string> = {
+const tags: Record<LevelType, SemanticCore> = {
   1: 'h1',
   2: 'h2',
   3: 'h3',
@@ -64,3 +58,6 @@ export const tags: Record<LevelType, string> = {
   5: 'h5',
   6: 'h6',
 }
+
+export const getTagByLevel: (level: LevelType) => SemanticCore = (level) =>
+  tags[level]

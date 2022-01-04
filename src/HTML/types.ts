@@ -14,6 +14,9 @@ export enum ContentCategories {
 export enum ARIARoles {
   None = 'None',
   Any = 'Any',
+  Heading = 'heading',
+  Tab = 'tab',
+  Presentation = 'presentation',
 }
 
 export type Meta = {
@@ -24,3 +27,5 @@ export type Meta = {
   ImplicitARIARole: Array<ARIARoles>
   PermittedARIARoles: Array<ARIARoles>
 }
+
+export type SemanticallyNeutralTags = 'div' | 'span'

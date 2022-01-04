@@ -1,17 +1,19 @@
-import type { Props as ParentProps } from './ProtoSet'
+import type { Props as ParentProps, NodeProps } from './ProtoSet'
 
-export type { Props } from './ProtoSet'
+export type { Props, NodeProps, Semantics } from './ProtoSet'
 
-export type Semantic = Pick<ParentProps, 'level' | 'OVERRIDE_TAG_SEMANTICS'>
-export type NonSemantic = Omit<ParentProps, 'level' | 'OVERRIDE_TAG_SEMANTICS'> // Props - Semantic
+export type NonSemantic = Partial<Omit<ParentProps, 'tag' | 'level'>> &
+  NodeProps // Props - Semantic
+
 export type NonRepresentation = Pick<
   NonSemantic,
   'children' | 'className' | 'title'
->
+> &
+  NodeProps
 
 export type PureRepresentation = Omit<
   ParentProps,
-  'OVERRIDE_TAG_SEMANTICS' | 'level' | 'children' | 'className' | 'title'
+  'tag' | 'level' | 'children' | 'className' | 'title'
 >
 
 export type MinimumRepresentation = Partial<

@@ -1,5 +1,6 @@
 import { VFC, createElement } from 'react'
 import cn from 'classnames'
+import { object } from 'utils'
 import {
   CharsPerLineLayer,
   ContentLayer,
@@ -10,13 +11,14 @@ import {
   TextTransformLayer,
   TextOverflowLayer,
 } from 'layers'
-import { Props, NodeProps } from './types'
-import { tags } from './data'
+import { Props as ProtoProps, NodeProps } from './types'
+import { getTagByLevel } from './data'
 import { ClassName } from './styles.css'
 
-const Heading: VFC<Props & NodeProps> = ({
+type Props = ProtoProps & NodeProps
+
+const Heading: VFC<Props> = ({
   // basic
-  OVERRIDE_TAG_SEMANTICS,
   level,
   className,
   title,
@@ -58,12 +60,15 @@ const Heading: VFC<Props & NodeProps> = ({
   wordBreak,
 
   ...rest
-}) =>
-  createElement(
-    OVERRIDE_TAG_SEMANTICS ? 'div' : tags[level],
+}) => {
+  const isSemanticsOverriden = 'tag' in rest
+  const tag = isSemanticsOverriden ? rest.tag : getTagByLevel(level)
+
+  return createElement(
+    tag,
 
     {
-      ...(OVERRIDE_TAG_SEMANTICS
+      ...(isSemanticsOverriden
         ? {
             role: 'heading',
             'aria-level': level,
@@ -119,12 +124,13 @@ const Heading: VFC<Props & NodeProps> = ({
         }),
       ]),
       title,
-      ...rest,
+      ...object.omit(rest, 'tag'),
     },
 
     children
   )
+}
 
-export { mimicryAs } from './data'
-export type { Props, NodeProps, AsType } from './types'
+export { mimicryAs, getTagByLevel } from './data'
+export type { Props, NodeProps, Semantics } from './types'
 export default Heading

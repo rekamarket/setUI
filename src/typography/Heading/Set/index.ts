@@ -2,46 +2,28 @@ import { VFC } from 'react'
 import cn from 'classnames'
 import { object } from 'utils'
 import { useColor, useFontSize } from 'layers'
-import { NonSemantic, Props as ProtoProps } from '../types'
-import ProtoSet, { mimicryAs, AsType } from '../ProtoSet'
+import { Props as ProtoProps, NodeProps } from '../types'
+import ProtoSet from '../ProtoSet'
 import { defaultProps } from './defaultProps'
 import { ClassName } from './styles.css'
 
 export const displayName = `Heading`
 
-export interface Props extends NonSemantic, Pick<ProtoProps, 'level'> {
-  as?: AsType
-}
+export type Props = Partial<Omit<ProtoProps, 'tag' | 'level'>> &
+  Pick<ProtoProps, 'tag' | 'level'> &
+  NodeProps
 
 const Component: VFC<Props> = ({
-  as,
-  level,
   className,
   children,
   fontSize: fontSizeFromProps,
   color: colorFromProps,
   ...rest
 }) => {
-  if (typeof as === 'string' && as !== 'div') {
-    console.warn(`
-      You are using <${displayName} as="{${as}}"" level={${level}} />, which is the same as <H${level}.Mimic as="${as}" />, please consider using less generic component
-    `)
-  }
-
-  const semantics =
-    typeof as === 'string'
-      ? mimicryAs<AsType>(level)(as)
-      : {
-          OVERRIDE_TAG_SEMANTICS: false,
-          level,
-        }
-
   const color = useColor()
   const fontSize = useFontSize()
 
   return ProtoSet({
-    ...semantics,
-
     ...object.mergePropsWithWarning(
       defaultProps,
       {
