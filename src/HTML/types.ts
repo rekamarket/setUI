@@ -1,4 +1,5 @@
 export enum ContentCategories {
+  Transparent = 'Transparent',
   MetadataСontent = 'Metadata content',
   FlowContent = 'Flow content',
   SectioningContent = 'Sectioning content',
@@ -17,6 +18,16 @@ export enum ARIARoles {
   Heading = 'heading',
   Tab = 'tab',
   Presentation = 'presentation',
+  Link = 'link',
+  Button = 'button',
+  Checkbox = 'checkbox',
+  MenuItem = 'menuitem',
+  MenuItemCheckbox = 'menuitemcheckbox',
+  MenuItemRadio = 'menuitemradio',
+  Option = 'option',
+  Radio = 'radio',
+  Switch = 'switch',
+  TreeItem = 'treeitem',
 }
 
 export type Meta = {
