@@ -8,8 +8,10 @@ import {
   TextTransformLayer,
 } from 'layers'
 
-import { Props } from './types'
+import { Props as ProtoProps, NodeProps } from './types'
 import { ClassName } from './styles.css'
+
+type Props = ProtoProps & NodeProps
 
 const Link: VFC<Props> = ({
   href,

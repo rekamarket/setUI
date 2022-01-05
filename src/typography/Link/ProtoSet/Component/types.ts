@@ -5,11 +5,12 @@ import type {
   ITextTransformLayer,
 } from 'layers'
 
-export interface Props
-  extends IColorLayer,
-    ITextDecorationLayer,
-    IFontLayer,
-    ITextTransformLayer {
+export type NodeProps = Omit<
+  React.HTMLProps<HTMLAnchorElement>,
+  'children' | 'color' | 'size' | 'align' | 'as'
+>
+
+export type Props = IColorLayer & ITextDecorationLayer & IFontLayer & ITextTransformLayer & {
   href: string
   className?: string
   title?: string

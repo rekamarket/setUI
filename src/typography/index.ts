@@ -19,7 +19,7 @@ export {
 
 export { default as LineBreak } from './LineBreak'
 
-export { default as Link } from './Link'
+export { default as Link, link } from './Link'
 
 export {
   default as Paragraph,

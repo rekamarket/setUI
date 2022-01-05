@@ -41,4 +41,5 @@ export {
   NonBreakable,
   Time,
   Link,
+  link,
 } from './typography'
