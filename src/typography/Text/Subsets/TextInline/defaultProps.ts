@@ -1,9 +1,9 @@
-import type { Props } from './types'
+import type { PureRepresentation } from '../../types'
 
-export const defaultProps: Omit<Props, 'children'> = {
-  color: 'black',
+export const defaultProps: PureRepresentation = {
   fontFamily: 'primary',
-  fontSize: 'medium',
   fontStyle: 'normal',
-  fontWeight: 'normal',
+  fontSize: 'medium',
+  fontWeight: 'bold',
+  color: 'black',
 }

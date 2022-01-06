@@ -1,6 +1,6 @@
 import type { IFontLayer, IColorLayer } from 'layers'
 
-export type AsType =
+export type Tag =
   | 'span'
   | 'strong'
   | 'em'
@@ -16,9 +16,15 @@ export type AsType =
   | 's'
   | 'small'
 
-export interface Props extends IFontLayer, IColorLayer {
-  as: AsType
-  className?: string
-  title?: string
-  children: ReactNode
-}
+export type NodeProps = Omit<
+  React.HTMLProps<HTMLElement>,
+  'children' | 'color' | 'size' | 'align' | 'as'
+>
+
+export type Props = IFontLayer &
+  IColorLayer & {
+    tag: Tag
+    className?: string
+    title?: string
+    children: ReactNode
+  }

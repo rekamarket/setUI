@@ -1,2 +1,18 @@
-export { default as Configurable } from './Configurable'
-export { default as Idiomatic } from './Idiomatic'
+import { default as Mimic } from './Mimic'
+import { default as Pure, Props } from './Pure'
+
+interface CompoundedComponent
+  extends React.ForwardRefExoticComponent<
+    Props & React.RefAttributes<HTMLElement>
+  > {
+  Mimic: typeof Mimic
+}
+
+const TextInline = Pure as CompoundedComponent
+
+TextInline.Mimic = Mimic
+
+export { default as Generic } from './Generic'
+export { ClassName } from './styles.css'
+export { defaultProps as styles } from './defaultProps'
+export default TextInline

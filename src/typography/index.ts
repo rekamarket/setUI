@@ -29,7 +29,38 @@ export {
   textBlock,
 } from './Paragraph'
 
-export { default as Text, Important, TextInline } from './Text'
+export {
+  default as Text,
+  text,
+  Abbreviation,
+  abbreviation,
+  Attention,
+  attention,
+  Citation,
+  citation,
+  DefinedTerm,
+  definedTerm,
+  Disclaimer,
+  disclaimer,
+  Highlight,
+  highlight,
+  Idiomatic,
+  idiomatic,
+  Important,
+  important,
+  Outdated,
+  outdated,
+  StressEmphasis,
+  stressEmphasis,
+  Subscript,
+  subscript,
+  Superscript,
+  superscript,
+  TextInline,
+  textInline,
+  UnarticulatedAnnotation,
+  unarticulatedAnnotation,
+} from './Text'
 
 export { Space, NonBreakable } from './Symbols'
 

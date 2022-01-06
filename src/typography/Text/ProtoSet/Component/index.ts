@@ -1,13 +1,14 @@
 import { VFC, createElement } from 'react'
 import cn from 'classnames'
 import { ColorLayer, FontLayer } from 'layers'
-import { Props } from './types'
-import { component } from './data'
+import { Props as ProtoProps, NodeProps } from './types'
 import { ClassName } from './styles.css'
+
+type Props = ProtoProps & NodeProps
 
 const Text: VFC<Props> = ({
   // basic
-  as,
+  tag,
   title,
   className,
 
@@ -19,9 +20,11 @@ const Text: VFC<Props> = ({
   fontSize,
   fontStyle,
   fontWeight,
+
+  ...rest
 }) =>
   createElement(
-    component[as],
+    tag,
 
     {
       className: cn([
@@ -40,10 +43,12 @@ const Text: VFC<Props> = ({
         }),
       ]),
       title,
+      ...rest,
     },
 
     children
   )
 
-export type { Props } from './types'
+export { mimicryAs } from './data'
+export type { Props, NodeProps, Tag } from './types'
 export default Text

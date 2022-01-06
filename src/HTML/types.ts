@@ -28,6 +28,7 @@ export enum ARIARoles {
   Radio = 'radio',
   Switch = 'switch',
   TreeItem = 'treeitem',
+  Term = 'term',
 }
 
 export type Meta = {
