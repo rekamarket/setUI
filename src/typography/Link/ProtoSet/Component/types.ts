@@ -10,9 +10,12 @@ export type NodeProps = Omit<
   'children' | 'color' | 'size' | 'align' | 'as'
 >
 
-export type Props = IColorLayer & ITextDecorationLayer & IFontLayer & ITextTransformLayer & {
-  href: string
-  className?: string
-  title?: string
-  children: ReactNode
-}
+export type Props = IColorLayer &
+  ITextDecorationLayer &
+  IFontLayer &
+  ITextTransformLayer & {
+    href: string
+    className?: string
+    title?: string
+    children: ReactNode
+  }

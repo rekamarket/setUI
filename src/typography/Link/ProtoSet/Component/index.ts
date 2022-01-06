@@ -67,5 +67,5 @@ const Link: VFC<Props> = ({
     children
   )
 
-export type { Props } from './types'
+export type { Props, NodeProps } from './types'
 export default Link

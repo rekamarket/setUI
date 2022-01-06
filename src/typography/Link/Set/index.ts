@@ -1,4 +1,4 @@
-import { ForwardRefExoticComponent } from 'react'
+import { VFC } from 'react'
 import cn from 'classnames'
 import { object } from 'utils'
 import { useColor, useFontSize } from 'layers'
@@ -11,7 +11,7 @@ export const displayName = 'Anchor'
 
 export type Props = Partial<ProtoProps> & NodeProps
 
-const Component: ForwardRefExoticComponent<Props> = ({
+const Component: VFC<Props> = ({
   className,
   children,
   fontSize: fontSizeFromProps,
