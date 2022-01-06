@@ -14,6 +14,8 @@ export {
 export {
   BlockQuote,
   blockQuote,
+  Data,
+  data,
   Heading,
   heading,
   H1,

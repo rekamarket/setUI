@@ -7,6 +7,7 @@ export {
   B,
   Cite,
   Code,
+  Data,
   Dfn,
   Div,
   Em,

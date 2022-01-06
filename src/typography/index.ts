@@ -13,6 +13,8 @@ export {
   variable,
 } from './Code'
 
+export { default as Data, data } from './Data'
+
 export {
   default as Heading,
   heading,
