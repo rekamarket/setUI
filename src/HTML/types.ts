@@ -1,5 +1,6 @@
 export enum ContentCategories {
   None = 'None',
+  Empty = 'Empty',
   Transparent = 'Transparent',
   MetadataСontent = 'Metadata content',
   FlowContent = 'Flow content',
@@ -31,6 +32,7 @@ export enum ARIARoles {
   Switch = 'switch',
   TreeItem = 'treeitem',
   Term = 'term',
+  Separator = 'separator',
 }
 
 export type Meta = {

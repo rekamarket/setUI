@@ -76,6 +76,7 @@ export {
   Variable,
   variable,
   LineBreak,
+  LineBreakOpportunity,
   Space,
   NonBreakable,
   Time,

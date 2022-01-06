@@ -33,7 +33,7 @@ export {
 } from './Heading'
 
 export { default as LineBreak } from './LineBreak'
-
+export { default as LineBreakOpportunity } from './LineBreakOpportunity'
 export { default as Link, link } from './Link'
 
 export {
