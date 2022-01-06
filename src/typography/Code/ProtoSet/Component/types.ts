@@ -1,21 +1,6 @@
 import type { IFontLayer, IColorLayer } from 'layers'
 
-export type Tag =
-  | 'span'
-  | 'strong'
-  | 'em'
-  | 'i'
-  | 'b'
-  | 'dfn'
-  | 'abbr'
-  | 'sup'
-  | 'sub'
-  | 'mark'
-  | 'cite'
-  | 'u'
-  | 's'
-  | 'small'
-  | 'figcaption'
+export type Tag = 'var' | 'samp' | 'kbd' | 'code'
 
 export type NodeProps = Omit<
   React.HTMLProps<HTMLElement>,

@@ -34,6 +34,13 @@ export {
 } from './Disclaimer'
 
 export {
+  default as FigureCaption,
+  Generic as FigureCaptionGeneric,
+  ClassName as figureCaption,
+  styles as stylesFigureCaption,
+} from './FigureCaption'
+
+export {
   default as Highlight,
   Generic as HighlightGeneric,
   ClassName as highlight,

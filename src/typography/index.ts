@@ -1,6 +1,19 @@
 export { default as BlockQuote, blockQuote } from './BlockQuote'
 
 export {
+  default as Code,
+  code,
+  InlineCode,
+  inlineCode,
+  KeyboardInput,
+  keyboardInput,
+  Output,
+  output,
+  Variable,
+  variable,
+} from './Code'
+
+export {
   default as Heading,
   heading,
   H1,
@@ -42,6 +55,8 @@ export {
   definedTerm,
   Disclaimer,
   disclaimer,
+  FigureCaption,
+  figureCaption,
   Highlight,
   highlight,
   Idiomatic,

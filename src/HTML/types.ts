@@ -1,4 +1,5 @@
 export enum ContentCategories {
+  None = 'None',
   Transparent = 'Transparent',
   MetadataСontent = 'Metadata content',
   FlowContent = 'Flow content',
@@ -15,6 +16,7 @@ export enum ContentCategories {
 export enum ARIARoles {
   None = 'None',
   Any = 'Any',
+  Group = 'group',
   Heading = 'heading',
   Tab = 'tab',
   Presentation = 'presentation',

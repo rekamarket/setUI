@@ -1,4 +1,4 @@
-import type { Props, Tag } from './types'
+import type { Tag } from './types'
 
 export const component: Record<Tag, Tag> = {
   span: 'span',
@@ -15,6 +15,7 @@ export const component: Record<Tag, Tag> = {
   u: 'u',
   s: 's',
   small: 'small',
+  figcaption: 'figcaption',
 }
 
 export const mimicryAs: <T extends Tag>(tag: T) => Tag = (tag) => component[tag]

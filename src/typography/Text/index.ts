@@ -7,6 +7,7 @@ import {
   CitationGeneric as Citation,
   DefinedTermGeneric as DefinedTerm,
   DisclaimerGeneric as Disclaimer,
+  FigureCaptionGeneric as FigureCaption,
   HighlightGeneric as Highlight,
   IdiomaticGeneric as Idiomatic,
   ImportantGeneric as Important,
@@ -27,6 +28,7 @@ interface CompoundedComponent
   Citation: typeof Citation
   DefinedTerm: typeof DefinedTerm
   Disclaimer: typeof Disclaimer
+  FigureCaption: typeof FigureCaption
   Highlight: typeof Highlight
   Idiomatic: typeof Idiomatic
   Important: typeof Important
@@ -46,6 +48,7 @@ Text.Attention = Attention
 Text.Citation = Citation
 Text.DefinedTerm = DefinedTerm
 Text.Disclaimer = Disclaimer
+Text.FigureCaption = FigureCaption
 Text.Highlight = Highlight
 Text.Idiomatic = Idiomatic
 Text.Important = Important
@@ -70,6 +73,8 @@ export {
   definedTerm,
   Disclaimer,
   disclaimer,
+  FigureCaption,
+  figureCaption,
   Highlight,
   highlight,
   Idiomatic,
