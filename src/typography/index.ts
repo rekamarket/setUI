@@ -33,4 +33,4 @@ export { default as Text, Important, TextInline } from './Text'
 
 export { Space, NonBreakable } from './Symbols'
 
-export { default as Time } from './Time'
+export { default as Time, time } from './Time'

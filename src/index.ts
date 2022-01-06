@@ -40,6 +40,7 @@ export {
   Space,
   NonBreakable,
   Time,
+  time,
   Link,
   link,
 } from './typography'

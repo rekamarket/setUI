@@ -6,8 +6,10 @@ import {
   FontLayer,
   TextTransformLayer,
 } from 'layers'
-import { Props } from './types'
+import { Props as ProtoProps, NodeProps } from './types'
 import { ClassName } from './styles.css'
+
+type Props = ProtoProps & NodeProps
 
 const Time: VFC<Props> = ({
   datetime,
@@ -27,6 +29,8 @@ const Time: VFC<Props> = ({
   textDecorationStyle,
   textDecorationThickness,
   textTransform,
+
+  ...rest
 }) =>
   createElement(
     'time',
@@ -59,9 +63,10 @@ const Time: VFC<Props> = ({
       ]),
       dateTime: datetime,
       title,
+      ...rest,
     },
     children
   )
 
-export type { Props } from './types'
+export type { Props, NodeProps } from './types'
 export default Time

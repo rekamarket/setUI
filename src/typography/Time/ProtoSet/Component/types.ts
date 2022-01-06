@@ -5,13 +5,17 @@ import type {
   ITextTransformLayer,
 } from 'layers'
 
-export interface Props
-  extends IColorLayer,
-    ITextDecorationLayer,
-    IFontLayer,
-    ITextTransformLayer {
-  className?: string
-  datetime: string
-  title?: string
-  children: ReactNode
-}
+export type NodeProps = Omit<
+  React.HTMLProps<HTMLTimeElement>,
+  'children' | 'color' | 'size' | 'align' | 'as'
+>
+
+export type Props = IColorLayer &
+  ITextDecorationLayer &
+  IFontLayer &
+  ITextTransformLayer & {
+    className?: string
+    datetime: string
+    title?: string
+    children: ReactNode
+  }
