@@ -35,14 +35,7 @@ export {
 export { default as LineBreak } from './LineBreak'
 export { default as LineBreakOpportunity } from './LineBreakOpportunity'
 export { default as Link, link } from './Link'
-
-export {
-  default as Paragraph,
-  P,
-  paragraph,
-  TextBlock,
-  textBlock,
-} from './Paragraph'
+export { Space, NonBreakable } from './Symbols'
 
 export {
   default as Text,
@@ -79,6 +72,13 @@ export {
   unarticulatedAnnotation,
 } from './Text'
 
-export { Space, NonBreakable } from './Symbols'
+export {
+  default as TextContainer,
+  textContainer,
+  Paragraph,
+  paragraph,
+  TextBlock,
+  textBlock,
+} from './TextContainer'
 
 export { default as Time, time } from './Time'

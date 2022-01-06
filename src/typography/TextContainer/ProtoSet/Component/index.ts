@@ -8,12 +8,13 @@ import {
   FontLayer,
   LineClampLayer,
 } from 'layers'
-import { Props } from './types'
+import { Props as ProtoProps, NodeProps } from './types'
 import { ClassName } from './styles.css'
-import { component } from './data'
 
-const Paragraph: VFC<Props> = ({
-  as,
+type Props = ProtoProps & NodeProps
+
+const ProtoComponent: VFC<Props> = ({
+  tag,
   className,
   children,
 
@@ -44,7 +45,7 @@ const Paragraph: VFC<Props> = ({
   ...rest
 }) =>
   createElement(
-    component[as],
+    tag,
 
     {
       className: cn([
@@ -91,5 +92,6 @@ const Paragraph: VFC<Props> = ({
     children
   )
 
-export type { Props } from './types'
-export default Paragraph
+export { mimicryAs } from './data'
+export type { Props, NodeProps, Tag } from './types'
+export default ProtoComponent

@@ -2,44 +2,42 @@ import { VFC } from 'react'
 import cn from 'classnames'
 import { object } from 'utils'
 import { useColor, useFontSize } from 'layers'
-import { defaultProps } from '../defaultProps'
-import type { Props } from './types'
+import { defaultProps } from './defaultProps'
+import { ClassName } from './styles.css'
+import { displayName as pureName } from './Pure'
+import type { NonSemantic } from '../../types'
 import ProtoSet from '../../ProtoSet'
-import { ClassName } from '../styles.css'
 
-export const displayName = 'Paragraph'
+export const displayName = `TextContainer.${pureName}`
 
-const Set: VFC<Props> = ({
+const Component: VFC<NonSemantic> = ({
   children,
   className,
-  color: colorFromProps,
   fontSize: fontSizeFromProps,
-  fontWeight,
+  color: colorFromProps,
   ...rest
 }) => {
   const color = useColor()
   const fontSize = useFontSize()
 
   return ProtoSet({
-    children,
-
     ...object.mergePropsWithWarning(
       defaultProps,
       {
-        color: colorFromProps || color,
         fontSize: fontSizeFromProps || fontSize,
-        fontWeight,
+        color: colorFromProps || color,
         ...rest,
       },
       displayName
     ),
 
     // props override
-    as: 'p',
+    tag: 'div',
+    children,
     className: cn(ClassName, className),
   })
 }
 
-Set.displayName = displayName
+Component.displayName = displayName
 
-export default Set
+export default Component

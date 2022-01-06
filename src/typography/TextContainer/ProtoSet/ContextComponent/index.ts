@@ -1,7 +1,7 @@
 import { VFC, createElement, cloneElement } from 'react'
 import Component from '../Component'
+import type { Props } from '../Component'
 import { ColorContext, FontSizeContext } from 'layers'
-import type { Props } from './types'
 
 const ContextComponent: VFC<Props> = (props) =>
   [
@@ -17,5 +17,4 @@ const ContextComponent: VFC<Props> = (props) =>
     Component(props)
   )
 
-export type { Props } from './types'
 export default ContextComponent
