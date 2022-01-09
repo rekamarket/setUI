@@ -7,16 +7,9 @@ const ColorLayerBS: any = ColorLayerBS__Es6Import
 
 import type { Color_t as Color_Color_t } from './Color.gen'
 
-export interface IColorLayer_i {
+export const ColorLayer_resolve: (_1: {
   readonly color: Color_Color_t
+}) => string = function (Arg1: any) {
+  const result = ColorLayerBS.ColorLayer.resolve(Arg1.color)
+  return result
 }
-
-export const ColorLayer_resolve: (i: {
-  readonly color: 'black' | 'primary' | 'secondary' | 'white'
-}) => string = ColorLayerBS.ColorLayer.resolve
-
-export const ColorLayer: {
-  resolve: (i: {
-    readonly color: 'black' | 'primary' | 'secondary' | 'white'
-  }) => string
-} = ColorLayerBS.ColorLayer

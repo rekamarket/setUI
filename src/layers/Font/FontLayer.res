@@ -1,76 +1,73 @@
-open Js.Array2;
+open Cx;
 
 open FontFamily;
-type fontFamily = { style: FontFamily.variant }
-@module("./Family/FontFamilyStyle.css.js") external fontFamily: fontFamily = "FontFamilyStyle"
+type family = { style: FontFamily.variant }
+@module("./Family/FontFamilyStyle.css.js") external family: family = "FontFamilyStyle"
 
 open FontSize;
-type fontSize = { style: FontSize.variant }
-@module("./Size/FontSizeStyle.css.js") external fontSize: fontSize = "FontSizeStyle"
+type size = { style: FontSize.variant }
+@module("./Size/FontSizeStyle.css.js") external size: size = "FontSizeStyle"
 
 open FontStyle;
-type fontStyle = { style: FontStyle.variant }
-@module("./Style/FontStyleStyle.css.js") external fontStyle: fontStyle = "FontStyleStyle"
+type style = { style: FontStyle.variant }
+@module("./Style/FontStyleStyle.css.js") external style: style = "FontStyleStyle"
 
 open FontWeight;
-type fontWeight = { style: FontWeight.variant }
-@module("./Weight/FontWeightStyle.css.js") external fontWeight: fontWeight = "FontWeightStyle"
+type weight = { style: FontWeight.variant }
+@module("./Weight/FontWeightStyle.css.js") external weight: weight = "FontWeightStyle"
 
 module FontLayer = {
   @genType
-  type i = {
-    "fontFamily": FontFamily.t,
-    "fontSize": FontSize.t,
-    "fontStyle": FontStyle.t,
-    "fontWeight": FontWeight.t,
-  };
-
-  @genType
-  let resolve = (i) => [
-    switch (i["fontFamily"]) {
-    | #primary   => fontFamily.style["primary"]
-    | #monospace => fontFamily.style["monospace"]
+  let resolve = (
+    ~fontFamily: FontFamily.t,
+    ~fontSize: FontSize.t,
+    ~fontStyle: FontStyle.t,
+    ~fontWeight: FontWeight.t,
+  ) => cx([
+    switch (fontFamily) {
+    | #primary   => family.style["primary"]
+    | #monospace => family.style["monospace"]
     },
 
-    switch (i["fontSize"]) {
-    | #none     => fontSize.style["none"]
-    | #xxxsmall => fontSize.style["xxxsmall"]
-    | #xxsmall  => fontSize.style["xxsmall"]
-    | #xsmall   => fontSize.style["xsmall"]
-    | #small    => fontSize.style["small"]
-    | #medium   => fontSize.style["medium"]
-    | #large    => fontSize.style["large"]
-    | #xlarge   => fontSize.style["xlarge"]
-    | #xxlarge  => fontSize.style["xxlarge"]
-    | #xxxlarge => fontSize.style["xxxlarge"]
-    | #smaller  => fontSize.style["smaller"]
-    | #larger   => fontSize.style["larger"]
+    switch (fontSize) {
+    | #none     => size.style["none"]
+    | #xxxsmall => size.style["xxxsmall"]
+    | #xxsmall  => size.style["xxsmall"]
+    | #xsmall   => size.style["xsmall"]
+    | #small    => size.style["small"]
+    | #medium   => size.style["medium"]
+    | #large    => size.style["large"]
+    | #xlarge   => size.style["xlarge"]
+    | #xxlarge  => size.style["xxlarge"]
+    | #xxxlarge => size.style["xxxlarge"]
+    | #smaller  => size.style["smaller"]
+    | #larger   => size.style["larger"]
     },
 
-    switch (i["fontStyle"]) {
-    | #normal  => fontStyle.style["normal"]
-    | #italic  => fontStyle.style["italic"]
-    | #oblique => fontStyle.style["oblique"]
-    | #inherit => fontStyle.style["inherit"]
-    | #initial => fontStyle.style["initial"]
-    | #unset   => fontStyle.style["unset"]
+    switch (fontStyle) {
+    | #normal  => style.style["normal"]
+    | #italic  => style.style["italic"]
+    | #oblique => style.style["oblique"]
+    | #inherit => style.style["inherit"]
+    | #initial => style.style["initial"]
+    | #unset   => style.style["unset"]
     },
 
-    switch (i["fontWeight"]) {
-    | #thin       => fontWeight.style["thin"]
-    | #extraLight => fontWeight.style["extraLight"]
-    | #light      => fontWeight.style["light"]
-    | #normal     => fontWeight.style["normal"]
-    | #medium     => fontWeight.style["medium"]
-    | #semiBold   => fontWeight.style["semiBold"]
-    | #bold       => fontWeight.style["bold"]
-    | #extraBold  => fontWeight.style["extraBold"]
-    | #heavy      => fontWeight.style["heavy"]
-    | #lighter    => fontWeight.style["lighter"]
-    | #bolder     => fontWeight.style["bolder"]
-    | #inherit    => fontWeight.style["inherit"]
-    | #initial    => fontWeight.style["initial"]
-    | #unset      => fontWeight.style["unset"]
+    switch (fontWeight) {
+    | #thin       => weight.style["thin"]
+    | #extraLight => weight.style["extraLight"]
+    | #light      => weight.style["light"]
+    | #normal     => weight.style["normal"]
+    | #medium     => weight.style["medium"]
+    | #semiBold   => weight.style["semiBold"]
+    | #bold       => weight.style["bold"]
+    | #extraBold  => weight.style["extraBold"]
+    | #heavy      => weight.style["heavy"]
+    | #lighter    => weight.style["lighter"]
+    | #bolder     => weight.style["bolder"]
+    | #inherit    => weight.style["inherit"]
+    | #initial    => weight.style["initial"]
+    | #unset      => weight.style["unset"]
     },
-  ] -> joinWith(" ");
+  ]);
 }

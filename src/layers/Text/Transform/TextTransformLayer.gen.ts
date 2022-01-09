@@ -7,28 +7,11 @@ const TextTransformLayerBS: any = TextTransformLayerBS__Es6Import
 
 import type { TextTransform_t as TextTransform_TextTransform_t } from '../../../../src/layers/Text/Transform/Transform/TextTransform.gen'
 
-export interface ITextTransformLayer_i {
+export const TextTransformLayer_resolve: (_1: {
   readonly textTransform: TextTransform_TextTransform_t
+}) => string = function (Arg1: any) {
+  const result = TextTransformLayerBS.TextTransformLayer.resolve(
+    Arg1.textTransform
+  )
+  return result
 }
-
-export const TextTransformLayer_resolve: (i: {
-  readonly textTransform:
-    | 'capitalize'
-    | 'fullSizeKana'
-    | 'fullWidth'
-    | 'lowercase'
-    | 'none'
-    | 'uppercase'
-}) => string = TextTransformLayerBS.TextTransformLayer.resolve
-
-export const TextTransformLayer: {
-  resolve: (i: {
-    readonly textTransform:
-      | 'capitalize'
-      | 'fullSizeKana'
-      | 'fullWidth'
-      | 'lowercase'
-      | 'none'
-      | 'uppercase'
-  }) => string
-} = TextTransformLayerBS.TextTransformLayer

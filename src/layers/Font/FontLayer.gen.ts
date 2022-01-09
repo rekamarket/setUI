@@ -2,6 +2,10 @@
 /* eslint-disable import/first */
 
 // @ts-ignore: Implicit any on import
+import * as Curry__Es6Import from 'rescript/lib/es6/curry.js'
+const Curry: any = Curry__Es6Import
+
+// @ts-ignore: Implicit any on import
 import * as FontLayerBS__Es6Import from './FontLayer.js'
 const FontLayerBS: any = FontLayerBS__Es6Import
 
@@ -13,89 +17,18 @@ import type { FontStyle_t as FontStyle_FontStyle_t } from '../../../src/layers/F
 
 import type { FontWeight_t as FontWeight_FontWeight_t } from '../../../src/layers/Font/Weight/FontWeight.gen'
 
-export interface IFontLayer_i {
+export const FontLayer_resolve: (_1: {
   readonly fontFamily: FontFamily_FontFamily_t
   readonly fontSize: FontSize_FontSize_t
   readonly fontStyle: FontStyle_FontStyle_t
   readonly fontWeight: FontWeight_FontWeight_t
+}) => string = function (Arg1: any) {
+  const result = Curry._4(
+    FontLayerBS.FontLayer.resolve,
+    Arg1.fontFamily,
+    Arg1.fontSize,
+    Arg1.fontStyle,
+    Arg1.fontWeight
+  )
+  return result
 }
-
-export const FontLayer_resolve: (i: {
-  readonly fontFamily: 'monospace' | 'primary'
-  readonly fontSize:
-    | 'large'
-    | 'larger'
-    | 'medium'
-    | 'none'
-    | 'small'
-    | 'smaller'
-    | 'xlarge'
-    | 'xsmall'
-    | 'xxlarge'
-    | 'xxsmall'
-    | 'xxxlarge'
-    | 'xxxsmall'
-  readonly fontStyle:
-    | 'inherit'
-    | 'initial'
-    | 'italic'
-    | 'normal'
-    | 'oblique'
-    | 'unset'
-  readonly fontWeight:
-    | 'bold'
-    | 'bolder'
-    | 'extraBold'
-    | 'extraLight'
-    | 'heavy'
-    | 'inherit'
-    | 'initial'
-    | 'light'
-    | 'lighter'
-    | 'medium'
-    | 'normal'
-    | 'semiBold'
-    | 'thin'
-    | 'unset'
-}) => string = FontLayerBS.FontLayer.resolve
-
-export const FontLayer: {
-  resolve: (i: {
-    readonly fontFamily: 'monospace' | 'primary'
-    readonly fontSize:
-      | 'large'
-      | 'larger'
-      | 'medium'
-      | 'none'
-      | 'small'
-      | 'smaller'
-      | 'xlarge'
-      | 'xsmall'
-      | 'xxlarge'
-      | 'xxsmall'
-      | 'xxxlarge'
-      | 'xxxsmall'
-    readonly fontStyle:
-      | 'inherit'
-      | 'initial'
-      | 'italic'
-      | 'normal'
-      | 'oblique'
-      | 'unset'
-    readonly fontWeight:
-      | 'bold'
-      | 'bolder'
-      | 'extraBold'
-      | 'extraLight'
-      | 'heavy'
-      | 'inherit'
-      | 'initial'
-      | 'light'
-      | 'lighter'
-      | 'medium'
-      | 'normal'
-      | 'semiBold'
-      | 'thin'
-      | 'unset'
-  }) => string
-} = FontLayerBS.FontLayer

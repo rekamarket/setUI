@@ -2,6 +2,10 @@
 /* eslint-disable import/first */
 
 // @ts-ignore: Implicit any on import
+import * as Curry__Es6Import from 'rescript/lib/es6/curry.js'
+const Curry: any = Curry__Es6Import
+
+// @ts-ignore: Implicit any on import
 import * as TextDecorationLayerBS__Es6Import from './TextDecorationLayer.js'
 const TextDecorationLayerBS: any = TextDecorationLayerBS__Es6Import
 
@@ -13,93 +17,18 @@ import type { TextDecorationStyle_t as TextDecorationStyle_TextDecorationStyle_t
 
 import type { TextDecorationThickness_t as TextDecorationThickness_TextDecorationThickness_t } from '../../../../src/layers/Text/Decoration/Thickness/TextDecorationThickness.gen'
 
-export interface ITextDecorationLayer_i {
+export const TextDecorationLayer_resolve: (_1: {
   readonly textDecorationColor: TextDecorationColor_TextDecorationColor_t
   readonly textDecorationLine: TextDecorationLine_TextDecorationLine_t
   readonly textDecorationStyle: TextDecorationStyle_TextDecorationStyle_t
   readonly textDecorationThickness: TextDecorationThickness_TextDecorationThickness_t
+}) => string = function (Arg1: any) {
+  const result = Curry._4(
+    TextDecorationLayerBS.TextDecorationLayer.resolve,
+    Arg1.textDecorationColor,
+    Arg1.textDecorationLine,
+    Arg1.textDecorationStyle,
+    Arg1.textDecorationThickness
+  )
+  return result
 }
-
-export const TextDecorationLayer_resolve: (i: {
-  readonly textDecorationColor:
-    | 'black'
-    | 'currentColor'
-    | 'primary'
-    | 'secondary'
-    | 'white'
-  readonly textDecorationLine:
-    | 'blink'
-    | 'inherit'
-    | 'initial'
-    | 'lineThrough'
-    | 'lineThrough_underline'
-    | 'none'
-    | 'overline'
-    | 'overline_lineThrough'
-    | 'overline_lineThrough_underline'
-    | 'overline_underline'
-    | 'underline'
-    | 'unset'
-  readonly textDecorationStyle:
-    | 'dashed'
-    | 'dotted'
-    | 'double'
-    | 'inherit'
-    | 'initial'
-    | 'solid'
-    | 'unset'
-    | 'wavy'
-  readonly textDecorationThickness:
-    | 'auto'
-    | 'bold'
-    | 'fromFont'
-    | 'inherit'
-    | 'initial'
-    | 'light'
-    | 'medium'
-    | 'thin'
-    | 'unset'
-}) => string = TextDecorationLayerBS.TextDecorationLayer.resolve
-
-export const TextDecorationLayer: {
-  resolve: (i: {
-    readonly textDecorationColor:
-      | 'black'
-      | 'currentColor'
-      | 'primary'
-      | 'secondary'
-      | 'white'
-    readonly textDecorationLine:
-      | 'blink'
-      | 'inherit'
-      | 'initial'
-      | 'lineThrough'
-      | 'lineThrough_underline'
-      | 'none'
-      | 'overline'
-      | 'overline_lineThrough'
-      | 'overline_lineThrough_underline'
-      | 'overline_underline'
-      | 'underline'
-      | 'unset'
-    readonly textDecorationStyle:
-      | 'dashed'
-      | 'dotted'
-      | 'double'
-      | 'inherit'
-      | 'initial'
-      | 'solid'
-      | 'unset'
-      | 'wavy'
-    readonly textDecorationThickness:
-      | 'auto'
-      | 'bold'
-      | 'fromFont'
-      | 'inherit'
-      | 'initial'
-      | 'light'
-      | 'medium'
-      | 'thin'
-      | 'unset'
-  }) => string
-} = TextDecorationLayerBS.TextDecorationLayer

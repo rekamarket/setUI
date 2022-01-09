@@ -1,24 +1,21 @@
-open Js.Array2;
+open Cx
 
 open TextTransform;
-type textTransform = { style: TextTransform.variant }
-@module("./Transform/TextTransformStyle.css.js") external textTransform: textTransform = "TextTransformStyle"
+type transform = { style: TextTransform.variant }
+@module("./Transform/TextTransformStyle.css.js") external transform: transform = "TextTransformStyle"
 
 module TextTransformLayer = {
   @genType
-  type i = {
-    "textTransform": TextTransform.t,
-  };
-
-  @genType
-  let resolve = (i) => [
-    switch (i["textTransform"]) {
-    | #none         => textTransform.style["none"]
-    | #uppercase    => textTransform.style["uppercase"]
-    | #lowercase    => textTransform.style["lowercase"]
-    | #capitalize   => textTransform.style["capitalize"]
-    | #fullWidth    => textTransform.style["fullWidth"]
-    | #fullSizeKana => textTransform.style["fullSizeKana"]
+  let resolve = (
+    ~textTransform: TextTransform.t,
+  ) => cx([
+    switch (textTransform) {
+    | #none         => transform.style["none"]
+    | #uppercase    => transform.style["uppercase"]
+    | #lowercase    => transform.style["lowercase"]
+    | #capitalize   => transform.style["capitalize"]
+    | #fullWidth    => transform.style["fullWidth"]
+    | #fullSizeKana => transform.style["fullSizeKana"]
     },
-  ] -> joinWith(" ");
+  ]);
 }

@@ -1,22 +1,19 @@
-open Js.Array2;
+open Cx
 
 open Color;
-type color = { style: Color.variant }
-@module("./ColorStyle.css.js") external color: color = "ColorStyle"
+type colorStyle = { style: Color.variant }
+@module("./ColorStyle.css.js") external colorStyle: colorStyle = "ColorStyle"
 
 module ColorLayer = {
   @genType
-  type i = {
-    "color": Color.t,
-  };
-
-  @genType
-  let resolve = (i) => [
-    switch (i["color"]) {
-    | #primary   => color.style["primary"]
-    | #secondary => color.style["secondary"]
-    | #black     => color.style["black"]
-    | #white     => color.style["white"]
+  let resolve = (
+    ~color: Color.t,
+  ) => cx([
+    switch (color) {
+    | #primary   => colorStyle.style["primary"]
+    | #secondary => colorStyle.style["secondary"]
+    | #black     => colorStyle.style["black"]
+    | #white     => colorStyle.style["white"]
     },
-  ] -> joinWith(" ");
+  ]);
 }

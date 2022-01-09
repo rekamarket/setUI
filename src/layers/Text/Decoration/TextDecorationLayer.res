@@ -1,76 +1,73 @@
-open Js.Array2;
+open Cx
 
 open TextDecorationColor;
-type textDecorationColor = { style: TextDecorationColor.variant }
-@module("./Color/TextDecorationColorStyle.css.js") external textDecorationColor: textDecorationColor = "TextDecorationColorStyle"
+type color = { style: TextDecorationColor.variant }
+@module("./Color/TextDecorationColorStyle.css.js") external color: color = "TextDecorationColorStyle"
 
 open TextDecorationLine;
-type textDecorationLine = { style: TextDecorationLine.variant }
-@module("./Line/TextDecorationLineStyle.css.js") external textDecorationLine: textDecorationLine = "TextDecorationLineStyle"
+type line = { style: TextDecorationLine.variant }
+@module("./Line/TextDecorationLineStyle.css.js") external line: line = "TextDecorationLineStyle"
 
 open TextDecorationStyle;
-type textDecorationStyle = { style: TextDecorationStyle.variant }
-@module("./Style/TextDecorationStyleStyle.css.js") external textDecorationStyle: textDecorationStyle = "TextDecorationStyleStyle"
+type style = { style: TextDecorationStyle.variant }
+@module("./Style/TextDecorationStyleStyle.css.js") external style: style = "TextDecorationStyleStyle"
 
 open TextDecorationThickness;
-type textDecorationThickness = { style: TextDecorationThickness.variant }
-@module("./Thickness/TextDecorationThicknessStyle.css.js") external textDecorationThickness: textDecorationThickness = "TextDecorationThicknessStyle"
+type thickness = { style: TextDecorationThickness.variant }
+@module("./Thickness/TextDecorationThicknessStyle.css.js") external thickness: thickness = "TextDecorationThicknessStyle"
 
 module TextDecorationLayer = {
   @genType
-  type i = {
-    "textDecorationColor": TextDecorationColor.t,
-    "textDecorationLine": TextDecorationLine.t,
-    "textDecorationStyle": TextDecorationStyle.t,
-    "textDecorationThickness": TextDecorationThickness.t,
-  };
-
-  @genType
-  let resolve = (i) => [
-    switch (i["textDecorationColor"]) {
-    | #currentColor => textDecorationColor.style["currentColor"]
-    | #primary      => textDecorationColor.style["primary"]
-    | #secondary    => textDecorationColor.style["secondary"]
-    | #black        => textDecorationColor.style["black"]
-    | #white        => textDecorationColor.style["white"]
+  let resolve = (
+    ~textDecorationColor: TextDecorationColor.t,
+    ~textDecorationLine: TextDecorationLine.t,
+    ~textDecorationStyle: TextDecorationStyle.t,
+    ~textDecorationThickness: TextDecorationThickness.t,
+  ) => cx([
+    switch (textDecorationColor) {
+    | #currentColor => color.style["currentColor"]
+    | #primary      => color.style["primary"]
+    | #secondary    => color.style["secondary"]
+    | #black        => color.style["black"]
+    | #white        => color.style["white"]
     },
 
-    switch (i["textDecorationLine"]) {
-    | #none                           => textDecorationLine.style["none"]
-    | #underline                      => textDecorationLine.style["underline"]
-    | #overline                       => textDecorationLine.style["overline"]
-    | #lineThrough                    => textDecorationLine.style["lineThrough"]
-    | #blink                          => textDecorationLine.style["blink"]
-    | #overline_lineThrough           => textDecorationLine.style["overline_lineThrough"]
-    | #overline_underline             => textDecorationLine.style["overline_underline"]
-    | #lineThrough_underline          => textDecorationLine.style["lineThrough_underline"]
-    | #overline_lineThrough_underline => textDecorationLine.style["overline_lineThrough_underline"]
-    | #inherit                        => textDecorationLine.style["inherit"]
-    | #initial                        => textDecorationLine.style["initial"]
-    | #unset                          => textDecorationLine.style["unset"]
+    switch (textDecorationLine) {
+    | #none                           => line.style["none"]
+    | #underline                      => line.style["underline"]
+    | #overline                       => line.style["overline"]
+    | #lineThrough                    => line.style["lineThrough"]
+    | #blink                          => line.style["blink"]
+    | #overline_lineThrough           => line.style["overline_lineThrough"]
+    | #overline_underline             => line.style["overline_underline"]
+    | #lineThrough_underline          => line.style["lineThrough_underline"]
+    | #overline_lineThrough_underline => line.style["overline_lineThrough_underline"]
+    | #inherit                        => line.style["inherit"]
+    | #initial                        => line.style["initial"]
+    | #unset                          => line.style["unset"]
     },
 
-    switch (i["textDecorationStyle"]) {
-    | #solid   => textDecorationStyle.style["solid"]
-    | #double  => textDecorationStyle.style["double"]
-    | #dotted  => textDecorationStyle.style["dotted"]
-    | #dashed  => textDecorationStyle.style["dashed"]
-    | #wavy    => textDecorationStyle.style["wavy"]
-    | #inherit => textDecorationStyle.style["inherit"]
-    | #initial => textDecorationStyle.style["initial"]
-    | #unset   => textDecorationStyle.style["unset"]
+    switch (textDecorationStyle) {
+    | #solid   => style.style["solid"]
+    | #double  => style.style["double"]
+    | #dotted  => style.style["dotted"]
+    | #dashed  => style.style["dashed"]
+    | #wavy    => style.style["wavy"]
+    | #inherit => style.style["inherit"]
+    | #initial => style.style["initial"]
+    | #unset   => style.style["unset"]
     },
 
-    switch (i["textDecorationThickness"]) {
-    | #auto     => textDecorationThickness.style["auto"]
-    | #fromFont => textDecorationThickness.style["fromFont"]
-    | #thin     => textDecorationThickness.style["thin"]
-    | #light    => textDecorationThickness.style["light"]
-    | #medium   => textDecorationThickness.style["medium"]
-    | #bold     => textDecorationThickness.style["bold"]
-    | #inherit  => textDecorationThickness.style["inherit"]
-    | #initial  => textDecorationThickness.style["initial"]
-    | #unset    => textDecorationThickness.style["unset"]
+    switch (textDecorationThickness) {
+    | #auto     => thickness.style["auto"]
+    | #fromFont => thickness.style["fromFont"]
+    | #thin     => thickness.style["thin"]
+    | #light    => thickness.style["light"]
+    | #medium   => thickness.style["medium"]
+    | #bold     => thickness.style["bold"]
+    | #inherit  => thickness.style["inherit"]
+    | #initial  => thickness.style["initial"]
+    | #unset    => thickness.style["unset"]
     },
-  ] -> joinWith(" ");
+  ]);
 }
