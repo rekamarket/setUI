@@ -25,5 +25,5 @@
     "in-source": true
   },
   "suffix": ".js",
-  "bs-dependencies": ["@rescript/react"]
+  "bs-dependencies": ["@rescript/react", "rescript-classnames"]
 }

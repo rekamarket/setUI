@@ -32,8 +32,6 @@ export {
   h6,
 } from './Heading'
 
-export { default as LineBreak } from './LineBreak'
-export { default as LineBreakOpportunity } from './LineBreakOpportunity'
 export { Space, NonBreakable } from './Symbols'
 
 export {
