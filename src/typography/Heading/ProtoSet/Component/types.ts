@@ -1,4 +1,4 @@
-import { SemanticallyNeutralTags } from 'HTML'
+import { HTML_semanticallyNeutralTags as SemanticallyNeutralTags } from '../../../../HTML/HTML.gen'
 import type {
   ICharsPerLineLayer,
   IContentLayer,

@@ -1,17 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React from 'react'
 import { globalStyle, style } from '@vanilla-extract/css'
-import {
-  heading,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  paragraph,
-  textBlock,
-} from '../../typography'
+import { heading, h1, h2, h3, h4, h5, h6 } from '../../typography/Heading'
+import { paragraph, textBlock } from '../../typography/TextContainer'
 import { list, orderedList, unorderedList } from '../../layout'
 
 const className = style({})

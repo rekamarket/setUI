@@ -23,11 +23,6 @@ TextContainer.TextBlock = TextBlock
 export type { Props } from './types'
 export { textContainer } from './Set'
 
-export {
-  Paragraph,
-  paragraph,
-  TextBlock,
-  textBlock,
-} from './Subsets'
+export { Paragraph, paragraph, TextBlock, textBlock } from './Subsets'
 
 export default TextContainer

@@ -11,12 +11,25 @@ export {
   UnorderedList,
 } from './layout'
 
+export { default as BlockQuote, blockQuote } from './typography/BlockQuote'
+
 export {
-  BlockQuote,
-  blockQuote,
-  Data,
-  data,
-  Heading,
+  default as Code,
+  code,
+  InlineCode,
+  inlineCode,
+  KeyboardInput,
+  keyboardInput,
+  Output,
+  output,
+  Variable,
+  variable,
+} from './typography/Code'
+
+export { default as Data, data } from './typography/Data'
+
+export {
+  default as Heading,
   heading,
   H1,
   h1,
@@ -30,13 +43,13 @@ export {
   h5,
   H6,
   h6,
-  TextContainer,
-  textContainer,
-  Paragraph,
-  paragraph,
-  TextBlock,
-  textBlock,
-  Text,
+} from './typography/Heading'
+
+export { default as Link, link } from './typography/Link'
+export { Space, NonBreakable } from './typography/Symbols'
+
+export {
+  default as Text,
   text,
   Abbreviation,
   abbreviation,
@@ -56,14 +69,8 @@ export {
   idiomatic,
   Important,
   important,
-  InlineCode,
-  inlineCode,
-  KeyboardInput,
-  keyboardInput,
   Outdated,
   outdated,
-  Output,
-  output,
   StressEmphasis,
   stressEmphasis,
   Subscript,
@@ -74,15 +81,18 @@ export {
   textInline,
   UnarticulatedAnnotation,
   unarticulatedAnnotation,
-  Variable,
-  variable,
-  Space,
-  NonBreakable,
-  Time,
-  time,
-  Link,
-  link,
-} from './typography'
+} from './typography/Text'
+
+export {
+  default as TextContainer,
+  textContainer,
+  Paragraph,
+  paragraph,
+  TextBlock,
+  textBlock,
+} from './typography/TextContainer'
+
+export { default as Time, time } from './typography/Time'
 
 export { LineBreak_make as LineBreak } from './typography/LineBreak/LineBreak.gen'
 export { LineBreakOpportunity_make as LineBreakOpportunity } from './typography/LineBreakOpportunity/LineBreakOpportunity.gen'

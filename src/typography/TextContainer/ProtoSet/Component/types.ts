@@ -14,8 +14,13 @@ export type NodeProps = Omit<
   'children' | 'color' | 'size' | 'align' | 'as'
 >
 
-export type Props = IContentLayer & IMarginLayer & IPaddingLayer & IColorLayer & IFontLayer & ILineClampLayer & {
-  tag: Tag;
-  className?: string
-  children: ReactNode
-}
+export type Props = IContentLayer &
+  IMarginLayer &
+  IPaddingLayer &
+  IColorLayer &
+  IFontLayer &
+  ILineClampLayer & {
+    tag: Tag
+    className?: string
+    children: ReactNode
+  }
