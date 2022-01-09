@@ -76,8 +76,6 @@ export {
   unarticulatedAnnotation,
   Variable,
   variable,
-  LineBreak,
-  LineBreakOpportunity,
   Space,
   NonBreakable,
   Time,
@@ -85,3 +83,6 @@ export {
   Link,
   link,
 } from './typography'
+
+export { LineBreak_make as LineBreak } from './typography/LineBreak/LineBreak.gen'
+export { LineBreakOpportunity_make as LineBreakOpportunity } from './typography/LineBreakOpportunity/LineBreakOpportunity.gen'
