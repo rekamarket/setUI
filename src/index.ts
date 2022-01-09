@@ -82,6 +82,5 @@ export {
   NonBreakable,
   Time,
   time,
-  Link,
-  link,
 } from './typography'
+export { LinkSet_make as Link } from './typography/Link/LinkSet.gen'
