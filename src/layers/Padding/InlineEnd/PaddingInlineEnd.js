@@ -2,18 +2,13 @@
 
 import * as PaddingReflection from "../PaddingReflection.js";
 
-var PaddingInlineEnd_initial = PaddingReflection.PaddingReflection.initial;
+var args = PaddingReflection.args;
 
-var PaddingInlineEnd_options = PaddingReflection.PaddingReflection.options;
-
-var PaddingInlineEnd = {
-  initial: PaddingInlineEnd_initial,
-  options: PaddingInlineEnd_options,
-  key: "paddingInlineEnd"
-};
+var initial = PaddingReflection.initial;
 
 export {
-  PaddingInlineEnd ,
+  args ,
+  initial ,
   
 }
 /* No side effect */

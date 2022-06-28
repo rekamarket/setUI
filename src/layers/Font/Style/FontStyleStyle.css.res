@@ -1,9 +1,8 @@
-open FontStyle
+type options = FontStyle.options
+type resolve = FontStyle.resolve
+type variant = FontStyle.variant
+let { options } = module(FontStyle)
 
-@module("@vanilla-extract/css") external styleVariants: (FontStyle.options, FontStyle.cssResolve) => FontStyle.variant = "styleVariants"
+@module("@vanilla-extract/css") external styles: (options, resolve) => variant = "styleVariants"
 
-module FontStyleStyle = {
-  include FontStyle
-
-  let style = styleVariants(options, (value) => {{ "fontStyle": value }})
-}
+let make = styles(options, (value) => {{ fontStyle: value }})

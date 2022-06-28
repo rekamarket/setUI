@@ -1,5 +1,2 @@
-module LineBreak = {
-  @genType
-  @react.component
-  let make = () => <br />
-}
+@react.component
+let make = () => <br />

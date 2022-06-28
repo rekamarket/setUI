@@ -1,9 +1,8 @@
-open FontFamily
+type options = FontFamily.options
+type resolve = FontFamily.resolve
+type variant = FontFamily.variant
+let { options } = module(FontFamily)
 
-@module("@vanilla-extract/css") external styleVariants: (FontFamily.options, FontFamily.cssResolve) => FontFamily.variant = "styleVariants"
+@module("@vanilla-extract/css") external styles: (options, resolve) => variant = "styleVariants"
 
-module FontFamilyStyle = {
-  include FontFamily
-
-  let style = styleVariants(options, (value) => {{ "fontFamily": value }})
-}
+let make = styles(options, (value) => {{ fontFamily: value }})

@@ -2,16 +2,14 @@
 
 import * as React from "react";
 
-function LineBreak$LineBreak(Props) {
+function LineBreak(Props) {
   return React.createElement("br", undefined);
 }
 
-var LineBreak = {
-  make: LineBreak$LineBreak
-};
+var make = LineBreak;
 
 export {
-  LineBreak ,
+  make ,
   
 }
 /* react Not a pure module */

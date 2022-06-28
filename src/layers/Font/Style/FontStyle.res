@@ -1,47 +1,25 @@
-module FontStyle = {
-  let key = "fontStyle"
+@genType
+type t = [
+| #normal
+]
 
-  @genType
-  type t = [
-    | #normal
-    | #italic
-    | #oblique
-    | #inherit
-    | #initial
-    | #unset
-  ]
+let args: array<t> = [
+  #normal,
+]
 
-  let initial = #normal;
+type r<'a> = {
+  normal: 'a,
+}
 
-  type value = string;
+type value = string
+type options = r<value>
+type variant = r<string>
+type output = { fontStyle: value }
+type resolve = (value) => output
+type make = (. t) => string
 
-  type options = {
-    "normal": value,
-    "italic": value,
-    "oblique": value,
-    "inherit": value,
-    "initial": value,
-    "unset": value,
-  };
+let initial: t = #normal
 
-  let options = {
-    "normal": "normal",
-    "italic": "italic",
-    "oblique": "oblique",
-    "inherit": "inherit",
-    "initial": "initial",
-    "unset": "unset",
-  }
-
-  type variant = {
-    "normal": string,
-    "italic": string,
-    "oblique": string,
-    "inherit": string,
-    "initial": string,
-    "unset": string,
-  };
-
-  type output = { "fontStyle": value }
-  type cssResolve = (value) => output
+let options = {
+  normal: "normal",
 }

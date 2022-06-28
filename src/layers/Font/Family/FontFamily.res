@@ -1,31 +1,25 @@
-module FontFamily = {
-  let key = "fontFamily"
+@genType
+type t = [
+  | #display
+]
 
-  @genType
-  type t = [
-    | #primary
-    | #monospace
-  ]
+let args: array<t> = [#display]
 
-  let initial = #primary;
+type r<'a> = {display: 'a}
 
-  type value = string;
+type value = string
+type options = r<value>
+type variant = r<string>
+type output = {fontFamily: value}
+type resolve = value => output
+type make = (. t) => string
 
-  type options = {
-    "primary": value,
-    "monospace": value,
-  };
+let initial: t = #display
 
-  let options = {
-    "primary": "'Montserrat', Arial, sans-serif",
-    "monospace": "monospace",
-  };
+let name: r<string> = {
+  display: "Montserrat",
+}
 
-  type variant = {
-    "primary": string,
-    "monospace": string,
-  };
-
-  type output = { "fontFamily": value }
-  type cssResolve = (value) => output
+let options = {
+  display: `${name.display}, "Open Sans", Helvetica, Arial, sans-serif`,
 }

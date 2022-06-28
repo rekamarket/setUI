@@ -1,47 +1,45 @@
-module TextTransform = {
-  let key = "textTransform"
+@genType
+type t = [
+  | #none
+  | #uppercase
+  | #lowercase
+  | #capitalize
+  // | #fullWidth
+  // | #fullSizeKana
+]
 
-  @genType
-  type t = [
-    | #none
-    | #uppercase
-    | #lowercase
-    | #capitalize
-    | #fullWidth
-    | #fullSizeKana
-  ]
+let args: array<t> = [
+  #none,
+  #uppercase,
+  #lowercase,
+  #capitalize,
+  // #fullWidth,
+  // #fullSizeKana,
+]
 
-  let initial = #none;
+type r<'a> = {
+  none: 'a,
+  uppercase: 'a,
+  lowercase: 'a,
+  capitalize: 'a,
+  // fullWidth: 'a,
+  // fullSizeKana: 'a,
+}
 
-  type value = string;
+type value = string
+type options = r<value>
+type variant = r<string>
+type output = { textTransform: value }
+type resolve = (value) => output
+type make = (. t) => string
 
-  type options = {
-    "none": value,
-    "uppercase": value,
-    "lowercase": value,
-    "capitalize": value,
-    "fullWidth": value,
-    "fullSizeKana": value,
-  };
+let initial: t = #none
 
-  let options = {
-    "none": "none",
-    "uppercase": "uppercase",
-    "lowercase": "lowercase",
-    "capitalize": "capitalize",
-    "fullWidth": "full-width",
-    "fullSizeKana": "full-size-kana",
-  }
-
-  type variant = {
-    "none": string,
-    "uppercase": string,
-    "lowercase": string,
-    "capitalize": string,
-    "fullWidth": string,
-    "fullSizeKana": string,
-  };
-
-  type output = { "textTransform": value }
-  type cssResolve = (value) => output
+let options = {
+  none: "none",
+  uppercase: "uppercase",
+  lowercase: "lowercase",
+  capitalize: "capitalize",
+  // fullWidth: "full-width",
+  // fullSizeKana: "full-size-kana",
 }

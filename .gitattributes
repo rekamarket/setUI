@@ -1,0 +1,11 @@
+.config/** linguist-vendored
+.playroom/** linguist-vendored
+scripts/** linguist-vendored
+src/.umi/** linguist-vendored
+.editorconfig linguist-vendored
+.fatherrc.ts linguist-vendored
+.prettierrcignore linguist-vendored
+.prettierrc.cjs linguist-vendored
+.umirc.ts linguist-vendored
+playroom.config.cjs linguist-vendored
+postcss.config.cjs linguist-vendored

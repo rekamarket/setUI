@@ -1,6 +1,45 @@
 /node_modules
+/.yarn
 /dist
 /.next
-/.lib
+/lib
+/package
 .npmrc
 .merlin
+src/**/*.js
+src/**/*.gen.ts
+
+# playroom
+/.playroom/build/**
+/.playroom/package/**
+/.playroom/src/**
+.playroom/Playroom.js
+.playroom/meta/**.js
+
+
+# dependencies
+/node_modules
+/npm-debug.log*
+/yarn-error.log
+/yarn.lock
+/package-lock.json
+
+# production
+/es
+/docs-dist
+
+# misc
+.DS_Store
+/coverage
+
+# umi
+.umi
+.umi-production
+.umi-test
+.env.local
+src/global.css
+
+# ide
+/.vscode
+/.idea
+.bsb.lock

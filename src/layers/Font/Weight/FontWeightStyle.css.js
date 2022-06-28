@@ -3,27 +3,17 @@
 import * as FontWeight from "./FontWeight.js";
 import * as Css from "@vanilla-extract/css";
 
-var options = FontWeight.FontWeight.options;
-
-var style = Css.styleVariants(options, (function (value) {
+var make = Css.styleVariants(FontWeight.options, (function (value) {
         return {
                 fontWeight: value
               };
       }));
 
-var FontWeightStyle_key = FontWeight.FontWeight.key;
-
-var FontWeightStyle_initial = FontWeight.FontWeight.initial;
-
-var FontWeightStyle = {
-  key: FontWeightStyle_key,
-  initial: FontWeightStyle_initial,
-  options: options,
-  style: style
-};
+var options = FontWeight.options;
 
 export {
-  FontWeightStyle ,
+  options ,
+  make ,
   
 }
-/* style Not a pure module */
+/* make Not a pure module */

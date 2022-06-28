@@ -1,9 +1,8 @@
-open TextDecorationColor
+type options = TextDecorationColor.options
+type resolve = TextDecorationColor.resolve
+type variant = TextDecorationColor.variant
+let { options } = module(TextDecorationColor)
 
-@module("@vanilla-extract/css") external styleVariants: (TextDecorationColor.options, TextDecorationColor.cssResolve) => TextDecorationColor.variant = "styleVariants"
+@module("@vanilla-extract/css") external styles: (options, resolve) => variant = "styleVariants"
 
-module TextDecorationColorStyle = {
-  include TextDecorationColor
-
-  let style = styleVariants(options, (value) => {{ "textDecorationColor": value }})
-}
+let make = styles(options, (value) => {{ textDecorationColor: value }})

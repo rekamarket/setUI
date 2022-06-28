@@ -1,10 +1,14 @@
 {
   "reason": { "react-jsx": 3 },
-  "name": "setUI",
+  "name": "typography",
   "sources": [
     {
       "dir": "src",
       "subdirs": true
+    },
+    {
+      "dir": ".playroom",
+      "subdirs": false
     }
   ],
   "gentypeconfig": {

@@ -3,27 +3,17 @@
 import * as TextDecorationColor from "./TextDecorationColor.js";
 import * as Css from "@vanilla-extract/css";
 
-var options = TextDecorationColor.TextDecorationColor.options;
-
-var style = Css.styleVariants(options, (function (value) {
+var make = Css.styleVariants(TextDecorationColor.options, (function (value) {
         return {
                 textDecorationColor: value
               };
       }));
 
-var TextDecorationColorStyle_key = TextDecorationColor.TextDecorationColor.key;
-
-var TextDecorationColorStyle_initial = TextDecorationColor.TextDecorationColor.initial;
-
-var TextDecorationColorStyle = {
-  key: TextDecorationColorStyle_key,
-  initial: TextDecorationColorStyle_initial,
-  options: options,
-  style: style
-};
+var options = TextDecorationColor.options;
 
 export {
-  TextDecorationColorStyle ,
+  options ,
+  make ,
   
 }
-/* style Not a pure module */
+/* make Not a pure module */

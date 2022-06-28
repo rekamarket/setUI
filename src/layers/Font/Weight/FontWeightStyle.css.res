@@ -1,9 +1,8 @@
-open FontWeight
+type options = FontWeight.options
+type resolve = FontWeight.resolve
+type variant = FontWeight.variant
+let { options } = module(FontWeight)
 
-@module("@vanilla-extract/css") external styleVariants: (FontWeight.options, FontWeight.cssResolve) => FontWeight.variant = "styleVariants"
+@module("@vanilla-extract/css") external styles: (options, resolve) => variant = "styleVariants"
 
-module FontWeightStyle = {
-  include FontWeight
-
-  let style = styleVariants(options, (value) => {{ "fontWeight": value }})
-}
+let make = styles(options, (value) => {{ fontWeight: value }})

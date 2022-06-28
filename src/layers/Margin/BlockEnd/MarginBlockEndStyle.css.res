@@ -1,9 +1,8 @@
-open MarginBlockEnd
+type options = MarginReflection.options
+type resolve = MarginBlockEnd.resolve
+type variant = MarginReflection.variant
+let { options } = module(MarginReflection)
 
-@module("@vanilla-extract/css") external styleVariants: (MarginBlockEnd.options, MarginBlockEnd.cssResolve) => MarginBlockEnd.variant = "styleVariants"
+@module("@vanilla-extract/css") external styles: (options, resolve) => variant = "styleVariants"
 
-module MarginBlockEndStyle = {
-  include MarginBlockEnd
-
-  let style = styleVariants(options, (value) => {{ "marginBlockEnd": value }})
-}
+let make = styles(options, (value) => {{ marginBlockEnd: value }})

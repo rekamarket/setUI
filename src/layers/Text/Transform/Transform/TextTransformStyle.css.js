@@ -3,27 +3,17 @@
 import * as TextTransform from "./TextTransform.js";
 import * as Css from "@vanilla-extract/css";
 
-var options = TextTransform.TextTransform.options;
-
-var style = Css.styleVariants(options, (function (value) {
+var make = Css.styleVariants(TextTransform.options, (function (value) {
         return {
                 textTransform: value
               };
       }));
 
-var TextTransformStyle_key = TextTransform.TextTransform.key;
-
-var TextTransformStyle_initial = TextTransform.TextTransform.initial;
-
-var TextTransformStyle = {
-  key: TextTransformStyle_key,
-  initial: TextTransformStyle_initial,
-  options: options,
-  style: style
-};
+var options = TextTransform.options;
 
 export {
-  TextTransformStyle ,
+  options ,
+  make ,
   
 }
-/* style Not a pure module */
+/* make Not a pure module */

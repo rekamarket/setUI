@@ -3,27 +3,17 @@
 import * as TextDecorationLine from "./TextDecorationLine.js";
 import * as Css from "@vanilla-extract/css";
 
-var options = TextDecorationLine.TextDecorationLine.options;
-
-var style = Css.styleVariants(options, (function (value) {
+var make = Css.styleVariants(TextDecorationLine.options, (function (value) {
         return {
                 textDecorationLine: value
               };
       }));
 
-var TextDecorationLineStyle_key = TextDecorationLine.TextDecorationLine.key;
-
-var TextDecorationLineStyle_initial = TextDecorationLine.TextDecorationLine.initial;
-
-var TextDecorationLineStyle = {
-  key: TextDecorationLineStyle_key,
-  initial: TextDecorationLineStyle_initial,
-  options: options,
-  style: style
-};
+var options = TextDecorationLine.options;
 
 export {
-  TextDecorationLineStyle ,
+  options ,
+  make ,
   
 }
-/* style Not a pure module */
+/* make Not a pure module */

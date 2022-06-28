@@ -3,27 +3,17 @@
 import * as Css from "@vanilla-extract/css";
 import * as TextDecorationThickness from "./TextDecorationThickness.js";
 
-var options = TextDecorationThickness.TextDecorationThickness.options;
-
-var style = Css.styleVariants(options, (function (value) {
+var make = Css.styleVariants(TextDecorationThickness.options, (function (value) {
         return {
                 textDecorationThickness: value
               };
       }));
 
-var TextDecorationThicknessStyle_key = TextDecorationThickness.TextDecorationThickness.key;
-
-var TextDecorationThicknessStyle_initial = TextDecorationThickness.TextDecorationThickness.initial;
-
-var TextDecorationThicknessStyle = {
-  key: TextDecorationThicknessStyle_key,
-  initial: TextDecorationThicknessStyle_initial,
-  options: options,
-  style: style
-};
+var options = TextDecorationThickness.options;
 
 export {
-  TextDecorationThicknessStyle ,
+  options ,
+  make ,
   
 }
-/* style Not a pure module */
+/* make Not a pure module */

@@ -3,27 +3,17 @@
 import * as FontFamily from "./FontFamily.js";
 import * as Css from "@vanilla-extract/css";
 
-var options = FontFamily.FontFamily.options;
-
-var style = Css.styleVariants(options, (function (value) {
+var make = Css.styleVariants(FontFamily.options, (function (value) {
         return {
                 fontFamily: value
               };
       }));
 
-var FontFamilyStyle_key = FontFamily.FontFamily.key;
-
-var FontFamilyStyle_initial = FontFamily.FontFamily.initial;
-
-var FontFamilyStyle = {
-  key: FontFamilyStyle_key,
-  initial: FontFamilyStyle_initial,
-  options: options,
-  style: style
-};
+var options = FontFamily.options;
 
 export {
-  FontFamilyStyle ,
+  options ,
+  make ,
   
 }
-/* style Not a pure module */
+/* make Not a pure module */

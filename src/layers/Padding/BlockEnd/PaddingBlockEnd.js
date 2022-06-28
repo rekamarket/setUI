@@ -2,18 +2,13 @@
 
 import * as PaddingReflection from "../PaddingReflection.js";
 
-var PaddingBlockEnd_initial = PaddingReflection.PaddingReflection.initial;
+var args = PaddingReflection.args;
 
-var PaddingBlockEnd_options = PaddingReflection.PaddingReflection.options;
-
-var PaddingBlockEnd = {
-  initial: PaddingBlockEnd_initial,
-  options: PaddingBlockEnd_options,
-  key: "paddingBlockEnd"
-};
+var initial = PaddingReflection.initial;
 
 export {
-  PaddingBlockEnd ,
+  args ,
+  initial ,
   
 }
 /* No side effect */

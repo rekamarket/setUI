@@ -1,28 +1,28 @@
-open ColorReflection
+@genType
+type t = ColorReflection.t
 
-module Color = {
-  include ColorReflection
+let args = ColorReflection.args
 
-  let key = "color"
-  @genType
-  type i = { "color": ColorReflection.t }
+type value = string
+type output = {color: value}
+type resolve = value => output
+type options = ColorReflection.r<value>
+type variant = ColorReflection.variant
+type make = ColorReflection.make
 
-  type value = string;
-
-  let options = {
-    "primary": "#0078D4",
-    "secondary": "#2B88D8",
-    "black": "#000000",
-    "white": "#FFFFFF",
-  };
-
-  type options = {
-    "primary": value,
-    "secondary": value,
-    "black": value,
-    "white": value,
-  };
-
-  type output = { "color": value }
-  type cssResolve = (value) => output
+let options: options = {
+  primary: Theme.color.primary,
+  secondary: Theme.color.secondary,
+  black: Theme.color.black,
+  white: Theme.color.white,
 }
+
+let initial = ColorReflection.initial
+
+let context: React.Context.t<option<t>> = React.createContext(None)
+let useColor = () => React.useContext(context)
+let provider = React.Context.provider(context)
+
+@react.component
+let component = (~value: option<t>, ~children) =>
+  React.createElement(provider, {"value": value, "children": children})

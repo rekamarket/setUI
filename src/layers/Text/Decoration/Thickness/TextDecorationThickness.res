@@ -1,79 +1,53 @@
-module TextDecorationThickness = {
-  let key = "textDecorationThickness"
+@genType
+type t = [
+  | #thin
+  | #bold
+  | #initial
+]
+// | #unset
 
-  type single = [
-    | #auto
-    | #fromFont
-  ]
+let args: array<t> = [
+  // #auto,
+  // #fromFont,
+  #thin,
+  // #light,
+  // #medium,
+  #bold,
+  // #inherit,
+  #initial,
+  // #unset,
+]
 
-  type pixels = [
-    | #thin
-    | #light
-    | #medium
-    | #bold
-  ]
+type r<'a> = {
+  // auto: 'a,
+  // fromFont: 'a,
+  thin: 'a,
+  // light: 'a,
+  // medium: 'a,
+  bold: 'a,
+  // inherit: 'a,
+  initial: 'a,
+  // unset: 'a,
+}
 
-  type global = [
-    | #inherit
-    | #initial
-    | #unset
-  ]
+type value = string
+type options = r<value>
+type variant = r<string>
+type output = {textDecorationThickness: value}
+type resolve = value => output
+type make = (. t) => string
 
-  @genType
-  type t = [
-    | #auto
-    | #fromFont
-    | #thin
-    | #light
-    | #medium
-    | #bold
-    | #inherit
-    | #initial
-    | #unset
-  ]
+let initial: t = #initial
 
-  let initial = #initial;
+let options = {
+  // auto: "auto",
+  // fromFont: "fromFont",
 
-  type value = string
-
-  type options = {
-    "auto": value,
-    "fromFont": value,
-    "thin": value,
-    "light": value,
-    "medium": value,
-    "bold": value,
-    "inherit": value,
-    "initial": value,
-    "unset": value,
-  };
-
-  let options = {
-    "auto": "auto",
-    "fromFont": "fromFont",
-
-    "thin": "1px",
-    "light": "2px",
-    "medium": "3px",
-    "bold": "4px",
-
-    "inherit": "inheritValue",
-    "initial": "initial",
-    "unset": "unset",
-  }
-
-  type variant = {
-    "auto": string,
-    "fromFont": string,
-    "thin": string,
-    "light": string,
-    "medium": string,
-    "bold": string,
-    "inherit": string,
-    "initial": string,
-    "unset": string,
-  };
-
-  type output = { "textDecorationThickness": value }
-  type cssResolve = (value) => output
+  thin: "1px",
+  // light: "2px",
+  // medium: "4px",
+  bold: "3px",
+  // inherit: "inherit",
+  initial: "initial",
+  // unset: "unset",
 }

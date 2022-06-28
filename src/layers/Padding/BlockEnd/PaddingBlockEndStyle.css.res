@@ -1,9 +1,8 @@
-open PaddingBlockEnd
+type options = PaddingReflection.options
+type resolve = PaddingBlockEnd.resolve
+type variant = PaddingReflection.variant
+let { options } = module(PaddingReflection)
 
-@module("@vanilla-extract/css") external styleVariants: (PaddingBlockEnd.options, PaddingBlockEnd.cssResolve) => PaddingBlockEnd.variant = "styleVariants"
+@module("@vanilla-extract/css") external styles: (options, resolve) => variant = "styleVariants"
 
-module PaddingBlockEndStyle = {
-  include PaddingBlockEnd
-
-  let style = styleVariants(options, (value) => {{ "paddingBlockEnd": value }})
-}
+let make = styles(options, (value) => {{ paddingBlockEnd: value }})

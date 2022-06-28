@@ -1,9 +1,8 @@
-open PaddingInlineStart
+type options = PaddingReflection.options
+type resolve = PaddingInlineStart.resolve
+type variant = PaddingReflection.variant
+let { options } = module(PaddingReflection)
 
-@module("@vanilla-extract/css") external styleVariants: (PaddingInlineStart.options, PaddingInlineStart.cssResolve) => PaddingInlineStart.variant = "styleVariants"
+@module("@vanilla-extract/css") external styles: (options, resolve) => variant = "styleVariants"
 
-module PaddingInlineStartStyle = {
-  include PaddingInlineStart
-
-  let style = styleVariants(options, (value) => {{ "paddingInlineStart": value }})
-}
+let make = styles(options, (value) => {{ paddingInlineStart: value }})

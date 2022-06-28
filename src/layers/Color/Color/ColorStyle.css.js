@@ -3,27 +3,17 @@
 import * as Color from "./Color.js";
 import * as Css from "@vanilla-extract/css";
 
-var options = Color.Color.options;
-
-var style = Css.styleVariants(options, (function (value) {
+var make = Css.styleVariants(Color.options, (function (value) {
         return {
                 color: value
               };
       }));
 
-var ColorStyle_initial = Color.Color.initial;
-
-var ColorStyle_key = Color.Color.key;
-
-var ColorStyle = {
-  initial: ColorStyle_initial,
-  key: ColorStyle_key,
-  options: options,
-  style: style
-};
+var options = Color.options;
 
 export {
-  ColorStyle ,
+  options ,
+  make ,
   
 }
-/* style Not a pure module */
+/* make Not a pure module */

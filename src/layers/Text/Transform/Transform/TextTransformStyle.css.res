@@ -1,9 +1,8 @@
-open TextTransform
+type options = TextTransform.options
+type resolve = TextTransform.resolve
+type variant = TextTransform.variant
+let { options } = module(TextTransform)
 
-@module("@vanilla-extract/css") external styleVariants: (TextTransform.options, TextTransform.cssResolve) => TextTransform.variant = "styleVariants"
+@module("@vanilla-extract/css") external styles: (options, resolve) => variant = "styleVariants"
 
-module TextTransformStyle = {
-  include TextTransform
-
-  let style = styleVariants(options, (value) => {{ "textTransform": value }})
-}
+let make = styles(options, (value) => {{ textTransform: value }})

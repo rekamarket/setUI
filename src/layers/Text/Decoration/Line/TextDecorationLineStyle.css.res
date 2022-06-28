@@ -1,9 +1,8 @@
-open TextDecorationLine
+type options = TextDecorationLine.options
+type resolve = TextDecorationLine.resolve
+type variant = TextDecorationLine.variant
+let { options } = module(TextDecorationLine)
 
-@module("@vanilla-extract/css") external styleVariants: (TextDecorationLine.options, TextDecorationLine.cssResolve) => TextDecorationLine.variant = "styleVariants"
+@module("@vanilla-extract/css") external styles: (options, resolve) => variant = "styleVariants"
 
-module TextDecorationLineStyle = {
-  include TextDecorationLine
-
-  let style = styleVariants(options, (value) => {{ "textDecorationLine": value }})
-}
+let make = styles(options, (value) => {{ textDecorationLine: value }})

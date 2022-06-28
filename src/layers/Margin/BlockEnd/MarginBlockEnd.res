@@ -1,11 +1,8 @@
-open MarginReflection
+@genType
+type t = MarginReflection.t
 
-module MarginBlockEnd = {
-  include MarginReflection
+type output = { marginBlockEnd: MarginReflection.value }
+type resolve = (MarginReflection.value) => output
 
-  let key = "marginBlockEnd"
-  @genType
-  type i = { "marginBlockEnd": MarginReflection.t }
-  type output = { "marginBlockEnd": MarginReflection.value }
-  type cssResolve = (MarginReflection.value) => output
-}
+let args = MarginReflection.args
+let initial = MarginReflection.initial

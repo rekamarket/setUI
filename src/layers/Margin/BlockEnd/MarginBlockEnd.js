@@ -2,18 +2,13 @@
 
 import * as MarginReflection from "../MarginReflection.js";
 
-var MarginBlockEnd_initial = MarginReflection.MarginReflection.initial;
+var args = MarginReflection.args;
 
-var MarginBlockEnd_options = MarginReflection.MarginReflection.options;
-
-var MarginBlockEnd = {
-  initial: MarginBlockEnd_initial,
-  options: MarginBlockEnd_options,
-  key: "marginBlockEnd"
-};
+var initial = MarginReflection.initial;
 
 export {
-  MarginBlockEnd ,
+  args ,
+  initial ,
   
 }
 /* No side effect */
