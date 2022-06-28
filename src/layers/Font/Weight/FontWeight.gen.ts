@@ -3,4 +3,4 @@
 
 
 // tslint:disable-next-line:interface-over-type-literal
-export type t = "regular" | "semiBold";
+export type t = "regular" | "semiBold" | "bold";

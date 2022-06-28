@@ -28,7 +28,8 @@ var initial = "regular";
 
 var options = {
   regular: "500",
-  semiBold: "600"
+  semiBold: "600",
+  bold: "700"
 };
 
 var component = FontWeight$component;

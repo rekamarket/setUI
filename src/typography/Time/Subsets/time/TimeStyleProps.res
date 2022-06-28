@@ -1,7 +1,7 @@
 let styleProps: TimeProto.styleProps = {
   color: #black,
   fontFamily: #display,
-  fontSize: #m,
+  fontSize: #"2xs",
   fontStyle: #normal,
   fontWeight: #regular,
   textTransform: #none,

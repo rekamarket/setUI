@@ -1,6 +1,6 @@
 {
   "private": false,
-  "version": "0.0.136",
+  "version": "0.0.147",
   "type": "module",
   "main": "package/index.gen.js",
   "module": "package/index.gen.js",
@@ -18,9 +18,9 @@
     "access": "public",
     "registry": "https://npm.pkg.github.com"
   },
-  "homepage": "http://rekamarket.github.io/set-ui",
+  "homepage": "http://rekamarket.github.io/setUI",
   "name": "@rekamarket/set-ui",
-  "repository": "git://github.com/rekamarket/set-ui.git",
+  "repository": "git://github.com/rekamarket/setUI.git",
   "scripts": {
     "build:docs": "node scripts/dumi.cjs",
     "ts-types": "tsc --emitDeclarationOnly --outDir package",

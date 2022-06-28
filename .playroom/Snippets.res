@@ -1,5 +1,12 @@
 @as("default")
 let default = Belt.Array.concatMany([
+  // List
+  ListPlayroom.make,
+  UlPlayroom.make,
+  // Frame
+  FramePlayroom.make,
+  // BlockQuote
+  BlockQuotePlayroom.make,
   // Liton Default
   ButtonPlayroom.make,
   // Heading
@@ -23,9 +30,8 @@ let default = Belt.Array.concatMany([
   SmallPlayroom.make,
   SpanPlayroom.make,
   StrongPlayroom.make,
-  // TextContainer
-  TextContainerPlayroom.make,
-  PPlayroom.make,
+  // Paragraph
+  ParagraphPlayroom.make,
   // Time
   TimePlayroom.make,
 ])

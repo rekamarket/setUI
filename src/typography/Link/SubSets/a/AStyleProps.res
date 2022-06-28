@@ -1,7 +1,7 @@
 let styleProps: LinkProto.styleProps = {
   color: #black,
   fontFamily: #display,
-  fontSize: #s,
+  fontSize: #"2xs",
   fontStyle: #normal,
   fontWeight: #regular,
   textDecorationColor: #currentColor,

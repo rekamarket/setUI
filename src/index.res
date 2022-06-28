@@ -1,3 +1,22 @@
+// Blocks
+// List
+@genType.as("List")
+let list = List.make
+@genType.as("UnorderedList")
+let unorderedList = Ul.make
+
+// Frame
+@genType.as("Frame")
+let frame = Frame.make
+
+// BlockQuote
+@genType.as("Block")
+let block = Block.make
+
+// BlockQuote
+@genType.as("BlockQuote")
+let blockQuote = BlockQuote.make
+
 // Liton Default
 @genType.as("Button") let button = Button.make
 @genType.as("ButtonLink") let buttonLink = ButtonLink.make
@@ -59,16 +78,19 @@ let textInline = Span.make
 @genType.as("Important")
 let important = Strong.make
 
-// TextContainer
-@genType.as("TextContainer")
-let textContainer = TextContainer.make
-
+// Paragraph
 @genType.as("Paragraph")
-let paragraph = P.make
+let paragraph = Paragraph.make
 
 // Time
 @genType.as("Time")
 let time = Time.make
+
+@genType.as("NonBreakable")
+let nonBreakable = NonBreakable.make
+
+@genType.as("Space")
+let space = Space.make
 
 // "Cover",
 // "Frame",
