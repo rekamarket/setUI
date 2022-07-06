@@ -1,10 +1,10 @@
 open R
 open Playroom
 
-let displayName = "BlockQuote"
+let displayName = "Block"
 let parentName = None
-let component = "BlockQuote"
-let description = "BlockQuote"
+let component = "Block"
+let description = "Block"
 
 let tag = HTMLSet([#div, #ul, #ol])
 
