@@ -8,7 +8,7 @@ title: Text
 # Text
 
 ## Semantics
-Можно указать теги - ["abbr", "b", "dfn", "em", "i", "small", "span", "strong"]
+Можно указать теги - ["abbr", "b", "data", "dd", "dt", "i", "small", "span", "strong"]
 
 ```tsx
 import React from 'react'
@@ -16,28 +16,31 @@ import { Text } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Text tag="abbr">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text tag="b">
-		Инлайновый текст
+		Text content
 	</Text>
-	<Text tag="dfn">
-		Инлайновый текст
+	<Text tag="data">
+		Text content
 	</Text>
-	<Text tag="em">
-		Инлайновый текст
+	<Text tag="dd">
+		Text content
+	</Text>
+	<Text tag="dt">
+		Text content
 	</Text>
 	<Text tag="i">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text tag="small">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text tag="strong">
-		Инлайновый текст
+		Text content
 	</Text>
 </div>)
 ```
@@ -51,16 +54,16 @@ import { Text } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Text color="primary" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text color="secondary" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text color="black" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text color="white" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 </div>)
 ```
@@ -74,46 +77,46 @@ import { Text } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Text fontSize="none" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text fontSize="5xs" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text fontSize="4xs" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text fontSize="3xs" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text fontSize="2xs" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text fontSize="xs" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text fontSize="s" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text fontSize="m" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text fontSize="l" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text fontSize="xl" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text fontSize="2xl" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text fontSize="3xl" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text fontSize="4xl" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text fontSize="5xl" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 </div>)
 ```
@@ -127,10 +130,10 @@ import { Text } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Text fontWeight="regular" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text fontWeight="semiBold" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 </div>)
 ```
@@ -144,16 +147,16 @@ import { Text } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Text textTransform="none" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text textTransform="uppercase" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text textTransform="lowercase" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 	<Text textTransform="capitalize" tag="span">
-		Инлайновый текст
+		Text content
 	</Text>
 </div>)
 ```

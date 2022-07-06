@@ -10,6 +10,7 @@ type htmlTag = [
   | AsideHTML.tag
   | BHTML.tag
   | BrHTML.tag
+  | BlockquoteHTML.tag
   | ButtonHTML.tag
   | CiteHTML.tag
   | CodeHTML.tag

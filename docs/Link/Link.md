@@ -16,16 +16,16 @@ import { Link } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Link color="primary" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link color="secondary" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link color="black" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link color="white" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 </div>)
 ```
@@ -39,46 +39,46 @@ import { Link } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Link fontSize="none" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link fontSize="5xs" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link fontSize="4xs" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link fontSize="3xs" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link fontSize="2xs" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link fontSize="xs" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link fontSize="s" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link fontSize="m" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link fontSize="l" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link fontSize="xl" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link fontSize="2xl" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link fontSize="3xl" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link fontSize="4xl" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link fontSize="5xl" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 </div>)
 ```
@@ -92,10 +92,10 @@ import { Link } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Link fontWeight="regular" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link fontWeight="semiBold" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 </div>)
 ```
@@ -109,19 +109,19 @@ import { Link } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Link textDecorationColor="currentColor" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link textDecorationColor="primary" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link textDecorationColor="secondary" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link textDecorationColor="black" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link textDecorationColor="white" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 </div>)
 ```
@@ -135,16 +135,16 @@ import { Link } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Link textDecorationLine="none" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link textDecorationLine="underline" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link textDecorationLine="overline" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link textDecorationLine="lineThrough" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 </div>)
 ```
@@ -158,10 +158,10 @@ import { Link } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Link textDecorationStyle="solid" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link textDecorationStyle="initial" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 </div>)
 ```
@@ -175,13 +175,13 @@ import { Link } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Link textDecorationThickness="thin" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link textDecorationThickness="bold" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link textDecorationThickness="initial" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 </div>)
 ```
@@ -195,16 +195,16 @@ import { Link } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Link textTransform="none" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link textTransform="uppercase" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link textTransform="lowercase" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 	<Link textTransform="capitalize" href="https://sberbusiness.ru">
-		Инлайновая ссылка
+		Ссылка строчная
 	</Link>
 </div>)
 ```

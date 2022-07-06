@@ -4,7 +4,7 @@ open Playroom
 let displayName = "Frame"
 let parentName = None
 let component = "Frame"
-let description = "Frame"
+let description = "Frame Content"
 
 let tag = HTMLSet([#div, #section])
 
@@ -17,7 +17,7 @@ let list: (~tag: string, ~children: option<string>, ~props: option<array<R.prop>
     [
       {
         title: "Semantics",
-        description: `Можно указать теги - ["ul", "ol"]`->Some,
+        description: `Значение по умолчанию - section; Можно переопределить как "div"`->Some,
         root: Root({
           tag: R.defaultTag,
           props: R.defaultProps,
@@ -25,7 +25,7 @@ let list: (~tag: string, ~children: option<string>, ~props: option<array<R.prop>
             ~tag,
             ~children,
             ~key="tag",
-            ~values=["ul", "ol"]->R.toStringArray,
+            ~values=["div"]->R.toStringArray,
             ~staticProps=switch props {
             | Some(a) =>
               a
@@ -40,5 +40,9 @@ let list: (~tag: string, ~children: option<string>, ~props: option<array<R.prop>
         }),
       },
     ],
+    FrameLayerMeta.make(~tag, ~children, ~props),
+    ContentLayerMeta.make(~tag, ~children, ~props),
     ColorLayerMeta.make(~tag, ~children, ~props),
+    MarginLayerMeta.make(~tag, ~children, ~props),
+    PaddingLayerMeta.make(~tag, ~children, ~props),
   ]->Belt.Array.concatMany

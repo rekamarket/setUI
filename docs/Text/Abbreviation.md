@@ -8,6 +8,41 @@ group:
 
 # Abbreviation
 
+## Semantics
+Значение по умолчанию - abbr; Можно указать теги - ["b", "data", "dd", "dt", "i", "small", "span", "strong"]
+
+```tsx
+import React from 'react'
+import { Abbreviation } from '@rekamarket/sber-business-ui'
+
+export default () => (<div style={{ display: "grid", gap: 10 }}>
+	<Abbreviation tag="b">
+		Abbreviation
+	</Abbreviation>
+	<Abbreviation tag="data">
+		Abbreviation
+	</Abbreviation>
+	<Abbreviation tag="dd">
+		Abbreviation
+	</Abbreviation>
+	<Abbreviation tag="dt">
+		Abbreviation
+	</Abbreviation>
+	<Abbreviation tag="i">
+		Abbreviation
+	</Abbreviation>
+	<Abbreviation tag="small">
+		Abbreviation
+	</Abbreviation>
+	<Abbreviation tag="span">
+		Abbreviation
+	</Abbreviation>
+	<Abbreviation tag="strong">
+		Abbreviation
+	</Abbreviation>
+</div>)
+```
+
 ## color
 The color CSS property sets the foreground color value of an element's text and text decorations, and sets the <currentcolor> value. currentcolor may be used as an indirect value on other properties and is the default for other color properties, such as border-color.
 
@@ -17,16 +52,16 @@ import { Abbreviation } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Abbreviation color="primary">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation color="secondary">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation color="black">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation color="white">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 </div>)
 ```
@@ -40,46 +75,46 @@ import { Abbreviation } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Abbreviation fontSize="none">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation fontSize="5xs">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation fontSize="4xs">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation fontSize="3xs">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation fontSize="2xs">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation fontSize="xs">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation fontSize="s">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation fontSize="m">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation fontSize="l">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation fontSize="xl">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation fontSize="2xl">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation fontSize="3xl">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation fontSize="4xl">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation fontSize="5xl">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 </div>)
 ```
@@ -93,10 +128,10 @@ import { Abbreviation } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Abbreviation fontWeight="regular">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation fontWeight="semiBold">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 </div>)
 ```
@@ -110,16 +145,16 @@ import { Abbreviation } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Abbreviation textTransform="none">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation textTransform="uppercase">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation textTransform="lowercase">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 	<Abbreviation textTransform="capitalize">
-		Аббревиатура
+		Abbreviation
 	</Abbreviation>
 </div>)
 ```

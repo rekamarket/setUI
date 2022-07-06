@@ -8,6 +8,41 @@ group:
 
 # TextInline
 
+## Semantics
+Значение по умолчанию - span; Можно указать теги - ["abbr", "b", "data", "dd", "dt", "i", "small", "strong"]
+
+```tsx
+import React from 'react'
+import { TextInline } from '@rekamarket/sber-business-ui'
+
+export default () => (<div style={{ display: "grid", gap: 10 }}>
+	<TextInline tag="abbr">
+		TextInline
+	</TextInline>
+	<TextInline tag="b">
+		TextInline
+	</TextInline>
+	<TextInline tag="data">
+		TextInline
+	</TextInline>
+	<TextInline tag="dd">
+		TextInline
+	</TextInline>
+	<TextInline tag="dt">
+		TextInline
+	</TextInline>
+	<TextInline tag="i">
+		TextInline
+	</TextInline>
+	<TextInline tag="small">
+		TextInline
+	</TextInline>
+	<TextInline tag="strong">
+		TextInline
+	</TextInline>
+</div>)
+```
+
 ## color
 The color CSS property sets the foreground color value of an element's text and text decorations, and sets the <currentcolor> value. currentcolor may be used as an indirect value on other properties and is the default for other color properties, such as border-color.
 
@@ -17,16 +52,16 @@ import { TextInline } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<TextInline color="primary">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline color="secondary">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline color="black">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline color="white">
-		Строчный текст
+		TextInline
 	</TextInline>
 </div>)
 ```
@@ -40,46 +75,46 @@ import { TextInline } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<TextInline fontSize="none">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline fontSize="5xs">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline fontSize="4xs">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline fontSize="3xs">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline fontSize="2xs">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline fontSize="xs">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline fontSize="s">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline fontSize="m">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline fontSize="l">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline fontSize="xl">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline fontSize="2xl">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline fontSize="3xl">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline fontSize="4xl">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline fontSize="5xl">
-		Строчный текст
+		TextInline
 	</TextInline>
 </div>)
 ```
@@ -93,10 +128,10 @@ import { TextInline } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<TextInline fontWeight="regular">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline fontWeight="semiBold">
-		Строчный текст
+		TextInline
 	</TextInline>
 </div>)
 ```
@@ -110,16 +145,16 @@ import { TextInline } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<TextInline textTransform="none">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline textTransform="uppercase">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline textTransform="lowercase">
-		Строчный текст
+		TextInline
 	</TextInline>
 	<TextInline textTransform="capitalize">
-		Строчный текст
+		TextInline
 	</TextInline>
 </div>)
 ```

@@ -1,53 +1,78 @@
-let make: (
-  ~tag: string,
-  ~children: option<string>,
-  ~props: option<array<R.prop>>,
-) => array<R.t> = (~tag, ~children, ~props) => [
+let make: (~tag: string, ~children: option<string>, ~props: option<array<R.prop>>) => array<R.t> = (
+  ~tag,
+  ~children,
+  ~props,
+) => [
+  {
+    title: LitonColorMeta.name,
+    description: LitonColorMeta.description,
+    root: Root({
+      tag: R.defaultTag,
+      props: R.defaultProps,
+      children: R.block(.
+        ~tag,
+        ~children,
+        ~key=LitonColorMeta.name,
+        ~values=LitonColorMeta.args->R.toStringArray,
+        ~staticProps=switch props {
+        | Some(a) =>
+          a
+          ->Belt.Array.keep(e => {
+            let (key, _) = e
+            key != LitonColorMeta.name
+          })
+          ->Some
+        | None => None
+        },
+      )->Some,
+    }),
+  },
   {
     title: LitonSizeMeta.name,
     description: LitonSizeMeta.description,
-
     root: Root({
       tag: R.defaultTag,
       props: R.defaultProps,
-
       children: R.block(.
         ~tag,
         ~children,
-        ~key = LitonSizeMeta.name,
-        ~values = LitonSizeMeta.args -> R.toStringArray,
-        ~staticProps = switch props {
-        | Some(a) => a -> Belt.Array.keep(e => {
+        ~key=LitonSizeMeta.name,
+        ~values=LitonSizeMeta.args->R.toStringArray,
+        ~staticProps=switch props {
+        | Some(a) =>
+          a
+          ->Belt.Array.keep(e => {
             let (key, _) = e
             key != LitonSizeMeta.name
-          }) -> Some
+          })
+          ->Some
         | None => None
         },
-      ) -> Some,
+      )->Some,
     }),
   },
-
   {
     title: LitonVariantMeta.name,
     description: LitonVariantMeta.description,
-
     root: Root({
       tag: R.defaultTag,
       props: R.defaultProps,
-
       children: R.block(.
         ~tag,
         ~children,
-        ~key = LitonVariantMeta.name,
-        ~values = LitonVariantMeta.args -> R.toStringArray,
-        ~staticProps = switch props {
-        | Some(a) => a -> Belt.Array.keep(e => {
+        ~key=LitonVariantMeta.name,
+        ~values=LitonVariantMeta.args->R.toStringArray,
+        ~staticProps=switch props {
+        | Some(a) =>
+          a
+          ->Belt.Array.keep(e => {
             let (key, _) = e
             key != LitonVariantMeta.name
-          }) -> Some
+          })
+          ->Some
         | None => None
         },
-      ) -> Some,
+      )->Some,
     }),
   },
 ]

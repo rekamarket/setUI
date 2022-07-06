@@ -8,6 +8,41 @@ group:
 
 # Attention
 
+## Semantics
+Значение по умолчанию - b; Можно указать теги - ["abbr", "data", "dd", "dt", "i", "small", "span", "strong"]
+
+```tsx
+import React from 'react'
+import { Attention } from '@rekamarket/sber-business-ui'
+
+export default () => (<div style={{ display: "grid", gap: 10 }}>
+	<Attention tag="abbr">
+		Attention
+	</Attention>
+	<Attention tag="data">
+		Attention
+	</Attention>
+	<Attention tag="dd">
+		Attention
+	</Attention>
+	<Attention tag="dt">
+		Attention
+	</Attention>
+	<Attention tag="i">
+		Attention
+	</Attention>
+	<Attention tag="small">
+		Attention
+	</Attention>
+	<Attention tag="span">
+		Attention
+	</Attention>
+	<Attention tag="strong">
+		Attention
+	</Attention>
+</div>)
+```
+
 ## color
 The color CSS property sets the foreground color value of an element's text and text decorations, and sets the <currentcolor> value. currentcolor may be used as an indirect value on other properties and is the default for other color properties, such as border-color.
 
@@ -17,16 +52,16 @@ import { Attention } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Attention color="primary">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention color="secondary">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention color="black">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention color="white">
-		Текст повышенного значения
+		Attention
 	</Attention>
 </div>)
 ```
@@ -40,46 +75,46 @@ import { Attention } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Attention fontSize="none">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention fontSize="5xs">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention fontSize="4xs">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention fontSize="3xs">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention fontSize="2xs">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention fontSize="xs">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention fontSize="s">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention fontSize="m">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention fontSize="l">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention fontSize="xl">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention fontSize="2xl">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention fontSize="3xl">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention fontSize="4xl">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention fontSize="5xl">
-		Текст повышенного значения
+		Attention
 	</Attention>
 </div>)
 ```
@@ -93,10 +128,10 @@ import { Attention } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Attention fontWeight="regular">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention fontWeight="semiBold">
-		Текст повышенного значения
+		Attention
 	</Attention>
 </div>)
 ```
@@ -110,16 +145,16 @@ import { Attention } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Attention textTransform="none">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention textTransform="uppercase">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention textTransform="lowercase">
-		Текст повышенного значения
+		Attention
 	</Attention>
 	<Attention textTransform="capitalize">
-		Текст повышенного значения
+		Attention
 	</Attention>
 </div>)
 ```

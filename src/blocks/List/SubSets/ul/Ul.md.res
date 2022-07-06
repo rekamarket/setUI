@@ -1,16 +1,15 @@
 open R
 
-let {displayName, parentName, tag, list} = module(UlMeta)
+let {displayName, parentName, tag, list, description} = module(UlMeta)
 
 let make =
   R.title(~name=displayName, ~group=parentName) ++
   "\n" ++
   R.header(. ~title=displayName) ++
-  list(
-    ~tag=displayName,
-    ~children=`Абзац. Многострочный текст`->Some,
-    ~props=None,
-  )->Belt.Array.reduce("", (acc, curr) =>
+  list(~tag=displayName, ~children=description->Some, ~props=None)->Belt.Array.reduce("", (
+    acc,
+    curr,
+  ) =>
     acc ++
     "\n" ++
     R.section(

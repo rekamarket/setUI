@@ -15,8 +15,8 @@ import React from 'react'
 import { Time } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
-	<Time tag="span">
-		Инлайновый текст
+	<Time tag="span" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
 </div>)
 ```
@@ -29,17 +29,17 @@ import React from 'react'
 import { Time } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
-	<Time color="primary" tag="span">
-		Инлайновый текст
+	<Time color="primary" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time color="secondary" tag="span">
-		Инлайновый текст
+	<Time color="secondary" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time color="black" tag="span">
-		Инлайновый текст
+	<Time color="black" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time color="white" tag="span">
-		Инлайновый текст
+	<Time color="white" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
 </div>)
 ```
@@ -52,47 +52,47 @@ import React from 'react'
 import { Time } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
-	<Time fontSize="none" tag="span">
-		Инлайновый текст
+	<Time fontSize="none" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time fontSize="5xs" tag="span">
-		Инлайновый текст
+	<Time fontSize="5xs" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time fontSize="4xs" tag="span">
-		Инлайновый текст
+	<Time fontSize="4xs" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time fontSize="3xs" tag="span">
-		Инлайновый текст
+	<Time fontSize="3xs" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time fontSize="2xs" tag="span">
-		Инлайновый текст
+	<Time fontSize="2xs" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time fontSize="xs" tag="span">
-		Инлайновый текст
+	<Time fontSize="xs" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time fontSize="s" tag="span">
-		Инлайновый текст
+	<Time fontSize="s" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time fontSize="m" tag="span">
-		Инлайновый текст
+	<Time fontSize="m" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time fontSize="l" tag="span">
-		Инлайновый текст
+	<Time fontSize="l" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time fontSize="xl" tag="span">
-		Инлайновый текст
+	<Time fontSize="xl" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time fontSize="2xl" tag="span">
-		Инлайновый текст
+	<Time fontSize="2xl" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time fontSize="3xl" tag="span">
-		Инлайновый текст
+	<Time fontSize="3xl" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time fontSize="4xl" tag="span">
-		Инлайновый текст
+	<Time fontSize="4xl" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time fontSize="5xl" tag="span">
-		Инлайновый текст
+	<Time fontSize="5xl" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
 </div>)
 ```
@@ -105,11 +105,11 @@ import React from 'react'
 import { Time } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
-	<Time fontWeight="regular" tag="span">
-		Инлайновый текст
+	<Time fontWeight="regular" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time fontWeight="semiBold" tag="span">
-		Инлайновый текст
+	<Time fontWeight="semiBold" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
 </div>)
 ```
@@ -122,17 +122,17 @@ import React from 'react'
 import { Time } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
-	<Time textTransform="none" tag="span">
-		Инлайновый текст
+	<Time textTransform="none" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time textTransform="uppercase" tag="span">
-		Инлайновый текст
+	<Time textTransform="uppercase" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time textTransform="lowercase" tag="span">
-		Инлайновый текст
+	<Time textTransform="lowercase" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
-	<Time textTransform="capitalize" tag="span">
-		Инлайновый текст
+	<Time textTransform="capitalize" dateTime="2018-07-07T20:00:00">
+		20:00
 	</Time>
 </div>)
 ```

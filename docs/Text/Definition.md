@@ -8,6 +8,41 @@ group:
 
 # Definition
 
+## Semantics
+Значение по умолчанию - dd; Можно указать теги - ["abbr", "b", "data", "dt", "i", "small", "span", "strong"]
+
+```tsx
+import React from 'react'
+import { Definition } from '@rekamarket/sber-business-ui'
+
+export default () => (<div style={{ display: "grid", gap: 10 }}>
+	<Definition tag="abbr">
+		Definition
+	</Definition>
+	<Definition tag="b">
+		Definition
+	</Definition>
+	<Definition tag="data">
+		Definition
+	</Definition>
+	<Definition tag="dt">
+		Definition
+	</Definition>
+	<Definition tag="i">
+		Definition
+	</Definition>
+	<Definition tag="small">
+		Definition
+	</Definition>
+	<Definition tag="span">
+		Definition
+	</Definition>
+	<Definition tag="strong">
+		Definition
+	</Definition>
+</div>)
+```
+
 ## color
 The color CSS property sets the foreground color value of an element's text and text decorations, and sets the <currentcolor> value. currentcolor may be used as an indirect value on other properties and is the default for other color properties, such as border-color.
 
@@ -17,16 +52,16 @@ import { Definition } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Definition color="primary">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition color="secondary">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition color="black">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition color="white">
-		Аббревиатура
+		Definition
 	</Definition>
 </div>)
 ```
@@ -40,46 +75,46 @@ import { Definition } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Definition fontSize="none">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition fontSize="5xs">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition fontSize="4xs">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition fontSize="3xs">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition fontSize="2xs">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition fontSize="xs">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition fontSize="s">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition fontSize="m">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition fontSize="l">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition fontSize="xl">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition fontSize="2xl">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition fontSize="3xl">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition fontSize="4xl">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition fontSize="5xl">
-		Аббревиатура
+		Definition
 	</Definition>
 </div>)
 ```
@@ -93,10 +128,10 @@ import { Definition } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Definition fontWeight="regular">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition fontWeight="semiBold">
-		Аббревиатура
+		Definition
 	</Definition>
 </div>)
 ```
@@ -110,16 +145,16 @@ import { Definition } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Definition textTransform="none">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition textTransform="uppercase">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition textTransform="lowercase">
-		Аббревиатура
+		Definition
 	</Definition>
 	<Definition textTransform="capitalize">
-		Аббревиатура
+		Definition
 	</Definition>
 </div>)
 ```

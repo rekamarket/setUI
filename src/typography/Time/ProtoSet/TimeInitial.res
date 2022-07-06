@@ -21,6 +21,7 @@ let make = (
   ~tag: tag,
   ~className: string,
   ~style: option<Retype.style>=?,
+  ~dateTime: option<string>=?,
   ~color: Color.t,
   ~fontFamily: FontFamily.t,
   ~fontSize: FontSize.t,
@@ -32,6 +33,7 @@ let make = (
   React.createElementVariadic(
     ReactDOM.stringToComponent((tag :> string)),
     ReactDOM.domProps(
+      ~dateTime?,
       ~className=Cn.make([
         classNameRoot,
         className,

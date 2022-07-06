@@ -3,6 +3,7 @@ let default = Belt.Array.concatMany([
   // List
   ListPlayroom.make,
   UlPlayroom.make,
+  OlPlayroom.make,
   // Frame
   FramePlayroom.make,
   // BlockQuote

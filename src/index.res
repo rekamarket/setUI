@@ -4,6 +4,8 @@
 let list = List.make
 @genType.as("UnorderedList")
 let unorderedList = Ul.make
+@genType.as("OrderedList")
+let orderedList = Ol.make
 
 // Frame
 @genType.as("Frame")

@@ -1,6 +1,6 @@
 open R
 
-let {displayName, parentName, tag, list} = module(ListMeta)
+let {displayName, parentName, tag, list, description} = module(ListMeta)
 
 let make =
   R.title(~name=displayName, ~group=parentName) ++
@@ -8,8 +8,8 @@ let make =
   R.header(. ~title=displayName) ++
   list(
     ~tag=displayName,
-    ~children=`Блок текста`->Some,
-    ~props=[("tag", String("p"))]->Some,
+    ~children=description->Some,
+    ~props=[("tag", String("ul"))]->Some,
   )->Belt.Array.reduce("", (acc, curr) =>
     acc ++
     "\n" ++

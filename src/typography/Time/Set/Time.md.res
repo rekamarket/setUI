@@ -1,6 +1,6 @@
 open R
 
-let {displayName, parentName, tag, list} = module(TimeMeta)
+let {displayName, parentName, tag, list, description} = module(TimeMeta)
 
 let make =
   R.title(~name=displayName, ~group=parentName) ++
@@ -8,8 +8,8 @@ let make =
   R.header(. ~title=displayName) ++
   list(
     ~tag=displayName,
-    ~children=`Инлайновый текст`->Some,
-    ~props=[("tag", String("span"))]->Some,
+    ~children=description->Some,
+    ~props=[("dateTime", String("2018-07-07T20:00:00"))]->Some,
   )->Belt.Array.reduce("", (acc, curr) =>
     acc ++
     "\n" ++

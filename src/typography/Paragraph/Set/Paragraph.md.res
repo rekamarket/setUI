@@ -1,16 +1,15 @@
 open R
 
-let {displayName, parentName, tag, list} = module(ParagraphMeta)
+let {displayName, parentName, tag, list, description} = module(ParagraphMeta)
 
 let make =
   R.title(~name=displayName, ~group=parentName) ++
   "\n" ++
   R.header(. ~title=displayName) ++
-  list(
-    ~tag=displayName,
-    ~children=`Блок текста`->Some,
-    ~props=[("tag", String("p"))]->Some,
-  )->Belt.Array.reduce("", (acc, curr) =>
+  list(~tag=displayName, ~children=description->Some, ~props=None)->Belt.Array.reduce("", (
+    acc,
+    curr,
+  ) =>
     acc ++
     "\n" ++
     R.section(

@@ -12,6 +12,7 @@ let make = (
   ~tag: option<TimeProto.time>=?,
   ~className: option<string>=?,
   ~style: option<Retype.style>=?,
+  ~dateTime: option<string>=?,
   ~color: option<Color.t>=?,
   ~fontFamily: option<FontFamily.t>=?,
   ~fontSize: option<FontSize.t>=?,
@@ -36,6 +37,7 @@ let make = (
       },
     ]),
     ~style?,
+    ~dateTime?,
     ~color=switch color {
     | Some(s) => s
     | None =>

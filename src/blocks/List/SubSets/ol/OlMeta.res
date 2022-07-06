@@ -1,12 +1,11 @@
 open R
 open Playroom
 
-let displayName = "Time"
-let parentName = None
-let component = "Time"
-let description = "Time"
-
-let tag = HTMLSet([#time, #span])
+let displayName = "OrderedList"
+let parentName = ListMeta.displayName->Some
+let component = "OrderedList"
+let description = "OrderedList content"
+let tag = HTMLTag(#ol)
 
 let list: (~tag: string, ~children: option<string>, ~props: option<array<R.prop>>) => array<R.t> = (
   ~tag,
@@ -17,7 +16,7 @@ let list: (~tag: string, ~children: option<string>, ~props: option<array<R.prop>
     [
       {
         title: "Semantics",
-        description: `Можно указать теги - ["span"]`->Some,
+        description: `Значение по умолчанию - ol; Можно указать теги - ["div", "ul"]`->Some,
         root: Root({
           tag: R.defaultTag,
           props: R.defaultProps,
@@ -25,7 +24,7 @@ let list: (~tag: string, ~children: option<string>, ~props: option<array<R.prop>
             ~tag,
             ~children,
             ~key="tag",
-            ~values=["span"]->R.toStringArray,
+            ~values=["div", "ul"]->R.toStringArray,
             ~staticProps=switch props {
             | Some(a) =>
               a
@@ -40,7 +39,7 @@ let list: (~tag: string, ~children: option<string>, ~props: option<array<R.prop>
         }),
       },
     ],
+    MarkerLayerMeta.make(~tag, ~children, ~props),
     ColorLayerMeta.make(~tag, ~children, ~props),
     FontLayerMeta.make(~tag, ~children, ~props),
-    TextTransformLayerMeta.make(~tag, ~children, ~props),
   ]->Belt.Array.concatMany

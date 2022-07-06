@@ -8,6 +8,41 @@ group:
 
 # Important
 
+## Semantics
+Значение по умолчанию - strong; Можно указать теги - ["abbr", "b", "data", "dd", "dt", "i", "small", "span"]
+
+```tsx
+import React from 'react'
+import { Important } from '@rekamarket/sber-business-ui'
+
+export default () => (<div style={{ display: "grid", gap: 10 }}>
+	<Important tag="abbr">
+		Important
+	</Important>
+	<Important tag="b">
+		Important
+	</Important>
+	<Important tag="data">
+		Important
+	</Important>
+	<Important tag="dd">
+		Important
+	</Important>
+	<Important tag="dt">
+		Important
+	</Important>
+	<Important tag="i">
+		Important
+	</Important>
+	<Important tag="small">
+		Important
+	</Important>
+	<Important tag="span">
+		Important
+	</Important>
+</div>)
+```
+
 ## color
 The color CSS property sets the foreground color value of an element's text and text decorations, and sets the <currentcolor> value. currentcolor may be used as an indirect value on other properties and is the default for other color properties, such as border-color.
 
@@ -17,16 +52,16 @@ import { Important } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Important color="primary">
-		Важный текст
+		Important
 	</Important>
 	<Important color="secondary">
-		Важный текст
+		Important
 	</Important>
 	<Important color="black">
-		Важный текст
+		Important
 	</Important>
 	<Important color="white">
-		Важный текст
+		Important
 	</Important>
 </div>)
 ```
@@ -40,46 +75,46 @@ import { Important } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Important fontSize="none">
-		Важный текст
+		Important
 	</Important>
 	<Important fontSize="5xs">
-		Важный текст
+		Important
 	</Important>
 	<Important fontSize="4xs">
-		Важный текст
+		Important
 	</Important>
 	<Important fontSize="3xs">
-		Важный текст
+		Important
 	</Important>
 	<Important fontSize="2xs">
-		Важный текст
+		Important
 	</Important>
 	<Important fontSize="xs">
-		Важный текст
+		Important
 	</Important>
 	<Important fontSize="s">
-		Важный текст
+		Important
 	</Important>
 	<Important fontSize="m">
-		Важный текст
+		Important
 	</Important>
 	<Important fontSize="l">
-		Важный текст
+		Important
 	</Important>
 	<Important fontSize="xl">
-		Важный текст
+		Important
 	</Important>
 	<Important fontSize="2xl">
-		Важный текст
+		Important
 	</Important>
 	<Important fontSize="3xl">
-		Важный текст
+		Important
 	</Important>
 	<Important fontSize="4xl">
-		Важный текст
+		Important
 	</Important>
 	<Important fontSize="5xl">
-		Важный текст
+		Important
 	</Important>
 </div>)
 ```
@@ -93,10 +128,10 @@ import { Important } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Important fontWeight="regular">
-		Важный текст
+		Important
 	</Important>
 	<Important fontWeight="semiBold">
-		Важный текст
+		Important
 	</Important>
 </div>)
 ```
@@ -110,16 +145,16 @@ import { Important } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Important textTransform="none">
-		Важный текст
+		Important
 	</Important>
 	<Important textTransform="uppercase">
-		Важный текст
+		Important
 	</Important>
 	<Important textTransform="lowercase">
-		Важный текст
+		Important
 	</Important>
 	<Important textTransform="capitalize">
-		Важный текст
+		Important
 	</Important>
 </div>)
 ```

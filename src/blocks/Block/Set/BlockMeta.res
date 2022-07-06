@@ -4,9 +4,9 @@ open Playroom
 let displayName = "Block"
 let parentName = None
 let component = "Block"
-let description = "Block"
+let description = "Block Content"
 
-let tag = HTMLSet([#div, #ul, #ol])
+let tag = HTMLTag(#div)
 
 let list: (~tag: string, ~children: option<string>, ~props: option<array<R.prop>>) => array<R.t> = (
   ~tag,
@@ -17,28 +17,14 @@ let list: (~tag: string, ~children: option<string>, ~props: option<array<R.prop>
     [
       {
         title: "Semantics",
-        description: `Можно указать теги - ["ul", "ol"]`->Some,
+        description: `Component resolves to 'div'; There is no way to redefine it rn`->Some,
         root: Root({
           tag: R.defaultTag,
           props: R.defaultProps,
-          children: R.block(.
-            ~tag,
-            ~children,
-            ~key="tag",
-            ~values=["ul", "ol"]->R.toStringArray,
-            ~staticProps=switch props {
-            | Some(a) =>
-              a
-              ->Belt.Array.keep(e => {
-                let (key, _) = e
-                key != "tag"
-              })
-              ->Some
-            | None => None
-            },
-          )->Some,
+          children: R.statelessComponent(~tag, ~children=description)->Some,
         }),
       },
     ],
-    ColorLayerMeta.make(~tag, ~children, ~props),
+    MarginLayerMeta.make(~tag, ~children, ~props),
+    PaddingLayerMeta.make(~tag, ~children, ~props),
   ]->Belt.Array.concatMany

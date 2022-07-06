@@ -8,6 +8,41 @@ group:
 
 # Term
 
+## Semantics
+Значение по умолчанию - dt; Можно указать теги - ["abbr", "b", "data", "dd", "i", "small", "span", "strong"]
+
+```tsx
+import React from 'react'
+import { Term } from '@rekamarket/sber-business-ui'
+
+export default () => (<div style={{ display: "grid", gap: 10 }}>
+	<Term tag="abbr">
+		Term
+	</Term>
+	<Term tag="b">
+		Term
+	</Term>
+	<Term tag="data">
+		Term
+	</Term>
+	<Term tag="dd">
+		Term
+	</Term>
+	<Term tag="i">
+		Term
+	</Term>
+	<Term tag="small">
+		Term
+	</Term>
+	<Term tag="span">
+		Term
+	</Term>
+	<Term tag="strong">
+		Term
+	</Term>
+</div>)
+```
+
 ## color
 The color CSS property sets the foreground color value of an element's text and text decorations, and sets the <currentcolor> value. currentcolor may be used as an indirect value on other properties and is the default for other color properties, such as border-color.
 
@@ -17,16 +52,16 @@ import { Term } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Term color="primary">
-		Аббревиатура
+		Term
 	</Term>
 	<Term color="secondary">
-		Аббревиатура
+		Term
 	</Term>
 	<Term color="black">
-		Аббревиатура
+		Term
 	</Term>
 	<Term color="white">
-		Аббревиатура
+		Term
 	</Term>
 </div>)
 ```
@@ -40,46 +75,46 @@ import { Term } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Term fontSize="none">
-		Аббревиатура
+		Term
 	</Term>
 	<Term fontSize="5xs">
-		Аббревиатура
+		Term
 	</Term>
 	<Term fontSize="4xs">
-		Аббревиатура
+		Term
 	</Term>
 	<Term fontSize="3xs">
-		Аббревиатура
+		Term
 	</Term>
 	<Term fontSize="2xs">
-		Аббревиатура
+		Term
 	</Term>
 	<Term fontSize="xs">
-		Аббревиатура
+		Term
 	</Term>
 	<Term fontSize="s">
-		Аббревиатура
+		Term
 	</Term>
 	<Term fontSize="m">
-		Аббревиатура
+		Term
 	</Term>
 	<Term fontSize="l">
-		Аббревиатура
+		Term
 	</Term>
 	<Term fontSize="xl">
-		Аббревиатура
+		Term
 	</Term>
 	<Term fontSize="2xl">
-		Аббревиатура
+		Term
 	</Term>
 	<Term fontSize="3xl">
-		Аббревиатура
+		Term
 	</Term>
 	<Term fontSize="4xl">
-		Аббревиатура
+		Term
 	</Term>
 	<Term fontSize="5xl">
-		Аббревиатура
+		Term
 	</Term>
 </div>)
 ```
@@ -93,10 +128,10 @@ import { Term } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Term fontWeight="regular">
-		Аббревиатура
+		Term
 	</Term>
 	<Term fontWeight="semiBold">
-		Аббревиатура
+		Term
 	</Term>
 </div>)
 ```
@@ -110,16 +145,16 @@ import { Term } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Term textTransform="none">
-		Аббревиатура
+		Term
 	</Term>
 	<Term textTransform="uppercase">
-		Аббревиатура
+		Term
 	</Term>
 	<Term textTransform="lowercase">
-		Аббревиатура
+		Term
 	</Term>
 	<Term textTransform="capitalize">
-		Аббревиатура
+		Term
 	</Term>
 </div>)
 ```

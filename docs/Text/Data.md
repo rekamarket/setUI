@@ -8,6 +8,41 @@ group:
 
 # Data
 
+## Semantics
+Значение по умолчанию - data; Можно указать теги - ["abbr", "b", "dd", "dt", "i", "small", "span", "strong"]
+
+```tsx
+import React from 'react'
+import { Data } from '@rekamarket/sber-business-ui'
+
+export default () => (<div style={{ display: "grid", gap: 10 }}>
+	<Data tag="abbr">
+		Data
+	</Data>
+	<Data tag="b">
+		Data
+	</Data>
+	<Data tag="dd">
+		Data
+	</Data>
+	<Data tag="dt">
+		Data
+	</Data>
+	<Data tag="i">
+		Data
+	</Data>
+	<Data tag="small">
+		Data
+	</Data>
+	<Data tag="span">
+		Data
+	</Data>
+	<Data tag="strong">
+		Data
+	</Data>
+</div>)
+```
+
 ## color
 The color CSS property sets the foreground color value of an element's text and text decorations, and sets the <currentcolor> value. currentcolor may be used as an indirect value on other properties and is the default for other color properties, such as border-color.
 
@@ -17,16 +52,16 @@ import { Data } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Data color="primary">
-		Аббревиатура
+		Data
 	</Data>
 	<Data color="secondary">
-		Аббревиатура
+		Data
 	</Data>
 	<Data color="black">
-		Аббревиатура
+		Data
 	</Data>
 	<Data color="white">
-		Аббревиатура
+		Data
 	</Data>
 </div>)
 ```
@@ -40,46 +75,46 @@ import { Data } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Data fontSize="none">
-		Аббревиатура
+		Data
 	</Data>
 	<Data fontSize="5xs">
-		Аббревиатура
+		Data
 	</Data>
 	<Data fontSize="4xs">
-		Аббревиатура
+		Data
 	</Data>
 	<Data fontSize="3xs">
-		Аббревиатура
+		Data
 	</Data>
 	<Data fontSize="2xs">
-		Аббревиатура
+		Data
 	</Data>
 	<Data fontSize="xs">
-		Аббревиатура
+		Data
 	</Data>
 	<Data fontSize="s">
-		Аббревиатура
+		Data
 	</Data>
 	<Data fontSize="m">
-		Аббревиатура
+		Data
 	</Data>
 	<Data fontSize="l">
-		Аббревиатура
+		Data
 	</Data>
 	<Data fontSize="xl">
-		Аббревиатура
+		Data
 	</Data>
 	<Data fontSize="2xl">
-		Аббревиатура
+		Data
 	</Data>
 	<Data fontSize="3xl">
-		Аббревиатура
+		Data
 	</Data>
 	<Data fontSize="4xl">
-		Аббревиатура
+		Data
 	</Data>
 	<Data fontSize="5xl">
-		Аббревиатура
+		Data
 	</Data>
 </div>)
 ```
@@ -93,10 +128,10 @@ import { Data } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Data fontWeight="regular">
-		Аббревиатура
+		Data
 	</Data>
 	<Data fontWeight="semiBold">
-		Аббревиатура
+		Data
 	</Data>
 </div>)
 ```
@@ -110,16 +145,16 @@ import { Data } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Data textTransform="none">
-		Аббревиатура
+		Data
 	</Data>
 	<Data textTransform="uppercase">
-		Аббревиатура
+		Data
 	</Data>
 	<Data textTransform="lowercase">
-		Аббревиатура
+		Data
 	</Data>
 	<Data textTransform="capitalize">
-		Аббревиатура
+		Data
 	</Data>
 </div>)
 ```

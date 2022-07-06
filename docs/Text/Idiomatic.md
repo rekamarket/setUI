@@ -8,6 +8,41 @@ group:
 
 # Idiomatic
 
+## Semantics
+Значение по умолчанию - i; Можно указать теги - ["abbr", "b", "data", "dd", "dt", "small", "span", "strong"]
+
+```tsx
+import React from 'react'
+import { Idiomatic } from '@rekamarket/sber-business-ui'
+
+export default () => (<div style={{ display: "grid", gap: 10 }}>
+	<Idiomatic tag="abbr">
+		Idiomatic
+	</Idiomatic>
+	<Idiomatic tag="b">
+		Idiomatic
+	</Idiomatic>
+	<Idiomatic tag="data">
+		Idiomatic
+	</Idiomatic>
+	<Idiomatic tag="dd">
+		Idiomatic
+	</Idiomatic>
+	<Idiomatic tag="dt">
+		Idiomatic
+	</Idiomatic>
+	<Idiomatic tag="small">
+		Idiomatic
+	</Idiomatic>
+	<Idiomatic tag="span">
+		Idiomatic
+	</Idiomatic>
+	<Idiomatic tag="strong">
+		Idiomatic
+	</Idiomatic>
+</div>)
+```
+
 ## color
 The color CSS property sets the foreground color value of an element's text and text decorations, and sets the <currentcolor> value. currentcolor may be used as an indirect value on other properties and is the default for other color properties, such as border-color.
 
@@ -17,16 +52,16 @@ import { Idiomatic } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Idiomatic color="primary">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic color="secondary">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic color="black">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic color="white">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 </div>)
 ```
@@ -40,46 +75,46 @@ import { Idiomatic } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Idiomatic fontSize="none">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic fontSize="5xs">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic fontSize="4xs">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic fontSize="3xs">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic fontSize="2xs">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic fontSize="xs">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic fontSize="s">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic fontSize="m">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic fontSize="l">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic fontSize="xl">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic fontSize="2xl">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic fontSize="3xl">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic fontSize="4xl">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic fontSize="5xl">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 </div>)
 ```
@@ -93,10 +128,10 @@ import { Idiomatic } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Idiomatic fontWeight="regular">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic fontWeight="semiBold">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 </div>)
 ```
@@ -110,16 +145,16 @@ import { Idiomatic } from '@rekamarket/sber-business-ui'
 
 export default () => (<div style={{ display: "grid", gap: 10 }}>
 	<Idiomatic textTransform="none">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic textTransform="uppercase">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic textTransform="lowercase">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 	<Idiomatic textTransform="capitalize">
-		Термин или выделение текста
+		Idiomatic
 	</Idiomatic>
 </div>)
 ```

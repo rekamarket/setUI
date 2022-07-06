@@ -7,7 +7,7 @@ let make: array<Playroom.t> = [
     code: Playroom.getCode(
       ~component,
       ~content=Some(description),
-      ~props=list{("tag", String("span"))},
+      ~props=list{("dateTime", String("2018-07-07T20:00:00"))},
     ),
   },
 ]
