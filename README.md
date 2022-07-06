@@ -1,8 +1,10 @@
-# [sber-business-ui](https://voluble-toffee-de79ba.netlify.app)
-Interactive sandbox - [Playroom](https://voluble-toffee-de79ba.netlify.app)
+# [set-ui](https://cozy-shortbread-578709.netlify.app)
+
+Interactive sandbox - [Playroom](https://cozy-shortbread-578709.netlify.app)
 
 ## Documentation
-https://rekamarket.github.io/sber-business-ui/
+
+https://rekamarket.github.io/setUI/
 
 ## Usage
 
@@ -11,13 +13,13 @@ Import styles
 File: `App.js`
 
 ```js
-import '@rekamarket/sber-business-ui/package/index.gen.css';
-import { Limit } from '@rekamarket/sber-business-ui';
+import '@rekamarket/set-ui/package/index.gen.css';
+import { H1 } from '@rekamarket/set-ui';
 
-<Limit limit={1000000} />
+<H1>Hello</H1>;
 ```
 
-## Getting Started 
+## Getting Started
 
 Install dependencies,
 
@@ -49,4 +51,4 @@ $ yarn dumi:publish
 $ yarn install && yarn playroom
 ```
 
-https://voluble-toffee-de79ba.netlify.app
+https://cozy-shortbread-578709.netlify.app
