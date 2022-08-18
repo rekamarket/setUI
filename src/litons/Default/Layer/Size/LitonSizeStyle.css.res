@@ -27,7 +27,7 @@ let make = styles(options, value => {
     inlineGap: value.inlineGap,
     iconSize: value.iconSize,
     capSize: capSize.fontSize,
-    lineGap: capSize.lineHeight,
+    lineGap: `calc(${capSize.lineHeight} + var(--line-gap, 0))`,
     capTop: capSize.\"::after".marginTop,
     capBottom: capSize.\"::before".marginBottom,
   }

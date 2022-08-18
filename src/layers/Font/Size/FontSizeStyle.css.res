@@ -22,7 +22,7 @@ let make = styles(options, value => {
 
   {
     transform: "translateY(.1rem)",
-    lineHeight: capSize.lineHeight,
+    lineHeight: `calc(${capSize.lineHeight} + var(--line-gap, 0))`,
     fontSize: capSize.fontSize,
     after: {
       content: `""`,
